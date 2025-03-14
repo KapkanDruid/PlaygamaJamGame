@@ -52,6 +52,9 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*Zenject.csproj.meta
+*Zenject-Signals.csproj.meta
+*Zenject-ReflectionBaking.csproj.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
