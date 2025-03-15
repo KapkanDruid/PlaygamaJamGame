@@ -15,10 +15,10 @@ namespace _Project.Architecture.SaveSystem
 
         public void Load<T>(string key, Action<T> onLoaded)
         {
-            Bridge.storage.Get(key, (success, data) => OnStorageGetCompleted(success, data, onLoaded));
+            Bridge.storage.Get(key, (success, data) => OnStorageGetCompleted(success, data, onLoaded, key));
         }
 
-        private void OnStorageGetCompleted<T>(bool success, string data, Action<T> onLoaded)
+        private void OnStorageGetCompleted<T>(bool success, string data, Action<T> onLoaded, string key)
         {
             if (success && !string.IsNullOrEmpty(data))
             {
@@ -35,7 +35,7 @@ namespace _Project.Architecture.SaveSystem
             }
             else
             {
-                Debug.LogWarning($"Не удалось загрузить данные по ключу: {data}");
+                Debug.LogWarning($"Не удалось загрузить данные по ключу: {key}");
                 onLoaded?.Invoke(default);
             }
         }
