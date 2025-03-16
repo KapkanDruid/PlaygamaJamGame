@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Assets.Scripts.Content
+namespace Content
 {
     [Serializable]
     public sealed class Flags

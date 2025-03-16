@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Content
+﻿namespace Content
 {
     public enum EntityFlags
     {
