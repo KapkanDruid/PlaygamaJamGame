@@ -6,7 +6,7 @@ namespace Project.Content.CharacterAI
 {
     public class CharacterSensor : ITickable
     {
-        private readonly ICharacterData _data;
+        private readonly ISensorData _data;
         private Transform _targetTransform;
         private IEntity _target;
 
@@ -18,7 +18,7 @@ namespace Project.Content.CharacterAI
 
         public event Action TargetDetected;
 
-        public CharacterSensor(ICharacterData data)
+        public CharacterSensor(ISensorData data)
         {
             _data = data;
             _isEnable = true;
@@ -26,17 +26,17 @@ namespace Project.Content.CharacterAI
 
         public void Tick()
         {
-            if (_isEnable) 
+            if (_isEnable)
                 TargetSearch();
         }
 
         private void TargetSearch()
         {
-            if (_data == null) 
+            if (_data == null)
                 return;
 
             Vector2 origin = _data.CharacterTransform.position;
-            Vector2 direction = Vector2.down;
+            Vector2 direction = Vector2.zero;
             float radius = _data.SensorRadius;
 
             RaycastHit2D[] hits = Physics2D.CircleCastAll(origin, radius, direction, 0);

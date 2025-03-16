@@ -10,13 +10,13 @@ namespace Project.Content
     {
         private bool _isDead;
 
-        private ICharacterData _characterData;
+        private ISensorData _characterData;
         private Transform _characterTransform;
         private Animator _animator;
 
         public bool IsDead => _isDead;
 
-        public EnemyDeadHandler(ICharacterData characterData)
+        public EnemyDeadHandler(ISensorData characterData)
         {
             _characterData = characterData;
             _characterTransform = _characterData.CharacterTransform;

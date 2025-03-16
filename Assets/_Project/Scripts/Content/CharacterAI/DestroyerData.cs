@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Project.Content.CharacterAI
 {
     [Serializable]
-    public class DestroyerData : ICharacterData
+    public class DestroyerData : ICharacterData, ISensorData
     {
         [SerializeField] private DestroyerConfig _destroyerConfig;
         [SerializeField] private Transform _damageTextPoint;
