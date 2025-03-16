@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Content
+namespace Project.Content
 {
     public class AnimatorEventHandler : MonoBehaviour
     {

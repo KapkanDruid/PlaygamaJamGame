@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Project.Content.AI
+namespace Project.Content.CharacterAI
 {
     [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Slasher/CharacterConfig")]
     public class CharacterConfig : ScriptableObject

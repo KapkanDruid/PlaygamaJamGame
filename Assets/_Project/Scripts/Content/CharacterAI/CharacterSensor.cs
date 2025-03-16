@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Content.Character
+namespace Project.Content.CharacterAI
 {
     public class CharacterSensor : ITickable
     {

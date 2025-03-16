@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace Content
+namespace Project.Content
 {
     public class EnemyDeadHandler
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Content
+namespace Project.Content
 {
     public interface IDamageable
     {
