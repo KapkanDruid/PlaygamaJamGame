@@ -2,7 +2,7 @@
 
 namespace Project.Content.CharacterAI
 {
-    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "TD/FirstEnemy")]
+    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "_Project/Destroyer")]
     public class DestroyerConfig : ScriptableObject, ICharacterConfig
     {
         [Header("Health System")]

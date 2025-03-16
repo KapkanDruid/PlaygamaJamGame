@@ -1,19 +1,14 @@
 ﻿using Cysharp.Threading.Tasks;
-using System.Threading;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI
 {
-    public class DestroyerHandler : MonoBehaviour, IEntity
+    public class DestroyerHandler : CharacterHandler
     {
         [SerializeField] private DestroyerData _destroyerData;
 
         protected CharacterHealthHandler _healthHandler;
-        protected EnemyDeadHandler _enemyDeadHandler;
-        protected CancellationToken _cancellationToken;
-
-        public CancellationToken CancellationToken => _cancellationToken;
         public ICharacterData DestroyerData => _destroyerData;
 
         [Inject]
@@ -26,7 +21,7 @@ namespace Project.Content.CharacterAI
             _cancellationToken = this.GetCancellationTokenOnDestroy();
         }
 
-        public T ProvideComponent<T>() where T : class
+        public override T ProvideComponent<T>() where T : class
         {
             if (_destroyerData.Flags is T flags)
                 return flags;
