@@ -1,6 +1,6 @@
 using System;
 
-namespace _Project.Architecture.SaveSystem
+namespace Project.Architecture.SaveSystem
 {
     public interface ISaveSystem
     {
