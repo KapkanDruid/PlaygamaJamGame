@@ -2,32 +2,29 @@ using System;
 using UnityEngine;
 using Zenject;
 
-namespace Project.Architecture
+public class MainSceneBootstrap : MonoBehaviour
 {
-    public class MainSceneBootstrap : MonoBehaviour
+
+    public event Action OnServicesInitialized;
+
+    private void Awake()
+    {
+        Initialize();
+    }
+
+    private void Initialize()
     {
 
-        public event Action OnServicesInitialized;
+        OnServicesInitialized?.Invoke();
+    }
 
-        private void Awake()
-        {
-            Initialize();
-        }
+    private void Dispose()
+    {
 
-        private void Initialize()
-        {
+    }
 
-            OnServicesInitialized?.Invoke();
-        }
-
-        private void Dispose()
-        {
-
-        }
-
-        private void OnDisable()
-        {
-            Dispose();
-        }
+    private void OnDisable()
+    {
+        Dispose();
     }
 }

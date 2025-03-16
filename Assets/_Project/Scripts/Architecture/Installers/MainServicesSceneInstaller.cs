@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Project.Architecture
+namespace Assets.Scripts.Architecture
 {
     public class MainServicesSceneInstaller : MonoInstaller
     {
