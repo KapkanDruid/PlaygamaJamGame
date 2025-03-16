@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Content.Character
+namespace Project.Content.AI
 {
     [Serializable]
     public class CharacterData
