@@ -2,8 +2,8 @@
 
 namespace Project.Content.CharacterAI
 {
-    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Slasher/CharacterConfig")]
-    public class CharacterConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "TD/FirstEnemy")]
+    public class DestroyerConfig : ScriptableObject, ICharacterConfig
     {
         [Header("Health System")]
         [SerializeField] private float _health;

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec985f877fcbcaa4e851e2d96c589a3d, type: 3}
+  m_Name: Destroyer
+  m_EditorClassIdentifier: 
+  _health: 100
+  _speed: 3
+  _damage: 10
+  _attackCooldown: 2
+  _hitColliderSize: {x: 2, y: 2}
+  _hitColliderOffset: {x: 2, y: 2}
+  _sensorRadius: 10

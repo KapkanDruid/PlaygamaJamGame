@@ -1,13 +1,13 @@
-﻿using Content;
-using Content.Character;
+﻿using Project.Content;
+using Project.Content.CharacterAI;
 using UnityEngine;
 using Zenject;
 
 namespace Architecture.Installers
 {
-    public class CharacterInstaller : MonoInstaller
+    public class DestroyerInstaller : MonoInstaller
     {
-        [SerializeField] private CharacterHandler _characterHandler;
+        [SerializeField] private DestroyerHandler _destroyerHandler;
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private Animator _animator;
         [SerializeField] private AnimatorEventHandler _animatorEventHandler;
@@ -16,9 +16,9 @@ namespace Architecture.Installers
         {
             Container.Bind<CharacterHealthHandler>().AsSingle().NonLazy();
             Container.Bind<Animator>().FromInstance(_animator).AsSingle().NonLazy();
-            Container.Bind<EnemyDeadHandler>().AsSingle().NonLazy();
-            Container.Bind<CharacterHandler>().FromComponentOnRoot().AsSingle().NonLazy();
-            Container.Bind<CharacterData>().FromInstance(_characterHandler.CharacterData).AsSingle();
+            Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments(_destroyerHandler.DestroyerData).NonLazy();
+            Container.Bind<DestroyerHandler>().FromComponentOnRoot().AsSingle().NonLazy();
+            Container.Bind<ICharacterData>().FromInstance(_destroyerHandler.DestroyerData).AsSingle();
             Container.Bind<Rigidbody2D>().FromInstance(_rigidbody).AsSingle();
             Container.Bind<AnimatorEventHandler>().FromInstance(_animatorEventHandler).AsSingle();
             Container.BindInterfacesAndSelfTo<CharacterSensor>().AsSingle().NonLazy();

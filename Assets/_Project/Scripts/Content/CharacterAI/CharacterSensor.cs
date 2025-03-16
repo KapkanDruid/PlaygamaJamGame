@@ -6,7 +6,7 @@ namespace Project.Content.CharacterAI
 {
     public class CharacterSensor : ITickable
     {
-        private readonly CharacterData _data;
+        private readonly ICharacterData _data;
         private Transform _targetTransform;
         private IEntity _target;
 
@@ -18,7 +18,7 @@ namespace Project.Content.CharacterAI
 
         public event Action TargetDetected;
 
-        public CharacterSensor(CharacterData data)
+        public CharacterSensor(ICharacterData data)
         {
             _data = data;
             _isEnable = true;
