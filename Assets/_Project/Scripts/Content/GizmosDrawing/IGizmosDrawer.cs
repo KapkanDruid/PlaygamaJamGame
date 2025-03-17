@@ -1,4 +1,4 @@
-﻿namespace Project.Content
+namespace Project.Content
 {
     public interface IGizmosDrawer
     {
