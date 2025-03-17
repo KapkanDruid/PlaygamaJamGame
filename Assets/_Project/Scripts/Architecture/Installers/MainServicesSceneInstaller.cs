@@ -1,3 +1,4 @@
+using Project.Content;
 using Project.Content.BuildSystem;
 using UnityEngine;
 using Zenject;
@@ -7,11 +8,21 @@ namespace Project.Architecture
     public class MainServicesSceneInstaller : MonoInstaller
     {
         [SerializeField] private MainSceneBootstrap _sceneBootstrap;
+        [SerializeField] private GridPlaceSystem _gridPlaceSystem;
+        [SerializeField] private GizmosDrawer _gizmosDrawer;
+        [SerializeField] private GameObject _buildingEntity;
+        [SerializeField] private Grid _grid;
 
         public override void InstallBindings()
         {
-            Container.Bind<MainSceneBootstrap>().FromInstance(_sceneBootstrap).AsSingle();
+            Container.Bind<MainSceneBootstrap>().FromInstance(_sceneBootstrap).AsSingle().NonLazy();
+            Container.Bind<GridPlaceSystem>().FromInstance(_gridPlaceSystem).AsSingle().NonLazy();
+            Container.Bind<Grid>().FromInstance(_grid).AsSingle().NonLazy();
             Container.Bind<InputSystemActions>().AsSingle().NonLazy();
+            Container.Bind<Camera>().FromInstance(Camera.main).AsSingle().NonLazy();
+            Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
+
+            Container.BindFactory<MainBuildingEntity, MainBuildingEntity.Factory>().FromSubContainerResolve().ByNewContextPrefab(_buildingEntity);
         }
     }
 }
