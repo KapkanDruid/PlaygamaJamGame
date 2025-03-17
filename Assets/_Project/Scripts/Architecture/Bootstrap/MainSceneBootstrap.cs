@@ -1,11 +1,10 @@
+using Project.Architecture;
 using System;
 using UnityEngine;
 using Zenject;
 
-namespace Project.Architecture
+public class MainSceneBootstrap : MonoBehaviour
 {
-    public class MainSceneBootstrap : MonoBehaviour
-    {
         [Inject] private InputSystemActions _inputActions;
 
         public static event Action OnServicesInitialized;
@@ -31,5 +30,4 @@ namespace Project.Architecture
         {
             Dispose();
         }
-    }
 }
