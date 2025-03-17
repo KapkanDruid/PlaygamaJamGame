@@ -53,7 +53,7 @@ namespace Project.Content.CharacterAI
                     case EntityFlags.Building:
                         TargetSearch();
                         break;
-                    case EntityFlags.Ally:
+                    case EntityFlags.Another:
                         break;
                 }
             }
@@ -61,7 +61,7 @@ namespace Project.Content.CharacterAI
 
         private void ScanAreaToAttack()
         {
-            (_targetToAttack, _targetTransformToAttack) = Scan(_data.CharacterTransform.position, _data.HitColliderSize, _data.HitColliderOffset);
+            (_targetToAttack, _targetTransformToAttack) = Scan(_data.CharacterTransform.position, _data.HitColliderSize, _data.HitColliderOffset, true);
 
             if (_targetToAttack != null && _targetTransformToAttack != null && _targetToAttack != _currentTargetToAttack)
             {
@@ -72,7 +72,7 @@ namespace Project.Content.CharacterAI
 
         private void TargetSearch()
         {
-            (_targetToChase, _targetTransformToChase) = Scan(_data.CharacterTransform.position, _data.SensorRadius, Vector2.zero);
+            (_targetToChase, _targetTransformToChase) = Scan(_data.CharacterTransform.position, _data.SensorRadius, Vector2.zero, true);
 
             if (_targetToChase != null && _targetTransformToChase != null)
             {
@@ -80,7 +80,7 @@ namespace Project.Content.CharacterAI
             }
         }
 
-        private (IEntity target, Transform targetTransform) Scan(Vector2 position, float size, Vector2 offset)
+        private (IEntity target, Transform targetTransform) Scan(Vector2 position, float size, Vector2 offset, bool closest = false)
         {
             if (_data == null)
                 return (null, null);
@@ -90,6 +90,10 @@ namespace Project.Content.CharacterAI
             float radius = size;
 
             RaycastHit2D[] hits = Physics2D.CircleCastAll(origin, radius, direction, 0);
+
+            IEntity closestTarget = null;
+            Transform closestTransform = null;
+            float minDistance = float.MaxValue;
 
             int count = hits.Length;
             for (int i = 0; i < count; i++)
@@ -108,8 +112,21 @@ namespace Project.Content.CharacterAI
                 if (!flags.Contain(_data.EnemyFlag))
                     continue;
 
-                return (entity, hits[i].transform);
+                if (!closest)
+                    return (entity, hits[i].transform);
+
+                float distance = Vector2.Distance(position, hits[i].transform.position);
+
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    closestTarget = entity;
+                    closestTransform = hits[i].transform;
+                }
             }
+
+            if (closest)
+                return (closestTarget, closestTransform);
 
             return (null, null);
         }

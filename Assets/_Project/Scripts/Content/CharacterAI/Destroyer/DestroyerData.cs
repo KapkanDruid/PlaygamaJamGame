@@ -18,6 +18,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public float SensorRadius => _destroyerConfig.SensorRadius;
         public float AttackCooldown => _destroyerConfig.AttackCooldown;
         public float HitColliderSize => _destroyerConfig.HitColliderSize;
+        public float DistanceToTarget => _destroyerConfig.DistanceToTarget;
         public Vector2 HitColliderOffset => _destroyerConfig.HitColliderOffset;
         public Transform CharacterTransform => _characterTransform;
         public Transform DamageTextPoint => _damageTextPoint;
