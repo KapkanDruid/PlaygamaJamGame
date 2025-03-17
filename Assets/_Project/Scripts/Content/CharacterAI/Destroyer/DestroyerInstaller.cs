@@ -1,10 +1,8 @@
-﻿using Project.Content;
-using Project.Content.CharacterAI;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
-namespace Architecture.Installers
+namespace Project.Content.CharacterAI.Destroyer.Destroyer
 {
     public class DestroyerInstaller : MonoInstaller
     {
@@ -26,6 +24,7 @@ namespace Architecture.Installers
             Container.Bind<AnimatorEventHandler>().FromInstance(_animatorEventHandler).AsSingle();
             Container.BindInterfacesAndSelfTo<CharacterSensor>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<DestroyerMoveLogic>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<DestroyerAttackLogic>().AsSingle().NonLazy();
         }
     }
 }

@@ -5,11 +5,11 @@ namespace Project.Content.CharacterAI
     public interface ICharacterConfig
     {
         int Damage { get; }
-        float AttackCooldown { get; }
+        float Speed { get; }
         float Health { get; }
         float SensorRadius { get; }
-        float Speed { get; }
+        float AttackCooldown { get; }
+        float HitColliderSize { get; }
         Vector2 HitColliderOffset { get; }
-        Vector2 HitColliderSize { get; }
     }
 }

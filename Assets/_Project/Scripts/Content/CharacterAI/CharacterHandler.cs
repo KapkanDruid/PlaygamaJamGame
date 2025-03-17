@@ -8,6 +8,7 @@ namespace Project.Content.CharacterAI
     {
         protected EnemyDeadHandler _enemyDeadHandler;
         protected CancellationToken _cancellationToken;
+        protected CharacterHealthHandler _healthHandler;
 
         public CancellationToken CancellationToken => _cancellationToken;
 

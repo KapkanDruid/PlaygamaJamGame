@@ -1,20 +1,21 @@
 ﻿using System;
-using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
-namespace Project.Content.CharacterAI
+namespace Project.Content.CharacterAI.Destroyer
 {
     public class DestroyerMoveLogic : IInitializable, IDisposable, ITickable
     {
         private NavMeshAgent _agent;
-        private ICharacterData _characterData;
+        private ICharacterData _destroyerData;
         private CharacterSensor _characterSensor;
+        private DestroyerHandler _destroyerHandler;
         private bool _hasTarget;
 
         public DestroyerMoveLogic(DestroyerHandler characterHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
         {
-            _characterData = characterHandler.DestroyerData;
+            _destroyerHandler = characterHandler;
+            _destroyerData = characterHandler.DestroyerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
 
@@ -25,7 +26,7 @@ namespace Project.Content.CharacterAI
         {
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
-            _agent.speed = _characterData.Speed;
+            _agent.speed = _destroyerData.Speed;
         }
 
         private void SetTarget()
@@ -40,9 +41,9 @@ namespace Project.Content.CharacterAI
 
         public void Tick()
         {
-            if (_hasTarget)
+            if (_hasTarget && _destroyerHandler.CanMoving)
             {
-                _agent.SetDestination(_characterSensor.TargetTransform.position);
+                _agent.SetDestination(_characterSensor.TargetTransformToChase.position);
             }
         }
     }
