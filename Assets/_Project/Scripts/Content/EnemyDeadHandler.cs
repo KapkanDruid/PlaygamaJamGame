@@ -1,6 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
+using Project.Content.CharacterAI;
 using System;
 using UnityEngine;
+using Zenject;
 
 namespace Project.Content
 {
@@ -8,20 +10,22 @@ namespace Project.Content
     {
         private bool _isDead;
 
+        private ISensorData _characterData;
         private Transform _characterTransform;
         private Animator _animator;
 
         public bool IsDead => _isDead;
 
+        public EnemyDeadHandler(ISensorData characterData)
+        {
+            _characterData = characterData;
+            _characterTransform = _characterData.CharacterTransform;
+            _isDead = false;
+        }
+
         public EnemyDeadHandler(Animator animator)
         {
             _animator = animator;
-        }
-
-        public void Initialize(Transform characterTransform)
-        {
-            _characterTransform = characterTransform;
-            _isDead = false;
         }
 
         public void Death()
@@ -37,7 +41,7 @@ namespace Project.Content
             if (_animator == null)
                 Debug.Log("_animator = null");
             if (_animator != null)
-                _animator.SetTrigger(AnimatorHashes.DeathTrigger);
+                //_animator.SetTrigger(AnimatorHashes.DeathTrigger);
 
             await WaitForAnimationState();
 

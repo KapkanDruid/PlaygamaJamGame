@@ -4,6 +4,9 @@
     {
         Player,
         Enemy,
+        FriendlyUnit,
+        MainBuilding,
+        Building,
         Ally,
     }
 }
