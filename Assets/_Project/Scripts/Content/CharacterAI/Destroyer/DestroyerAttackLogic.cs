@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -11,33 +12,57 @@ namespace Project.Content.CharacterAI.Destroyer
         private IDamageable _damageable;
         private CharacterSensor _characterSensor;
         private DestroyerHandler _destroyerHandler;
+        private AnimatorEventHandler _animatorEventHandler;
+        private Animator _animator;
+        private float _attackCooldownTimer;
 
-
-        public DestroyerAttackLogic(DestroyerHandler characterHandler, CharacterSensor characterSensor)
+        public DestroyerAttackLogic(DestroyerHandler characterHandler, CharacterSensor characterSensor, AnimatorEventHandler animatorEventHandler, Animator animator)
         {
             _destroyerHandler = characterHandler;
             _destroyerData = characterHandler.DestroyerData;
             _destroyerSensorData = (ISensorData)characterHandler.DestroyerData;
             _characterSensor = characterSensor;
+            _animatorEventHandler = animatorEventHandler;
+            _animator = animator;
 
-            _characterSensor.HasTargetToAttack += Attack;
-        }
-
-        public void Tick()
-        {
-            TryToAttack();
+            _characterSensor.HasTargetToAttack += InvokeAttack;
+            _animatorEventHandler.OnAnimationHit += TryToHit;
         }
 
         public void Dispose()
         {
-            _characterSensor.HasTargetToAttack -= Attack;
+            _animatorEventHandler.OnAnimationHit -= TryToHit;
+            _characterSensor.HasTargetToAttack -= InvokeAttack;
         }
 
-        private void TryToAttack()
+        public void Tick()
+        {
+            CooldownAttack();
+            TryToHit();
+        }
+
+        private void CooldownAttack()
+        {
+            if (_attackCooldownTimer > 0)
+            {
+                _attackCooldownTimer -= Time.deltaTime;
+            }
+        }
+
+        private void InvokeAttack()
+        {
+            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+        }
+
+        private void TryToHit()
         {
             if (_characterSensor.TargetToAttack != null && _characterSensor.TargetTransformToAttack != null)
             {
-                Attack();
+                if (_attackCooldownTimer <= 0)
+                {
+                    Attack();
+                    _attackCooldownTimer = _destroyerData.AttackCooldown;
+                }
             }
         }
 
@@ -45,10 +70,14 @@ namespace Project.Content.CharacterAI.Destroyer
         {
             CheckAreaToAttack();
 
+            if (_damageable == null)
+                return;
+
             if (_destroyerHandler.CanAttack)
             {
                 _damageable?.TakeDamage(_destroyerData.Damage);
             }
+
         }
 
         private void CheckAreaToAttack()

@@ -2,7 +2,7 @@
 using UnityEngine.AI;
 using Zenject;
 
-namespace Project.Content.CharacterAI.Destroyer.Destroyer
+namespace Project.Content.CharacterAI.Destroyer
 {
     public class DestroyerInstaller : MonoInstaller
     {
@@ -15,13 +15,12 @@ namespace Project.Content.CharacterAI.Destroyer.Destroyer
         {
             Container.Bind<CharacterHealthHandler>().AsSingle().NonLazy();
             Container.Bind<Animator>().FromInstance(_animator).AsSingle().NonLazy();
-            Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments(_destroyerHandler.DestroyerData).NonLazy();
+            Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments((ISensorData)_destroyerHandler.DestroyerData).NonLazy();
             Container.Bind<DestroyerHandler>().FromComponentOnRoot().AsSingle().NonLazy();
             Container.Bind<NavMeshAgent>().FromComponentOnRoot().AsSingle().NonLazy();
-            Container.Bind<ICharacterData>().FromInstance(_destroyerHandler.DestroyerData).AsSingle();
-            Container.Bind<ISensorData>().FromInstance((ISensorData)_destroyerHandler.DestroyerData).AsSingle();
             Container.Bind<Rigidbody2D>().FromInstance(_rigidbody).AsSingle();
             Container.Bind<AnimatorEventHandler>().FromInstance(_animatorEventHandler).AsSingle();
+            Container.BindInterfacesAndSelfTo<DestroyerData>().FromInstance(_destroyerHandler.DestroyerData).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<CharacterSensor>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<DestroyerMoveLogic>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<DestroyerAttackLogic>().AsSingle().NonLazy();

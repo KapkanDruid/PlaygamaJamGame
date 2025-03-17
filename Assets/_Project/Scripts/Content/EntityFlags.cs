@@ -7,6 +7,6 @@
         FriendlyUnit,
         MainBuilding,
         Building,
-        Ally,
+        Another,
     }
 }

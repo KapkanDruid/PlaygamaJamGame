@@ -4,7 +4,7 @@ using Zenject;
 
 namespace Project.Content.CharacterAI.Destroyer
 {
-    public class DestroyerMoveLogic : IInitializable, IDisposable, ITickable
+    public class DestroyerMoveLogic : IDisposable, ITickable
     {
         private NavMeshAgent _agent;
         private ICharacterData _destroyerData;
@@ -20,6 +20,8 @@ namespace Project.Content.CharacterAI.Destroyer
             _agent = navMeshAgent;
 
             _characterSensor.TargetDetected += SetTarget;
+
+            Initialize();
         }
 
         public void Initialize()
@@ -27,6 +29,8 @@ namespace Project.Content.CharacterAI.Destroyer
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
             _agent.speed = _destroyerData.Speed;
+            _agent.stoppingDistance = _destroyerData.DistanceToTarget;
+            _agent.angularSpeed = _destroyerData.Speed;
         }
 
         private void SetTarget()
@@ -41,8 +45,19 @@ namespace Project.Content.CharacterAI.Destroyer
 
         public void Tick()
         {
+            MoveToTarget();
+        }
+
+        private void MoveToTarget()
+        {
+            if (_characterSensor.TargetTransformToAttack != null)
+                return;
+
             if (_hasTarget && _destroyerHandler.CanMoving)
             {
+                if (_characterSensor.TargetTransformToChase == null)
+                    return;
+
                 _agent.SetDestination(_characterSensor.TargetTransformToChase.position);
             }
         }

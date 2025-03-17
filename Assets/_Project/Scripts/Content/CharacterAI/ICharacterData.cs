@@ -4,10 +4,11 @@ namespace Project.Content.CharacterAI
 {
     public interface ICharacterData
     {
-        float Speed { get; }
-        float Damage { get; }
-        float Health { get; }
-        float AttackCooldown { get; }
-        Transform DamageTextPoint { get; }
+        public float Speed { get; }
+        public float Damage { get; }
+        public float Health { get; }
+        public float AttackCooldown { get; }
+        public float DistanceToTarget { get; }
+        public Transform DamageTextPoint { get; }
     }
 }
