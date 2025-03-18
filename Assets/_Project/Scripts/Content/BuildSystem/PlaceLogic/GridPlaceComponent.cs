@@ -108,7 +108,7 @@ namespace Project.Content.BuildSystem
 
         public async UniTask ReleaseAsync()
         {
-            _currentEntity.ProvideComponent<GameObject>().SetActive(false);
+            _currentEntity.ProvideComponent<GameObject>().gameObject.SetActive(false);
 
             try
             {
