@@ -1,11 +1,10 @@
-﻿using Cysharp.Threading.Tasks;
-using System;
+﻿using System;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI.Destroyer
 {
-    public class DestroyerAttackLogic : IDisposable, ITickable
+    public class DestroyerAttackLogic : IDisposable, ITickable, IGizmosDrawer
     {
         private ICharacterData _destroyerData;
         private ISensorData _destroyerSensorData;
@@ -13,18 +12,21 @@ namespace Project.Content.CharacterAI.Destroyer
         private CharacterSensor _characterSensor;
         private DestroyerHandler _destroyerHandler;
         private AnimatorEventHandler _animatorEventHandler;
+        private GizmosDrawer _gizmosDrawer;
         private Animator _animator;
         private float _attackCooldownTimer;
 
-        public DestroyerAttackLogic(DestroyerHandler characterHandler, CharacterSensor characterSensor, AnimatorEventHandler animatorEventHandler, Animator animator)
+        public DestroyerAttackLogic(DestroyerHandler destroyerHandler, CharacterSensor characterSensor, AnimatorEventHandler animatorEventHandler, Animator animator, GizmosDrawer gizmosDrawer)
         {
-            _destroyerHandler = characterHandler;
-            _destroyerData = characterHandler.DestroyerData;
-            _destroyerSensorData = (ISensorData)characterHandler.DestroyerData;
+            _destroyerHandler = destroyerHandler;
+            _destroyerData = destroyerHandler.DestroyerData;
+            _destroyerSensorData = (ISensorData)destroyerHandler.DestroyerData;
             _characterSensor = characterSensor;
             _animatorEventHandler = animatorEventHandler;
             _animator = animator;
+            _gizmosDrawer = gizmosDrawer;
 
+            _gizmosDrawer.AddGizmosDrawer(this);
             _characterSensor.HasTargetToAttack += InvokeAttack;
             _animatorEventHandler.OnAnimationHit += TryToHit;
         }
@@ -68,6 +70,7 @@ namespace Project.Content.CharacterAI.Destroyer
 
         private void Attack()
         {
+            _damageable = null;
             CheckAreaToAttack();
 
             if (_damageable == null)
@@ -80,10 +83,16 @@ namespace Project.Content.CharacterAI.Destroyer
 
         }
 
+        public void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere((Vector2)_destroyerSensorData.CharacterTransform.position + _destroyerSensorData.HitColliderOffset, _destroyerSensorData.HitColliderSize);
+        }
+
         private void CheckAreaToAttack()
         {
             Vector2 origin = (Vector2)_destroyerSensorData.CharacterTransform.position + _destroyerSensorData.HitColliderOffset;
-            Vector2 direction = Vector2.zero;
+            Vector2 direction = Vector2.right;
             float size = _destroyerSensorData.HitColliderSize;
 
             var _hits = Physics2D.CircleCastAll(origin, size, direction, 0f);
@@ -102,8 +111,11 @@ namespace Project.Content.CharacterAI.Destroyer
                 if (flags == null)
                     continue;
 
-                if (!flags.Contain(_destroyerSensorData.EnemyFlag))
-                    continue;
+                foreach (var flag in _destroyerSensorData.EnemyFlag)
+                {
+                    if (!flags.Contain(flag))
+                        continue;
+                }
 
                 _damageable = entity.ProvideComponent<IDamageable>();
             }

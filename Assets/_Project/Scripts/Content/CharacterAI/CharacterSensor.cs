@@ -6,13 +6,13 @@ namespace Project.Content.CharacterAI
 {
     public class CharacterSensor : ITickable
     {
-        private readonly ISensorData _data;
-        private Transform _targetTransformToChase;
-        private Transform _targetTransformToAttack;
-        private IEntity _targetToChase;
-        private IEntity _targetToAttack;
-        private IEntity _currentTargetToChase;
-        private IEntity _currentTargetToAttack;
+        protected readonly ISensorData _data;
+        protected Transform _targetTransformToChase;
+        protected Transform _targetTransformToAttack;
+        protected IEntity _targetToChase;
+        protected IEntity _targetToAttack;
+        protected IEntity _currentTargetToChase;
+        protected IEntity _currentTargetToAttack;
         public IEntity TargetToChase => _targetToChase;
         public IEntity TargetToAttack => _targetToAttack;
         public Transform TargetTransformToChase => _targetTransformToChase;
@@ -26,12 +26,12 @@ namespace Project.Content.CharacterAI
             _data = data;
         }
 
-        public void Tick()
+        public virtual void Tick()
         {
             CheckFlagsOnSensor();
         }
 
-        private void CheckFlagsOnSensor()
+        protected virtual void CheckFlagsOnSensor()
         {
             foreach (var flag in _data.Flags.Values)
             {
@@ -59,25 +59,35 @@ namespace Project.Content.CharacterAI
             }
         }
 
-        private void ScanAreaToAttack()
+        protected void ScanAreaToAttack()
         {
             (_targetToAttack, _targetTransformToAttack) = Scan(_data.CharacterTransform.position, _data.HitColliderSize, _data.HitColliderOffset, true);
 
             if (_targetToAttack != null && _targetTransformToAttack != null && _targetToAttack != _currentTargetToAttack)
             {
                 _currentTargetToAttack = _targetToAttack;
-                HasTargetToAttack?.Invoke();
+                OnHasTargetToAttack();
             }
         }
 
-        private void TargetSearch()
+        protected void TargetSearch()
         {
             (_targetToChase, _targetTransformToChase) = Scan(_data.CharacterTransform.position, _data.SensorRadius, Vector2.zero, true);
 
             if (_targetToChase != null && _targetTransformToChase != null)
             {
-                TargetDetected?.Invoke();
+                OnTargetDetected();
             }
+        }
+
+        protected void OnTargetDetected()
+        {
+            TargetDetected?.Invoke();
+        }
+
+        protected void OnHasTargetToAttack()
+        {
+            HasTargetToAttack?.Invoke();
         }
 
         private (IEntity target, Transform targetTransform) Scan(Vector2 position, float size, Vector2 offset, bool closest = false)
@@ -86,7 +96,7 @@ namespace Project.Content.CharacterAI
                 return (null, null);
 
             Vector2 origin = position + offset;
-            Vector2 direction = Vector2.zero;
+            Vector2 direction = Vector2.right;
             float radius = size;
 
             RaycastHit2D[] hits = Physics2D.CircleCastAll(origin, radius, direction, 0);
@@ -109,7 +119,18 @@ namespace Project.Content.CharacterAI
                 if (flags == null)
                     continue;
 
-                if (!flags.Contain(_data.EnemyFlag))
+                bool isEnemy = false;
+
+                foreach (var flag in _data.EnemyFlag)
+                {
+                    if (flags.Contain(flag))
+                    {
+                        isEnemy = true;
+                        break;
+                    }
+                }
+
+                if (!isEnemy)
                     continue;
 
                 if (!closest)

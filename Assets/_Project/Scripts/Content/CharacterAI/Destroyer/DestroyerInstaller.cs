@@ -9,12 +9,14 @@ namespace Project.Content.CharacterAI.Destroyer
         [SerializeField] private DestroyerHandler _destroyerHandler;
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private Animator _animator;
+        [SerializeField] private GizmosDrawer _gizmosDrawer;
         [SerializeField] private AnimatorEventHandler _animatorEventHandler;
 
         public override void InstallBindings()
         {
             Container.Bind<CharacterHealthHandler>().AsSingle().NonLazy();
             Container.Bind<Animator>().FromInstance(_animator).AsSingle().NonLazy();
+            Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
             Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments((ISensorData)_destroyerHandler.DestroyerData).NonLazy();
             Container.Bind<DestroyerHandler>().FromComponentOnRoot().AsSingle().NonLazy();
             Container.Bind<NavMeshAgent>().FromComponentOnRoot().AsSingle().NonLazy();
