@@ -26,8 +26,6 @@ namespace Project.Content.CharacterAI.Destroyer
         public IEntity ThisEntity { get; set; }
         public EntityFlags[] EnemyFlag => _enemyFlag;
 
-
-
     }
 }
 

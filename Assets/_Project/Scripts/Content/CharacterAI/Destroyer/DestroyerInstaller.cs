@@ -8,8 +8,8 @@ namespace Project.Content.CharacterAI.Destroyer
     {
         [SerializeField] private DestroyerHandler _destroyerHandler;
         [SerializeField] private Rigidbody2D _rigidbody;
-        [SerializeField] private Animator _animator;
         [SerializeField] private GizmosDrawer _gizmosDrawer;
+        [SerializeField] private Animator _animator;
         [SerializeField] private AnimatorEventHandler _animatorEventHandler;
 
         public override void InstallBindings()
