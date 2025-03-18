@@ -108,6 +108,7 @@ namespace Project.Content.BuildSystem
         public async UniTask ReleaseAsync()
         {
             _currentEntity.ProvideComponent<MonoBehaviour>().gameObject.SetActive(false);
+            _gridPlaceSystem.RemoveFromGrid(this);
 
             try
             {
