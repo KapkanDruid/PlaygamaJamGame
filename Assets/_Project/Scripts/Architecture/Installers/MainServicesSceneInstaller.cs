@@ -11,9 +11,10 @@ namespace Project.Architecture
         [SerializeField] private MainSceneBootstrap _sceneBootstrap;
         [SerializeField] private GridPlaceSystem _gridPlaceSystem;
         [SerializeField] private GizmosDrawer _gizmosDrawer;
-        [SerializeField] private GameObject _buildingEntity;
         [SerializeField] private Grid _grid;
         [SerializeField] private NavMeshSurface _navMeshSurface;
+        [SerializeField] private SceneRecourses _recourses;
+        [SerializeField] private SceneData _sceneData;
 
         public override void InstallBindings()
         {
@@ -24,8 +25,10 @@ namespace Project.Architecture
             Container.Bind<Camera>().FromInstance(Camera.main).AsSingle().NonLazy();
             Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
             Container.Bind<NavMeshSurface>().FromInstance(_navMeshSurface).AsSingle().NonLazy();
+            Container.Bind<SceneRecourses>().FromInstance(_recourses).AsSingle().NonLazy();
+            Container.Bind<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
 
-            Container.BindFactory<MainBuildingEntity, MainBuildingEntity.Factory>().FromSubContainerResolve().ByNewContextPrefab(_buildingEntity);
+            FactoriesInstaller.Install(Container);
         }
     }
 }

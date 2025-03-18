@@ -41,6 +41,22 @@ namespace Project.Content.BuildSystem
             _isAnySelected = true;
         }
 
+        public void RemoveFromGrid(GridPlaceComponent placeComponent)
+        {
+            var placeComponentGridPattern = placeComponent.GridPattern;
+            Vector2Int componentMainCellPosition = (Vector2Int)_grid.WorldToCell(placeComponent.PivotTransform.position);
+
+            foreach (var patternCell in placeComponentGridPattern)
+            {
+                _occupiedCells.Remove(componentMainCellPosition + patternCell);
+            }
+        }
+
+        public void PLaceOnGrid(GridPlaceComponent placeComponent)
+        {
+            OccupyCells(placeComponent);
+        }
+
         private void Update()
         {
             if (!_isAnySelected)
@@ -63,13 +79,18 @@ namespace Project.Content.BuildSystem
 
         private void PlaceSelected()
         {
-            _placeComponent.Place();
-
-            var placeComponentGridPattern = _placeComponent.GridPattern;
-            Vector2Int componentMainCellPosition = (Vector2Int)_grid.WorldToCell(_placeComponent.PivotTransform.position);
+            OccupyCells(_placeComponent);
 
             _placeComponent = null;
             _isAnySelected = false;
+        }
+
+        private void OccupyCells(GridPlaceComponent placeComponent)
+        {
+            placeComponent.Place();
+
+            var placeComponentGridPattern = placeComponent.GridPattern;
+            Vector2Int componentMainCellPosition = (Vector2Int)_grid.WorldToCell(placeComponent.PivotTransform.position);
 
             foreach (var patternCell in placeComponentGridPattern)
             {
