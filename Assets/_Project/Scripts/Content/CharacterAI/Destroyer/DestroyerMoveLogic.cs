@@ -12,10 +12,10 @@ namespace Project.Content.CharacterAI.Destroyer
         private DestroyerHandler _destroyerHandler;
         private bool _hasTarget;
 
-        public DestroyerMoveLogic(DestroyerHandler characterHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
+        public DestroyerMoveLogic(DestroyerHandler destroyerHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
         {
-            _destroyerHandler = characterHandler;
-            _destroyerData = characterHandler.DestroyerData;
+            _destroyerHandler = destroyerHandler;
+            _destroyerData = destroyerHandler.DestroyerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
 
