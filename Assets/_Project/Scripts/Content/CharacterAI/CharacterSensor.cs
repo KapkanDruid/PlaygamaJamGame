@@ -119,11 +119,19 @@ namespace Project.Content.CharacterAI
                 if (flags == null)
                     continue;
 
+                bool isEnemy = false;
+
                 foreach (var flag in _data.EnemyFlag)
                 {
-                    if (!flags.Contain(flag))
-                        continue;
+                    if (flags.Contain(flag))
+                    {
+                        isEnemy = true;
+                        break;
+                    }
                 }
+
+                if (!isEnemy)
+                    continue;
 
                 if (!closest)
                     return (entity, hits[i].transform);
