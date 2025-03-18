@@ -8,5 +8,6 @@ namespace Project.Content.BuildSystem
         public SpriteRenderer[] SpriteRenderers { get; }
         public Transform[] ScalableObjects { get; }
         public GridPatternData GridPattern { get; }
+        public GameObject[] PhysicObjects { get; }
     }
 }
