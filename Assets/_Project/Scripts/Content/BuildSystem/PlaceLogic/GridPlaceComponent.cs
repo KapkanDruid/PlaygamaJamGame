@@ -2,7 +2,6 @@
 using NavMeshPlus.Components;
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace Project.Content.BuildSystem
@@ -108,7 +107,7 @@ namespace Project.Content.BuildSystem
 
         public async UniTask ReleaseAsync()
         {
-            _currentEntity.ProvideComponent<GameObject>().gameObject.SetActive(false);
+            _currentEntity.ProvideComponent<MonoBehaviour>().gameObject.SetActive(false);
 
             try
             {
