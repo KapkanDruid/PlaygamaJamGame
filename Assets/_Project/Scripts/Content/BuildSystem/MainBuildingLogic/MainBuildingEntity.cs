@@ -8,6 +8,9 @@ namespace Project.Content.BuildSystem
     {
         [SerializeField] private MainBuildingData _data;
 
+        private BuildingHealthComponent _healthHandler;
+        private GridPlaceComponent _placeComponent;
+
         private object[] _components;
 
         public MainBuildingData Data => _data;
@@ -15,19 +18,41 @@ namespace Project.Content.BuildSystem
         public class Factory : PlaceholderFactory<MainBuildingEntity> { }
 
         [Inject]
-        private void Construct(GridPlaceComponent gridPlaceComponent)
+        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler)
         {
             List<object> components = new();
 
-            components.Add(gridPlaceComponent);
+            _healthHandler = healthHandler;
+            _placeComponent = placeComponent;
+
+            components.Add(_placeComponent);
+            components.Add(_healthHandler);
+            components.Add(_data.Flags);
+            components.Add(this);
 
             _components = components.ToArray();
         }
 
+        private void Start()
+        {
+            _healthHandler.Initialize();
+            _placeComponent.Initialize();
+
+            _healthHandler.OnDead += DestroyThisAsync;
+        }
+
+        private async void DestroyThisAsync()
+        {
+            await _placeComponent.ReleaseAsync();
+
+            Destroy(this);
+        }
+
         public T ProvideComponent<T>() where T : class
         {
-            foreach (var component in _components)
+            for (int i = 0; i < _components.Length; i++)
             {
+                object component = _components[i];
                 if (component is T)
                     return component as T;
             }
