@@ -1,5 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using System;
 using UnityEngine;
 using Zenject;
 
@@ -50,6 +49,24 @@ namespace Project.Content.CharacterAI.Destroyer
         private void Start()
         {
             _healthHandler.Initialize();
+        }
+
+        private void Update()
+        {
+            LookAt();
+
+        }
+
+        private void LookAt()
+        {
+            if (_characterSensor.TargetTransformToChase == null)
+                return;
+
+            Vector3 direction = _characterSensor.TargetTransformToChase.position - _destroyerData.CharacterTransform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+            Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
 
         private void HasTarget()

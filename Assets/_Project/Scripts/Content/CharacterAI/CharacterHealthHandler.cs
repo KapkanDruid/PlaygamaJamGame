@@ -10,13 +10,11 @@ namespace Project.Content.CharacterAI
         private Animator _animator;
         private EnemyDeadHandler _enemyDeadHandler;
         private float _health;
-        private bool _isKnockedDown = false;
         private bool _isDead = false;
 
         public float Health => _health;
 
-        [Inject]
-        public void Construct(ICharacterData data,
+        public CharacterHealthHandler(ICharacterData data,
                               Animator animator,
                               EnemyDeadHandler enemyDeadHandler)
         {
@@ -35,17 +33,15 @@ namespace Project.Content.CharacterAI
             if (_isDead)
                 return;
 
-            if (_isKnockedDown)
-                return;
-
             callback?.Invoke();
 
             _health -= damage;
+            Debug.Log("Health: " + _health);
             if ( _health <= 0)
             {
                 _enemyDeadHandler.Death();
                 _isDead = true;
-                //_animator.SetBool(AnimatorHashes.IsDead, _isDead);
+                _animator.SetBool(AnimatorHashes.IsDead, _isDead);
                 return;
             }
         }

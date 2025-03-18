@@ -4,13 +4,13 @@ namespace Project.Content.CharacterAI
 {
     public interface ISensorData
     {
-        Transform CharacterTransform { get; }
-        float SensorRadius { get; }
-        EntityFlags EnemyFlag { get; }
-        Flags Flags { get; }
-        IEntity ThisEntity { get; set; }
-        Vector2 HitColliderOffset { get; }
-        float HitColliderSize { get; }
+        public float SensorRadius { get; }
+        public Flags Flags { get; }
+        public Transform CharacterTransform { get; }
+        public EntityFlags EnemyFlag { get; }
+        public IEntity ThisEntity { get; }
+        public Vector2 HitColliderOffset { get; }
+        public float HitColliderSize { get;  }
 
     }
 }

@@ -10,6 +10,7 @@ namespace Project.Content.CharacterAI.Destroyer
 
         [Header("Movement")]
         [SerializeField] private float _speed;
+        [SerializeField] private float _distanceToTarget;
 
         [Header("Attack System")]
         [Header("Melee")]
@@ -27,6 +28,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public float SensorRadius => _sensorRadius;
         public float AttackCooldown => _attackCooldown;
         public float HitColliderSize => _hitColliderSize;
+        public float DistanceToTarget => _distanceToTarget;
         public Vector2 HitColliderOffset => _hitColliderOffset;
     }
 }

@@ -41,7 +41,7 @@ namespace Project.Content
             if (_animator == null)
                 Debug.Log("_animator = null");
             if (_animator != null)
-                //_animator.SetTrigger(AnimatorHashes.DeathTrigger);
+                _animator.SetTrigger(AnimatorHashes.DeathTrigger);
 
             await WaitForAnimationState();
 
