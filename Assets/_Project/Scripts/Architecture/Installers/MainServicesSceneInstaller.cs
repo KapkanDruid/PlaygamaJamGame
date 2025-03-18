@@ -14,6 +14,7 @@ namespace Project.Architecture
         [SerializeField] private Grid _grid;
         [SerializeField] private NavMeshSurface _navMeshSurface;
         [SerializeField] private SceneRecourses _recourses;
+        [SerializeField] private SceneData _sceneData;
 
         public override void InstallBindings()
         {
@@ -25,6 +26,7 @@ namespace Project.Architecture
             Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
             Container.Bind<NavMeshSurface>().FromInstance(_navMeshSurface).AsSingle().NonLazy();
             Container.Bind<SceneRecourses>().FromInstance(_recourses).AsSingle().NonLazy();
+            Container.Bind<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
         }
