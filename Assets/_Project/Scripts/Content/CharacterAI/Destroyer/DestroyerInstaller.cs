@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Content;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 

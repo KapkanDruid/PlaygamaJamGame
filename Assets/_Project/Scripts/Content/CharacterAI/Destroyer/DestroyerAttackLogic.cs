@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Content;
-using System;
+﻿using System;
 using UnityEngine;
 using Zenject;
 
