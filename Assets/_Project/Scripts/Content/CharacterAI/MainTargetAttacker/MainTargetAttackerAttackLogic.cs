@@ -2,27 +2,27 @@
 using UnityEngine;
 using Zenject;
 
-namespace Project.Content.CharacterAI.Destroyer
+namespace Project.Content.CharacterAI.MainTargetAttacker
 {
-    public class DestroyerAttackLogic : IDisposable, ITickable, IGizmosDrawer
+    class MainTargetAttackerAttackLogic : IDisposable, ITickable, IGizmosDrawer
     {
-        private ICharacterData _destroyerData;
-        private ISensorData _destroyerSensorData;
+        private ICharacterData _mainTargetAttackerData;
+        private ISensorData _mainTargetAttackerSensorData;
         private IDamageable _damageable;
         private CharacterSensor _characterSensor;
-        private DestroyerHandler _destroyerHandler;
+        private MainTargetAttackerHandler _mainTargetAttackerHandler;
         private AnimatorEventHandler _animatorEventHandler;
         private Animator _animator;
         private float _attackCooldownTimer;
 
-        public DestroyerAttackLogic(DestroyerHandler destroyerHandler,
-                                    CharacterSensor characterSensor,
-                                    AnimatorEventHandler animatorEventHandler,
-                                    Animator animator)
+        public MainTargetAttackerAttackLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
+                                             CharacterSensor characterSensor,
+                                             AnimatorEventHandler animatorEventHandler,
+                                             Animator animator)
         {
-            _destroyerHandler = destroyerHandler;
-            _destroyerData = destroyerHandler.DestroyerData;
-            _destroyerSensorData = (ISensorData)destroyerHandler.DestroyerData;
+            _mainTargetAttackerHandler = mainTargetAttackerHandler;
+            _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
+            _mainTargetAttackerSensorData = (ISensorData)mainTargetAttackerHandler.MainTargetAttackerData;
             _characterSensor = characterSensor;
             _animatorEventHandler = animatorEventHandler;
             _animator = animator;
@@ -62,7 +62,7 @@ namespace Project.Content.CharacterAI.Destroyer
                 if (_attackCooldownTimer <= 0)
                 {
                     Attack();
-                    _attackCooldownTimer = _destroyerData.AttackCooldown;
+                    _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
                 }
             }
         }
@@ -75,9 +75,9 @@ namespace Project.Content.CharacterAI.Destroyer
             if (_damageable == null)
                 return;
 
-            if (_destroyerHandler.CanAttack)
+            if (_mainTargetAttackerHandler.CanAttack)
             {
-                _damageable?.TakeDamage(_destroyerData.Damage);
+                _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
             }
 
         }
@@ -86,15 +86,15 @@ namespace Project.Content.CharacterAI.Destroyer
         {
 #if UNITY_EDITOR
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere((Vector2)_destroyerSensorData.CharacterTransform.position + _destroyerSensorData.HitColliderOffset, _destroyerSensorData.HitColliderSize);
+            Gizmos.DrawWireSphere((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position + _mainTargetAttackerSensorData.HitColliderOffset, _mainTargetAttackerSensorData.HitColliderSize);
 #endif
         }
-
+        
         private void CheckAreaToAttack()
         {
-            Vector2 origin = (Vector2)_destroyerSensorData.CharacterTransform.position + _destroyerSensorData.HitColliderOffset;
+            Vector2 origin = (Vector2)_mainTargetAttackerSensorData.CharacterTransform.position + _mainTargetAttackerSensorData.HitColliderOffset;
             Vector2 direction = Vector2.right;
-            float size = _destroyerSensorData.HitColliderSize;
+            float size = _mainTargetAttackerSensorData.HitColliderSize;
 
             var _hits = Physics2D.CircleCastAll(origin, size, direction, 0f);
 
@@ -104,7 +104,7 @@ namespace Project.Content.CharacterAI.Destroyer
                 if (!_hits[i].collider.TryGetComponent(out IEntity entity))
                     continue;
 
-                if (entity == _destroyerSensorData.ThisEntity)
+                if (entity == _mainTargetAttackerSensorData.ThisEntity)
                     continue;
 
                 Flags flags = entity.ProvideComponent<Flags>();
@@ -112,10 +112,18 @@ namespace Project.Content.CharacterAI.Destroyer
                 if (flags == null)
                     continue;
 
-                foreach (var flag in _destroyerSensorData.EnemyFlag)
+                if (_mainTargetAttackerHandler.PathInvalid)
                 {
-                    if (!flags.Contain(flag))
+                    if (!flags.Contain(EntityFlags.Player))
                         continue;
+                }
+                else
+                {
+                    foreach (var flag in _mainTargetAttackerSensorData.EnemyFlag)
+                    {
+                        if (!flags.Contain(flag))
+                            continue;
+                    }
                 }
 
                 _damageable = entity.ProvideComponent<IDamageable>();
@@ -123,4 +131,3 @@ namespace Project.Content.CharacterAI.Destroyer
         }
     }
 }
-

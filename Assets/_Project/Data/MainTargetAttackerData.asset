@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1dfba48aff1b2b47be4c5de7945375f, type: 3}
-  m_Name: DestroyerData
+  m_Script: {fileID: 11500000, guid: a9a600d53746dc74faa5d655ea199a88, type: 3}
+  m_Name: MainTargetAttackerData
   m_EditorClassIdentifier: 
   _health: 100
   _speed: 1
   _distanceToTarget: 1
-  _damage: 4
+  _damage: 3
   _attackCooldown: 2
   _hitColliderSize: 1
   _hitColliderOffset: {x: 0, y: 0}
