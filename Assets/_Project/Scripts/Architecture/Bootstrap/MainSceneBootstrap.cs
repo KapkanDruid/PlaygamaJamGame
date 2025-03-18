@@ -1,30 +1,33 @@
+using Project.Architecture;
 using System;
 using UnityEngine;
 using Zenject;
 
 public class MainSceneBootstrap : MonoBehaviour
 {
+        [Inject] private InputSystemActions _inputActions;
 
-    public event Action OnServicesInitialized;
+        public static event Action OnServicesInitialized;
 
-    private void Awake()
-    {
-        Initialize();
-    }
+        private void Awake()
+        {
+            Initialize();
+        }
 
-    private void Initialize()
-    {
+        private void Initialize()
+        {
+            _inputActions.Enable();
 
-        OnServicesInitialized?.Invoke();
-    }
+            OnServicesInitialized?.Invoke();
+        }
 
-    private void Dispose()
-    {
+        private void Dispose()
+        {
+            _inputActions.Disable();
+        }
 
-    }
-
-    private void OnDisable()
-    {
-        Dispose();
-    }
+        private void OnDisable()
+        {
+            Dispose();
+        }
 }

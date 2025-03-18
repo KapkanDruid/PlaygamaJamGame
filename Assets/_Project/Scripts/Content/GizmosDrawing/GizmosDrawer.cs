@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Scripts.Content
+namespace Project.Content
 {
     public sealed class GizmosDrawer : MonoBehaviour
     {

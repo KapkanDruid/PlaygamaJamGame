@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Content
+namespace Project.Content
 {
     public interface IGizmosDrawerOnSelected
     {
