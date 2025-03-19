@@ -61,7 +61,7 @@ namespace Project.Content.BuildSystem
         {
             await _placeComponent.ReleaseAsync();
 
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         public T ProvideComponent<T>() where T : class

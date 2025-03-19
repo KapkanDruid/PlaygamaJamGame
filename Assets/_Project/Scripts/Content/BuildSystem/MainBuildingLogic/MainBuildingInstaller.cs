@@ -14,7 +14,7 @@ namespace Project.Content.BuildSystem
             Container.BindInterfacesAndSelfTo<MainBuildingEntity>().FromComponentOnRoot().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<MainBuildingData>().FromInstance(_entity.Data).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<BuildingHealthComponent>().AsSingle().NonLazy();
-            Container.BindInterfacesAndSelfTo<HealthBarView>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<HealthBarView>().FromInstance(_healthView).AsSingle().NonLazy();
         }
     }
 }

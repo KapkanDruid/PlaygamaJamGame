@@ -23,6 +23,7 @@ namespace Project.Content.BuildSystem
         public void Initialize()
         {
             _currentHealth = _data.Health;
+            _view.SetHealth(_currentHealth, _data.Health);
         }
 
         public void TakeDamage(float damage, Action callback)
@@ -34,7 +35,7 @@ namespace Project.Content.BuildSystem
 
             Debug.Log($"Building take {damage} damage, current health: {_currentHealth}");
 
-            UpdateHealth(damage);
+            UpdateHealth(-damage);
         }
 
         private void UpdateHealth(float healthModifier)
