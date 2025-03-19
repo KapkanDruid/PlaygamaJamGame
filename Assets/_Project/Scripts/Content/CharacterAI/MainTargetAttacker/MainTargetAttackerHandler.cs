@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -11,12 +12,18 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private bool _canMoving;
         private bool _isPathInvalid;
         private CharacterSensor _characterSensor;
+        private IEntity _blockingEntity;
+        private bool _isMoving;
 
         public ICharacterData MainTargetAttackerData => _mainTargetAttackerData;
+        public IEntity BlockingEntity => _blockingEntity;
 
         public bool CanAttack => _canAttack;
         public bool CanMoving => _canMoving;
         public bool PathInvalid => _isPathInvalid;
+        public bool IsMoving => _isMoving;
+
+        public event Action PathBlocked;
 
         [Inject]
         public void Construct(CharacterHealthHandler healthHandler, EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor)
@@ -48,9 +55,20 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             return null;
         }
 
-        public void IsPathInvalid(bool isInvalid)
+        public void IsPathInvalid(bool isInvalid, IEntity blockingEntity = null)
         {
             _isPathInvalid = isInvalid;
+            if (isInvalid)
+            {
+                PathBlocked?.Invoke();
+                _blockingEntity = blockingEntity;
+            }
+        }
+
+        public void Moving(bool isMoving)
+        {
+            _isMoving = isMoving;
+            _canAttack = !isMoving;
         }
 
         private void Start()
