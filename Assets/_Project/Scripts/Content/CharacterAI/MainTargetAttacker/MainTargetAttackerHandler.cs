@@ -1,25 +1,27 @@
-﻿using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
-namespace Project.Content.CharacterAI.Destroyer
+namespace Project.Content.CharacterAI.MainTargetAttacker
 {
-    public class DestroyerHandler : CharacterHandler
+    public class MainTargetAttackerHandler : CharacterHandler
     {
-        [SerializeField] private DestroyerData _destroyerData;
+        [SerializeField] private MainTargetAttackerData _mainTargetAttackerData;
         private bool _canAttack;
         private bool _canMoving;
+        private bool _isPathInvalid;
         private CharacterSensor _characterSensor;
 
-        public ICharacterData DestroyerData => _destroyerData;
+        public ICharacterData MainTargetAttackerData => _mainTargetAttackerData;
 
         public bool CanAttack => _canAttack;
         public bool CanMoving => _canMoving;
+        public bool PathInvalid => _isPathInvalid;
 
         [Inject]
         public void Construct(CharacterHealthHandler healthHandler, EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor)
         {
-            _destroyerData.ThisEntity = this;
+            _mainTargetAttackerData.ThisEntity = this;
             _healthHandler = healthHandler;
             _enemyDeadHandler = enemyDeadHandler;
             _characterSensor = characterSensor;
@@ -31,7 +33,7 @@ namespace Project.Content.CharacterAI.Destroyer
 
         public override T ProvideComponent<T>() where T : class
         {
-            if (_destroyerData.Flags is T flags)
+            if (_mainTargetAttackerData.Flags is T flags)
                 return flags;
 
             if (_healthHandler is T healthHandler)
@@ -46,6 +48,11 @@ namespace Project.Content.CharacterAI.Destroyer
             return null;
         }
 
+        public void IsPathInvalid(bool isInvalid)
+        {
+            _isPathInvalid = isInvalid;
+        }
+
         private void Start()
         {
             _healthHandler.Initialize();
@@ -55,7 +62,7 @@ namespace Project.Content.CharacterAI.Destroyer
         {
             _canMoving = true;
         }
-        
+
         private void HasTargetToAttack()
         {
             _canAttack = true;
@@ -68,4 +75,3 @@ namespace Project.Content.CharacterAI.Destroyer
         }
     }
 }
-
