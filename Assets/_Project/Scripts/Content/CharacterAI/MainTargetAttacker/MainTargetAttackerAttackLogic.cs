@@ -14,6 +14,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private AnimatorEventHandler _animatorEventHandler;
         private Animator _animator;
         private float _attackCooldownTimer;
+        private bool _isAttaking;
 
         public MainTargetAttackerAttackLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
                                              CharacterSensor characterSensor,
@@ -26,6 +27,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _characterSensor = characterSensor;
             _animatorEventHandler = animatorEventHandler;
             _animator = animator;
+            _mainTargetAttackerHandler.PathBlocked += InvokeAttack;
             _characterSensor.HasTargetToAttack += InvokeAttack;
             _animatorEventHandler.OnAnimationHit += TryToHit;
         }
@@ -34,6 +36,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         {
             _animatorEventHandler.OnAnimationHit -= TryToHit;
             _characterSensor.HasTargetToAttack -= InvokeAttack;
+            _mainTargetAttackerHandler.PathBlocked -= InvokeAttack;
         }
 
         public void Tick()
@@ -52,17 +55,22 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         private void InvokeAttack()
         {
-            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+            if (!_isAttaking)
+            {
+                _isAttaking = true;
+                _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+            }
         }
 
         private void TryToHit()
         {
-            if (_characterSensor.TargetToAttack != null && _characterSensor.TargetTransformToAttack != null)
+            if (_mainTargetAttackerHandler.BlockingEntity != null || (_characterSensor.TargetToAttack != null && _characterSensor.TargetTransformToAttack != null))
             {
                 if (_attackCooldownTimer <= 0)
                 {
                     Attack();
                     _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
+                    _isAttaking = false;
                 }
             }
         }
@@ -89,7 +97,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             Gizmos.DrawWireSphere((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position + _mainTargetAttackerSensorData.HitColliderOffset, _mainTargetAttackerSensorData.HitColliderSize);
 #endif
         }
-        
+
         private void CheckAreaToAttack()
         {
             Vector2 origin = (Vector2)_mainTargetAttackerSensorData.CharacterTransform.position + _mainTargetAttackerSensorData.HitColliderOffset;
@@ -114,8 +122,12 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
                 if (_mainTargetAttackerHandler.PathInvalid)
                 {
-                    if (!flags.Contain(EntityFlags.Player))
-                        continue;
+                    _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
+
+                    if (_damageable == null)
+                        return;
+
+                    _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
                 }
                 else
                 {
@@ -124,9 +136,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                         if (!flags.Contain(flag))
                             continue;
                     }
+                    _damageable = entity.ProvideComponent<IDamageable>();
                 }
 
-                _damageable = entity.ProvideComponent<IDamageable>();
             }
         }
     }

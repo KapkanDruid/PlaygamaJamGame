@@ -8,16 +8,19 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
     class MainTargetAttackerMoveLogic : IDisposable, ITickable
     {
         private NavMeshAgent _agent;
-        private NavMeshPath _path = new NavMeshPath();
         private ICharacterData _mainTargetAttackerData;
+        private ISensorData _mainTargetAttackerSensorData;
+        private IEntity _blockingEntity;
         private CharacterSensor _characterSensor;
         private MainTargetAttackerHandler _mainTargetAttackerHandler;
         private bool _hasTarget;
+        private bool _isMoving => _agent.velocity.sqrMagnitude > 0.05f && !_agent.isStopped;
 
         public MainTargetAttackerMoveLogic(MainTargetAttackerHandler mainTargetAttackerHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
             _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
+            _mainTargetAttackerSensorData = (ISensorData)mainTargetAttackerHandler.MainTargetAttackerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
 
@@ -33,6 +36,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _agent.speed = _mainTargetAttackerData.Speed;
             _agent.stoppingDistance = _mainTargetAttackerData.DistanceToTarget;
             _agent.angularSpeed = _mainTargetAttackerData.Speed;
+            _blockingEntity = null;
         }
 
         private void SetTarget()
@@ -48,6 +52,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public void Tick()
         {
             MoveToTarget();
+            _mainTargetAttackerHandler.Moving(_isMoving);
         }
 
         private void MoveToTarget()
@@ -60,19 +65,29 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                 if (_characterSensor.TargetTransformToChase == null)
                     return;
 
-                bool hasPath = NavMesh.CalculatePath(_agent.transform.position, _characterSensor.TargetTransformToChase.position, NavMesh.AllAreas, _path);
-
-                Debug.Log($"Есть путь к главному зданию: {hasPath}");
-                if (!hasPath)
-                {
-                    Debug.Log("Путь к цели невозможен!");
-                    HandleBlockedPath();
-                }
-                else
+                if (_blockingEntity == null)
                 {
                     _mainTargetAttackerHandler.IsPathInvalid(false);
                     _agent.SetDestination(_characterSensor.TargetTransformToChase.position);
+
+                    if (_agent.pathStatus == NavMeshPathStatus.PathPartial)
+                    {
+                        HandleBlockedPath();
+                    }
                 }
+                else
+                {
+                    if (_blockingEntity.ProvideComponent<MonoBehaviour>() == null)
+                    {
+                        _blockingEntity = null;
+                        _mainTargetAttackerHandler.IsPathInvalid(false, _blockingEntity);
+                        return;
+                    }
+
+                    _agent.SetDestination(_blockingEntity.ProvideComponent<MonoBehaviour>().transform.position);
+                    _mainTargetAttackerHandler.IsPathInvalid(true, _blockingEntity);
+                }
+
             }
         }
 
@@ -88,13 +103,23 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
             for (int i = 0; i < hits.Length; i++)
             {
-                if (hits[i].collider != null && hits[i].collider.gameObject != _agent.gameObject)
-                {
-                    Debug.Log($"Путь заблокирован объектом на позиции: {hits[i].collider}");
-                    _agent.SetDestination(hits[i].collider.transform.position);
-                    break;
-                }
+                if (!hits[i].collider.TryGetComponent(out IEntity entity))
+                    continue;
+
+                if (entity == _mainTargetAttackerSensorData.ThisEntity)
+                    continue;
+
+                Flags flags = entity.ProvideComponent<Flags>();
+
+                if (flags == null)
+                    continue;
+
+                _blockingEntity = entity;
+                return;
+
             }
+
+            _blockingEntity = null;
         }
     }
 }
