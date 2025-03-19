@@ -6,6 +6,7 @@ namespace Project.Content.BuildSystem
     public class MainBuildingInstaller : MonoInstaller
     {
         [SerializeField] private MainBuildingEntity _entity;
+        [SerializeField] private HealthBarView _healthView;
 
         public override void InstallBindings()
         {
@@ -13,6 +14,7 @@ namespace Project.Content.BuildSystem
             Container.BindInterfacesAndSelfTo<MainBuildingEntity>().FromComponentOnRoot().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<MainBuildingData>().FromInstance(_entity.Data).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<BuildingHealthComponent>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<HealthBarView>().AsSingle().NonLazy();
         }
     }
 }
