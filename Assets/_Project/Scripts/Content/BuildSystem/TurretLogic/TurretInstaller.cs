@@ -1,11 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace Project.Content.BuildSystem
 {
-    public class MainBuildingInstaller : MonoInstaller
+    public class TurretInstaller : MonoInstaller
     {
-        [SerializeField] private MainBuildingEntity _entity;
+        [SerializeField] private TurretEntity _entity;
         [SerializeField] private HealthBarView _healthView;
 
         public override void InstallBindings()

@@ -10,10 +10,8 @@ namespace Project.Content
         [Header("BuildingPrefabs")]
         [SerializeField] private MainBuildingEntity _mainBuildingFirstLevel;
 
-        [Header("OtherPrefabs"), Space(3)]
-        [SerializeField] private Canvas _hpBarCanvas;
+        //[Header("OtherPrefabs"), Space(3)]
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
-        public Canvas HpBarCanvas => _hpBarCanvas; 
     }
 }

@@ -1,24 +1,24 @@
-﻿using Project.Architecture;
+using Project.Architecture;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Content.BuildSystem
 {
-    public class MainBuildingEntity : MonoBehaviour, IEntity
+    public class TurretEntity : MonoBehaviour, IEntity
     {
-        [SerializeField] private MainBuildingData _data;
+        [SerializeField] private TurretData _data;
 
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
         private GridPlaceSystem _placeSystem;
 
-        private bool _isRuntimeCreated = true;
+        private bool _isRuntimeCreated;
         private object[] _components;
 
-        public MainBuildingData Data => _data;
+        public TurretData Data => _data; 
 
-        public class Factory : PlaceholderFactory<MainBuildingEntity> { }
+        public class Factory : PlaceholderFactory<TurretEntity> { }
 
         [Inject]
         private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem)
@@ -41,7 +41,7 @@ namespace Project.Content.BuildSystem
 
         private void OnSceneInitialized()
         {
-            _isRuntimeCreated = false;
+            _isRuntimeCreated = true;
         }
 
         private void Start()
