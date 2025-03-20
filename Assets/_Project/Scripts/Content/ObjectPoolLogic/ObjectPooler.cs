@@ -6,26 +6,20 @@ namespace Project.Content
 {
     public class ObjectPooler<T> where T : MonoBehaviour
     {
-        private T _prefab;
         private List<T> _objects;
         private GameObject _parentObject;
+        private IPoolObjectsCreator<T> _poolObjectsCreator;
 
-        public ObjectPooler(T prefab, int prewarmObjects, string parentObjectName)
+        public ObjectPooler(int prewarmObjects, string parentObjectName, IPoolObjectsCreator<T> poolObjectsCreator)
         {
             _parentObject = new GameObject(parentObjectName);
-            _prefab = prefab;
             _objects = new List<T>();
 
-            for (int i = 0; i < prewarmObjects; i++)
-            {
-                var obj = GameObject.Instantiate(_prefab);
-                obj.gameObject.SetActive(false);
-                obj.transform.SetParent(_parentObject.transform, true);
-                _objects.Add(obj);
-            }
+            _poolObjectsCreator = poolObjectsCreator;
 
+            _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
         }
-
+            
         public T Get()
         {
             var obj = _objects.FirstOrDefault(x => !x.isActiveAndEnabled);
@@ -46,7 +40,7 @@ namespace Project.Content
 
         private T Create()
         {
-            var obj = GameObject.Instantiate(_prefab);
+            var obj = _poolObjectsCreator.Instantiate();
             _objects.Add(obj);
 
             if (_parentObject != null)
