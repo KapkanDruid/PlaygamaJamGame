@@ -315,6 +315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Destroyer
       objectReference: {fileID: 0}
+    - target: {fileID: 2773313114171055857, guid: e26e389e5a0fa4e41aee401b156ea9a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7190951956688525650, guid: e26e389e5a0fa4e41aee401b156ea9a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.31
@@ -1719,7 +1723,7 @@ GameObject:
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1919730325
 Transform:
   m_ObjectHideFlags: 0
@@ -1751,16 +1755,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a698362870a46446b5f1dfb90edd404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabs:
-  - {fileID: 5961886238601775038, guid: e26e389e5a0fa4e41aee401b156ea9a7, type: 3}
-  - {fileID: 9027859628255811012, guid: 6103304aba032df46b874274d87f014e, type: 3}
+  _waves:
+  - EnemyGroups:
+    - Prefab: {fileID: 5961886238601775038, guid: e26e389e5a0fa4e41aee401b156ea9a7, type: 3}
+      Count: 5
   _spawnPositions:
   - {fileID: 389154406}
   - {fileID: 862063171}
   - {fileID: 1441905412}
   - {fileID: 2139022127}
-  _capacityInPool: 20
-  _enemiesInWave: 10
+  _capacityInPool: 3
   _spawnInterval: 2
   _waveInterval: 10
 --- !u!1 &2012702385
