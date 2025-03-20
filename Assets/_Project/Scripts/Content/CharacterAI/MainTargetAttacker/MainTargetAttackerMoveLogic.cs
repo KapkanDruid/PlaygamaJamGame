@@ -1,11 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
 {
-    class MainTargetAttackerMoveLogic : IDisposable, ITickable
+    class MainTargetAttackerMoveLogic :  ITickable
     {
         private NavMeshAgent _agent;
         private ICharacterData _mainTargetAttackerData;
@@ -13,7 +12,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private IEntity _blockingEntity;
         private CharacterSensor _characterSensor;
         private MainTargetAttackerHandler _mainTargetAttackerHandler;
-        private bool _hasTarget;
         private bool _isMoving => _agent.velocity.sqrMagnitude > 0.05f && !_agent.isStopped;
 
         public MainTargetAttackerMoveLogic(MainTargetAttackerHandler mainTargetAttackerHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
@@ -23,8 +21,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _mainTargetAttackerSensorData = (ISensorData)mainTargetAttackerHandler.MainTargetAttackerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
-
-            _characterSensor.TargetDetected += SetTarget;
 
             Initialize();
         }
@@ -39,28 +35,19 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _blockingEntity = null;
         }
 
-        private void SetTarget()
-        {
-            _hasTarget = true;
-        }
-
-        public void Dispose()
-        {
-            _characterSensor.TargetDetected -= SetTarget;
-        }
-
         public void Tick()
         {
+            if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
+                _characterSensor.TargetSearch();
+
             MoveToTarget();
+
             _mainTargetAttackerHandler.Moving(_isMoving);
         }
 
         private void MoveToTarget()
         {
-            if (_characterSensor.TargetTransformToAttack != null)
-                return;
-
-            if (_hasTarget && _mainTargetAttackerHandler.CanMoving)
+            if (_characterSensor.TargetToChase != null && _mainTargetAttackerHandler.CanMoving)
             {
                 if (_characterSensor.TargetTransformToChase == null)
                     return;
