@@ -1,18 +1,17 @@
 ﻿using System;
 using UnityEngine;
-using Zenject;
 
 namespace Project.Content.CharacterAI
 {
-    public class CharacterSensor : ITickable
+    public class CharacterSensor
     {
-        protected readonly ISensorData _data;
-        protected Transform _targetTransformToChase;
-        protected Transform _targetTransformToAttack;
-        protected IEntity _targetToChase;
-        protected IEntity _targetToAttack;
-        protected IEntity _currentTargetToChase;
-        protected IEntity _currentTargetToAttack;
+        private readonly ISensorData _data;
+        private Transform _targetTransformToChase;
+        private Transform _targetTransformToAttack;
+        private IEntity _targetToChase;
+        private IEntity _targetToAttack;
+        private IEntity _currentTargetToChase;
+        private IEntity _currentTargetToAttack;
         public IEntity TargetToChase => _targetToChase;
         public IEntity TargetToAttack => _targetToAttack;
         public Transform TargetTransformToChase => _targetTransformToChase;
@@ -26,66 +25,43 @@ namespace Project.Content.CharacterAI
             _data = data;
         }
 
-        public virtual void Tick()
+        public void ScanAreaToAttack()
         {
-            CheckFlagsOnSensor();
+            ScanAndSetTarget(ref _targetToAttack,
+                             ref _targetTransformToAttack,
+                             _data.HitColliderSize,
+                             _data.HitColliderOffset,
+                             ref _currentTargetToAttack,
+                             OnHasTargetToAttack);
         }
 
-        protected virtual void CheckFlagsOnSensor()
+        public void TargetSearch()
         {
-            foreach (var flag in _data.Flags.Values)
+            ScanAndSetTarget(ref _targetToChase,
+                             ref _targetTransformToChase,
+                             _data.SensorRadius,
+                             Vector2.zero,
+                             ref _currentTargetToChase,
+                             OnTargetDetected);
+        }
+
+        private void ScanAndSetTarget(ref IEntity target, ref Transform targetTransform, float size, Vector2 offset, ref IEntity currentTarget, Action onTargetFound)
+        {
+            (target, targetTransform) = Scan(_data.CharacterTransform.position, size, offset, true);
+
+            if (target != null && targetTransform != null && target != currentTarget)
             {
-                switch (flag)
-                {
-                    case EntityFlags.Player:
-                        break;
-                    case EntityFlags.Enemy:
-                        TargetSearch();
-                        ScanAreaToAttack();
-                        break;
-                    case EntityFlags.FriendlyUnit:
-                        TargetSearch();
-                        ScanAreaToAttack();
-                        break;
-                    case EntityFlags.MainBuilding:
-                        TargetSearch();
-                        break;
-                    case EntityFlags.Building:
-                        TargetSearch();
-                        break;
-                    case EntityFlags.Another:
-                        break;
-                }
+                currentTarget = target;
+                onTargetFound?.Invoke();
             }
         }
 
-        protected void ScanAreaToAttack()
-        {
-            (_targetToAttack, _targetTransformToAttack) = Scan(_data.CharacterTransform.position, _data.HitColliderSize, _data.HitColliderOffset, true);
-
-            if (_targetToAttack != null && _targetTransformToAttack != null && _targetToAttack != _currentTargetToAttack)
-            {
-                _currentTargetToAttack = _targetToAttack;
-                OnHasTargetToAttack();
-            }
-        }
-
-        protected void TargetSearch()
-        {
-            (_targetToChase, _targetTransformToChase) = Scan(_data.CharacterTransform.position, _data.SensorRadius, Vector2.zero, true);
-
-            if (_targetToChase != null && _targetTransformToChase != null)
-            {
-                OnTargetDetected();
-            }
-        }
-
-        protected void OnTargetDetected()
+        private void OnTargetDetected()
         {
             TargetDetected?.Invoke();
         }
 
-        protected void OnHasTargetToAttack()
+        private void OnHasTargetToAttack()
         {
             HasTargetToAttack?.Invoke();
         }
@@ -99,7 +75,7 @@ namespace Project.Content.CharacterAI
             Vector2 direction = Vector2.right;
             float radius = size;
 
-            RaycastHit2D[] hits = Physics2D.CircleCastAll(origin, radius, direction, 0);
+            RaycastHit2D[] hits = Physics2D.CircleCastAll(origin, radius, direction);
 
             IEntity closestTarget = null;
             Transform closestTransform = null;
