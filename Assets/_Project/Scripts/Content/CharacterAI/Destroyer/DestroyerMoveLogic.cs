@@ -1,16 +1,14 @@
-﻿using System;
-using UnityEngine.AI;
+﻿using UnityEngine.AI;
 using Zenject;
 
 namespace Project.Content.CharacterAI.Destroyer
 {
-    public class DestroyerMoveLogic : IDisposable, ITickable
+    public class DestroyerMoveLogic : ITickable
     {
         private NavMeshAgent _agent;
         private ICharacterData _destroyerData;
         private CharacterSensor _characterSensor;
         private DestroyerHandler _destroyerHandler;
-        private bool _hasTarget;
 
         public DestroyerMoveLogic(DestroyerHandler destroyerHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
         {
@@ -18,8 +16,6 @@ namespace Project.Content.CharacterAI.Destroyer
             _destroyerData = destroyerHandler.DestroyerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
-
-            _characterSensor.TargetDetected += SetTarget;
 
             Initialize();
         }
@@ -33,27 +29,17 @@ namespace Project.Content.CharacterAI.Destroyer
             _agent.angularSpeed = _destroyerData.Speed;
         }
 
-        private void SetTarget()
-        {
-            _hasTarget = true;
-        }
-
-        public void Dispose()
-        {
-            _characterSensor.TargetDetected -= SetTarget;
-        }
-
         public void Tick()
         {
+            if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
+                _characterSensor.TargetSearch();
+
             MoveToTarget();
         }
 
         private void MoveToTarget()
         {
-            if (_characterSensor.TargetTransformToAttack != null)
-                return;
-
-            if (_hasTarget && _destroyerHandler.CanMoving)
+            if (_characterSensor.TargetToChase != null && _destroyerHandler.CanMoving)
             {
                 if (_characterSensor.TargetTransformToChase == null)
                     return;
