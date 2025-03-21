@@ -73,11 +73,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _canAttack = !isMoving;
         }
 
-        private void Start()
-        {
-            _healthHandler.Initialize();
-        }
-
         private void HasTarget()
         {
             _canMoving = true;

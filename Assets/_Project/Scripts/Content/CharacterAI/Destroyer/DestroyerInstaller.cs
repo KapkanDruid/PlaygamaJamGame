@@ -14,11 +14,11 @@ namespace Project.Content.CharacterAI.Destroyer
 
         public override void InstallBindings()
         {
-            Container.Bind<CharacterHealthHandler>().AsSingle().NonLazy();
+            Container.Bind<CharacterHealthHandler>().AsSingle().WithArguments(_destroyerHandler.DestroyerData.Health).NonLazy();
             Container.Bind<Animator>().FromInstance(_animator).AsSingle().NonLazy();
             Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
-            Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments((ISensorData)_destroyerHandler.DestroyerData).NonLazy();
-            Container.Bind<DestroyerHandler>().FromComponentOnRoot().AsSingle().NonLazy();
+            Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments(_destroyerHandler.transform).NonLazy();
+            Container.Bind<DestroyerHandler>().FromInstance(_destroyerHandler).AsSingle().NonLazy();
             Container.Bind<NavMeshAgent>().FromComponentOnRoot().AsSingle().NonLazy();
             Container.Bind<Rigidbody2D>().FromInstance(_rigidbody).AsSingle();
             Container.Bind<AnimatorEventHandler>().FromInstance(_animatorEventHandler).AsSingle();

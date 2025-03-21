@@ -13,7 +13,7 @@ namespace Project.Content.Spawners
         {
         }
 
-        public void Spawn(ICharacterData data, int id, TypeAlly typeAlly, Transform spawnPosition)
+        public void Spawn(ICharacterData data, int id, TypeUnitAlly typeAlly, Transform spawnPosition)
         {
             Prepare();
 

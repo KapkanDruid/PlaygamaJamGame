@@ -14,10 +14,10 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public override void InstallBindings()
         {
-            Container.Bind<CharacterHealthHandler>().AsSingle().NonLazy();
+            Container.Bind<CharacterHealthHandler>().AsSingle().WithArguments(_mainTargetAttackerHandler.MainTargetAttackerData.Health).NonLazy();
             Container.Bind<Animator>().FromInstance(_animator).AsSingle().NonLazy();
-            Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments((ISensorData)_mainTargetAttackerHandler.MainTargetAttackerData).NonLazy();
-            Container.Bind<MainTargetAttackerHandler>().FromComponentOnRoot().AsSingle().NonLazy();
+            Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments(_mainTargetAttackerHandler.transform).NonLazy();
+            Container.Bind<MainTargetAttackerHandler>().FromInstance(_mainTargetAttackerHandler).AsSingle().NonLazy();
             Container.Bind<NavMeshAgent>().FromComponentOnRoot().AsSingle().NonLazy();
             Container.Bind<Rigidbody2D>().FromInstance(_rigidbody).AsSingle();
             Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
