@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabs:
     _mainBuildingFirstLevel: {fileID: 4410467519451803561, guid: 635fc3d22ffbfe64d88b6b9172ce863d, type: 3}
-    _hpBarCanvas: {fileID: 298537925915910156, guid: f098369512e9cf74b8afa7ccb5ea6567, type: 3}
+    _destroyer: {fileID: 5961886238601775038, guid: e26e389e5a0fa4e41aee401b156ea9a7, type: 3}
+    _mainTargetAttacker: {fileID: 4326860505793268863, guid: 6103304aba032df46b874274d87f014e, type: 3}

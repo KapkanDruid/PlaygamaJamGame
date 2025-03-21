@@ -16,6 +16,8 @@ namespace Project.Content.CharacterAI.Destroyer
         public bool CanAttack => _canAttack;
         public bool CanMoving => _canMoving;
 
+        public class Factory : PlaceholderFactory<DestroyerHandler> { }
+
         [Inject]
         public void Construct(CharacterHealthHandler healthHandler, EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor)
         {
