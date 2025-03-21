@@ -25,6 +25,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public event Action PathBlocked;
 
+        public class Factory : PlaceholderFactory<MainTargetAttackerHandler> { }
+
         [Inject]
         public void Construct(CharacterHealthHandler healthHandler, EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor)
         {
