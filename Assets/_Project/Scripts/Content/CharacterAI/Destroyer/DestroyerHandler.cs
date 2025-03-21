@@ -48,11 +48,6 @@ namespace Project.Content.CharacterAI.Destroyer
             return null;
         }
 
-        private void Start()
-        {
-            _healthHandler.Initialize();
-        }
-
         private void HasTarget()
         {
             _canMoving = true;

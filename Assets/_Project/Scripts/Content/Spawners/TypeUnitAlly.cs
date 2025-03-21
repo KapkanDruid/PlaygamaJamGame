@@ -1,6 +1,6 @@
 ﻿namespace Project.Content.Spawners
 {
-    public enum TypeAlly
+    public enum TypeUnitAlly
     {
         Infantryman,
         RoundEarther,
