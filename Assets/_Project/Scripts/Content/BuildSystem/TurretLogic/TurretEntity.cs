@@ -12,6 +12,7 @@ namespace Project.Content.BuildSystem
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
         private GridPlaceSystem _placeSystem;
+        private TurretAttackComponent _attackComponent;
 
         private bool _isRuntimeCreated;
         private object[] _components;
@@ -21,14 +22,19 @@ namespace Project.Content.BuildSystem
         public class Factory : PlaceholderFactory<TurretEntity> { }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem)
+        private void Construct(GridPlaceComponent placeComponent,
+                               BuildingHealthComponent healthHandler,
+                               GridPlaceSystem placeSystem,
+                               TurretAttackComponent attackComponent)
         {
             List<object> components = new();
 
             _healthHandler = healthHandler;
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
+            _attackComponent = attackComponent;
 
+            components.Add(_attackComponent);
             components.Add(_placeComponent);
             components.Add(_healthHandler);
             components.Add(_data.Flags);
@@ -41,13 +47,15 @@ namespace Project.Content.BuildSystem
 
         private void OnSceneInitialized()
         {
-            _isRuntimeCreated = true;
+            _isRuntimeCreated = false;
         }
 
         private void Start()
         {
+            _data.Initialize();
             _healthHandler.Initialize();
             _placeComponent.Initialize();
+            _attackComponent.Initialize();
 
             _healthHandler.OnDead += DestroyThisAsync;
 
