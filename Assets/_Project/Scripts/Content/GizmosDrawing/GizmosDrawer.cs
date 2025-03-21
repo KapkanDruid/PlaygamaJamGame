@@ -7,13 +7,13 @@ namespace Project.Content
     public sealed class GizmosDrawer : MonoBehaviour
     {
         private List<IGizmosDrawer> _gizmosDrawers = new();
-        private IGizmosDrawerOnSelected[] _gizmosDrawerOnSelected;
+        private List<IGizmosDrawerOnSelected> _gizmosDrawerOnSelected = new();
 
         [Inject]
         private void Construct(List<IGizmosDrawer> gizmosDrawers, List<IGizmosDrawerOnSelected> gizmosDrawerOnSelected)
         {
             _gizmosDrawers.AddRange(gizmosDrawers);
-            _gizmosDrawerOnSelected = gizmosDrawerOnSelected.ToArray();
+            _gizmosDrawerOnSelected.AddRange(gizmosDrawerOnSelected);
         }
 
         public void AddGizmosDrawer(IGizmosDrawer gizmosDrawer)
@@ -21,13 +21,21 @@ namespace Project.Content
             _gizmosDrawers.Add(gizmosDrawer);
         }
 
+        public void AddGizmosDrawer(IGizmosDrawerOnSelected gizmosDrawer)
+        {
+            _gizmosDrawerOnSelected.Add(gizmosDrawer);
+        }
+
         private void OnDrawGizmos()
         {
             if (_gizmosDrawers == null)
                 return;
 
-            foreach (var drawer in _gizmosDrawers)
+            for (int i = 0; i < _gizmosDrawers.Count; i++)
+            {
+                IGizmosDrawer drawer = _gizmosDrawers[i];
                 drawer.OnDrawGizmos();
+            }
         }
 
         private void OnDrawGizmosSelected()
@@ -35,8 +43,11 @@ namespace Project.Content
             if (_gizmosDrawerOnSelected == null)
                 return;
 
-            foreach (var drawer in _gizmosDrawerOnSelected)
+            for (int i = 0; i < _gizmosDrawerOnSelected.Count; i++)
+            {
+                IGizmosDrawerOnSelected drawer = _gizmosDrawerOnSelected[i];
                 drawer.OnDrawGizmosSelected();
+            }
         }
     }
 }
