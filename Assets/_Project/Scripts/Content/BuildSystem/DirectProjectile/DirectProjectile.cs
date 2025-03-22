@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Project.Content.BuildSystem
 {
@@ -14,7 +13,6 @@ namespace Project.Content.BuildSystem
         private float _elapsedTime;
 
         private Vector2 _moveDirection;
-        private Vector3 _lastPosition;
 
         public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData)
         {
@@ -25,7 +23,6 @@ namespace Project.Content.BuildSystem
 
             _moveDirection = moveDirection;
             transform.position = startPosition;
-            _lastPosition = startPosition;
 
             transform.right = moveDirection;
             _elapsedTime = 0;
