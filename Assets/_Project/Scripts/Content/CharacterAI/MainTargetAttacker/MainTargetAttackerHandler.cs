@@ -28,7 +28,15 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public event Action PathBlocked;
 
-        public class Factory : PlaceholderFactory<MainTargetAttackerHandler> { }
+        public class Factory : PlaceholderFactory<MainTargetAttackerHandler> 
+        {
+            public readonly MainTargetAttackerType Type;
+
+            public Factory(MainTargetAttackerType type) : base()
+            {
+                Type = type;
+            }
+        }
 
         [Inject]
         public void Construct(EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor, Animator animator)

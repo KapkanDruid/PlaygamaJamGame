@@ -13,15 +13,11 @@ namespace Project.Content
 
         public bool IsDead => _isDead;
 
-        public EnemyDeadHandler(Transform transform)
+        public EnemyDeadHandler(Transform transform, Animator animator)
         {
             _characterTransform = transform;
-            _isDead = false;
-        }
-
-        public EnemyDeadHandler(Animator animator)
-        {
             _animator = animator;
+            _isDead = false;
         }
 
         public void Reset()
@@ -43,22 +39,6 @@ namespace Project.Content
 
             _characterTransform.gameObject.SetActive(false);
             _isDead = true;
-
-            //DestroyThisAsync().Forget();
-        }
-
-        private async UniTask DestroyThisAsync()
-        {
-
-            await WaitForAnimationState();
-
-            GameObject gameObject = _characterTransform.gameObject;
-
-            if (gameObject == null)
-            {
-                Debug.LogError("gameObject is null!");
-                return;
-            }
 
         }
 

@@ -17,20 +17,19 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private float _attackCooldown;
         [SerializeField] private float _attackRange;
 
+        [Header("Entity Type")]
+        [SerializeField] private AllyEntityType _type;
+
         [Header("Sensor System")]
         [SerializeField] private float _sensorRadius;
 
         public int Damage => _damage;
-
         public float Speed => _speed;
-
         public float Health => _health;
-
         public float SensorRadius => _sensorRadius;
-
         public float AttackRange => _attackRange;
-
         public float AttackCooldown => _attackCooldown;
+        public AllyEntityType Type => _type;
     }
 }
 

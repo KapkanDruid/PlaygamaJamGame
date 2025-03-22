@@ -1,11 +1,11 @@
 ﻿using Cysharp.Threading.Tasks;
+using Project.Content.CharacterAI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using UnityEngine;
 using Zenject;
-using static Project.Content.Spawners.EnemyWaveSpawner;
 
 namespace Project.Content.Spawners
 {
@@ -57,20 +57,19 @@ namespace Project.Content.Spawners
 
         private CancellationToken _cancellationToken;
         private int _currentWaveIndex = 0;
-        private int _capacityPool;
+        private int _currentSpawnerIndex = 0;
         private List<IEnemySpawner> _enemySpawners = new();
-        private DestroyerSpawner _destroyerSpawner;
-        private MainTargetAttackerSpawner _mainTargetAttackerSpawner;
+        private DestroyerSpawner.Factory _destroyerSpawnerFactory;
+        private MainTargetAttackerSpawner.Factory _mainTargetAttackerSpawnerFactory;
         private Wave _currentWave;
+        private IEnemySpawner _spawner;
 
         [Inject]
-        private void Construct(DestroyerSpawner destroyerSpawner, MainTargetAttackerSpawner mainTargetAttackerSpawner)
+        private void Construct(DestroyerSpawner.Factory destroyerSpawner, MainTargetAttackerSpawner.Factory mainTargetAttackerSpawner)
         {
-            _destroyerSpawner = destroyerSpawner;
-            _mainTargetAttackerSpawner = mainTargetAttackerSpawner;
+            _destroyerSpawnerFactory = destroyerSpawner;
+            _mainTargetAttackerSpawnerFactory = mainTargetAttackerSpawner;
 
-            _enemySpawners.Add(_destroyerSpawner);
-            _enemySpawners.Add(_mainTargetAttackerSpawner);
 
         }
 
@@ -78,6 +77,14 @@ namespace Project.Content.Spawners
         {
             _cancellationToken = this.GetCancellationTokenOnDestroy();
 
+
+            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.SimpleParanoid));
+            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.AdvencedParanoid));
+            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.FlatEarther));
+            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.Aliens));
+
+            _enemySpawners.Add(_mainTargetAttackerSpawnerFactory.Create(MainTargetAttackerType.Bigfoot));
+            _enemySpawners.Add(_mainTargetAttackerSpawnerFactory.Create(MainTargetAttackerType.HumanMoth));
 
             foreach (var spawner in _enemySpawners)
             {
@@ -92,6 +99,7 @@ namespace Project.Content.Spawners
                 }
             }
 
+            _spawner = _enemySpawners[_currentSpawnerIndex];
         }
 
         private void Start()
@@ -137,25 +145,43 @@ namespace Project.Content.Spawners
                     EnemyGroup group = wave.EnemyGroups[i];
                     for (int j = 0; j < group.Count; j++)
                     {
-                        for (int k = 0; k < _enemySpawners.Count; k++)
+                        if (group.Prefab.GetType() == _spawner.GetTypeObject())
                         {
-                            IEnemySpawner spawner = _enemySpawners[k];
+                            await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
 
-                            if (group.Prefab.GetType() == spawner.GetTypeObject())
-                            {
-                                await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
+                            _spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
+                            NextSpawnPoint();
+                        }
+                        else
+                        {
+                            NextSpawner();
 
-                                spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
-                                NextSpawnPoint();
-                            }
+                            if (j > 0)
+                                j--;
                         }
                     }
+                    NextSpawner();
                 }
             }
             catch (OperationCanceledException)
             {
                 return;
             }
+        }
+
+        private void NextSpawner()
+        {
+            if (_enemySpawners.Count <= 1)
+                return;
+
+            _currentSpawnerIndex++;
+
+            if (_currentSpawnerIndex >= _enemySpawners.Count)
+            {
+                _currentSpawnerIndex = 0;
+            }
+
+            _spawner = _enemySpawners[_currentSpawnerIndex];
         }
 
         private void NextSpawnPoint()
