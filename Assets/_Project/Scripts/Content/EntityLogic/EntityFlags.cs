@@ -2,7 +2,6 @@
 {
     public enum EntityFlags
     {
-        Player,
         Enemy,
         FriendlyUnit,
         MainBuilding,

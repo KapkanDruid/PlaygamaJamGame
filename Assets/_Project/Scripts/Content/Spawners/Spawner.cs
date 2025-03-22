@@ -1,5 +1,7 @@
 using Project.Content.CharacterAI;
+using Project.Content.CharacterAI.Destroyer;
 using UnityEngine;
+using Zenject;
 
 namespace Project.Content.Spawners
 {
@@ -9,10 +11,9 @@ namespace Project.Content.Spawners
 
         public Spawner(T prefab, int poolSize, string parentName)
         {
-            _objectPool = new ObjectPooler<T>(prefab, poolSize, parentName);
         }
 
-        public void Spawn(ICharacterData data, int id, TypeAlly typeAlly, Transform spawnPosition)
+        public void Spawn(ICharacterData data, int id, TypeUnitAlly typeAlly, Transform spawnPosition)
         {
             Prepare();
 

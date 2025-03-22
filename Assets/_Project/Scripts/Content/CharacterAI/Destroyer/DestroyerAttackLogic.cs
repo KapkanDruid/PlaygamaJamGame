@@ -51,7 +51,7 @@ namespace Project.Content.CharacterAI.Destroyer
                 if (_attackCooldownTimer <= 0)
                 {
                     _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
-                    _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
+                    _damageable = _characterSensor.TargetToChase.ProvideComponent<IDamageable>();
                     Attack();
                     _attackCooldownTimer = _destroyerData.AttackCooldown;
                 }

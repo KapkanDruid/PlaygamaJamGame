@@ -6,7 +6,6 @@ namespace Project.Content.CharacterAI
 {
     public class CharacterHealthHandler : IDamageable
     {
-        private ICharacterData _data;
         private Animator _animator;
         private EnemyDeadHandler _enemyDeadHandler;
         private float _health;
@@ -14,18 +13,13 @@ namespace Project.Content.CharacterAI
 
         public float Health => _health;
 
-        public CharacterHealthHandler(ICharacterData data,
+        public CharacterHealthHandler(float health,
                               Animator animator,
                               EnemyDeadHandler enemyDeadHandler)
         {
-            _data = data;
+            _health = health;
             _animator = animator;
             _enemyDeadHandler = enemyDeadHandler;
-        }
-
-        public void Initialize()
-        {
-            _health = _data.Health;
         }
 
         public void TakeDamage(float damage, Action callback)
