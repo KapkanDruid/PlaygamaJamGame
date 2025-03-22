@@ -2,7 +2,7 @@
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
 {
-    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "_Project/MainTargetAttacker")]
+    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "_Project/Config/MainTargetAttacker")]
     class MainTargetAttackerConfig : ScriptableObject, ICharacterConfig
     {
         [Header("Health System")]

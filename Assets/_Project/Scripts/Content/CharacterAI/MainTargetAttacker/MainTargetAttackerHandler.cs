@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Project.Content.CharacterAI.Destroyer;
 using System;
 using UnityEngine;
 using Zenject;
@@ -8,10 +9,12 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
     public class MainTargetAttackerHandler : CharacterHandler
     {
         [SerializeField] private MainTargetAttackerData _mainTargetAttackerData;
+
         private bool _canAttack;
         private bool _canMoving;
         private bool _isPathInvalid;
         private CharacterSensor _characterSensor;
+        private Animator _animator;
         private IEntity _blockingEntity;
         private bool _isMoving;
 
@@ -28,13 +31,14 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public class Factory : PlaceholderFactory<MainTargetAttackerHandler> { }
 
         [Inject]
-        public void Construct(CharacterHealthHandler healthHandler, EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor)
+        public void Construct(EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor, Animator animator)
         {
             _mainTargetAttackerData.ThisEntity = this;
-            _healthHandler = healthHandler;
             _enemyDeadHandler = enemyDeadHandler;
             _characterSensor = characterSensor;
+            _animator = animator;
 
+            ResetData();
             _characterSensor.TargetDetected += HasTarget;
             _characterSensor.HasTargetToAttack += HasTargetToAttack;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
@@ -71,6 +75,20 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         {
             _isMoving = isMoving;
             _canAttack = !isMoving;
+        }
+
+        private void OnEnable()
+        {
+            ResetData();
+            _animator.Rebind();
+            _animator.Update(0f);
+            _enemyDeadHandler.Reset();
+            _healthHandler.Reset();
+        }
+
+        private void ResetData()
+        {
+            _healthHandler = new CharacterHealthHandler(_mainTargetAttackerData.Health, _animator, _enemyDeadHandler);
         }
 
         private void HasTarget()

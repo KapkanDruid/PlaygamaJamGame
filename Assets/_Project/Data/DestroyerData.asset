@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1dfba48aff1b2b47be4c5de7945375f, type: 3}
   m_Name: DestroyerData
   m_EditorClassIdentifier: 
-  _health: 100
+  _health: 20
   _speed: 1
   _distanceToTarget: 1
   _damage: 4
   _attackCooldown: 2
   _hitColliderSize: 1
   _hitColliderOffset: {x: 0, y: 0}
-  _sensorRadius: 100
+  _sensorRadius: 20

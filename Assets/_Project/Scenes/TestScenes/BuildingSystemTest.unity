@@ -1693,6 +1693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 828871894719075004, guid: 5bb91a56d1f1aa643878ccdf4001ec78, type: 3}
+      propertyPath: _data._enemyFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3062824813009830758, guid: 5bb91a56d1f1aa643878ccdf4001ec78, type: 3}
       propertyPath: m_Name
       value: MockTurret

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a600d53746dc74faa5d655ea199a88, type: 3}
   m_Name: MainTargetAttackerData
   m_EditorClassIdentifier: 
-  _health: 100
+  _health: 30
   _speed: 1
   _distanceToTarget: 1
   _damage: 3

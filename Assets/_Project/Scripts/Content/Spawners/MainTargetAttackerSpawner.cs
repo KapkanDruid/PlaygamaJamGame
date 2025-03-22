@@ -8,15 +8,14 @@ namespace Project.Content.Spawners
     {
         private ObjectPooler<MainTargetAttackerHandler> _mainTargetAttackerPool;
         private MainTargetAttackerHandler.Factory _mainTargetAttackerFactory;
-        private int _capacityInPool = 5;
 
         public MainTargetAttackerSpawner(MainTargetAttackerHandler.Factory mainTargetAttackerFactory)
         {
             _mainTargetAttackerFactory = mainTargetAttackerFactory;
         }
-        public void Initialize()
+        public void Initialize(int capacityInPool)
         {
-            _mainTargetAttackerPool = new ObjectPooler<MainTargetAttackerHandler>(_capacityInPool, "MainTargetAttackers", new InstantiateObjectsByFactory<MainTargetAttackerHandler>(_mainTargetAttackerFactory));
+            _mainTargetAttackerPool = new ObjectPooler<MainTargetAttackerHandler>(capacityInPool, "MainTargetAttackers", new InstantiateObjectsByFactory<MainTargetAttackerHandler>(_mainTargetAttackerFactory));
         }
         public Type GetTypeObject()
         {

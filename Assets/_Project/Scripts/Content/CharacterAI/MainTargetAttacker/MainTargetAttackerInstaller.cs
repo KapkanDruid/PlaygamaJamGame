@@ -14,7 +14,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public override void InstallBindings()
         {
-            Container.Bind<CharacterHealthHandler>().AsSingle().WithArguments(_mainTargetAttackerHandler.MainTargetAttackerData.Health).NonLazy();
             Container.Bind<Animator>().FromInstance(_animator).AsSingle().NonLazy();
             Container.Bind<EnemyDeadHandler>().AsSingle().WithArguments(_mainTargetAttackerHandler.transform).NonLazy();
             Container.Bind<MainTargetAttackerHandler>().FromInstance(_mainTargetAttackerHandler).AsSingle().NonLazy();

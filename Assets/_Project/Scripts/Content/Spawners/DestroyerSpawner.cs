@@ -8,16 +8,15 @@ namespace Project.Content.Spawners
     {
         private ObjectPooler<DestroyerHandler> _destroyerPool;
         private DestroyerHandler.Factory _destroyerFactory;
-        private int _capacityInPool = 5;
 
         public DestroyerSpawner(DestroyerHandler.Factory destroyerFactory)
         {
             _destroyerFactory = destroyerFactory;
         }
 
-        public void Initialize()
+        public void Initialize(int capacityInPool)
         {
-            _destroyerPool = new ObjectPooler<DestroyerHandler>(_capacityInPool, "Destroyers", new InstantiateObjectsByFactory<DestroyerHandler>(_destroyerFactory));
+            _destroyerPool = new ObjectPooler<DestroyerHandler>(capacityInPool, "Destroyers", new InstantiateObjectsByFactory<DestroyerHandler>(_destroyerFactory));
         }
 
         public Type GetTypeObject()

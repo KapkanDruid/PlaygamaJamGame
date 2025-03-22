@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2980c2db270a0049934b8b22e145dfe, type: 3}
-  m_Name: InfantrymanData
+  m_Script: {fileID: 11500000, guid: a1dfba48aff1b2b47be4c5de7945375f, type: 3}
+  m_Name: SimpleParanoidData
   m_EditorClassIdentifier: 
-  _health: 30
+  _health: 20
   _speed: 1
-  _damage: 5
-  _attackCooldown: 1
-  _attackRange: 4
-  _sensorRadius: 6
+  _distanceToTarget: 1
+  _damage: 2
+  _attackCooldown: 2
+  _hitColliderSize: 1
+  _hitColliderOffset: {x: 0, y: 0}
+  _sensorRadius: 20
