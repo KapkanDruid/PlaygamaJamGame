@@ -7,12 +7,16 @@ namespace Project.Content.ReactiveProperty
         private T _value;
 
         public event Action<T> OnValueChanged;
+        private readonly Func<T, bool> _predicate;
 
         public T Value
         {
             get => _value;
             set
             {
+                if (_predicate != null && !_predicate(value))
+                    return;
+
                 if (!Equals(_value, value))
                 {
                     _value = value;
@@ -21,15 +25,10 @@ namespace Project.Content.ReactiveProperty
             }
         }
 
-        public ReactiveProperty(T initialValue = default)
+        public ReactiveProperty(T initialValue = default, Func<T, bool> predicate = null)
         {
             _value = initialValue;
+            _predicate = predicate;
         }
-    }
-
-    public interface IReactiveProperty<T>
-    {
-        public T Value { get; }
-        public event Action<T> OnValueChanged;
     }
 }

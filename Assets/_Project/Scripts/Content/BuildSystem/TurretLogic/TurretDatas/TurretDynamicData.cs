@@ -8,13 +8,13 @@ namespace Project.Content.BuildSystem
 
         private readonly TurretConfig _config;
 
-        private float _maxHealth;
+        private ReactiveProperty<float> _maxHealth;
         private float _reloadTime;
 
         private ReactiveProperty<float> _damage = new ReactiveProperty<float>();
         private ReactiveProperty<float> _sensorRadius = new ReactiveProperty<float>();
 
-        public float MaxHealth { get => _maxHealth; set => _maxHealth = value; }
+        public ReactiveProperty<float> MaxHealth { get => _maxHealth; set => _maxHealth = value; }
         public float ReloadTime
         {
             get => _reloadTime;
@@ -38,7 +38,9 @@ namespace Project.Content.BuildSystem
             _config = config;
             Type = _config.Type;
 
-            _maxHealth = _config.MaxHealth;
+            _maxHealth = new ReactiveProperty<float>(predicate: value => value >= 0);
+
+            _maxHealth.Value = _config.MaxHealth;
             _reloadTime = _config.FireRate;
             _sensorRadius.Value = _config.SensorRadius;
             _damage.Value = _config.ProjectileDamage;

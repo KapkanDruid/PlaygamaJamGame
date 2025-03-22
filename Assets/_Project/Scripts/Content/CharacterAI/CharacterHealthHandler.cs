@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using Zenject;
 
 namespace Project.Content.CharacterAI
 {
@@ -36,7 +35,6 @@ namespace Project.Content.CharacterAI
             callback?.Invoke();
 
             _health -= damage;
-            Debug.Log("Health: " + _health);
             if ( _health <= 0)
             {
                 _enemyDeadHandler.Death();
