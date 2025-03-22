@@ -6,13 +6,15 @@ namespace Project.Content.BuildSystem
     public class BuildingMockPlacer : MonoBehaviour
     {
         private GridPlaceSystem _gridPlaceSystem;
-        private MainBuildingEntity.Factory _buildingEntityFactory;
+        private TurretEntity.Factory _turretFactory;
+        private SceneData _sceneData;
 
         [Inject]
-        private void Construct(GridPlaceSystem gridPlaceSystem, MainBuildingEntity.Factory factory)
+        private void Construct(GridPlaceSystem gridPlaceSystem, [Inject(Id = TurretType.VoiceOfTruth)] TurretEntity.Factory factory, SceneData sceneData)
         {
             _gridPlaceSystem = gridPlaceSystem;
-            _buildingEntityFactory = factory;
+            _turretFactory = factory;
+            _sceneData = sceneData;
         }
 
         private void Update()
@@ -21,12 +23,17 @@ namespace Project.Content.BuildSystem
             {
                 PlaceObject();
             }
+
+            if (Input.GetKeyDown(KeyCode.Plus))
+            {
+                _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].IncreaseFireRate(5);
+            }
         }
 
         [ContextMenu("PlaceObject")]
         private void PlaceObject()
         {
-            var placeEntity = _buildingEntityFactory.Create();
+            var placeEntity = _turretFactory.Create(_sceneData.TurretDynamicData[TurretType.VoiceOfTruth]);
 
             var placeComponent = placeEntity.ProvideComponent<GridPlaceComponent>();
 

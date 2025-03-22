@@ -8,7 +8,7 @@ namespace Project.Architecture
     public class MainSceneBootstrap : MonoBehaviour
     {
         [Inject] private InputSystemActions _inputActions;
-
+        [Inject] private SceneData _sceneData;
         public static event Action OnServicesInitialized;
 
         private void Awake()
@@ -18,6 +18,7 @@ namespace Project.Architecture
 
         private void Initialize()
         {
+            _sceneData.Initialize();
             _inputActions.Enable();
 
             OnServicesInitialized?.Invoke();

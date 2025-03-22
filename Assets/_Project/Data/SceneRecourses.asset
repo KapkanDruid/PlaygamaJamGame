@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabs:
     _mainBuildingFirstLevel: {fileID: 4410467519451803561, guid: 635fc3d22ffbfe64d88b6b9172ce863d, type: 3}
+    _voiceOfTruthTurret: {fileID: 828871894719075004, guid: 5bb91a56d1f1aa643878ccdf4001ec78, type: 3}
     _destroyer: {fileID: 5961886238601775038, guid: e26e389e5a0fa4e41aee401b156ea9a7, type: 3}
     _mainTargetAttacker: {fileID: 4326860505793268863, guid: 6103304aba032df46b874274d87f014e, type: 3}
+  _configs:
+    _turretConfigs:
+    - {fileID: 11400000, guid: f09b56280ab9ba2499e0af0d88551e06, type: 2}

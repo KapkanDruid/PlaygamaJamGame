@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1459540013181229249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.008000001, y: -0.39499998, z: 0}
+  m_LocalPosition: {x: -0.004, y: -0.136, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -252,14 +252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _maxHealth: 50
-    _fireRate: 1
-    _rotateSpeed: 2
-    _projectileLifeTime: 20
-    _projectileSpeed: 2
-    _projectileDamage: 20
-    _sensorRadius: 6
-    _rotationThreshold: 2
     _projectilePrefab: {fileID: 5940939131329807596, guid: bf544a2ea8ee63446bc68d17981572f1, type: 3}
     _gridPivotTransform: {fileID: 8215651618980773562}
     _spriteRenderers:
@@ -270,12 +262,13 @@ MonoBehaviour:
     - {fileID: 4413248284466790053}
     _gridPattern: {fileID: 11400000, guid: e428a1e9d84662948acfec245136b7fe, type: 2}
     _flags:
-      _flags: 04000000
+      _flags: 03000000
     _physicObjects:
     - {fileID: 3474475056755484559}
     _turretRotationObject: {fileID: 3946663751892408213}
     _turretShootPoint: {fileID: 6537497600333281368}
-    _enemyFlag: 1
+    _enemyFlag: 0
+    _turretType: 0
 --- !u!1 &3474475056755484559
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,8 +404,8 @@ Transform:
   m_GameObject: {fileID: 3866716369414010356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0030999929, y: -0.14700001, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.5, z: 1}
+  m_LocalPosition: {x: -0, y: -0.018, z: 0}
+  m_LocalScale: {x: 0.06, y: 0.2514, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4807417642732151459}

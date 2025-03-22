@@ -1,0 +1,14 @@
+﻿using Project.Content.BuildSystem;
+using System;
+using UnityEngine;
+
+namespace Project.Content
+{
+    [Serializable]
+    public class ConfigReferences
+    {
+        [SerializeField] private TurretConfig[] _turretConfigs;
+
+        public TurretConfig[] TurretConfigs => _turretConfigs; 
+    }
+}
