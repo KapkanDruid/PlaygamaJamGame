@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Content.BuildSystem
@@ -14,13 +14,14 @@ namespace Project.Content.BuildSystem
             _gizmoColor = gizmoColor;
         }
 
-        public bool TryGetTarget(out IEntity foundedEntity, out Transform targetTransform, Func<RaycastHit2D[], bool> additionalPredicate = null)
+        public bool TryGetTarget(out IEntity foundedEntity, out Transform targetTransform, ISensorFilter additionalFilter = null)
         {
             Vector2 origin = _data.SensorOrigin.position;
             Vector2 direction = Vector2.down;
             float radius = _data.SensorRadius;
 
             RaycastHit2D[] hits = Physics2D.CircleCastAll(origin, radius, direction, 0);
+            List<RaycastHit2D> hitsForFilter = new();
 
             int count = hits.Length;
             for (int i = 0; i < count; i++)
@@ -39,16 +40,26 @@ namespace Project.Content.BuildSystem
                 if (!flags.Contain(_data.TargetFlag))
                     continue;
 
-                if (additionalPredicate != null)
+                if (additionalFilter != null)
                 {
-                    if (!additionalPredicate.Invoke(hits))
-                        continue;
+                    hitsForFilter.Add(hits[i]);
+                    continue;
                 }
 
                 foundedEntity = entity;
                 targetTransform = hits[i].transform;
 
                 return true;
+            }
+
+            if (additionalFilter != null)
+            {
+                if (additionalFilter.TryToFilter(hitsForFilter.ToArray(), out IEntity filteredEntity, out Transform filteredTransform))
+                {
+                    foundedEntity = filteredEntity;
+                    targetTransform = filteredTransform;
+                    return true;
+                }
             }
 
             foundedEntity = null;
@@ -58,10 +69,10 @@ namespace Project.Content.BuildSystem
 
         public void OnDrawGizmosSelected()
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             Gizmos.color = _gizmoColor;
             Gizmos.DrawWireSphere(_data.SensorOrigin.position, _data.SensorRadius);
-            #endif
+#endif
         }
     }
 }
