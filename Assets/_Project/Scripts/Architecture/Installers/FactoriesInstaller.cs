@@ -51,10 +51,10 @@ namespace Project.Architecture
             Container.BindFactory<DestroyerType, DestroyerSpawner, DestroyerSpawner.Factory>();
             Container.BindFactory<MainTargetAttackerType, MainTargetAttackerSpawner, MainTargetAttackerSpawner.Factory>();
 
-            Container.BindFactory<TurretDynamicData, TurretEntity, TurretEntity.Factory>()
+            Container.BindFactory<TurretEntity, TurretEntity.Factory>()
                 .WithId(TurretType.VoiceOfTruth)
                 .FromSubContainerResolve()
-                .ByNewContextPrefab<TurretInstaller>(_recourses.Prefabs.VoiceOfTruthTurret);
+                .ByNewContextPrefab(_recourses.Prefabs.VoiceOfTruthTurret);
         }
     }
 }

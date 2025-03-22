@@ -15,6 +15,7 @@ namespace Project.Content.BuildSystem
         private readonly Transform _localTransform;
         private readonly Transform _shootPoint;
 
+        private ClosestTargetSensorFilter _sensorFilter;
         private Transform _targetTransform;
         private TargetSensor _sensor;
 
@@ -23,6 +24,7 @@ namespace Project.Content.BuildSystem
         private ObjectPooler<DirectProjectile> _projectilePool;
         private bool _isReadyToShoot;
         private bool _isRotating;
+        private bool _isActive;
 
         public TurretAttackComponent(IProjectilePoolData projectilePoolData, ITurretShootData shootData, CancellationToken cancellationToken, GizmosDrawer gizmosDrawer)
         {
@@ -39,11 +41,16 @@ namespace Project.Content.BuildSystem
             _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectsSimple<DirectProjectile>(_poolData.ProjectilePrefab));
             _isReadyToShoot = true;
             _sensor = new TargetSensor(_shootData.SensorData, Color.red);
+            _sensorFilter = new ClosestTargetSensorFilter(_localTransform);
             _gizmosDrawer.AddGizmosDrawer(_sensor);
+            _isActive = true;
         }
 
         public void Tick()
         {
+            if (!_isActive)
+                return;
+
             HandleTarget();
 
             if (_targetTransform == null)
@@ -51,6 +58,24 @@ namespace Project.Content.BuildSystem
 
             HandleRotation();
             Shoot();
+        }
+
+        private void HandleTarget()
+        {
+            if (_targetTransform == null)
+            {
+                if (!_sensor.TryGetTarget(out IEntity entity, out Transform targetTransform, _sensorFilter))
+                    return;
+
+                _targetTransform = targetTransform;
+            }
+            else
+            {
+                if (_targetTransform.gameObject.activeInHierarchy)
+                    return;
+
+                _targetTransform = null;
+            }
         }
 
         private void HandleRotation()
@@ -118,29 +143,11 @@ namespace Project.Content.BuildSystem
             RechargeRangeAttack().Forget();
         }
 
-        private void HandleTarget()
-        {
-            if (_targetTransform == null)
-            {
-                if (!_sensor.TryGetTarget(out IEntity entity, out Transform targetTransform))
-                    return;
-
-                _targetTransform = targetTransform;
-            }
-            else
-            {
-                if (_targetTransform.gameObject.activeInHierarchy)
-                    return;
-
-                _targetTransform = null;
-            }
-        }
-
         private async UniTaskVoid RechargeRangeAttack()
         {
             try
             {
-                await UniTask.WaitForSeconds(_shootData.FireRate, cancellationToken: _cancellationToken);
+                await UniTask.WaitForSeconds(_shootData.ReloadTime, cancellationToken: _cancellationToken);
             }
             catch (OperationCanceledException)
             {

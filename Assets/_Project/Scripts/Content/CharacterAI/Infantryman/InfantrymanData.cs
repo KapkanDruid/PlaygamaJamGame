@@ -32,7 +32,6 @@ namespace Project.Content.CharacterAI.Infantryman
         public IEntity ThisEntity { get; set; }
         public EntityFlags EnemyFlag => _enemyFlag;
 
-        public float FireRate => _infantrymanConfig.AttackCooldown;
         public Transform ShootPoint => _turretShootPoint;
         public IDirectProjectileData ProjectileData => _projectileData;
         public DirectProjectile ProjectilePrefab => _projectilePrefab;
@@ -40,7 +39,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public BuildSystem.ISensorData SensorData => _sensorData;
         public AllyEntityType Type => _infantrymanConfig.Type;
 
-
+        public float ReloadTime => _infantrymanConfig.AttackCooldown;
         public float RotationThreshold => _infantrymanConfig.Speed;
         public float RotateSpeed => _infantrymanConfig.Speed;
         public Transform RotationObject => throw new NotImplementedException();
