@@ -48,6 +48,8 @@ namespace Project.Content.BuildSystem
         public float RotateSpeed => _configData.RotateSpeed;
         public float RotationThreshold => _configData.RotationThreshold;
 
+        public TurretType TurretType => _turretType; 
+
         public void Construct(TurretDynamicData dynamicData, IEntity entity)
         {
             _dynamicData = dynamicData;

@@ -24,10 +24,10 @@ namespace Project.Architecture
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.MainTargetAttacker);
 
-            Container.BindFactory<TurretDynamicData, TurretEntity, TurretEntity.Factory>()
+            Container.BindFactory<TurretEntity, TurretEntity.Factory>()
                 .WithId(TurretType.VoiceOfTruth)
                 .FromSubContainerResolve()
-                .ByNewContextPrefab<TurretInstaller>(_recourses.Prefabs.VoiceOfTruthTurret);
+                .ByNewContextPrefab(_recourses.Prefabs.VoiceOfTruthTurret);
         }
     }
 }

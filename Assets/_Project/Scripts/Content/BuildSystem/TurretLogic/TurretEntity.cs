@@ -13,23 +13,25 @@ namespace Project.Content.BuildSystem
         private GridPlaceComponent _placeComponent;
         private GridPlaceSystem _placeSystem;
         private TurretAttackComponent _attackComponent;
+        private SceneData _sceneData;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
 
         public TurretData Data => _data; 
 
-        public class Factory : PlaceholderFactory<TurretDynamicData, TurretEntity> { }
+        public class Factory : PlaceholderFactory<TurretEntity> { }
 
         [Inject]
         private void Construct(GridPlaceComponent placeComponent,
                                BuildingHealthComponent healthHandler,
                                GridPlaceSystem placeSystem,
-                               TurretAttackComponent attackComponent, TurretDynamicData turretDynamicData)
+                               TurretAttackComponent attackComponent, 
+                               SceneData sceneData)
         {
             List<object> components = new();
-            _data.Construct(turretDynamicData, this);
 
+            _sceneData = sceneData;
             _healthHandler = healthHandler;
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
@@ -54,6 +56,9 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
+            var turretDynamicData = _sceneData.TurretDynamicData[_data.TurretType];
+            _data.Construct(turretDynamicData, this);
+
             _data.Initialize();
             _healthHandler.Initialize();
             _placeComponent.Initialize();

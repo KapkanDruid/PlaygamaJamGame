@@ -33,7 +33,7 @@ namespace Project.Content.BuildSystem
         [ContextMenu("PlaceObject")]
         private void PlaceObject()
         {
-            var placeEntity = _turretFactory.Create(_sceneData.TurretDynamicData[TurretType.VoiceOfTruth]);
+            var placeEntity = _turretFactory.Create();
 
             var placeComponent = placeEntity.ProvideComponent<GridPlaceComponent>();
 

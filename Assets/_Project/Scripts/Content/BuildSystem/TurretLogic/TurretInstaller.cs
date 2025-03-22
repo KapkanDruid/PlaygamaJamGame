@@ -7,14 +7,11 @@ namespace Project.Content.BuildSystem
 {
     public class TurretInstaller : MonoInstaller
     {
-        [Inject] private TurretDynamicData _dynamicData;
         [SerializeField] private TurretEntity _entity;
         [SerializeField] private HealthBarView _healthView;
 
         public override void InstallBindings()
         {
-            Container.Bind<TurretDynamicData>().FromInstance(_dynamicData).AsSingle();
-
             Container.BindInterfacesAndSelfTo<GridPlaceComponent>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<BuildingHealthComponent>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<HealthBarView>().FromInstance(_healthView).AsSingle().NonLazy();

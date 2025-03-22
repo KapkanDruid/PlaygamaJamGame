@@ -1,5 +1,4 @@
 ﻿using Project.Content.ReactiveProperty;
-using UnityEngine;
 
 namespace Project.Content.BuildSystem
 {
@@ -39,10 +38,11 @@ namespace Project.Content.BuildSystem
             _config = config;
             Type = _config.Type;
 
-            MaxHealth = _config.MaxHealth;
-            ReloadTime = _config.FireRate;
-            SensorRadius.Value = _config.SensorRadius;
-            Damage.Value = _config.ProjectileDamage;
+            _maxHealth = _config.MaxHealth;
+            _reloadTime = _config.FireRate;
+            _sensorRadius.Value = _config.SensorRadius;
+            _damage.Value = _config.ProjectileDamage;
+
         }
     }
 }
