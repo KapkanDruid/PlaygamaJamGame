@@ -52,7 +52,7 @@ namespace Project.Content.BuildSystem
                 return true;
             }
 
-            if (additionalFilter != null)
+            if (additionalFilter != null && hitsForFilter.Count > 0)
             {
                 if (additionalFilter.TryToFilter(hitsForFilter.ToArray(), out IEntity filteredEntity, out Transform filteredTransform))
                 {

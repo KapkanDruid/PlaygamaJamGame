@@ -16,8 +16,9 @@ namespace Project.Content.BuildSystem
             float minDistance = float.MaxValue;
             Transform closestObject = null;
 
-            foreach (var hit in hits)
+            for (int i = 0; i < hits.Length; i++)
             {
+                RaycastHit2D hit = hits[i];
                 if (hit.collider.transform == null)
                     continue;
 

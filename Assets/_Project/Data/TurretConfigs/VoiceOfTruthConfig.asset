@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: VoiceOfTruthConfig
   m_EditorClassIdentifier: 
   _type: 0
-  _rotateSpeed: 2
+  _rotateSpeed: 5
   _rotationThreshold: 1
-  _projectileSpeed: 2
+  _projectileSpeed: 6
   _projectileLifeTime: 5
-  _projectileDamage: 10
-  _sensorRadius: 4
+  _projectileDamage: 0.5
+  _sensorRadius: 50
   _maxHealth: 100
-  _fireRate: 1
+  _fireRate: 5

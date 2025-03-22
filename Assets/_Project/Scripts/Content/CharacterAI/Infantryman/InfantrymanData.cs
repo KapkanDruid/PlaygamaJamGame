@@ -32,7 +32,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public IEntity ThisEntity { get; set; }
         public EntityFlags EnemyFlag => _enemyFlag;
 
-        public float FireRate => _infantrymanConfig.AttackCooldown;
+        public float ReloadTime => _infantrymanConfig.AttackCooldown;
         public float RotateSpeed => _infantrymanConfig.Speed;
         public float RotationThreshold => _infantrymanConfig.Speed;
         public Transform ShootPoint => _turretShootPoint;

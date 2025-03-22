@@ -2,14 +2,10 @@
 
 namespace Project.Content.BuildSystem
 {
-    public interface ITurretShootData
+    public interface ITurretShootData : IShooterData
     {
-        public float FireRate { get; }
         public float RotateSpeed { get; }
         public float RotationThreshold { get; }
         public Transform RotationObject { get; }
-        public Transform ShootPoint { get; }
-        public IDirectProjectileData ProjectileData { get; }
-        public ISensorData SensorData { get; }
     }
 }

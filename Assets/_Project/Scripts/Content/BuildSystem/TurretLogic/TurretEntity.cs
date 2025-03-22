@@ -14,7 +14,7 @@ namespace Project.Content.BuildSystem
         private GridPlaceSystem _placeSystem;
         private TurretAttackComponent _attackComponent;
 
-        private bool _isRuntimeCreated;
+        private bool _isRuntimeCreated = true;
         private object[] _components;
 
         public TurretData Data => _data; 
@@ -43,6 +43,7 @@ namespace Project.Content.BuildSystem
 
             _components = components.ToArray();
 
+            _placeComponent.OnPlaced += OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized += OnSceneInitialized;
         }
 
@@ -56,7 +57,6 @@ namespace Project.Content.BuildSystem
             _data.Initialize();
             _healthHandler.Initialize();
             _placeComponent.Initialize();
-            _attackComponent.Initialize();
 
             _healthHandler.OnDead += DestroyThisAsync;
 
@@ -64,6 +64,11 @@ namespace Project.Content.BuildSystem
                 return;
 
             _placeSystem.PLaceOnGrid(_placeComponent);
+        }
+
+        private void OnEntityPlaced()
+        {
+            _attackComponent.Initialize();
         }
 
         private async void DestroyThisAsync()
@@ -87,6 +92,7 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
+            _placeComponent.OnPlaced -= OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
         }
     }

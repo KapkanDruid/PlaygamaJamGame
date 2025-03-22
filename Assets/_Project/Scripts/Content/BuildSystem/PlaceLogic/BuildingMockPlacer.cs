@@ -24,9 +24,9 @@ namespace Project.Content.BuildSystem
                 PlaceObject();
             }
 
-            if (Input.GetKeyDown(KeyCode.Plus))
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].IncreaseFireRate(5);
+                _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].ReloadTime -= 5;
             }
         }
 

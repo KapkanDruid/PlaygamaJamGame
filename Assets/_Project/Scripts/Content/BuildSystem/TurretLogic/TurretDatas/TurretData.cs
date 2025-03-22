@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
-using Zenject;
 
 namespace Project.Content.BuildSystem
 {
     [Serializable]
     public class TurretData : IPlaceComponentData, IHealthData, ITurretShootData, IProjectilePoolData, IDisposable
     {
+        [SerializeField] private int _projectilePoolSize;
         [SerializeField] private DirectProjectile _projectilePrefab;
 
         [SerializeField] private Transform _gridPivotTransform;
@@ -29,8 +29,8 @@ namespace Project.Content.BuildSystem
         private IEntity _thisEntity;
 
         public float Health => _dynamicData.MaxHealth;
-        public float FireRate => _dynamicData.FireRate;
-        public int ProjectilePoolCount => 10;
+        public float ReloadTime => _dynamicData.ReloadTime;
+        public int ProjectilePoolCount => _projectilePoolSize;
 
         public Transform PivotTransform => _gridPivotTransform;
         public SpriteRenderer[] SpriteRenderers => _spriteRenderers;
