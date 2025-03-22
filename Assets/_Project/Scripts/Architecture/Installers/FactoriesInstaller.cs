@@ -15,12 +15,19 @@ namespace Project.Architecture
             Container.BindFactory<MainBuildingEntity, MainBuildingEntity.Factory>()
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.MainBuildingFirstLevel);
+
             Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.Destroyer);
+
             Container.BindFactory<MainTargetAttackerHandler, MainTargetAttackerHandler.Factory>()
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.MainTargetAttacker);
+
+            Container.BindFactory<TurretDynamicData, TurretEntity, TurretEntity.Factory>()
+                .WithId(TurretType.VoiceOfTruth)
+                .FromSubContainerResolve()
+                .ByNewContextPrefab<TurretInstaller>(_recourses.Prefabs.VoiceOfTruthTurret);
         }
     }
 }

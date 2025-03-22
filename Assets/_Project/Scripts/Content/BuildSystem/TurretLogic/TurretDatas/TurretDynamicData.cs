@@ -21,10 +21,10 @@ namespace Project.Content.BuildSystem
         public IReactiveProperty<float> Damage => _damage;
         public TurretConfig Config => _config;
 
-        public TurretDynamicData(TurretType type, TurretConfig config)
+        public TurretDynamicData(TurretConfig config)
         {
-            Type = type;
             _config = config;
+            Type = _config.Type;
 
             _maxHealth = _config.MaxHealth;
             _fireRate = _config.FireRate;

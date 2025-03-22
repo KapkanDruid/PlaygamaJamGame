@@ -19,15 +19,16 @@ namespace Project.Content.BuildSystem
 
         public TurretData Data => _data; 
 
-        public class Factory : PlaceholderFactory<TurretEntity> { }
+        public class Factory : PlaceholderFactory<TurretDynamicData, TurretEntity> { }
 
         [Inject]
         private void Construct(GridPlaceComponent placeComponent,
                                BuildingHealthComponent healthHandler,
                                GridPlaceSystem placeSystem,
-                               TurretAttackComponent attackComponent)
+                               TurretAttackComponent attackComponent, TurretDynamicData turretDynamicData)
         {
             List<object> components = new();
+            _data.Construct(turretDynamicData, this);
 
             _healthHandler = healthHandler;
             _placeComponent = placeComponent;

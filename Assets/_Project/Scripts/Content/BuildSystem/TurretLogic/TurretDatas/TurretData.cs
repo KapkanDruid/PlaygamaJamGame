@@ -7,14 +7,6 @@ namespace Project.Content.BuildSystem
     [Serializable]
     public class TurretData : IPlaceComponentData, IHealthData, ITurretShootData, IProjectilePoolData, IDisposable
     {
-        //[SerializeField] private float _maxHealth;
-        //[SerializeField] private float _fireRate;
-        //[SerializeField] private float _rotateSpeed;
-        //[SerializeField] private float _projectileLifeTime;
-        //[SerializeField] private float _projectileSpeed;
-        //[SerializeField] private float _projectileDamage;
-        //[SerializeField] private float _sensorRadius;
-        //[SerializeField] private float _rotationThreshold;
         [SerializeField] private DirectProjectile _projectilePrefab;
 
         [SerializeField] private Transform _gridPivotTransform;
@@ -56,12 +48,10 @@ namespace Project.Content.BuildSystem
         public float RotateSpeed => _configData.RotateSpeed;
         public float RotationThreshold => _configData.RotationThreshold;
 
-        [Inject]
-        private void Construct(TurretDynamicData dynamicData, IEntity entity)
+        public void Construct(TurretDynamicData dynamicData, IEntity entity)
         {
             _dynamicData = dynamicData;
             _thisEntity = entity;
-            _configData = _dynamicData.Config;
 
             if (dynamicData.Type != _turretType)
                 Debug.LogError("Wrong type of data received by " + ToString());
@@ -69,6 +59,8 @@ namespace Project.Content.BuildSystem
 
         public void Initialize()
         {
+            _configData = _dynamicData.Config;
+
             _projectileData.EnemyFlag = _enemyFlag;
             _projectileData.LifeTime = _configData.ProjectileLifeTime;
             _projectileData.Speed = _configData.ProjectileSpeed;

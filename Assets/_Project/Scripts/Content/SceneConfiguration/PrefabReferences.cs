@@ -11,6 +11,7 @@ namespace Project.Content
     {
         [Header("BuildingPrefabs")]
         [SerializeField] private MainBuildingEntity _mainBuildingFirstLevel;
+        [SerializeField] private TurretEntity _voiceOfTruthTurret;
         [SerializeField] private DestroyerHandler _destroyer;
         [SerializeField] private MainTargetAttackerHandler _mainTargetAttacker;
 
@@ -19,5 +20,6 @@ namespace Project.Content
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
         public DestroyerHandler Destroyer => _destroyer;
         public MainTargetAttackerHandler MainTargetAttacker => _mainTargetAttacker;
+        public TurretEntity VoiceOfTruthTurret => _voiceOfTruthTurret; 
     }
 }

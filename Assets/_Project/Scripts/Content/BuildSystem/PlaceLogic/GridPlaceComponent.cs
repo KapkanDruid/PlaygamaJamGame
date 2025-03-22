@@ -13,7 +13,7 @@ namespace Project.Content.BuildSystem
         private GridPatternData _gridPatternData;
         private GridPlaceSystem _gridPlaceSystem;
 
-        private List<Vector2Int> _gridPattern;
+        private List<Vector2Int> _gridPattern = new();
 
         private IPlaceComponentData _data;
         private IEntity _currentEntity;
@@ -38,7 +38,7 @@ namespace Project.Content.BuildSystem
             _gridPatternData = _data.GridPattern;
             _pivotTransform = _data.PivotTransform;
 
-            _gridPattern = _gridPatternData.GridPattern;
+            _gridPattern.AddRange(_gridPatternData.GridPattern);
             _gridPattern.Add(Vector2Int.zero);
         }
 

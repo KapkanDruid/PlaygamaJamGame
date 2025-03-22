@@ -6,7 +6,9 @@ namespace Project.Content
     public class SceneRecourses : ScriptableObject
     {
         [SerializeField] private PrefabReferences _prefabs;
+        [SerializeField] private ConfigReferences _configs;
 
-        public PrefabReferences Prefabs => _prefabs; 
+        public PrefabReferences Prefabs => _prefabs;
+        public ConfigReferences Configs => _configs; 
     }
 }
