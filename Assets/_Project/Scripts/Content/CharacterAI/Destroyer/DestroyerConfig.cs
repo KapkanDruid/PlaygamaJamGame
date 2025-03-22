@@ -2,7 +2,7 @@
 
 namespace Project.Content.CharacterAI.Destroyer
 {
-    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "_Project/Destroyer")]
+    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "_Project/Config/Destroyer")]
     public class DestroyerConfig : ScriptableObject, ICharacterConfig
     {
         [Header("Health System")]
@@ -19,6 +19,9 @@ namespace Project.Content.CharacterAI.Destroyer
         [SerializeField] private float _hitColliderSize;
         [SerializeField] private Vector2 _hitColliderOffset;
 
+        [Header("Entity Type")]
+        [SerializeField] private DestroyerType _type;
+
         [Header("Sensor System")]
         [SerializeField] private float _sensorRadius;
 
@@ -29,6 +32,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public float AttackCooldown => _attackCooldown;
         public float HitColliderSize => _hitColliderSize;
         public float DistanceToTarget => _distanceToTarget;
+        public DestroyerType Type => _type;
         public Vector2 HitColliderOffset => _hitColliderOffset;
     }
 }

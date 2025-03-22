@@ -13,6 +13,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private object[] _components;
         private TargetSensor _sensor;
         private Transform _targetTransform;
+        private Animator _animator;
 
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
@@ -21,11 +22,11 @@ namespace Project.Content.CharacterAI.Infantryman
         public class Factory : PlaceholderFactory<InfantrymanEntity> { }
 
         [Inject]
-        public void Construct(CharacterHealthHandler healthHandler, EnemyDeadHandler enemyDeadHandler)
+        public void Construct(EnemyDeadHandler enemyDeadHandler, Animator animator)
         {
             _infantrymanData.ThisEntity = this;
-            _healthHandler = healthHandler;
             _enemyDeadHandler = enemyDeadHandler;
+            _animator = animator;
 
             List<object> components = new();
 
@@ -49,9 +50,23 @@ namespace Project.Content.CharacterAI.Infantryman
             return null;
         }
 
-        public void Update()
+        private void Update()
         {
             HandleTarget();
+        }
+
+        private void OnEnable()
+        {
+            ResetData();
+            _animator.Rebind();
+            _animator.Update(0f);
+            _enemyDeadHandler.Reset();
+            _healthHandler.Reset();
+        }
+
+        private void ResetData()
+        {
+            _healthHandler = new CharacterHealthHandler(_infantrymanData.Health, _animator, _enemyDeadHandler);
         }
 
         private void Start()

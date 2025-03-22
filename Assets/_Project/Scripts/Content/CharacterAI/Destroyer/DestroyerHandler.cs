@@ -1,6 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
+using Zenject.SpaceFighter;
 
 namespace Project.Content.CharacterAI.Destroyer
 {
@@ -10,22 +11,32 @@ namespace Project.Content.CharacterAI.Destroyer
         private bool _canAttack;
         private bool _canMoving;
         private CharacterSensor _characterSensor;
+        private Animator _animator;
 
         public ICharacterData DestroyerData => _destroyerData;
 
         public bool CanAttack => _canAttack;
         public bool CanMoving => _canMoving;
 
-        public class Factory : PlaceholderFactory<DestroyerHandler> { }
+        public class Factory : PlaceholderFactory<DestroyerHandler> 
+        {
+            public readonly DestroyerType Type; 
+            
+            public Factory(DestroyerType type) : base()
+            {
+                Type = type;
+            }
+        }
 
         [Inject]
-        public void Construct(CharacterHealthHandler healthHandler, EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor)
+        public void Construct(EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor, Animator animator)
         {
             _destroyerData.ThisEntity = this;
-            _healthHandler = healthHandler;
+            _animator = animator;
             _enemyDeadHandler = enemyDeadHandler;
             _characterSensor = characterSensor;
 
+            ResetData();
             _characterSensor.TargetDetected += HasTarget;
             _characterSensor.HasTargetToAttack += HasTargetToAttack;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
@@ -46,6 +57,20 @@ namespace Project.Content.CharacterAI.Destroyer
                 return deadHandler;
 
             return null;
+        }
+
+        private void OnEnable()
+        {
+            ResetData();
+            _animator.Rebind();
+            _animator.Update(0f);
+            _enemyDeadHandler.Reset();
+            _healthHandler.Reset();
+        }
+
+        private void ResetData()
+        {
+            _healthHandler = new CharacterHealthHandler(_destroyerData.Health, _animator, _enemyDeadHandler);
         }
 
         private void HasTarget()

@@ -25,5 +25,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public Flags Flags => _flags;
         public IEntity ThisEntity { get; set; }
         public EntityFlags[] EnemyFlag => _enemyFlag;
+        public MainTargetAttackerType Type => _mainTargetAttackerConfig.Type;
     }
 }

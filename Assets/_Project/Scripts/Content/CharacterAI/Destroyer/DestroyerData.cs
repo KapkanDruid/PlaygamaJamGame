@@ -25,6 +25,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public Flags Flags => _flags;
         public IEntity ThisEntity { get; set; }
         public EntityFlags[] EnemyFlag => _enemyFlag;
+        public DestroyerType Type => _destroyerConfig.Type;
 
     }
 }

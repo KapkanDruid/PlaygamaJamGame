@@ -22,6 +22,12 @@ namespace Project.Content.CharacterAI
             _enemyDeadHandler = enemyDeadHandler;
         }
 
+        public void Reset()
+        {
+            _isDead = false;
+            _animator.SetBool(AnimatorHashes.IsDead, _isDead);
+        }
+
         public void TakeDamage(float damage, Action callback)
         {
             if (_isDead)

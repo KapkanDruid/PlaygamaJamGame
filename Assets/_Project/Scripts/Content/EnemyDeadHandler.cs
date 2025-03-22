@@ -13,24 +13,20 @@ namespace Project.Content
 
         public bool IsDead => _isDead;
 
-        public EnemyDeadHandler(Transform transform)
+        public EnemyDeadHandler(Transform transform, Animator animator)
         {
             _characterTransform = transform;
+            _animator = animator;
             _isDead = false;
         }
 
-        public EnemyDeadHandler(Animator animator)
+        public void Reset()
         {
-            _animator = animator;
+            _isDead = false;
+            _characterTransform.gameObject.SetActive(true);
         }
 
-        public void Death()
-        {
-            DestroyThisAsync().Forget();
-            _isDead = true;
-        }
-
-        private async UniTask DestroyThisAsync()
+        public async void Death()
         {
             if (_isDead)
                 return;
@@ -41,15 +37,9 @@ namespace Project.Content
 
             await WaitForAnimationState();
 
-            GameObject gameObject = _characterTransform.gameObject;
+            _characterTransform.gameObject.SetActive(false);
+            _isDead = true;
 
-            if (gameObject == null)
-            {
-                Debug.LogError("gameObject is null!");
-                return;
-            }
-
-            gameObject.SetActive(false);
         }
 
         private async UniTask WaitForAnimationState()
