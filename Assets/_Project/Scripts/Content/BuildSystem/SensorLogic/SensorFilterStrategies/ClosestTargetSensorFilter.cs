@@ -30,8 +30,6 @@ namespace Project.Content.BuildSystem
                 }
             }
 
-            Debug.Log(closestObject.position);
-
             if (closestObject != null)
             {
                 foundedEntity = closestObject.GetComponent<IEntity>();

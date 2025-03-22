@@ -1,7 +1,9 @@
-﻿namespace Project.Content.BuildSystem
+﻿using Project.Content.ReactiveProperty;
+
+namespace Project.Content.BuildSystem
 {
     public interface IHealthData
     {
-        public float Health { get; }
+        public IReactiveProperty<float> Health { get; }
     }
 }

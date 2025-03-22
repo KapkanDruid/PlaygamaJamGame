@@ -26,7 +26,7 @@ namespace Project.Content.BuildSystem
 
             if (Input.GetKeyDown(KeyCode.W))
             {
-                _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].ReloadTime -= 5;
+                _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].MaxHealth.Value = -1;
             }
         }
 
