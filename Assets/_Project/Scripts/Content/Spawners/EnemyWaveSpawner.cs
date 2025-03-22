@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using UnityEngine;
 using Zenject;
+using static Project.Content.Spawners.EnemyWaveSpawner;
 
 namespace Project.Content.Spawners
 {
@@ -56,6 +57,7 @@ namespace Project.Content.Spawners
 
         private CancellationToken _cancellationToken;
         private int _currentWaveIndex = 0;
+        private int _capacityPool;
         private List<IEnemySpawner> _enemySpawners = new();
         private DestroyerSpawner _destroyerSpawner;
         private MainTargetAttackerSpawner _mainTargetAttackerSpawner;
@@ -76,9 +78,10 @@ namespace Project.Content.Spawners
         {
             _cancellationToken = this.GetCancellationTokenOnDestroy();
 
+
             foreach (var spawner in _enemySpawners)
             {
-                spawner.Initialize();
+                spawner.Initialize(_waves[0].EnemyGroups.Count);
             }
 
             foreach (var wave in _waves)

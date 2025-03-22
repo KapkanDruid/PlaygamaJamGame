@@ -24,13 +24,13 @@ namespace Project.Content
             _animator = animator;
         }
 
-        public void Death()
+        public void Reset()
         {
-            DestroyThisAsync().Forget();
-            _isDead = true;
+            _isDead = false;
+            _characterTransform.gameObject.SetActive(true);
         }
 
-        private async UniTask DestroyThisAsync()
+        public async void Death()
         {
             if (_isDead)
                 return;
@@ -38,6 +38,17 @@ namespace Project.Content
                 Debug.Log("_animator = null");
             if (_animator != null)
                 _animator.SetTrigger(AnimatorHashes.DeathTrigger);
+
+            await WaitForAnimationState();
+
+            _characterTransform.gameObject.SetActive(false);
+            _isDead = true;
+
+            //DestroyThisAsync().Forget();
+        }
+
+        private async UniTask DestroyThisAsync()
+        {
 
             await WaitForAnimationState();
 
@@ -49,7 +60,6 @@ namespace Project.Content
                 return;
             }
 
-            gameObject.SetActive(false);
         }
 
         private async UniTask WaitForAnimationState()

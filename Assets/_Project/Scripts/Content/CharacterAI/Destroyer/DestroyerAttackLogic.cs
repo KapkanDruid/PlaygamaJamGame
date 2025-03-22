@@ -46,14 +46,18 @@ namespace Project.Content.CharacterAI.Destroyer
 
         private void TryToHit()
         {
-            if (_characterSensor.TargetToAttack != null)
+            if (_characterSensor.TargetToAttack != null && _characterSensor.TargetTransformToAttack != null)
             {
-                if (_attackCooldownTimer <= 0)
+                if (Vector2.Distance(_destroyerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= _destroyerSensorData.HitColliderSize * 2)
                 {
-                    _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
-                    _damageable = _characterSensor.TargetToChase.ProvideComponent<IDamageable>();
-                    Attack();
-                    _attackCooldownTimer = _destroyerData.AttackCooldown;
+
+                    if (_attackCooldownTimer <= 0)
+                    {
+                        _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+                        _damageable = _characterSensor.TargetToChase.ProvideComponent<IDamageable>();
+                        Attack();
+                        _attackCooldownTimer = _destroyerData.AttackCooldown;
+                    }
                 }
             }
         }
