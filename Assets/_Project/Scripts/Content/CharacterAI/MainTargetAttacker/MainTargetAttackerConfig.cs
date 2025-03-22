@@ -19,6 +19,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         [SerializeField] private float _hitColliderSize;
         [SerializeField] private Vector2 _hitColliderOffset;
 
+        [Header("Entity Type")]
+        [SerializeField] private MainTargetAttackerType _type;
+
         [Header("Sensor System")]
         [SerializeField] private float _sensorRadius;
 
@@ -29,6 +32,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public float AttackCooldown => _attackCooldown;
         public float HitColliderSize => _hitColliderSize;
         public float DistanceToTarget => _distanceToTarget;
+        public MainTargetAttackerType Type => _type;
         public Vector2 HitColliderOffset => _hitColliderOffset;
     }
 }

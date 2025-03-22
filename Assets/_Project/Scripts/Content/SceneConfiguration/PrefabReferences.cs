@@ -12,14 +12,22 @@ namespace Project.Content
         [Header("BuildingPrefabs")]
         [SerializeField] private MainBuildingEntity _mainBuildingFirstLevel;
         [SerializeField] private TurretEntity _voiceOfTruthTurret;
-        [SerializeField] private DestroyerHandler _destroyer;
-        [SerializeField] private MainTargetAttackerHandler _mainTargetAttacker;
+        [SerializeField] private DestroyerHandler _simpleParanoid;
+        [SerializeField] private DestroyerHandler _advencedParanoid;
+        [SerializeField] private DestroyerHandler _aliens;
+        [SerializeField] private DestroyerHandler _flatEarther;
+        [SerializeField] private MainTargetAttackerHandler _bigfoot;
+        [SerializeField] private MainTargetAttackerHandler _humanMoth;
 
         //[Header("OtherPrefabs"), Space(3)]
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
-        public DestroyerHandler Destroyer => _destroyer;
-        public MainTargetAttackerHandler MainTargetAttacker => _mainTargetAttacker;
+        public DestroyerHandler SimpleParanoid => _simpleParanoid;
+        public DestroyerHandler AdvencedParanoid => _advencedParanoid;
+        public DestroyerHandler Aliens => _aliens;
+        public DestroyerHandler FlatEarther => _flatEarther;
+        public MainTargetAttackerHandler BigFoot => _bigfoot;
+        public MainTargetAttackerHandler HumanMoth => _humanMoth;
         public TurretEntity VoiceOfTruthTurret => _voiceOfTruthTurret; 
     }
 }

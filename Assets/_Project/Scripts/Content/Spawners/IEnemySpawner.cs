@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Content.CharacterAI;
+using System;
 using UnityEngine;
 
 namespace Project.Content.Spawners

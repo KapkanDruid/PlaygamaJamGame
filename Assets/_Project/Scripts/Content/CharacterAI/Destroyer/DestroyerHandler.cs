@@ -18,7 +18,15 @@ namespace Project.Content.CharacterAI.Destroyer
         public bool CanAttack => _canAttack;
         public bool CanMoving => _canMoving;
 
-        public class Factory : PlaceholderFactory<DestroyerHandler> { }
+        public class Factory : PlaceholderFactory<DestroyerHandler> 
+        {
+            public readonly DestroyerType Type; 
+            
+            public Factory(DestroyerType type) : base()
+            {
+                Type = type;
+            }
+        }
 
         [Inject]
         public void Construct(EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor, Animator animator)
