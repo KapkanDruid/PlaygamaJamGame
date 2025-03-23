@@ -14,6 +14,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private TargetSensor _sensor;
         private Transform _targetTransform;
         private Animator _animator;
+        private PauseHandler _pauseHandler;
 
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
@@ -22,11 +23,12 @@ namespace Project.Content.CharacterAI.Infantryman
         public class Factory : PlaceholderFactory<InfantrymanEntity> { }
 
         [Inject]
-        public void Construct(EnemyDeadHandler enemyDeadHandler, Animator animator)
+        public void Construct(EnemyDeadHandler enemyDeadHandler, Animator animator, PauseHandler pauseHandler)
         {
             _infantrymanData.ThisEntity = this;
             _enemyDeadHandler = enemyDeadHandler;
             _animator = animator;
+            _pauseHandler = pauseHandler;
 
             List<object> components = new();
 
@@ -52,6 +54,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
         private void Update()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             HandleTarget();
         }
 

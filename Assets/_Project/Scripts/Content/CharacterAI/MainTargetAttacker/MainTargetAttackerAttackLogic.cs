@@ -12,22 +12,28 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private CharacterSensor _characterSensor;
         private MainTargetAttackerHandler _mainTargetAttackerHandler;
         private Animator _animator;
+        private PauseHandler _pauseHandler;
         private float _attackCooldownTimer;
 
         public MainTargetAttackerAttackLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
                                              CharacterSensor characterSensor,
-                                             Animator animator)
+                                             Animator animator, 
+                                             PauseHandler pauseHandler)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
             _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
             _mainTargetAttackerSensorData = (ISensorData)mainTargetAttackerHandler.MainTargetAttackerData;
             _characterSensor = characterSensor;
             _animator = animator;
+            _pauseHandler = pauseHandler;
         }
 
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             if (_characterSensor.TargetToAttack == null || !_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
                 _characterSensor.ScanAreaToAttack();
 

@@ -10,15 +10,20 @@ namespace Project.Content.CharacterAI.Infantryman
         private IAllyEntityData _infantrymanData;
         private InfantrymanEntity _infantrymanEntity;
         private PatrolLogic _patrolLogic;
+        private PauseHandler _pauseHandler;
         private Vector3 _currentPatrolPoint;
         private bool _isPatrolling;
 
-        public InfantrymanMoveLogic(InfantrymanEntity infantrymanEntity, NavMeshAgent agent, PatrolLogic patrolLogic)
+        public InfantrymanMoveLogic(InfantrymanEntity infantrymanEntity,
+                                    NavMeshAgent agent,
+                                    PatrolLogic patrolLogic,
+                                    PauseHandler pauseHandler)
         {
             _infantrymanEntity = infantrymanEntity;
             _infantrymanData = infantrymanEntity.InfantrymanData;
             _agent = agent;
             _patrolLogic = patrolLogic;
+            _pauseHandler = pauseHandler;
 
             ConfiguringAgent();
         }
@@ -34,6 +39,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             if (_infantrymanEntity.TargetTransform == null)
             {
                 Patrol();

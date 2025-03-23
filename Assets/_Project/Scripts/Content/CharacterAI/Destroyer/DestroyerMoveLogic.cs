@@ -9,14 +9,18 @@ namespace Project.Content.CharacterAI.Destroyer
         private ICharacterData _destroyerData;
         private CharacterSensor _characterSensor;
         private DestroyerHandler _destroyerHandler;
+        private PauseHandler _pauseHandler;
 
-        public DestroyerMoveLogic(DestroyerHandler destroyerHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
+        public DestroyerMoveLogic(DestroyerHandler destroyerHandler,
+                                  CharacterSensor characterSensor,
+                                  NavMeshAgent navMeshAgent,
+                                  PauseHandler pauseHandler)
         {
             _destroyerHandler = destroyerHandler;
             _destroyerData = destroyerHandler.DestroyerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
-
+            _pauseHandler = pauseHandler;
             Initialize();
         }
 
@@ -31,6 +35,9 @@ namespace Project.Content.CharacterAI.Destroyer
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
                 _characterSensor.TargetSearch();
 
