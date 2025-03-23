@@ -19,11 +19,14 @@ namespace Project.Content.CharacterAI
             {
                 _fullness++;
             }
-            else
-            {
-                Debug.Log("Флаг переполнен");
-            }
         }
 
+        public void RemoveUnit()
+        {
+            if (_fullness > 0)
+            {
+                _fullness--;
+            }
+        }
     }
 }

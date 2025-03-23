@@ -1,35 +1,49 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Project.Content.CharacterAI
 {
-    public class EntityCommander : MonoBehaviour
+    public class EntityCommander 
     {
-        [SerializeField] private List<Transform> _defensiveFlagsTransforms;
-
+        private List<Transform> _defensiveFlagsTransforms;
         private List<DefensiveFlag> _defensiveFlags;
+        private List<IPatrolling> _entity;
 
-        private void Awake()
+        public void Initialize()
         {
+            _defensiveFlags = new List<DefensiveFlag>();
+            _entity = new List<IPatrolling>();
             TryGetFlags();
+            RedistributeEntities();
         }
 
-        public void OrderMoveToFlag()
+        public void AddEntity(IPatrolling entity)
         {
-            if (_defensiveFlags.Count == 0)
+            _entity.Add(entity);
+            AssignEntityToFlag(entity);
+        }
+
+        public void RemoveEntity(IPatrolling entity)
+        {
+            var flag = entity.FlagTransform.GetComponent<DefensiveFlag>();
+            if (flag != null)
             {
-                return;
+                flag.RemoveUnit();
             }
+            _entity.Remove(entity);
         }
 
         public void AddFlag(DefensiveFlag flag)
         {
             _defensiveFlags.Add(flag);
+            RedistributeEntities();
         }
 
         public void RemoveFlag(DefensiveFlag flag)
         {
             _defensiveFlags.Remove(flag);
+            RedistributeEntities();
         }
 
         private void TryGetFlags()
@@ -47,6 +61,29 @@ namespace Project.Content.CharacterAI
                     return;
                 }
 
+            }
+        }
+
+        private void AssignEntityToFlag(IPatrolling entity)
+        {
+            DefensiveFlag leastFullFlag = _defensiveFlags.OrderBy(f => f.Fullness).FirstOrDefault();
+            if (leastFullFlag != null)
+            {
+                entity.SetFlag(leastFullFlag.transform);
+                leastFullFlag.AddUnit();
+            }
+        }
+
+        private void RedistributeEntities()
+        {
+            foreach (var flag in _defensiveFlags)
+            {
+                flag.RemoveUnit();
+            }
+
+            foreach (var entity in _entity)
+            {
+                AssignEntityToFlag(entity);
             }
         }
 

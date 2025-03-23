@@ -5,20 +5,22 @@ using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanEntity : CharacterHandler
+    public class InfantrymanEntity : CharacterHandler, IPatrolling
     {
         [SerializeField] private InfantrymanData _infantrymanData;
-        [SerializeField] private Transform _flagTransform;
 
         private object[] _components;
         private TargetSensor _sensor;
         private Transform _targetTransform;
+        private Transform _flagTransform;
         private Animator _animator;
         private PauseHandler _pauseHandler;
+        private float _patrolRadius;
 
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
         public Transform FlagTransform => _flagTransform;
+        public float PatrolRadius => _patrolRadius;
 
         public class Factory : PlaceholderFactory<InfantrymanEntity> { }
 
@@ -50,6 +52,18 @@ namespace Project.Content.CharacterAI.Infantryman
             }
 
             return null;
+        }
+
+        public void SetFlag(Transform flag)
+        {
+            _flagTransform = flag;
+            
+            var flagComponent = flag.GetComponent<DefensiveFlag>();
+            
+            if (flagComponent == null)
+                return;
+
+            _patrolRadius = flagComponent.Coverage;
         }
 
         private void Update()
