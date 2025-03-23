@@ -1,6 +1,7 @@
 using NavMeshPlus.Components;
 using Project.Content;
 using Project.Content.BuildSystem;
+using Project.Content.UI;
 using UnityEngine;
 using Zenject;
 
@@ -15,6 +16,7 @@ namespace Project.Architecture
         [SerializeField] private NavMeshSurface _navMeshSurface;
         [SerializeField] private SceneRecourses _recourses;
         [SerializeField] private SceneData _sceneData;
+        [SerializeField] private CardsPopupView _cardsPopupView;
 
         public override void InstallBindings()
         {
@@ -27,6 +29,8 @@ namespace Project.Architecture
             Container.Bind<NavMeshSurface>().FromInstance(_navMeshSurface).AsSingle().NonLazy();
             Container.Bind<SceneRecourses>().FromInstance(_recourses).AsSingle().NonLazy();
             Container.Bind<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
+            Container.Bind<CardsPopupView>().FromInstance(_cardsPopupView).AsSingle().NonLazy();
+            Container.Bind<BuildingSpawner>().AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
         }

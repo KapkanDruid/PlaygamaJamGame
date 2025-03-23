@@ -7,7 +7,7 @@ namespace Project.Content.ReactiveProperty
         private T _value;
 
         public event Action<T> OnValueChanged;
-        private readonly Func<T, bool> _predicate;
+        private Func<T, bool> _predicate;
 
         public T Value
         {
@@ -25,10 +25,15 @@ namespace Project.Content.ReactiveProperty
             }
         }
 
-        public ReactiveProperty(T initialValue = default, Func<T, bool> predicate = null)
+        public ReactiveProperty(T initialValue = default)
         {
             _value = initialValue;
+        }
+
+        public ReactiveProperty<T> SetPredicate(Func<T, bool> predicate)
+        {
             _predicate = predicate;
+            return this;
         }
     }
 }
