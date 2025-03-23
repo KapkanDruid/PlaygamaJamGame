@@ -32,16 +32,12 @@ namespace Project.Content.BuildSystem
 
         private void OnMaxHealthChanged(float changedMaxHealth)
         {
-            Debug.Log("Changed health: " + changedMaxHealth);
             float percent = (_currentHealth / _maxHealth) * 100;
 
             _maxHealth = changedMaxHealth;
             _currentHealth = (percent / 100f) * _maxHealth;
 
             _view.SetHealth(_currentHealth, _maxHealth);
-
-            Debug.Log("Max Health " + _maxHealth);
-            Debug.Log("Current Health " + _currentHealth);
         }
 
         public void TakeDamage(float damage, Action callback)
@@ -50,8 +46,6 @@ namespace Project.Content.BuildSystem
                 return;
 
             callback?.Invoke();
-
-            Debug.Log($"Building take {damage} damage, current health: {_currentHealth}");
 
             UpdateHealth(-damage);
         }
