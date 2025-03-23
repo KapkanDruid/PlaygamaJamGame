@@ -5,9 +5,12 @@ namespace Project.Content
 {
     public class SelectMoveObject : MonoBehaviour
     {
+        private const string Ground = "Ground";
         private Camera _mainCamera;
         private bool _isDragging = false;
         private PauseHandler _pauseHandler;
+        private Vector3 _initialPosition;
+        Collider2D _currentCollider;
 
         [Inject]
         public void Construct(PauseHandler pauseHandler)
@@ -17,6 +20,8 @@ namespace Project.Content
 
         private void Start()
         {
+
+            _currentCollider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
         }
 
@@ -38,12 +43,14 @@ namespace Project.Content
                 if (GetComponent<Collider2D>().OverlapPoint(clickPosition))
                 {
                     _isDragging = true;
+                    _initialPosition = transform.position;
                 }
             }
 
             if (Input.GetMouseButtonUp(0))
             {
                 _isDragging = false;
+                CheckCollisionAndReset();
             }
         }
 
@@ -55,6 +62,20 @@ namespace Project.Content
             Vector2 newPosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
             transform.position = newPosition;
 
+        }
+
+        private void CheckCollisionAndReset()
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(_currentCollider.bounds.center, _currentCollider.bounds.size, 0f);
+
+            foreach (var collider in colliders)
+            {
+                if (collider != _currentCollider && !collider.CompareTag(Ground))
+                {
+                    transform.position = _initialPosition;
+                    return;
+                }
+            }
         }
     }
 }
