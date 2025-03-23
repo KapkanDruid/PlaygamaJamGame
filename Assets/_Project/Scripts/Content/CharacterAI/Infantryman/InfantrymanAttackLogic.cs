@@ -7,7 +7,7 @@ namespace Project.Content.CharacterAI.Infantryman
     public class InfantrymanAttackLogic : ITickable
     {
         private readonly IProjectilePoolData _poolData;
-        private readonly ITurretShootData _shootData;
+        private readonly IShooterData _shootData;
         private readonly Transform _shootPoint;
 
         private IAllyEntityData _infantrymanData;
@@ -15,11 +15,13 @@ namespace Project.Content.CharacterAI.Infantryman
         private float _attackCooldownTimer;
         private ObjectPooler<DirectProjectile> _projectilePool;
         private Animator _animator;
+        private PauseHandler _pauseHandler;
 
         public InfantrymanAttackLogic(InfantrymanEntity infantrymanEntity,
                                       IProjectilePoolData projectilePoolData,
-                                      ITurretShootData shootData,
-                                      Animator animator)
+                                      IShooterData shootData,
+                                      Animator animator,
+                                      PauseHandler pauseHandler)
         {
             _infantrymanEntity = infantrymanEntity;
             _infantrymanData = infantrymanEntity.InfantrymanData;
@@ -27,6 +29,7 @@ namespace Project.Content.CharacterAI.Infantryman
             _shootData = shootData;
             _shootPoint = _shootData.ShootPoint;
             _animator = animator;
+            _pauseHandler = pauseHandler;
 
             Initialize();
         }
@@ -38,6 +41,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             TryToShoot();
 
             CooldownAttack();

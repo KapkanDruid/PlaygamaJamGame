@@ -7,6 +7,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
     class MainTargetAttackerMoveLogic :  ITickable
     {
         private NavMeshAgent _agent;
+        private PauseHandler _pauseHandler;
         private ICharacterData _mainTargetAttackerData;
         private ISensorData _mainTargetAttackerSensorData;
         private IEntity _blockingEntity;
@@ -14,13 +15,17 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private MainTargetAttackerHandler _mainTargetAttackerHandler;
         private bool _isMoving => _agent.velocity.sqrMagnitude > 0.05f && !_agent.isStopped;
 
-        public MainTargetAttackerMoveLogic(MainTargetAttackerHandler mainTargetAttackerHandler, CharacterSensor characterSensor, NavMeshAgent navMeshAgent)
+        public MainTargetAttackerMoveLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
+                                           CharacterSensor characterSensor,
+                                           NavMeshAgent navMeshAgent,
+                                           PauseHandler pauseHandler)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
             _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
             _mainTargetAttackerSensorData = (ISensorData)mainTargetAttackerHandler.MainTargetAttackerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
+            _pauseHandler = pauseHandler;
 
             Initialize();
         }
@@ -37,6 +42,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
                 _characterSensor.TargetSearch();
 

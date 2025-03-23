@@ -13,21 +13,27 @@ namespace Project.Content.CharacterAI.Destroyer
         private DestroyerHandler _destroyerHandler;
         private Animator _animator;
         private float _attackCooldownTimer;
+        private PauseHandler _pauseHandler;
 
         public DestroyerAttackLogic(DestroyerHandler destroyerHandler,
                                     CharacterSensor characterSensor,
-                                    Animator animator)
+                                    Animator animator,
+                                    PauseHandler pauseHandler)
         {
             _destroyerHandler = destroyerHandler;
             _destroyerData = destroyerHandler.DestroyerData;
             _destroyerSensorData = (ISensorData)destroyerHandler.DestroyerData;
             _characterSensor = characterSensor;
             _animator = animator;
+            _pauseHandler = pauseHandler;
         }
 
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             if (_characterSensor.TargetToAttack == null || !_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
                 _characterSensor.ScanAreaToAttack();
 
