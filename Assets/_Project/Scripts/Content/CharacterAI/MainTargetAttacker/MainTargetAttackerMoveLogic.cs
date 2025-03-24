@@ -43,9 +43,11 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public void Tick()
         {
             if (_pauseHandler.IsPaused)
+            {
+                _agent.isStopped = true;
                 return;
-
-            _agent.isStopped = _pauseHandler.IsPaused;
+            }
+            _agent.isStopped = false;
 
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
                 _characterSensor.TargetSearch();
