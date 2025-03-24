@@ -11,7 +11,7 @@ namespace Project.Content.UI
         public ReactiveProperty<IReadOnlyList<CoreProgressCard>> _currentCards = new();
         public IReactiveProperty<IReadOnlyList<CoreProgressCard>> CurrentCards => _currentCards;
 
-        public void Start()
+        public void Initialize()
         {
             _cards = GetComponentsInChildren<CoreProgressCard>();
         }

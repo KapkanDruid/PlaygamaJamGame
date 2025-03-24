@@ -23,16 +23,17 @@ namespace Project.Content.UI
 
         private IReadOnlyList<CoreProgressCard> _currentCards;
 
+        public event Action OnPopupClosed;
+
         private bool _isActive;
         private bool _isShowing;
 
-        private void Start()
+        public void Initialize()
         {
             _presenter.CurrentCards.OnValueChanged += ShowPopup;
             _localRectTransform = GetComponent<RectTransform>();
             _popupPositionMath = new UIPositionMath(_localRectTransform, _canvasRectTransform);
             _localRectTransform.localPosition = _popupPositionMath.DetermineHidePosition(_hideOffset);
-            gameObject.SetActive(false);
         }
 
         private void Update()
@@ -134,6 +135,7 @@ namespace Project.Content.UI
                     _isActive = false;
                     _presenter.CardSelected(progressStrategy);
                     gameObject.SetActive(false);
+                    OnPopupClosed?.Invoke();
                 });
         }
 

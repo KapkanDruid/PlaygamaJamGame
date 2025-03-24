@@ -17,6 +17,7 @@ namespace Project.Architecture
         [SerializeField] private SceneRecourses _recourses;
         [SerializeField] private SceneData _sceneData;
         [SerializeField] private CardsPopupView _cardsPopupView;
+        [SerializeField] private LevelExperienceView _experienceView;
 
         public override void InstallBindings()
         {
@@ -24,14 +25,20 @@ namespace Project.Architecture
             Container.Bind<GridPlaceSystem>().FromInstance(_gridPlaceSystem).AsSingle().NonLazy();
             Container.Bind<Grid>().FromInstance(_grid).AsSingle().NonLazy();
             Container.Bind<InputSystemActions>().AsSingle().NonLazy();
-            Container.Bind<PauseHandler>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<PauseHandler>().AsSingle().NonLazy();
             Container.Bind<Camera>().FromInstance(Camera.main).AsSingle().NonLazy();
             Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
             Container.Bind<NavMeshSurface>().FromInstance(_navMeshSurface).AsSingle().NonLazy();
             Container.Bind<SceneRecourses>().FromInstance(_recourses).AsSingle().NonLazy();
             Container.Bind<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
-            Container.Bind<CardsPopupView>().FromInstance(_cardsPopupView).AsSingle().NonLazy();
+
             Container.Bind<BuildingSpawner>().AsSingle().NonLazy();
+
+            Container.Bind<CardsPopupView>().FromInstance(_cardsPopupView).AsSingle().NonLazy();
+            Container.Bind<CardsPopupPresenter>().FromComponentOn(_cardsPopupView.gameObject).AsSingle().NonLazy();
+
+            Container.BindInterfacesAndSelfTo<LevelExperienceController>().AsSingle().NonLazy();
+            Container.Bind<LevelExperienceView>().FromInstance(_experienceView).AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
         }
