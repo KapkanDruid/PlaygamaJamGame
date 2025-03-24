@@ -19,6 +19,7 @@ namespace Project.Architecture
         [SerializeField] private SceneData _sceneData;
         [SerializeField] private CardsPopupView _cardsPopupView;
         [SerializeField] private LevelExperienceView _experienceView;
+        [SerializeField] private DefensiveFlag _defensiveFlag;
 
         public override void InstallBindings()
         {
@@ -41,6 +42,7 @@ namespace Project.Architecture
 
             Container.BindInterfacesAndSelfTo<LevelExperienceController>().AsSingle().NonLazy();
             Container.Bind<LevelExperienceView>().FromInstance(_experienceView).AsSingle().NonLazy();
+            Container.Bind<DefensiveFlag>().FromInstance(_defensiveFlag).AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
         }
