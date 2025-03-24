@@ -1,4 +1,5 @@
 ﻿using Project.Content.CharacterAI;
+using Project.Content.ReactiveProperty;
 using System;
 using UnityEngine;
 
@@ -21,7 +22,9 @@ namespace Project.Content.BuildSystem
         [SerializeField] private int _capacity;
         [SerializeField] private float _spawnCooldown;
 
-        public float Health => _maxHealth;
+        private ReactiveProperty<float> _health;
+
+        //public float Health => _maxHealth;
         public Transform PivotTransform => _gridPivotTransform;
         public SpriteRenderer[] SpriteRenderers => _spriteRenderers;
         public Transform[] ScalableObjects => _scalableObjects;
@@ -33,5 +36,12 @@ namespace Project.Content.BuildSystem
         public Vector3 SpawnPosition => _spawnPosition.position;
         public int Capacity => _capacity;
         public float SpawnCooldown => _spawnCooldown;
+
+        IReactiveProperty<float> IHealthData.Health => _health;
+
+        public void Initialize()
+        {
+            _health = new ReactiveProperty<float>(_maxHealth);
+        }
     }
 }

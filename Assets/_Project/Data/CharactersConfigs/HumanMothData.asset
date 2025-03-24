@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: HumanMothData
   m_EditorClassIdentifier: 
   _health: 70
+  _experiencePoints: 10
   _speed: 2.5
   _distanceToTarget: 1
   _damage: 7
   _attackCooldown: 1.5
   _hitColliderSize: 2
   _hitColliderOffset: {x: 0, y: 0}
+  _type: 0
   _sensorRadius: 20
