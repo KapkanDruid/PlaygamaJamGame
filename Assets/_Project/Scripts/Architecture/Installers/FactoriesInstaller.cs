@@ -2,6 +2,7 @@
 using Project.Content.BuildSystem;
 using Project.Content.CharacterAI;
 using Project.Content.CharacterAI.Destroyer;
+using Project.Content.CharacterAI.Infantryman;
 using Project.Content.CharacterAI.MainTargetAttacker;
 using Project.Content.Spawners;
 using Zenject;
@@ -38,6 +39,11 @@ namespace Project.Architecture
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.FlatEarther);
 
+            Container.BindFactory<InfantrymanEntity, InfantrymanEntity.Factory>()
+                .WithFactoryArguments(AllyEntityType.Infantryman)
+                .FromSubContainerResolve()
+                .ByNewContextPrefab(_recourses.Prefabs.Infantryman);
+
             Container.BindFactory<MainTargetAttackerHandler, MainTargetAttackerHandler.Factory>()
                 .WithFactoryArguments(MainTargetAttackerType.Bigfoot)
                 .FromSubContainerResolve()
@@ -50,11 +56,21 @@ namespace Project.Architecture
 
             Container.BindFactory<DestroyerType, DestroyerSpawner, DestroyerSpawner.Factory>();
             Container.BindFactory<MainTargetAttackerType, MainTargetAttackerSpawner, MainTargetAttackerSpawner.Factory>();
+            Container.BindFactory<AllyEntityType, AlliedRangerSpawner, AlliedRangerSpawner.Factory>();
 
             Container.BindFactory<TurretEntity, TurretEntity.Factory>()
                 .WithId(TurretType.VoiceOfTruth)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.VoiceOfTruthTurret);
+            
+            Container.BindFactory<BarracksEntity, BarracksEntity.Factory>()
+                .WithId(BarracksType.Infantryman)
+                .FromSubContainerResolve()
+                .ByNewContextPrefab(_recourses.Prefabs.InfantrymanBarracks);
+
+            Container.BindFactory<DefensiveFlag, DefensiveFlag.Factory>()
+                .FromSubContainerResolve()
+                .ByNewContextPrefab(_recourses.Prefabs.Flag);
         }
     }
 }

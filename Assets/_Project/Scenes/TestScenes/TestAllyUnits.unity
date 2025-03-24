@@ -565,6 +565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Infatryman (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355194715994044474, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -811,31 +815,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &332447509 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2509100633606901567, guid: 068826a682678f648bb77929684c3b42, type: 3}
-  m_PrefabInstance: {fileID: 5474071293545978008}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &332447510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8515217196060400361, guid: 068826a682678f648bb77929684c3b42, type: 3}
   m_PrefabInstance: {fileID: 5474071293545978008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &332447513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332447509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb254d5ea98550340aafe74c9ddd8bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _capacity: 20
-  _fullness: 0
-  _coverage: 4
 --- !u!1 &365738623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Infatryman (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355194715994044474, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1821,6 +1809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _groundGridSize: {x: 5, y: 5}
+  _startFlagPosition: {x: 0, y: -2}
 --- !u!4 &1486611899
 Transform:
   m_ObjectHideFlags: 0
@@ -2476,6 +2465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Infatryman
       objectReference: {fileID: 0}
+    - target: {fileID: 5355194715994044474, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2554,6 +2547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flag
       objectReference: {fileID: 0}
+    - target: {fileID: 2509100633606901567, guid: 068826a682678f648bb77929684c3b42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8515217196060400361, guid: 068826a682678f648bb77929684c3b42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.14
@@ -2597,10 +2594,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2509100633606901567, guid: 068826a682678f648bb77929684c3b42, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 332447513}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 068826a682678f648bb77929684c3b42, type: 3}
 --- !u!1001 &5786277040631989931
 PrefabInstance:
@@ -2836,6 +2830,10 @@ PrefabInstance:
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
       propertyPath: _spawnInterval
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
+      propertyPath: _waves.Array.data[0].WaveInterval
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
       propertyPath: _waves.Array.data[0].EnemyGroups.Array.size

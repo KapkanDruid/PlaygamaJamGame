@@ -9,13 +9,27 @@ namespace Project.Content.CharacterAI
         private List<Transform> _defensiveFlagsTransforms;
         private List<DefensiveFlag> _defensiveFlags;
         private List<IPatrolling> _entity;
+        private DefensiveFlag _flag;
+        private SceneRecourses _recourses;
+        private SceneData _sceneData;
+
+        public EntityCommander(SceneRecourses recourses, SceneData sceneData)
+        {
+            _recourses = recourses;
+            _sceneData = sceneData;
+        }
 
         public void Initialize()
         {
+            _flag = GameObject.Instantiate(_recourses.Prefabs.Flag); // перенести логику создания флага в карточку \
+            _flag.transform.position = _sceneData.StartFlagPosition;
             _defensiveFlags = new List<DefensiveFlag>();
+            AddFlag(_flag);                                          //                                            /
+
             _entity = new List<IPatrolling>();
             TryGetFlags();
             RedistributeEntities();
+            
         }
 
         public void AddEntity(IPatrolling entity)
@@ -48,6 +62,9 @@ namespace Project.Content.CharacterAI
 
         private void TryGetFlags()
         {
+            if (_defensiveFlagsTransforms == null)
+                return;
+
             for (int i = 0; i < _defensiveFlagsTransforms.Count; i++)
             {
                 Transform flagTransform = _defensiveFlagsTransforms[i];
@@ -80,6 +97,9 @@ namespace Project.Content.CharacterAI
             {
                 flag.RemoveUnit();
             }
+
+            if (_entity == null)
+                return;
 
             foreach (var entity in _entity)
             {
