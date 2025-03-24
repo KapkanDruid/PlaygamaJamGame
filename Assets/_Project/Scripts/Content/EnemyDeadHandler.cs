@@ -11,6 +11,7 @@ namespace Project.Content
         private Transform _characterTransform;
         private Animator _animator;
 
+        public event Action OnDeath;
         public bool IsDead => _isDead;
 
         public EnemyDeadHandler(Transform transform, Animator animator)
@@ -37,6 +38,7 @@ namespace Project.Content
 
             await WaitForAnimationState();
 
+            OnDeath?.Invoke();
             _characterTransform.gameObject.SetActive(false);
             _isDead = true;
 

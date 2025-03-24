@@ -15,6 +15,7 @@ MonoBehaviour:
   _prefabs:
     _mainBuildingFirstLevel: {fileID: 4410467519451803561, guid: 635fc3d22ffbfe64d88b6b9172ce863d, type: 3}
     _voiceOfTruthTurret: {fileID: 828871894719075004, guid: 5bb91a56d1f1aa643878ccdf4001ec78, type: 3}
+    _infantrymanBarracks: {fileID: 8707837156137939876, guid: d7fcf6443a2d5004099a83e2588f32f6, type: 3}
     _simpleParanoid: {fileID: 2262984898554556662, guid: 7657570eaab21ab4f90182cbd6f03a6d, type: 3}
     _advencedParanoid: {fileID: 8498477415956304825, guid: 914a7b5215410d047b0bb1df307e6bf9, type: 3}
     _aliens: {fileID: 3999982957482466124, guid: 97f4e55e6fc35e84594eeac911dfa493, type: 3}
@@ -22,6 +23,8 @@ MonoBehaviour:
     _bigfoot: {fileID: 3194220193113999216, guid: fc11d4aacd5d48849ab3f7d4dda93b4b, type: 3}
     _humanMoth: {fileID: 16720405618370171, guid: 08714949ffb1b404e9b8c901a69041c0, type: 3}
     _experienceObject: {fileID: 1493492564772801372, guid: ad22f986af296a9448caf421f7d4f1e8, type: 3}
+    _infantryman: {fileID: 2800637946718568406, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
+    _flag: {fileID: 5651869740134662256, guid: 068826a682678f648bb77929684c3b42, type: 3}
   _configs:
     _turretConfigs:
     - {fileID: 11400000, guid: f09b56280ab9ba2499e0af0d88551e06, type: 2}

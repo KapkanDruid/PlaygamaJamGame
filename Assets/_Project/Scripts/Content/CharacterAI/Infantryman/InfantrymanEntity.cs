@@ -1,26 +1,37 @@
 using Project.Content.BuildSystem;
+using Project.Content.CharacterAI.Destroyer;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanEntity : CharacterHandler
+    public class InfantrymanEntity : CharacterHandler, IPatrolling
     {
         [SerializeField] private InfantrymanData _infantrymanData;
-        [SerializeField] private Transform _flagTransform;
 
-        private object[] _components;
         private TargetSensor _sensor;
         private Transform _targetTransform;
+        private Transform _flagTransform;
         private Animator _animator;
         private PauseHandler _pauseHandler;
+        private float _patrolRadius;
 
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
         public Transform FlagTransform => _flagTransform;
+        public float PatrolRadius => _patrolRadius;
 
-        public class Factory : PlaceholderFactory<InfantrymanEntity> { }
+        public class Factory : PlaceholderFactory<InfantrymanEntity> 
+        {
+            public readonly AllyEntityType Type;
+
+            public Factory(AllyEntityType type) : base()
+            {
+                Type = type;
+            }
+        }
 
         [Inject]
         public void Construct(EnemyDeadHandler enemyDeadHandler, Animator animator, PauseHandler pauseHandler)
@@ -30,26 +41,37 @@ namespace Project.Content.CharacterAI.Infantryman
             _animator = animator;
             _pauseHandler = pauseHandler;
 
-            List<object> components = new();
+            ResetData();
 
-            components.Add(_healthHandler);
-            components.Add(_enemyDeadHandler);
-            components.Add(_infantrymanData.Flags);
-            components.Add(this);
-
-            _components = components.ToArray();
         }
 
         public override T ProvideComponent<T>() where T : class
         {
-            for (int i = 0; i < _components.Length; i++)
-            {
-                object component = _components[i];
-                if (component is T)
-                    return component as T;
-            }
+            if (_infantrymanData.Flags is T flags)
+                return flags;
+
+            if (_healthHandler is T healthHandler)
+                return healthHandler;
+
+            if (transform is T characterTransform)
+                return characterTransform;
+
+            if (_enemyDeadHandler is T deadHandler)
+                return deadHandler;
 
             return null;
+        }
+
+        public void SetFlag(Transform flag)
+        {
+            _flagTransform = flag;
+            
+            var flagComponent = flag.GetComponent<DefensiveFlag>();
+            
+            if (flagComponent == null)
+                return;
+
+            _patrolRadius = flagComponent.Coverage;
         }
 
         private void Update()
@@ -71,7 +93,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
         private void ResetData()
         {
-            _healthHandler = new CharacterHealthHandler(_infantrymanData.Health, _animator, _enemyDeadHandler);
+             _healthHandler = new CharacterHealthHandler(_infantrymanData.Health, _animator, _enemyDeadHandler);
         }
 
         private void Start()

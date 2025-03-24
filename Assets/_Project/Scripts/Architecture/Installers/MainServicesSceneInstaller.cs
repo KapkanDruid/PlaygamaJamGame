@@ -1,6 +1,7 @@
 using NavMeshPlus.Components;
 using Project.Content;
 using Project.Content.BuildSystem;
+using Project.Content.CharacterAI;
 using Project.Content.UI;
 using UnityEngine;
 using Zenject;
@@ -32,6 +33,7 @@ namespace Project.Architecture
             Container.Bind<SceneRecourses>().FromInstance(_recourses).AsSingle().NonLazy();
             Container.Bind<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
 
+            Container.BindInterfacesAndSelfTo<EntityCommander>().AsSingle().NonLazy();
             Container.Bind<BuildingSpawner>().AsSingle().NonLazy();
 
             Container.Bind<CardsPopupView>().FromInstance(_cardsPopupView).AsSingle().NonLazy();

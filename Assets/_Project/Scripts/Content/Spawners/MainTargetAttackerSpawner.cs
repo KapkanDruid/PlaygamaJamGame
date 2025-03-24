@@ -12,6 +12,9 @@ namespace Project.Content.Spawners
         private ObjectPooler<MainTargetAttackerHandler> _mainTargetAttackerPool;
         private List<MainTargetAttackerHandler.Factory> _mainTargetAttackerFactory;
         private MainTargetAttackerType _type;
+        private GameObject _prefab;
+
+        public GameObject Prefab => _prefab;
 
         public class Factory : PlaceholderFactory<MainTargetAttackerType, MainTargetAttackerSpawner> { }
 
@@ -39,6 +42,9 @@ namespace Project.Content.Spawners
         {
             var prefab = _mainTargetAttackerPool.Get();
             prefab.transform.position = position;
+
+            _prefab = prefab.gameObject;
         }
+
     }
 }

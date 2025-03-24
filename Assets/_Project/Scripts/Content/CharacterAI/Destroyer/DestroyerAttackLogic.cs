@@ -54,13 +54,12 @@ namespace Project.Content.CharacterAI.Destroyer
         {
             if (_characterSensor.TargetToAttack != null && _characterSensor.TargetTransformToAttack != null)
             {
-                if (Vector2.Distance(_destroyerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= _destroyerSensorData.HitColliderSize * 2)
+                if (Vector2.Distance(_destroyerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= _destroyerHandler.DestroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize * 2)
                 {
-
                     if (_attackCooldownTimer <= 0)
                     {
                         _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
-                        _damageable = _characterSensor.TargetToChase.ProvideComponent<IDamageable>();
+                        _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
                         Attack();
                         _attackCooldownTimer = _destroyerData.AttackCooldown;
                     }
@@ -73,11 +72,7 @@ namespace Project.Content.CharacterAI.Destroyer
             if (_damageable == null)
                 return;
 
-            if (_destroyerHandler.CanAttack)
-            {
-                _damageable?.TakeDamage(_destroyerData.Damage);
-            }
-
+            _damageable?.TakeDamage(_destroyerData.Damage);
         }
 
         public void OnDrawGizmos()

@@ -10,8 +10,8 @@ namespace Project.Content.CharacterAI.Infantryman
             float distance = Random.Range(0f, radius);
             Vector3 randomPoint = new Vector3(
                 center.x + Mathf.Cos(angle) * distance,
-                center.y,
-                center.z + Mathf.Sin(angle) * distance
+                center.y + Mathf.Sin(angle) * distance,
+                center.z 
             );
             return randomPoint;
         }

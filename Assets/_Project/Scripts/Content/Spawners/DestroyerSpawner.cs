@@ -1,5 +1,4 @@
-﻿using Project.Content.BuildSystem;
-using Project.Content.CharacterAI;
+﻿using Project.Content.CharacterAI;
 using Project.Content.CharacterAI.Destroyer;
 using System;
 using System.Collections.Generic;
@@ -13,8 +12,11 @@ namespace Project.Content.Spawners
         private ObjectPooler<DestroyerHandler> _destroyerPool;
         private List<DestroyerHandler.Factory> _destroyerFactory;
         private DestroyerType _type;
+        private GameObject _prefab;
 
-        public class Factory : PlaceholderFactory<DestroyerType, DestroyerSpawner>{}
+        public GameObject Prefab => _prefab;
+
+        public class Factory : PlaceholderFactory<DestroyerType, DestroyerSpawner> { }
 
         public DestroyerSpawner(List<DestroyerHandler.Factory> destroyerFactory, DestroyerType type)
         {
@@ -40,6 +42,8 @@ namespace Project.Content.Spawners
         {
             var prefab = _destroyerPool.Get();
             prefab.transform.position = position;
+
+            _prefab = prefab.gameObject;
         }
     }
 }

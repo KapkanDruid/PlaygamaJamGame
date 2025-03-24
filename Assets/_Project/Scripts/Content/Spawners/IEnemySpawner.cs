@@ -9,5 +9,6 @@ namespace Project.Content.Spawners
         public void Initialize(int capacityInPool);
         public Type GetTypeObject();
         public void Spawn(Vector3 position);
+        public GameObject Prefab { get; }
     }
 }
