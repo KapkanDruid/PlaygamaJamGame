@@ -14,6 +14,11 @@ namespace Project.Content.UI
         public void Initialize()
         {
             _cards = GetComponentsInChildren<CoreProgressCard>();
+
+            foreach (var card in _cards)
+            {
+                card.gameObject.SetActive(false);
+            }
         }
 
         public void Show()

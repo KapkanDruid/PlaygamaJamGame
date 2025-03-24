@@ -64,7 +64,7 @@ namespace Project.Architecture
                 .ByNewContextPrefab(_recourses.Prefabs.VoiceOfTruthTurret);
             
             Container.BindFactory<BarracksEntity, BarracksEntity.Factory>()
-                .WithId(BarracksType.Infantryman)
+                .WithFactoryArguments(BarracksType.Infantryman)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.InfantrymanBarracks);
 

@@ -85,6 +85,8 @@ namespace Project.Content.UI
                 card.RectTransform.anchoredPosition = positionCalculator.DetermineHidePosition(_hideOffset);
 
                 positionCalculators.Add(positionCalculator);
+
+                card.gameObject.SetActive(true);
             }
 
             _localRectTransform.anchoredPosition = _popupPositionMath.StartPosition;
@@ -139,7 +141,6 @@ namespace Project.Content.UI
                 card.OnCardSelected -= OnCardSelected;
             }
 
-            _currentCards = null;
             _pauseHandler.SetPaused(false);
 
             _localRectTransform
@@ -150,6 +151,14 @@ namespace Project.Content.UI
                     _isActive = false;
                     _presenter.CardSelected(progressStrategy);
                     gameObject.SetActive(false);
+
+                    foreach (var card in _currentCards)
+                    {
+                        card.gameObject.SetActive(false);
+                    }
+
+                    _currentCards = null;
+
                     OnPopupClosed?.Invoke();
                 });
         }

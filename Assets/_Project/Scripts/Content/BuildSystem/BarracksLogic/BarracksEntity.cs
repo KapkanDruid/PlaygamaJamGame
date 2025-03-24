@@ -19,7 +19,15 @@ namespace Project.Content.BuildSystem
 
         public BarracksData Data => _data;
 
-        public class Factory : PlaceholderFactory<BarracksEntity> { }
+        public class Factory : PlaceholderFactory<BarracksEntity> 
+        {
+            public readonly BarracksType Type;
+
+            public Factory(BarracksType type) : base()
+            {
+                Type = type;
+            }
+        }
 
         [Inject]
         private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem)

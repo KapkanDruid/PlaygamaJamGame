@@ -24,7 +24,6 @@ namespace Project.Content.BuildSystem
 
         private ReactiveProperty<float> _health;
 
-        //public float Health => _maxHealth;
         public Transform PivotTransform => _gridPivotTransform;
         public SpriteRenderer[] SpriteRenderers => _spriteRenderers;
         public Transform[] ScalableObjects => _scalableObjects;
