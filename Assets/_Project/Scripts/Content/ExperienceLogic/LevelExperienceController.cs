@@ -86,13 +86,11 @@ namespace Project.Content
 
             UpdateLocalData();
             _cardsPopupView.Show();
-            _view.Pause();
         }
 
         private void OnCardsClosed()
         {
             _view.SetExperienceBar(_currentPoints, _pointsToNextLevel, _currentLevel);
-            _view.Play();
         }
 
         private void UpdateLocalData()

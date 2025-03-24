@@ -1,9 +1,11 @@
 ﻿using DG.Tweening;
+using Project.Content.UI;
 using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Project.Content
 {
@@ -19,7 +21,20 @@ namespace Project.Content
         [SerializeField] private Ease _disappearEase;
         [SerializeField] private Ease _preDisappearEase;
 
+        private CardsPopupView _cardsView;
+
         private List<Sequence> _activeSequences = new();
+
+        private bool _isPaused;
+
+        [Inject]
+        private void Construct(CardsPopupView cardsView)
+        {
+            _cardsView = cardsView;
+
+            _cardsView.OnPopupStartShow += Pause;
+            _cardsView.OnPopupClosed += Play;
+        }
 
         public void SetExperienceBar(float currentValue, float maxValue, int currentLevel)
         {
@@ -39,6 +54,9 @@ namespace Project.Content
                 });
 
             RegisterSequenceToPause(sequence);
+
+            if (_isPaused)
+                Pause();
         }
 
         private void RegisterSequenceToPause(Sequence sequence)
@@ -47,22 +65,33 @@ namespace Project.Content
             sequence.OnComplete(() => _activeSequences.Remove(sequence));
         }
 
-        public void Pause()
+        private void Pause()
         {
-            foreach (var seq in _activeSequences)
+            _isPaused = true;
+            foreach (var sequence in _activeSequences)
             {
-                if (seq.IsActive() && seq.IsPlaying())
-                    seq.Pause();
+                if (sequence.IsActive() && sequence.IsPlaying())
+                    sequence.Pause();
             }
         }
 
-        public void Play()
+        private void Play()
         {
-            foreach (var seq in _activeSequences)
+            _isPaused = false;
+            foreach (var sequence in _activeSequences)
             {
-                if (seq.IsActive() && !seq.IsPlaying())
-                    seq.Play();
+                if (sequence.IsActive() && !sequence.IsPlaying())
+                    sequence.Play();
             }
+        }
+
+        private void OnDestroy()
+        {
+            if (_cardsView == null)
+                return;
+
+            _cardsView.OnPopupStartShow -= Pause;
+            _cardsView.OnPopupClosed -= Play;
         }
     }
 }

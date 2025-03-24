@@ -23,6 +23,7 @@ namespace Project.Content.UI
 
         private IReadOnlyList<CoreProgressCard> _currentCards;
 
+        public event Action OnPopupStartShow;
         public event Action OnPopupClosed;
 
         private bool _isActive;
@@ -62,6 +63,8 @@ namespace Project.Content.UI
                 return;
 
             _isShowing = true;
+
+            OnPopupStartShow?.Invoke();
 
             ShowPopupCardsAsync(cards).Forget();
         }
@@ -103,6 +106,20 @@ namespace Project.Content.UI
                 }
             }
 
+            try
+            {
+                await UniTask.WaitForSeconds(_showInterval * (_currentCards.Count - 1), cancellationToken: this.GetCancellationTokenOnDestroy());
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
+
+            foreach (var card in _currentCards)
+            {
+                card.Button.interactable = true;
+            }
+
             _isShowing = false;
         }
 
@@ -114,7 +131,6 @@ namespace Project.Content.UI
                 .OnComplete(() =>
                 {
                     card.OnCardSelected += OnCardSelected;
-                    card.Button.interactable = true;
                 });
         }
 
