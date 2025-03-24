@@ -3,6 +3,7 @@ using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Project.Content.UI
 {
@@ -20,6 +21,7 @@ namespace Project.Content.UI
 
         private RectTransform _localRectTransform;
         private UIPositionMath _popupPositionMath;
+        private PauseHandler _pauseHandler;
 
         private IReadOnlyList<CoreProgressCard> _currentCards;
 
@@ -28,6 +30,12 @@ namespace Project.Content.UI
 
         private bool _isActive;
         private bool _isShowing;
+
+        [Inject]
+        private void Construct(PauseHandler pauseHandler)
+        {
+            _pauseHandler = pauseHandler;
+        }
 
         public void Initialize()
         {
@@ -43,7 +51,7 @@ namespace Project.Content.UI
                 return;
 
             _isActive = true;
-
+            _pauseHandler.SetPaused(true);
             _presenter.Show();
         }
 
@@ -132,6 +140,7 @@ namespace Project.Content.UI
             }
 
             _currentCards = null;
+            _pauseHandler.SetPaused(false);
 
             _localRectTransform
                 .DOAnchorPos(_popupPositionMath.DetermineHidePosition(_hideOffset), _hideSpeed)

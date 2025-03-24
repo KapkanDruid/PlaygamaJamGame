@@ -168,6 +168,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -734,7 +747,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UIGamplayAtlas_0: -4812168839450927827
+      UIGamplayAtlas_1: -5921834255263360390
+      UIGamplayAtlas_10: -1582195028959219662
+      UIGamplayAtlas_11: 3092403307695884081
+      UIGamplayAtlas_12: 4374019662234310470
+      UIGamplayAtlas_13: -7077909031782719371
+      UIGamplayAtlas_14: 3568532780975099238
+      UIGamplayAtlas_15: -6595063408277508999
+      UIGamplayAtlas_16: 3947232774772455580
+      UIGamplayAtlas_17: -3525439543730041300
+      UIGamplayAtlas_18: 6026062717622468470
+      UIGamplayAtlas_19: -8710464964052659737
+      UIGamplayAtlas_2: 24650247002423987
+      UIGamplayAtlas_20: 7964648956037437484
+      UIGamplayAtlas_21: 420390656335641452
+      UIGamplayAtlas_22: 787397687081346645
+      UIGamplayAtlas_23: 968057193132027294
+      UIGamplayAtlas_24: -6485467751529471250
+      UIGamplayAtlas_3: 5318060357330989415
+      UIGamplayAtlas_4: 9218628006661271131
+      UIGamplayAtlas_5: -5509886358594882460
+      UIGamplayAtlas_6: -4165105641271973925
+      UIGamplayAtlas_7: 8314099875469269116
+      UIGamplayAtlas_8: -7891413557188678436
+      UIGamplayAtlas_9: 8453828485764563841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

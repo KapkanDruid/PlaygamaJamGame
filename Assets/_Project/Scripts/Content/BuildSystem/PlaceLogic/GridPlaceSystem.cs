@@ -17,6 +17,7 @@ namespace Project.Content.BuildSystem
         private Camera _mainCamera;
         private GridPlaceComponent _placeComponent;
         private InputSystemActions _inputSystemActions;
+        private PauseHandler _pauseHandler;
 
         public event Action OnPlaceComponentPlaced;
 
@@ -26,11 +27,12 @@ namespace Project.Content.BuildSystem
         private bool _inputSelected;
 
         [Inject]
-        private void Construct(Grid grid, Camera mainCamera, InputSystemActions inputSystemActions)
+        private void Construct(Grid grid, Camera mainCamera, InputSystemActions inputSystemActions, PauseHandler pauseHandler)
         {
             _grid = grid;
             _mainCamera = mainCamera;
             _inputSystemActions = inputSystemActions;
+            _pauseHandler = pauseHandler;
 
             _inputSystemActions.Player.Pointer.performed += ReadInputPointer;
             _inputSystemActions.Player.Select.performed += context => _inputSelected = true;
@@ -62,6 +64,9 @@ namespace Project.Content.BuildSystem
 
         private void Update()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             if (!_isAnySelected)
                 return;
 
