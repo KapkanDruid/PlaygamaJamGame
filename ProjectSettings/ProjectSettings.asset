@@ -391,7 +391,18 @@ PlayerSettings:
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
-  m_TemplateCustomTags: {}
+  m_TemplateCustomTags:
+    ADSGRAM_BLOCK_ID: 
+    FACEBOOK_PLACEMENT_ID: 
+    GAME_DISTRIBUTION_GAME_ID: 
+    LAGGED_DEV_ID: 
+    LAGGED_PUBLISHER_ID: 
+    OVERLAY_BACKGROUND_COLOR: 
+    PROGRESS_BAR_BACKGROUND_COLOR: 
+    PROGRESS_BAR_FILL_COLOR: 
+    Y8_ADSENSE_ID: 
+    Y8_CHANNEL_ID: 
+    Y8_GAME_ID: 
   mobileMTRendering:
     Android: 1
     iPhone: 1
