@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace Project.Content.CharacterAI
 {
@@ -7,6 +8,8 @@ namespace Project.Content.CharacterAI
         [SerializeField] private int _capacity = 20;
         [SerializeField] private int _fullness = 0;
         [SerializeField] private float _coverage = 4f;
+
+        public class Factory : PlaceholderFactory<DefensiveFlag> { }
 
         public int Capacity => _capacity;
         public int Fullness => _fullness;
@@ -19,11 +22,14 @@ namespace Project.Content.CharacterAI
             {
                 _fullness++;
             }
-            else
-            {
-                Debug.Log("Флаг переполнен");
-            }
         }
 
+        public void RemoveUnit()
+        {
+            if (_fullness > 0)
+            {
+                _fullness--;
+            }
+        }
     }
 }

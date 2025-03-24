@@ -44,6 +44,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
             if (_infantrymanEntity.TargetTransform == null)
             {
+                if (_infantrymanEntity.FlagTransform == null)
+                    return;
+
                 Patrol();
                 return;
             }
@@ -55,7 +58,7 @@ namespace Project.Content.CharacterAI.Infantryman
         {
             if (!_isPatrolling || HasReachedPatrolPoint())
             {
-                _currentPatrolPoint = _patrolLogic.GetRandomPoint(_infantrymanEntity.FlagTransform.position, _agent.stoppingDistance * 2);
+                _currentPatrolPoint = _patrolLogic.GetRandomPoint(_infantrymanEntity.FlagTransform.position, _infantrymanEntity.PatrolRadius + _agent.stoppingDistance);
                 _agent.SetDestination(_currentPatrolPoint);
                 _isPatrolling = true;
             }

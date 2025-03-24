@@ -1,7 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
-using Zenject.SpaceFighter;
 
 namespace Project.Content.CharacterAI.Destroyer
 {
@@ -38,7 +37,6 @@ namespace Project.Content.CharacterAI.Destroyer
 
             ResetData();
             _characterSensor.TargetDetected += HasTarget;
-            _characterSensor.HasTargetToAttack += HasTargetToAttack;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
         }
 
@@ -77,16 +75,10 @@ namespace Project.Content.CharacterAI.Destroyer
         {
             _canMoving = true;
         }
-        
-        private void HasTargetToAttack()
-        {
-            _canAttack = true;
-        }
 
         private void OnDestroy()
         {
             _characterSensor.TargetDetected -= HasTarget;
-            _characterSensor.HasTargetToAttack -= HasTargetToAttack;
         }
     }
 }
