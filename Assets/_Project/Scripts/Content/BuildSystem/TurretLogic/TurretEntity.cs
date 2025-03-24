@@ -20,7 +20,15 @@ namespace Project.Content.BuildSystem
 
         public TurretData Data => _data; 
 
-        public class Factory : PlaceholderFactory<TurretEntity> { }
+        public class Factory : PlaceholderFactory<TurretEntity> 
+        {
+            public readonly TurretType Type;
+
+            public Factory(TurretType type) : base()
+            {
+                Type = type;
+            }
+        }
 
         [Inject]
         private void Construct(GridPlaceComponent placeComponent,

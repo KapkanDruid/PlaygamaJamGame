@@ -8,7 +8,8 @@ namespace Project.Content
     public class ConfigReferences
     {
         [SerializeField] private TurretConfig[] _turretConfigs;
-
-        public TurretConfig[] TurretConfigs => _turretConfigs; 
+        [SerializeField] private LevelExperienceConfig _levelExperienceConfig;
+        public TurretConfig[] TurretConfigs => _turretConfigs;
+        public LevelExperienceConfig LevelExperienceConfig => _levelExperienceConfig; 
     }
 }

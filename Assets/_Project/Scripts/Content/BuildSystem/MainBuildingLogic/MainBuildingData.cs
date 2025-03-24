@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Content.ReactiveProperty;
+using System;
 using UnityEngine;
 
 namespace Project.Content.BuildSystem
@@ -14,12 +15,20 @@ namespace Project.Content.BuildSystem
         [SerializeField] private Flags _flags;
         [SerializeField] private GameObject[] _physicObjects;
 
+        private ReactiveProperty<float> _health = new ReactiveProperty<float>();
+
         public Transform PivotTransform => _gridPivotTransform;
         public SpriteRenderer[] SpriteRenderers => _spriteRenderers;
         public Transform[] ScalableObjects => _scalableObjects;
         public GridPatternData GridPattern => _gridPattern;
         public Flags Flags => _flags;
         public GameObject[] PhysicObjects => _physicObjects;
-        public float Health => _maxHealth;
+
+        public IReactiveProperty<float> Health => _health;
+
+        public void Initialize()
+        {
+            _health.Value = _maxHealth;
+        }
     }
 }

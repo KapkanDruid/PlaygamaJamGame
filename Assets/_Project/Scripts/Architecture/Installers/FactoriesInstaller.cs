@@ -23,16 +23,16 @@ namespace Project.Architecture
                 .WithFactoryArguments(DestroyerType.SimpleParanoid)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.SimpleParanoid);
-            
+
             Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
                 .WithFactoryArguments(DestroyerType.AdvencedParanoid)
                 .FromSubContainerResolve()
-                .ByNewContextPrefab(_recourses.Prefabs.AdvencedParanoid);            
+                .ByNewContextPrefab(_recourses.Prefabs.AdvencedParanoid);
 
             Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
                 .WithFactoryArguments(DestroyerType.Aliens)
                 .FromSubContainerResolve()
-                .ByNewContextPrefab(_recourses.Prefabs.Aliens); 
+                .ByNewContextPrefab(_recourses.Prefabs.Aliens);
 
             Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
                 .WithFactoryArguments(DestroyerType.FlatEarther)
@@ -59,7 +59,7 @@ namespace Project.Architecture
             Container.BindFactory<AllyEntityType, AlliedRangerSpawner, AlliedRangerSpawner.Factory>();
 
             Container.BindFactory<TurretEntity, TurretEntity.Factory>()
-                .WithId(TurretType.VoiceOfTruth)
+                .WithFactoryArguments(TurretType.VoiceOfTruth)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.VoiceOfTruthTurret);
             

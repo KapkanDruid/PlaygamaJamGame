@@ -7,12 +7,16 @@ namespace Project.Content.ReactiveProperty
         private T _value;
 
         public event Action<T> OnValueChanged;
+        private Func<T, bool> _predicate;
 
         public T Value
         {
             get => _value;
             set
             {
+                if (_predicate != null && !_predicate(value))
+                    return;
+
                 if (!Equals(_value, value))
                 {
                     _value = value;
@@ -25,11 +29,11 @@ namespace Project.Content.ReactiveProperty
         {
             _value = initialValue;
         }
-    }
 
-    public interface IReactiveProperty<T>
-    {
-        public T Value { get; }
-        public event Action<T> OnValueChanged;
+        public ReactiveProperty<T> SetPredicate(Func<T, bool> predicate)
+        {
+            _predicate = predicate;
+            return this;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Project.Content.UI;
+using UnityEngine;
 using Zenject;
 
 namespace Project.Content.BuildSystem
@@ -6,15 +7,17 @@ namespace Project.Content.BuildSystem
     public class BuildingMockPlacer : MonoBehaviour
     {
         private GridPlaceSystem _gridPlaceSystem;
-        private TurretEntity.Factory _turretFactory;
+        private CardsPopupView _cardsPopupView;
         private SceneData _sceneData;
+        private LevelExperienceController _levelExperienceHandler;
 
         [Inject]
-        private void Construct(GridPlaceSystem gridPlaceSystem, [Inject(Id = TurretType.VoiceOfTruth)] TurretEntity.Factory factory, SceneData sceneData)
+        private void Construct(GridPlaceSystem gridPlaceSystem, SceneData sceneData, CardsPopupView cardsPopupView, LevelExperienceController levelExperienceHandler)
         {
             _gridPlaceSystem = gridPlaceSystem;
-            _turretFactory = factory;
+            _cardsPopupView = cardsPopupView;
             _sceneData = sceneData;
+            _levelExperienceHandler = levelExperienceHandler;
         }
 
         private void Update()
@@ -26,14 +29,16 @@ namespace Project.Content.BuildSystem
 
             if (Input.GetKeyDown(KeyCode.W))
             {
-                _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].ReloadTime -= 5;
+                _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].MaxHealth.Value = 100;
             }
         }
 
         [ContextMenu("PlaceObject")]
         private void PlaceObject()
         {
-            var placeEntity = _turretFactory.Create();
+            _levelExperienceHandler.OnEnemyDied(new Vector2(Random.Range(10,-10), Random.Range(5, -5)), 5);
+            //_cardsPopupView.Show();
+/*            var placeEntity = _turretFactory.Create();
 
             var placeComponent = placeEntity.ProvideComponent<GridPlaceComponent>();
 
@@ -41,7 +46,7 @@ namespace Project.Content.BuildSystem
             {
                 _gridPlaceSystem.StartPlacing(placeComponent);
 
-            }
+            }*/
         }
     }
 }

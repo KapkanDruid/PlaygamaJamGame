@@ -1,4 +1,5 @@
 using Project.Content;
+using Project.Content.UI;
 using System;
 using UnityEngine;
 using Zenject;
@@ -9,6 +10,9 @@ namespace Project.Architecture
     {
         [Inject] private InputSystemActions _inputActions;
         [Inject] private SceneData _sceneData;
+        [Inject] private CardsPopupView _cardsPopupView;
+        [Inject] private CardsPopupPresenter _cardsPopupPresenter;
+        [Inject] private LevelExperienceController _levelExperienceHandler;
         public static event Action OnServicesInitialized;
 
         private void Awake()
@@ -20,6 +24,9 @@ namespace Project.Architecture
         {
             _sceneData.Initialize();
             _inputActions.Enable();
+            _cardsPopupView.Initialize();
+            _cardsPopupPresenter.Initialize();
+            _levelExperienceHandler.Initialize();
 
             OnServicesInitialized?.Invoke();
         }

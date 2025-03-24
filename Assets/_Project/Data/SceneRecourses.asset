@@ -27,3 +27,4 @@ MonoBehaviour:
   _configs:
     _turretConfigs:
     - {fileID: 11400000, guid: f09b56280ab9ba2499e0af0d88551e06, type: 2}
+    _levelExperienceConfig: {fileID: 11400000, guid: 1815feeaf6a54ca42b9ab34ce5ba7563, type: 2}

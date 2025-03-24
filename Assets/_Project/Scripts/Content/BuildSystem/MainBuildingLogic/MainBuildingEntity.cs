@@ -46,6 +46,7 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
+            _data.Initialize();
             _healthHandler.Initialize();
             _placeComponent.Initialize();
 

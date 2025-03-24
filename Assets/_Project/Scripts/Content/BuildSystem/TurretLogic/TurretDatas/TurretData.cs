@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Content.ReactiveProperty;
+using System;
 using UnityEngine;
 
 namespace Project.Content.BuildSystem
@@ -25,10 +26,10 @@ namespace Project.Content.BuildSystem
         private SensorData _sensorData = new SensorData();
         private TurretDynamicData _dynamicData;
         private TurretConfig _configData;
+        private ReactiveProperty<float> _health;
 
         private IEntity _thisEntity;
 
-        public float Health => _dynamicData.MaxHealth;
         public float ReloadTime => _dynamicData.ReloadTime;
         public int ProjectilePoolCount => _projectilePoolSize;
 
@@ -48,7 +49,9 @@ namespace Project.Content.BuildSystem
         public float RotateSpeed => _configData.RotateSpeed;
         public float RotationThreshold => _configData.RotationThreshold;
 
-        public TurretType TurretType => _turretType; 
+        public TurretType TurretType => _turretType;
+
+        public IReactiveProperty<float> Health => _health;
 
         public void Construct(TurretDynamicData dynamicData, IEntity entity)
         {
@@ -74,20 +77,22 @@ namespace Project.Content.BuildSystem
             _sensorData.SensorRadius = _dynamicData.SensorRadius.Value;
             _projectileData.Damage = _dynamicData.Damage.Value;
 
-            _dynamicData.SensorRadius.OnValueChanged += value => UpdateData();
-            _dynamicData.Damage.OnValueChanged += value => UpdateData();
+            _health = new ReactiveProperty<float>(_dynamicData.MaxHealth.Value);
+
+            _dynamicData.MaxHealth.OnValueChanged += UpdateHealth;
+            _dynamicData.SensorRadius.OnValueChanged += UpdateSensorRadius;
+            _dynamicData.Damage.OnValueChanged += UpdateDamage;
         }
 
-        private void UpdateData()
-        {
-            _sensorData.SensorRadius = _dynamicData.SensorRadius.Value;
-            _projectileData.Damage = _dynamicData.Damage.Value;
-        }
+        private void UpdateHealth(float value) => _health.Value = value;
+        private void UpdateSensorRadius(float value) => _sensorData.SensorRadius = value;
+        private void UpdateDamage(float value) => _projectileData.Damage = value;
 
         public void Dispose()
         {
-            _dynamicData.SensorRadius.OnValueChanged -= value => UpdateData();
-            _dynamicData.Damage.OnValueChanged -= value => UpdateData();
+            _dynamicData.MaxHealth.OnValueChanged -= UpdateHealth;
+            _dynamicData.SensorRadius.OnValueChanged -= UpdateSensorRadius;
+            _dynamicData.Damage.OnValueChanged -= UpdateDamage;
         }
     }
 }

@@ -9,15 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cace2f53128ecc4182d5fb0ac9db255, type: 3}
-  m_Name: VoiceOfTruthConfig
+  m_Script: {fileID: 11500000, guid: 3f5bdbb151469804f83550d81a56dacc, type: 3}
+  m_Name: VoiceOfThruthRadiusModifier
   m_EditorClassIdentifier: 
-  _type: 0
-  _rotateSpeed: 5
-  _rotationThreshold: 1
-  _projectileSpeed: 6
-  _projectileLifeTime: 5
-  _projectileDamage: 0.5
-  _sensorRadius: 50
-  _maxHealth: 100
-  _fireRate: 5
+  _turretType: 0
+  _addValue: 5
