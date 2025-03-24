@@ -39,6 +39,8 @@ namespace Project.Content.CharacterAI.Destroyer
             if (_pauseHandler.IsPaused)
                 return;
 
+            _agent.isStopped = _pauseHandler.IsPaused;
+
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
                 _characterSensor.TargetSearch();
 
