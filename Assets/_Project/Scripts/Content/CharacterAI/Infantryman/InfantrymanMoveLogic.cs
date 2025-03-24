@@ -42,6 +42,8 @@ namespace Project.Content.CharacterAI.Infantryman
             if (_pauseHandler.IsPaused)
                 return;
 
+            _agent.isStopped = _pauseHandler.IsPaused;
+
             if (_infantrymanEntity.TargetTransform == null)
             {
                 if (_infantrymanEntity.FlagTransform == null)

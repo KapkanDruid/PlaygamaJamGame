@@ -61,14 +61,16 @@ namespace Project.Content.Spawners
         private List<IEnemySpawner> _enemySpawners = new();
         private DestroyerSpawner.Factory _destroyerSpawnerFactory;
         private MainTargetAttackerSpawner.Factory _mainTargetAttackerSpawnerFactory;
+        private PauseHandler _pauseHandler;
         private Wave _currentWave;
         private IEnemySpawner _spawner;
 
         [Inject]
-        private void Construct(DestroyerSpawner.Factory destroyerSpawner, MainTargetAttackerSpawner.Factory mainTargetAttackerSpawner)
+        private void Construct(DestroyerSpawner.Factory destroyerSpawner, MainTargetAttackerSpawner.Factory mainTargetAttackerSpawner, PauseHandler pauseHandler)
         {
             _destroyerSpawnerFactory = destroyerSpawner;
             _mainTargetAttackerSpawnerFactory = mainTargetAttackerSpawner;
+            _pauseHandler = pauseHandler;
 
 
         }
@@ -120,6 +122,11 @@ namespace Project.Content.Spawners
                     return;
                 }
 
+                if (_pauseHandler.IsPaused)
+                {
+                    await UniTask.WaitUntil(() => !_pauseHandler.IsPaused, cancellationToken: _cancellationToken);
+                }
+
                 await UniTask.WaitForSeconds(_waves[_currentWaveIndex].WaveInterval, cancellationToken: _cancellationToken);
 
                 if (_currentWaveIndex < _waves.Count)
@@ -145,6 +152,11 @@ namespace Project.Content.Spawners
                     EnemyGroup group = wave.EnemyGroups[i];
                     for (int j = 0; j < group.Count; j++)
                     {
+                        if (_pauseHandler.IsPaused)
+                        {
+                            await UniTask.WaitUntil(() => !_pauseHandler.IsPaused, cancellationToken: _cancellationToken);
+                        }
+
                         if (group.Prefab.GetType() == _spawner.GetTypeObject())
                         {
                             await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
