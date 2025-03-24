@@ -7,6 +7,7 @@ namespace Project.Content.CharacterAI.Destroyer
     {
         [Header("Health System")]
         [SerializeField] private float _health;
+        [SerializeField] private float _experiencePoints;
 
         [Header("Movement")]
         [SerializeField] private float _speed;
@@ -34,5 +35,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public float DistanceToTarget => _distanceToTarget;
         public DestroyerType Type => _type;
         public Vector2 HitColliderOffset => _hitColliderOffset;
+
+        public float ExperiencePoints => _experiencePoints;
     }
 }

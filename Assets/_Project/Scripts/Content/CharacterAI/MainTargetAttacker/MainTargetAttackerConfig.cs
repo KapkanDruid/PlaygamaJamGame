@@ -7,6 +7,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
     {
         [Header("Health System")]
         [SerializeField] private float _health;
+        [SerializeField] private float _experiencePoints;
 
         [Header("Movement")]
         [SerializeField] private float _speed;
@@ -32,7 +33,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public float AttackCooldown => _attackCooldown;
         public float HitColliderSize => _hitColliderSize;
         public float DistanceToTarget => _distanceToTarget;
+        public float ExperiencePoints => _experiencePoints;
         public MainTargetAttackerType Type => _type;
         public Vector2 HitColliderOffset => _hitColliderOffset;
+
     }
 }

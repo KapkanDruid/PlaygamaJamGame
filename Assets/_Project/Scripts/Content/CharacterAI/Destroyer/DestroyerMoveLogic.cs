@@ -1,4 +1,5 @@
-﻿using UnityEngine.AI;
+﻿using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Project.Content.CharacterAI.Destroyer
@@ -42,6 +43,26 @@ namespace Project.Content.CharacterAI.Destroyer
                 _characterSensor.TargetSearch();
 
             MoveToTarget();
+            SetOrientation();
+        }
+
+        public void SetOrientation()
+        {
+            if (_characterSensor.TargetTransformToChase == null)
+                return;
+
+            var direction = Mathf.Sign(_characterSensor.TargetTransformToChase.position.x - _destroyerHandler.transform.position.x);
+            Vector3 rightOrientation = new Vector3(1, _destroyerHandler.transform.localScale.y, _destroyerHandler.transform.localScale.z);
+            Vector3 leftOrientation = new Vector3(-1, _destroyerHandler.transform.localScale.y, _destroyerHandler.transform.localScale.z);
+
+            if (direction > 0)
+            {
+                _destroyerHandler.transform.localScale = rightOrientation;
+            }
+            else if (direction < 0)
+            {
+                _destroyerHandler.transform.localScale = leftOrientation;
+            }
         }
 
         private void MoveToTarget()

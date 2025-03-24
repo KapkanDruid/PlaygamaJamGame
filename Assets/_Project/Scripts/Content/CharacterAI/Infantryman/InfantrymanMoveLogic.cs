@@ -52,6 +52,26 @@ namespace Project.Content.CharacterAI.Infantryman
             }
 
             MoveToTarget();
+            SetOrientation();
+        }
+
+        public void SetOrientation()
+        {
+            if (_infantrymanEntity.TargetTransform == null)
+                return;
+
+            var direction = Mathf.Sign(_infantrymanEntity.TargetTransform.position.x - _infantrymanEntity.transform.position.x);
+            Vector3 rightOrientation = new Vector3(1, _infantrymanEntity.transform.localScale.y, _infantrymanEntity .transform.localScale.z);
+            Vector3 leftOrientation = new Vector3(-1, _infantrymanEntity.transform.localScale.y, _infantrymanEntity.transform.localScale.z);
+
+            if (direction > 0)
+            {
+                _infantrymanEntity.transform.localScale = rightOrientation;
+            }
+            else if (direction < 0)
+            {
+                _infantrymanEntity.transform.localScale = leftOrientation;
+            }
         }
 
         private void Patrol()

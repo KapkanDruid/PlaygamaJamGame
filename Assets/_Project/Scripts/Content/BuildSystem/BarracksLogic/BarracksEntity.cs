@@ -1,5 +1,4 @@
 using Project.Architecture;
-using Project.Content.CharacterAI;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -48,8 +47,10 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
+            _data.Initialize();
             _healthHandler.Initialize();
             _placeComponent.Initialize();
+            
 
             _healthHandler.OnDead += DestroyThisAsync;
 
