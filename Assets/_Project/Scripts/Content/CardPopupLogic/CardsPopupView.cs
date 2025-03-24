@@ -23,6 +23,7 @@ namespace Project.Content.UI
 
         private IReadOnlyList<CoreProgressCard> _currentCards;
 
+        public event Action OnPopupStartShow;
         public event Action OnPopupClosed;
 
         private bool _isActive;
@@ -34,16 +35,6 @@ namespace Project.Content.UI
             _localRectTransform = GetComponent<RectTransform>();
             _popupPositionMath = new UIPositionMath(_localRectTransform, _canvasRectTransform);
             _localRectTransform.localPosition = _popupPositionMath.DetermineHidePosition(_hideOffset);
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                _localRectTransform.anchoredPosition = _popupPositionMath.StartPosition;
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-                _localRectTransform.anchoredPosition = _popupPositionMath.DetermineHidePosition(_hideOffset);
         }
 
         public void Show()
@@ -62,6 +53,8 @@ namespace Project.Content.UI
                 return;
 
             _isShowing = true;
+
+            OnPopupStartShow?.Invoke();
 
             ShowPopupCardsAsync(cards).Forget();
         }
@@ -103,6 +96,20 @@ namespace Project.Content.UI
                 }
             }
 
+            try
+            {
+                await UniTask.WaitForSeconds(_showInterval * (_currentCards.Count - 1), cancellationToken: this.GetCancellationTokenOnDestroy());
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
+
+            foreach (var card in _currentCards)
+            {
+                card.Button.interactable = true;
+            }
+
             _isShowing = false;
         }
 
@@ -114,7 +121,6 @@ namespace Project.Content.UI
                 .OnComplete(() =>
                 {
                     card.OnCardSelected += OnCardSelected;
-                    card.Button.interactable = true;
                 });
         }
 

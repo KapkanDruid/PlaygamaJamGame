@@ -15,9 +15,9 @@ MonoBehaviour:
   _type: 0
   _rotateSpeed: 5
   _rotationThreshold: 1
-  _projectileSpeed: 6
+  _projectileSpeed: 7
   _projectileLifeTime: 5
-  _projectileDamage: 0.5
+  _projectileDamage: 10
   _sensorRadius: 50
   _maxHealth: 50
-  _fireRate: 5
+  _fireRate: 1
