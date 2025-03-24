@@ -9,13 +9,15 @@ namespace Project.Content.BuildSystem
         private GridPlaceSystem _gridPlaceSystem;
         private CardsPopupView _cardsPopupView;
         private SceneData _sceneData;
+        private LevelExperienceController _levelExperienceHandler;
 
         [Inject]
-        private void Construct(GridPlaceSystem gridPlaceSystem, SceneData sceneData, CardsPopupView cardsPopupView)
+        private void Construct(GridPlaceSystem gridPlaceSystem, SceneData sceneData, CardsPopupView cardsPopupView, LevelExperienceController levelExperienceHandler)
         {
             _gridPlaceSystem = gridPlaceSystem;
             _cardsPopupView = cardsPopupView;
             _sceneData = sceneData;
+            _levelExperienceHandler = levelExperienceHandler;
         }
 
         private void Update()
@@ -34,7 +36,8 @@ namespace Project.Content.BuildSystem
         [ContextMenu("PlaceObject")]
         private void PlaceObject()
         {
-            _cardsPopupView.Show();
+            _levelExperienceHandler.OnEnemyDied(new Vector2(Random.Range(10,-10), Random.Range(5, -5)), 5);
+            //_cardsPopupView.Show();
 /*            var placeEntity = _turretFactory.Create();
 
             var placeComponent = placeEntity.ProvideComponent<GridPlaceComponent>();

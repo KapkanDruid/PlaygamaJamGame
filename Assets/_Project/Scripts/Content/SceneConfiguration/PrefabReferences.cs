@@ -21,7 +21,8 @@ namespace Project.Content
         [SerializeField] private MainTargetAttackerHandler _bigfoot;
         [SerializeField] private MainTargetAttackerHandler _humanMoth;
 
-        //[Header("OtherPrefabs"), Space(3)]
+        [Header("OtherPrefabs"), Space(3)]
+        [SerializeField] private GameObject _experienceObject;
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
         public DestroyerHandler SimpleParanoid => _simpleParanoid;
@@ -31,5 +32,6 @@ namespace Project.Content
         public MainTargetAttackerHandler BigFoot => _bigfoot;
         public MainTargetAttackerHandler HumanMoth => _humanMoth;
         public TurretEntity VoiceOfTruthTurret => _voiceOfTruthTurret;
+        public GameObject ExperienceObject => _experienceObject; 
     }
 }
