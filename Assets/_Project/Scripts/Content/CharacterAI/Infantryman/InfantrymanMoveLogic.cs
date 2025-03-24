@@ -40,9 +40,12 @@ namespace Project.Content.CharacterAI.Infantryman
         public void Tick()
         {
             if (_pauseHandler.IsPaused)
+            {
+                _agent.isStopped = true;
                 return;
+            }
+            _agent.isStopped = false;
 
-            _agent.isStopped = _pauseHandler.IsPaused;
 
             if (_infantrymanEntity.TargetTransform == null)
             {
