@@ -34,6 +34,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             if (_pauseHandler.IsPaused)
                 return;
 
+            if (_characterSensor.TargetTransformToAttack == null)
+                return;
+
             if (_characterSensor.TargetToAttack == null || !_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
                 _characterSensor.ScanAreaToAttack();
 
