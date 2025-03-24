@@ -37,16 +37,6 @@ namespace Project.Content.UI
             _localRectTransform.localPosition = _popupPositionMath.DetermineHidePosition(_hideOffset);
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                _localRectTransform.anchoredPosition = _popupPositionMath.StartPosition;
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-                _localRectTransform.anchoredPosition = _popupPositionMath.DetermineHidePosition(_hideOffset);
-        }
-
         public void Show()
         {
             if (_isActive)

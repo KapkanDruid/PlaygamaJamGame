@@ -1,4 +1,5 @@
 ﻿using Project.Architecture;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,6 +17,8 @@ namespace Project.Content.BuildSystem
         private Camera _mainCamera;
         private GridPlaceComponent _placeComponent;
         private InputSystemActions _inputSystemActions;
+
+        public event Action OnPlaceComponentPlaced;
 
         private Vector2 _pointerPosition;
 
@@ -83,6 +86,8 @@ namespace Project.Content.BuildSystem
 
             _placeComponent = null;
             _isAnySelected = false;
+
+            OnPlaceComponentPlaced?.Invoke();
         }
 
         private void OccupyCells(GridPlaceComponent placeComponent)
