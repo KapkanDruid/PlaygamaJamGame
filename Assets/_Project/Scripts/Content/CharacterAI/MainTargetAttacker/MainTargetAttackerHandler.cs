@@ -15,6 +15,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private bool _isPathInvalid;
         private CharacterSensor _characterSensor;
         private Animator _animator;
+        private LevelExperienceController _levelExperience;
         private IEntity _blockingEntity;
         private bool _isMoving;
 
@@ -39,16 +40,21 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         }
 
         [Inject]
-        public void Construct(EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor, Animator animator)
+        public void Construct(EnemyDeadHandler enemyDeadHandler,
+                              CharacterSensor characterSensor,
+                              Animator animator,
+                              LevelExperienceController levelExperience)
         {
             _mainTargetAttackerData.ThisEntity = this;
             _enemyDeadHandler = enemyDeadHandler;
             _characterSensor = characterSensor;
             _animator = animator;
+            _levelExperience = levelExperience;
 
             ResetData();
             _characterSensor.TargetDetected += HasTarget;
             _characterSensor.HasTargetToAttack += HasTargetToAttack;
+            _enemyDeadHandler.OnDeath += DropExperience;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
         }
 
@@ -85,6 +91,11 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _canAttack = !isMoving;
         }
 
+        private void DropExperience()
+        {
+            _levelExperience.OnEnemyDied(_mainTargetAttackerData.CharacterTransform.position, _mainTargetAttackerData.ExperiencePoints);
+        }
+
         private void OnEnable()
         {
             ResetData();
@@ -113,6 +124,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         {
             _characterSensor.TargetDetected -= HasTarget;
             _characterSensor.HasTargetToAttack -= HasTargetToAttack;
+            _enemyDeadHandler.OnDeath -= DropExperience;
         }
     }
 }

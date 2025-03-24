@@ -19,6 +19,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public float AttackCooldown => _mainTargetAttackerConfig.AttackCooldown;
         public float HitColliderSize => _mainTargetAttackerConfig.HitColliderSize;
         public float DistanceToTarget => _mainTargetAttackerConfig.DistanceToTarget;
+        public float ExperiencePoints => _mainTargetAttackerConfig.ExperiencePoints;
         public Vector2 HitColliderOffset => _mainTargetAttackerConfig.HitColliderOffset;
         public Transform CharacterTransform => _characterTransform;
         public Transform DamageTextPoint => _damageTextPoint;
@@ -26,5 +27,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public IEntity ThisEntity { get; set; }
         public EntityFlags[] EnemyFlag => _enemyFlag;
         public MainTargetAttackerType Type => _mainTargetAttackerConfig.Type;
+
     }
 }

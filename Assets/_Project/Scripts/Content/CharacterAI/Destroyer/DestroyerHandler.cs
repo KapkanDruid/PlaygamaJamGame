@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -10,6 +11,7 @@ namespace Project.Content.CharacterAI.Destroyer
         private bool _canAttack;
         private bool _canMoving;
         private CharacterSensor _characterSensor;
+        private LevelExperienceController _levelExperience;
         private Animator _animator;
 
         public ICharacterData DestroyerData => _destroyerData;
@@ -28,15 +30,20 @@ namespace Project.Content.CharacterAI.Destroyer
         }
 
         [Inject]
-        public void Construct(EnemyDeadHandler enemyDeadHandler, CharacterSensor characterSensor, Animator animator)
+        public void Construct(EnemyDeadHandler enemyDeadHandler,
+                              CharacterSensor characterSensor,
+                              Animator animator,
+                              LevelExperienceController levelExperience)
         {
             _destroyerData.ThisEntity = this;
             _animator = animator;
             _enemyDeadHandler = enemyDeadHandler;
             _characterSensor = characterSensor;
+            _levelExperience = levelExperience;
 
             ResetData();
             _characterSensor.TargetDetected += HasTarget;
+            _enemyDeadHandler.OnDeath += DropExperience;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
         }
 
@@ -55,6 +62,11 @@ namespace Project.Content.CharacterAI.Destroyer
                 return deadHandler;
 
             return null;
+        }
+
+        private void DropExperience()
+        {
+            _levelExperience.OnEnemyDied(_destroyerData.CharacterTransform.position, _destroyerData.ExperiencePoints);
         }
 
         private void OnEnable()
@@ -79,6 +91,7 @@ namespace Project.Content.CharacterAI.Destroyer
         private void OnDestroy()
         {
             _characterSensor.TargetDetected -= HasTarget;
+            _enemyDeadHandler.OnDeath -= DropExperience;
         }
     }
 }
