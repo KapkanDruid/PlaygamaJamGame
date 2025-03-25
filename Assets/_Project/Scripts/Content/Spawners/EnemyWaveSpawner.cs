@@ -155,46 +155,31 @@ namespace Project.Content.Spawners
                 for (int i = 0; i < wave.EnemyGroups.Count; i++)
                 {
                     EnemyGroup group = wave.EnemyGroups[i];
-                    for (int j = 0; j < group.Count; j++)
+                    for (int j = 0; j < group.Count;)
                     {
                         if (_pauseHandler.IsPaused)
                         {
                             await UniTask.WaitUntil(() => !_pauseHandler.IsPaused, cancellationToken: _cancellationToken);
                         }
 
-                            group.Prefab.TryGetComponent<ObjectId>(out var id);
-                            _spawner.GetPrefab().TryGetComponent<ObjectId>(out var idInSpawner);
+                        group.Prefab.TryGetComponent<ObjectId>(out var id);
+                        _spawner.GetPrefab().TryGetComponent<ObjectId>(out var idInSpawner);
 
-                            Debug.Log("Id префаба - " + id.Id);
-                            Debug.Log("Id префаба в спавнере - " + idInSpawner.Id);
 
-                            if (id.Id == idInSpawner.Id)
-                            {
-                                await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
+                        if (id.Id == idInSpawner.Id)
+                        {
+                            await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
 
-                                _spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
-                                NextSpawnPoint();
-                            }
-                            else
-                            {
-                                NextSpawner();
+                            _spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
+                            NextSpawnPoint();
 
-                                if (j > 0)
-                                    j--;
-                                Debug.Log("Итерация не засчитана");
-                            }
-                        //if (group.Prefab.GetType() == _spawner.GetTypeObject())
-                        //{
+                            j++;
+                        }
+                        else
+                        {
+                            NextSpawner();
 
-                        //}
-                        //else
-                        //{
-                        //    NextSpawner();
-
-                        //    if (j > 0)
-                        //        j--;
-                        //    Debug.Log("Итерация не засчитана");
-                        //}
+                        }
 
                     }
                     NextSpawner();
