@@ -91,11 +91,12 @@ namespace Project.Content.BuildSystem
 
         private void Spawn()
         {
-            _alliedRangerSpawner.Spawn(_barracksEntity.transform.position);
             _attackCooldownTimer = _barracksEntity.Data.SpawnCooldown;
 
-            var obj = _alliedRangerSpawner.Prefab;
+            var obj = _alliedRangerSpawner.GetPrefab();
             _allyAlive.Add(obj);
+
+            _alliedRangerSpawner.Spawn(_barracksEntity.transform.position);
 
             var entity = obj.GetComponent<InfantrymanEntity>();
 
