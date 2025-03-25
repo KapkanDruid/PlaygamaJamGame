@@ -10,8 +10,11 @@ namespace Project.Content
         [SerializeField] private TurretConfig[] _turretConfigs;
         [SerializeField] private BarrackConfig[] _barracksConfigs;
         [SerializeField] private LevelExperienceConfig _levelExperienceConfig;
+        [SerializeField] private WallConfig _wallConfig;
+
         public TurretConfig[] TurretConfigs => _turretConfigs;
         public BarrackConfig[] BarracksConfigs => _barracksConfigs; 
         public LevelExperienceConfig LevelExperienceConfig => _levelExperienceConfig;
+        public WallConfig WallConfig  => _wallConfig; 
     }
 }

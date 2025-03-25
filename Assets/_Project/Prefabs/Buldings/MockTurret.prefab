@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
+    _projectilePoolSize: 0
     _projectilePrefab: {fileID: 5940939131329807596, guid: bf544a2ea8ee63446bc68d17981572f1, type: 3}
     _gridPivotTransform: {fileID: 8215651618980773562}
     _spriteRenderers:
@@ -599,7 +600,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

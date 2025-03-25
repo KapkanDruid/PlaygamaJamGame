@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Projectiles
+    uniqueID: 67431407
+    locked: 0
   - name: FloatingText
     uniqueID: 3261894267
     locked: 0

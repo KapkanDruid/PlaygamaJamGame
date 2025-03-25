@@ -1,45 +1,35 @@
-using Project.Architecture;
+﻿using Project.Architecture;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-
 namespace Project.Content.BuildSystem
 {
-    public class BarracksEntity : MonoBehaviour, IEntity
+    public class WallEntity : MonoBehaviour, IEntity
     {
-        [SerializeField] private BarracksData _data;
+        [SerializeField] private WallData _data;
 
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
-        private BarracksSpawnLogic _spawnComponent;
         private GridPlaceSystem _placeSystem;
         private SceneData _sceneData;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
 
-        public BarracksData Data => _data;
+        public WallData Data => _data;
 
-        public class Factory : PlaceholderFactory<BarracksEntity> 
-        {
-            public readonly BarracksType Type;
-
-            public Factory(BarracksType type) : base()
-            {
-                Type = type;
-            }
-        }
+        public class Factory : PlaceholderFactory<WallEntity> { }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, BarracksSpawnLogic spawnComponent, SceneData sceneData)
+        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, SceneData sceneData)
         {
             List<object> components = new();
+
             _sceneData = sceneData;
             _healthHandler = healthHandler;
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
-            _spawnComponent = spawnComponent;
 
             components.Add(_placeComponent);
             components.Add(_healthHandler);
@@ -48,7 +38,6 @@ namespace Project.Content.BuildSystem
 
             _components = components.ToArray();
 
-            _placeComponent.OnPlaced += OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized += OnSceneInitialized;
         }
 
@@ -59,22 +48,16 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
-            _data.Construct(_sceneData.BarrackDynamicData[_data.BarracksType]);
-
+            _data.Construct(_sceneData.WallDynamicData);
             _healthHandler.Initialize();
             _placeComponent.Initialize();
-            
+
             _healthHandler.OnDead += DestroyThisAsync;
 
             if (_isRuntimeCreated)
                 return;
 
             _placeSystem.PLaceOnGrid(_placeComponent);
-        }
-
-        private void OnEntityPlaced()
-        {
-            _spawnComponent.Initialize();
         }
 
         private async void DestroyThisAsync()
@@ -98,7 +81,6 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
-            _placeComponent.OnPlaced += OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
         }
     }
