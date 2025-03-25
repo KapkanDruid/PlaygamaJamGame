@@ -43,6 +43,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public void Initialize()
         {
+            Debug.Log("Infa intitalized");
             _infantrymanData.Initialize();
             _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
         }
@@ -50,7 +51,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public void Prepare(InfantrymanSpawnData spawnData)
         {
             _infantrymanData.UpdateData(spawnData);
-
+            Debug.Log("Infa prepareds");
             ResetData();
             _animator.Rebind();
             _animator.Update(0f);
