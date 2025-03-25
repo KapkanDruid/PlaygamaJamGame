@@ -14,6 +14,7 @@ namespace Project.Content.BuildSystem
         private readonly GizmosDrawer _gizmosDrawer;
         private readonly Transform _localTransform;
         private readonly Transform _shootPoint;
+        private readonly PauseHandler _pauseHandler;
 
         private ClosestTargetSensorFilter _sensorFilter;
         private Transform _targetTransform;
@@ -26,7 +27,7 @@ namespace Project.Content.BuildSystem
         private bool _isRotating;
         private bool _isActive;
 
-        public TurretAttackComponent(IProjectilePoolData projectilePoolData, ITurretShootData shootData, CancellationToken cancellationToken, GizmosDrawer gizmosDrawer)
+        public TurretAttackComponent(IProjectilePoolData projectilePoolData, ITurretShootData shootData, CancellationToken cancellationToken, GizmosDrawer gizmosDrawer, PauseHandler pauseHandler)
         {
             _poolData = projectilePoolData;
             _shootData = shootData;
@@ -34,6 +35,7 @@ namespace Project.Content.BuildSystem
             _gizmosDrawer = gizmosDrawer;
             _localTransform = _shootData.RotationObject;
             _shootPoint = _shootData.ShootPoint;
+            _pauseHandler = pauseHandler;
         }
 
         public void Initialize()
@@ -48,6 +50,9 @@ namespace Project.Content.BuildSystem
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             if (!_isActive)
                 return;
 
@@ -138,7 +143,7 @@ namespace Project.Content.BuildSystem
             _isReadyToShoot = false;
 
             var projectile = _projectilePool.Get();
-            projectile.Prepare(_shootPoint.position, _targetTransform.position - _localTransform.position, _shootData.ProjectileData);
+            projectile.Prepare(_shootPoint.position, _targetTransform.position - _localTransform.position, _shootData.ProjectileData, _pauseHandler);
 
             RechargeRangeAttack().Forget();
         }
