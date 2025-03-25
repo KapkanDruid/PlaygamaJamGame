@@ -3,6 +3,5 @@
     public enum AllyEntityType
     {
         Infantryman,
-     
     }
 }

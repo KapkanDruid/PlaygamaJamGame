@@ -9,7 +9,6 @@ namespace Project.Content
         public void SetPaused(bool isPaused)
         {
             IsPaused = isPaused;
-            Time.timeScale = isPaused ? 0 : 1;
         }
     }
 }

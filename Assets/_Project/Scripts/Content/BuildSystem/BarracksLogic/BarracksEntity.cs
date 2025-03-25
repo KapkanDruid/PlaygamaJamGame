@@ -12,6 +12,7 @@ namespace Project.Content.BuildSystem
 
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
+        private BarracksSpawnLogic _spawnComponent;
         private GridPlaceSystem _placeSystem;
 
         private bool _isRuntimeCreated = true;
@@ -19,16 +20,25 @@ namespace Project.Content.BuildSystem
 
         public BarracksData Data => _data;
 
-        public class Factory : PlaceholderFactory<BarracksEntity> { }
+        public class Factory : PlaceholderFactory<BarracksEntity> 
+        {
+            public readonly BarracksType Type;
+
+            public Factory(BarracksType type) : base()
+            {
+                Type = type;
+            }
+        }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem)
+        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, BarracksSpawnLogic spawnComponent)
         {
             List<object> components = new();
 
             _healthHandler = healthHandler;
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
+            _spawnComponent = spawnComponent;
 
             components.Add(_placeComponent);
             components.Add(_healthHandler);
@@ -37,6 +47,7 @@ namespace Project.Content.BuildSystem
 
             _components = components.ToArray();
 
+            _placeComponent.OnPlaced += OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized += OnSceneInitialized;
         }
 
@@ -47,17 +58,20 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
-            _data.Initialize();
             _healthHandler.Initialize();
             _placeComponent.Initialize();
             
-
             _healthHandler.OnDead += DestroyThisAsync;
 
             if (_isRuntimeCreated)
                 return;
 
             _placeSystem.PLaceOnGrid(_placeComponent);
+        }
+
+        private void OnEntityPlaced()
+        {
+            _spawnComponent.Initialize();
         }
 
         private async void DestroyThisAsync()
@@ -81,6 +95,7 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
+            _placeComponent.OnPlaced += OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
         }
     }

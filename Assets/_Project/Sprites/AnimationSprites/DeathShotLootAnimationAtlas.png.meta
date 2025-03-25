@@ -1092,7 +1092,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1137,6 +1137,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1144,12 +1157,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 3815
-        width: 255
-        height: 254
+        x: 0
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1166,12 +1179,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_1
       rect:
         serializedVersion: 2
-        x: 272
-        y: 3813
-        width: 247
-        height: 253
+        x: 256
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1188,12 +1201,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_2
       rect:
         serializedVersion: 2
-        x: 540
-        y: 3821
-        width: 230
-        height: 242
+        x: 512
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1210,12 +1223,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_3
       rect:
         serializedVersion: 2
-        x: 846
-        y: 4031
-        width: 29
-        height: 30
+        x: 768
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1232,12 +1245,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_4
       rect:
         serializedVersion: 2
-        x: 963
-        y: 3990
-        width: 65
-        height: 67
+        x: 1024
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1254,12 +1267,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_5
       rect:
         serializedVersion: 2
-        x: 1558
-        y: 3898
-        width: 123
-        height: 163
+        x: 1280
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1276,12 +1289,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_6
       rect:
         serializedVersion: 2
-        x: 1576
-        y: 4044
-        width: 17
-        height: 18
+        x: 1536
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1298,12 +1311,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_7
       rect:
         serializedVersion: 2
-        x: 1734
-        y: 4037
-        width: 18
-        height: 15
+        x: 1792
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1320,12 +1333,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_8
       rect:
         serializedVersion: 2
-        x: 1850
-        y: 4005
-        width: 70
-        height: 56
+        x: 2048
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1342,12 +1355,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_9
       rect:
         serializedVersion: 2
-        x: 2120
-        y: 4030
-        width: 36
-        height: 35
+        x: 2304
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1364,12 +1377,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_10
       rect:
         serializedVersion: 2
-        x: 2222
-        y: 4040
-        width: 16
-        height: 16
+        x: 2560
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1386,12 +1399,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_11
       rect:
         serializedVersion: 2
-        x: 2243
-        y: 4020
-        width: 26
-        height: 33
+        x: 2816
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1408,12 +1421,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_12
       rect:
         serializedVersion: 2
-        x: 2323
-        y: 4039
-        width: 13
-        height: 18
+        x: 3072
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1430,12 +1443,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_13
       rect:
         serializedVersion: 2
-        x: 2373
-        y: 4044
-        width: 27
-        height: 23
+        x: 3328
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1452,12 +1465,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_14
       rect:
         serializedVersion: 2
-        x: 2468
-        y: 4049
-        width: 21
-        height: 10
+        x: 3584
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1474,12 +1487,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_15
       rect:
         serializedVersion: 2
-        x: 2525
-        y: 4037
-        width: 15
-        height: 17
+        x: 3840
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1496,12 +1509,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_16
       rect:
         serializedVersion: 2
-        x: 2624
-        y: 4048
-        width: 25
-        height: 9
+        x: 0
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1518,12 +1531,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_17
       rect:
         serializedVersion: 2
-        x: 817
-        y: 4023
-        width: 19
-        height: 22
+        x: 256
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1540,12 +1553,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_18
       rect:
         serializedVersion: 2
-        x: 1104
-        y: 4020
-        width: 26
-        height: 28
+        x: 512
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1562,12 +1575,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_19
       rect:
         serializedVersion: 2
-        x: 1226
-        y: 4012
-        width: 35
-        height: 32
+        x: 768
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1584,12 +1597,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_20
       rect:
         serializedVersion: 2
-        x: 1321
-        y: 3840
-        width: 191
-        height: 202
+        x: 1024
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1606,12 +1619,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_21
       rect:
         serializedVersion: 2
-        x: 1324
-        y: 4010
-        width: 30
-        height: 34
+        x: 1280
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1628,12 +1641,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_22
       rect:
         serializedVersion: 2
-        x: 1552
-        y: 4016
-        width: 22
-        height: 23
+        x: 1536
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1650,12 +1663,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_23
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 3985
-        width: 71
-        height: 51
+        x: 1792
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1672,12 +1685,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_24
       rect:
         serializedVersion: 2
-        x: 1817
-        y: 4004
-        width: 34
-        height: 38
+        x: 2048
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1694,12 +1707,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_25
       rect:
         serializedVersion: 2
-        x: 1947
-        y: 3995
-        width: 59
-        height: 51
+        x: 2304
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1716,12 +1729,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_26
       rect:
         serializedVersion: 2
-        x: 2077
-        y: 4028
-        width: 18
-        height: 20
+        x: 2560
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1738,12 +1751,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_27
       rect:
         serializedVersion: 2
-        x: 2098
-        y: 4017
-        width: 16
-        height: 16
+        x: 2816
+        y: 3585
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1760,12 +1773,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_28
       rect:
         serializedVersion: 2
-        x: 2343
-        y: 4017
-        width: 13
-        height: 26
+        x: 3072
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1782,12 +1795,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_29
       rect:
         serializedVersion: 2
-        x: 2797
-        y: 4020
-        width: 16
-        height: 27
+        x: 0
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1804,12 +1817,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_30
       rect:
         serializedVersion: 2
-        x: 801
-        y: 3819
-        width: 205
-        height: 201
+        x: 256
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1826,12 +1839,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_31
       rect:
         serializedVersion: 2
-        x: 1064
-        y: 3851
-        width: 179
-        height: 160
+        x: 512
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1848,12 +1861,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_32
       rect:
         serializedVersion: 2
-        x: 1209
-        y: 3983
-        width: 59
-        height: 37
+        x: 768
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1870,12 +1883,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_33
       rect:
         serializedVersion: 2
-        x: 1734
-        y: 3915
-        width: 51
-        height: 70
+        x: 1024
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1892,12 +1905,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_34
       rect:
         serializedVersion: 2
-        x: 1808
-        y: 3896
-        width: 70
-        height: 93
+        x: 1280
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1914,12 +1927,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_35
       rect:
         serializedVersion: 2
-        x: 2007
-        y: 3943
-        width: 51
-        height: 47
+        x: 0
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1936,12 +1949,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_36
       rect:
         serializedVersion: 2
-        x: 2110
-        y: 3968
-        width: 23
-        height: 23
+        x: 256
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1958,12 +1971,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_37
       rect:
         serializedVersion: 2
-        x: 2288
-        y: 3967
-        width: 17
-        height: 21
+        x: 512
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1980,12 +1993,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_38
       rect:
         serializedVersion: 2
-        x: 2356
-        y: 3971
-        width: 14
-        height: 29
+        x: 768
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2002,12 +2015,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_39
       rect:
         serializedVersion: 2
-        x: 2552
-        y: 3985
-        width: 12
-        height: 17
+        x: 1024
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2024,12 +2037,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_40
       rect:
         serializedVersion: 2
-        x: 1643
-        y: 3893
-        width: 62
-        height: 65
+        x: 1280
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2046,12 +2059,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_41
       rect:
         serializedVersion: 2
-        x: 2085
-        y: 3908
-        width: 23
-        height: 71
+        x: 1536
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2068,12 +2081,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_42
       rect:
         serializedVersion: 2
-        x: 2297
-        y: 3947
-        width: 12
-        height: 16
+        x: 1792
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2090,12 +2103,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_43
       rect:
         serializedVersion: 2
-        x: 2321
-        y: 3909
-        width: 17
-        height: 68
+        x: 2048
+        y: 3072
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2112,12 +2125,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_44
       rect:
         serializedVersion: 2
-        x: 1675
-        y: 3830
-        width: 90
-        height: 80
+        x: 0
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2134,12 +2147,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_45
       rect:
         serializedVersion: 2
-        x: 1896
-        y: 3877
-        width: 62
-        height: 65
+        x: 256
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2156,12 +2169,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_46
       rect:
         serializedVersion: 2
-        x: 2013
-        y: 3905
-        width: 35
-        height: 33
+        x: 512
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2178,12 +2191,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_47
       rect:
         serializedVersion: 2
-        x: 2155
-        y: 3856
-        width: 62
-        height: 65
+        x: 768
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2200,12 +2213,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_48
       rect:
         serializedVersion: 2
-        x: 2294
-        y: 3895
-        width: 18
-        height: 29
+        x: 1024
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2222,12 +2235,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_49
       rect:
         serializedVersion: 2
-        x: 2409
-        y: 3844
-        width: 62
-        height: 65
+        x: 1280
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2244,12 +2257,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_50
       rect:
         serializedVersion: 2
-        x: 2664
-        y: 3854
-        width: 62
-        height: 65
+        x: 1536
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2266,12 +2279,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_51
       rect:
         serializedVersion: 2
-        x: 2919
-        y: 3849
-        width: 62
-        height: 65
+        x: 1792
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2288,12 +2301,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_52
       rect:
         serializedVersion: 2
-        x: 3172
-        y: 3845
-        width: 62
-        height: 67
+        x: 2048
+        y: 2816
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2310,12 +2323,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_53
       rect:
         serializedVersion: 2
-        x: 3437
-        y: 3843
-        width: 62
-        height: 68
+        x: 0
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2332,12 +2345,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_54
       rect:
         serializedVersion: 2
-        x: 3690
-        y: 3846
-        width: 69
-        height: 64
+        x: 256
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2354,12 +2367,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_55
       rect:
         serializedVersion: 2
-        x: 1005
-        y: 3857
-        width: 25
-        height: 24
+        x: 512
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2376,12 +2389,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_56
       rect:
         serializedVersion: 2
-        x: 1247
-        y: 3864
-        width: 23
-        height: 22
+        x: 768
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2398,12 +2411,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_57
       rect:
         serializedVersion: 2
-        x: 1504
-        y: 3862
-        width: 19
-        height: 21
+        x: 1024
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2420,12 +2433,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_58
       rect:
         serializedVersion: 2
-        x: 1564
-        y: 3833
-        width: 16
-        height: 50
+        x: 1280
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2442,12 +2455,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_59
       rect:
         serializedVersion: 2
-        x: 1578
-        y: 3832
-        width: 88
-        height: 65
+        x: 1536
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2464,12 +2477,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_60
       rect:
         serializedVersion: 2
-        x: 1759
-        y: 3850
-        width: 17
-        height: 18
+        x: 1792
+        y: 2560
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2486,12 +2499,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_61
       rect:
         serializedVersion: 2
-        x: 1827
-        y: 3842
-        width: 25
-        height: 37
+        x: 0
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2508,12 +2521,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_62
       rect:
         serializedVersion: 2
-        x: 1854
-        y: 3819
-        width: 65
-        height: 54
+        x: 256
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2530,12 +2543,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_63
       rect:
         serializedVersion: 2
-        x: 1946
-        y: 3818
-        width: 81
-        height: 73
+        x: 512
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2552,12 +2565,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_64
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 3836
-        width: 19
-        height: 43
+        x: 768
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2574,12 +2587,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_65
       rect:
         serializedVersion: 2
-        x: 2266
-        y: 3864
-        width: 12
-        height: 23
+        x: 1024
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2596,12 +2609,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_66
       rect:
         serializedVersion: 2
-        x: 2271
-        y: 3850
-        width: 25
-        height: 24
+        x: 1280
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2618,12 +2631,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_67
       rect:
         serializedVersion: 2
-        x: 3934
-        y: 3843
-        width: 86
-        height: 58
+        x: 1536
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2640,12 +2653,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_68
       rect:
         serializedVersion: 2
-        x: 1146
-        y: 3843
-        width: 26
-        height: 19
+        x: 1792
+        y: 2304
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2662,12 +2675,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_69
       rect:
         serializedVersion: 2
-        x: 1212
-        y: 3829
-        width: 37
-        height: 30
+        x: 0
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2684,12 +2697,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_70
       rect:
         serializedVersion: 2
-        x: 2133
-        y: 3824
-        width: 44
-        height: 37
+        x: 256
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2706,12 +2719,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_71
       rect:
         serializedVersion: 2
-        x: 2224
-        y: 3821
-        width: 44
-        height: 32
+        x: 512
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2728,12 +2741,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_72
       rect:
         serializedVersion: 2
-        x: 2472
-        y: 3826
-        width: 39
-        height: 22
+        x: 768
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2750,12 +2763,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_73
       rect:
         serializedVersion: 2
-        x: 2523
-        y: 3823
-        width: 17
-        height: 27
+        x: 1024
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2772,12 +2785,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_74
       rect:
         serializedVersion: 2
-        x: 2620
-        y: 3834
-        width: 10
-        height: 23
+        x: 1280
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2794,12 +2807,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_75
       rect:
         serializedVersion: 2
-        x: 2382
-        y: 3823
-        width: 42
-        height: 19
+        x: 1536
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2816,12 +2829,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_76
       rect:
         serializedVersion: 2
-        x: 2721
-        y: 3825
-        width: 20
-        height: 11
+        x: 1792
+        y: 2048
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2838,12 +2851,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_77
       rect:
         serializedVersion: 2
-        x: 2633
-        y: 3733
-        width: 47
-        height: 25
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2860,12 +2873,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_78
       rect:
         serializedVersion: 2
-        x: 2637
-        y: 3671
-        width: 108
-        height: 77
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2882,12 +2895,12 @@ TextureImporter:
       name: DeathShotLootAnimationAtlas_79
       rect:
         serializedVersion: 2
-        x: 2698
-        y: 3710
-        width: 56
-        height: 45
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2900,5907 +2913,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_80
-      rect:
-        serializedVersion: 2
-        x: 2881
-        y: 3713
-        width: 59
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60f02d0cde1ed05f0800000000000000
-      internalID: -788725948461478138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_81
-      rect:
-        serializedVersion: 2
-        x: 2894
-        y: 3621
-        width: 116
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d132ac844b350f9f0800000000000000
-      internalID: -436757130074512611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_82
-      rect:
-        serializedVersion: 2
-        x: 2951
-        y: 3729
-        width: 50
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a9104886c4e313040800000000000000
-      internalID: 4625546790178128282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_83
-      rect:
-        serializedVersion: 2
-        x: 3142
-        y: 3703
-        width: 53
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d331baf19d7dc160800000000000000
-      internalID: 7047427057834341329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_84
-      rect:
-        serializedVersion: 2
-        x: 3148
-        y: 3663
-        width: 107
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b01c73e641e46ee0800000000000000
-      internalID: -1268641500431118158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_85
-      rect:
-        serializedVersion: 2
-        x: 3207
-        y: 3742
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aabdf259985240440800000000000000
-      internalID: 4901083567329631146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_86
-      rect:
-        serializedVersion: 2
-        x: 3216
-        y: 3689
-        width: 47
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7073a9a602dd3120800000000000000
-      internalID: 2395301502888669307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_87
-      rect:
-        serializedVersion: 2
-        x: 1360
-        y: 3590
-        width: 108
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 438288f44b97b8010800000000000000
-      internalID: 1192180341705025588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_88
-      rect:
-        serializedVersion: 2
-        x: 1616
-        y: 3608
-        width: 108
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39fff73f1c1ed27c0800000000000000
-      internalID: -4094368263079723117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_89
-      rect:
-        serializedVersion: 2
-        x: 1868
-        y: 3625
-        width: 109
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20c2f0e69db3fdbd0800000000000000
-      internalID: -2603296254556427262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_90
-      rect:
-        serializedVersion: 2
-        x: 2130
-        y: 3642
-        width: 107
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a479e2ec1a5120180800000000000000
-      internalID: -9150727708170348726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_91
-      rect:
-        serializedVersion: 2
-        x: 2373
-        y: 3655
-        width: 28
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b0fadb3df6a645b0800000000000000
-      internalID: -5384432697913708364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_92
-      rect:
-        serializedVersion: 2
-        x: 2382
-        y: 3655
-        width: 106
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01bbb1121fd24c330800000000000000
-      internalID: 3730156905035447056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_93
-      rect:
-        serializedVersion: 2
-        x: 2392
-        y: 3629
-        width: 24
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1311ee63285162870800000000000000
-      internalID: 8657630982677860657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_94
-      rect:
-        serializedVersion: 2
-        x: 2470
-        y: 3640
-        width: 26
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c3297b96b52acaad0800000000000000
-      internalID: -2689596363947666884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_95
-      rect:
-        serializedVersion: 2
-        x: 2626
-        y: 3673
-        width: 24
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f259735637f6ee670800000000000000
-      internalID: 8569909682342696239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_96
-      rect:
-        serializedVersion: 2
-        x: 2654
-        y: 3622
-        width: 21
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 489921e5a66e755b0800000000000000
-      internalID: -5379577885351569020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_97
-      rect:
-        serializedVersion: 2
-        x: 2888
-        y: 3617
-        width: 51
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4bcfc94080c19010800000000000000
-      internalID: 1193947033456593742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_98
-      rect:
-        serializedVersion: 2
-        x: 3137
-        y: 3619
-        width: 51
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e34073d8433c83c40800000000000000
-      internalID: 5492354376053228606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_99
-      rect:
-        serializedVersion: 2
-        x: 3214
-        y: 3635
-        width: 57
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dfeb3dbeba0bb9670800000000000000
-      internalID: 8546618970308067069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_100
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 3596
-        width: 100
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 030781893fc3df6c0800000000000000
-      internalID: -4108060268165566416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_101
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 3596
-        width: 86
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b45f8b2aae348600800000000000000
-      internalID: 469569161749550260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_102
-      rect:
-        serializedVersion: 2
-        x: 617
-        y: 3594
-        width: 66
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: caae30cdb56982b20800000000000000
-      internalID: 3109900863976762028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_103
-      rect:
-        serializedVersion: 2
-        x: 2437
-        y: 3615
-        width: 41
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08fecb7ef2c4c4690800000000000000
-      internalID: -7616629101155258496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_104
-      rect:
-        serializedVersion: 2
-        x: 2688
-        y: 3619
-        width: 36
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bceb159be3c45c180800000000000000
-      internalID: -9095780040124023093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_105
-      rect:
-        serializedVersion: 2
-        x: 889
-        y: 3597
-        width: 37
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a03cc017c89d049e0800000000000000
-      internalID: -1639071067147549942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_106
-      rect:
-        serializedVersion: 2
-        x: 1154
-        y: 3599
-        width: 24
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d5104b9871a11730800000000000000
-      internalID: 3968130286062933459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_107
-      rect:
-        serializedVersion: 2
-        x: 565
-        y: 3421
-        width: 88
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d92225e85d283120800000000000000
-      internalID: 2393713061772011993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_108
-      rect:
-        serializedVersion: 2
-        x: 796
-        y: 3373
-        width: 168
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ca585c1bbd49f7f0800000000000000
-      internalID: -578345611110622523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_109
-      rect:
-        serializedVersion: 2
-        x: 873
-        y: 3476
-        width: 18
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a9d51a95dbb8f1e0800000000000000
-      internalID: -2163773094863971936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_110
-      rect:
-        serializedVersion: 2
-        x: 1061
-        y: 3431
-        width: 80
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d5102974046bd000800000000000000
-      internalID: 61752990274426320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_111
-      rect:
-        serializedVersion: 2
-        x: 1146
-        y: 3446
-        width: 25
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d6953a188b2c0e40800000000000000
-      internalID: 5623917898234173136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_112
-      rect:
-        serializedVersion: 2
-        x: 1292
-        y: 3368
-        width: 178
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bbc9114e0b27f7f80800000000000000
-      internalID: -8106634700177433413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_113
-      rect:
-        serializedVersion: 2
-        x: 1297
-        y: 3439
-        width: 46
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2b4071e80d752ed0800000000000000
-      internalID: -2439406146055812310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_114
-      rect:
-        serializedVersion: 2
-        x: 1307
-        y: 3442
-        width: 80
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c9d7536eb0398150800000000000000
-      internalID: 5875280783150143943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_115
-      rect:
-        serializedVersion: 2
-        x: 1351
-        y: 3482
-        width: 26
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e092326a5afca09f0800000000000000
-      internalID: -501360098134513394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_116
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 3356
-        width: 158
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8da25e3228d665a10800000000000000
-      internalID: 1897824698698640088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_117
-      rect:
-        serializedVersion: 2
-        x: 644
-        y: 3449
-        width: 17
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c378bece71c984720800000000000000
-      internalID: 2830683992375396156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_118
-      rect:
-        serializedVersion: 2
-        x: 1051
-        y: 3436
-        width: 12
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fdbc2b963977c3390800000000000000
-      internalID: -7837257776514282529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_119
-      rect:
-        serializedVersion: 2
-        x: 1160
-        y: 3394
-        width: 61
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6dd9b9d4b5f64910800000000000000
-      internalID: 1821413256413699437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_120
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 3352
-        width: 158
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40b0fa8e1ee0b9150800000000000000
-      internalID: 5880310101896530692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_121
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 3396
-        width: 83
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61c2cd81b15e8a120800000000000000
-      internalID: 2425440303882972182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_122
-      rect:
-        serializedVersion: 2
-        x: 542
-        y: 3374
-        width: 174
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ddcd68cd4ca2ce70800000000000000
-      internalID: 9134052444335885776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_123
-      rect:
-        serializedVersion: 2
-        x: 701
-        y: 3378
-        width: 28
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a7c57dd7d53e6050800000000000000
-      internalID: 5795628971722131365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_124
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 3369
-        width: 28
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b692edba1cc67320800000000000000
-      internalID: 2555454253806294708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_125
-      rect:
-        serializedVersion: 2
-        x: 949
-        y: 3382
-        width: 24
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95f2311ec03771a20800000000000000
-      internalID: 3033019373210251097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_126
-      rect:
-        serializedVersion: 2
-        x: 1038
-        y: 3365
-        width: 25
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b853976275c52c190800000000000000
-      internalID: -7943685263350745717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_127
-      rect:
-        serializedVersion: 2
-        x: 1045
-        y: 3389
-        width: 116
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98cc9225cbaa878b0800000000000000
-      internalID: -5154182047716488055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_128
-      rect:
-        serializedVersion: 2
-        x: 1127
-        y: 3371
-        width: 28
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74422d3b8890feae0800000000000000
-      internalID: -1517984066663472057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_129
-      rect:
-        serializedVersion: 2
-        x: 1214
-        y: 3382
-        width: 16
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6607330a87f46cf10800000000000000
-      internalID: 2289604840066871398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_130
-      rect:
-        serializedVersion: 2
-        x: 1461
-        y: 3387
-        width: 17
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8a19e302f7e6ec70800000000000000
-      internalID: 9000135931980225164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_131
-      rect:
-        serializedVersion: 2
-        x: 546
-        y: 3366
-        width: 30
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30f6191eb866f5b70800000000000000
-      internalID: 8889936940423540483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_132
-      rect:
-        serializedVersion: 2
-        x: 637
-        y: 3363
-        width: 18
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 67c76b63a19c4af40800000000000000
-      internalID: 5738932939601116278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_133
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 3154
-        width: 72
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5afdddcbd5eaeb40800000000000000
-      internalID: 5470437429609364058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_134
-      rect:
-        serializedVersion: 2
-        x: 575
-        y: 3137
-        width: 65
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 56bc584ba38938010800000000000000
-      internalID: 1189962104460135269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_135
-      rect:
-        serializedVersion: 2
-        x: 813
-        y: 3192
-        width: 82
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 04902e026276ff920800000000000000
-      internalID: 3026250888074365248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_136
-      rect:
-        serializedVersion: 2
-        x: 1115
-        y: 3233
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a620425d18e4a5a20800000000000000
-      internalID: 3051838017030586986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_137
-      rect:
-        serializedVersion: 2
-        x: 1135
-        y: 3219
-        width: 21
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a54b79169f922b370800000000000000
-      internalID: 8336772011277136986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_138
-      rect:
-        serializedVersion: 2
-        x: 1361
-        y: 3139
-        width: 108
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9f4baa40e09e5ad0800000000000000
-      internalID: -2711570632630644833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_139
-      rect:
-        serializedVersion: 2
-        x: 1622
-        y: 3145
-        width: 108
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 964865ed38bccc1c0800000000000000
-      internalID: -4481983761909119895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_140
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 3145
-        width: 82
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0cfd7cbc03959190800000000000000
-      internalID: -7956291483768849398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_141
-      rect:
-        serializedVersion: 2
-        x: 620
-        y: 3199
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c6087930b9ffbca20800000000000000
-      internalID: 3083839411110510700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_142
-      rect:
-        serializedVersion: 2
-        x: 862
-        y: 3159
-        width: 59
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 359587a58efe5c1d0800000000000000
-      internalID: -3330992568141325997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_143
-      rect:
-        serializedVersion: 2
-        x: 902
-        y: 3197
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01826549bf6314ad0800000000000000
-      internalID: -2719832245801703408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_144
-      rect:
-        serializedVersion: 2
-        x: 1085
-        y: 3209
-        width: 13
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e706822e3beb7040800000000000000
-      internalID: 4646566092662507488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_145
-      rect:
-        serializedVersion: 2
-        x: 1086
-        y: 3196
-        width: 81
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5695e0b1a549e190800000000000000
-      internalID: -7932732707876530593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_146
-      rect:
-        serializedVersion: 2
-        x: 1175
-        y: 3191
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2c64e783b25fbc80800000000000000
-      internalID: -8304828256815387606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_147
-      rect:
-        serializedVersion: 2
-        x: 1450
-        y: 3194
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46f024a3c9ca96a60800000000000000
-      internalID: 7667849627567263588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_148
-      rect:
-        serializedVersion: 2
-        x: 1718
-        y: 3193
-        width: 26
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0396d28bf5b1f840800000000000000
-      internalID: 5256182331954598668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_149
-      rect:
-        serializedVersion: 2
-        x: 1881
-        y: 3145
-        width: 114
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 37fcb3fa006ec2890800000000000000
-      internalID: -7481351990354915469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_150
-      rect:
-        serializedVersion: 2
-        x: 1977
-        y: 3195
-        width: 26
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0c9bd873c2198640800000000000000
-      internalID: 5082614285219896332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_151
-      rect:
-        serializedVersion: 2
-        x: 2140
-        y: 3196
-        width: 74
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6b3b6cd994c143c0800000000000000
-      internalID: -4377001197720355989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_152
-      rect:
-        serializedVersion: 2
-        x: 2189
-        y: 3143
-        width: 59
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dab2e93e974fae20800000000000000
-      internalID: 3363986191570614997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_153
-      rect:
-        serializedVersion: 2
-        x: 2224
-        y: 3216
-        width: 30
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fa7f6b2dbbcfcf60800000000000000
-      internalID: 8056882271727090425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_154
-      rect:
-        serializedVersion: 2
-        x: 2236
-        y: 3192
-        width: 26
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11c823aacec9cbc60800000000000000
-      internalID: 7835309991999474705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_155
-      rect:
-        serializedVersion: 2
-        x: 555
-        y: 3190
-        width: 18
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b769ea09aa0cc830800000000000000
-      internalID: 4092657882521757623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_156
-      rect:
-        serializedVersion: 2
-        x: 811
-        y: 3185
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efdb54a39d1d635d0800000000000000
-      internalID: -3083046163972768258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_157
-      rect:
-        serializedVersion: 2
-        x: 1084
-        y: 3179
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6abeeda4841ae3840800000000000000
-      internalID: 5205775551152712614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_158
-      rect:
-        serializedVersion: 2
-        x: 1135
-        y: 3153
-        width: 59
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 649e8d74beac23830800000000000000
-      internalID: 4049522126831020358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_159
-      rect:
-        serializedVersion: 2
-        x: 1359
-        y: 3182
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22c5bf5a29161d8b0800000000000000
-      internalID: -5129211218120451038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_160
-      rect:
-        serializedVersion: 2
-        x: 1620
-        y: 3181
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e46907c3fe935ca70800000000000000
-      internalID: 8846540742713185870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_161
-      rect:
-        serializedVersion: 2
-        x: 1879
-        y: 3183
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7d34d5ff657214d0800000000000000
-      internalID: -3165338464361890433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_162
-      rect:
-        serializedVersion: 2
-        x: 2138
-        y: 3180
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18f7fb41b20f51ef0800000000000000
-      internalID: -137940145742577791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_163
-      rect:
-        serializedVersion: 2
-        x: 537
-        y: 3170
-        width: 41
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eaa66182d016f09d0800000000000000
-      internalID: -2805917333693502802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_164
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 3152
-        width: 27
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d394133fa9945b0b0800000000000000
-      internalID: -5713579622395721411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_165
-      rect:
-        serializedVersion: 2
-        x: 819
-        y: 3155
-        width: 73
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b9a19a694ba85b30800000000000000
-      internalID: 4276356177997179316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_166
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 3153
-        width: 27
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 598899db007373490800000000000000
-      internalID: -7766678556056647531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_167
-      rect:
-        serializedVersion: 2
-        x: 1092
-        y: 3149
-        width: 73
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebfa2533286d80490800000000000000
-      internalID: -7779732501587382338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_168
-      rect:
-        serializedVersion: 2
-        x: 1448
-        y: 3150
-        width: 27
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8002f24a43b13b290800000000000000
-      internalID: -7875921410434064376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_169
-      rect:
-        serializedVersion: 2
-        x: 1709
-        y: 3149
-        width: 27
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2804c728d3eefb5d0800000000000000
-      internalID: -3044452875129569150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_170
-      rect:
-        serializedVersion: 2
-        x: 2146
-        y: 3151
-        width: 62
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dd7ae75376e58850800000000000000
-      internalID: 6378757830310788565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_171
-      rect:
-        serializedVersion: 2
-        x: 2227
-        y: 3148
-        width: 36
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 408d87193291f6d00800000000000000
-      internalID: 968020085463111684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_172
-      rect:
-        serializedVersion: 2
-        x: 851
-        y: 3136
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b237dc5c5906b4fa0800000000000000
-      internalID: -5815448297433894101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_173
-      rect:
-        serializedVersion: 2
-        x: 1108
-        y: 3147
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc6ae63668d21d870800000000000000
-      internalID: 8705789609900943052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_174
-      rect:
-        serializedVersion: 2
-        x: 1173
-        y: 3147
-        width: 27
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4a655e7e9adfdb380800000000000000
-      internalID: -8953721577960810844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_175
-      rect:
-        serializedVersion: 2
-        x: 1117
-        y: 3135
-        width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c4fac34d506ced40800000000000000
-      internalID: 5614968789109765318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_176
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 2879
-        width: 114
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab6b14fa9c1a078b0800000000000000
-      internalID: -5156443685738400070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_177
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 2888
-        width: 117
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f13f63c3dcd90ff0800000000000000
-      internalID: -69281517172477448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_178
-      rect:
-        serializedVersion: 2
-        x: 1103
-        y: 2895
-        width: 108
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3c31ef554ee746fd0800000000000000
-      internalID: -2349613586420198461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_179
-      rect:
-        serializedVersion: 2
-        x: 1677
-        y: 2891
-        width: 68
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 395c0846d807e16b0800000000000000
-      internalID: -5323693956926487149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_180
-      rect:
-        serializedVersion: 2
-        x: 1947
-        y: 2952
-        width: 33
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21f7925155819f960800000000000000
-      internalID: 7636161396889714450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_181
-      rect:
-        serializedVersion: 2
-        x: 1973
-        y: 2961
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ed98f536bd0a39c0800000000000000
-      internalID: -3946827047196123674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_182
-      rect:
-        serializedVersion: 2
-        x: 2219
-        y: 2976
-        width: 26
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac5cceed3fc7cefe0800000000000000
-      internalID: -1158413617282103862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_183
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 2936
-        width: 22
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efe177818b922b610800000000000000
-      internalID: 1635415485350092542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_184
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 2888
-        width: 110
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4836e072d4ff7880800000000000000
-      internalID: -8610894777834653617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_185
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 2934
-        width: 22
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08d8fe1368d6bda00800000000000000
-      internalID: 782339383409741184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_186
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 2885
-        width: 110
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9b83104ef9db6e9b0800000000000000
-      internalID: -5051141437626697543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_187
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 2958
-        width: 28
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f465090570c763fb0800000000000000
-      internalID: -4668407592864688561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_188
-      rect:
-        serializedVersion: 2
-        x: 675
-        y: 2931
-        width: 22
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d87aedaf4fcec9b40800000000000000
-      internalID: 5448490186136528781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_189
-      rect:
-        serializedVersion: 2
-        x: 1174
-        y: 2935
-        width: 44
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90e37251abc491710800000000000000
-      internalID: 1664445899392630281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_190
-      rect:
-        serializedVersion: 2
-        x: 1365
-        y: 2944
-        width: 69
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3081d278469eba60800000000000000
-      internalID: 7691750451503530042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_191
-      rect:
-        serializedVersion: 2
-        x: 1414
-        y: 2902
-        width: 59
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee53a047c32fb5e90800000000000000
-      internalID: -7035763651377482258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_192
-      rect:
-        serializedVersion: 2
-        x: 2199
-        y: 2953
-        width: 33
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5fa2385d0c33f9660800000000000000
-      internalID: 7394686016474524405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_193
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 2924
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4908b9fe4c7660010800000000000000
-      internalID: 1154724449998307476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_194
-      rect:
-        serializedVersion: 2
-        x: 317
-        y: 2922
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45806de9c7a0c8d40800000000000000
-      internalID: 5587852768016992340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_195
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 2919
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57840beb65d361680800000000000000
-      internalID: -8784766580363868043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_196
-      rect:
-        serializedVersion: 2
-        x: 838
-        y: 2922
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a218ff5dd349d060800000000000000
-      internalID: 6978683715664220832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_197
-      rect:
-        serializedVersion: 2
-        x: 1101
-        y: 2926
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b76813afcb3fef850800000000000000
-      internalID: 6412830912399115899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_198
-      rect:
-        serializedVersion: 2
-        x: 1363
-        y: 2928
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3455f21c88399680800000000000000
-      internalID: -8747898626925833155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_199
-      rect:
-        serializedVersion: 2
-        x: 1371
-        y: 2899
-        width: 63
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66dac4bb394eeae20800000000000000
-      internalID: 3363877294846029158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_200
-      rect:
-        serializedVersion: 2
-        x: 1930
-        y: 2892
-        width: 59
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a06893ae78a19cd50800000000000000
-      internalID: 6757961886898685450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_201
-      rect:
-        serializedVersion: 2
-        x: 2192
-        y: 2884
-        width: 59
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb767c2e00279c9d0800000000000000
-      internalID: -2753544349030062148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_202
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 2895
-        width: 11
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa9987c08800527e0800000000000000
-      internalID: -1791024692485121617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_203
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 2893
-        width: 11
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6337a28f7cd47f450800000000000000
-      internalID: 6122447739690840886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_204
-      rect:
-        serializedVersion: 2
-        x: 692
-        y: 2890
-        width: 11
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 07eeea2eac86b7860800000000000000
-      internalID: 7528726422675713648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_205
-      rect:
-        serializedVersion: 2
-        x: 1188
-        y: 2892
-        width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2289b3f5e318a7cf0800000000000000
-      internalID: -253748324107315166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_206
-      rect:
-        serializedVersion: 2
-        x: 1726
-        y: 2865
-        width: 21
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd94c6ff92ba37b70800000000000000
-      internalID: 8895641885854157279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_207
-      rect:
-        serializedVersion: 2
-        x: 1965
-        y: 2881
-        width: 25
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2cfaf00eb26aa120800000000000000
-      internalID: 2425859917492190251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_208
-      rect:
-        serializedVersion: 2
-        x: 1990
-        y: 2860
-        width: 17
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 24c4a9f11bcbab340800000000000000
-      internalID: 4880420615134792770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_209
-      rect:
-        serializedVersion: 2
-        x: 2247
-        y: 2863
-        width: 17
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 223333a784a165840800000000000000
-      internalID: 5212382517318071074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_210
-      rect:
-        serializedVersion: 2
-        x: 642
-        y: 2873
-        width: 32
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1dc5623130986e5d0800000000000000
-      internalID: -3033586652688261935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_211
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 2615
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b1b70861773ba680800000000000000
-      internalID: -8742833291393519183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_212
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 2596
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 472af3e7ab2cc29f0800000000000000
-      internalID: -491804153052421516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_213
-      rect:
-        serializedVersion: 2
-        x: 615
-        y: 2577
-        width: 79
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c4e74a5970063090800000000000000
-      internalID: -8055250362299849527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_214
-      rect:
-        serializedVersion: 2
-        x: 879
-        y: 2566
-        width: 95
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cfd04dc3a8968aef0800000000000000
-      internalID: -96711349541532164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_215
-      rect:
-        serializedVersion: 2
-        x: 1395
-        y: 2566
-        width: 111
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca20c6f98ffa92190800000000000000
-      internalID: -7986658981803457876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_216
-      rect:
-        serializedVersion: 2
-        x: 1442
-        y: 2606
-        width: 26
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05fbdac7b58172e00800000000000000
-      internalID: 1019810621835558736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_217
-      rect:
-        serializedVersion: 2
-        x: 1711
-        y: 2609
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f1ef33e24c699300800000000000000
-      internalID: 259357488086770162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_218
-      rect:
-        serializedVersion: 2
-        x: 1975
-        y: 2607
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cee0e2cc2c1c48b60800000000000000
-      internalID: 7747530301377482476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_219
-      rect:
-        serializedVersion: 2
-        x: 1129
-        y: 2560
-        width: 111
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b967435a8af25e2f0800000000000000
-      internalID: -944296145491560805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_220
-      rect:
-        serializedVersion: 2
-        x: 1693
-        y: 2583
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99599536898437b20800000000000000
-      internalID: 3130925985291670937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_221
-      rect:
-        serializedVersion: 2
-        x: 1694
-        y: 2595
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a557cca824699cf0800000000000000
-      internalID: -245054578854767191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_222
-      rect:
-        serializedVersion: 2
-        x: 1707
-        y: 2585
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45cee28a75384ad40800000000000000
-      internalID: 5594741049608039508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_223
-      rect:
-        serializedVersion: 2
-        x: 1718
-        y: 2594
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd7a653b4084ea340800000000000000
-      internalID: 4876914631514695647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_224
-      rect:
-        serializedVersion: 2
-        x: 1726
-        y: 2583
-        width: 11
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 921165cf57f93b3a0800000000000000
-      internalID: -6650796895602601687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_225
-      rect:
-        serializedVersion: 2
-        x: 1962
-        y: 2597
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d88f98af5e3822b40800000000000000
-      internalID: 5414034725826853005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_226
-      rect:
-        serializedVersion: 2
-        x: 1970
-        y: 2589
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49915dd943abb85a0800000000000000
-      internalID: -6517911300539606636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_227
-      rect:
-        serializedVersion: 2
-        x: 1979
-        y: 2597
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2fb2abb42f84b82c0800000000000000
-      internalID: -4428365603098973198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_228
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 2360
-        width: 82
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3775c44726e880e70800000000000000
-      internalID: 9081665202101704563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_229
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 2430
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2df4af1f2408a59d0800000000000000
-      internalID: -2784772394559320110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_230
-      rect:
-        serializedVersion: 2
-        x: 570
-        y: 2453
-        width: 59
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0df6a1c18fbbf0240800000000000000
-      internalID: 4760230005451681744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_231
-      rect:
-        serializedVersion: 2
-        x: 812
-        y: 2432
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9186eab1ed10ba40800000000000000
-      internalID: 5381834410048258462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_232
-      rect:
-        serializedVersion: 2
-        x: 1060
-        y: 2362
-        width: 58
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bdf2e2d8e76fb2db0800000000000000
-      internalID: -4815484353147686949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_233
-      rect:
-        serializedVersion: 2
-        x: 1349
-        y: 2424
-        width: 98
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d47f9a167aebecb40800000000000000
-      internalID: 5462513024154335053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_234
-      rect:
-        serializedVersion: 2
-        x: 1605
-        y: 2436
-        width: 102
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85f30e3ff72e621c0800000000000000
-      internalID: -4528683336094171304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_235
-      rect:
-        serializedVersion: 2
-        x: 1713
-        y: 2444
-        width: 41
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e53c5351fa9b4080800000000000000
-      internalID: -9202091052325128735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_236
-      rect:
-        serializedVersion: 2
-        x: 1758
-        y: 2433
-        width: 25
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c21f6c920e5e74c0800000000000000
-      internalID: -4287886429902662972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_237
-      rect:
-        serializedVersion: 2
-        x: 1873
-        y: 2424
-        width: 98
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d74c909f42bdd46d0800000000000000
-      internalID: -3004504424542780291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_238
-      rect:
-        serializedVersion: 2
-        x: 362
-        y: 2395
-        width: 34
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b0e495d5e9b03550800000000000000
-      internalID: 6138610688887939249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_239
-      rect:
-        serializedVersion: 2
-        x: 659
-        y: 2438
-        width: 37
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4153bdd6706603e0800000000000000
-      internalID: -2087875313597722291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_240
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 2439
-        width: 36
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79cf02a8cd01875a0800000000000000
-      internalID: -6523445520849896297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_241
-      rect:
-        serializedVersion: 2
-        x: 918
-        y: 2396
-        width: 60
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0d4f2086387e1300800000000000000
-      internalID: 224749206889254157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_242
-      rect:
-        serializedVersion: 2
-        x: 1128
-        y: 2434
-        width: 40
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 509db0b573b51f600800000000000000
-      internalID: 500281326923667717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_243
-      rect:
-        serializedVersion: 2
-        x: 1181
-        y: 2431
-        width: 48
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 432cbee4348b6a800800000000000000
-      internalID: 623388197663785524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_244
-      rect:
-        serializedVersion: 2
-        x: 1429
-        y: 2432
-        width: 76
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4a86e204fb5ec0980800000000000000
-      internalID: -8571223381214599004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_245
-      rect:
-        serializedVersion: 2
-        x: 1654
-        y: 2403
-        width: 28
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 38d0cd5c36ef0d520800000000000000
-      internalID: 2724957479033900419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_246
-      rect:
-        serializedVersion: 2
-        x: 1674
-        y: 2409
-        width: 48
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d14df7c3a1cab8fd0800000000000000
-      internalID: -2338586352804703203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_247
-      rect:
-        serializedVersion: 2
-        x: 1721
-        y: 2415
-        width: 25
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a189df525fc731b0800000000000000
-      internalID: -5676840852574862938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_248
-      rect:
-        serializedVersion: 2
-        x: 1745
-        y: 2404
-        width: 24
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3aaae7ba5711255b0800000000000000
-      internalID: -5381219407668270429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_249
-      rect:
-        serializedVersion: 2
-        x: 1953
-        y: 2432
-        width: 76
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4a4104a7dc2e9cb0800000000000000
-      internalID: -4855394043577677235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_250
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 2393
-        width: 76
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57e15f549545ea670800000000000000
-      internalID: 8551865484825665141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_251
-      rect:
-        serializedVersion: 2
-        x: 571
-        y: 2395
-        width: 58
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 368f2d58736c49fd0800000000000000
-      internalID: -2336024364927747997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_252
-      rect:
-        serializedVersion: 2
-        x: 632
-        y: 2402
-        width: 26
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7769c7b1af9286e60800000000000000
-      internalID: 7955654895929693815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_253
-      rect:
-        serializedVersion: 2
-        x: 657
-        y: 2402
-        width: 25
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1c819a0e8e0f2080800000000000000
-      internalID: -9210126709723919332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_254
-      rect:
-        serializedVersion: 2
-        x: 681
-        y: 2391
-        width: 24
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a24cd645ea8620ff0800000000000000
-      internalID: -71379546134428630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_255
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 2413
-        width: 14
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db566becceadc0930800000000000000
-      internalID: 4110901270497617341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_256
-      rect:
-        serializedVersion: 2
-        x: 812
-        y: 2395
-        width: 78
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51dedb0172ae51a60800000000000000
-      internalID: 7644273396036791573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_257
-      rect:
-        serializedVersion: 2
-        x: 882
-        y: 2394
-        width: 48
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f080934e2e3b38a0800000000000000
-      internalID: -6324392883288768269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_258
-      rect:
-        serializedVersion: 2
-        x: 983
-        y: 2419
-        width: 12
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6434f933d1689d300800000000000000
-      internalID: 277400312038245190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_259
-      rect:
-        serializedVersion: 2
-        x: 1127
-        y: 2394
-        width: 28
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 04c3347ae5f8bcc30800000000000000
-      internalID: 4380752699243838528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_260
-      rect:
-        serializedVersion: 2
-        x: 1146
-        y: 2380
-        width: 48
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c40d65774eef5080800000000000000
-      internalID: -9196369923387095864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_261
-      rect:
-        serializedVersion: 2
-        x: 1194
-        y: 2383
-        width: 24
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fc88d897c1fb888a0800000000000000
-      internalID: -6302577549485700913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_262
-      rect:
-        serializedVersion: 2
-        x: 1217
-        y: 2387
-        width: 26
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 237fbdae0ca4bf0f0800000000000000
-      internalID: -1082189093018011854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_263
-      rect:
-        serializedVersion: 2
-        x: 1239
-        y: 2407
-        width: 16
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edefc4f0721141f80800000000000000
-      internalID: -8136859767293542690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_264
-      rect:
-        serializedVersion: 2
-        x: 1346
-        y: 2377
-        width: 118
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0460bf60d2bec0ec0800000000000000
-      internalID: -3599243423552698816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_265
-      rect:
-        serializedVersion: 2
-        x: 1456
-        y: 2395
-        width: 25
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5a6f924f8abb8d50800000000000000
-      internalID: 6740686391750912604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_266
-      rect:
-        serializedVersion: 2
-        x: 1480
-        y: 2395
-        width: 25
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59e1bfb77b99f9b50800000000000000
-      internalID: 6602164592086556309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_267
-      rect:
-        serializedVersion: 2
-        x: 1506
-        y: 2411
-        width: 16
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 805c968cdbf130a30800000000000000
-      internalID: 4180219779101607176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_268
-      rect:
-        serializedVersion: 2
-        x: 1759
-        y: 2391
-        width: 22
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a0d354ea022e91c0800000000000000
-      internalID: -4495117947893460824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_269
-      rect:
-        serializedVersion: 2
-        x: 1870
-        y: 2377
-        width: 118
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a72e7b09a1354c1f0800000000000000
-      internalID: -1025603441571405190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_270
-      rect:
-        serializedVersion: 2
-        x: 1980
-        y: 2395
-        width: 25
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ccb433f3093e81300800000000000000
-      internalID: 223178390229961676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_271
-      rect:
-        serializedVersion: 2
-        x: 2004
-        y: 2395
-        width: 25
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d71e262a0c8292e0800000000000000
-      internalID: -2120478499319965744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_272
-      rect:
-        serializedVersion: 2
-        x: 2030
-        y: 2411
-        width: 16
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bac32499f44f7eef0800000000000000
-      internalID: -78825845744845653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_273
-      rect:
-        serializedVersion: 2
-        x: 363
-        y: 2379
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 93406d096cc610260800000000000000
-      internalID: 7062045290782917689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_274
-      rect:
-        serializedVersion: 2
-        x: 688
-        y: 2381
-        width: 31
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 711007b610bdd62c0800000000000000
-      internalID: -4436649258746117865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_275
-      rect:
-        serializedVersion: 2
-        x: 812
-        y: 2341
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a93b39cee56709af0800000000000000
-      internalID: -391683017513127014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_276
-      rect:
-        serializedVersion: 2
-        x: 973
-        y: 2392
-        width: 15
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91e9958cf1e5236a0800000000000000
-      internalID: -6471006223979667943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_277
-      rect:
-        serializedVersion: 2
-        x: 1470
-        y: 2384
-        width: 42
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4492ee700841b55c0800000000000000
-      internalID: -4225761285235660476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_278
-      rect:
-        serializedVersion: 2
-        x: 1628
-        y: 2396
-        width: 45
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30c78403ed0791530800000000000000
-      internalID: 3826213458023054339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_279
-      rect:
-        serializedVersion: 2
-        x: 1684
-        y: 2398
-        width: 73
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80da6c379b0b55a70800000000000000
-      internalID: 8815146156205452552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_280
-      rect:
-        serializedVersion: 2
-        x: 1994
-        y: 2384
-        width: 42
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5a9644d94e075960800000000000000
-      internalID: 7590551407213058654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_281
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 2339
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b244849bd59bcb0f0800000000000000
-      internalID: -1099800396793625557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_282
-      rect:
-        serializedVersion: 2
-        x: 637
-        y: 2383
-        width: 48
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70477ac0135f45c20800000000000000
-      internalID: 3194447626727027719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_283
-      rect:
-        serializedVersion: 2
-        x: 898
-        y: 2381
-        width: 66
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ab479a0845b70070800000000000000
-      internalID: 8072620178104863652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_284
-      rect:
-        serializedVersion: 2
-        x: 969
-        y: 2380
-        width: 21
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed0e2bd8679afd2a0800000000000000
-      internalID: -6710458593110204194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_285
-      rect:
-        serializedVersion: 2
-        x: 1126
-        y: 2375
-        width: 26
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3288140734cf232b0800000000000000
-      internalID: -5606141219546494941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_286
-      rect:
-        serializedVersion: 2
-        x: 1156
-        y: 2368
-        width: 54
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ad6dbfb2edee2f40800000000000000
-      internalID: 5705759336060251561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_287
-      rect:
-        serializedVersion: 2
-        x: 1214
-        y: 2371
-        width: 31
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7981dc4e88b96c5c0800000000000000
-      internalID: -4195494990592534377
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_288
-      rect:
-        serializedVersion: 2
-        x: 570
-        y: 2321
-        width: 59
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99401e83997f588a0800000000000000
-      internalID: -6303359865978813287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_289
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 2168
-        width: 52
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7412b636b0a2488e0800000000000000
-      internalID: -1692181331583491769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_290
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 2178
-        width: 38
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba64b0909bc17baf0800000000000000
-      internalID: -380804062443256149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_291
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 2158
-        width: 20
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c625e4753c3701520800000000000000
-      internalID: 2670761861851271788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_292
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 2156
-        width: 98
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fc54686492173cc0800000000000000
-      internalID: -3731493337637298954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_293
-      rect:
-        serializedVersion: 2
-        x: 678
-        y: 2167
-        width: 24
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0de77a4c3aebd8d0800000000000000
-      internalID: -2820403196949172980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_294
-      rect:
-        serializedVersion: 2
-        x: 697
-        y: 2167
-        width: 29
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: babef90ab93b199a0800000000000000
-      internalID: -6227999328680547413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_295
-      rect:
-        serializedVersion: 2
-        x: 939
-        y: 2150
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72aa60dd349e532a0800000000000000
-      internalID: -6758239188119279065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_296
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 2172
-        width: 35
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12ab5e0707e613c60800000000000000
-      internalID: 7796133859164535329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_297
-      rect:
-        serializedVersion: 2
-        x: 1693
-        y: 2144
-        width: 29
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98ebaaabbfeed7b10800000000000000
-      internalID: 1981002176048840329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_298
-      rect:
-        serializedVersion: 2
-        x: 1956
-        y: 2171
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e1a2b659c4ba28e0800000000000000
-      internalID: -1717361531052449303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_299
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 2156
-        width: 58
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06b9715062fd01e80800000000000000
-      internalID: -8209816766309229728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_300
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 2136
-        width: 28
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c046f4f2030477c50800000000000000
-      internalID: 6662864749414278156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_301
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 2122
-        width: 48
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1b9abceef8c8bb30800000000000000
-      internalID: 4303410441171409694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_302
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 2125
-        width: 24
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 662f3341c81c99750800000000000000
-      internalID: 6312289160114991718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_303
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 2129
-        width: 26
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50605e31f5e75bdd0800000000000000
-      internalID: -2470929873722079739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_304
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 2109
-        width: 118
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8671b47ecd98b0d80800000000000000
-      internalID: -8283375507751626904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_305
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 2120
-        width: 25
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1b32f1c40c97f9d0800000000000000
-      internalID: -2740550303983977702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_306
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 2127
-        width: 25
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d87fe0802e7ad4120800000000000000
-      internalID: 2399758765697988493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_307
-      rect:
-        serializedVersion: 2
-        x: 644
-        y: 2102
-        width: 96
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 62a133012408d3760800000000000000
-      internalID: 7439243180713908774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_308
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 2150
-        width: 21
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aed0e94494d9a9030800000000000000
-      internalID: 3502284598243364330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_309
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 2130
-        width: 19
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2af766a7f39d6f9b0800000000000000
-      internalID: -5046607465762357342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_310
-      rect:
-        serializedVersion: 2
-        x: 1203
-        y: 2133
-        width: 19
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f471e4cdfb55cf270800000000000000
-      internalID: 8285591696978089807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_311
-      rect:
-        serializedVersion: 2
-        x: 1466
-        y: 2141
-        width: 19
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49189668edf486850800000000000000
-      internalID: 6370429490071962004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_312
-      rect:
-        serializedVersion: 2
-        x: 1962
-        y: 2156
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 828738a4f0e1aac50800000000000000
-      internalID: 6677182448553654312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_313
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 2111
-        width: 78
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86696b93e56708dd0800000000000000
-      internalID: -2485856847241243032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_314
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 2129
-        width: 20
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d3d8a70caeb28c40800000000000000
-      internalID: 5513178539927065558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_315
-      rect:
-        serializedVersion: 2
-        x: 936
-        y: 2117
-        width: 20
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 42e2ec6e1fbea8de0800000000000000
-      internalID: -1329991315742642652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_316
-      rect:
-        serializedVersion: 2
-        x: 944
-        y: 2131
-        width: 20
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8933461ddc1804ea0800000000000000
-      internalID: -5890565591619325032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_317
-      rect:
-        serializedVersion: 2
-        x: 959
-        y: 2104
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0dfa6890f63ebeee0800000000000000
-      internalID: -1230640007115001904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_318
-      rect:
-        serializedVersion: 2
-        x: 1451
-        y: 2113
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9f42bea1c30da420800000000000000
-      internalID: 2642772686730842015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_319
-      rect:
-        serializedVersion: 2
-        x: 1678
-        y: 2118
-        width: 29
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac8b8df3ced2d8bf0800000000000000
-      internalID: -320549505766737718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_320
-      rect:
-        serializedVersion: 2
-        x: 1711
-        y: 2109
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5aebe7f9ddea3f8b0800000000000000
-      internalID: -5119556084503232859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_321
-      rect:
-        serializedVersion: 2
-        x: 1941
-        y: 2134
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a0ebaf3d21f48ab0800000000000000
-      internalID: -5006611709085097815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_322
-      rect:
-        serializedVersion: 2
-        x: 1954
-        y: 2130
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbe9a73eaf0262f40800000000000000
-      internalID: 5703282240041688765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_323
-      rect:
-        serializedVersion: 2
-        x: 1976
-        y: 2134
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb6630f6386de3350800000000000000
-      internalID: 5998467613695633083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_324
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 2112
-        width: 53
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2bb782781a71d9400800000000000000
-      internalID: 332447930020035506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_325
-      rect:
-        serializedVersion: 2
-        x: 1188
-        y: 2105
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d55d2e33125f2aef0800000000000000
-      internalID: -98246718895499939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_326
-      rect:
-        serializedVersion: 2
-        x: 1218
-        y: 2093
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7bc42167f6a0fef0800000000000000
-      internalID: -76377612248364165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_327
-      rect:
-        serializedVersion: 2
-        x: 1481
-        y: 2101
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59dd401a3ea1a7c60800000000000000
-      internalID: 7816589668216266133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_328
-      rect:
-        serializedVersion: 2
-        x: 1982
-        y: 2122
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1882ef7bed55d78d0800000000000000
-      internalID: -2847024974370297727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_329
-      rect:
-        serializedVersion: 2
-        x: 907
-        y: 2077
-        width: 21
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4daba42f300e39dd0800000000000000
-      internalID: -2480392662196503852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_330
-      rect:
-        serializedVersion: 2
-        x: 925
-        y: 2075
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e876f79e3d916de0800000000000000
-      internalID: -1341618321816651550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_331
-      rect:
-        serializedVersion: 2
-        x: 1163
-        y: 2066
-        width: 22
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f90df1fd0824dd560800000000000000
-      internalID: 7340096088950427807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_332
-      rect:
-        serializedVersion: 2
-        x: 1426
-        y: 2074
-        width: 22
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba56eb7296dc86290800000000000000
-      internalID: -7896836095072115285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_333
-      rect:
-        serializedVersion: 2
-        x: 1654
-        y: 2078
-        width: 29
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ee1f49f0e27470b0800000000000000
-      internalID: -5731830115154845982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_334
-      rect:
-        serializedVersion: 2
-        x: 1684
-        y: 2074
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61d1bd789eaea7a00800000000000000
-      internalID: 755174176265542934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_335
-      rect:
-        serializedVersion: 2
-        x: 1922
-        y: 2091
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bcc72637046349120800000000000000
-      internalID: 2419618550246440139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_336
-      rect:
-        serializedVersion: 2
-        x: 1933
-        y: 2098
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05bc86857e1fc41a0800000000000000
-      internalID: -6823813359450141872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_337
-      rect:
-        serializedVersion: 2
-        x: 1959
-        y: 2095
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88cfbb33c802319d0800000000000000
-      internalID: -2804862356386218872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_338
-      rect:
-        serializedVersion: 2
-        x: 1181
-        y: 2061
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e699d7570eacd07a0800000000000000
-      internalID: -6409243629285697170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_339
-      rect:
-        serializedVersion: 2
-        x: 1444
-        y: 2069
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 328fae2718a8b8b60800000000000000
-      internalID: 7749439872404486179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_340
-      rect:
-        serializedVersion: 2
-        x: 1947
-        y: 2085
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3bbcae1ee898763a0800000000000000
-      internalID: -6672213076157477965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_341
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 1847
-        width: 58
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b062266cf82dda80800000000000000
-      internalID: -8440545062112042829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_342
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 1917
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22a04c337e35d8730800000000000000
-      internalID: 4002947896273275426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_343
-      rect:
-        serializedVersion: 2
-        x: 581
-        y: 1940
-        width: 59
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6f0f64a2c67fbdf0800000000000000
-      internalID: -162280483207573651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_344
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 1880
-        width: 58
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48a838166b09afdc0800000000000000
-      internalID: -3604409438762202492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_345
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 1826
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 552b8d0dbdf951690800000000000000
-      internalID: -7632018227058920875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_346
-      rect:
-        serializedVersion: 2
-        x: 582
-        y: 1882
-        width: 58
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 67bf2ace26779a820800000000000000
-      internalID: 2930004299341822838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathShotLootAnimationAtlas_347
-      rect:
-        serializedVersion: 2
-        x: 581
-        y: 1808
-        width: 59
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9752c08a510e29670800000000000000
-      internalID: 8544137826693555577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eb3581d63e875a3478164e7a0e684a38
     internalID: 0
     vertices: []
     indices: 
@@ -8809,7 +2926,87 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DeathShotLootAnimationAtlas_0: 6019892993894443448
+      DeathShotLootAnimationAtlas_1: 3571695615056767412
+      DeathShotLootAnimationAtlas_10: -5338238371406919426
+      DeathShotLootAnimationAtlas_11: 277594649741110925
+      DeathShotLootAnimationAtlas_12: 3872783295417815146
+      DeathShotLootAnimationAtlas_13: -4494363453002408753
+      DeathShotLootAnimationAtlas_14: 7795357481163037243
+      DeathShotLootAnimationAtlas_15: -862883055131847440
+      DeathShotLootAnimationAtlas_16: -1935846440420066184
+      DeathShotLootAnimationAtlas_17: 5240026478695649173
+      DeathShotLootAnimationAtlas_18: 5973381677184254606
+      DeathShotLootAnimationAtlas_19: -7447669148827192214
+      DeathShotLootAnimationAtlas_2: -7902003476724125951
+      DeathShotLootAnimationAtlas_20: -530255995519258110
+      DeathShotLootAnimationAtlas_21: -8961699587615091056
+      DeathShotLootAnimationAtlas_22: 2477628388999487354
+      DeathShotLootAnimationAtlas_23: -7298991398784608732
+      DeathShotLootAnimationAtlas_24: 3432122371742870368
+      DeathShotLootAnimationAtlas_25: 7888422994195456643
+      DeathShotLootAnimationAtlas_26: -2038991310146608863
+      DeathShotLootAnimationAtlas_27: 1201062903563996088
+      DeathShotLootAnimationAtlas_28: 6758832218810793703
+      DeathShotLootAnimationAtlas_29: 6985981943375051966
+      DeathShotLootAnimationAtlas_3: 1653312557965849930
+      DeathShotLootAnimationAtlas_30: -3695607233614554077
+      DeathShotLootAnimationAtlas_31: -3398691353277787485
+      DeathShotLootAnimationAtlas_32: 1918408206669754305
+      DeathShotLootAnimationAtlas_33: -5140189945501361657
+      DeathShotLootAnimationAtlas_34: 4874111577328174178
+      DeathShotLootAnimationAtlas_35: 1278295214346915703
+      DeathShotLootAnimationAtlas_36: 6792916455809261758
+      DeathShotLootAnimationAtlas_37: 5217580994088046797
+      DeathShotLootAnimationAtlas_38: -2707300458006494132
+      DeathShotLootAnimationAtlas_39: -8560334131625077621
+      DeathShotLootAnimationAtlas_4: 1516040087396125458
+      DeathShotLootAnimationAtlas_40: 1668912148030215089
+      DeathShotLootAnimationAtlas_41: -6970252143687523570
+      DeathShotLootAnimationAtlas_42: 8550217799590470587
+      DeathShotLootAnimationAtlas_43: 2392635451284486352
+      DeathShotLootAnimationAtlas_44: -360455192240968809
+      DeathShotLootAnimationAtlas_45: 5728505208715665435
+      DeathShotLootAnimationAtlas_46: 7517960328910807782
+      DeathShotLootAnimationAtlas_47: 2432442596694516309
+      DeathShotLootAnimationAtlas_48: -37025522331065484
+      DeathShotLootAnimationAtlas_49: -2810896891042861307
+      DeathShotLootAnimationAtlas_5: -8253997795327542354
+      DeathShotLootAnimationAtlas_50: 1339699240099611348
+      DeathShotLootAnimationAtlas_51: 6176352042293814682
+      DeathShotLootAnimationAtlas_52: -4402381420609510347
+      DeathShotLootAnimationAtlas_53: 5767804125600473479
+      DeathShotLootAnimationAtlas_54: 3214743127188353361
+      DeathShotLootAnimationAtlas_55: 805778603877001447
+      DeathShotLootAnimationAtlas_56: 2177795600725403272
+      DeathShotLootAnimationAtlas_57: 4488359432403756690
+      DeathShotLootAnimationAtlas_58: -8977288876306124471
+      DeathShotLootAnimationAtlas_59: -4544604925194670924
+      DeathShotLootAnimationAtlas_6: -1282334125944796837
+      DeathShotLootAnimationAtlas_60: -4691215054571102814
+      DeathShotLootAnimationAtlas_61: 4159763672589961816
+      DeathShotLootAnimationAtlas_62: -8969610207343120746
+      DeathShotLootAnimationAtlas_63: -1375049631879935763
+      DeathShotLootAnimationAtlas_64: 7863623493032979500
+      DeathShotLootAnimationAtlas_65: -8348416019703062120
+      DeathShotLootAnimationAtlas_66: 8464076260646260527
+      DeathShotLootAnimationAtlas_67: 7065571650262814326
+      DeathShotLootAnimationAtlas_68: -2616488997692477274
+      DeathShotLootAnimationAtlas_69: 2145944136923318395
+      DeathShotLootAnimationAtlas_7: 3612356222097240031
+      DeathShotLootAnimationAtlas_70: 439970274973625523
+      DeathShotLootAnimationAtlas_71: 6369347560748132234
+      DeathShotLootAnimationAtlas_72: -4550421702688565755
+      DeathShotLootAnimationAtlas_73: -1556041847831481192
+      DeathShotLootAnimationAtlas_74: 914085691934134695
+      DeathShotLootAnimationAtlas_75: 5761048667269927235
+      DeathShotLootAnimationAtlas_76: 7353140261999997810
+      DeathShotLootAnimationAtlas_77: 72469203767633272
+      DeathShotLootAnimationAtlas_78: -4767361805135509652
+      DeathShotLootAnimationAtlas_79: 919426221000243700
+      DeathShotLootAnimationAtlas_8: 6236520120969259625
+      DeathShotLootAnimationAtlas_9: -1023878962709662924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -230,7 +230,6 @@ MonoBehaviour:
       _flags: 01000000
     _enemyFlag: 0
     _projectilePrefab: {fileID: 5940939131329807596, guid: bf544a2ea8ee63446bc68d17981572f1, type: 3}
-  _flagTransform: {fileID: 0}
 --- !u!195 &7014999058970263935
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -471,7 +470,7 @@ Transform:
   m_GameObject: {fileID: 8100218445409127163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.6223, y: -0.3745, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
