@@ -21,19 +21,19 @@ namespace Project.Content
         [SerializeField] private Ease _disappearEase;
         [SerializeField] private Ease _preDisappearEase;
 
-        private CardsPopupView _cardsView;
         private Camera _camera;
+        private PauseHandler _pauseHandler;
         private List<Sequence> _activeSequences = new();
 
         private bool _isPaused;
 
         [Inject]
-        private void Construct(CardsPopupView cardsView, Camera camera)
+        private void Construct(Camera camera, PauseHandler pauseHandler)
         {
-            _cardsView = cardsView;
             _camera = camera;
-            _cardsView.OnPopupStartShow += Pause;
-            _cardsView.OnPopupClosed += Play;
+            _pauseHandler = pauseHandler;
+
+            _pauseHandler.OnPauseChanged += OnPause;
         }
 
         public void SetExperienceBar(float currentValue, float maxValue, int currentLevel)
@@ -65,6 +65,15 @@ namespace Project.Content
                 Pause();
         }
 
+        private void OnPause(bool isPaused)
+        {
+            Debug.Log(isPaused);
+            if (isPaused)
+                Pause();
+            else
+                Play();
+        }
+
         private void RegisterSequenceToPause(Sequence sequence)
         {
             _activeSequences.Add(sequence);
@@ -93,11 +102,7 @@ namespace Project.Content
 
         private void OnDestroy()
         {
-            if (_cardsView == null)
-                return;
-
-            _cardsView.OnPopupStartShow -= Pause;
-            _cardsView.OnPopupClosed -= Play;
+            _pauseHandler.OnPauseChanged -= OnPause;
         }
     }
 }
