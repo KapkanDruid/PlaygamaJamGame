@@ -1,4 +1,5 @@
 ﻿using Project.Content.CharacterAI;
+using Project.Content.CharacterAI.Infantryman;
 using Project.Content.Spawners;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,7 @@ namespace Project.Content.BuildSystem
         private int _currentCountAlly = 0;
         private float _attackCooldownTimer;
         private List<GameObject> _allyAlive = new List<GameObject>();
+        private bool _isActive;
 
         public BarracksSpawnLogic(BarracksEntity barracksEntity,
                                   EntityCommander entityCommander,
@@ -26,17 +28,25 @@ namespace Project.Content.BuildSystem
             _entityCommander = entityCommander;
             _alliedRangerFactory = alliedRangerFactory;
             _pauseHandler = pauseHandler;
+        }
 
+        public void Initialize()
+        {
             _entityCommander.Initialize();
 
             _alliedRangerSpawner = _alliedRangerFactory.Create(_barracksEntity.Data.AllyEntityType);
             _attackCooldownTimer = _barracksEntity.Data.SpawnCooldown;
 
             _alliedRangerSpawner.Initialize(_barracksEntity.Data.Capacity);
+
+            _isActive = true;
         }
 
         public void Tick()
         {
+            if (!_isActive)
+                return;
+
             if (_pauseHandler.IsPaused)
                 return;
 
@@ -72,7 +82,7 @@ namespace Project.Content.BuildSystem
         }
 
         private void CooldownSpawn()
-        {
+        { 
             if (_attackCooldownTimer > 0)
             {
                 _attackCooldownTimer -= Time.deltaTime;
@@ -86,9 +96,14 @@ namespace Project.Content.BuildSystem
 
             var obj = _alliedRangerSpawner.Prefab;
             _allyAlive.Add(obj);
-            var entity = obj.GetComponent<IPatrolling>();
 
-            _entityCommander.AddEntity(entity);
+            var entity = obj.GetComponent<InfantrymanEntity>();
+
+            var patrolling = entity.ProvideComponent<IPatrolling>();
+
+            _entityCommander.AddEntity(patrolling);
+
+            entity.Prepare(new InfantrymanSpawnData(_barracksEntity.Data.UnitDamageModifier, _barracksEntity.Data.UnitHealthModifier));
 
             _currentCountAlly++;
         }

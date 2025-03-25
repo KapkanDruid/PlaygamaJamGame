@@ -9,7 +9,6 @@ namespace Project.Content.BuildSystem
     [Serializable]
     public class BarracksData : IPlaceComponentData, IHealthData, IAllyEntityBarracks
     {
-        [SerializeField] private float _maxHealth;
         [SerializeField] private Transform _gridPivotTransform;
         [SerializeField] private SpriteRenderer[] _spriteRenderers;
         [SerializeField] private Transform[] _scalableObjects;
@@ -19,10 +18,9 @@ namespace Project.Content.BuildSystem
         [SerializeField] private AllyEntityType _allyEntityType;
         [SerializeField] private BarracksType _barracksType;
         [SerializeField] private Transform _spawnPosition;
-        [SerializeField] private int _capacity;
-        [SerializeField] private float _spawnCooldown;
 
-        private ReactiveProperty<float> _health;
+        private BarrackDynamicData _dynamicData;
+        private BarrackConfig _config;
 
         public Transform PivotTransform => _gridPivotTransform;
         public SpriteRenderer[] SpriteRenderers => _spriteRenderers;
@@ -33,14 +31,17 @@ namespace Project.Content.BuildSystem
         public AllyEntityType AllyEntityType => _allyEntityType;
         public BarracksType BarracksType => _barracksType;
         public Vector3 SpawnPosition => _spawnPosition.position;
-        public int Capacity => _capacity;
-        public float SpawnCooldown => _spawnCooldown;
+        public int Capacity => _config.Capacity;
+        public float SpawnCooldown => _config.SpawnCooldown;
+        public float UnitDamageModifier => _dynamicData.UnitDamageModifier;
+        public float UnitHealthModifier => _dynamicData.UnitHealthModifier;
 
-        IReactiveProperty<float> IHealthData.Health => _health;
+        public IReactiveProperty<float> Health => _dynamicData.BuildingMaxHealth;
 
-        public void Initialize()
+        public void Construct(BarrackDynamicData dynamicData)
         {
-            _health = new ReactiveProperty<float>(_maxHealth);
+            _dynamicData = dynamicData;
+            _config = _dynamicData.Config;
         }
     }
 }

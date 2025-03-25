@@ -152,10 +152,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_0
       rect:
         serializedVersion: 2
-        x: 164
-        y: 3560
-        width: 251
-        height: 500
+        x: 0
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +174,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_1
       rect:
         serializedVersion: 2
-        x: 660
-        y: 3556
-        width: 255
-        height: 500
+        x: 512
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_2
       rect:
         serializedVersion: 2
-        x: 1149
-        y: 3558
-        width: 269
-        height: 500
+        x: 1024
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_3
       rect:
         serializedVersion: 2
-        x: 1623
-        y: 3559
-        width: 298
-        height: 500
+        x: 1536
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +240,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_4
       rect:
         serializedVersion: 2
-        x: 2153
-        y: 3557
-        width: 272
-        height: 500
+        x: 2048
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_5
       rect:
         serializedVersion: 2
-        x: 2673
-        y: 3558
-        width: 253
-        height: 500
+        x: 2560
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +284,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_6
       rect:
         serializedVersion: 2
-        x: 3137
-        y: 3559
-        width: 295
-        height: 500
+        x: 3072
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_7
       rect:
         serializedVersion: 2
-        x: 3624
-        y: 3560
-        width: 311
-        height: 500
+        x: 3584
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_8
       rect:
         serializedVersion: 2
-        x: 124
-        y: 2943
-        width: 304
-        height: 487
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +350,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_9
       rect:
         serializedVersion: 2
-        x: 649
-        y: 2934
-        width: 282
-        height: 494
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,10 +372,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_10
       rect:
         serializedVersion: 2
-        x: 1153
-        y: 2943
-        width: 257
-        height: 487
+        x: 1024
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,10 +394,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_11
       rect:
         serializedVersion: 2
-        x: 1657
-        y: 2939
-        width: 251
-        height: 493
+        x: 1536
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,10 +416,10 @@ TextureImporter:
       name: CharacterAnimationAtlas_12
       rect:
         serializedVersion: 2
-        x: 3634
-        y: 2943
-        width: 299
-        height: 500
+        x: 2048
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,11 +434,187 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74af53bac112bcf4086014861c16293a
+      internalID: -1940059170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36dba8e42cb4eff4d97ed47fec3ee9f0
+      internalID: 1575329570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58608d8112e96e409629f5d787065d9
+      internalID: -604582039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a576536c33a0c7644853ae2b79e8f86a
+      internalID: -1952247550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fd92eb728b1374eb19c4536868e4b3
+      internalID: 2019778909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe5ab99b8b690e45a0d78fc5fa49aef
+      internalID: 41546924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947987db69544b24d95f56b5f26c5425
+      internalID: -1210865219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterAnimationAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e564da86fb523b48aa915d6b858f777
+      internalID: -1045965144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1c67abfd9acfede4e9d7cb59be4ea2db
     internalID: 0
     vertices: []
     indices: 
@@ -453,7 +629,15 @@ TextureImporter:
       CharacterAnimationAtlas_10: -4099847274426514060
       CharacterAnimationAtlas_11: 1775801738866916323
       CharacterAnimationAtlas_12: -8920757523803305644
+      CharacterAnimationAtlas_13: -1940059170
+      CharacterAnimationAtlas_14: 1575329570
+      CharacterAnimationAtlas_15: -604582039
+      CharacterAnimationAtlas_16: -1952247550
+      CharacterAnimationAtlas_17: 2019778909
+      CharacterAnimationAtlas_18: 41546924
+      CharacterAnimationAtlas_19: -1210865219
       CharacterAnimationAtlas_2: 4048574024204342214
+      CharacterAnimationAtlas_20: -1045965144
       CharacterAnimationAtlas_3: -2001900331816789492
       CharacterAnimationAtlas_4: 1113102271855065053
       CharacterAnimationAtlas_5: -183424977877524894

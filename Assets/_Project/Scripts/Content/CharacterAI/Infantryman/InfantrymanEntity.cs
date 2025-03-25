@@ -1,7 +1,4 @@
 using Project.Content.BuildSystem;
-using Project.Content.CharacterAI.Destroyer;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -42,7 +39,17 @@ namespace Project.Content.CharacterAI.Infantryman
             _pauseHandler = pauseHandler;
 
             ResetData();
+        }
 
+        public void Prepare(InfantrymanSpawnData spawnData)
+        {
+            _infantrymanData.UpdateData(spawnData);
+
+            ResetData();
+            _animator.Rebind();
+            _animator.Update(0f);
+            _enemyDeadHandler.Reset();
+            _healthHandler.Reset();
         }
 
         public override T ProvideComponent<T>() where T : class
@@ -58,6 +65,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
             if (_enemyDeadHandler is T deadHandler)
                 return deadHandler;
+
+            if (this is T thisObject)
+                return thisObject;
 
             return null;
         }
@@ -84,11 +94,11 @@ namespace Project.Content.CharacterAI.Infantryman
 
         private void OnEnable()
         {
-            ResetData();
+/*            ResetData();
             _animator.Rebind();
             _animator.Update(0f);
             _enemyDeadHandler.Reset();
-            _healthHandler.Reset();
+            _healthHandler.Reset();*/
         }
 
         private void ResetData()
