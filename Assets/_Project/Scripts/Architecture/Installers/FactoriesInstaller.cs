@@ -71,6 +71,7 @@ namespace Project.Architecture
             Container.BindFactory<DefensiveFlag, DefensiveFlag.Factory>()
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.Flag);
+
         }
     }
 }

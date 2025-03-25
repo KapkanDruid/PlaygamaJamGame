@@ -6,13 +6,14 @@ namespace Project.Content
     public class SelectMoveObject : MonoBehaviour
     {
         private const string Ground = "Ground";
+
         private Camera _mainCamera;
         private bool _isDragging = false;
-        private PauseHandler _pauseHandler;
         private Vector3 _initialPosition;
-        Collider2D _currentCollider;
-
-        [Inject]
+        private Collider2D _currentCollider;
+        private PauseHandler _pauseHandler;
+        
+        [Inject] 
         public void Construct(PauseHandler pauseHandler)
         {
             _pauseHandler = pauseHandler;
@@ -20,7 +21,6 @@ namespace Project.Content
 
         private void Start()
         {
-
             _currentCollider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
         }
