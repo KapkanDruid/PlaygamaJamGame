@@ -120,6 +120,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -334,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UpgradeUIEffectAnimationAtlas_0: -241900191285858081
+      UpgradeUIEffectAnimationAtlas_1: 4900006054603999434
+      UpgradeUIEffectAnimationAtlas_2: 7613735144749107419
+      UpgradeUIEffectAnimationAtlas_3: 242775997679780930
+      UpgradeUIEffectAnimationAtlas_4: 4342540447143318365
+      UpgradeUIEffectAnimationAtlas_5: 338705720737820682
+      UpgradeUIEffectAnimationAtlas_6: -822900508795834813
+      UpgradeUIEffectAnimationAtlas_7: -792437978341648211
+      UpgradeUIEffectAnimationAtlas_8: -9134246271520600158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
