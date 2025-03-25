@@ -1,6 +1,7 @@
 ﻿using UnityEngine.AI;
 using UnityEngine;
 using Zenject;
+using DG.Tweening;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
@@ -53,20 +54,17 @@ namespace Project.Content.CharacterAI.Infantryman
                     return;
 
                 Patrol();
+
                 return;
             }
 
             MoveToTarget();
-            SetOrientation();
         }
 
-        public void SetOrientation()
+        private void SetOrientation(float lookAt)
         {
-            if (_infantrymanEntity.TargetTransform == null)
-                return;
-
-            var direction = Mathf.Sign(_infantrymanEntity.TargetTransform.position.x - _infantrymanEntity.transform.position.x);
-            Vector3 rightOrientation = new Vector3(1, _infantrymanEntity.transform.localScale.y, _infantrymanEntity .transform.localScale.z);
+            var direction = Mathf.Sign(lookAt - _infantrymanEntity.transform.position.x);
+            Vector3 rightOrientation = new Vector3(1, _infantrymanEntity.transform.localScale.y, _infantrymanEntity.transform.localScale.z);
             Vector3 leftOrientation = new Vector3(-1, _infantrymanEntity.transform.localScale.y, _infantrymanEntity.transform.localScale.z);
 
             if (direction > 0)
@@ -85,6 +83,7 @@ namespace Project.Content.CharacterAI.Infantryman
             {
                 _currentPatrolPoint = _patrolLogic.GetRandomPoint(_infantrymanEntity.FlagTransform.position, _infantrymanEntity.PatrolRadius + _agent.stoppingDistance);
                 _agent.SetDestination(_currentPatrolPoint);
+                SetOrientation(_currentPatrolPoint.x);
                 _isPatrolling = true;
             }
         }
@@ -97,6 +96,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private void MoveToTarget()
         {
             _agent.SetDestination(_infantrymanEntity.TargetTransform.position);
+            SetOrientation(_infantrymanEntity.TargetTransform.position.x);
             _isPatrolling = false;
         }
     }
