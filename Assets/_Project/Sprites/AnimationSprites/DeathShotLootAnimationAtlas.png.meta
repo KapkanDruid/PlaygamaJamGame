@@ -1,0 +1,3474 @@
+fileFormatVersion: 2
+guid: 12dbef2a44a008b4e9d8c60373598362
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7858687857405986630
+    second: DeathShotLootAnimationAtlas (2)_0
+  - first:
+      213: -5491072822167092374
+    second: DeathShotLootAnimationAtlas (2)_1
+  - first:
+      213: 8262329808823690494
+    second: DeathShotLootAnimationAtlas (2)_2
+  - first:
+      213: 990368071439346927
+    second: DeathShotLootAnimationAtlas (2)_3
+  - first:
+      213: 5983567689549808213
+    second: DeathShotLootAnimationAtlas (2)_4
+  - first:
+      213: -6833725153946829753
+    second: DeathShotLootAnimationAtlas (2)_5
+  - first:
+      213: -6505239879330944330
+    second: DeathShotLootAnimationAtlas (2)_6
+  - first:
+      213: 7056833145239753860
+    second: DeathShotLootAnimationAtlas (2)_7
+  - first:
+      213: 2064339085962757399
+    second: DeathShotLootAnimationAtlas (2)_8
+  - first:
+      213: 8686072118535522560
+    second: DeathShotLootAnimationAtlas (2)_9
+  - first:
+      213: 6778815189031812644
+    second: DeathShotLootAnimationAtlas (2)_10
+  - first:
+      213: -2666657476892326717
+    second: DeathShotLootAnimationAtlas (2)_11
+  - first:
+      213: 3930444707555270777
+    second: DeathShotLootAnimationAtlas (2)_12
+  - first:
+      213: 5479796721358802055
+    second: DeathShotLootAnimationAtlas (2)_13
+  - first:
+      213: 5703104436207907093
+    second: DeathShotLootAnimationAtlas (2)_14
+  - first:
+      213: -6447472695465277516
+    second: DeathShotLootAnimationAtlas (2)_15
+  - first:
+      213: 7470007043197429963
+    second: DeathShotLootAnimationAtlas (2)_16
+  - first:
+      213: 2693981183257583172
+    second: DeathShotLootAnimationAtlas (2)_17
+  - first:
+      213: -4091885407238236895
+    second: DeathShotLootAnimationAtlas (2)_18
+  - first:
+      213: 4369374325593328761
+    second: DeathShotLootAnimationAtlas (2)_19
+  - first:
+      213: 1514549003821462706
+    second: DeathShotLootAnimationAtlas (2)_20
+  - first:
+      213: -371897708414081975
+    second: DeathShotLootAnimationAtlas (2)_21
+  - first:
+      213: -3327334503595690868
+    second: DeathShotLootAnimationAtlas (2)_22
+  - first:
+      213: -2847021727349662388
+    second: DeathShotLootAnimationAtlas (2)_23
+  - first:
+      213: -6018667214619082293
+    second: DeathShotLootAnimationAtlas (2)_24
+  - first:
+      213: 807051212130330505
+    second: DeathShotLootAnimationAtlas (2)_25
+  - first:
+      213: 6036215103448207619
+    second: DeathShotLootAnimationAtlas (2)_26
+  - first:
+      213: 3748234816300186183
+    second: DeathShotLootAnimationAtlas (2)_27
+  - first:
+      213: 8940075339298935979
+    second: DeathShotLootAnimationAtlas (2)_28
+  - first:
+      213: 89756441529552202
+    second: DeathShotLootAnimationAtlas (2)_29
+  - first:
+      213: -3961163878842892427
+    second: DeathShotLootAnimationAtlas (2)_30
+  - first:
+      213: 4760666409446535522
+    second: DeathShotLootAnimationAtlas (2)_31
+  - first:
+      213: -7529427838057008172
+    second: DeathShotLootAnimationAtlas (2)_32
+  - first:
+      213: 5348167281813733704
+    second: DeathShotLootAnimationAtlas (2)_33
+  - first:
+      213: 4880346472075580815
+    second: DeathShotLootAnimationAtlas (2)_34
+  - first:
+      213: -3315769674889520039
+    second: DeathShotLootAnimationAtlas (2)_35
+  - first:
+      213: -9105763725310516083
+    second: DeathShotLootAnimationAtlas (2)_36
+  - first:
+      213: -1948671807439353180
+    second: DeathShotLootAnimationAtlas (2)_37
+  - first:
+      213: -1170876681753984123
+    second: DeathShotLootAnimationAtlas (2)_38
+  - first:
+      213: 2000466554792475740
+    second: DeathShotLootAnimationAtlas (2)_39
+  - first:
+      213: 5134841778005754925
+    second: DeathShotLootAnimationAtlas (2)_40
+  - first:
+      213: -8451120574829669980
+    second: DeathShotLootAnimationAtlas (2)_41
+  - first:
+      213: 2615993158513485792
+    second: DeathShotLootAnimationAtlas (2)_42
+  - first:
+      213: 894876016199781870
+    second: DeathShotLootAnimationAtlas (2)_43
+  - first:
+      213: 5574580212154404384
+    second: DeathShotLootAnimationAtlas (2)_44
+  - first:
+      213: -246923310931911412
+    second: DeathShotLootAnimationAtlas (2)_45
+  - first:
+      213: -284566388508931411
+    second: DeathShotLootAnimationAtlas (2)_46
+  - first:
+      213: -995677206630579403
+    second: DeathShotLootAnimationAtlas (2)_47
+  - first:
+      213: -928899357869005783
+    second: DeathShotLootAnimationAtlas (2)_48
+  - first:
+      213: 6668215071281416858
+    second: DeathShotLootAnimationAtlas (2)_49
+  - first:
+      213: 1607430599511498278
+    second: DeathShotLootAnimationAtlas (2)_50
+  - first:
+      213: 4560667423999943283
+    second: DeathShotLootAnimationAtlas (2)_51
+  - first:
+      213: -3246526930046419340
+    second: DeathShotLootAnimationAtlas (2)_52
+  - first:
+      213: -477924997163411078
+    second: DeathShotLootAnimationAtlas (2)_53
+  - first:
+      213: 3335774450146091249
+    second: DeathShotLootAnimationAtlas (2)_54
+  - first:
+      213: -7085808317411499535
+    second: DeathShotLootAnimationAtlas (2)_55
+  - first:
+      213: -4559800930868707958
+    second: DeathShotLootAnimationAtlas (2)_56
+  - first:
+      213: 667125754762309841
+    second: DeathShotLootAnimationAtlas (2)_57
+  - first:
+      213: 1430922450354548141
+    second: DeathShotLootAnimationAtlas (2)_58
+  - first:
+      213: 120262283477580400
+    second: DeathShotLootAnimationAtlas (2)_59
+  - first:
+      213: -7244026046433036655
+    second: DeathShotLootAnimationAtlas (2)_60
+  - first:
+      213: 597484622868606744
+    second: DeathShotLootAnimationAtlas (2)_61
+  - first:
+      213: -1653589246726353572
+    second: DeathShotLootAnimationAtlas (2)_62
+  - first:
+      213: 2695143794433802546
+    second: DeathShotLootAnimationAtlas (2)_63
+  - first:
+      213: -2200615165488097350
+    second: DeathShotLootAnimationAtlas (2)_64
+  - first:
+      213: -4645486181171866334
+    second: DeathShotLootAnimationAtlas (2)_65
+  - first:
+      213: 7202078271966134534
+    second: DeathShotLootAnimationAtlas (2)_66
+  - first:
+      213: -1697741653272844384
+    second: DeathShotLootAnimationAtlas (2)_67
+  - first:
+      213: 6655117515639062209
+    second: DeathShotLootAnimationAtlas (2)_68
+  - first:
+      213: 7770763715310505546
+    second: DeathShotLootAnimationAtlas (2)_69
+  - first:
+      213: 1269706041504265265
+    second: DeathShotLootAnimationAtlas (2)_70
+  - first:
+      213: -1367081069988608501
+    second: DeathShotLootAnimationAtlas (2)_71
+  - first:
+      213: 4615229305284619382
+    second: DeathShotLootAnimationAtlas (2)_72
+  - first:
+      213: -9123243807664854684
+    second: DeathShotLootAnimationAtlas (2)_73
+  - first:
+      213: -6719013283606434643
+    second: DeathShotLootAnimationAtlas (2)_74
+  - first:
+      213: 4206304950809374931
+    second: DeathShotLootAnimationAtlas (2)_75
+  - first:
+      213: 5774348325354354807
+    second: DeathShotLootAnimationAtlas (2)_76
+  - first:
+      213: -4061174102669863248
+    second: DeathShotLootAnimationAtlas (2)_77
+  - first:
+      213: -7945163290459699083
+    second: DeathShotLootAnimationAtlas (2)_78
+  - first:
+      213: 908985569314208542
+    second: DeathShotLootAnimationAtlas (2)_79
+  - first:
+      213: 1292496775930273471
+    second: DeathShotLootAnimationAtlas (2)_80
+  - first:
+      213: 3076374916114477388
+    second: DeathShotLootAnimationAtlas (2)_81
+  - first:
+      213: -3452571334824825483
+    second: DeathShotLootAnimationAtlas (2)_82
+  - first:
+      213: 3664075463795783946
+    second: DeathShotLootAnimationAtlas (2)_83
+  - first:
+      213: -4808049042429277755
+    second: DeathShotLootAnimationAtlas (2)_84
+  - first:
+      213: 2048591429362578122
+    second: DeathShotLootAnimationAtlas (2)_85
+  - first:
+      213: -6932129373210237013
+    second: DeathShotLootAnimationAtlas (2)_86
+  - first:
+      213: 5323512574827363624
+    second: DeathShotLootAnimationAtlas (2)_87
+  - first:
+      213: -1106002187162685389
+    second: DeathShotLootAnimationAtlas (2)_88
+  - first:
+      213: -5012502236714347134
+    second: DeathShotLootAnimationAtlas (2)_89
+  - first:
+      213: -9102270292340029017
+    second: DeathShotLootAnimationAtlas (2)_90
+  - first:
+      213: 1117484485507483410
+    second: DeathShotLootAnimationAtlas (2)_91
+  - first:
+      213: 5266272437350765684
+    second: DeathShotLootAnimationAtlas (2)_92
+  - first:
+      213: 1953699631561221628
+    second: DeathShotLootAnimationAtlas (2)_93
+  - first:
+      213: 7169436353220692145
+    second: DeathShotLootAnimationAtlas (2)_94
+  - first:
+      213: -916417001732287835
+    second: DeathShotLootAnimationAtlas (2)_95
+  - first:
+      213: 2542989547416724644
+    second: DeathShotLootAnimationAtlas (2)_96
+  - first:
+      213: -4799058643260337629
+    second: DeathShotLootAnimationAtlas (2)_97
+  - first:
+      213: -6786025201786873559
+    second: DeathShotLootAnimationAtlas (2)_98
+  - first:
+      213: 3565946325435317970
+    second: DeathShotLootAnimationAtlas (2)_99
+  - first:
+      213: -6349097980482033459
+    second: DeathShotLootAnimationAtlas (2)_100
+  - first:
+      213: -2634244895024627112
+    second: DeathShotLootAnimationAtlas (2)_101
+  - first:
+      213: 2456477099791154039
+    second: DeathShotLootAnimationAtlas (2)_102
+  - first:
+      213: -3318917770569693418
+    second: DeathShotLootAnimationAtlas (2)_103
+  - first:
+      213: 8763670834616499475
+    second: DeathShotLootAnimationAtlas (2)_104
+  - first:
+      213: 3217420418997902858
+    second: DeathShotLootAnimationAtlas (2)_105
+  - first:
+      213: 3107652109360526478
+    second: DeathShotLootAnimationAtlas (2)_106
+  - first:
+      213: 1356895061189218333
+    second: DeathShotLootAnimationAtlas (2)_107
+  - first:
+      213: -2265337330549414254
+    second: DeathShotLootAnimationAtlas (2)_108
+  - first:
+      213: -2834566368581503058
+    second: DeathShotLootAnimationAtlas (2)_109
+  - first:
+      213: 6370702457163208477
+    second: DeathShotLootAnimationAtlas (2)_110
+  - first:
+      213: -3722097600746065536
+    second: DeathShotLootAnimationAtlas (2)_111
+  - first:
+      213: 3822994687969383814
+    second: DeathShotLootAnimationAtlas (2)_112
+  - first:
+      213: -4411782430581702489
+    second: DeathShotLootAnimationAtlas (2)_113
+  - first:
+      213: -8276126272371659236
+    second: DeathShotLootAnimationAtlas (2)_114
+  - first:
+      213: -4722399273773728183
+    second: DeathShotLootAnimationAtlas (2)_115
+  - first:
+      213: 2191866557494319639
+    second: DeathShotLootAnimationAtlas (2)_116
+  - first:
+      213: -8532884915825913208
+    second: DeathShotLootAnimationAtlas (2)_117
+  - first:
+      213: -52552247128931324
+    second: DeathShotLootAnimationAtlas (2)_118
+  - first:
+      213: -5708049776050586267
+    second: DeathShotLootAnimationAtlas (2)_119
+  - first:
+      213: 7626481839485963856
+    second: DeathShotLootAnimationAtlas (2)_120
+  - first:
+      213: 4122870210565278456
+    second: DeathShotLootAnimationAtlas (2)_121
+  - first:
+      213: -1862158826783483888
+    second: DeathShotLootAnimationAtlas (2)_122
+  - first:
+      213: -1541578094103171554
+    second: DeathShotLootAnimationAtlas (2)_123
+  - first:
+      213: -8558748073584719304
+    second: DeathShotLootAnimationAtlas (2)_124
+  - first:
+      213: 1759095367542603989
+    second: DeathShotLootAnimationAtlas (2)_125
+  - first:
+      213: 607936527104551485
+    second: DeathShotLootAnimationAtlas (2)_126
+  - first:
+      213: -7150729806647264663
+    second: DeathShotLootAnimationAtlas (2)_127
+  - first:
+      213: 2760390647230905226
+    second: DeathShotLootAnimationAtlas (2)_128
+  - first:
+      213: -6835875485853339047
+    second: DeathShotLootAnimationAtlas (2)_129
+  - first:
+      213: 6094205454351692811
+    second: DeathShotLootAnimationAtlas (2)_130
+  - first:
+      213: -6659168059522109669
+    second: DeathShotLootAnimationAtlas (2)_131
+  - first:
+      213: -1236912465414872745
+    second: DeathShotLootAnimationAtlas (2)_132
+  - first:
+      213: 3474748956480319869
+    second: DeathShotLootAnimationAtlas (2)_133
+  - first:
+      213: -4663311076134538043
+    second: DeathShotLootAnimationAtlas (2)_134
+  - first:
+      213: -4871569865351097108
+    second: DeathShotLootAnimationAtlas (2)_135
+  - first:
+      213: -4682181833630529598
+    second: DeathShotLootAnimationAtlas (2)_136
+  - first:
+      213: 6194497221394821327
+    second: DeathShotLootAnimationAtlas (2)_137
+  - first:
+      213: -2210343851332753737
+    second: DeathShotLootAnimationAtlas (2)_138
+  - first:
+      213: 1800513773489935777
+    second: DeathShotLootAnimationAtlas (2)_139
+  - first:
+      213: -8394218769338847532
+    second: DeathShotLootAnimationAtlas (2)_140
+  - first:
+      213: -5153226511867171495
+    second: DeathShotLootAnimationAtlas (2)_141
+  - first:
+      213: 7905815567384889358
+    second: DeathShotLootAnimationAtlas (2)_142
+  - first:
+      213: -8577546990270514739
+    second: DeathShotLootAnimationAtlas (2)_143
+  - first:
+      213: 1277581029925091857
+    second: DeathShotLootAnimationAtlas (2)_144
+  - first:
+      213: -4867788004534125892
+    second: DeathShotLootAnimationAtlas (2)_145
+  - first:
+      213: -409340627431419449
+    second: DeathShotLootAnimationAtlas (2)_146
+  - first:
+      213: -2086335586195142974
+    second: DeathShotLootAnimationAtlas (2)_147
+  - first:
+      213: 5203138825485290873
+    second: DeathShotLootAnimationAtlas (2)_148
+  - first:
+      213: -1467484594601502328
+    second: DeathShotLootAnimationAtlas (2)_149
+  - first:
+      213: 6954819039621645542
+    second: DeathShotLootAnimationAtlas (2)_150
+  - first:
+      213: 2997628082634421309
+    second: DeathShotLootAnimationAtlas (2)_151
+  - first:
+      213: 7594392885803292386
+    second: DeathShotLootAnimationAtlas (2)_152
+  - first:
+      213: 2849498109357707307
+    second: DeathShotLootAnimationAtlas (2)_153
+  - first:
+      213: -1384930476386903840
+    second: DeathShotLootAnimationAtlas (2)_154
+  - first:
+      213: -4568925565678818906
+    second: DeathShotLootAnimationAtlas (2)_155
+  - first:
+      213: 7957152600905498965
+    second: DeathShotLootAnimationAtlas (2)_156
+  - first:
+      213: -49441371565854118
+    second: DeathShotLootAnimationAtlas (2)_157
+  - first:
+      213: 8765066168761503638
+    second: DeathShotLootAnimationAtlas (2)_158
+  - first:
+      213: 2244586554077284734
+    second: DeathShotLootAnimationAtlas (2)_159
+  - first:
+      213: -4489375843402117926
+    second: DeathShotLootAnimationAtlas (2)_160
+  - first:
+      213: -9207785817273088139
+    second: DeathShotLootAnimationAtlas (2)_161
+  - first:
+      213: -2864813823196703498
+    second: DeathShotLootAnimationAtlas (2)_162
+  - first:
+      213: -5424044803036509808
+    second: DeathShotLootAnimationAtlas (2)_163
+  - first:
+      213: -5107242717969452064
+    second: DeathShotLootAnimationAtlas (2)_164
+  - first:
+      213: -8180442018106789290
+    second: DeathShotLootAnimationAtlas (2)_165
+  - first:
+      213: -7289481117633848407
+    second: DeathShotLootAnimationAtlas (2)_166
+  - first:
+      213: 505148096046313664
+    second: DeathShotLootAnimationAtlas (2)_167
+  - first:
+      213: 6511060988279749632
+    second: DeathShotLootAnimationAtlas (2)_168
+  - first:
+      213: -5359059885175643622
+    second: DeathShotLootAnimationAtlas (2)_169
+  - first:
+      213: -2550936710659590359
+    second: DeathShotLootAnimationAtlas (2)_170
+  - first:
+      213: 3995155548792242
+    second: DeathShotLootAnimationAtlas (2)_171
+  - first:
+      213: 938525520840375536
+    second: DeathShotLootAnimationAtlas (2)_172
+  - first:
+      213: 4305449124217477655
+    second: DeathShotLootAnimationAtlas (2)_173
+  - first:
+      213: -630714644668445711
+    second: DeathShotLootAnimationAtlas (2)_174
+  - first:
+      213: -5851503515583926627
+    second: DeathShotLootAnimationAtlas (2)_175
+  - first:
+      213: -6933945659486433162
+    second: DeathShotLootAnimationAtlas (2)_176
+  - first:
+      213: 8883046284994858913
+    second: DeathShotLootAnimationAtlas (2)_177
+  - first:
+      213: -1755271958924012583
+    second: DeathShotLootAnimationAtlas (2)_178
+  - first:
+      213: -8251181260655921541
+    second: DeathShotLootAnimationAtlas (2)_179
+  - first:
+      213: -867574270145424541
+    second: DeathShotLootAnimationAtlas (2)_180
+  - first:
+      213: 7926494116045764895
+    second: DeathShotLootAnimationAtlas (2)_181
+  - first:
+      213: -5256108707924195529
+    second: DeathShotLootAnimationAtlas (2)_182
+  - first:
+      213: 2606707658350344339
+    second: DeathShotLootAnimationAtlas (2)_183
+  - first:
+      213: 1906188098794871425
+    second: DeathShotLootAnimationAtlas (2)_184
+  - first:
+      213: 5510829562566445712
+    second: DeathShotLootAnimationAtlas (2)_185
+  - first:
+      213: -6772743350849678613
+    second: DeathShotLootAnimationAtlas (2)_186
+  - first:
+      213: -6931097545999908027
+    second: DeathShotLootAnimationAtlas (2)_187
+  - first:
+      213: 6755090453639891022
+    second: DeathShotLootAnimationAtlas (2)_188
+  - first:
+      213: 176242562697129009
+    second: DeathShotLootAnimationAtlas (2)_189
+  - first:
+      213: -8023585758013998455
+    second: DeathShotLootAnimationAtlas (2)_190
+  - first:
+      213: 4669733377641020696
+    second: DeathShotLootAnimationAtlas (2)_191
+  - first:
+      213: -1989057029951326108
+    second: DeathShotLootAnimationAtlas (2)_192
+  - first:
+      213: -1233598523520501566
+    second: DeathShotLootAnimationAtlas (2)_193
+  - first:
+      213: 8916716259511106728
+    second: DeathShotLootAnimationAtlas (2)_194
+  - first:
+      213: 3827827661333634342
+    second: DeathShotLootAnimationAtlas (2)_195
+  - first:
+      213: 7409171712275912323
+    second: DeathShotLootAnimationAtlas (2)_196
+  - first:
+      213: 8347110857451163803
+    second: DeathShotLootAnimationAtlas (2)_197
+  - first:
+      213: 7053180166548390034
+    second: DeathShotLootAnimationAtlas (2)_198
+  - first:
+      213: -1060603844739712421
+    second: DeathShotLootAnimationAtlas (2)_199
+  - first:
+      213: -4676475793535627190
+    second: DeathShotLootAnimationAtlas (2)_200
+  - first:
+      213: 547847484802451449
+    second: DeathShotLootAnimationAtlas (2)_201
+  - first:
+      213: -1633215217015368390
+    second: DeathShotLootAnimationAtlas (2)_202
+  - first:
+      213: 2953665835595654994
+    second: DeathShotLootAnimationAtlas (2)_203
+  - first:
+      213: 6915391400845430655
+    second: DeathShotLootAnimationAtlas (2)_204
+  - first:
+      213: 2600381827453451592
+    second: DeathShotLootAnimationAtlas (2)_205
+  - first:
+      213: -6406636072138462802
+    second: DeathShotLootAnimationAtlas (2)_206
+  - first:
+      213: 704949762120513747
+    second: DeathShotLootAnimationAtlas (2)_207
+  - first:
+      213: 7620511545320958273
+    second: DeathShotLootAnimationAtlas (2)_208
+  - first:
+      213: 1819130370154764678
+    second: DeathShotLootAnimationAtlas (2)_209
+  - first:
+      213: 5814019992250313877
+    second: DeathShotLootAnimationAtlas (2)_210
+  - first:
+      213: 3236705476584958810
+    second: DeathShotLootAnimationAtlas (2)_211
+  - first:
+      213: 2029484352153531117
+    second: DeathShotLootAnimationAtlas (2)_212
+  - first:
+      213: 1262307719398840280
+    second: DeathShotLootAnimationAtlas (2)_213
+  - first:
+      213: 2718109422187409333
+    second: DeathShotLootAnimationAtlas (2)_214
+  - first:
+      213: -1852077918925025244
+    second: DeathShotLootAnimationAtlas (2)_215
+  - first:
+      213: -2379147039177410667
+    second: DeathShotLootAnimationAtlas (2)_216
+  - first:
+      213: -8973313019027524083
+    second: DeathShotLootAnimationAtlas (2)_217
+  - first:
+      213: 7903107571754274718
+    second: DeathShotLootAnimationAtlas (2)_218
+  - first:
+      213: 1195975300522493886
+    second: DeathShotLootAnimationAtlas (2)_219
+  - first:
+      213: 315129421192658478
+    second: DeathShotLootAnimationAtlas (2)_220
+  - first:
+      213: -6700138305813904727
+    second: DeathShotLootAnimationAtlas (2)_221
+  - first:
+      213: 4327209602821526214
+    second: DeathShotLootAnimationAtlas (2)_222
+  - first:
+      213: -7966278713691992572
+    second: DeathShotLootAnimationAtlas (2)_223
+  - first:
+      213: -8099964991712848928
+    second: DeathShotLootAnimationAtlas (2)_224
+  - first:
+      213: 1406279652857166935
+    second: DeathShotLootAnimationAtlas (2)_225
+  - first:
+      213: 4971484998091451437
+    second: DeathShotLootAnimationAtlas (2)_226
+  - first:
+      213: 1548457693018079366
+    second: DeathShotLootAnimationAtlas (2)_227
+  - first:
+      213: 8024501497198076110
+    second: DeathShotLootAnimationAtlas (2)_228
+  - first:
+      213: -5596683619785502877
+    second: DeathShotLootAnimationAtlas (2)_229
+  - first:
+      213: -5523849651685556924
+    second: DeathShotLootAnimationAtlas (2)_230
+  - first:
+      213: 5076286135132341837
+    second: DeathShotLootAnimationAtlas (2)_231
+  - first:
+      213: -473343889452207539
+    second: DeathShotLootAnimationAtlas (2)_232
+  - first:
+      213: -6310779870260055609
+    second: DeathShotLootAnimationAtlas (2)_233
+  - first:
+      213: -7529593740396599726
+    second: DeathShotLootAnimationAtlas (2)_234
+  - first:
+      213: 6210773454107786589
+    second: DeathShotLootAnimationAtlas (2)_235
+  - first:
+      213: -818000217012590144
+    second: DeathShotLootAnimationAtlas (2)_236
+  - first:
+      213: -3285775141898902542
+    second: DeathShotLootAnimationAtlas (2)_237
+  - first:
+      213: 1838000524458292941
+    second: DeathShotLootAnimationAtlas (2)_238
+  - first:
+      213: -3511182313405006738
+    second: DeathShotLootAnimationAtlas (2)_239
+  - first:
+      213: -5426429076805639125
+    second: DeathShotLootAnimationAtlas (2)_240
+  - first:
+      213: 4579569411579482364
+    second: DeathShotLootAnimationAtlas (2)_241
+  - first:
+      213: -3940124743857094578
+    second: DeathShotLootAnimationAtlas (2)_242
+  - first:
+      213: -2809486758489964105
+    second: DeathShotLootAnimationAtlas (2)_243
+  - first:
+      213: -746374546919278499
+    second: DeathShotLootAnimationAtlas (2)_244
+  - first:
+      213: -1135024872110867133
+    second: DeathShotLootAnimationAtlas (2)_245
+  - first:
+      213: 2533601735880402128
+    second: DeathShotLootAnimationAtlas (2)_246
+  - first:
+      213: -991237927744472945
+    second: DeathShotLootAnimationAtlas (2)_247
+  - first:
+      213: 1348301175108214464
+    second: DeathShotLootAnimationAtlas (2)_248
+  - first:
+      213: 4847240463159547382
+    second: DeathShotLootAnimationAtlas (2)_249
+  - first:
+      213: -630050678245424209
+    second: DeathShotLootAnimationAtlas (2)_250
+  - first:
+      213: -4725487231427739846
+    second: DeathShotLootAnimationAtlas (2)_251
+  - first:
+      213: -5457676014140223168
+    second: DeathShotLootAnimationAtlas (2)_252
+  - first:
+      213: -7957000467460873751
+    second: DeathShotLootAnimationAtlas (2)_253
+  - first:
+      213: 3125354443638066591
+    second: DeathShotLootAnimationAtlas (2)_254
+  - first:
+      213: 3740711416174661765
+    second: DeathShotLootAnimationAtlas (2)_255
+  - first:
+      213: 2593751902202653886
+    second: DeathShotLootAnimationAtlas (2)_256
+  - first:
+      213: 513764674859662687
+    second: DeathShotLootAnimationAtlas (2)_257
+  - first:
+      213: 4090315069377980157
+    second: DeathShotLootAnimationAtlas (2)_258
+  - first:
+      213: -6814453678758559172
+    second: DeathShotLootAnimationAtlas (2)_259
+  - first:
+      213: -8139773558863388151
+    second: DeathShotLootAnimationAtlas (2)_260
+  - first:
+      213: 5339383588841796182
+    second: DeathShotLootAnimationAtlas (2)_261
+  - first:
+      213: -8325375887443710305
+    second: DeathShotLootAnimationAtlas (2)_262
+  - first:
+      213: -6547861927302727558
+    second: DeathShotLootAnimationAtlas (2)_263
+  - first:
+      213: 564910343023780736
+    second: DeathShotLootAnimationAtlas (2)_264
+  - first:
+      213: 4431492489830292206
+    second: DeathShotLootAnimationAtlas (2)_265
+  - first:
+      213: -7772893426017877814
+    second: DeathShotLootAnimationAtlas (2)_266
+  - first:
+      213: -2892751063642233560
+    second: DeathShotLootAnimationAtlas (2)_267
+  - first:
+      213: -1488056941097661393
+    second: DeathShotLootAnimationAtlas (2)_268
+  - first:
+      213: 249872036199206023
+    second: DeathShotLootAnimationAtlas (2)_269
+  - first:
+      213: 5163912072449036846
+    second: DeathShotLootAnimationAtlas (2)_270
+  - first:
+      213: 5194103983192177820
+    second: DeathShotLootAnimationAtlas (2)_271
+  - first:
+      213: -4649165838308576489
+    second: DeathShotLootAnimationAtlas (2)_272
+  - first:
+      213: -7809786596290242547
+    second: DeathShotLootAnimationAtlas (2)_273
+  - first:
+      213: 6170289691067775625
+    second: DeathShotLootAnimationAtlas (2)_274
+  - first:
+      213: 8484716128793707026
+    second: DeathShotLootAnimationAtlas (2)_275
+  - first:
+      213: -6390844217448041581
+    second: DeathShotLootAnimationAtlas (2)_276
+  - first:
+      213: 7871887979538036285
+    second: DeathShotLootAnimationAtlas (2)_277
+  - first:
+      213: 8324999932584405030
+    second: DeathShotLootAnimationAtlas (2)_278
+  - first:
+      213: -4257460989498539671
+    second: DeathShotLootAnimationAtlas (2)_279
+  - first:
+      213: -5933488918634924886
+    second: DeathShotLootAnimationAtlas (2)_280
+  - first:
+      213: -1945836227181489059
+    second: DeathShotLootAnimationAtlas (2)_281
+  - first:
+      213: 7805902477483438745
+    second: DeathShotLootAnimationAtlas (2)_282
+  - first:
+      213: -1726311477724134716
+    second: DeathShotLootAnimationAtlas (2)_283
+  - first:
+      213: -7984183487601251467
+    second: DeathShotLootAnimationAtlas (2)_284
+  - first:
+      213: 8576718610241239798
+    second: DeathShotLootAnimationAtlas (2)_285
+  - first:
+      213: 6099018641616495659
+    second: DeathShotLootAnimationAtlas (2)_286
+  - first:
+      213: -4285518367588271213
+    second: DeathShotLootAnimationAtlas (2)_287
+  - first:
+      213: -1531838772576512340
+    second: DeathShotLootAnimationAtlas (2)_288
+  - first:
+      213: 380051127868826423
+    second: DeathShotLootAnimationAtlas (2)_289
+  - first:
+      213: 3081265926263381098
+    second: DeathShotLootAnimationAtlas (2)_290
+  - first:
+      213: -1844632095480511260
+    second: DeathShotLootAnimationAtlas (2)_291
+  - first:
+      213: -5246681877377770238
+    second: DeathShotLootAnimationAtlas (2)_292
+  - first:
+      213: -5497191373565150957
+    second: DeathShotLootAnimationAtlas (2)_293
+  - first:
+      213: -3791491100428643556
+    second: DeathShotLootAnimationAtlas (2)_294
+  - first:
+      213: 42791765587726780
+    second: DeathShotLootAnimationAtlas (2)_295
+  - first:
+      213: 5110024153884833504
+    second: DeathShotLootAnimationAtlas (2)_296
+  - first:
+      213: 8302071903456413020
+    second: DeathShotLootAnimationAtlas (2)_297
+  - first:
+      213: -4315033337746077476
+    second: DeathShotLootAnimationAtlas (2)_298
+  - first:
+      213: 1634909314276543086
+    second: DeathShotLootAnimationAtlas (2)_299
+  - first:
+      213: -7384718206912440022
+    second: DeathShotLootAnimationAtlas (2)_300
+  - first:
+      213: -7882021558836941234
+    second: DeathShotLootAnimationAtlas (2)_301
+  - first:
+      213: -4790950099564557331
+    second: DeathShotLootAnimationAtlas (2)_302
+  - first:
+      213: 3419117686154236511
+    second: DeathShotLootAnimationAtlas (2)_303
+  - first:
+      213: -3127371232320325674
+    second: DeathShotLootAnimationAtlas (2)_304
+  - first:
+      213: 6876195462394418563
+    second: DeathShotLootAnimationAtlas (2)_305
+  - first:
+      213: 8204624269754409024
+    second: DeathShotLootAnimationAtlas (2)_306
+  - first:
+      213: 8355484949266722404
+    second: DeathShotLootAnimationAtlas (2)_307
+  - first:
+      213: -1727526719653775565
+    second: DeathShotLootAnimationAtlas (2)_308
+  - first:
+      213: -1495221590600732545
+    second: DeathShotLootAnimationAtlas (2)_309
+  - first:
+      213: -396772430545527293
+    second: DeathShotLootAnimationAtlas (2)_310
+  - first:
+      213: -8633565907622169767
+    second: DeathShotLootAnimationAtlas (2)_311
+  - first:
+      213: 3516882624484252261
+    second: DeathShotLootAnimationAtlas (2)_312
+  - first:
+      213: 9177324244719477196
+    second: DeathShotLootAnimationAtlas (2)_313
+  - first:
+      213: 1627507149392133021
+    second: DeathShotLootAnimationAtlas (2)_314
+  - first:
+      213: -774524875296432623
+    second: DeathShotLootAnimationAtlas (2)_315
+  - first:
+      213: -4701059601525204483
+    second: DeathShotLootAnimationAtlas (2)_316
+  - first:
+      213: 4136655872818840101
+    second: DeathShotLootAnimationAtlas (2)_317
+  - first:
+      213: -1614102387214084818
+    second: DeathShotLootAnimationAtlas (2)_318
+  - first:
+      213: -8729593101590761696
+    second: DeathShotLootAnimationAtlas (2)_319
+  - first:
+      213: 393777137936707
+    second: DeathShotLootAnimationAtlas (2)_320
+  - first:
+      213: -5094183044499411293
+    second: DeathShotLootAnimationAtlas (2)_321
+  - first:
+      213: -3050929997675928899
+    second: DeathShotLootAnimationAtlas (2)_322
+  - first:
+      213: -193775027893906234
+    second: DeathShotLootAnimationAtlas (2)_323
+  - first:
+      213: 7605346097431569255
+    second: DeathShotLootAnimationAtlas (2)_324
+  - first:
+      213: 9046904190331567208
+    second: DeathShotLootAnimationAtlas (2)_325
+  - first:
+      213: 5698740362025564748
+    second: DeathShotLootAnimationAtlas (2)_326
+  - first:
+      213: 2562007807957769197
+    second: DeathShotLootAnimationAtlas (2)_327
+  - first:
+      213: -3599203711274778197
+    second: DeathShotLootAnimationAtlas (2)_328
+  - first:
+      213: -5150131818879652000
+    second: DeathShotLootAnimationAtlas (2)_329
+  - first:
+      213: 156042516608347751
+    second: DeathShotLootAnimationAtlas (2)_330
+  - first:
+      213: 2176643008501453448
+    second: DeathShotLootAnimationAtlas (2)_331
+  - first:
+      213: 6306409208576182451
+    second: DeathShotLootAnimationAtlas (2)_332
+  - first:
+      213: -2998677187466050422
+    second: DeathShotLootAnimationAtlas (2)_333
+  - first:
+      213: 5627916697549334014
+    second: DeathShotLootAnimationAtlas (2)_334
+  - first:
+      213: 1105171237015995590
+    second: DeathShotLootAnimationAtlas (2)_335
+  - first:
+      213: 6430106651829803964
+    second: DeathShotLootAnimationAtlas (2)_336
+  - first:
+      213: 6599983312792034401
+    second: DeathShotLootAnimationAtlas (2)_337
+  - first:
+      213: -8746597467774985429
+    second: DeathShotLootAnimationAtlas (2)_338
+  - first:
+      213: 9222835635110944819
+    second: DeathShotLootAnimationAtlas (2)_339
+  - first:
+      213: 8585387319166045550
+    second: DeathShotLootAnimationAtlas (2)_340
+  - first:
+      213: -1844444950584356602
+    second: DeathShotLootAnimationAtlas (2)_341
+  - first:
+      213: -1013547376992985220
+    second: DeathShotLootAnimationAtlas (2)_342
+  - first:
+      213: 7035794033279000380
+    second: DeathShotLootAnimationAtlas (2)_343
+  - first:
+      213: 1794874637880999182
+    second: DeathShotLootAnimationAtlas (2)_344
+  - first:
+      213: -1691638743913478890
+    second: DeathShotLootAnimationAtlas (2)_345
+  - first:
+      213: 6033619061856530060
+    second: DeathShotLootAnimationAtlas (2)_346
+  - first:
+      213: -978460902499470018
+    second: DeathShotLootAnimationAtlas (2)_347
+  - first:
+      213: -3699623418502261486
+    second: DeathShotLootAnimationAtlas (2)_348
+  - first:
+      213: -5092007789779642070
+    second: DeathShotLootAnimationAtlas (2)_349
+  - first:
+      213: -7016418578814263900
+    second: DeathShotLootAnimationAtlas (2)_350
+  - first:
+      213: 6564686471217445485
+    second: DeathShotLootAnimationAtlas (2)_351
+  - first:
+      213: -3965144618726855476
+    second: DeathShotLootAnimationAtlas (2)_352
+  - first:
+      213: -1415249015998369702
+    second: DeathShotLootAnimationAtlas (2)_353
+  - first:
+      213: -6203461217821383384
+    second: DeathShotLootAnimationAtlas (2)_354
+  - first:
+      213: 7711762870991025311
+    second: DeathShotLootAnimationAtlas (2)_355
+  - first:
+      213: -5766431208849973355
+    second: DeathShotLootAnimationAtlas (2)_356
+  - first:
+      213: -9147894110299519203
+    second: DeathShotLootAnimationAtlas (2)_357
+  - first:
+      213: 9194568587110282223
+    second: DeathShotLootAnimationAtlas (2)_358
+  - first:
+      213: -3250331725155895202
+    second: DeathShotLootAnimationAtlas (2)_359
+  - first:
+      213: -3316002643022686542
+    second: DeathShotLootAnimationAtlas (2)_360
+  - first:
+      213: -7067700617105699943
+    second: DeathShotLootAnimationAtlas (2)_361
+  - first:
+      213: -6769057786237628266
+    second: DeathShotLootAnimationAtlas (2)_362
+  - first:
+      213: -204013527580724311
+    second: DeathShotLootAnimationAtlas (2)_363
+  - first:
+      213: -6479896048400466147
+    second: DeathShotLootAnimationAtlas (2)_364
+  - first:
+      213: -2359684821962786855
+    second: DeathShotLootAnimationAtlas (2)_365
+  - first:
+      213: -4803942824360931923
+    second: DeathShotLootAnimationAtlas (2)_366
+  - first:
+      213: 4642987529079045460
+    second: DeathShotLootAnimationAtlas (2)_367
+  - first:
+      213: 8522115278095783428
+    second: DeathShotLootAnimationAtlas (2)_368
+  - first:
+      213: 1183904233399300824
+    second: DeathShotLootAnimationAtlas (2)_369
+  - first:
+      213: -6839833801653023115
+    second: DeathShotLootAnimationAtlas (2)_370
+  - first:
+      213: 6024445678236219418
+    second: DeathShotLootAnimationAtlas (2)_371
+  - first:
+      213: -666328223932347752
+    second: DeathShotLootAnimationAtlas (2)_372
+  - first:
+      213: -2734586073803151219
+    second: DeathShotLootAnimationAtlas (2)_373
+  - first:
+      213: 2596753972309553834
+    second: DeathShotLootAnimationAtlas (2)_374
+  - first:
+      213: -868598367756190921
+    second: DeathShotLootAnimationAtlas (2)_375
+  - first:
+      213: 8308807061621860391
+    second: DeathShotLootAnimationAtlas (2)_376
+  - first:
+      213: 6191964410075589966
+    second: DeathShotLootAnimationAtlas (2)_377
+  - first:
+      213: -3297448165447441676
+    second: DeathShotLootAnimationAtlas (2)_378
+  - first:
+      213: -7005446422086312191
+    second: DeathShotLootAnimationAtlas (2)_379
+  - first:
+      213: 1790293049623726604
+    second: DeathShotLootAnimationAtlas (2)_380
+  - first:
+      213: 6636260064710984915
+    second: DeathShotLootAnimationAtlas (2)_381
+  - first:
+      213: -2047720476211345877
+    second: DeathShotLootAnimationAtlas (2)_382
+  - first:
+      213: 8460456117716998997
+    second: DeathShotLootAnimationAtlas (2)_383
+  - first:
+      213: 6030753653133866967
+    second: DeathShotLootAnimationAtlas (2)_384
+  - first:
+      213: -3776499275161623988
+    second: DeathShotLootAnimationAtlas (2)_385
+  - first:
+      213: 5048629794870167260
+    second: DeathShotLootAnimationAtlas (2)_386
+  - first:
+      213: 174720356383069436
+    second: DeathShotLootAnimationAtlas (2)_387
+  - first:
+      213: 5756463888909609855
+    second: DeathShotLootAnimationAtlas (2)_388
+  - first:
+      213: -6106841006624369962
+    second: DeathShotLootAnimationAtlas (2)_389
+  - first:
+      213: 8198170853847405712
+    second: DeathShotLootAnimationAtlas (2)_390
+  - first:
+      213: 6290123263267591269
+    second: DeathShotLootAnimationAtlas (2)_391
+  - first:
+      213: 5845608979416761045
+    second: DeathShotLootAnimationAtlas (2)_392
+  - first:
+      213: -3434921404767684993
+    second: DeathShotLootAnimationAtlas (2)_393
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6470c5d18faaf0d60800000000000000
+      internalID: 7858687857405986630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63cde67c5acbc3b0800000000000000
+      internalID: -5491072822167092374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4ae087f21b9a270800000000000000
+      internalID: 8262329808823690494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fece707838e7ebd00800000000000000
+      internalID: 990368071439346927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5520f118c17e90350800000000000000
+      internalID: 5983567689549808213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74cf85add2bb921a0800000000000000
+      internalID: -6833725153946829753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba26c5cbceb8b5a0800000000000000
+      internalID: -6505239879330944330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484d73d5b58eee160800000000000000
+      internalID: 7056833145239753860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715c3ca167106ac10800000000000000
+      internalID: 2064339085962757399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0090cbe22902b8870800000000000000
+      internalID: 8686072118535522560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e734caf70331e50800000000000000
+      internalID: 6778815189031812644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4813047212efad0800000000000000
+      internalID: -2666657476892326717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970652b13aebb8630800000000000000
+      internalID: 3930444707555270777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_13
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c01f9b5162c0c40800000000000000
+      internalID: 5479796721358802055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_14
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5117025b44f752f40800000000000000
+      internalID: 5703104436207907093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_15
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b703cf5eb9f586a0800000000000000
+      internalID: -6447472695465277516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8e277f3dbcaa760800000000000000
+      internalID: 7470007043197429963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e97a3ec91f26520800000000000000
+      internalID: 2693981183257583172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125d5ffd6e3b637c0800000000000000
+      internalID: -4091885407238236895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cc3b79cc223ac30800000000000000
+      internalID: 4369374325593328761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b433b76b42c40510800000000000000
+      internalID: 1514549003821462706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 944623d2101c6daf0800000000000000
+      internalID: -371897708414081975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c843740e5eee2d1d0800000000000000
+      internalID: -3327334503595690868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d1189b2d85d78d0800000000000000
+      internalID: -2847021727349662388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1075b7e06697ca0800000000000000
+      internalID: -6018667214619082293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_25
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987a39e2dc8333b00800000000000000
+      internalID: 807051212130330505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_26
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301d0e4c7a1f4c350800000000000000
+      internalID: 6036215103448207619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_27
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74af258d4b7640430800000000000000
+      internalID: 3748234816300186183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba494209727811c70800000000000000
+      internalID: 8940075339298935979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d0cad0201ee3100800000000000000
+      internalID: 89756441529552202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ff578707e1709c0800000000000000
+      internalID: -3961163878842892427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261f13550e8411240800000000000000
+      internalID: 4760666409446535522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_32
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3bcae1649128790800000000000000
+      internalID: -7529427838057008172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_33
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841cfd79ec1883a40800000000000000
+      internalID: 5348167281813733704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_34
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8555e852497ab340800000000000000
+      internalID: 4880346472075580815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c92336c050cf1d0800000000000000
+      internalID: -3315769674889520039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84aa30e224d1a180800000000000000
+      internalID: -9105763725310516083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_37
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa42cdc05de4f4e0800000000000000
+      internalID: -1948671807439353180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583044c8cd530cfe0800000000000000
+      internalID: -1170876681753984123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_39
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c747f8bb513cb10800000000000000
+      internalID: 2000466554792475740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_40
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d244edb346f924740800000000000000
+      internalID: 5134841778005754925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_41
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a15847fc9697ba80800000000000000
+      internalID: -8451120574829669980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_42
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e76c04eaefdd4420800000000000000
+      internalID: 2615993158513485792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_43
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedca97defc3b6c00800000000000000
+      internalID: 894876016199781870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_44
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e8265ea23ec5d40800000000000000
+      internalID: 5574580212154404384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_45
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0dd3259e80c29cf0800000000000000
+      internalID: -246923310931911412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_46
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daac8e990640d0cf0800000000000000
+      internalID: -284566388508931411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_47
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533c4db1bd4ae22f0800000000000000
+      internalID: -995677206630579403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_48
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924212e94f2eb13f0800000000000000
+      internalID: -928899357869005783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_49
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a82a117424a8c50800000000000000
+      internalID: 6668215071281416858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_50
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3072
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ed9fc1d9dbe4610800000000000000
+      internalID: 1607430599511498278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3726632dbdeba4f30800000000000000
+      internalID: 4560667423999943283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ef7dc35f402f2d0800000000000000
+      internalID: -3246526930046419340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_53
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a799bca4fb11e59f0800000000000000
+      internalID: -477924997163411078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f028cf403d0b4e20800000000000000
+      internalID: 3335774450146091249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_55
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1ed26a0e62aad90800000000000000
+      internalID: -7085808317411499535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_56
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d3315563558b0c0800000000000000
+      internalID: -4559800930868707958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_57
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d03f11e65b124900800000000000000
+      internalID: 667125754762309841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_58
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dada3822368abd310800000000000000
+      internalID: 1430922450354548141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_59
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07afe8ed8e14ba100800000000000000
+      internalID: 120262283477580400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_60
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2816
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1967ea6f0bc087b90800000000000000
+      internalID: -7244026046433036655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f67d05911ba4800800000000000000
+      internalID: 597484622868606744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_62
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d487857554d09e0800000000000000
+      internalID: -1653589246726353572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_63
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23143d56003176520800000000000000
+      internalID: 2695143794433802546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_64
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab79eb59a28d571e0800000000000000
+      internalID: -2200615165488097350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_65
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225d34a5eeae78fb0800000000000000
+      internalID: -4645486181171866334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_66
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601c915b70ce2f360800000000000000
+      internalID: 7202078271966134534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_67
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7a94c16f86078e0800000000000000
+      internalID: -1697741653272844384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_68
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce7522ce1abb5c50800000000000000
+      internalID: 6655117515639062209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_69
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ec3948d6c47db60800000000000000
+      internalID: 7770763715310505546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_70
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1347705eae6ee9110800000000000000
+      internalID: 1269706041504265265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_71
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b060b2c8207270de0800000000000000
+      internalID: -1367081069988608501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_72
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c6672c9969c0040800000000000000
+      internalID: 4615229305284619382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_73
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469aadc081ab36180800000000000000
+      internalID: -9123243807664854684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_74
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dace185740541c2a0800000000000000
+      internalID: -6719013283606434643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_75
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0b5f9111ccf5a30800000000000000
+      internalID: 4206304950809374931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_76
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2560
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7783e16453b922050800000000000000
+      internalID: 5774348325354354807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6d85fabafc3a7c0800000000000000
+      internalID: -4061174102669863248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_78
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5780da5251c1db190800000000000000
+      internalID: -7945163290459699083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_79
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bfdec2f8d5d9c00800000000000000
+      internalID: 908985569314208542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe59a248fedfe110800000000000000
+      internalID: 1292496775930273471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_81
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41fce6dfaa71ba20800000000000000
+      internalID: 3076374916114477388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_82
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57de11ad9a00610d0800000000000000
+      internalID: -3452571334824825483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_83
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09b5c1a83969d230800000000000000
+      internalID: 3664075463795783946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_84
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9885bbed0664db0800000000000000
+      internalID: -4808049042429277755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_85
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2f0151d0f0e6c10800000000000000
+      internalID: 2048591429362578122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_86
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7a0c420112ccf90800000000000000
+      internalID: -6932129373210237013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_87
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82df8eb4b7ae0e940800000000000000
+      internalID: 5323512574827363624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_88
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330fc51eed0b6a0f0800000000000000
+      internalID: -1106002187162685389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_89
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2855ac8e5c3007ab0800000000000000
+      internalID: -5012502236714347134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_90
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a94b7f156d3ea180800000000000000
+      internalID: -9102270292340029017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_91
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2170fa8083a128f00800000000000000
+      internalID: 1117484485507483410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_92
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47419be31ee851940800000000000000
+      internalID: 5266272437350765684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathShotLootAnimationAtlas (2)_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5a409b67fec1b10800000000000000
+      internalID: 1953699631561221628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 15867fab9a9944046ba34f5efb2a1231
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DeathShotLootAnimationAtlas (2)_0: 7858687857405986630
+      DeathShotLootAnimationAtlas (2)_1: -5491072822167092374
+      DeathShotLootAnimationAtlas (2)_10: 6778815189031812644
+      DeathShotLootAnimationAtlas (2)_11: -2666657476892326717
+      DeathShotLootAnimationAtlas (2)_12: 3930444707555270777
+      DeathShotLootAnimationAtlas (2)_13: 5479796721358802055
+      DeathShotLootAnimationAtlas (2)_14: 5703104436207907093
+      DeathShotLootAnimationAtlas (2)_15: -6447472695465277516
+      DeathShotLootAnimationAtlas (2)_16: 7470007043197429963
+      DeathShotLootAnimationAtlas (2)_17: 2693981183257583172
+      DeathShotLootAnimationAtlas (2)_18: -4091885407238236895
+      DeathShotLootAnimationAtlas (2)_19: 4369374325593328761
+      DeathShotLootAnimationAtlas (2)_2: 8262329808823690494
+      DeathShotLootAnimationAtlas (2)_20: 1514549003821462706
+      DeathShotLootAnimationAtlas (2)_21: -371897708414081975
+      DeathShotLootAnimationAtlas (2)_22: -3327334503595690868
+      DeathShotLootAnimationAtlas (2)_23: -2847021727349662388
+      DeathShotLootAnimationAtlas (2)_24: -6018667214619082293
+      DeathShotLootAnimationAtlas (2)_25: 807051212130330505
+      DeathShotLootAnimationAtlas (2)_26: 6036215103448207619
+      DeathShotLootAnimationAtlas (2)_27: 3748234816300186183
+      DeathShotLootAnimationAtlas (2)_28: 8940075339298935979
+      DeathShotLootAnimationAtlas (2)_29: 89756441529552202
+      DeathShotLootAnimationAtlas (2)_3: 990368071439346927
+      DeathShotLootAnimationAtlas (2)_30: -3961163878842892427
+      DeathShotLootAnimationAtlas (2)_31: 4760666409446535522
+      DeathShotLootAnimationAtlas (2)_32: -7529427838057008172
+      DeathShotLootAnimationAtlas (2)_33: 5348167281813733704
+      DeathShotLootAnimationAtlas (2)_34: 4880346472075580815
+      DeathShotLootAnimationAtlas (2)_35: -3315769674889520039
+      DeathShotLootAnimationAtlas (2)_36: -9105763725310516083
+      DeathShotLootAnimationAtlas (2)_37: -1948671807439353180
+      DeathShotLootAnimationAtlas (2)_38: -1170876681753984123
+      DeathShotLootAnimationAtlas (2)_39: 2000466554792475740
+      DeathShotLootAnimationAtlas (2)_4: 5983567689549808213
+      DeathShotLootAnimationAtlas (2)_40: 5134841778005754925
+      DeathShotLootAnimationAtlas (2)_41: -8451120574829669980
+      DeathShotLootAnimationAtlas (2)_42: 2615993158513485792
+      DeathShotLootAnimationAtlas (2)_43: 894876016199781870
+      DeathShotLootAnimationAtlas (2)_44: 5574580212154404384
+      DeathShotLootAnimationAtlas (2)_45: -246923310931911412
+      DeathShotLootAnimationAtlas (2)_46: -284566388508931411
+      DeathShotLootAnimationAtlas (2)_47: -995677206630579403
+      DeathShotLootAnimationAtlas (2)_48: -928899357869005783
+      DeathShotLootAnimationAtlas (2)_49: 6668215071281416858
+      DeathShotLootAnimationAtlas (2)_5: -6833725153946829753
+      DeathShotLootAnimationAtlas (2)_50: 1607430599511498278
+      DeathShotLootAnimationAtlas (2)_51: 4560667423999943283
+      DeathShotLootAnimationAtlas (2)_52: -3246526930046419340
+      DeathShotLootAnimationAtlas (2)_53: -477924997163411078
+      DeathShotLootAnimationAtlas (2)_54: 3335774450146091249
+      DeathShotLootAnimationAtlas (2)_55: -7085808317411499535
+      DeathShotLootAnimationAtlas (2)_56: -4559800930868707958
+      DeathShotLootAnimationAtlas (2)_57: 667125754762309841
+      DeathShotLootAnimationAtlas (2)_58: 1430922450354548141
+      DeathShotLootAnimationAtlas (2)_59: 120262283477580400
+      DeathShotLootAnimationAtlas (2)_6: -6505239879330944330
+      DeathShotLootAnimationAtlas (2)_60: -7244026046433036655
+      DeathShotLootAnimationAtlas (2)_61: 597484622868606744
+      DeathShotLootAnimationAtlas (2)_62: -1653589246726353572
+      DeathShotLootAnimationAtlas (2)_63: 2695143794433802546
+      DeathShotLootAnimationAtlas (2)_64: -2200615165488097350
+      DeathShotLootAnimationAtlas (2)_65: -4645486181171866334
+      DeathShotLootAnimationAtlas (2)_66: 7202078271966134534
+      DeathShotLootAnimationAtlas (2)_67: -1697741653272844384
+      DeathShotLootAnimationAtlas (2)_68: 6655117515639062209
+      DeathShotLootAnimationAtlas (2)_69: 7770763715310505546
+      DeathShotLootAnimationAtlas (2)_7: 7056833145239753860
+      DeathShotLootAnimationAtlas (2)_70: 1269706041504265265
+      DeathShotLootAnimationAtlas (2)_71: -1367081069988608501
+      DeathShotLootAnimationAtlas (2)_72: 4615229305284619382
+      DeathShotLootAnimationAtlas (2)_73: -9123243807664854684
+      DeathShotLootAnimationAtlas (2)_74: -6719013283606434643
+      DeathShotLootAnimationAtlas (2)_75: 4206304950809374931
+      DeathShotLootAnimationAtlas (2)_76: 5774348325354354807
+      DeathShotLootAnimationAtlas (2)_77: -4061174102669863248
+      DeathShotLootAnimationAtlas (2)_78: -7945163290459699083
+      DeathShotLootAnimationAtlas (2)_79: 908985569314208542
+      DeathShotLootAnimationAtlas (2)_8: 2064339085962757399
+      DeathShotLootAnimationAtlas (2)_80: 1292496775930273471
+      DeathShotLootAnimationAtlas (2)_81: 3076374916114477388
+      DeathShotLootAnimationAtlas (2)_82: -3452571334824825483
+      DeathShotLootAnimationAtlas (2)_83: 3664075463795783946
+      DeathShotLootAnimationAtlas (2)_84: -4808049042429277755
+      DeathShotLootAnimationAtlas (2)_85: 2048591429362578122
+      DeathShotLootAnimationAtlas (2)_86: -6932129373210237013
+      DeathShotLootAnimationAtlas (2)_87: 5323512574827363624
+      DeathShotLootAnimationAtlas (2)_88: -1106002187162685389
+      DeathShotLootAnimationAtlas (2)_89: -5012502236714347134
+      DeathShotLootAnimationAtlas (2)_9: 8686072118535522560
+      DeathShotLootAnimationAtlas (2)_90: -9102270292340029017
+      DeathShotLootAnimationAtlas (2)_91: 1117484485507483410
+      DeathShotLootAnimationAtlas (2)_92: 5266272437350765684
+      DeathShotLootAnimationAtlas (2)_93: 1953699631561221628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,6 +13,7 @@ namespace Project.Architecture
         [Inject] private CardsPopupView _cardsPopupView;
         [Inject] private CardsPopupPresenter _cardsPopupPresenter;
         [Inject] private LevelExperienceController _levelExperienceHandler;
+        [Inject] private FloatingTextHandler _floatingTextHandler;
         public static event Action OnServicesInitialized;
 
         private void Awake()
@@ -27,6 +28,7 @@ namespace Project.Architecture
             _cardsPopupView.Initialize();
             _cardsPopupPresenter.Initialize();
             _levelExperienceHandler.Initialize();
+            _floatingTextHandler.Initialize();
 
             OnServicesInitialized?.Invoke();
         }

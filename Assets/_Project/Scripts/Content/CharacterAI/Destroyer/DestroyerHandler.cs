@@ -13,6 +13,7 @@ namespace Project.Content.CharacterAI.Destroyer
         private CharacterSensor _characterSensor;
         private LevelExperienceController _levelExperience;
         private Animator _animator;
+        private FloatingTextHandler _textHandler;
 
         public ICharacterData DestroyerData => _destroyerData;
 
@@ -33,13 +34,15 @@ namespace Project.Content.CharacterAI.Destroyer
         public void Construct(EnemyDeadHandler enemyDeadHandler,
                               CharacterSensor characterSensor,
                               Animator animator,
-                              LevelExperienceController levelExperience)
+                              LevelExperienceController levelExperience, 
+                              FloatingTextHandler textHandler)
         {
             _destroyerData.ThisEntity = this;
             _animator = animator;
             _enemyDeadHandler = enemyDeadHandler;
             _characterSensor = characterSensor;
             _levelExperience = levelExperience;
+            _textHandler = textHandler;
 
             ResetData();
             _characterSensor.TargetDetected += HasTarget;
@@ -81,6 +84,7 @@ namespace Project.Content.CharacterAI.Destroyer
         private void ResetData()
         {
             _healthHandler = new CharacterHealthHandler(_destroyerData.Health, _animator, _enemyDeadHandler);
+            _healthHandler.OnDamage += (damage) => _textHandler.ShowText(_destroyerData.FloatingText, _destroyerData.CharacterTransform.position, damage.ToString());
         }
 
         private void HasTarget()

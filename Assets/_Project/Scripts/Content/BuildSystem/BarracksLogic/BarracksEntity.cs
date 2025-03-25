@@ -31,8 +31,9 @@ namespace Project.Content.BuildSystem
         }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, BarracksSpawnLogic spawnComponent)
+        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, BarracksSpawnLogic spawnComponent, SceneData sceneData)
         {
+            _data.Construct(sceneData.BarrackDynamicData[_data.BarracksType]);
             List<object> components = new();
 
             _healthHandler = healthHandler;

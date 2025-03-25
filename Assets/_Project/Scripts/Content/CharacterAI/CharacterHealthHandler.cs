@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace Project.Content.CharacterAI
@@ -10,6 +11,7 @@ namespace Project.Content.CharacterAI
         private float _health;
         private bool _isDead = false;
 
+        public event Action<float> OnDamage;
         public float Health => _health;
 
         public CharacterHealthHandler(float health,
@@ -33,6 +35,7 @@ namespace Project.Content.CharacterAI
                 return;
 
             callback?.Invoke();
+            OnDamage?.Invoke(damage);
 
             _health -= damage;
             if ( _health <= 0)

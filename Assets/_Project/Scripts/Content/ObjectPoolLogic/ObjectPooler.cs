@@ -19,7 +19,17 @@ namespace Project.Content
 
             _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
         }
-            
+
+        public ObjectPooler(int prewarmObjects, GameObject parentObject, IPoolObjectsCreator<T> poolObjectsCreator)
+        {
+            _parentObject = parentObject;
+            _objects = new List<T>();
+
+            _poolObjectsCreator = poolObjectsCreator;
+
+            _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
+        }
+
         public T Get()
         {
             var obj = _objects.FirstOrDefault(x => !x.isActiveAndEnabled);

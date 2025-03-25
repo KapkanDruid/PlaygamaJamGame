@@ -44,6 +44,8 @@ namespace Project.Architecture
             Container.Bind<LevelExperienceView>().FromInstance(_experienceView).AsSingle().NonLazy();
             Container.Bind<DefensiveFlag>().FromInstance(_defensiveFlag).AsSingle().NonLazy();
 
+            Container.Bind<FloatingTextHandler>().AsSingle().NonLazy();
+
             FactoriesInstaller.Install(Container);
         }
     }
