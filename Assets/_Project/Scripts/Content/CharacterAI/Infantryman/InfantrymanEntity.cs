@@ -9,7 +9,7 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private InfantrymanData _infantrymanData;
 
         private TargetSensor _sensor;
-        private Transform _targetTransform;
+        private Transform _targetTransform; 
         private Transform _flagTransform;
         private Animator _animator;
         private PauseHandler _pauseHandler;
@@ -43,7 +43,6 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public void Initialize()
         {
-            Debug.Log("Infa intitalized");
             _infantrymanData.Initialize();
             _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
         }
@@ -51,7 +50,6 @@ namespace Project.Content.CharacterAI.Infantryman
         public void Prepare(InfantrymanSpawnData spawnData)
         {
             _infantrymanData.UpdateData(spawnData);
-            Debug.Log("Infa prepareds");
             ResetData();
             _animator.Rebind();
             _animator.Update(0f);
@@ -99,24 +97,10 @@ namespace Project.Content.CharacterAI.Infantryman
             HandleTarget();
         }
 
-        private void OnEnable()
-        {
-            /*            ResetData();
-                        _animator.Rebind();
-                        _animator.Update(0f);
-                        _enemyDeadHandler.Reset();
-                        _healthHandler.Reset();*/
-        }
 
         private void ResetData()
         {
             _healthHandler = new CharacterHealthHandler(_infantrymanData.Health, _animator, _enemyDeadHandler);
-        }
-
-        private void Start()
-        {
-            /*            _infantrymanData.Initialize();
-                        _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);*/
         }
 
         private void HandleTarget()

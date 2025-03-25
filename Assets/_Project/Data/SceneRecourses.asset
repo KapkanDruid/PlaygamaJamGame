@@ -16,6 +16,7 @@ MonoBehaviour:
     _mainBuildingFirstLevel: {fileID: 4410467519451803561, guid: 635fc3d22ffbfe64d88b6b9172ce863d, type: 3}
     _voiceOfTruthTurret: {fileID: 828871894719075004, guid: 5bb91a56d1f1aa643878ccdf4001ec78, type: 3}
     _infantrymanBarracks: {fileID: 8707837156137939876, guid: d7fcf6443a2d5004099a83e2588f32f6, type: 3}
+    _wallPrefab: {fileID: 117273452368021737, guid: 562c2784c9db7a44aaa2af09952202ce, type: 3}
     _simpleParanoid: {fileID: 2262984898554556662, guid: 7657570eaab21ab4f90182cbd6f03a6d, type: 3}
     _advencedParanoid: {fileID: 8498477415956304825, guid: 914a7b5215410d047b0bb1df307e6bf9, type: 3}
     _aliens: {fileID: 3999982957482466124, guid: 97f4e55e6fc35e84594eeac911dfa493, type: 3}
@@ -33,3 +34,4 @@ MonoBehaviour:
     _barracksConfigs:
     - {fileID: 11400000, guid: 000e55c08930b8246b4dc0b610b4bd67, type: 2}
     _levelExperienceConfig: {fileID: 11400000, guid: 1815feeaf6a54ca42b9ab34ce5ba7563, type: 2}
+    _wallConfig: {fileID: 11400000, guid: bb2413f4477c9a54b9369e9bd50056e8, type: 2}

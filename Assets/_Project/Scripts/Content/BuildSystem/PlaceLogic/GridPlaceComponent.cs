@@ -38,7 +38,9 @@ namespace Project.Content.BuildSystem
             _gridPatternData = _data.GridPattern;
             _pivotTransform = _data.PivotTransform;
 
-            _gridPattern.AddRange(_gridPatternData.GridPattern);
+            if (_gridPatternData != null)
+                _gridPattern.AddRange(_gridPatternData.GridPattern);
+
             _gridPattern.Add(Vector2Int.zero);
         }
 

@@ -15,6 +15,7 @@ namespace Project.Content
         [SerializeField] private MainBuildingEntity _mainBuildingFirstLevel;
         [SerializeField] private TurretEntity _voiceOfTruthTurret;
         [SerializeField] private BarracksEntity _infantrymanBarracks;
+        [SerializeField] private WallEntity _wallPrefab;
 
         [Header("CharacterPrefabs"), Space(3)]
         [SerializeField] private DestroyerHandler _simpleParanoid;
@@ -43,5 +44,6 @@ namespace Project.Content
         public BarracksEntity InfantrymanBarracks => _infantrymanBarracks; 
         public DefensiveFlag Flag => _flag;
         public FloatingText[] FloatingTextPrefabs => _floatingTextPrefabs;
+        public WallEntity WallPrefab => _wallPrefab;
     }
 }
