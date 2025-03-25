@@ -37,12 +37,18 @@ namespace Project.Content.Spawners
             return typeof(InfantrymanEntity);
         }
 
-        public void Spawn(Vector3 position)
+        public GameObject GetPrefab()
         {
             var prefab = _barracksPool.Get();
-            prefab.transform.position = position;
-
             _prefab = prefab.gameObject;
+            _prefab.SetActive(false);
+            return _prefab;
+        }
+
+        public void Spawn(Vector3 position)
+        {
+            _prefab.SetActive(true);
+            _prefab.transform.position = position;
         }
 
     }
