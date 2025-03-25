@@ -67,7 +67,6 @@ namespace Project.Content
 
         private void OnPause(bool isPaused)
         {
-            Debug.Log(isPaused);
             if (isPaused)
                 Pause();
             else
