@@ -11,6 +11,7 @@ namespace Project.Content.CharacterAI.Destroyer
         [SerializeField] private Transform _characterTransform;
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags[] _enemyFlag;
+        [SerializeField] private FloatingTextConfig _floatingText;
 
         public float Speed => _destroyerConfig.Speed;
         public float Health => _destroyerConfig.Health;
@@ -27,7 +28,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public IEntity ThisEntity { get; set; }
         public EntityFlags[] EnemyFlag => _enemyFlag;
         public DestroyerType Type => _destroyerConfig.Type;
-
+        public FloatingTextConfig FloatingText => _floatingText;
     }
 }
 
