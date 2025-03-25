@@ -13,8 +13,7 @@ namespace Project.Content.Spawners
         private List<DestroyerHandler.Factory> _destroyerFactory;
         private DestroyerType _type;
         private GameObject _prefab;
-
-        public GameObject Prefab => _prefab;
+        public DestroyerType Type => _type;
 
         public class Factory : PlaceholderFactory<DestroyerType, DestroyerSpawner> { }
 
@@ -38,12 +37,18 @@ namespace Project.Content.Spawners
             return typeof(DestroyerHandler);
         }
 
-        public void Spawn(Vector3 position)
+        public GameObject GetPrefab()
         {
             var prefab = _destroyerPool.Get();
-            prefab.transform.position = position;
-
             _prefab = prefab.gameObject;
+            _prefab.SetActive(false);
+            return _prefab;
+        }
+
+        public void Spawn(Vector3 position)
+        {
+            _prefab.SetActive(true);
+            _prefab.transform.position = position;            
         }
     }
 }

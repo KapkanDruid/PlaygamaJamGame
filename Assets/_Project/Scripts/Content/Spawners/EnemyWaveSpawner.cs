@@ -1,5 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
+using NUnit.Framework.Interfaces;
 using Project.Content.CharacterAI;
+using Project.Content.CharacterAI.Destroyer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +66,9 @@ namespace Project.Content.Spawners
         private PauseHandler _pauseHandler;
         private Wave _currentWave;
         private IEnemySpawner _spawner;
+
+        private DestroyerHandler _destroyerHandler;
+
 
         [Inject]
         private void Construct(DestroyerSpawner.Factory destroyerSpawner, MainTargetAttackerSpawner.Factory mainTargetAttackerSpawner, PauseHandler pauseHandler)
@@ -157,20 +162,40 @@ namespace Project.Content.Spawners
                             await UniTask.WaitUntil(() => !_pauseHandler.IsPaused, cancellationToken: _cancellationToken);
                         }
 
-                        if (group.Prefab.GetType() == _spawner.GetTypeObject())
-                        {
-                            await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
+                            group.Prefab.TryGetComponent<ObjectId>(out var id);
+                            _spawner.GetPrefab().TryGetComponent<ObjectId>(out var idInSpawner);
 
-                            _spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
-                            NextSpawnPoint();
-                        }
-                        else
-                        {
-                            NextSpawner();
+                            Debug.Log("Id префаба - " + id.Id);
+                            Debug.Log("Id префаба в спавнере - " + idInSpawner.Id);
 
-                            if (j > 0)
-                                j--;
-                        }
+                            if (id.Id == idInSpawner.Id)
+                            {
+                                await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
+
+                                _spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
+                                NextSpawnPoint();
+                            }
+                            else
+                            {
+                                NextSpawner();
+
+                                if (j > 0)
+                                    j--;
+                                Debug.Log("Итерация не засчитана");
+                            }
+                        //if (group.Prefab.GetType() == _spawner.GetTypeObject())
+                        //{
+
+                        //}
+                        //else
+                        //{
+                        //    NextSpawner();
+
+                        //    if (j > 0)
+                        //        j--;
+                        //    Debug.Log("Итерация не засчитана");
+                        //}
+
                     }
                     NextSpawner();
                 }

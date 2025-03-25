@@ -14,8 +14,6 @@ namespace Project.Content.Spawners
         private MainTargetAttackerType _type;
         private GameObject _prefab;
 
-        public GameObject Prefab => _prefab;
-
         public class Factory : PlaceholderFactory<MainTargetAttackerType, MainTargetAttackerSpawner> { }
 
         public MainTargetAttackerSpawner(List<MainTargetAttackerHandler.Factory> mainTargetAttackerFactory, MainTargetAttackerType type)
@@ -38,12 +36,18 @@ namespace Project.Content.Spawners
             return typeof(MainTargetAttackerHandler);
         }
 
-        public void Spawn(Vector3 position)
+        public GameObject GetPrefab()
         {
             var prefab = _mainTargetAttackerPool.Get();
-            prefab.transform.position = position;
-
             _prefab = prefab.gameObject;
+            _prefab.SetActive(false);
+            return _prefab;
+        }
+
+        public void Spawn(Vector3 position)
+        {
+            _prefab.SetActive(true);
+            _prefab.transform.position = position;
         }
 
     }
