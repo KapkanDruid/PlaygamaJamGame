@@ -4,7 +4,7 @@ using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanEntity : CharacterHandler, IPatrolling
+    public class InfantrymanEntity : CharacterHandler, IPatrolling, IInitializable
     {
         [SerializeField] private InfantrymanData _infantrymanData;
 
@@ -20,7 +20,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public Transform FlagTransform => _flagTransform;
         public float PatrolRadius => _patrolRadius;
 
-        public class Factory : PlaceholderFactory<InfantrymanEntity> 
+        public class Factory : PlaceholderFactory<InfantrymanEntity>
         {
             public readonly AllyEntityType Type;
 
@@ -39,6 +39,12 @@ namespace Project.Content.CharacterAI.Infantryman
             _pauseHandler = pauseHandler;
 
             ResetData();
+        }
+
+        public void Initialize()
+        {
+            _infantrymanData.Initialize();
+            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
         }
 
         public void Prepare(InfantrymanSpawnData spawnData)
@@ -75,9 +81,9 @@ namespace Project.Content.CharacterAI.Infantryman
         public void SetFlag(Transform flag)
         {
             _flagTransform = flag;
-            
+
             var flagComponent = flag.GetComponent<DefensiveFlag>();
-            
+
             if (flagComponent == null)
                 return;
 
@@ -94,22 +100,22 @@ namespace Project.Content.CharacterAI.Infantryman
 
         private void OnEnable()
         {
-/*            ResetData();
-            _animator.Rebind();
-            _animator.Update(0f);
-            _enemyDeadHandler.Reset();
-            _healthHandler.Reset();*/
+            /*            ResetData();
+                        _animator.Rebind();
+                        _animator.Update(0f);
+                        _enemyDeadHandler.Reset();
+                        _healthHandler.Reset();*/
         }
 
         private void ResetData()
         {
-             _healthHandler = new CharacterHealthHandler(_infantrymanData.Health, _animator, _enemyDeadHandler);
+            _healthHandler = new CharacterHealthHandler(_infantrymanData.Health, _animator, _enemyDeadHandler);
         }
 
         private void Start()
         {
-            _infantrymanData.Initialize();
-            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
+            /*            _infantrymanData.Initialize();
+                        _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);*/
         }
 
         private void HandleTarget()
@@ -129,7 +135,6 @@ namespace Project.Content.CharacterAI.Infantryman
                 _targetTransform = null;
             }
         }
-
     }
 }
 

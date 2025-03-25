@@ -22,10 +22,14 @@ MonoBehaviour:
     _flatEarther: {fileID: 4409543580809593084, guid: 1f58c8cc911b2de4a8aa66728ce464c1, type: 3}
     _bigfoot: {fileID: 3194220193113999216, guid: fc11d4aacd5d48849ab3f7d4dda93b4b, type: 3}
     _humanMoth: {fileID: 16720405618370171, guid: 08714949ffb1b404e9b8c901a69041c0, type: 3}
-    _experienceObject: {fileID: 1493492564772801372, guid: ad22f986af296a9448caf421f7d4f1e8, type: 3}
     _infantryman: {fileID: 2800637946718568406, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
+    _experienceObject: {fileID: 1493492564772801372, guid: ad22f986af296a9448caf421f7d4f1e8, type: 3}
     _flag: {fileID: 5651869740134662256, guid: 068826a682678f648bb77929684c3b42, type: 3}
+    _floatingTextPrefabs:
+    - {fileID: 3139850015193835488, guid: 64b5f94ea461a1c44a3fbbcf3bcae0b7, type: 3}
   _configs:
     _turretConfigs:
     - {fileID: 11400000, guid: f09b56280ab9ba2499e0af0d88551e06, type: 2}
+    _barracksConfigs:
+    - {fileID: 11400000, guid: 000e55c08930b8246b4dc0b610b4bd67, type: 2}
     _levelExperienceConfig: {fileID: 11400000, guid: 1815feeaf6a54ca42b9ab34ce5ba7563, type: 2}

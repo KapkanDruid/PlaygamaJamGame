@@ -6,10 +6,19 @@ namespace Project.Content.UI
 {
     public class CardsPopupPresenter : MonoBehaviour
     {
+        [SerializeField] private CardsChoose _cardsReference;
+        [SerializeField] private List<CoreProgressCard> _cardsToTest;
+
         private CoreProgressCard[] _cards;
 
         public ReactiveProperty<IReadOnlyList<CoreProgressCard>> _currentCards = new();
         public IReactiveProperty<IReadOnlyList<CoreProgressCard>> CurrentCards => _currentCards;
+
+        public enum CardsChoose
+        {
+            Gameplay,
+            Test,
+        }
 
         public void Initialize()
         {
@@ -23,10 +32,19 @@ namespace Project.Content.UI
 
         public void Show()
         {
-            _currentCards.Value = ChooseCards();
+            switch (_cardsReference)
+            {
+                case CardsChoose.Gameplay:
+                    _currentCards.Value = ChooseCards();
+                    break;
+                case CardsChoose.Test:
+                    var testCardsArray = _cardsToTest.ToArray();
+                    _currentCards.Value = testCardsArray;
+                    break;
+            }
         }
 
-        public void CardSelected(ICoreProgressStrategy progressStrategy) 
+        public void CardSelected(ICoreProgressStrategy progressStrategy)
         {
             progressStrategy.ExecuteProgress();
         }

@@ -15,7 +15,7 @@ namespace Project.Content.CharacterAI
         public int Fullness => _fullness;
         public float Coverage => _coverage;
         public bool IsFull => _fullness == _capacity;
-
+        
         public void AddUnit()
         {
             if (_fullness < _capacity)

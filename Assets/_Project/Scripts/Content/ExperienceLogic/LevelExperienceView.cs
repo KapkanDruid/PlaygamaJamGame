@@ -22,16 +22,16 @@ namespace Project.Content
         [SerializeField] private Ease _preDisappearEase;
 
         private CardsPopupView _cardsView;
-
+        private Camera _camera;
         private List<Sequence> _activeSequences = new();
 
         private bool _isPaused;
 
         [Inject]
-        private void Construct(CardsPopupView cardsView)
+        private void Construct(CardsPopupView cardsView, Camera camera)
         {
             _cardsView = cardsView;
-
+            _camera = camera;
             _cardsView.OnPopupStartShow += Pause;
             _cardsView.OnPopupClosed += Play;
         }
@@ -44,9 +44,15 @@ namespace Project.Content
 
         public void ShowColletObject(Transform transform, Action onAnimationComplete)
         {
+            Vector3 preDisappearWorldPosition = _camera.ScreenToWorldPoint(_preDisappearPoint.position);
+            Vector3 disappearWorldPosition = _camera.ScreenToWorldPoint(_disappearPoint.position);
+            
+            Vector2 preDisappearPosition = preDisappearWorldPosition;
+            Vector2 disappearPosition = disappearWorldPosition;
+
             var sequence = DOTween.Sequence()
-                .Append(transform.DOMove(_preDisappearPoint.position, _preDisappearSpeed).SetEase(_preDisappearEase))
-                .Append(transform.DOMove(_disappearPoint.position, _disappearSpeed).SetEase(_disappearEase))
+                .Append(transform.DOMove(preDisappearPosition, _preDisappearSpeed).SetEase(_preDisappearEase))
+                .Append(transform.DOMove(disappearPosition, _disappearSpeed).SetEase(_disappearEase))
                 .AppendCallback(() => 
                 { 
                     transform.gameObject.SetActive(false);

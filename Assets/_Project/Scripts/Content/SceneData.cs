@@ -11,12 +11,13 @@ namespace Project.Content
         [SerializeField] private Vector2 _startFlagPosition;
 
         private Dictionary<TurretType, TurretDynamicData> _turretDynamicData = new();
-
+        private Dictionary<BarracksType, BarrackDynamicData> _barrackDynamicData = new();
         private SceneRecourses _recourses;
 
         public Vector2Int GroundGridSize => _groundGridSize;
         public Vector2 StartFlagPosition => _startFlagPosition;
         public IReadOnlyDictionary<TurretType, TurretDynamicData> TurretDynamicData => _turretDynamicData;
+        public IReadOnlyDictionary<BarracksType, BarrackDynamicData> BarrackDynamicData => _barrackDynamicData;
 
         [Inject]
         private void Construct(SceneRecourses recourses)
@@ -35,8 +36,21 @@ namespace Project.Content
                     continue;
                 }
 
-                var voiceOfTruthData = new TurretDynamicData(config);
-                _turretDynamicData.Add(config.Type, voiceOfTruthData);
+                var turretDynamicData = new TurretDynamicData(config);
+                _turretDynamicData.Add(config.Type, turretDynamicData);
+            }
+
+            var barracksConfig = _recourses.Configs.BarracksConfigs;
+            foreach (var config in barracksConfig)
+            {
+                if (_barrackDynamicData.ContainsKey(config.Type))
+                {
+                    Debug.LogError($"Duplicate configType found: {config.Type} in {config.name}");
+                    continue;
+                }
+
+                var barracksDynamicData = new BarrackDynamicData(config);
+                _barrackDynamicData.Add(config.Type, barracksDynamicData);
             }
         }
     }

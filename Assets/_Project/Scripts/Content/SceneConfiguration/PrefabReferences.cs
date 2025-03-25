@@ -28,6 +28,7 @@ namespace Project.Content
         [Header("OtherPrefabs"), Space(3)]
         [SerializeField] private GameObject _experienceObject;
         [SerializeField] private DefensiveFlag _flag;
+        [SerializeField] private FloatingText[] _floatingTextPrefabs;
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
         public DestroyerHandler SimpleParanoid => _simpleParanoid;
@@ -41,6 +42,6 @@ namespace Project.Content
         public GameObject ExperienceObject => _experienceObject; 
         public BarracksEntity InfantrymanBarracks => _infantrymanBarracks; 
         public DefensiveFlag Flag => _flag;
-        
+        public FloatingText[] FloatingTextPrefabs => _floatingTextPrefabs;
     }
 }

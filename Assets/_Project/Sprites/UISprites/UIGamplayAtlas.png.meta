@@ -77,6 +77,12 @@ TextureImporter:
   - first:
       213: -6485467751529471250
     second: UIGamplayAtlas_24
+  - first:
+      213: 1060797546222473613
+    second: UIGamplayAtlas_25
+  - first:
+      213: 6927848176431161257
+    second: UIGamplayAtlas_26
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -144,7 +150,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -168,19 +174,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 12
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 1
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -191,7 +184,7 @@ TextureImporter:
         x: 52
         y: 2462
         width: 1057
-        height: 1614
+        height: 1556
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,10 +511,10 @@ TextureImporter:
       name: UIGamplayAtlas_15
       rect:
         serializedVersion: 2
-        x: 3253
-        y: 1212
-        width: 354
-        height: 320
+        x: 3120
+        y: 1215
+        width: 395
+        height: 326
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -628,10 +621,10 @@ TextureImporter:
       name: UIGamplayAtlas_20
       rect:
         serializedVersion: 2
-        x: 18
-        y: 401
-        width: 3698
-        height: 258
+        x: 39
+        y: 461
+        width: 3508
+        height: 179
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -650,8 +643,8 @@ TextureImporter:
       name: UIGamplayAtlas_21
       rect:
         serializedVersion: 2
-        x: 3784
-        y: 495
+        x: 3589
+        y: 536
         width: 207
         height: 87
       alignment: 0
@@ -672,10 +665,10 @@ TextureImporter:
       name: UIGamplayAtlas_22
       rect:
         serializedVersion: 2
-        x: 238
-        y: 239
-        width: 3459
-        height: 129
+        x: 3859
+        y: 519
+        width: 157
+        height: 130
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,10 +687,10 @@ TextureImporter:
       name: UIGamplayAtlas_23
       rect:
         serializedVersion: 2
-        x: 3813
-        y: 182
-        width: 157
-        height: 130
+        x: 69
+        y: 255
+        width: 3459
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -716,10 +709,10 @@ TextureImporter:
       name: UIGamplayAtlas_24
       rect:
         serializedVersion: 2
-        x: 225
-        y: 39
-        width: 3470
-        height: 141
+        x: 3586
+        y: 214
+        width: 353
+        height: 258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,6 +723,50 @@ TextureImporter:
       bones: []
       spriteID: ee2a5d3017dfef5a0800000000000000
       internalID: -6485467751529471250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 55
+        width: 3470
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8152397fb5b8be00800000000000000
+      internalID: 1060797546222473613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 3632
+        y: 22
+        width: 320
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af540e0639a42060800000000000000
+      internalID: 6927848176431161257
       vertices: []
       indices: 
       edges: []
@@ -747,32 +784,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      UIGamplayAtlas_0: -4812168839450927827
-      UIGamplayAtlas_1: -5921834255263360390
-      UIGamplayAtlas_10: -1582195028959219662
-      UIGamplayAtlas_11: 3092403307695884081
-      UIGamplayAtlas_12: 4374019662234310470
-      UIGamplayAtlas_13: -7077909031782719371
-      UIGamplayAtlas_14: 3568532780975099238
-      UIGamplayAtlas_15: -6595063408277508999
-      UIGamplayAtlas_16: 3947232774772455580
-      UIGamplayAtlas_17: -3525439543730041300
-      UIGamplayAtlas_18: 6026062717622468470
-      UIGamplayAtlas_19: -8710464964052659737
-      UIGamplayAtlas_2: 24650247002423987
-      UIGamplayAtlas_20: 7964648956037437484
-      UIGamplayAtlas_21: 420390656335641452
-      UIGamplayAtlas_22: 787397687081346645
-      UIGamplayAtlas_23: 968057193132027294
-      UIGamplayAtlas_24: -6485467751529471250
-      UIGamplayAtlas_3: 5318060357330989415
-      UIGamplayAtlas_4: 9218628006661271131
-      UIGamplayAtlas_5: -5509886358594882460
-      UIGamplayAtlas_6: -4165105641271973925
-      UIGamplayAtlas_7: 8314099875469269116
-      UIGamplayAtlas_8: -7891413557188678436
-      UIGamplayAtlas_9: 8453828485764563841
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,4 @@
-﻿using Project.Content.UI;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Project.Content.UI.DataModification
 {

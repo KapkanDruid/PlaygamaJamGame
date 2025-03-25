@@ -12,9 +12,10 @@ namespace Project.Content.BuildSystem
         [SerializeField] private float _spawnCooldown;
 
         [Header("Runtime-modified values")]
-        [SerializeField] private float _unitDamageModifier;
-        [SerializeField] private float _unitHealthModifier;
         [SerializeField] private float _buildingMaxHealth;
+
+        private float _unitDamageModifier;
+        private float _unitHealthModifier;
 
         public int Capacity => _capacity;
         public float SpawnCooldown => _spawnCooldown;

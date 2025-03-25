@@ -13,16 +13,17 @@ namespace Project.Content.CharacterAI
         private SceneRecourses _recourses;
         private SceneData _sceneData;
 
-        public EntityCommander(SceneRecourses recourses, SceneData sceneData)
+        public EntityCommander(SceneRecourses recourses, SceneData sceneData, DefensiveFlag defensiveFlag)
         {
             _recourses = recourses;
             _sceneData = sceneData;
+            _flag = defensiveFlag;
         }
 
         public void Initialize()
         {
-            _flag = GameObject.Instantiate(_recourses.Prefabs.Flag); // перенести логику создания флага в карточку \
-            _flag.transform.position = _sceneData.StartFlagPosition;
+            //_flag = GameObject.Instantiate(_recourses.Prefabs.Flag); // перенести логику создания флага в карточку \
+            //_flag.transform.position = _sceneData.StartFlagPosition;
             _defensiveFlags = new List<DefensiveFlag>();
             AddFlag(_flag);                                          //                                            /
 
