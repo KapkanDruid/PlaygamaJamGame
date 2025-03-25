@@ -84,7 +84,9 @@ namespace Project.Content.CharacterAI.Destroyer
         private void ResetData()
         {
             _healthHandler = new CharacterHealthHandler(_destroyerData.Health, _animator, _enemyDeadHandler);
-            _healthHandler.OnDamage += (damage) => _textHandler.ShowText(_destroyerData.FloatingText, _destroyerData.CharacterTransform.position, damage.ToString());
+
+            if (_destroyerData.FloatingText != null)
+                _healthHandler.OnDamage += (damage) => _textHandler.ShowText(_destroyerData.FloatingText, _destroyerData.CharacterTransform.position, damage.ToString());
         }
 
         private void HasTarget()

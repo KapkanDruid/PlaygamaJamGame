@@ -15,7 +15,10 @@ namespace Project.Content
 
         public T ProvideComponent<T>() where T : class
         {
-            return _entity.ProvideComponent<T>();
+            if (_entity != null)
+                return _entity.ProvideComponent<T>();
+            else 
+                return null;
         }
     }
 }

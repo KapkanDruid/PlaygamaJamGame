@@ -72,6 +72,9 @@ namespace Project.Architecture
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.Flag);
 
+            Container.BindFactory<WallEntity, WallEntity.Factory>()
+                .FromSubContainerResolve()
+                .ByNewContextPrefab(_recourses.Prefabs.WallPrefab);
         }
     }
 }

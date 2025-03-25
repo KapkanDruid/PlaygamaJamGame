@@ -16,5 +16,7 @@ namespace Project.Content
         public static readonly int DeathTrigger = Animator.StringToHash("Death");
         public static readonly int StartSceneTrigger = Animator.StringToHash("StartScene");
         public static readonly int EndSceneTrigger = Animator.StringToHash("EndScene");
+        public static readonly int ShootTrigger = Animator.StringToHash("Shoot");
+        public static readonly int HitTrigger = Animator.StringToHash("Hit");
     }
 }

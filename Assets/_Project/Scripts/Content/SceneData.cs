@@ -12,12 +12,15 @@ namespace Project.Content
 
         private Dictionary<TurretType, TurretDynamicData> _turretDynamicData = new();
         private Dictionary<BarracksType, BarrackDynamicData> _barrackDynamicData = new();
+        private WallDynamicData _wallDynamicData;
+
         private SceneRecourses _recourses;
 
         public Vector2Int GroundGridSize => _groundGridSize;
         public Vector2 StartFlagPosition => _startFlagPosition;
         public IReadOnlyDictionary<TurretType, TurretDynamicData> TurretDynamicData => _turretDynamicData;
         public IReadOnlyDictionary<BarracksType, BarrackDynamicData> BarrackDynamicData => _barrackDynamicData;
+        public WallDynamicData WallDynamicData => _wallDynamicData; 
 
         [Inject]
         private void Construct(SceneRecourses recourses)
@@ -52,6 +55,9 @@ namespace Project.Content
                 var barracksDynamicData = new BarrackDynamicData(config);
                 _barrackDynamicData.Add(config.Type, barracksDynamicData);
             }
+
+            var wallConfig = _recourses.Configs.WallConfig;
+            _wallDynamicData = new WallDynamicData(wallConfig);
         }
     }
 }
