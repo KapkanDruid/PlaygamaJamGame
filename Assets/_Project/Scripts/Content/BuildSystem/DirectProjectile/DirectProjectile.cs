@@ -9,6 +9,8 @@ namespace Project.Content.BuildSystem
         [SerializeField] private Rigidbody2D _rigidBody;
         [SerializeField] private Animator _animator;
 
+        private PauseHandler _pauseHandler;
+
         private EntityFlags _enemyFlag;
         private float _damage;
         private float _speed;
@@ -18,7 +20,7 @@ namespace Project.Content.BuildSystem
 
         private Vector2 _moveDirection;
 
-        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData)
+        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData, PauseHandler pauseHandler)
         {
             _enemyFlag = directProjectileData.EnemyFlag;
             _damage = directProjectileData.Damage;
@@ -27,6 +29,8 @@ namespace Project.Content.BuildSystem
 
             _moveDirection = moveDirection;
             transform.position = startPosition;
+
+            _pauseHandler = pauseHandler;
 
             transform.right = moveDirection;
             _elapsedTime = 0;
@@ -37,6 +41,9 @@ namespace Project.Content.BuildSystem
          
         private void FixedUpdate()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             Move();
 
             if (_elapsedTime > _lifeTime)

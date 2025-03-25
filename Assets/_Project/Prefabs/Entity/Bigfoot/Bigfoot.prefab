@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 5933002218655548456}
   - component: {fileID: 4246967360117147868}
   - component: {fileID: 7552718188777229531}
+  - component: {fileID: 1956386622127269389}
   m_Layer: 0
   m_Name: Bigfoot
   m_TagString: Untagged
@@ -349,6 +350,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1956386622127269389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227821642564561929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a325bb5d2a47a4b4b8c81dbfd3067312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectId: 3
 --- !u!1 &4537770894079658412
 GameObject:
   m_ObjectHideFlags: 0

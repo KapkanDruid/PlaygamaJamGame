@@ -1,5 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
+using NUnit.Framework.Interfaces;
 using Project.Content.CharacterAI;
+using Project.Content.CharacterAI.Destroyer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +66,9 @@ namespace Project.Content.Spawners
         private PauseHandler _pauseHandler;
         private Wave _currentWave;
         private IEnemySpawner _spawner;
+
+        private DestroyerHandler _destroyerHandler;
+
 
         [Inject]
         private void Construct(DestroyerSpawner.Factory destroyerSpawner, MainTargetAttackerSpawner.Factory mainTargetAttackerSpawner, PauseHandler pauseHandler)
@@ -150,27 +155,32 @@ namespace Project.Content.Spawners
                 for (int i = 0; i < wave.EnemyGroups.Count; i++)
                 {
                     EnemyGroup group = wave.EnemyGroups[i];
-                    for (int j = 0; j < group.Count; j++)
+                    for (int j = 0; j < group.Count;)
                     {
                         if (_pauseHandler.IsPaused)
                         {
                             await UniTask.WaitUntil(() => !_pauseHandler.IsPaused, cancellationToken: _cancellationToken);
                         }
 
-                        if (group.Prefab.GetType() == _spawner.GetTypeObject())
+                        group.Prefab.TryGetComponent<ObjectId>(out var id);
+                        _spawner.GetPrefab().TryGetComponent<ObjectId>(out var idInSpawner);
+
+
+                        if (id.Id == idInSpawner.Id)
                         {
                             await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
 
                             _spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
                             NextSpawnPoint();
+
+                            j++;
                         }
                         else
                         {
                             NextSpawner();
 
-                            if (j > 0)
-                                j--;
                         }
+
                     }
                     NextSpawner();
                 }
