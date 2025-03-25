@@ -9,6 +9,8 @@ namespace Project.Content
     {
         [SerializeField] private Vector2Int _groundGridSize;
         [SerializeField] private Vector2 _startFlagPosition;
+        [Header("Time in Seconds")]
+        [SerializeField] private float _timeToWin;
 
         private Dictionary<TurretType, TurretDynamicData> _turretDynamicData = new();
         private Dictionary<BarracksType, BarrackDynamicData> _barrackDynamicData = new();
@@ -18,6 +20,7 @@ namespace Project.Content
 
         public Vector2Int GroundGridSize => _groundGridSize;
         public Vector2 StartFlagPosition => _startFlagPosition;
+        public float TimeToWin => _timeToWin;
         public IReadOnlyDictionary<TurretType, TurretDynamicData> TurretDynamicData => _turretDynamicData;
         public IReadOnlyDictionary<BarracksType, BarrackDynamicData> BarrackDynamicData => _barrackDynamicData;
         public WallDynamicData WallDynamicData => _wallDynamicData; 

@@ -1,4 +1,6 @@
 ﻿using Project.Architecture;
+using Project.Content.CoreGameLoopLogic;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -12,6 +14,7 @@ namespace Project.Content.BuildSystem
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
         private GridPlaceSystem _placeSystem;
+        private WinLoseHandler _winLoseHandler;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
@@ -21,13 +24,14 @@ namespace Project.Content.BuildSystem
         public class Factory : PlaceholderFactory<MainBuildingEntity> { }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem)
+        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, WinLoseHandler winLoseHandler)
         {
             List<object> components = new();
 
             _healthHandler = healthHandler;
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
+            _winLoseHandler = winLoseHandler;
 
             components.Add(_placeComponent);
             components.Add(_healthHandler);
@@ -51,11 +55,17 @@ namespace Project.Content.BuildSystem
             _placeComponent.Initialize();
 
             _healthHandler.OnDead += DestroyThisAsync;
+            _healthHandler.OnDead += Defeat;
 
             if (_isRuntimeCreated)
                 return;
 
             _placeSystem.PLaceOnGrid(_placeComponent);
+        }
+
+        private void Defeat()
+        {
+            _winLoseHandler.MainBildingDestroyed(true);
         }
 
         private async void DestroyThisAsync()
@@ -79,6 +89,8 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
+            _healthHandler.OnDead -= Defeat;
+            _healthHandler.OnDead -= DestroyThisAsync;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
         }
     }

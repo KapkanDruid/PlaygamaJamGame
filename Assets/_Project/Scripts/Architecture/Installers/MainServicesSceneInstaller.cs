@@ -2,6 +2,7 @@ using NavMeshPlus.Components;
 using Project.Content;
 using Project.Content.BuildSystem;
 using Project.Content.CharacterAI;
+using Project.Content.CoreGameLoopLogic;
 using Project.Content.UI;
 using UnityEngine;
 using Zenject;
@@ -43,6 +44,7 @@ namespace Project.Architecture
             Container.BindInterfacesAndSelfTo<LevelExperienceController>().AsSingle().NonLazy();
             Container.Bind<LevelExperienceView>().FromInstance(_experienceView).AsSingle().NonLazy();
             Container.Bind<DefensiveFlag>().FromInstance(_defensiveFlag).AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<WinLoseHandler>().AsSingle().NonLazy();
 
             Container.Bind<FloatingTextHandler>().AsSingle().NonLazy();
 
