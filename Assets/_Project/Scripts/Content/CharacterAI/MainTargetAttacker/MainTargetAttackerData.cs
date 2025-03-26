@@ -11,6 +11,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         [SerializeField] private Transform _characterTransform;
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags[] _enemyFlag;
+        [SerializeField] private FloatingTextConfig _floatingText;
 
         public float Speed => _mainTargetAttackerConfig.Speed;
         public float Health => _mainTargetAttackerConfig.Health;
@@ -27,6 +28,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public IEntity ThisEntity { get; set; }
         public EntityFlags[] EnemyFlag => _enemyFlag;
         public MainTargetAttackerType Type => _mainTargetAttackerConfig.Type;
+        public FloatingTextConfig FloatingText => _floatingText;
 
     }
 }
