@@ -13,5 +13,10 @@ namespace Project.Content.UI.DataModification
         {
             SceneData.TurretDynamicData[_turretType].MaxHealth.Value += _addValue;
         }
+
+        public override float GetModifierValue()
+        {
+            return _addValue;
+        }
     }
 }

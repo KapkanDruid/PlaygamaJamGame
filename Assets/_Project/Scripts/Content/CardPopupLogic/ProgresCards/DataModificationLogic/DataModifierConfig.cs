@@ -10,6 +10,7 @@ namespace Project.Content.UI.DataModification
         {
             SceneData = sceneData;
         }
+        public abstract float GetModifierValue();
         public abstract void ExecuteProgress();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Project.Content.UI.DataModification;
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -10,6 +11,7 @@ namespace Project.Content.UI
     {
         [SerializeField] private DataModifierConfig _modifierConfig;
         [SerializeField] private Button _button;
+        [SerializeField] private TextMeshProUGUI _modifierText;
 
         public override Button Button => _button;
         public override event Action<ICoreProgressStrategy> OnCardSelected;
@@ -23,6 +25,19 @@ namespace Project.Content.UI
         private void Start()
         {
             _button.onClick.AddListener(() => OnCardSelected?.Invoke(_modifierConfig));
+
+            if (_modifierText == null)
+                return;
+
+            _modifierText.text = _modifierConfig.GetModifierValue().ToString();
+        }
+
+        private void OnEnable()
+        {
+            if (_modifierText == null)
+                return;
+
+            _modifierText.text = _modifierConfig.GetModifierValue().ToString();
         }
 
         private void OnDestroy()
