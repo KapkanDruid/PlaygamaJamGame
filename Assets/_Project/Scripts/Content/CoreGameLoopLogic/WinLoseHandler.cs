@@ -29,6 +29,9 @@ namespace Project.Content.CoreGameLoopLogic
 
         public void Tick()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             TimerToVictory();
         }
 
