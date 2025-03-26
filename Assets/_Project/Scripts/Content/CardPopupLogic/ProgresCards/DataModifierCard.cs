@@ -16,6 +16,7 @@ namespace Project.Content.UI
 
         public override Button Button => _button;
         public override event Action<ICoreProgressStrategy> OnCardSelected;
+        public static event Action<DataModifierConfig> OnModifierApplied;
 
         [Inject]
         private void Construct(SceneData sceneData)
@@ -27,7 +28,11 @@ namespace Project.Content.UI
 
         private void Initialize()
         {
-            _button.onClick.AddListener(() => OnCardSelected?.Invoke(_modifierConfig));
+            _button.onClick.AddListener(() =>
+            {
+                OnModifierApplied?.Invoke(_modifierConfig);
+                OnCardSelected?.Invoke(_modifierConfig);
+            });
 
             if (_modifierText == null)
                 return;
