@@ -7,6 +7,7 @@ namespace Project.Content.CharacterAI.Infantryman
     public class InfantrymanEntity : CharacterHandler, IPatrolling, IInitializable
     {
         [SerializeField] private InfantrymanData _infantrymanData;
+        [SerializeField] private SpriteRenderer _levelSpriteRenderer;
 
         private TargetSensor _sensor;
         private Transform _targetTransform; 
@@ -55,6 +56,7 @@ namespace Project.Content.CharacterAI.Infantryman
             _animator.Update(0f);
             _enemyDeadHandler.Reset();
             _healthHandler.Reset();
+            UpdateLevelSprite();
         }
 
         public override T ProvideComponent<T>() where T : class
@@ -119,6 +121,17 @@ namespace Project.Content.CharacterAI.Infantryman
 
                 _targetTransform = null;
             }
+        }
+
+        private void UpdateLevelSprite()
+        {
+            if (_levelSpriteRenderer == null)
+                return;
+
+            _levelSpriteRenderer.sprite = _infantrymanData.UpgradeSprite;
+            int level = _infantrymanData.LevelUpgrade;
+            Color color = _infantrymanData.GetColorForLevel(level);
+            _levelSpriteRenderer.color = color;
         }
     }
 }

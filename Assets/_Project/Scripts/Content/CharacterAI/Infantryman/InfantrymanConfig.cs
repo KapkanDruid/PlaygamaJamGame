@@ -22,6 +22,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
         [Header("Sensor System")]
         [SerializeField] private float _sensorRadius;
+        [Header("Upgrade")]
+        [SerializeField] private Sprite _upgradeSprite;
+
 
         public int Damage => _damage;
         public float Speed => _speed;
@@ -30,6 +33,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public float AttackRange => _attackRange;
         public float AttackCooldown => _attackCooldown;
         public AllyEntityType Type => _type;
+        public Sprite UpgradeSprite => _upgradeSprite;
     }
 }
 
