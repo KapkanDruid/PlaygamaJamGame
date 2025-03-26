@@ -13,5 +13,10 @@ namespace Project.Content.UI.DataModification
         {
             SceneData.BarrackDynamicData[_barracksType].UnitHealthModifier += _addValue;
         }
+
+        public override float GetModifierValue()
+        {
+            return _addValue;
+        }
     }
 }

@@ -137,6 +137,14 @@ MonoBehaviour:
   _rectTransform: {fileID: 504047890664702723}
   _turretType: 0
   _button: {fileID: 1927367571246820671}
+  _damageOriginal: {fileID: 0}
+  _cooldownOriginal: {fileID: 0}
+  _healthOriginal: {fileID: 0}
+  _attackAreaOriginal: {fileID: 0}
+  _healthModified: {fileID: 0}
+  _attackAreaModified: {fileID: 0}
+  _healthSummarized: {fileID: 0}
+  _attackAreaSummarized: {fileID: 0}
 --- !u!1 &462105530761254617
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +282,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 3353496467264532500}
   _modifierConfig: {fileID: 11400000, guid: a55e15212a13df2448e17b2800cf9248, type: 2}
   _button: {fileID: 3995009401846020857}
+  _modifierText: {fileID: 0}
 --- !u!1 &676054216572933917
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +557,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 5422608378147048102}
   _modifierConfig: {fileID: 11400000, guid: f807ecab525a6c14abc8650b151f6166, type: 2}
   _button: {fileID: 158350251205840535}
+  _modifierText: {fileID: 0}
 --- !u!1 &2235956498989551955
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,8 +829,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 8788770204430686074}
-  _turretType: 0
+  _type: 0
   _button: {fileID: 6046654562364606696}
+  _capacityOriginal: {fileID: 0}
+  _spawnCooldownOriginal: {fileID: 0}
+  _healthOriginal: {fileID: 0}
+  _healthModified: {fileID: 0}
+  _healthSummarized: {fileID: 0}
 --- !u!1 &4127097549362456760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1144,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 1759163996513436032}
   _modifierConfig: {fileID: 11400000, guid: 1deb112f594a42247963b63efaab5580, type: 2}
   _button: {fileID: 3185795974206841702}
+  _modifierText: {fileID: 0}
 --- !u!1 &4598487053179154182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,6 +1419,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 3958968550667517964}
   _modifierConfig: {fileID: 11400000, guid: 06d8dac9de1ec1941898648ee9608ad7, type: 2}
   _button: {fileID: 5818320770994245987}
+  _modifierText: {fileID: 0}
 --- !u!1 &5427860459987428398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,10 +2168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7130e002c50a8b49b2583962259dc25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cardsReference: 0
+  _cardsReference: 1
   _cardsToTest:
   - {fileID: 6918794862892086298}
-  - {fileID: 1116935028836168452}
+  - {fileID: 4374658541797335075}
   - {fileID: 7418988922525636943}
 --- !u!1 &7548724045764966798
 GameObject:
@@ -2293,6 +2310,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 7585463144531279163}
   _modifierConfig: {fileID: 11400000, guid: a8357bb3b46909046bb9da81c55a66af, type: 2}
   _button: {fileID: 246853951302064724}
+  _modifierText: {fileID: 0}
 --- !u!1 &7836097013816631242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,6 +2619,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 4940614744440529005}
   _modifierConfig: {fileID: 11400000, guid: 7920c64878b3bd647a0d78843f4d411a, type: 2}
   _button: {fileID: 8176292628415192241}
+  _modifierText: {fileID: 0}
 --- !u!1 &8890495287315530672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2756,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 2907254923557240803}
   _button: {fileID: 1845706385036726468}
+  _healthOriginal: {fileID: 0}
+  _healthModified: {fileID: 0}
+  _healthSummarized: {fileID: 0}
 --- !u!1 &9019614351526487353
 GameObject:
   m_ObjectHideFlags: 0
