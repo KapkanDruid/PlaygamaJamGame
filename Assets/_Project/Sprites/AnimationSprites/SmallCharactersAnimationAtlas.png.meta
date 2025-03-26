@@ -1,133 +1,133 @@
 fileFormatVersion: 2
-guid: 6f463ee4be5c10946bb7026e052e3716
+guid: e7da4401fe367a347bf23872c44e6702
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -241900191285858081
-    second: UpgradeUIEffectAnimationAtlas_0
+      213: -1565021475698987699
+    second: SmallCharactersAnimationAtlas_0
   - first:
-      213: 4900006054603999434
-    second: UpgradeUIEffectAnimationAtlas_1
+      213: 7591622771307073176
+    second: SmallCharactersAnimationAtlas_1
   - first:
-      213: 7613735144749107419
-    second: UpgradeUIEffectAnimationAtlas_2
+      213: -6563574939354104469
+    second: SmallCharactersAnimationAtlas_2
   - first:
-      213: 242775997679780930
-    second: UpgradeUIEffectAnimationAtlas_3
+      213: 1377886680606175926
+    second: SmallCharactersAnimationAtlas_3
   - first:
-      213: 4342540447143318365
-    second: UpgradeUIEffectAnimationAtlas_4
+      213: -8806622894841237101
+    second: SmallCharactersAnimationAtlas_4
   - first:
-      213: 338705720737820682
-    second: UpgradeUIEffectAnimationAtlas_5
+      213: 8817239172560151762
+    second: SmallCharactersAnimationAtlas_5
   - first:
-      213: -822900508795834813
-    second: UpgradeUIEffectAnimationAtlas_6
+      213: -851063892124548875
+    second: SmallCharactersAnimationAtlas_6
   - first:
-      213: -792437978341648211
-    second: UpgradeUIEffectAnimationAtlas_7
+      213: 917236861568296707
+    second: SmallCharactersAnimationAtlas_7
   - first:
-      213: -9134246271520600158
-    second: UpgradeUIEffectAnimationAtlas_8
+      213: 7417976456012686219
+    second: SmallCharactersAnimationAtlas_8
   - first:
-      213: -1439414536252898727
-    second: UpgradeUIEffectAnimationAtlas_9
+      213: 3237606623714076770
+    second: SmallCharactersAnimationAtlas_9
   - first:
-      213: 1440821248296524789
-    second: UpgradeUIEffectAnimationAtlas_10
+      213: -4441084163805319270
+    second: SmallCharactersAnimationAtlas_10
   - first:
-      213: -141468953918267515
-    second: UpgradeUIEffectAnimationAtlas_11
+      213: -7588098899566363810
+    second: SmallCharactersAnimationAtlas_11
   - first:
-      213: -623928953866346026
-    second: UpgradeUIEffectAnimationAtlas_12
+      213: -2902718998315264882
+    second: SmallCharactersAnimationAtlas_12
   - first:
-      213: 5385068447379944927
-    second: UpgradeUIEffectAnimationAtlas_13
+      213: -8581550210039090808
+    second: SmallCharactersAnimationAtlas_13
   - first:
-      213: -3677148448041876669
-    second: UpgradeUIEffectAnimationAtlas_14
+      213: 8184549083306418077
+    second: SmallCharactersAnimationAtlas_14
   - first:
-      213: -7246144031088481236
-    second: UpgradeUIEffectAnimationAtlas_15
+      213: 8855601983008448779
+    second: SmallCharactersAnimationAtlas_15
   - first:
-      213: -6073493104930667896
-    second: UpgradeUIEffectAnimationAtlas_16
+      213: -3762614807203339305
+    second: SmallCharactersAnimationAtlas_16
   - first:
-      213: -4055801503992840597
-    second: UpgradeUIEffectAnimationAtlas_17
+      213: 6308078058338781890
+    second: SmallCharactersAnimationAtlas_17
   - first:
-      213: -4104060785382044533
-    second: UpgradeUIEffectAnimationAtlas_18
+      213: -5262010325206561049
+    second: SmallCharactersAnimationAtlas_18
   - first:
-      213: 3431723086639870472
-    second: UpgradeUIEffectAnimationAtlas_19
+      213: -3846130861610136843
+    second: SmallCharactersAnimationAtlas_19
   - first:
-      213: 948815656931952648
-    second: UpgradeUIEffectAnimationAtlas_20
+      213: -1126467762561639514
+    second: SmallCharactersAnimationAtlas_20
   - first:
-      213: 4454091251573439558
-    second: UpgradeUIEffectAnimationAtlas_21
+      213: -9092031314612007169
+    second: SmallCharactersAnimationAtlas_21
   - first:
-      213: -4380804164372736275
-    second: UpgradeUIEffectAnimationAtlas_22
+      213: 1039849391791728483
+    second: SmallCharactersAnimationAtlas_22
   - first:
-      213: 1660734461633570094
-    second: UpgradeUIEffectAnimationAtlas_23
+      213: 1137358055648738102
+    second: SmallCharactersAnimationAtlas_23
   - first:
-      213: 1282076348270073576
-    second: UpgradeUIEffectAnimationAtlas_24
+      213: -4117170943205574887
+    second: SmallCharactersAnimationAtlas_24
   - first:
-      213: -1699506521946176725
-    second: UpgradeUIEffectAnimationAtlas_25
+      213: -3992523040142565980
+    second: SmallCharactersAnimationAtlas_25
   - first:
-      213: -4442602209670868399
-    second: UpgradeUIEffectAnimationAtlas_26
+      213: 3960838619169853641
+    second: SmallCharactersAnimationAtlas_26
   - first:
-      213: 8737844278782967004
-    second: UpgradeUIEffectAnimationAtlas_27
+      213: 4270258896164003124
+    second: SmallCharactersAnimationAtlas_27
   - first:
-      213: 8931344290234824420
-    second: UpgradeUIEffectAnimationAtlas_28
+      213: 8766682914388774662
+    second: SmallCharactersAnimationAtlas_28
   - first:
-      213: 1032082392919563069
-    second: UpgradeUIEffectAnimationAtlas_29
+      213: -5026549018093157015
+    second: SmallCharactersAnimationAtlas_29
   - first:
-      213: 6500343558957918308
-    second: UpgradeUIEffectAnimationAtlas_30
+      213: -5641594131337760388
+    second: SmallCharactersAnimationAtlas_30
   - first:
-      213: -6909095217589997720
-    second: UpgradeUIEffectAnimationAtlas_31
+      213: -1579442259639850850
+    second: SmallCharactersAnimationAtlas_31
   - first:
-      213: 7379927633145618472
-    second: UpgradeUIEffectAnimationAtlas_32
+      213: -1678078665271719279
+    second: SmallCharactersAnimationAtlas_32
   - first:
-      213: 4863761598917230392
-    second: UpgradeUIEffectAnimationAtlas_33
+      213: -2671777908757837023
+    second: SmallCharactersAnimationAtlas_33
   - first:
-      213: -3630061569644661640
-    second: UpgradeUIEffectAnimationAtlas_34
+      213: -5278839743819393371
+    second: SmallCharactersAnimationAtlas_34
   - first:
-      213: -7144845702472658559
-    second: UpgradeUIEffectAnimationAtlas_35
+      213: -210311801808005133
+    second: SmallCharactersAnimationAtlas_35
   - first:
-      213: 5400064463452451735
-    second: UpgradeUIEffectAnimationAtlas_36
+      213: -371014725080123636
+    second: SmallCharactersAnimationAtlas_36
   - first:
-      213: 4129912443221217526
-    second: UpgradeUIEffectAnimationAtlas_37
+      213: 6948398347135862936
+    second: SmallCharactersAnimationAtlas_37
   - first:
-      213: -175154272783558529
-    second: UpgradeUIEffectAnimationAtlas_38
+      213: 7021808877247927689
+    second: SmallCharactersAnimationAtlas_38
   - first:
-      213: 6239258785966875159
-    second: UpgradeUIEffectAnimationAtlas_39
+      213: 1380431166867633742
+    second: SmallCharactersAnimationAtlas_39
   - first:
-      213: -7510788225251586497
-    second: UpgradeUIEffectAnimationAtlas_40
+      213: 6529341403640344326
+    second: SmallCharactersAnimationAtlas_40
   - first:
-      213: -980090754838920558
-    second: UpgradeUIEffectAnimationAtlas_41
+      213: 5979689027446989293
+    second: SmallCharactersAnimationAtlas_41
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -223,13 +223,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_0
+      name: SmallCharactersAnimationAtlas_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 769
-        width: 153
-        height: 118
+        x: 9
+        y: 3842
+        width: 239
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd0be43ce0994acf0800000000000000
-      internalID: -241900191285858081
+      spriteID: d4daa1b724de74ae0800000000000000
+      internalID: -1565021475698987699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_1
+      name: SmallCharactersAnimationAtlas_1
       rect:
         serializedVersion: 2
-        x: 306
-        y: 769
-        width: 151
-        height: 137
+        x: 273
+        y: 3842
+        width: 239
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac84fe99b81500440800000000000000
-      internalID: 4900006054603999434
+      spriteID: 89e468830bcda5960800000000000000
+      internalID: 7591622771307073176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_2
+      name: SmallCharactersAnimationAtlas_2
       rect:
         serializedVersion: 2
-        x: 560
-        y: 769
-        width: 156
-        height: 152
+        x: 521
+        y: 3840
+        width: 239
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,20 +282,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd88dac56cb69a960800000000000000
-      internalID: 7613735144749107419
+      spriteID: b6d74233e5f79e4a0800000000000000
+      internalID: -6563574939354104469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_3
+      name: SmallCharactersAnimationAtlas_3
       rect:
         serializedVersion: 2
-        x: 815
-        y: 769
-        width: 157
-        height: 169
+        x: 777
+        y: 3840
+        width: 239
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,20 +304,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 244c1bdcb738e5300800000000000000
-      internalID: 242775997679780930
+      spriteID: 6b2f54ab2ac3f1310800000000000000
+      internalID: 1377886680606175926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_4
+      name: SmallCharactersAnimationAtlas_4
       rect:
         serializedVersion: 2
-        x: 46
-        y: 513
-        width: 158
-        height: 182
+        x: 1297
+        y: 3842
+        width: 239
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d535eb6678dc34c30800000000000000
-      internalID: 4342540447143318365
+      spriteID: 3917a2af22798c580800000000000000
+      internalID: -8806622894841237101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_5
+      name: SmallCharactersAnimationAtlas_5
       rect:
         serializedVersion: 2
-        x: 293
-        y: 634
-        width: 40
-        height: 53
+        x: 1541
+        y: 3842
+        width: 245
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,20 +348,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0078f7fe0353b400800000000000000
-      internalID: 338705720737820682
+      spriteID: 2d46b1ccf402d5a70800000000000000
+      internalID: 8817239172560151762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_6
+      name: SmallCharactersAnimationAtlas_6
       rect:
         serializedVersion: 2
-        x: 302
-        y: 513
-        width: 158
-        height: 197
+        x: 1797
+        y: 3842
+        width: 244
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,20 +370,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34e6cbfd8587494f0800000000000000
-      internalID: -822900508795834813
+      spriteID: 5f041c436e96034f0800000000000000
+      internalID: -851063892124548875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_7
+      name: SmallCharactersAnimationAtlas_7
       rect:
         serializedVersion: 2
-        x: 438
-        y: 620
-        width: 35
-        height: 63
+        x: 2037
+        y: 3913
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,20 +392,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da8da627bd1b005f0800000000000000
-      internalID: -792437978341648211
+      spriteID: 3072cacd01eaabc00800000000000000
+      internalID: 917236861568296707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_8
+      name: SmallCharactersAnimationAtlas_8
       rect:
         serializedVersion: 2
-        x: 546
-        y: 513
-        width: 189
-        height: 225
+        x: 2069
+        y: 3841
+        width: 214
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,20 +414,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2af041f4963ac3180800000000000000
-      internalID: -9134246271520600158
+      spriteID: b83e8dcd842f1f660800000000000000
+      internalID: 7417976456012686219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_9
+      name: SmallCharactersAnimationAtlas_9
       rect:
         serializedVersion: 2
-        x: 791
-        y: 513
-        width: 208
-        height: 234
+        x: 2325
+        y: 3843
+        width: 214
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,20 +436,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 952cc1a0b1c260ce0800000000000000
-      internalID: -1439414536252898727
+      spriteID: 268ede8121a4eec20800000000000000
+      internalID: 3237606623714076770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_10
+      name: SmallCharactersAnimationAtlas_10
       rect:
         serializedVersion: 2
-        x: 48
-        y: 416
-        width: 37
-        height: 32
+        x: 2581
+        y: 3843
+        width: 214
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,20 +458,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fb9c81aa43def310800000000000000
-      internalID: 1440821248296524789
+      spriteID: a9f65ce9b791e52c0800000000000000
+      internalID: -4441084163805319270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_11
+      name: SmallCharactersAnimationAtlas_11
       rect:
         serializedVersion: 2
-        x: 119
-        y: 442
-        width: 24
-        height: 27
+        x: 2838
+        y: 3841
+        width: 214
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,20 +480,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58f94f66cb6690ef0800000000000000
-      internalID: -141468953918267515
+      spriteID: e5b70da1148a1b690800000000000000
+      internalID: -7588098899566363810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_12
+      name: SmallCharactersAnimationAtlas_12
       rect:
         serializedVersion: 2
-        x: 142
-        y: 404
-        width: 36
-        height: 42
+        x: 3351
+        y: 3840
+        width: 214
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,20 +502,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d127b31ceb5757f0800000000000000
-      internalID: -623928953866346026
+      spriteID: e8414a6437877b7d0800000000000000
+      internalID: -2902718998315264882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_13
+      name: SmallCharactersAnimationAtlas_13
       rect:
         serializedVersion: 2
-        x: 377
-        y: 442
-        width: 12
-        height: 11
+        x: 3597
+        y: 3840
+        width: 219
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,20 +524,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd5fe39b83b9bba40800000000000000
-      internalID: 5385068447379944927
+      spriteID: 881f07c0d8538e880800000000000000
+      internalID: -8581550210039090808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_14
+      name: SmallCharactersAnimationAtlas_14
       rect:
         serializedVersion: 2
-        x: 85
-        y: 366
-        width: 57
-        height: 64
+        x: 3858
+        y: 3841
+        width: 220
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,20 +546,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 343c51808f428fcc0800000000000000
-      internalID: -3677148448041876669
+      spriteID: d9f5a35170c559170800000000000000
+      internalID: 8184549083306418077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_15
+      name: SmallCharactersAnimationAtlas_15
       rect:
         serializedVersion: 2
-        x: 185
-        y: 415
-        width: 23
-        height: 25
+        x: 18
+        y: 3585
+        width: 219
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,20 +568,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2c67ab3566807b90800000000000000
-      internalID: -7246144031088481236
+      spriteID: b01a675a51b65ea70800000000000000
+      internalID: 8855601983008448779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_16
+      name: SmallCharactersAnimationAtlas_16
       rect:
         serializedVersion: 2
-        x: 312
-        y: 414
-        width: 11
-        height: 11
+        x: 295
+        y: 3583
+        width: 215
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,20 +590,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 882c2d6233e96bba0800000000000000
-      internalID: -6073493104930667896
+      spriteID: 7d3250e94c188cbc0800000000000000
+      internalID: -3762614807203339305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_17
+      name: SmallCharactersAnimationAtlas_17
       rect:
         serializedVersion: 2
-        x: 330
-        y: 424
-        width: 15
-        height: 15
+        x: 533
+        y: 3584
+        width: 214
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,20 +612,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6ef20b4506e6b7c0800000000000000
-      internalID: -4055801503992840597
+      spriteID: 2ca08ba829bca8750800000000000000
+      internalID: 6308078058338781890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_18
+      name: SmallCharactersAnimationAtlas_18
       rect:
         serializedVersion: 2
-        x: 402
-        y: 412
-        width: 23
-        height: 28
+        x: 789
+        y: 3587
+        width: 214
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,20 +634,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8c41beb5727b07c0800000000000000
-      internalID: -4104060785382044533
+      spriteID: 7ee00a11d7599f6b0800000000000000
+      internalID: -5262010325206561049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_19
+      name: SmallCharactersAnimationAtlas_19
       rect:
         serializedVersion: 2
-        x: 438
-        y: 419
-        width: 16
-        height: 15
+        x: 1045
+        y: 3585
+        width: 214
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,20 +656,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8023daa17fdef9f20800000000000000
-      internalID: 3431723086639870472
+      spriteID: 5fa8f0aeb5ccf9ac0800000000000000
+      internalID: -3846130861610136843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_20
+      name: SmallCharactersAnimationAtlas_20
       rect:
         serializedVersion: 2
-        x: 601
-        y: 425
-        width: 9
-        height: 10
+        x: 1302
+        y: 3585
+        width: 214
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,20 +678,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80802cc10deda2d00800000000000000
-      internalID: 948815656931952648
+      spriteID: 6ab9599c98bfd50f0800000000000000
+      internalID: -1126467762561639514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_21
+      name: SmallCharactersAnimationAtlas_21
       rect:
         serializedVersion: 2
-        x: 669
-        y: 418
-        width: 9
-        height: 11
+        x: 1804
+        y: 3584
+        width: 214
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -700,20 +700,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64cb53ff46c10dd30800000000000000
-      internalID: 4454091251573439558
+      spriteID: ffec2d5e0bd92d180800000000000000
+      internalID: -9092031314612007169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_22
+      name: SmallCharactersAnimationAtlas_22
       rect:
         serializedVersion: 2
-        x: 346
-        y: 400
-        width: 17
-        height: 19
+        x: 2049
+        y: 3585
+        width: 219
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -722,20 +722,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de6d200b2d14433c0800000000000000
-      internalID: -4380804164372736275
+      spriteID: 367e6a133894e6e00800000000000000
+      internalID: 1039849391791728483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_23
+      name: SmallCharactersAnimationAtlas_23
       rect:
         serializedVersion: 2
-        x: 619
-        y: 401
-        width: 8
-        height: 8
+        x: 2310
+        y: 3585
+        width: 220
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -744,20 +744,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e252be3a13d1c0710800000000000000
-      internalID: 1660734461633570094
+      spriteID: 63b3f592025b8cf00800000000000000
+      internalID: 1137358055648738102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_24
+      name: SmallCharactersAnimationAtlas_24
       rect:
         serializedVersion: 2
-        x: 135
-        y: 344
-        width: 30
-        height: 36
+        x: 2572
+        y: 3585
+        width: 219
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,20 +766,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e6519165a9dac110800000000000000
-      internalID: 1282076348270073576
+      spriteID: 917fba247dedcd6c0800000000000000
+      internalID: -4117170943205574887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_25
+      name: SmallCharactersAnimationAtlas_25
       rect:
         serializedVersion: 2
-        x: 148
-        y: 379
-        width: 23
-        height: 21
+        x: 2857
+        y: 3586
+        width: 213
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -788,20 +788,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2340f992d32a68e0800000000000000
-      internalID: -1699506521946176725
+      spriteID: 4ad5db2c275b798c0800000000000000
+      internalID: -3992523040142565980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_26
+      name: SmallCharactersAnimationAtlas_26
       rect:
         serializedVersion: 2
-        x: 79
-        y: 339
-        width: 36
-        height: 34
+        x: 3328
+        y: 3586
+        width: 213
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -810,20 +810,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 152d33604d4b852c0800000000000000
-      internalID: -4442602209670868399
+      spriteID: 9c0944c1db9b7f630800000000000000
+      internalID: 3960838619169853641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_27
+      name: SmallCharactersAnimationAtlas_27
       rect:
         serializedVersion: 2
-        x: 340
-        y: 349
-        width: 10
-        height: 12
+        x: 3592
+        y: 3586
+        width: 237
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -832,20 +832,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cdcb983931f034970800000000000000
-      internalID: 8737844278782967004
+      spriteID: 43d9ecc57d1034b30800000000000000
+      internalID: 4270258896164003124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_28
+      name: SmallCharactersAnimationAtlas_28
       rect:
         serializedVersion: 2
-        x: 356
-        y: 340
-        width: 13
-        height: 13
+        x: 3856
+        y: 3586
+        width: 222
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -854,20 +854,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e6f82acf4282fb70800000000000000
-      internalID: 8931344290234824420
+      spriteID: 60f01aaa9a389a970800000000000000
+      internalID: 8766682914388774662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_29
+      name: SmallCharactersAnimationAtlas_29
       rect:
         serializedVersion: 2
-        x: 396
-        y: 347
-        width: 14
-        height: 14
+        x: 4070
+        y: 3713
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -876,20 +876,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3bd7e8d771b25e00800000000000000
-      internalID: 1032082392919563069
+      spriteID: 9650872cc4c1e3ab0800000000000000
+      internalID: -5026549018093157015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_30
+      name: SmallCharactersAnimationAtlas_30
       rect:
         serializedVersion: 2
-        x: 661
-        y: 346
-        width: 8
-        height: 9
+        x: 8
+        y: 3334
+        width: 215
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -898,20 +898,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4686fadc60cd53a50800000000000000
-      internalID: 6500343558957918308
+      spriteID: c713faa270805b1b0800000000000000
+      internalID: -5641594131337760388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_31
+      name: SmallCharactersAnimationAtlas_31
       rect:
         serializedVersion: 2
-        x: 98
-        y: 284
-        width: 82
-        height: 58
+        x: 276
+        y: 3333
+        width: 215
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -920,20 +920,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86fa23c6186fd10a0800000000000000
-      internalID: -6909095217589997720
+      spriteID: e982de212a1b41ae0800000000000000
+      internalID: -1579442259639850850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_32
+      name: SmallCharactersAnimationAtlas_32
       rect:
         serializedVersion: 2
-        x: 360
-        y: 311
-        width: 15
-        height: 17
+        x: 783
+        y: 3329
+        width: 224
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -942,20 +942,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 820ebb1f415ca6660800000000000000
-      internalID: 7379927633145618472
+      spriteID: 19a4153485446b8e0800000000000000
+      internalID: -1678078665271719279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_33
+      name: SmallCharactersAnimationAtlas_33
       rect:
         serializedVersion: 2
-        x: 385
-        y: 295
-        width: 17
-        height: 20
+        x: 1039
+        y: 3328
+        width: 224
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -964,20 +964,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83fb5a7a76d8f7340800000000000000
-      internalID: 4863761598917230392
+      spriteID: 12bc0cdc520fbead0800000000000000
+      internalID: -2671777908757837023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_34
+      name: SmallCharactersAnimationAtlas_34
       rect:
         serializedVersion: 2
-        x: 625
-        y: 309
-        width: 13
-        height: 13
+        x: 1296
+        y: 3328
+        width: 224
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -986,20 +986,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 874788c3c3e6f9dc0800000000000000
-      internalID: -3630061569644661640
+      spriteID: 5a65e63b83bcdb6b0800000000000000
+      internalID: -5278839743819393371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_35
+      name: SmallCharactersAnimationAtlas_35
       rect:
         serializedVersion: 2
-        x: 86
-        y: 278
-        width: 24
-        height: 24
+        x: 1552
+        y: 3328
+        width: 224
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1008,20 +1008,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 181142940b868dc90800000000000000
-      internalID: -7144845702472658559
+      spriteID: 3f75921d782d41df0800000000000000
+      internalID: -210311801808005133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_36
+      name: SmallCharactersAnimationAtlas_36
       rect:
         serializedVersion: 2
-        x: 409
-        y: 286
-        width: 13
-        height: 13
+        x: 1808
+        y: 3329
+        width: 224
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1030,20 +1030,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7933b4cc402e0fa40800000000000000
-      internalID: 5400064463452451735
+      spriteID: c07f821c214e9daf0800000000000000
+      internalID: -371014725080123636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_37
+      name: SmallCharactersAnimationAtlas_37
       rect:
         serializedVersion: 2
-        x: 653
-        y: 295
-        width: 8
-        height: 8
+        x: 2310
+        y: 3329
+        width: 224
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1052,20 +1052,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f09aa36c75605930800000000000000
-      internalID: 4129912443221217526
+      spriteID: 898c1f68b7bad6060800000000000000
+      internalID: 6948398347135862936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_38
+      name: SmallCharactersAnimationAtlas_38
       rect:
         serializedVersion: 2
-        x: 153
-        y: 267
-        width: 14
-        height: 14
+        x: 2566
+        y: 3329
+        width: 224
+        height: 245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1074,20 +1074,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7818dded1ab19df0800000000000000
-      internalID: -175154272783558529
+      spriteID: 9851c0188f9727160800000000000000
+      internalID: 7021808877247927689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_39
+      name: SmallCharactersAnimationAtlas_39
       rect:
         serializedVersion: 2
-        x: 345
-        y: 276
-        width: 15
-        height: 16
+        x: 2822
+        y: 3329
+        width: 224
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1096,20 +1096,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7126a4f0fcc469650800000000000000
-      internalID: 6239258785966875159
+      spriteID: e46f50a15d6482310800000000000000
+      internalID: 1380431166867633742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_40
+      name: SmallCharactersAnimationAtlas_40
       rect:
         serializedVersion: 2
-        x: 411
-        y: 269
-        width: 11
-        height: 10
+        x: 3077
+        y: 3329
+        width: 233
+        height: 245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1118,20 +1118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3e41ba27e154c790800000000000000
-      internalID: -7510788225251586497
+      spriteID: 60fab35a961ec9a50800000000000000
+      internalID: 6529341403640344326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeUIEffectAnimationAtlas_41
+      name: SmallCharactersAnimationAtlas_41
       rect:
         serializedVersion: 2
-        x: 612
-        y: 276
-        width: 9
-        height: 10
+        x: 3334
+        y: 3329
+        width: 243
+        height: 245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1140,8 +1140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2928e26b6a40662f0800000000000000
-      internalID: -980090754838920558
+      spriteID: de1674c1d7f1cf250800000000000000
+      internalID: 5979689027446989293
       vertices: []
       indices: 
       edges: []
