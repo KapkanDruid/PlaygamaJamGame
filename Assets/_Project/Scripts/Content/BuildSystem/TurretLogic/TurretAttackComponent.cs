@@ -26,6 +26,7 @@ namespace Project.Content.BuildSystem
         private bool _isReadyToShoot;
         private bool _isRotating;
         private bool _isActive;
+        private float _shootTimer;
 
         public TurretAttackComponent(IProjectilePoolData projectilePoolData, ITurretShootData shootData, CancellationToken cancellationToken, GizmosDrawer gizmosDrawer, PauseHandler pauseHandler)
         {
@@ -63,6 +64,7 @@ namespace Project.Content.BuildSystem
 
             HandleRotation();
             Shoot();
+            UpdateTimer();
         }
 
         private void HandleTarget()
@@ -145,21 +147,17 @@ namespace Project.Content.BuildSystem
             var projectile = _projectilePool.Get();
             projectile.Prepare(_shootPoint.position, _targetTransform.position - _localTransform.position, _shootData.ProjectileData, _pauseHandler);
 
-            RechargeRangeAttack().Forget();
+            _shootTimer = _shootData.ReloadTime;
         }
 
-        private async UniTaskVoid RechargeRangeAttack()
+        private void UpdateTimer()
         {
-            try
+            if (_shootTimer > 0)
             {
-                await UniTask.WaitForSeconds(_shootData.ReloadTime, cancellationToken: _cancellationToken);
+                _shootTimer -= Time.deltaTime;
             }
-            catch (OperationCanceledException)
-            {
-                return;
-            }
-
-            _isReadyToShoot = true;
+            else
+                _isReadyToShoot = true;
         }
     }
 }
