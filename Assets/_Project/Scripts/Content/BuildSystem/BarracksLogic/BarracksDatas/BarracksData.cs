@@ -35,6 +35,7 @@ namespace Project.Content.BuildSystem
         public float SpawnCooldown => _config.SpawnCooldown;
         public float UnitDamageModifier => _dynamicData.UnitDamageModifier.Value;
         public float UnitHealthModifier => _dynamicData.UnitHealthModifier.Value;
+        public int UnitUpgradeCount => _dynamicData.UnitUpgradeCount;
 
         public IReactiveProperty<float> Health => _dynamicData.BuildingMaxHealth;
 

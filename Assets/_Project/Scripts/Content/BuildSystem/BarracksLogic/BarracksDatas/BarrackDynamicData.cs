@@ -9,6 +9,8 @@ namespace Project.Content.BuildSystem
         private readonly BarrackConfig _config;
         public event Action OnDataUpdate;
 
+        private int _unitUpgradeCount;
+
         private ReactiveProperty<float> _unitDamageModifier = new ReactiveProperty<float>();
         private ReactiveProperty<float> _unitHealthModifier = new ReactiveProperty<float>();
         private ReactiveProperty<float> _buildingMaxHealth = new ReactiveProperty<float>();
@@ -17,6 +19,7 @@ namespace Project.Content.BuildSystem
         public BarrackConfig Config => _config;
         public ReactiveProperty<float> UnitDamageModifier => _unitDamageModifier; 
         public ReactiveProperty<float> UnitHealthModifier => _unitHealthModifier;
+        public int UnitUpgradeCount => _unitUpgradeCount;
 
         public BarrackDynamicData(BarrackConfig config)
         {
@@ -33,6 +36,9 @@ namespace Project.Content.BuildSystem
             _unitDamageModifier.OnValueChanged += (x) => OnDataUpdate?.Invoke();
             _unitHealthModifier.OnValueChanged += (x) => OnDataUpdate?.Invoke();
             _buildingMaxHealth.OnValueChanged += (x) => OnDataUpdate?.Invoke();
+
+            _unitDamageModifier.OnValueChanged += (x) => _unitUpgradeCount++;
+            _unitHealthModifier.OnValueChanged += (x) => _unitUpgradeCount++;
         }
     }
 }

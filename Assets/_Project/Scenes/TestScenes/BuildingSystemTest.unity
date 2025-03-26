@@ -1131,9 +1131,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8466721467557542195, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
   m_PrefabInstance: {fileID: 1195762052}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1021651467 stripped
+--- !u!114 &1023173076 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2828740383251640489, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2223775968163161391, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
   m_PrefabInstance: {fileID: 1255740095}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -2056,7 +2056,7 @@ PrefabInstance:
     - target: {fileID: 4510169077041886917, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: '_cardsToTest.Array.data[0]'
       value: 
-      objectReference: {fileID: 2021621025}
+      objectReference: {fileID: 1318373981}
     - target: {fileID: 4510169077041886917, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: '_cardsToTest.Array.data[1]'
       value: 
@@ -2064,7 +2064,7 @@ PrefabInstance:
     - target: {fileID: 4510169077041886917, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: '_cardsToTest.Array.data[2]'
       value: 
-      objectReference: {fileID: 1021651467}
+      objectReference: {fileID: 1023173076}
     - target: {fileID: 4900232885564009308, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: _canvasRectTransform
       value: 
@@ -2329,6 +2329,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1318373981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8922329473063805544, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
+  m_PrefabInstance: {fileID: 1255740095}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a098a98b0d9e249a35c98f93d13f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1336468323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,17 +2841,6 @@ Transform:
   - {fileID: 1294406013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2021621025 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7139402451664433027, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
-  m_PrefabInstance: {fileID: 1255740095}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6cafd88235fb24b908ab3c2390c223, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2083231339
 GameObject:
   m_ObjectHideFlags: 0
