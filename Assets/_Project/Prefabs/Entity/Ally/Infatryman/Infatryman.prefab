@@ -340,6 +340,7 @@ MonoBehaviour:
     - {r: 0, g: 1, b: 0.49803922, a: 1}
     - {r: 0, g: 1, b: 0, a: 1}
     - {r: 0, g: 0.5019608, b: 0, a: 1}
+    _floatingText: {fileID: 11400000, guid: d3bc4705e24fec346818128c7b5678cc, type: 2}
   _levelSpriteRenderer: {fileID: 8267430935620028525}
 --- !u!195 &7014999058970263935
 NavMeshAgent:

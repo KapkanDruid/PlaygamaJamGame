@@ -17,6 +17,7 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private EntityFlags _enemyFlag;
         [SerializeField] private DirectProjectile _projectilePrefab;
         [SerializeField] private Color[] _levelColors;
+        [SerializeField] private FloatingTextConfig _floatingText;
 
         private DirectProjectileData _projectileData;
         private SensorData _sensorData;
@@ -45,6 +46,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public AllyEntityType Type => _infantrymanConfig.Type;
 
         public Sprite UpgradeSprite => _infantrymanConfig.UpgradeSprite;
+        public FloatingTextConfig FloatingText => _floatingText;
 
         public void Initialize()
         {

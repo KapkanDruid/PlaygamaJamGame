@@ -15,6 +15,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private float _patrolRadius;
+        private FloatingTextHandler _textHandler;
 
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
@@ -32,12 +33,16 @@ namespace Project.Content.CharacterAI.Infantryman
         }
 
         [Inject]
-        public void Construct(EnemyDeadHandler enemyDeadHandler, Animator animator, PauseHandler pauseHandler)
+        public void Construct(EnemyDeadHandler enemyDeadHandler,
+                              Animator animator,
+                              PauseHandler pauseHandler,
+                              FloatingTextHandler textHandler)
         {
             _infantrymanData.ThisEntity = this;
             _enemyDeadHandler = enemyDeadHandler;
             _animator = animator;
             _pauseHandler = pauseHandler;
+            _textHandler = textHandler;
 
             ResetData();
         }
@@ -103,6 +108,9 @@ namespace Project.Content.CharacterAI.Infantryman
         private void ResetData()
         {
             _healthHandler = new CharacterHealthHandler(_infantrymanData.Health, _animator, _enemyDeadHandler);
+
+            if (_infantrymanData.FloatingText != null)
+                _healthHandler.OnDamage += (damage) => _textHandler.ShowText(_infantrymanData.FloatingText, _infantrymanData.EntityTransform.position, damage.ToString());
         }
 
         private void HandleTarget()
