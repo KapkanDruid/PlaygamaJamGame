@@ -18,6 +18,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private LevelExperienceController _levelExperience;
         private IEntity _blockingEntity;
         private bool _isMoving;
+        private FloatingTextHandler _textHandler;
 
         public ICharacterData MainTargetAttackerData => _mainTargetAttackerData;
         public IEntity BlockingEntity => _blockingEntity;
@@ -43,13 +44,15 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public void Construct(EnemyDeadHandler enemyDeadHandler,
                               CharacterSensor characterSensor,
                               Animator animator,
-                              LevelExperienceController levelExperience)
+                              LevelExperienceController levelExperience,
+                              FloatingTextHandler textHandler)
         {
             _mainTargetAttackerData.ThisEntity = this;
             _enemyDeadHandler = enemyDeadHandler;
             _characterSensor = characterSensor;
             _animator = animator;
             _levelExperience = levelExperience;
+            _textHandler = textHandler;
 
             ResetData();
             _characterSensor.TargetDetected += HasTarget;
@@ -108,6 +111,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private void ResetData()
         {
             _healthHandler = new CharacterHealthHandler(_mainTargetAttackerData.Health, _animator, _enemyDeadHandler);
+
+            if (_mainTargetAttackerData.FloatingText != null)
+                _healthHandler.OnDamage += (damage) => _textHandler.ShowText(_mainTargetAttackerData.FloatingText, _mainTargetAttackerData.CharacterTransform.position, damage.ToString());
         }
 
         private void HasTarget()
