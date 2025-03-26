@@ -25,6 +25,7 @@ MonoBehaviour:
     _humanMoth: {fileID: 16720405618370171, guid: 08714949ffb1b404e9b8c901a69041c0, type: 3}
     _infantryman: {fileID: 2800637946718568406, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
     _experienceObject: {fileID: 1493492564772801372, guid: ad22f986af296a9448caf421f7d4f1e8, type: 3}
+    _upgradeObject: {fileID: 8481949890690822518, guid: fa63e5ff48266a442beb5166ec528b3c, type: 3}
     _flag: {fileID: 5651869740134662256, guid: 068826a682678f648bb77929684c3b42, type: 3}
     _floatingTextPrefabs:
     - {fileID: 3139850015193835488, guid: 64b5f94ea461a1c44a3fbbcf3bcae0b7, type: 3}

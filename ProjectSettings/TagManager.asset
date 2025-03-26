@@ -45,7 +45,7 @@ TagManager:
   - name: Projectiles
     uniqueID: 67431407
     locked: 0
-  - name: FloatingText
+  - name: WoerldUI
     uniqueID: 3261894267
     locked: 0
   m_RenderingLayers:

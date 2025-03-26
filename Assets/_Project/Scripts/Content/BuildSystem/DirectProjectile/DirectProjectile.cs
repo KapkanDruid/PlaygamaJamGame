@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using System;
+using System.Threading;
 using UnityEngine;
 
 namespace Project.Content.BuildSystem
@@ -33,12 +34,18 @@ namespace Project.Content.BuildSystem
             _pauseHandler = pauseHandler;
 
             transform.right = moveDirection;
+
             _elapsedTime = 0;
-            _isActive = true;
+
             if (_animator != null)
+            {
                 _animator.SetTrigger(AnimatorHashes.ShootTrigger);
+                WaitForAnimation(() => _isActive = true).Forget();
+            }
+            else
+                _isActive = true;
         }
-         
+
         private void FixedUpdate()
         {
             if (_pauseHandler.IsPaused)
@@ -91,40 +98,49 @@ namespace Project.Content.BuildSystem
                 if (!isDamageDone)
                     return;
 
-                WaitForAnimation().Forget();
+                if (_animator != null)
+                {
+                    _animator.SetTrigger(AnimatorHashes.HitTrigger);
+                    _isActive = false;
+                    WaitForAnimation(() => gameObject.SetActive(false)).Forget();
+                }
+                else
+                    gameObject.SetActive(false);
             }
         }
 
-        private async UniTask WaitForAnimation()
+        private async UniTask WaitForAnimation(Action action)
         {
-            _isActive = false;
-
-            if (_animator != null)
+            try
             {
-                _animator.SetTrigger(AnimatorHashes.HitTrigger);
-
-                try
-                {
-                    await UniTask.WaitForFixedUpdate(this.GetCancellationTokenOnDestroy());
-                }
-                catch (OperationCanceledException)
-                {
-                    return;
-                }
-
-                AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-
-                try
-                {
-                    await UniTask.WaitForSeconds(stateInfo.length, cancellationToken: this.GetCancellationTokenOnDestroy());
-                }
-                catch (OperationCanceledException)
-                {
-                    return;
-                }
+                await UniTask.WaitForFixedUpdate(this.GetCancellationTokenOnDestroy());
+            }
+            catch (OperationCanceledException)
+            {
+                return;
             }
 
-            gameObject.SetActive(false);
+            AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+
+            try
+            {
+                await UniTask.WaitForSeconds(stateInfo.length, cancellationToken: this.GetCancellationTokenOnDestroy());
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
+
+            action?.Invoke();
+        }
+
+        private async UniTask WaitForCurrentAnimationState(Animator animator, CancellationToken cancellationToken)
+        {
+            await UniTask.WaitForFixedUpdate(cancellationToken);
+
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+            await UniTask.WaitForSeconds(stateInfo.length, cancellationToken: cancellationToken);
         }
     }
 }

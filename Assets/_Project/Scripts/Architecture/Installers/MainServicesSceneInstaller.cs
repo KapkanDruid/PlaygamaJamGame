@@ -48,6 +48,8 @@ namespace Project.Architecture
 
             Container.Bind<FloatingTextHandler>().AsSingle().NonLazy();
 
+            Container.Bind<UpgradeEffectController>().AsSingle().NonLazy();
+
             FactoriesInstaller.Install(Container);
         }
     }

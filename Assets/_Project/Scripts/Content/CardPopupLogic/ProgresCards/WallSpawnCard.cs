@@ -43,11 +43,13 @@ namespace Project.Content.UI
         {
             _button.onClick.AddListener(() => OnCardSelected?.Invoke(this));
 
-            if (_healthOriginal == null)
-                return;
-
             _dynamicData = _sceneData.WallDynamicData;
             _config = _dynamicData.Config;
+
+            _spawnAmount = _config.PlaceCardAmount;
+
+            if (_healthOriginal == null)
+                return;
 
             _healthOriginal.text = _config.MaxHealth.ToString();
             _healthModified.text = (_dynamicData.BuildingMaxHealth.Value - _config.MaxHealth).ToString();
