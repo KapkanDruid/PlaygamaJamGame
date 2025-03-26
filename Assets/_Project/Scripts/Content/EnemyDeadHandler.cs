@@ -34,14 +34,13 @@ namespace Project.Content
             if (_animator == null)
                 Debug.Log("_animator = null");
             if (_animator != null)
-                _animator.SetTrigger(AnimatorHashes.DeathTrigger);
+                _animator.SetBool(AnimatorHashes.IsDead, true);
+            _isDead = true;
+            OnDeath?.Invoke();
 
             await WaitForAnimationState();
 
-            OnDeath?.Invoke();
             _characterTransform.gameObject.SetActive(false);
-            _isDead = true;
-
         }
 
         private async UniTask WaitForAnimationState()
@@ -52,6 +51,7 @@ namespace Project.Content
             try
             {
                 await UniTask.WaitForFixedUpdate(_characterTransform.gameObject.GetCancellationTokenOnDestroy());
+                await UniTask.WaitForFixedUpdate(_characterTransform.gameObject.GetCancellationTokenOnDestroy());
             }
             catch (OperationCanceledException)
             {
@@ -60,6 +60,7 @@ namespace Project.Content
 
             AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
 
+            Debug.Log("animation lenght" + stateInfo.length);
 
             try
             {

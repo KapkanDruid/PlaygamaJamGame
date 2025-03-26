@@ -39,15 +39,11 @@ namespace Project.Content.UI
             _spawner = spawner;
             _sceneData = sceneData;
 
-            Debug.Log("Wall constructed");
-
             MainSceneBootstrap.OnServicesInitialized += Initialize;
         }
 
         private void Initialize()
         {
-            Debug.Log("Wall started");
-
             _button.onClick.AddListener(() => OnCardSelected?.Invoke(this));
 
             _dynamicData = _sceneData.WallDynamicData;
@@ -73,19 +69,8 @@ namespace Project.Content.UI
 
         private void OnEnable()
         {
-            Debug.Log("Wall active");
-
             if (_healthOriginal == null)
                 return;
-
-            if (_dynamicData == null)
-            {
-                Debug.Log("_dynamicData null");
-            }
-            if (_config == null)
-            {
-                Debug.Log("_config null");
-            }
 
             _healthModified.text = (_dynamicData.BuildingMaxHealth.Value - _config.MaxHealth).ToString();
             _healthSummarized.text = _config.MaxHealth.ToString();
