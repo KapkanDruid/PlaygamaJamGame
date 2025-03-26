@@ -11,6 +11,7 @@ namespace Project.Content.CoreGameLoopLogic
         [SerializeField] private TextMeshProUGUI _timerText;
         [SerializeField] private float _timeAnimationButtons = 1.5f;
         [SerializeField] private GameObject _buttonsContainer;
+        [SerializeField] private GameObject _panel;
 
         [Header("Win Menu")]
         [SerializeField] private RectTransform _background; 
@@ -45,6 +46,7 @@ namespace Project.Content.CoreGameLoopLogic
             _circle.gameObject.SetActive(false);
             _background.gameObject.SetActive(false);
             _buttonsContainer.SetActive(false);
+            _panel.SetActive(false);
             _background.transform.localScale = Vector3.zero;
 
             _buttons = _buttonsContainer.GetComponentsInChildren<Button>();
@@ -85,7 +87,7 @@ namespace Project.Content.CoreGameLoopLogic
         private void ShowDefeatedMenu()
         {
             _circle.gameObject.SetActive(true);
-
+            _panel.SetActive(true);
 
             _circle.DOAnchorPos(_centerPosition, _moveDuration).SetEase(Ease.OutQuad);
 
@@ -97,6 +99,7 @@ namespace Project.Content.CoreGameLoopLogic
         private void ShowVictoryMenu()
         {
             _background.gameObject.SetActive(true);
+            _panel.SetActive(true);
 
             _background.transform.DOScale(1f, _winTimeAnimationBackground)
                     .SetEase(Ease.OutQuad)
