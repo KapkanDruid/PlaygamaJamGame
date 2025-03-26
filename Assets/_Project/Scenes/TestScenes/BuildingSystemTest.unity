@@ -274,6 +274,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69557030}
   m_CullTransparentMesh: 1
+--- !u!114 &96192403 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2828740383251640489, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
+  m_PrefabInstance: {fileID: 1255740095}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a098a98b0d9e249a35c98f93d13f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260434342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,17 +1142,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8466721467557542195, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
   m_PrefabInstance: {fileID: 1195762052}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1023173076 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2223775968163161391, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
-  m_PrefabInstance: {fileID: 1255740095}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a098a98b0d9e249a35c98f93d13f7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1113193413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,7 +2064,7 @@ PrefabInstance:
     - target: {fileID: 4510169077041886917, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: '_cardsToTest.Array.data[2]'
       value: 
-      objectReference: {fileID: 1023173076}
+      objectReference: {fileID: 96192403}
     - target: {fileID: 4900232885564009308, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: _canvasRectTransform
       value: 

@@ -174,7 +174,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -219,6 +219,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -226,12 +239,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 3842
-        width: 239
-        height: 249
+        x: 0
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -248,12 +261,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_1
       rect:
         serializedVersion: 2
-        x: 273
-        y: 3842
-        width: 239
-        height: 244
+        x: 256
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -270,12 +283,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_2
       rect:
         serializedVersion: 2
-        x: 521
+        x: 512
         y: 3840
-        width: 239
-        height: 246
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -292,12 +305,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_3
       rect:
         serializedVersion: 2
-        x: 777
+        x: 768
         y: 3840
-        width: 239
-        height: 248
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -314,12 +327,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_4
       rect:
         serializedVersion: 2
-        x: 1297
-        y: 3842
-        width: 239
-        height: 249
+        x: 1280
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -336,12 +349,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_5
       rect:
         serializedVersion: 2
-        x: 1541
-        y: 3842
-        width: 245
-        height: 249
+        x: 1536
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -358,12 +371,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_6
       rect:
         serializedVersion: 2
-        x: 1797
-        y: 3842
-        width: 244
-        height: 248
+        x: 1792
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -380,12 +393,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_7
       rect:
         serializedVersion: 2
-        x: 2037
-        y: 3913
-        width: 7
-        height: 6
+        x: 2048
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -402,12 +415,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_8
       rect:
         serializedVersion: 2
-        x: 2069
-        y: 3841
-        width: 214
-        height: 255
+        x: 2304
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -424,12 +437,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_9
       rect:
         serializedVersion: 2
-        x: 2325
-        y: 3843
-        width: 214
-        height: 252
+        x: 2560
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -446,12 +459,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_10
       rect:
         serializedVersion: 2
-        x: 2581
-        y: 3843
-        width: 214
-        height: 248
+        x: 2816
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -468,12 +481,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_11
       rect:
         serializedVersion: 2
-        x: 2838
-        y: 3841
-        width: 214
-        height: 239
+        x: 3328
+        y: 3840
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -490,12 +503,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_12
       rect:
         serializedVersion: 2
-        x: 3351
+        x: 3584
         y: 3840
-        width: 214
+        width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -512,12 +525,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_13
       rect:
         serializedVersion: 2
-        x: 3597
+        x: 3840
         y: 3840
-        width: 219
-        height: 246
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -534,12 +547,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_14
       rect:
         serializedVersion: 2
-        x: 3858
-        y: 3841
-        width: 220
-        height: 239
+        x: 0
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -556,12 +569,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_15
       rect:
         serializedVersion: 2
-        x: 18
-        y: 3585
-        width: 219
-        height: 231
+        x: 256
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -578,12 +591,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_16
       rect:
         serializedVersion: 2
-        x: 295
-        y: 3583
-        width: 215
-        height: 257
+        x: 512
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -600,12 +613,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_17
       rect:
         serializedVersion: 2
-        x: 533
+        x: 768
         y: 3584
-        width: 214
+        width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -622,12 +635,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_18
       rect:
         serializedVersion: 2
-        x: 789
-        y: 3587
-        width: 214
-        height: 252
+        x: 1024
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -644,12 +657,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_19
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 3585
-        width: 214
-        height: 248
+        x: 1280
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -666,12 +679,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_20
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 3585
-        width: 214
-        height: 239
+        x: 1792
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -688,12 +701,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_21
       rect:
         serializedVersion: 2
-        x: 1804
+        x: 2048
         y: 3584
-        width: 214
+        width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -710,12 +723,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_22
       rect:
         serializedVersion: 2
-        x: 2049
-        y: 3585
-        width: 219
-        height: 246
+        x: 2304
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -732,12 +745,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_23
       rect:
         serializedVersion: 2
-        x: 2310
-        y: 3585
-        width: 220
-        height: 239
+        x: 2560
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -754,12 +767,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_24
       rect:
         serializedVersion: 2
-        x: 2572
-        y: 3585
-        width: 219
-        height: 231
+        x: 2816
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -773,37 +786,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmallCharactersAnimationAtlas_25
-      rect:
-        serializedVersion: 2
-        x: 2857
-        y: 3586
-        width: 213
-        height: 255
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ad5db2c275b798c0800000000000000
-      internalID: -3992523040142565980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SmallCharactersAnimationAtlas_26
       rect:
         serializedVersion: 2
         x: 3328
-        y: 3586
-        width: 213
-        height: 246
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -820,12 +811,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_27
       rect:
         serializedVersion: 2
-        x: 3592
-        y: 3586
-        width: 237
-        height: 205
+        x: 3584
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -842,12 +833,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_28
       rect:
         serializedVersion: 2
-        x: 3856
-        y: 3586
-        width: 222
-        height: 149
+        x: 3840
+        y: 3584
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -864,12 +855,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_29
       rect:
         serializedVersion: 2
-        x: 4070
-        y: 3713
-        width: 7
-        height: 6
+        x: 0
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -886,12 +877,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_30
       rect:
         serializedVersion: 2
-        x: 8
-        y: 3334
-        width: 215
-        height: 249
+        x: 256
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -905,37 +896,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmallCharactersAnimationAtlas_31
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 3333
-        width: 215
-        height: 252
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e982de212a1b41ae0800000000000000
-      internalID: -1579442259639850850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SmallCharactersAnimationAtlas_32
       rect:
         serializedVersion: 2
-        x: 783
-        y: 3329
-        width: 224
-        height: 249
+        x: 768
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -952,12 +921,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_33
       rect:
         serializedVersion: 2
-        x: 1039
+        x: 1024
         y: 3328
-        width: 224
-        height: 246
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -974,12 +943,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_34
       rect:
         serializedVersion: 2
-        x: 1296
+        x: 1280
         y: 3328
-        width: 224
-        height: 242
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -996,12 +965,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_35
       rect:
         serializedVersion: 2
-        x: 1552
+        x: 1536
         y: 3328
-        width: 224
-        height: 244
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1018,12 +987,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_36
       rect:
         serializedVersion: 2
-        x: 1808
-        y: 3329
-        width: 224
-        height: 246
+        x: 1792
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1040,12 +1009,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_37
       rect:
         serializedVersion: 2
-        x: 2310
-        y: 3329
-        width: 224
-        height: 249
+        x: 2304
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1062,12 +1031,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_38
       rect:
         serializedVersion: 2
-        x: 2566
-        y: 3329
-        width: 224
-        height: 245
+        x: 2560
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1084,12 +1053,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_39
       rect:
         serializedVersion: 2
-        x: 2822
-        y: 3329
-        width: 224
-        height: 249
+        x: 2816
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1106,12 +1075,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_40
       rect:
         serializedVersion: 2
-        x: 3077
-        y: 3329
-        width: 233
-        height: 245
+        x: 3072
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1128,12 +1097,12 @@ TextureImporter:
       name: SmallCharactersAnimationAtlas_41
       rect:
         serializedVersion: 2
-        x: 3334
-        y: 3329
-        width: 243
-        height: 245
+        x: 3328
+        y: 3328
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1146,11 +1115,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_46
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf73f5feb0ab4d144909f2867ec2732b
+      internalID: -1018199388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_47
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f25a086d6ab39468f6b2fbc71d0ac5
+      internalID: 453088266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eea585e3bceedee4780cd8087be03c80
     internalID: 0
     vertices: []
     indices: 
@@ -1159,7 +1172,55 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SmallCharactersAnimationAtlas_0: -1565021475698987699
+      SmallCharactersAnimationAtlas_1: 7591622771307073176
+      SmallCharactersAnimationAtlas_10: -4441084163805319270
+      SmallCharactersAnimationAtlas_11: -7588098899566363810
+      SmallCharactersAnimationAtlas_12: -2902718998315264882
+      SmallCharactersAnimationAtlas_13: -8581550210039090808
+      SmallCharactersAnimationAtlas_14: 8184549083306418077
+      SmallCharactersAnimationAtlas_15: 8855601983008448779
+      SmallCharactersAnimationAtlas_16: -3762614807203339305
+      SmallCharactersAnimationAtlas_17: 6308078058338781890
+      SmallCharactersAnimationAtlas_18: -5262010325206561049
+      SmallCharactersAnimationAtlas_19: -3846130861610136843
+      SmallCharactersAnimationAtlas_2: -6563574939354104469
+      SmallCharactersAnimationAtlas_20: -1126467762561639514
+      SmallCharactersAnimationAtlas_21: -9092031314612007169
+      SmallCharactersAnimationAtlas_22: 1039849391791728483
+      SmallCharactersAnimationAtlas_23: 1137358055648738102
+      SmallCharactersAnimationAtlas_24: -4117170943205574887
+      SmallCharactersAnimationAtlas_25: -3992523040142565980
+      SmallCharactersAnimationAtlas_26: 3960838619169853641
+      SmallCharactersAnimationAtlas_27: 4270258896164003124
+      SmallCharactersAnimationAtlas_28: 8766682914388774662
+      SmallCharactersAnimationAtlas_29: -5026549018093157015
+      SmallCharactersAnimationAtlas_3: 1377886680606175926
+      SmallCharactersAnimationAtlas_30: -5641594131337760388
+      SmallCharactersAnimationAtlas_31: -1579442259639850850
+      SmallCharactersAnimationAtlas_32: -1678078665271719279
+      SmallCharactersAnimationAtlas_33: -2671777908757837023
+      SmallCharactersAnimationAtlas_34: -5278839743819393371
+      SmallCharactersAnimationAtlas_35: -210311801808005133
+      SmallCharactersAnimationAtlas_36: -371014725080123636
+      SmallCharactersAnimationAtlas_37: 6948398347135862936
+      SmallCharactersAnimationAtlas_38: 7021808877247927689
+      SmallCharactersAnimationAtlas_39: 1380431166867633742
+      SmallCharactersAnimationAtlas_4: -8806622894841237101
+      SmallCharactersAnimationAtlas_40: 6529341403640344326
+      SmallCharactersAnimationAtlas_41: 5979689027446989293
+      SmallCharactersAnimationAtlas_42: 2136153315
+      SmallCharactersAnimationAtlas_43: 109701252
+      SmallCharactersAnimationAtlas_44: -1646533511
+      SmallCharactersAnimationAtlas_45: 936490391
+      SmallCharactersAnimationAtlas_46: -1018199388
+      SmallCharactersAnimationAtlas_47: 453088266
+      SmallCharactersAnimationAtlas_5: 8817239172560151762
+      SmallCharactersAnimationAtlas_6: -851063892124548875
+      SmallCharactersAnimationAtlas_7: 917236861568296707
+      SmallCharactersAnimationAtlas_8: 7417976456012686219
+      SmallCharactersAnimationAtlas_9: 3237606623714076770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

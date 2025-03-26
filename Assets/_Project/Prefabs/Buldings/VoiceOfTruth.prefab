@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _projectilePoolSize: 0
+    _projectilePoolSize: 10
     _projectilePrefab: {fileID: 5940939131329807596, guid: 5397c52eeb339b048893cea8b3279d5c, type: 3}
     _gridPivotTransform: {fileID: 8215651618980773562}
     _spriteRenderers:
