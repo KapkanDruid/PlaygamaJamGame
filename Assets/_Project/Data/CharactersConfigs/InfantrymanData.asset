@@ -19,3 +19,5 @@ MonoBehaviour:
   _attackRange: 3
   _type: 0
   _sensorRadius: 3
+  _upgradeSprite: {fileID: 985944560047886007, guid: fe7e2a4440f06f947831e478edcbe2cc, type: 3}
+  _levelUpgrade: 0
