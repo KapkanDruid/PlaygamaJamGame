@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: VoiceOfThruthHealthModifier
   m_EditorClassIdentifier: 
   _turretType: 0
-  _addValue: 100
+  _addValue: 10

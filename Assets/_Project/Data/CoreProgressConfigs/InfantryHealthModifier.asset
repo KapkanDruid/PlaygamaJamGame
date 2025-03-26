@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: InfantryHealthModifier
   m_EditorClassIdentifier: 
   _barracksType: 0
-  _addValue: 120
+  _addValue: 2
