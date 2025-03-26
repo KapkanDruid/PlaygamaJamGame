@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: ab7bdc03e0a5a0d418895f585000a2ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4812168839450927827
+    second: UIGamplayAtlas_0
+  - first:
+      213: -5921834255263360390
+    second: UIGamplayAtlas_1
+  - first:
+      213: 24650247002423987
+    second: UIGamplayAtlas_2
+  - first:
+      213: 5318060357330989415
+    second: UIGamplayAtlas_3
+  - first:
+      213: 9218628006661271131
+    second: UIGamplayAtlas_4
+  - first:
+      213: -5509886358594882460
+    second: UIGamplayAtlas_5
+  - first:
+      213: -4165105641271973925
+    second: UIGamplayAtlas_6
+  - first:
+      213: 8314099875469269116
+    second: UIGamplayAtlas_7
+  - first:
+      213: -7891413557188678436
+    second: UIGamplayAtlas_8
+  - first:
+      213: 8453828485764563841
+    second: UIGamplayAtlas_9
+  - first:
+      213: -1582195028959219662
+    second: UIGamplayAtlas_10
+  - first:
+      213: 3092403307695884081
+    second: UIGamplayAtlas_11
+  - first:
+      213: 4374019662234310470
+    second: UIGamplayAtlas_12
+  - first:
+      213: -7077909031782719371
+    second: UIGamplayAtlas_13
+  - first:
+      213: 3568532780975099238
+    second: UIGamplayAtlas_14
+  - first:
+      213: -6595063408277508999
+    second: UIGamplayAtlas_15
+  - first:
+      213: 3947232774772455580
+    second: UIGamplayAtlas_16
+  - first:
+      213: -3525439543730041300
+    second: UIGamplayAtlas_17
+  - first:
+      213: 6026062717622468470
+    second: UIGamplayAtlas_18
+  - first:
+      213: -8710464964052659737
+    second: UIGamplayAtlas_19
+  - first:
+      213: 7964648956037437484
+    second: UIGamplayAtlas_20
+  - first:
+      213: 420390656335641452
+    second: UIGamplayAtlas_21
+  - first:
+      213: 787397687081346645
+    second: UIGamplayAtlas_22
+  - first:
+      213: 968057193132027294
+    second: UIGamplayAtlas_23
+  - first:
+      213: -6485467751529471250
+    second: UIGamplayAtlas_24
+  - first:
+      213: 1060797546222473613
+    second: UIGamplayAtlas_25
+  - first:
+      213: 6927848176431161257
+    second: UIGamplayAtlas_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UIGamplayAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 2462
+        width: 1057
+        height: 1556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2dd25dbfedb73db0800000000000000
+      internalID: -4812168839450927827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 3883
+        width: 1525
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a994cbe1b61dda0800000000000000
+      internalID: -5921834255263360390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 2710
+        y: 3901
+        width: 78
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b28430e443975000800000000000000
+      internalID: 24650247002423987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 2882
+        y: 3903
+        width: 354
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761fcccf7bb8dc940800000000000000
+      internalID: 5318060357330989415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 3727
+        width: 1499
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e238564552fef70800000000000000
+      internalID: 9218628006661271131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 2885
+        y: 3772
+        width: 66
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4647e2bac83f883b0800000000000000
+      internalID: -5509886358594882460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 3583
+        width: 1499
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd72208ac729236c0800000000000000
+      internalID: -4165105641271973925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2601
+        width: 1630
+        height: 929
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78177869cd916370800000000000000
+      internalID: 8314099875469269116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 3380
+        width: 1169
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc21142e211c7290800000000000000
+      internalID: -7891413557188678436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 3183
+        width: 1169
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183431ea738025570800000000000000
+      internalID: 8453828485764563841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 3006
+        width: 1144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2303f75010aea0ae0800000000000000
+      internalID: -1582195028959219662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 2809
+        width: 1144
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137c4719c6c6aea20800000000000000
+      internalID: 3092403307695884081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 695
+        width: 3008
+        height: 1696
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647dc0055b3a3bc30800000000000000
+      internalID: 4374019662234310470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 2018
+        width: 737
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570ef086c3736cd90800000000000000
+      internalID: -7077909031782719371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 1623
+        width: 737
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d8b5b48a9f58130800000000000000
+      internalID: 3568532780975099238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1215
+        width: 395
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c2176b5c0a974a0800000000000000
+      internalID: -6595063408277508999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 3569
+        y: 1215
+        width: 394
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98771a9b4367c630800000000000000
+      internalID: 3947232774772455580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 3124
+        y: 730
+        width: 201
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e0bded96f131fc0800000000000000
+      internalID: -3525439543730041300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 3411
+        y: 854
+        width: 111
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fbc1e3d10e0a350800000000000000
+      internalID: 6026062717622468470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 3678
+        y: 727
+        width: 349
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1d725e3463e1780800000000000000
+      internalID: -8710464964052659737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 499
+        width: 3508
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c281c49e60e188e60800000000000000
+      internalID: 7964648956037437484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 3574
+        y: 537
+        width: 157
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b77c9131785d500800000000000000
+      internalID: 420390656335641452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 350
+        width: 3459
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556a27b46066dea00800000000000000
+      internalID: 787397687081346645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 246
+        width: 353
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d65ee53ea3f6d00800000000000000
+      internalID: 968057193132027294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 192
+        width: 3647
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2a5d3017dfef5a0800000000000000
+      internalID: -6485467751529471250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 23
+        width: 3470
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8152397fb5b8be00800000000000000
+      internalID: 1060797546222473613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIGamplayAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 3632
+        y: 22
+        width: 320
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af540e0639a42060800000000000000
+      internalID: 6927848176431161257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 345764cbbcf19e34bbf664fff25f741e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UIGamplayAtlas_0: -4812168839450927827
+      UIGamplayAtlas_1: -5921834255263360390
+      UIGamplayAtlas_10: -1582195028959219662
+      UIGamplayAtlas_11: 3092403307695884081
+      UIGamplayAtlas_12: 4374019662234310470
+      UIGamplayAtlas_13: -7077909031782719371
+      UIGamplayAtlas_14: 3568532780975099238
+      UIGamplayAtlas_15: -6595063408277508999
+      UIGamplayAtlas_16: 3947232774772455580
+      UIGamplayAtlas_17: -3525439543730041300
+      UIGamplayAtlas_18: 6026062717622468470
+      UIGamplayAtlas_19: -8710464964052659737
+      UIGamplayAtlas_2: 24650247002423987
+      UIGamplayAtlas_20: 7964648956037437484
+      UIGamplayAtlas_21: 420390656335641452
+      UIGamplayAtlas_22: 787397687081346645
+      UIGamplayAtlas_23: 968057193132027294
+      UIGamplayAtlas_24: -6485467751529471250
+      UIGamplayAtlas_25: 1060797546222473613
+      UIGamplayAtlas_26: 6927848176431161257
+      UIGamplayAtlas_3: 5318060357330989415
+      UIGamplayAtlas_4: 9218628006661271131
+      UIGamplayAtlas_5: -5509886358594882460
+      UIGamplayAtlas_6: -4165105641271973925
+      UIGamplayAtlas_7: 8314099875469269116
+      UIGamplayAtlas_8: -7891413557188678436
+      UIGamplayAtlas_9: 8453828485764563841
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

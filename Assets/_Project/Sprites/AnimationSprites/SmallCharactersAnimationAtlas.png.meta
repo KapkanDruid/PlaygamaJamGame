@@ -1,0 +1,1228 @@
+fileFormatVersion: 2
+guid: e7da4401fe367a347bf23872c44e6702
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1565021475698987699
+    second: SmallCharactersAnimationAtlas_0
+  - first:
+      213: 7591622771307073176
+    second: SmallCharactersAnimationAtlas_1
+  - first:
+      213: -6563574939354104469
+    second: SmallCharactersAnimationAtlas_2
+  - first:
+      213: 1377886680606175926
+    second: SmallCharactersAnimationAtlas_3
+  - first:
+      213: -8806622894841237101
+    second: SmallCharactersAnimationAtlas_4
+  - first:
+      213: 8817239172560151762
+    second: SmallCharactersAnimationAtlas_5
+  - first:
+      213: -851063892124548875
+    second: SmallCharactersAnimationAtlas_6
+  - first:
+      213: 917236861568296707
+    second: SmallCharactersAnimationAtlas_7
+  - first:
+      213: 7417976456012686219
+    second: SmallCharactersAnimationAtlas_8
+  - first:
+      213: 3237606623714076770
+    second: SmallCharactersAnimationAtlas_9
+  - first:
+      213: -4441084163805319270
+    second: SmallCharactersAnimationAtlas_10
+  - first:
+      213: -7588098899566363810
+    second: SmallCharactersAnimationAtlas_11
+  - first:
+      213: -2902718998315264882
+    second: SmallCharactersAnimationAtlas_12
+  - first:
+      213: -8581550210039090808
+    second: SmallCharactersAnimationAtlas_13
+  - first:
+      213: 8184549083306418077
+    second: SmallCharactersAnimationAtlas_14
+  - first:
+      213: 8855601983008448779
+    second: SmallCharactersAnimationAtlas_15
+  - first:
+      213: -3762614807203339305
+    second: SmallCharactersAnimationAtlas_16
+  - first:
+      213: 6308078058338781890
+    second: SmallCharactersAnimationAtlas_17
+  - first:
+      213: -5262010325206561049
+    second: SmallCharactersAnimationAtlas_18
+  - first:
+      213: -3846130861610136843
+    second: SmallCharactersAnimationAtlas_19
+  - first:
+      213: -1126467762561639514
+    second: SmallCharactersAnimationAtlas_20
+  - first:
+      213: -9092031314612007169
+    second: SmallCharactersAnimationAtlas_21
+  - first:
+      213: 1039849391791728483
+    second: SmallCharactersAnimationAtlas_22
+  - first:
+      213: 1137358055648738102
+    second: SmallCharactersAnimationAtlas_23
+  - first:
+      213: -4117170943205574887
+    second: SmallCharactersAnimationAtlas_24
+  - first:
+      213: -3992523040142565980
+    second: SmallCharactersAnimationAtlas_25
+  - first:
+      213: 3960838619169853641
+    second: SmallCharactersAnimationAtlas_26
+  - first:
+      213: 4270258896164003124
+    second: SmallCharactersAnimationAtlas_27
+  - first:
+      213: 8766682914388774662
+    second: SmallCharactersAnimationAtlas_28
+  - first:
+      213: -5026549018093157015
+    second: SmallCharactersAnimationAtlas_29
+  - first:
+      213: -5641594131337760388
+    second: SmallCharactersAnimationAtlas_30
+  - first:
+      213: -1579442259639850850
+    second: SmallCharactersAnimationAtlas_31
+  - first:
+      213: -1678078665271719279
+    second: SmallCharactersAnimationAtlas_32
+  - first:
+      213: -2671777908757837023
+    second: SmallCharactersAnimationAtlas_33
+  - first:
+      213: -5278839743819393371
+    second: SmallCharactersAnimationAtlas_34
+  - first:
+      213: -210311801808005133
+    second: SmallCharactersAnimationAtlas_35
+  - first:
+      213: -371014725080123636
+    second: SmallCharactersAnimationAtlas_36
+  - first:
+      213: 6948398347135862936
+    second: SmallCharactersAnimationAtlas_37
+  - first:
+      213: 7021808877247927689
+    second: SmallCharactersAnimationAtlas_38
+  - first:
+      213: 1380431166867633742
+    second: SmallCharactersAnimationAtlas_39
+  - first:
+      213: 6529341403640344326
+    second: SmallCharactersAnimationAtlas_40
+  - first:
+      213: 5979689027446989293
+    second: SmallCharactersAnimationAtlas_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4daa1b724de74ae0800000000000000
+      internalID: -1565021475698987699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e468830bcda5960800000000000000
+      internalID: 7591622771307073176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d74233e5f79e4a0800000000000000
+      internalID: -6563574939354104469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2f54ab2ac3f1310800000000000000
+      internalID: 1377886680606175926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3917a2af22798c580800000000000000
+      internalID: -8806622894841237101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d46b1ccf402d5a70800000000000000
+      internalID: 8817239172560151762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f041c436e96034f0800000000000000
+      internalID: -851063892124548875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3072cacd01eaabc00800000000000000
+      internalID: 917236861568296707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83e8dcd842f1f660800000000000000
+      internalID: 7417976456012686219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268ede8121a4eec20800000000000000
+      internalID: 3237606623714076770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f65ce9b791e52c0800000000000000
+      internalID: -4441084163805319270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b70da1148a1b690800000000000000
+      internalID: -7588098899566363810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8414a6437877b7d0800000000000000
+      internalID: -2902718998315264882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3840
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881f07c0d8538e880800000000000000
+      internalID: -8581550210039090808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f5a35170c559170800000000000000
+      internalID: 8184549083306418077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01a675a51b65ea70800000000000000
+      internalID: 8855601983008448779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3250e94c188cbc0800000000000000
+      internalID: -3762614807203339305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca08ba829bca8750800000000000000
+      internalID: 6308078058338781890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee00a11d7599f6b0800000000000000
+      internalID: -5262010325206561049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa8f0aeb5ccf9ac0800000000000000
+      internalID: -3846130861610136843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab9599c98bfd50f0800000000000000
+      internalID: -1126467762561639514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffec2d5e0bd92d180800000000000000
+      internalID: -9092031314612007169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367e6a133894e6e00800000000000000
+      internalID: 1039849391791728483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b3f592025b8cf00800000000000000
+      internalID: 1137358055648738102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917fba247dedcd6c0800000000000000
+      internalID: -4117170943205574887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0944c1db9b7f630800000000000000
+      internalID: 3960838619169853641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d9ecc57d1034b30800000000000000
+      internalID: 4270258896164003124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3584
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f01aaa9a389a970800000000000000
+      internalID: 8766682914388774662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9650872cc4c1e3ab0800000000000000
+      internalID: -5026549018093157015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c713faa270805b1b0800000000000000
+      internalID: -5641594131337760388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a4153485446b8e0800000000000000
+      internalID: -1678078665271719279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12bc0cdc520fbead0800000000000000
+      internalID: -2671777908757837023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a65e63b83bcdb6b0800000000000000
+      internalID: -5278839743819393371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f75921d782d41df0800000000000000
+      internalID: -210311801808005133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07f821c214e9daf0800000000000000
+      internalID: -371014725080123636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898c1f68b7bad6060800000000000000
+      internalID: 6948398347135862936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_38
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9851c0188f9727160800000000000000
+      internalID: 7021808877247927689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_39
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46f50a15d6482310800000000000000
+      internalID: 1380431166867633742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_40
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60fab35a961ec9a50800000000000000
+      internalID: 6529341403640344326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_41
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3328
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1674c1d7f1cf250800000000000000
+      internalID: 5979689027446989293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_46
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf73f5feb0ab4d144909f2867ec2732b
+      internalID: -1018199388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallCharactersAnimationAtlas_47
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f25a086d6ab39468f6b2fbc71d0ac5
+      internalID: 453088266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: eea585e3bceedee4780cd8087be03c80
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SmallCharactersAnimationAtlas_0: -1565021475698987699
+      SmallCharactersAnimationAtlas_1: 7591622771307073176
+      SmallCharactersAnimationAtlas_10: -4441084163805319270
+      SmallCharactersAnimationAtlas_11: -7588098899566363810
+      SmallCharactersAnimationAtlas_12: -2902718998315264882
+      SmallCharactersAnimationAtlas_13: -8581550210039090808
+      SmallCharactersAnimationAtlas_14: 8184549083306418077
+      SmallCharactersAnimationAtlas_15: 8855601983008448779
+      SmallCharactersAnimationAtlas_16: -3762614807203339305
+      SmallCharactersAnimationAtlas_17: 6308078058338781890
+      SmallCharactersAnimationAtlas_18: -5262010325206561049
+      SmallCharactersAnimationAtlas_19: -3846130861610136843
+      SmallCharactersAnimationAtlas_2: -6563574939354104469
+      SmallCharactersAnimationAtlas_20: -1126467762561639514
+      SmallCharactersAnimationAtlas_21: -9092031314612007169
+      SmallCharactersAnimationAtlas_22: 1039849391791728483
+      SmallCharactersAnimationAtlas_23: 1137358055648738102
+      SmallCharactersAnimationAtlas_24: -4117170943205574887
+      SmallCharactersAnimationAtlas_25: -3992523040142565980
+      SmallCharactersAnimationAtlas_26: 3960838619169853641
+      SmallCharactersAnimationAtlas_27: 4270258896164003124
+      SmallCharactersAnimationAtlas_28: 8766682914388774662
+      SmallCharactersAnimationAtlas_29: -5026549018093157015
+      SmallCharactersAnimationAtlas_3: 1377886680606175926
+      SmallCharactersAnimationAtlas_30: -5641594131337760388
+      SmallCharactersAnimationAtlas_31: -1579442259639850850
+      SmallCharactersAnimationAtlas_32: -1678078665271719279
+      SmallCharactersAnimationAtlas_33: -2671777908757837023
+      SmallCharactersAnimationAtlas_34: -5278839743819393371
+      SmallCharactersAnimationAtlas_35: -210311801808005133
+      SmallCharactersAnimationAtlas_36: -371014725080123636
+      SmallCharactersAnimationAtlas_37: 6948398347135862936
+      SmallCharactersAnimationAtlas_38: 7021808877247927689
+      SmallCharactersAnimationAtlas_39: 1380431166867633742
+      SmallCharactersAnimationAtlas_4: -8806622894841237101
+      SmallCharactersAnimationAtlas_40: 6529341403640344326
+      SmallCharactersAnimationAtlas_41: 5979689027446989293
+      SmallCharactersAnimationAtlas_42: 2136153315
+      SmallCharactersAnimationAtlas_43: 109701252
+      SmallCharactersAnimationAtlas_44: -1646533511
+      SmallCharactersAnimationAtlas_45: 936490391
+      SmallCharactersAnimationAtlas_46: -1018199388
+      SmallCharactersAnimationAtlas_47: 453088266
+      SmallCharactersAnimationAtlas_5: 8817239172560151762
+      SmallCharactersAnimationAtlas_6: -851063892124548875
+      SmallCharactersAnimationAtlas_7: 917236861568296707
+      SmallCharactersAnimationAtlas_8: 7417976456012686219
+      SmallCharactersAnimationAtlas_9: 3237606623714076770
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2974ab7131b81814685a353ef44b2420, type: 3}
+  m_Name: LevelExperienceConfig
+  m_EditorClassIdentifier: 
+  _experienceData:
+  - _level: 1
+    _pointsToReach: 10
+  - _level: 2
+    _pointsToReach: 10
+  - _level: 3
+    _pointsToReach: 10
+  - _level: 4
+    _pointsToReach: 10
+  - _level: 5
+    _pointsToReach: 10
+  - _level: 6
+    _pointsToReach: 30
+  - _level: 7
+    _pointsToReach: 30
+  - _level: 8
+    _pointsToReach: 30
+  - _level: 9
+    _pointsToReach: 30
+  - _level: 10
+    _pointsToReach: 30
+  - _level: 6
+    _pointsToReach: 30
+  - _level: 11
+    _pointsToReach: 30
+  - _level: 12
+    _pointsToReach: 30
+  - _level: 13
+    _pointsToReach: 30
+  - _level: 14
+    _pointsToReach: 30
+  - _level: 14
+    _pointsToReach: 30
+  - _level: 14
+    _pointsToReach: 30

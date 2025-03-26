@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: a2c736789065f804683935a70fc2850f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3524819080866204042
+    second: TextureBuildingsAtlas_0
+  - first:
+      213: 6595155308750756299
+    second: TextureBuildingsAtlas_1
+  - first:
+      213: -6336575901924993829
+    second: TextureBuildingsAtlas_2
+  - first:
+      213: -5817419687718861913
+    second: TextureBuildingsAtlas_3
+  - first:
+      213: 6808712457271782290
+    second: TextureBuildingsAtlas_4
+  - first:
+      213: -8305674533445338520
+    second: TextureBuildingsAtlas_5
+  - first:
+      213: 4241277631858605643
+    second: TextureBuildingsAtlas_6
+  - first:
+      213: 8572822790430759875
+    second: TextureBuildingsAtlas_7
+  - first:
+      213: -7629647402421387918
+    second: TextureBuildingsAtlas_8
+  - first:
+      213: 2123485854167381099
+    second: TextureBuildingsAtlas_9
+  - first:
+      213: -8545552510587657679
+    second: TextureBuildingsAtlas_10
+  - first:
+      213: 8519531880729810041
+    second: TextureBuildingsAtlas_11
+  - first:
+      213: 5076041496473965568
+    second: TextureBuildingsAtlas_12
+  - first:
+      213: 4116100732020008564
+    second: TextureBuildingsAtlas_13
+  - first:
+      213: 1677078749681311313
+    second: TextureBuildingsAtlas_14
+  - first:
+      213: 6439708836315979734
+    second: TextureBuildingsAtlas_15
+  - first:
+      213: -1596336144846953883
+    second: TextureBuildingsAtlas_16
+  - first:
+      213: -295319604562396555
+    second: TextureBuildingsAtlas_17
+  - first:
+      213: -2514827791619496468
+    second: TextureBuildingsAtlas_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3320
+        width: 1020
+        height: 765
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6767373a8b3551fc0800000000000000
+      internalID: -3524819080866204042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 3326
+        width: 1027
+        height: 767
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9de988fc2b68b50800000000000000
+      internalID: 6595155308750756299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 3575
+        width: 507
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4d5713ac5ff08a0800000000000000
+      internalID: -6336575901924993829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 3646
+        width: 310
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a34724bd9f544fa0800000000000000
+      internalID: -5817419687718861913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 3822
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b2671e7e76d7e50800000000000000
+      internalID: 6808712457271782290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 3554
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a7bf564015cbc80800000000000000
+      internalID: -8305674533445338520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2535
+        width: 1001
+        height: 762
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4efdb0f88b0cda30800000000000000
+      internalID: 4241277631858605643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 2526
+        width: 1010
+        height: 762
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb9ff938e8c8f670800000000000000
+      internalID: 8572822790430759875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 3057
+        width: 499
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27df0317c1c0e1690800000000000000
+      internalID: -7629647402421387918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 3158
+        width: 223
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64b6373223287d10800000000000000
+      internalID: 2123485854167381099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 3284
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132a9f49449186980800000000000000
+      internalID: -8545552510587657679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 2518
+        width: 504
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 974148b6b157b3670800000000000000
+      internalID: 8519531880729810041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 2690
+        y: 2508
+        width: 265
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0041976d8d8b17640800000000000000
+      internalID: 5076041496473965568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 3013
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47627c7cec35f1930800000000000000
+      internalID: 4116100732020008564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 2745
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e5c1fbc3e264710800000000000000
+      internalID: 1677078749681311313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1759
+        width: 1008
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfde8d41117e5950800000000000000
+      internalID: 6439708836315979734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1765
+        width: 1005
+        height: 753
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562e748ebbca8d9e0800000000000000
+      internalID: -1596336144846953883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 2474
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a79d26260d6ebf0800000000000000
+      internalID: -295319604562396555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 2205
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce56d399279891dd0800000000000000
+      internalID: -2514827791619496468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TextureBuildingsAtlas_0: -3524819080866204042
+      TextureBuildingsAtlas_1: 6595155308750756299
+      TextureBuildingsAtlas_10: -8545552510587657679
+      TextureBuildingsAtlas_11: 8519531880729810041
+      TextureBuildingsAtlas_12: 5076041496473965568
+      TextureBuildingsAtlas_13: 4116100732020008564
+      TextureBuildingsAtlas_14: 1677078749681311313
+      TextureBuildingsAtlas_15: 6439708836315979734
+      TextureBuildingsAtlas_16: -1596336144846953883
+      TextureBuildingsAtlas_17: -295319604562396555
+      TextureBuildingsAtlas_18: -2514827791619496468
+      TextureBuildingsAtlas_2: -6336575901924993829
+      TextureBuildingsAtlas_3: -5817419687718861913
+      TextureBuildingsAtlas_4: 6808712457271782290
+      TextureBuildingsAtlas_5: -8305674533445338520
+      TextureBuildingsAtlas_6: 4241277631858605643
+      TextureBuildingsAtlas_7: 8572822790430759875
+      TextureBuildingsAtlas_8: -7629647402421387918
+      TextureBuildingsAtlas_9: 2123485854167381099
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
