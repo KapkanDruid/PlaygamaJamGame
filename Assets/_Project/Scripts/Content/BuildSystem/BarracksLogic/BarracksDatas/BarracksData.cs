@@ -33,8 +33,8 @@ namespace Project.Content.BuildSystem
         public Vector3 SpawnPosition => _spawnPosition.position;
         public int Capacity => _config.Capacity;
         public float SpawnCooldown => _config.SpawnCooldown;
-        public float UnitDamageModifier => _dynamicData.UnitDamageModifier;
-        public float UnitHealthModifier => _dynamicData.UnitHealthModifier;
+        public float UnitDamageModifier => _dynamicData.UnitDamageModifier.Value;
+        public float UnitHealthModifier => _dynamicData.UnitHealthModifier.Value;
 
         public IReactiveProperty<float> Health => _dynamicData.BuildingMaxHealth;
 

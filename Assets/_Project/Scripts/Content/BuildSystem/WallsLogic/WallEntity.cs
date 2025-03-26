@@ -8,11 +8,13 @@ namespace Project.Content.BuildSystem
     public class WallEntity : MonoBehaviour, IEntity
     {
         [SerializeField] private WallData _data;
+        private WallDynamicData _dynamicData;
 
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
         private GridPlaceSystem _placeSystem;
         private SceneData _sceneData;
+        private UpgradeEffectController _upgradeEffectController;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
@@ -22,7 +24,7 @@ namespace Project.Content.BuildSystem
         public class Factory : PlaceholderFactory<WallEntity> { }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, SceneData sceneData)
+        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, SceneData sceneData, UpgradeEffectController upgradeEffectController)
         {
             List<object> components = new();
 
@@ -30,6 +32,7 @@ namespace Project.Content.BuildSystem
             _healthHandler = healthHandler;
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
+            _upgradeEffectController = upgradeEffectController;
 
             components.Add(_placeComponent);
             components.Add(_healthHandler);
@@ -48,16 +51,24 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
-            _data.Construct(_sceneData.WallDynamicData);
+            _dynamicData = _sceneData.WallDynamicData;
+
+            _data.Construct(_dynamicData);
             _healthHandler.Initialize();
             _placeComponent.Initialize();
 
             _healthHandler.OnDead += DestroyThisAsync;
+            _dynamicData.OnDataUpdate += OnDataUpdate;
 
             if (_isRuntimeCreated)
                 return;
 
             _placeSystem.PLaceOnGrid(_placeComponent);
+        }
+
+        private void OnDataUpdate()
+        {
+            _upgradeEffectController.PlaySingleEffect(transform.position);
         }
 
         private async void DestroyThisAsync()
@@ -82,6 +93,7 @@ namespace Project.Content.BuildSystem
         private void OnDestroy()
         {
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+            _dynamicData.OnDataUpdate -= OnDataUpdate;
         }
     }
 }

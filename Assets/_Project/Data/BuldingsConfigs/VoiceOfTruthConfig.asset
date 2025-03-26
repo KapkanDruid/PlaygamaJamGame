@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _rotateSpeed: 5
-  _rotationThreshold: 1
+  _rotationThreshold: 3
   _projectileSpeed: 7
   _projectileLifeTime: 5
   _projectileDamage: 10

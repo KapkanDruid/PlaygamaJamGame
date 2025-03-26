@@ -1,10 +1,12 @@
 ﻿using Project.Content.ReactiveProperty;
+using System;
 
 namespace Project.Content.BuildSystem
 {
     public class WallDynamicData
     {
         private WallConfig _config;
+        public event Action OnDataUpdate;
 
         private ReactiveProperty<float> _buildingMaxHealth = new ReactiveProperty<float>();
         public ReactiveProperty<float> BuildingMaxHealth => _buildingMaxHealth;
@@ -15,6 +17,7 @@ namespace Project.Content.BuildSystem
             _config = config;
 
             _buildingMaxHealth.Value = _config.MaxHealth;
+            _buildingMaxHealth.OnValueChanged += (x) => OnDataUpdate?.Invoke();
         }
     }
 }

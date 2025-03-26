@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4880828179426428193}
   - component: {fileID: 2334966645388040572}
   m_Layer: 0
-  m_Name: SoldiersBullet
+  m_Name: FalseBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3758381730119776299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.1494465, y: -3.7512677, z: -0.026573485}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 67431407
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4808049042429277755, guid: 12dbef2a44a008b4e9d8c60373598362, type: 3}
+  m_Sprite: {fileID: 7202078271966134534, guid: 12dbef2a44a008b4e9d8c60373598362, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -220,7 +220,7 @@ Animator:
   m_GameObject: {fileID: 8171554483100648430}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bc6d7f39585941048865ed4f8abffec6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9721cbcabf440cd429575fa8e01ccf6d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

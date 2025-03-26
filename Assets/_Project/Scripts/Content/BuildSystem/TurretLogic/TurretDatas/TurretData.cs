@@ -48,9 +48,7 @@ namespace Project.Content.BuildSystem
         public IEntity ThisEntity => _thisEntity;
         public float RotateSpeed => _configData.RotateSpeed;
         public float RotationThreshold => _configData.RotationThreshold;
-
         public TurretType TurretType => _turretType;
-
         public IReactiveProperty<float> Health => _health;
 
         public void Construct(TurretDynamicData dynamicData, IEntity entity)
@@ -85,6 +83,7 @@ namespace Project.Content.BuildSystem
         }
 
         private void UpdateHealth(float value) => _health.Value = value;
+
         private void UpdateSensorRadius(float value) => _sensorData.SensorRadius = value;
         private void UpdateDamage(float value) => _projectileData.Damage = value;
 
