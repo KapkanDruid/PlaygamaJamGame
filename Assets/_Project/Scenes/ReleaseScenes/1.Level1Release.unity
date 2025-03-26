@@ -29746,6 +29746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUDRelease
       objectReference: {fileID: 0}
+    - target: {fileID: 5678770099774542528, guid: bf1da9b4a9c1bf44589016d2f6d144a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9110615265350275798, guid: bf1da9b4a9c1bf44589016d2f6d144a9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
