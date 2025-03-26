@@ -20,7 +20,9 @@ namespace Project.Content.CharacterAI.Infantryman
         private DirectProjectileData _projectileData;
         private SensorData _sensorData;
         private float _health;
+        private int _levelUpgrade;
 
+        public int LevelUpgrade => _levelUpgrade;
         public float Speed => _infantrymanConfig.Speed;
         public float Health => _health;
         public float Damage => _infantrymanConfig.Damage;
@@ -40,6 +42,8 @@ namespace Project.Content.CharacterAI.Infantryman
         public int ProjectilePoolCount => 10;
         public BuildSystem.ISensorData SensorData => _sensorData;
         public AllyEntityType Type => _infantrymanConfig.Type;
+
+        public Sprite UpgradeSprite => _infantrymanConfig.UpgradeSprite;
 
         public void Initialize()
         {
@@ -67,6 +71,28 @@ namespace Project.Content.CharacterAI.Infantryman
 
             _health = _infantrymanConfig.Health;
             _health += spawnData.HealthModifier;
+
+            _levelUpgrade = spawnData.LevelUpgradeModifier;
+        }
+
+        public Color GetColorForLevel(int level)
+        {
+            switch (level)
+            {
+                case 0: return new Color(0, 0, 0, 0);
+                case 1: return Color.green;
+                case 2: return Color.yellow;
+                case 3: return new Color(1.0f, 0.5f, 0.0f); // Orange
+                case 4: return Color.red;
+                case 5: return new Color(0.5f, 0.0f, 0.5f); // Purple
+                case 6: return Color.blue;
+                case 7: return Color.cyan;
+                case 8: return Color.magenta;
+                case 9: return Color.white;
+                default:
+                    float gradient = Mathf.Clamp01((level - 3) / 10f);
+                    return Color.Lerp(Color.red, Color.magenta, gradient);
+            }
         }
     }
 
@@ -74,13 +100,16 @@ namespace Project.Content.CharacterAI.Infantryman
     {
         private float _damageModifier;
         private float _healthModifier;
+        private int _levelUpgradeModifier;
         public float DamageModifier { get => _damageModifier; set => _damageModifier = value; }
         public float HealthModifier { get => _healthModifier; set => _healthModifier = value; }
+        public int LevelUpgradeModifier { get => _levelUpgradeModifier; set => _levelUpgradeModifier = value; }
 
-        public InfantrymanSpawnData(float damageModifier, float healthModifier)
+        public InfantrymanSpawnData(float damageModifier, float healthModifier, int levelUpgradeModifier = 0)
         {
             _damageModifier = damageModifier;
             _healthModifier = healthModifier;
+            _levelUpgradeModifier = levelUpgradeModifier;
         }
     }
 }
