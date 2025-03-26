@@ -16,6 +16,7 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags _enemyFlag;
         [SerializeField] private DirectProjectile _projectilePrefab;
+        [SerializeField] private Color[] _levelColors;
 
         private DirectProjectileData _projectileData;
         private SensorData _sensorData;
@@ -77,21 +78,14 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public Color GetColorForLevel(int level)
         {
-            switch (level)
+            if (_levelColors != null && level >= 0 && level < _levelColors.Length)
             {
-                case 0: return new Color(0, 0, 0, 0);
-                case 1: return Color.green;
-                case 2: return Color.yellow;
-                case 3: return new Color(1.0f, 0.5f, 0.0f); // Orange
-                case 4: return Color.red;
-                case 5: return new Color(0.5f, 0.0f, 0.5f); // Purple
-                case 6: return Color.blue;
-                case 7: return Color.cyan;
-                case 8: return Color.magenta;
-                case 9: return Color.white;
-                default:
-                    float gradient = Mathf.Clamp01((level - 3) / 10f);
-                    return Color.Lerp(Color.red, Color.magenta, gradient);
+                return _levelColors[level];
+            }
+            else
+            {
+                float gradient = Mathf.Clamp01((level - 3) / 10f);
+                return Color.Lerp(Color.red, Color.magenta, gradient);
             }
         }
     }
