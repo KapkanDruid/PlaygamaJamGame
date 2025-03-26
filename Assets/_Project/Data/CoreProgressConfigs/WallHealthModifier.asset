@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391703336dd80e04b8104a24c8e497fc, type: 3}
   m_Name: WallHealthModifier
   m_EditorClassIdentifier: 
-  _addValue: 100
+  _addValue: 10

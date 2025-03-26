@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BarracksHealthModifier
   m_EditorClassIdentifier: 
   _barracksType: 0
-  _addValue: 100
+  _addValue: 5

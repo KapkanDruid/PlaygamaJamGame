@@ -1,4 +1,5 @@
-﻿using Project.Content.BuildSystem;
+﻿using Project.Architecture;
+using Project.Content.BuildSystem;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -44,9 +45,11 @@ namespace Project.Content.UI
             _factories = factories;
             _spawner = spawner;
             _sceneData = sceneData;
+
+            MainSceneBootstrap.OnServicesInitialized += Initialize;
         }
 
-        private void Start()
+        private void Initialize()
         {
             _button.onClick.AddListener(() => OnCardSelected?.Invoke(this));
 
@@ -100,6 +103,7 @@ namespace Project.Content.UI
         private void OnDestroy()
         {
             _button.onClick.RemoveAllListeners();
+            MainSceneBootstrap.OnServicesInitialized += Initialize;
         }
     }
 }

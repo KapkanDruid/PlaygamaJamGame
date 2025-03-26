@@ -1,4 +1,5 @@
-﻿using Project.Content.BuildSystem;
+﻿using Project.Architecture;
+using Project.Content.BuildSystem;
 using System;
 using TMPro;
 using UnityEngine;
@@ -37,10 +38,16 @@ namespace Project.Content.UI
             _factory = factories;
             _spawner = spawner;
             _sceneData = sceneData;
+
+            Debug.Log("Wall constructed");
+
+            MainSceneBootstrap.OnServicesInitialized += Initialize;
         }
 
-        private void Start()
+        private void Initialize()
         {
+            Debug.Log("Wall started");
+
             _button.onClick.AddListener(() => OnCardSelected?.Invoke(this));
 
             _dynamicData = _sceneData.WallDynamicData;
@@ -66,8 +73,19 @@ namespace Project.Content.UI
 
         private void OnEnable()
         {
+            Debug.Log("Wall active");
+
             if (_healthOriginal == null)
                 return;
+
+            if (_dynamicData == null)
+            {
+                Debug.Log("_dynamicData null");
+            }
+            if (_config == null)
+            {
+                Debug.Log("_config null");
+            }
 
             _healthModified.text = (_dynamicData.BuildingMaxHealth.Value - _config.MaxHealth).ToString();
             _healthSummarized.text = _config.MaxHealth.ToString();
@@ -76,6 +94,8 @@ namespace Project.Content.UI
         private void OnDestroy()
         {
             _button.onClick.RemoveAllListeners();
+
+            MainSceneBootstrap.OnServicesInitialized += Initialize;
         }
     }
 }

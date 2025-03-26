@@ -14,14 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _experienceData:
   - _level: 1
-    _pointsToReach: 20
+    _pointsToReach: 10
   - _level: 2
-    _pointsToReach: 20
+    _pointsToReach: 10
   - _level: 3
-    _pointsToReach: 20
+    _pointsToReach: 10
   - _level: 4
-    _pointsToReach: 20
+    _pointsToReach: 10
   - _level: 5
-    _pointsToReach: 20
+    _pointsToReach: 10
   - _level: 6
-    _pointsToReach: 20
+    _pointsToReach: 30
+  - _level: 7
+    _pointsToReach: 30
+  - _level: 8
+    _pointsToReach: 30
+  - _level: 9
+    _pointsToReach: 30
+  - _level: 10
+    _pointsToReach: 30
+  - _level: 6
+    _pointsToReach: 30
+  - _level: 11
+    _pointsToReach: 30
+  - _level: 12
+    _pointsToReach: 30
+  - _level: 13
+    _pointsToReach: 30
+  - _level: 14
+    _pointsToReach: 30
+  - _level: 14
+    _pointsToReach: 30
+  - _level: 14
+    _pointsToReach: 30

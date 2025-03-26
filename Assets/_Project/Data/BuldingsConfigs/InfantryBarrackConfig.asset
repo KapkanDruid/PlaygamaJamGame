@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: InfantryBarrackConfig
   m_EditorClassIdentifier: 
   _type: 0
-  _capacity: 5
-  _spawnCooldown: 0.2
-  _buildingMaxHealth: 5
+  _capacity: 15
+  _spawnCooldown: 15
+  _buildingMaxHealth: 40

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1dfba48aff1b2b47be4c5de7945375f, type: 3}
   m_Name: FlatEartherData
   m_EditorClassIdentifier: 
-  _health: 25
-  _experiencePoints: 5
-  _speed: 2
+  _health: 12
+  _experiencePoints: 4
+  _speed: 1
   _distanceToTarget: 1
-  _damage: 3
-  _attackCooldown: 1.5
+  _damage: 6
+  _attackCooldown: 0.5
   _hitColliderSize: 1
   _hitColliderOffset: {x: 0, y: 0}
-  _type: 0
+  _type: 2
   _sensorRadius: 20

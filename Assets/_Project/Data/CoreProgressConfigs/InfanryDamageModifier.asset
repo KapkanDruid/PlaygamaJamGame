@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: InfanryDamageModifier
   m_EditorClassIdentifier: 
   _barracksType: 0
-  _addValue: 100
+  _addValue: 2

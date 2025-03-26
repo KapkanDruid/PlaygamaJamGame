@@ -20,5 +20,5 @@ MonoBehaviour:
   _attackCooldown: 1.5
   _hitColliderSize: 2
   _hitColliderOffset: {x: 0, y: 0}
-  _type: 0
+  _type: 1
   _sensorRadius: 20

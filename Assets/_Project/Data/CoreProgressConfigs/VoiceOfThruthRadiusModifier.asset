@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: VoiceOfThruthRadiusModifier
   m_EditorClassIdentifier: 
   _turretType: 0
-  _addValue: 5
+  _addValue: 2

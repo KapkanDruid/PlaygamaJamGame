@@ -1,4 +1,5 @@
-﻿using Project.Content.UI.DataModification;
+﻿using Project.Architecture;
+using Project.Content.UI.DataModification;
 using System;
 using TMPro;
 using UnityEngine;
@@ -20,9 +21,11 @@ namespace Project.Content.UI
         private void Construct(SceneData sceneData)
         {
             _modifierConfig.SetSceneData(sceneData);
+
+            MainSceneBootstrap.OnServicesInitialized += Initialize;
         }
 
-        private void Start()
+        private void Initialize()
         {
             _button.onClick.AddListener(() => OnCardSelected?.Invoke(_modifierConfig));
 
@@ -43,6 +46,7 @@ namespace Project.Content.UI
         private void OnDestroy()
         {
             _button.onClick.RemoveAllListeners();
+            MainSceneBootstrap.OnServicesInitialized -= Initialize;
         }
     }
 }
