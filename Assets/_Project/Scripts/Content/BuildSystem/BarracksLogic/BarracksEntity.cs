@@ -86,7 +86,7 @@ namespace Project.Content.BuildSystem
 
         private void OnDataUpdate()
         {
-            _upgradeEffect.PlayTriangleEffect(transform.position + new Vector3(0.5f, 0), new Vector2(2, 2));
+            _upgradeEffect.PlayTriangleEffect(transform.position + new Vector3(0.5f, 0), new Vector2(3, 3));
         }
 
         private async void DestroyThisAsync()
