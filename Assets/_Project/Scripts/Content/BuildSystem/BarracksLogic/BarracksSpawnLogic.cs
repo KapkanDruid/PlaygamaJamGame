@@ -105,8 +105,7 @@ namespace Project.Content.BuildSystem
 
             _entityCommander.AddEntity(patrolling);
 
-            entity.Prepare(new InfantrymanSpawnData(_barracksEntity.Data.UnitDamageModifier, _barracksEntity.Data.UnitHealthModifier));
-            //entity.Prepare(new InfantrymanSpawnData(_barracksEntity.Data.UnitDamageModifier, _barracksEntity.Data.UnitHealthModifier, _barracksEntity.Data.UnitUpgradeCount));
+            entity.Prepare(new InfantrymanSpawnData(_barracksEntity.Data.UnitDamageModifier, _barracksEntity.Data.UnitHealthModifier, _barracksEntity.Data.UnitUpgradeCount));
 
             _currentCountAlly++;
         }
