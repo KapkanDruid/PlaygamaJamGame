@@ -9,7 +9,7 @@ namespace Project.Content.CharacterAI.Destroyer
     {
         [SerializeField] private DestroyerData _destroyerData;
         private bool _canAttack;
-        private bool _canMoving;
+        private bool _isMoving;
         private CharacterSensor _characterSensor;
         private LevelExperienceController _levelExperience;
         private Animator _animator;
@@ -18,7 +18,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public ICharacterData DestroyerData => _destroyerData;
 
         public bool CanAttack => _canAttack;
-        public bool CanMoving => _canMoving;
+        public bool IsMoving => _isMoving;
 
         public class Factory : PlaceholderFactory<DestroyerHandler> 
         {
@@ -72,6 +72,12 @@ namespace Project.Content.CharacterAI.Destroyer
             _levelExperience.OnEnemyDied(_destroyerData.CharacterTransform.position, _destroyerData.ExperiencePoints);
         }
 
+        private void Update()
+        {
+            _isMoving = true;
+            _animator.SetBool(AnimatorHashes.IsMoving, _isMoving);
+        }
+
         private void OnEnable()
         {
             ResetData();
@@ -91,7 +97,7 @@ namespace Project.Content.CharacterAI.Destroyer
 
         private void HasTarget()
         {
-            _canMoving = true;
+            
         }
 
         private void OnDestroy()
