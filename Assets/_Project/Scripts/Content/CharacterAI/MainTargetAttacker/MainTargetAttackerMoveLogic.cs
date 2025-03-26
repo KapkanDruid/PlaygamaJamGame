@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Project.Content.CharacterAI.Destroyer;
+using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
@@ -13,12 +14,15 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private IEntity _blockingEntity;
         private CharacterSensor _characterSensor;
         private MainTargetAttackerHandler _mainTargetAttackerHandler;
+        private EnemyDeadHandler _enemyDeadHandler;
+
         private bool _isMoving => _agent.velocity.sqrMagnitude > 0.05f && !_agent.isStopped;
 
         public MainTargetAttackerMoveLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
                                            CharacterSensor characterSensor,
                                            NavMeshAgent navMeshAgent,
-                                           PauseHandler pauseHandler)
+                                           PauseHandler pauseHandler,
+                                           EnemyDeadHandler enemyDeadHandler)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
             _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
@@ -26,6 +30,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
             _pauseHandler = pauseHandler;
+            _enemyDeadHandler = enemyDeadHandler;
 
             Initialize();
         }
@@ -42,11 +47,14 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public void Tick()
         {
-            if (_pauseHandler.IsPaused)
+            if (_pauseHandler.IsPaused || _enemyDeadHandler.IsDead)
             {
+                _agent.speed = 0f;
                 _agent.isStopped = true;
                 return;
             }
+
+            _agent.speed = _mainTargetAttackerData.Speed;
             _agent.isStopped = false;
 
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
