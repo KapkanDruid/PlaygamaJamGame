@@ -870,7 +870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _groundGridSize: {x: 5, y: 5}
   _startFlagPosition: {x: 0, y: 0}
-  _timeToWin: 0
+  _timeToWin: 5500
 --- !u!4 &889152092
 Transform:
   m_ObjectHideFlags: 0
