@@ -64,7 +64,7 @@ namespace Project.Content.CharacterAI.Infantryman
         {
             if (_attackCooldownTimer <= 0)
             {
-                //_animator.SetTrigger(AnimatorHashes.RangeAttackTrigger);
+                _animator.SetTrigger(AnimatorHashes.RangeAttackTrigger);
                 var projectile = _projectilePool.Get();
                 projectile.Prepare(_shootPoint.position, _infantrymanEntity.TargetTransform.position - _infantrymanEntity.transform.position, _shootData.ProjectileData, _pauseHandler);
 

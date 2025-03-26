@@ -11,17 +11,21 @@ namespace Project.Content.CharacterAI.Destroyer
         private CharacterSensor _characterSensor;
         private DestroyerHandler _destroyerHandler;
         private PauseHandler _pauseHandler;
+        private EnemyDeadHandler _enemyDeadHandler;
 
         public DestroyerMoveLogic(DestroyerHandler destroyerHandler,
                                   CharacterSensor characterSensor,
                                   NavMeshAgent navMeshAgent,
-                                  PauseHandler pauseHandler)
+                                  PauseHandler pauseHandler,
+                                  EnemyDeadHandler enemyDeadHandler)
         {
             _destroyerHandler = destroyerHandler;
             _destroyerData = destroyerHandler.DestroyerData;
             _characterSensor = characterSensor;
             _agent = navMeshAgent;
             _pauseHandler = pauseHandler;
+            _enemyDeadHandler = enemyDeadHandler;
+
             Initialize();
         }
 
@@ -36,11 +40,14 @@ namespace Project.Content.CharacterAI.Destroyer
 
         public void Tick()
         {
-            if (_pauseHandler.IsPaused)
+            if (_pauseHandler.IsPaused || _enemyDeadHandler.IsDead)
             {
+                _agent.speed = 0f;
                 _agent.isStopped = true;
                 return;
             }
+
+            _agent.speed = _destroyerData.Speed;
             _agent.isStopped = false;
 
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
@@ -71,7 +78,7 @@ namespace Project.Content.CharacterAI.Destroyer
 
         private void MoveToTarget()
         {
-            if (_characterSensor.TargetToChase != null && _destroyerHandler.CanMoving)
+            if (_characterSensor.TargetToChase != null && _destroyerHandler.IsMoving)
             {
                 if (_characterSensor.TargetTransformToChase == null)
                     return;
@@ -79,6 +86,7 @@ namespace Project.Content.CharacterAI.Destroyer
                 _agent.SetDestination(_characterSensor.TargetTransformToChase.position);
             }
         }
+
     }
 }
 
