@@ -29,6 +29,105 @@ TextureImporter:
   - first:
       213: -9134246271520600158
     second: UpgradeUIEffectAnimationAtlas_8
+  - first:
+      213: -1439414536252898727
+    second: UpgradeUIEffectAnimationAtlas_9
+  - first:
+      213: 1440821248296524789
+    second: UpgradeUIEffectAnimationAtlas_10
+  - first:
+      213: -141468953918267515
+    second: UpgradeUIEffectAnimationAtlas_11
+  - first:
+      213: -623928953866346026
+    second: UpgradeUIEffectAnimationAtlas_12
+  - first:
+      213: 5385068447379944927
+    second: UpgradeUIEffectAnimationAtlas_13
+  - first:
+      213: -3677148448041876669
+    second: UpgradeUIEffectAnimationAtlas_14
+  - first:
+      213: -7246144031088481236
+    second: UpgradeUIEffectAnimationAtlas_15
+  - first:
+      213: -6073493104930667896
+    second: UpgradeUIEffectAnimationAtlas_16
+  - first:
+      213: -4055801503992840597
+    second: UpgradeUIEffectAnimationAtlas_17
+  - first:
+      213: -4104060785382044533
+    second: UpgradeUIEffectAnimationAtlas_18
+  - first:
+      213: 3431723086639870472
+    second: UpgradeUIEffectAnimationAtlas_19
+  - first:
+      213: 948815656931952648
+    second: UpgradeUIEffectAnimationAtlas_20
+  - first:
+      213: 4454091251573439558
+    second: UpgradeUIEffectAnimationAtlas_21
+  - first:
+      213: -4380804164372736275
+    second: UpgradeUIEffectAnimationAtlas_22
+  - first:
+      213: 1660734461633570094
+    second: UpgradeUIEffectAnimationAtlas_23
+  - first:
+      213: 1282076348270073576
+    second: UpgradeUIEffectAnimationAtlas_24
+  - first:
+      213: -1699506521946176725
+    second: UpgradeUIEffectAnimationAtlas_25
+  - first:
+      213: -4442602209670868399
+    second: UpgradeUIEffectAnimationAtlas_26
+  - first:
+      213: 8737844278782967004
+    second: UpgradeUIEffectAnimationAtlas_27
+  - first:
+      213: 8931344290234824420
+    second: UpgradeUIEffectAnimationAtlas_28
+  - first:
+      213: 1032082392919563069
+    second: UpgradeUIEffectAnimationAtlas_29
+  - first:
+      213: 6500343558957918308
+    second: UpgradeUIEffectAnimationAtlas_30
+  - first:
+      213: -6909095217589997720
+    second: UpgradeUIEffectAnimationAtlas_31
+  - first:
+      213: 7379927633145618472
+    second: UpgradeUIEffectAnimationAtlas_32
+  - first:
+      213: 4863761598917230392
+    second: UpgradeUIEffectAnimationAtlas_33
+  - first:
+      213: -3630061569644661640
+    second: UpgradeUIEffectAnimationAtlas_34
+  - first:
+      213: -7144845702472658559
+    second: UpgradeUIEffectAnimationAtlas_35
+  - first:
+      213: 5400064463452451735
+    second: UpgradeUIEffectAnimationAtlas_36
+  - first:
+      213: 4129912443221217526
+    second: UpgradeUIEffectAnimationAtlas_37
+  - first:
+      213: -175154272783558529
+    second: UpgradeUIEffectAnimationAtlas_38
+  - first:
+      213: 6239258785966875159
+    second: UpgradeUIEffectAnimationAtlas_39
+  - first:
+      213: -7510788225251586497
+    second: UpgradeUIEffectAnimationAtlas_40
+  - first:
+      213: -980090754838920558
+    second: UpgradeUIEffectAnimationAtlas_41
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +174,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +195,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -120,19 +219,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -140,10 +226,10 @@ TextureImporter:
       name: UpgradeUIEffectAnimationAtlas_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 768
-        width: 256
-        height: 256
+        x: 51
+        y: 769
+        width: 153
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +248,10 @@ TextureImporter:
       name: UpgradeUIEffectAnimationAtlas_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 768
-        width: 256
-        height: 256
+        x: 306
+        y: 769
+        width: 151
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +270,10 @@ TextureImporter:
       name: UpgradeUIEffectAnimationAtlas_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 768
-        width: 256
-        height: 256
+        x: 560
+        y: 769
+        width: 156
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +292,10 @@ TextureImporter:
       name: UpgradeUIEffectAnimationAtlas_3
       rect:
         serializedVersion: 2
-        x: 768
-        y: 768
-        width: 256
-        height: 256
+        x: 815
+        y: 769
+        width: 157
+        height: 169
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +314,10 @@ TextureImporter:
       name: UpgradeUIEffectAnimationAtlas_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
-        width: 256
-        height: 256
+        x: 46
+        y: 513
+        width: 158
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +336,10 @@ TextureImporter:
       name: UpgradeUIEffectAnimationAtlas_5
       rect:
         serializedVersion: 2
-        x: 256
-        y: 512
-        width: 256
-        height: 256
+        x: 293
+        y: 634
+        width: 40
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +358,10 @@ TextureImporter:
       name: UpgradeUIEffectAnimationAtlas_6
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 256
-        height: 256
+        x: 302
+        y: 513
+        width: 158
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,11 +376,781 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 620
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8da627bd1b005f0800000000000000
+      internalID: -792437978341648211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 513
+        width: 189
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af041f4963ac3180800000000000000
+      internalID: -9134246271520600158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 513
+        width: 208
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952cc1a0b1c260ce0800000000000000
+      internalID: -1439414536252898727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 416
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb9c81aa43def310800000000000000
+      internalID: 1440821248296524789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 442
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f94f66cb6690ef0800000000000000
+      internalID: -141468953918267515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 404
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d127b31ceb5757f0800000000000000
+      internalID: -623928953866346026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 442
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5fe39b83b9bba40800000000000000
+      internalID: 5385068447379944927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 366
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343c51808f428fcc0800000000000000
+      internalID: -3677148448041876669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 415
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c67ab3566807b90800000000000000
+      internalID: -7246144031088481236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 414
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882c2d6233e96bba0800000000000000
+      internalID: -6073493104930667896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 424
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ef20b4506e6b7c0800000000000000
+      internalID: -4055801503992840597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 412
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c41beb5727b07c0800000000000000
+      internalID: -4104060785382044533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 419
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8023daa17fdef9f20800000000000000
+      internalID: 3431723086639870472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 425
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80802cc10deda2d00800000000000000
+      internalID: 948815656931952648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 418
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cb53ff46c10dd30800000000000000
+      internalID: 4454091251573439558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 400
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6d200b2d14433c0800000000000000
+      internalID: -4380804164372736275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 401
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e252be3a13d1c0710800000000000000
+      internalID: 1660734461633570094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 344
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6519165a9dac110800000000000000
+      internalID: 1282076348270073576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 379
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2340f992d32a68e0800000000000000
+      internalID: -1699506521946176725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 339
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152d33604d4b852c0800000000000000
+      internalID: -4442602209670868399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 349
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdcb983931f034970800000000000000
+      internalID: 8737844278782967004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 340
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6f82acf4282fb70800000000000000
+      internalID: 8931344290234824420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 347
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3bd7e8d771b25e00800000000000000
+      internalID: 1032082392919563069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 346
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4686fadc60cd53a50800000000000000
+      internalID: 6500343558957918308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 284
+        width: 82
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fa23c6186fd10a0800000000000000
+      internalID: -6909095217589997720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 311
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820ebb1f415ca6660800000000000000
+      internalID: 7379927633145618472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 295
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fb5a7a76d8f7340800000000000000
+      internalID: 4863761598917230392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 309
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874788c3c3e6f9dc0800000000000000
+      internalID: -3630061569644661640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 278
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181142940b868dc90800000000000000
+      internalID: -7144845702472658559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 286
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7933b4cc402e0fa40800000000000000
+      internalID: 5400064463452451735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 295
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f09aa36c75605930800000000000000
+      internalID: 4129912443221217526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_38
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 267
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7818dded1ab19df0800000000000000
+      internalID: -175154272783558529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_39
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 276
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7126a4f0fcc469650800000000000000
+      internalID: 6239258785966875159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_40
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 269
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e41ba27e154c790800000000000000
+      internalID: -7510788225251586497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeUIEffectAnimationAtlas_41
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 276
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2928e26b6a40662f0800000000000000
+      internalID: -980090754838920558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 32e6c2117e885ed4494230ccebe82bf4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -303,14 +1159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      UpgradeUIEffectAnimationAtlas_0: -241900191285858081
-      UpgradeUIEffectAnimationAtlas_1: 4900006054603999434
-      UpgradeUIEffectAnimationAtlas_2: 7613735144749107419
-      UpgradeUIEffectAnimationAtlas_3: 242775997679780930
-      UpgradeUIEffectAnimationAtlas_4: 4342540447143318365
-      UpgradeUIEffectAnimationAtlas_5: 338705720737820682
-      UpgradeUIEffectAnimationAtlas_6: -822900508795834813
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

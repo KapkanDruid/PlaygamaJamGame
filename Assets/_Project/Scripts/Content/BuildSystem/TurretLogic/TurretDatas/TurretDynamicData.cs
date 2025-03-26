@@ -1,13 +1,15 @@
 ﻿using Project.Content.ReactiveProperty;
+using System;
 
 namespace Project.Content.BuildSystem
 {
     public class TurretDynamicData
     {
         public readonly TurretType Type;
-
         private readonly TurretConfig _config;
         private float _reloadTime;
+
+        public event Action OnDataUpdate;
 
         private ReactiveProperty<float> _maxHealth = new ReactiveProperty<float>();
         private ReactiveProperty<float> _damage = new ReactiveProperty<float>();
@@ -22,9 +24,16 @@ namespace Project.Content.BuildSystem
                     return;
 
                 if (value <= 0.2)
+                {
                     _reloadTime = 0.2f;
+                    OnDataUpdate?.Invoke();
+                }
                 else
+                {
                     _reloadTime = value;
+
+                    OnDataUpdate?.Invoke();
+                }
             }
         }
         public ReactiveProperty<float> MaxHealth => _maxHealth;
@@ -44,6 +53,10 @@ namespace Project.Content.BuildSystem
             _reloadTime = _config.FireRate;
             _sensorRadius.Value = _config.SensorRadius;
             _damage.Value = _config.ProjectileDamage;
+
+            _maxHealth.OnValueChanged += (value) => OnDataUpdate?.Invoke();
+            _damage.OnValueChanged += (value) => OnDataUpdate?.Invoke();
+            _sensorRadius.OnValueChanged += (value) => OnDataUpdate?.Invoke();
         }
     }
 }

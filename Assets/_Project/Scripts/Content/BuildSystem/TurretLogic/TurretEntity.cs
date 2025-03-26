@@ -8,12 +8,14 @@ namespace Project.Content.BuildSystem
     public class TurretEntity : MonoBehaviour, IEntity
     {
         [SerializeField] private TurretData _data;
+        private TurretDynamicData _dynamicData;
 
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
         private GridPlaceSystem _placeSystem;
         private TurretAttackComponent _attackComponent;
         private SceneData _sceneData;
+        private UpgradeEffectController _upgradeEffect;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
@@ -35,7 +37,8 @@ namespace Project.Content.BuildSystem
                                BuildingHealthComponent healthHandler,
                                GridPlaceSystem placeSystem,
                                TurretAttackComponent attackComponent, 
-                               SceneData sceneData)
+                               SceneData sceneData,
+                               UpgradeEffectController upgradeEffect)
         {
             List<object> components = new();
 
@@ -44,6 +47,7 @@ namespace Project.Content.BuildSystem
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
             _attackComponent = attackComponent;
+            _upgradeEffect = upgradeEffect;
 
             components.Add(_attackComponent);
             components.Add(_placeComponent);
@@ -64,14 +68,15 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
-            var turretDynamicData = _sceneData.TurretDynamicData[_data.TurretType];
-            _data.Construct(turretDynamicData, this);
+            _dynamicData = _sceneData.TurretDynamicData[_data.TurretType];
+            _data.Construct(_dynamicData, this);
 
             _data.Initialize();
             _healthHandler.Initialize();
             _placeComponent.Initialize();
 
             _healthHandler.OnDead += DestroyThisAsync;
+            _dynamicData.OnDataUpdate += OnDataUpdate;
 
             if (_isRuntimeCreated)
                 return;
@@ -82,6 +87,11 @@ namespace Project.Content.BuildSystem
         private void OnEntityPlaced()
         {
             _attackComponent.Initialize();
+        }
+
+        private void OnDataUpdate()
+        {
+            _upgradeEffect.PlayTriangleEffect(_data.RotationObject.position, new Vector2(2,2));
         }
 
         private async void DestroyThisAsync()
@@ -107,6 +117,7 @@ namespace Project.Content.BuildSystem
         {
             _placeComponent.OnPlaced -= OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+            _dynamicData.OnDataUpdate += OnDataUpdate;
         }
     }
 }

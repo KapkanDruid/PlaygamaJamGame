@@ -9,12 +9,14 @@ namespace Project.Content.BuildSystem
     public class BarracksEntity : MonoBehaviour, IEntity
     {
         [SerializeField] private BarracksData _data;
+        private BarrackDynamicData _dataDynamic;
 
         private BuildingHealthComponent _healthHandler;
         private GridPlaceComponent _placeComponent;
         private BarracksSpawnLogic _spawnComponent;
         private GridPlaceSystem _placeSystem;
         private SceneData _sceneData;
+        private UpgradeEffectController _upgradeEffect;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
@@ -32,7 +34,7 @@ namespace Project.Content.BuildSystem
         }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, BarracksSpawnLogic spawnComponent, SceneData sceneData)
+        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, BarracksSpawnLogic spawnComponent, SceneData sceneData, UpgradeEffectController upgradeEffect)
         {
             List<object> components = new();
             _sceneData = sceneData;
@@ -40,6 +42,8 @@ namespace Project.Content.BuildSystem
             _placeComponent = placeComponent;
             _placeSystem = placeSystem;
             _spawnComponent = spawnComponent;
+            _upgradeEffect = upgradeEffect;
+
 
             components.Add(_placeComponent);
             components.Add(_healthHandler);
@@ -59,12 +63,15 @@ namespace Project.Content.BuildSystem
 
         private void Start()
         {
-            _data.Construct(_sceneData.BarrackDynamicData[_data.BarracksType]);
+            _dataDynamic = _sceneData.BarrackDynamicData[_data.BarracksType];
+
+            _data.Construct(_dataDynamic);
 
             _healthHandler.Initialize();
             _placeComponent.Initialize();
             
             _healthHandler.OnDead += DestroyThisAsync;
+            _dataDynamic.OnDataUpdate += OnDataUpdate;
 
             if (_isRuntimeCreated)
                 return;
@@ -75,6 +82,11 @@ namespace Project.Content.BuildSystem
         private void OnEntityPlaced()
         {
             _spawnComponent.Initialize();
+        }
+
+        private void OnDataUpdate()
+        {
+            _upgradeEffect.PlayTriangleEffect(transform.position + new Vector3(0.5f, 0), new Vector2(2, 2));
         }
 
         private async void DestroyThisAsync()
@@ -100,6 +112,7 @@ namespace Project.Content.BuildSystem
         {
             _placeComponent.OnPlaced += OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+            _dataDynamic.OnDataUpdate -= OnDataUpdate;
         }
     }
 }

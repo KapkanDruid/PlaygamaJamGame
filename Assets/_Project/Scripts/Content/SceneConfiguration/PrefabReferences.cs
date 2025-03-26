@@ -28,6 +28,7 @@ namespace Project.Content
         
         [Header("OtherPrefabs"), Space(3)]
         [SerializeField] private GameObject _experienceObject;
+        [SerializeField] private GameObject _upgradeObject;
         [SerializeField] private DefensiveFlag _flag;
         [SerializeField] private FloatingText[] _floatingTextPrefabs;
 
@@ -45,5 +46,6 @@ namespace Project.Content
         public DefensiveFlag Flag => _flag;
         public FloatingText[] FloatingTextPrefabs => _floatingTextPrefabs;
         public WallEntity WallPrefab => _wallPrefab;
+        public GameObject UpgradeObject => _upgradeObject; 
     }
 }

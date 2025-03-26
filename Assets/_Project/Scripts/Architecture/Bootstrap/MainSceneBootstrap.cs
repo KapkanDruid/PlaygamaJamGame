@@ -1,4 +1,5 @@
 using Project.Content;
+using Project.Content.BuildSystem;
 using Project.Content.UI;
 using System;
 using UnityEngine;
@@ -14,6 +15,8 @@ namespace Project.Architecture
         [Inject] private CardsPopupPresenter _cardsPopupPresenter;
         [Inject] private LevelExperienceController _levelExperienceHandler;
         [Inject] private FloatingTextHandler _floatingTextHandler;
+        [Inject] private UpgradeEffectController _upgradeEffectController;
+
         public static event Action OnServicesInitialized;
 
         private void Awake()
@@ -29,6 +32,7 @@ namespace Project.Architecture
             _cardsPopupPresenter.Initialize();
             _levelExperienceHandler.Initialize();
             _floatingTextHandler.Initialize();
+            _upgradeEffectController.Initialize();
 
             OnServicesInitialized?.Invoke();
         }

@@ -11,7 +11,7 @@ namespace Project.Content.UI.DataModification
 
         public override void ExecuteProgress()
         {
-            SceneData.BarrackDynamicData[_barracksType].UnitDamageModifier += _addValue;
+            SceneData.BarrackDynamicData[_barracksType].UnitDamageModifier.Value += _addValue;
         }
 
         public override float GetModifierValue()
