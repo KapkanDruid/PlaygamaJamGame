@@ -25,14 +25,16 @@ namespace Project.Content.CoreGameLoopLogic
 
         private WinLoseHandler _winLoseHandler;
         private SceneData _sceneData;
+        private PauseHandler _pauseHandler;
         private Button[] _buttons;
         private float _timeRemaining;
 
         [Inject]
-        public void Construct(WinLoseHandler winLoseHandler, SceneData sceneData)
+        public void Construct(WinLoseHandler winLoseHandler, SceneData sceneData, PauseHandler pauseHandler)
         {
             _winLoseHandler = winLoseHandler;
             _sceneData = sceneData;
+            _pauseHandler = pauseHandler;
         }
 
         private void Start()
@@ -56,6 +58,9 @@ namespace Project.Content.CoreGameLoopLogic
 
         private void Update()
         {
+            if (_pauseHandler.IsPaused)
+                return;
+
             UITimer();
         }
 
@@ -64,6 +69,9 @@ namespace Project.Content.CoreGameLoopLogic
             if (_timeRemaining > 0)
             {
                 _timeRemaining -= Time.deltaTime;
+                if (_timeRemaining < 0)
+                    _timeRemaining = 0;
+
                 UpdateTimerDisplay();
             }
         }
