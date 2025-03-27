@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8630356272938145460}
   - component: {fileID: 450759416727023337}
   - component: {fileID: 19506917241176140}
+  - component: {fileID: 7696249309767149601}
   m_Layer: 5
   m_Name: BarrackHealthIcon
   m_TagString: Untagged
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -144,6 +145,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7696249309767149601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159888244880424425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: b643e65ab04272943ac01ca461154035, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 3b0064ca73687e140b82e6be6ed75af7, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &273421142269900521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1199,7 @@ GameObject:
   - component: {fileID: 1320032233061914133}
   - component: {fileID: 638438720565581197}
   - component: {fileID: 2411241335174287677}
+  - component: {fileID: 1342799121053871292}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -1292,6 +1309,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1342799121053871292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015476970514387623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &1122142531046957376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.29986572, y: 0.000061035156}
+  m_AnchoredPosition: {x: -0.2998047, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2458642151285670915
@@ -2230,6 +2262,7 @@ GameObject:
   - component: {fileID: 7463119816287503681}
   - component: {fileID: 907731078651112852}
   - component: {fileID: 5295036289187997659}
+  - component: {fileID: 1179791163958210455}
   m_Layer: 5
   m_Name: InfantyrHealthIcon
   m_TagString: Untagged
@@ -2330,7 +2363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2361,6 +2394,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1179791163958210455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918668586214222065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: b643e65ab04272943ac01ca461154035, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 3b0064ca73687e140b82e6be6ed75af7, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &1919912506697740264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,6 +2667,7 @@ GameObject:
   - component: {fileID: 406758796866350531}
   - component: {fileID: 7614502580676520355}
   - component: {fileID: 6578436703759738380}
+  - component: {fileID: 6146768184373193590}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -2740,6 +2789,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6146768184373193590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153452455662561869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &2239216777468825337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,6 +3735,7 @@ GameObject:
   - component: {fileID: 7579732819846896930}
   - component: {fileID: 3494491743544541328}
   - component: {fileID: 3573233735744673104}
+  - component: {fileID: 2021209730489306240}
   m_Layer: 5
   m_Name: TurretHealthIcon
   m_TagString: Untagged
@@ -3771,7 +3836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3802,6 +3867,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2021209730489306240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3111927314882350933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: b643e65ab04272943ac01ca461154035, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 3b0064ca73687e140b82e6be6ed75af7, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &3180610007807846768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,6 +3995,7 @@ GameObject:
   - component: {fileID: 2908596083485589000}
   - component: {fileID: 7396599818557552441}
   - component: {fileID: 6452748290881622310}
+  - component: {fileID: 2490781594561847139}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -4036,6 +4117,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2490781594561847139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212446668867848560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &3252698805909918339
 GameObject:
   m_ObjectHideFlags: 0
@@ -6461,7 +6557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0}
   m_SizeDelta: {x: 1915.4028, y: 896.0955}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2961603904341381265
@@ -7283,6 +7379,7 @@ GameObject:
   - component: {fileID: 2403516849497891353}
   - component: {fileID: 7564733173314678201}
   - component: {fileID: 3000553861291628753}
+  - component: {fileID: 431860923772740023}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -7404,6 +7501,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &431860923772740023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025821371823526045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &5068525986570819334
 GameObject:
   m_ObjectHideFlags: 0
@@ -8190,6 +8302,7 @@ GameObject:
   - component: {fileID: 5312662279515456675}
   - component: {fileID: 6409553281817549409}
   - component: {fileID: 7962429430481300855}
+  - component: {fileID: 5042276693399868919}
   m_Layer: 5
   m_Name: InfantyrDamageIcon
   m_TagString: Untagged
@@ -8290,7 +8403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -8321,6 +8434,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5042276693399868919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743665227531180793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: b643e65ab04272943ac01ca461154035, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 3b0064ca73687e140b82e6be6ed75af7, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &5786643728632607108
 GameObject:
   m_ObjectHideFlags: 0
@@ -8932,6 +9060,7 @@ GameObject:
   - component: {fileID: 5582993776012719494}
   - component: {fileID: 1306203140102987784}
   - component: {fileID: 4687452089093499189}
+  - component: {fileID: 5077712533721168900}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -9053,6 +9182,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5077712533721168900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6319804340000391777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &6420499289991912146
 GameObject:
   m_ObjectHideFlags: 0
@@ -9414,6 +9558,7 @@ GameObject:
   - component: {fileID: 2989454359888366690}
   - component: {fileID: 3667705254167812195}
   - component: {fileID: 3292165151307248938}
+  - component: {fileID: 4256384806097162154}
   m_Layer: 5
   m_Name: TurretRadiusIcon
   m_TagString: Untagged
@@ -9514,7 +9659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -9545,6 +9690,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4256384806097162154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581536108021971976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: b643e65ab04272943ac01ca461154035, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 3b0064ca73687e140b82e6be6ed75af7, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &6732862908743041750
 GameObject:
   m_ObjectHideFlags: 0
@@ -10060,6 +10220,7 @@ GameObject:
   - component: {fileID: 5424917050084121913}
   - component: {fileID: 3844017937149374024}
   - component: {fileID: 334727027522630989}
+  - component: {fileID: 3700900701264501429}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -10181,6 +10342,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3700900701264501429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204548321228331096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &7204719763999376767
 GameObject:
   m_ObjectHideFlags: 0
@@ -10467,6 +10643,7 @@ GameObject:
   - component: {fileID: 4131940774478591973}
   - component: {fileID: 2653282697956359295}
   - component: {fileID: 6477051096032448481}
+  - component: {fileID: 3704297806472653910}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -10588,6 +10765,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3704297806472653910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245940181671005333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &7263102215674739345
 GameObject:
   m_ObjectHideFlags: 0
@@ -11412,7 +11604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1564.1948, y: 1109.0844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3574419637645515313
@@ -12024,6 +12216,7 @@ GameObject:
   - component: {fileID: 7023348606544466782}
   - component: {fileID: 1572726469054046635}
   - component: {fileID: 5398114303993841147}
+  - component: {fileID: 606189219604814389}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -12157,6 +12350,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03287e67c7d566d4596201724c462f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &606189219604814389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325111516520013078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &8331510482152331491
 GameObject:
   m_ObjectHideFlags: 0
@@ -12380,6 +12588,7 @@ GameObject:
   - component: {fileID: 6802388215191622382}
   - component: {fileID: 5305259541145301600}
   - component: {fileID: 6825453914926809271}
+  - component: {fileID: 7422144543052575150}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -12501,6 +12710,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7422144543052575150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469113037023462259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &8515390609208902870
 GameObject:
   m_ObjectHideFlags: 0
@@ -12674,6 +12898,7 @@ GameObject:
   - component: {fileID: 5209995430724842118}
   - component: {fileID: 9111984697803252917}
   - component: {fileID: 9134844935620629314}
+  - component: {fileID: 3782092836222394271}
   m_Layer: 5
   m_Name: WallHealthIcon
   m_TagString: Untagged
@@ -12774,7 +12999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -12805,6 +13030,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3782092836222394271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8553220736225469546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: b643e65ab04272943ac01ca461154035, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 3b0064ca73687e140b82e6be6ed75af7, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &8578892663581366252
 GameObject:
   m_ObjectHideFlags: 0
@@ -13913,8 +14153,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5343326311753703594, guid: a04b09b64a618b3419007136d57af535, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 24.331543
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343326311753703594, guid: a04b09b64a618b3419007136d57af535, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.0253296
+      value: -1.0253906
       objectReference: {fileID: 0}
     - target: {fileID: 7124184242170959818, guid: a04b09b64a618b3419007136d57af535, type: 3}
       propertyPath: m_Name
