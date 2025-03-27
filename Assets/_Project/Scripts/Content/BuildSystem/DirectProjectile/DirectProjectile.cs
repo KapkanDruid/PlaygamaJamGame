@@ -1,7 +1,9 @@
 ﻿using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 namespace Project.Content.BuildSystem
 {
@@ -21,7 +23,13 @@ namespace Project.Content.BuildSystem
 
         private Vector2 _moveDirection;
 
-        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData, PauseHandler pauseHandler)
+        [Inject]
+        private void Construct(PauseHandler pauseHandler)
+        {
+            _pauseHandler = pauseHandler;
+        }
+
+        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData)
         {
             _enemyFlag = directProjectileData.EnemyFlag;
             _damage = directProjectileData.Damage;
@@ -30,8 +38,6 @@ namespace Project.Content.BuildSystem
 
             _moveDirection = moveDirection;
             transform.position = startPosition;
-
-            _pauseHandler = pauseHandler;
 
             transform.right = moveDirection;
 

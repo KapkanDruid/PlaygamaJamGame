@@ -19,6 +19,7 @@ namespace Project.Content.BuildSystem
         private ClosestTargetSensorFilter _sensorFilter;
         private Transform _targetTransform;
         private TargetSensor _sensor;
+        private DiContainer _container;
 
         private CancellationToken _cancellationToken;
 
@@ -28,7 +29,12 @@ namespace Project.Content.BuildSystem
         private bool _isActive;
         private float _shootTimer;
 
-        public TurretAttackComponent(IProjectilePoolData projectilePoolData, ITurretShootData shootData, CancellationToken cancellationToken, GizmosDrawer gizmosDrawer, PauseHandler pauseHandler)
+        public TurretAttackComponent(IProjectilePoolData projectilePoolData,
+                                     ITurretShootData shootData,
+                                     CancellationToken cancellationToken,
+                                     GizmosDrawer gizmosDrawer,
+                                     PauseHandler pauseHandler,
+                                     DiContainer container)
         {
             _poolData = projectilePoolData;
             _shootData = shootData;
@@ -37,11 +43,12 @@ namespace Project.Content.BuildSystem
             _localTransform = _shootData.RotationObject;
             _shootPoint = _shootData.ShootPoint;
             _pauseHandler = pauseHandler;
+            _container = container;
         }
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectsSimple<DirectProjectile>(_poolData.ProjectilePrefab));
+            _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectContainer<DirectProjectile>(_poolData.ProjectilePrefab, _container));
             _isReadyToShoot = true;
             _sensor = new TargetSensor(_shootData.SensorData, Color.red);
             _sensorFilter = new ClosestTargetSensorFilter(_localTransform);
@@ -145,7 +152,7 @@ namespace Project.Content.BuildSystem
             _isReadyToShoot = false;
 
             var projectile = _projectilePool.Get();
-            projectile.Prepare(_shootPoint.position, _targetTransform.position - _localTransform.position, _shootData.ProjectileData, _pauseHandler);
+            projectile.Prepare(_shootPoint.position, _targetTransform.position - _localTransform.position, _shootData.ProjectileData);
 
             _shootTimer = _shootData.ReloadTime;
         }
