@@ -40,6 +40,7 @@ namespace Project.Content.Spawners
         {
             var prefab = _mainTargetAttackerPool.Get();
             _prefab = prefab.gameObject;
+            _prefab.transform.position = new(30f,10f);
             _prefab.SetActive(false);
             return _prefab;
         }

@@ -50,8 +50,16 @@ namespace Project.Content.CharacterAI.Destroyer
             _agent.speed = _destroyerData.Speed;
             _agent.isStopped = false;
 
-            if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
+            if (_characterSensor.TargetToChase == null || _characterSensor.TargetTransformToChase == null)
+            {
                 _characterSensor.TargetSearch();
+
+                if (_characterSensor.TargetTransformToChase != null)
+                {
+                    if (!_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
+                        _characterSensor.ScanAreaToAttack();
+                }
+            }
 
             MoveToTarget();
             SetOrientation();

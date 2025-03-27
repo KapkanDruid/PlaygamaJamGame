@@ -25,6 +25,14 @@ namespace Project.Content.CharacterAI
             _data = data;
         }
 
+        public void ResetTargets()
+        {
+            _targetToChase = null;
+            _targetToAttack = null;
+            _targetTransformToChase = null;
+            _targetTransformToAttack = null;
+        }
+
         public void ScanAreaToAttack()
         {
             ScanAndSetTarget(ref _targetToAttack,
@@ -86,6 +94,7 @@ namespace Project.Content.CharacterAI
             {
                 if (!hits[i].collider.TryGetComponent(out IEntity entity))
                     continue;
+
 
                 if (entity == _data.ThisEntity)
                     continue;
