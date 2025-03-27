@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _maxHealth: 10
+    _maxHealth: 100
     _gridPivotTransform: {fileID: 587701821265816660}
     _spriteRenderers:
     - {fileID: 2070359557671589300}
