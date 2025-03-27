@@ -1,5 +1,6 @@
 using Project.Content;
 using Project.Content.BuildSystem;
+using Project.Content.CharacterAI;
 using Project.Content.UI;
 using System;
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace Project.Architecture
         [Inject] private LevelExperienceController _levelExperienceHandler;
         [Inject] private FloatingTextHandler _floatingTextHandler;
         [Inject] private UpgradeEffectController _upgradeEffectController;
+        [Inject] private AudioController _audioController;
+        [Inject] private EntityCommander _entityCommander;
 
         public static event Action OnServicesInitialized;
 
@@ -33,6 +36,8 @@ namespace Project.Architecture
             _levelExperienceHandler.Initialize();
             _floatingTextHandler.Initialize();
             _upgradeEffectController.Initialize();
+            _audioController.Initialize();
+            _entityCommander.Initialize();
 
             OnServicesInitialized?.Invoke();
         }

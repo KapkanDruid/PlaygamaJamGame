@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Project.Content.UI
 {
     public class ModifierIconsController : MonoBehaviour
     {
-        private RectTransform[] _modifierIcons;
+        [SerializeField] private RectTransform[] _modifierIcons;
         private Vector2[] _positions;
 
         private HashSet<RectTransform> _placedIcons = new();
@@ -15,24 +14,17 @@ namespace Project.Content.UI
 
         private void Start()
         {
-            var modifierIcons = GetComponentsInChildren<ModifierIcon>();
             List<Vector2> positions = new();
-            List<RectTransform> transforms = new();
 
-            foreach (var icon in modifierIcons) 
+            foreach (var icon in _modifierIcons) 
             {
-                positions.Add(icon.GetComponent<RectTransform>().anchoredPosition);
-                transforms.Add(icon.GetComponent<RectTransform>());
+                positions.Add(icon.anchoredPosition);
             }
 
-            transforms.Reverse();
-            positions.Reverse();
-
-            _modifierIcons = transforms.ToArray();
             _positions = positions.ToArray();
         }
 
-        private void Update()
+       private void Update()
         {
             foreach (var icon in _modifierIcons)
             {

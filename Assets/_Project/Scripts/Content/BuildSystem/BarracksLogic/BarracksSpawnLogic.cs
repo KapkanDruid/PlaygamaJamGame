@@ -33,8 +33,6 @@ namespace Project.Content.BuildSystem
 
         public void Initialize()
         {
-            _entityCommander.Initialize();
-
             _alliedRangerSpawner = _alliedRangerFactory.Create(_barracksEntity.Data.AllyEntityType);
             _attackCooldownTimer = _barracksEntity.Data.SpawnCooldown;
 

@@ -1,3 +1,4 @@
+using Project.Architecture;
 using Project.Content.BuildSystem;
 using UnityEngine;
 using Zenject;
@@ -8,7 +9,7 @@ namespace Project.Content.CharacterAI.Infantryman
     {
         [SerializeField] private InfantrymanData _infantrymanData;
         [SerializeField] private SpriteRenderer _levelSpriteRenderer;
-
+        private ClosestTargetSensorFilter _sensorFilter;
         private TargetSensor _sensor;
         private Transform _targetTransform; 
         private Transform _flagTransform;
@@ -16,6 +17,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private PauseHandler _pauseHandler;
         private float _patrolRadius;
         private FloatingTextHandler _textHandler;
+        private EntityCommander _entityCommander;
 
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
@@ -36,21 +38,28 @@ namespace Project.Content.CharacterAI.Infantryman
         public void Construct(EnemyDeadHandler enemyDeadHandler,
                               Animator animator,
                               PauseHandler pauseHandler,
-                              FloatingTextHandler textHandler)
+                              FloatingTextHandler textHandler, 
+                              EntityCommander entityCommander)
         {
             _infantrymanData.ThisEntity = this;
             _enemyDeadHandler = enemyDeadHandler;
             _animator = animator;
             _pauseHandler = pauseHandler;
             _textHandler = textHandler;
+            _entityCommander = entityCommander;
 
+
+            MainSceneBootstrap.OnServicesInitialized += OnSceneInitialized;
             ResetData();
         }
 
         public void Initialize()
         {
             _infantrymanData.Initialize();
-            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
+
+            _sensorFilter = new ClosestTargetSensorFilter(_infantrymanData.EntityTransform);
+
+            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);    
         }
 
         public void Prepare(InfantrymanSpawnData spawnData)
@@ -62,6 +71,12 @@ namespace Project.Content.CharacterAI.Infantryman
             _enemyDeadHandler.Reset();
             _healthHandler.Reset();
             UpdateLevelSprite();
+        }
+
+        private void OnSceneInitialized()
+        {
+            if (_entityCommander != null)
+                _entityCommander.AddEntity(this);
         }
 
         public override T ProvideComponent<T>() where T : class
@@ -117,7 +132,7 @@ namespace Project.Content.CharacterAI.Infantryman
         {
             if (_targetTransform == null)
             {
-                if (!_sensor.TryGetTarget(out IEntity entity, out Transform targetTransform))
+                if (!_sensor.TryGetTarget(out IEntity entity, out Transform targetTransform, _sensorFilter))
                     return;
 
                 _targetTransform = targetTransform;
@@ -140,6 +155,11 @@ namespace Project.Content.CharacterAI.Infantryman
             int level = _infantrymanData.LevelUpgrade;
             Color color = _infantrymanData.GetColorForLevel(level);
             _levelSpriteRenderer.color = color;
+        }
+
+        private void OnDisable()
+        {
+            MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
         }
     }
 }

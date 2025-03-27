@@ -117,7 +117,7 @@ namespace Project.Content.BuildSystem
         {
             _placeComponent.OnPlaced -= OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
-            _dynamicData.OnDataUpdate += OnDataUpdate;
+            _dynamicData.OnDataUpdate -= OnDataUpdate;
         }
     }
 }

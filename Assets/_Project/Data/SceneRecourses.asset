@@ -36,3 +36,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 000e55c08930b8246b4dc0b610b4bd67, type: 2}
     _levelExperienceConfig: {fileID: 11400000, guid: 1815feeaf6a54ca42b9ab34ce5ba7563, type: 2}
     _wallConfig: {fileID: 11400000, guid: bb2413f4477c9a54b9369e9bd50056e8, type: 2}
+  _soundEffects:
+  - _key: {fileID: 11400000, guid: 3e3f0ad4c2c1923459a7e2c902ed3585, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 954ab77991710324db607a9092babfd2, type: 3}
+      _volume: 0.298
+  _music: []
