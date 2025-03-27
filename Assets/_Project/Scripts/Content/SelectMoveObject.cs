@@ -8,6 +8,8 @@ namespace Project.Content
         private const string Ground = "Ground";
 
         [SerializeField] private Collider2D _checkCollider;
+        [SerializeField] private float _searchRadiusIncrement = 0.5f;
+        [SerializeField] private float _maxSearchRadius = 10f;
 
         private Camera _mainCamera;
         private bool _isDragging = false;
@@ -35,12 +37,10 @@ namespace Project.Content
             if (_pauseHandler.IsPaused)
                 return;
 
-            Dragging();
-
-            MoveObject();
+            HandleInput();
         }
 
-        private void Dragging()
+        private void HandleInput()
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -54,44 +54,89 @@ namespace Project.Content
 
             if (Input.GetMouseButtonUp(0))
             {
-                _isDragging = false;
-                CheckCollisionAndReset();
-                SetSpriteColor(Color.clear);
+                if (_isDragging)
+                {
+                    _isDragging = false;
+                    FindNearestValidPosition();
+                    SetSpriteColor(Color.clear);
+                }
+            }
+
+            if (_isDragging)
+            {
+                MoveObject();
             }
         }
 
         private void MoveObject()
         {
-            if (!_isDragging)
-                return;
-
             Vector2 newPosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
             transform.position = newPosition;
 
             UpdateSpriteColor();
         }
 
-        private void CheckCollisionAndReset()
+        private void FindNearestValidPosition()
         {
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(_checkCollider.bounds.center, _checkCollider.bounds.size, 0f);
+            float searchRadius = _searchRadiusIncrement;
+            Vector3 validPosition = _initialPosition;
 
-            foreach (var collider in colliders)
+            while (searchRadius <= _maxSearchRadius)
             {
-                if (collider != _checkCollider && !collider.CompareTag(Ground))
+                Vector2[] points = GeneratePointsAround(transform.position, searchRadius);
+
+                for (int i = 0; i < points.Length; i++)
                 {
-                    transform.position = _initialPosition;
-                    return;
+                    if (IsValidPosition(points[i]))
+                    {
+                        validPosition = points[i];
+                        transform.position = validPosition;
+                        return;
+                    }
+                }
+
+                searchRadius += _searchRadiusIncrement;
+            }
+
+            transform.position = validPosition;
+        }
+
+        private bool IsValidPosition(Vector2 position)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(position, _checkCollider.bounds.extents.magnitude);
+
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i] != _checkCollider && !colliders[i].CompareTag(Ground))
+                {
+                    return false;
                 }
             }
+
+            return true;
+        }
+
+        private Vector2[] GeneratePointsAround(Vector2 center, float radius)
+        {
+            int pointCount = 8;
+            Vector2[] points = new Vector2[pointCount];
+
+            for (int i = 0; i < pointCount; i++)
+            {
+                float angle = i * Mathf.PI * 2 / pointCount;
+                points[i] = new Vector2(center.x + Mathf.Cos(angle) * radius, center.y + Mathf.Sin(angle) * radius);
+            }
+
+            return points;
         }
 
         private void UpdateSpriteColor()
         {
             Collider2D[] colliders = Physics2D.OverlapBoxAll(_checkCollider.bounds.center, _checkCollider.bounds.size, 0f);
 
-            foreach (var collider in colliders)
+            for (int i = 0; i < colliders.Length; i++)
             {
-                if (collider != _checkCollider && !collider.CompareTag(Ground))
+                if (colliders[i] != _checkCollider && !colliders[i].CompareTag(Ground))
                 {
                     SetSpriteColor(Color.red);
                     return;
