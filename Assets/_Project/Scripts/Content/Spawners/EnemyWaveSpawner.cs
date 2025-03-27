@@ -1,7 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using NUnit.Framework.Interfaces;
 using Project.Content.CharacterAI;
-using Project.Content.CharacterAI.Destroyer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,8 +65,7 @@ namespace Project.Content.Spawners
         private Wave _currentWave;
         private IEnemySpawner _spawner;
 
-        private DestroyerHandler _destroyerHandler;
-
+        public event Action<Transform> OnSpawnPointSelected;
 
         [Inject]
         private void Construct(DestroyerSpawner.Factory destroyerSpawner, MainTargetAttackerSpawner.Factory mainTargetAttackerSpawner, PauseHandler pauseHandler)
@@ -170,7 +167,10 @@ namespace Project.Content.Spawners
                         {
                             await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
 
-                            _spawner.Spawn(_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex].position);
+                            var spawnPoint = _currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex];
+                            OnSpawnPointSelected?.Invoke(spawnPoint);
+
+                            _spawner.Spawn(spawnPoint.position);
                             NextSpawnPoint();
 
                             j++;
