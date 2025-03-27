@@ -18,6 +18,7 @@ namespace Project.Content.BuildSystem
         [SerializeField] private GameObject[] _physicObjects;
         [SerializeField] private Transform _turretRotationObject;
         [SerializeField] private Transform _turretShootPoint;
+        [SerializeField] private Transform _attackZone;
 
         [SerializeField] private EntityFlags _enemyFlag;
         [SerializeField] private TurretType _turretType;
@@ -50,6 +51,7 @@ namespace Project.Content.BuildSystem
         public float RotationThreshold => _configData.RotationThreshold;
         public TurretType TurretType => _turretType;
         public IReactiveProperty<float> Health => _health;
+        public Transform AttackZone => _attackZone; 
 
         public void Construct(TurretDynamicData dynamicData, IEntity entity)
         {
@@ -77,6 +79,8 @@ namespace Project.Content.BuildSystem
 
             _health = new ReactiveProperty<float>(_dynamicData.MaxHealth.Value);
 
+            _attackZone.localScale = Vector2.one * _dynamicData.SensorRadius.Value * 2;
+
             _dynamicData.MaxHealth.OnValueChanged += UpdateHealth;
             _dynamicData.SensorRadius.OnValueChanged += UpdateSensorRadius;
             _dynamicData.Damage.OnValueChanged += UpdateDamage;
@@ -84,7 +88,12 @@ namespace Project.Content.BuildSystem
 
         private void UpdateHealth(float value) => _health.Value = value;
 
-        private void UpdateSensorRadius(float value) => _sensorData.SensorRadius = value;
+        private void UpdateSensorRadius(float value)
+        {
+            _attackZone.localScale = Vector2.one * value * 2;
+            _sensorData.SensorRadius = value;
+        }
+
         private void UpdateDamage(float value) => _projectileData.Damage = value;
 
         public void Dispose()
