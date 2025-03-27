@@ -1,18 +1,27 @@
-using DG.Tweening;
-using System.Collections.Generic;
+﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Project.Content
 {
-    public class HUDButtonsHandler : MonoBehaviour
+    public class PauseView : MonoBehaviour
     {
-        [SerializeField] private GameObject _pauseMenu;
+        [SerializeField] private GameObject _background;
         [SerializeField] private Button _pauseButton;
         [SerializeField] private Button _resumeButton;
         [SerializeField] private GameObject _buttonsContainer;
+        [SerializeField] private GameObject _panel;
 
+        private PauseHandler _pauseHandler;
         private Button[] _buttons;
+
+
+        [Inject]
+        public void Construct(PauseHandler pauseHandler)
+        {
+            _pauseHandler = pauseHandler;
+        }
 
         private void Start()
         {
@@ -22,8 +31,9 @@ namespace Project.Content
             _buttons = _buttonsContainer.GetComponentsInChildren<Button>();
 
             _buttonsContainer.SetActive(false);
-            _pauseMenu.SetActive(false);
+            _background.SetActive(false);
             _resumeButton.gameObject.SetActive(false);
+            _panel.SetActive(false);
 
             _resumeButton.transform.localScale = Vector3.zero;
             _buttons = _buttonsContainer.GetComponentsInChildren<Button>();
@@ -36,12 +46,14 @@ namespace Project.Content
 
         private void ShowPauseMenu()
         {
-            _pauseMenu.SetActive(true);
-            _pauseMenu.transform.localScale = Vector3.zero;
-            _pauseMenu.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBack);
-
+            _pauseHandler.SetPaused(true);
+            _background.SetActive(true);
+            _panel.SetActive(true);
             _resumeButton.gameObject.SetActive(true);
             _buttonsContainer.SetActive(true);
+
+            _background.transform.localScale = Vector3.zero;
+            _background.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBack);
 
             _resumeButton.transform.DOScale(1f, 0.5f).SetEase(Ease.OutQuad);
 
@@ -57,6 +69,9 @@ namespace Project.Content
 
         private void HidePauseMenu()
         {
+            _pauseHandler.SetPaused(false);
+            _panel.SetActive(false);
+
             for (int i = 0; i < _buttons.Length; i++)
             {
                 HideButtons(i);
@@ -66,11 +81,11 @@ namespace Project.Content
                 .SetEase(Ease.InBack)
                 .OnComplete(() => _resumeButton.gameObject.SetActive(false));
 
-            _pauseMenu.transform.DOScale(0f, 0.5f)
+            _background.transform.DOScale(0f, 0.5f)
                 .SetEase(Ease.InBack)
                 .OnComplete(() =>
                 {
-                    _pauseMenu.SetActive(false);
+                    _background.SetActive(false);
                     _buttonsContainer.SetActive(false);
                 });
         }

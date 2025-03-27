@@ -202,6 +202,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -922,7 +935,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      loading_0: -2914503216214332612
+      loading_1: -3243969905789220278
+      loading_10: -2156915938320294082
+      loading_11: -4211913343427201961
+      loading_12: 951066354375470112
+      loading_13: 3696265151303433144
+      loading_14: 3513662259318695050
+      loading_15: 5890175295791493637
+      loading_16: -7286490243266713842
+      loading_17: -6599300026918821854
+      loading_18: -2808042595294209006
+      loading_19: 1295403015276433745
+      loading_2: -2240947139059371774
+      loading_20: 7504859314423207589
+      loading_21: 1951465060135883853
+      loading_22: -3296267579999740976
+      loading_23: 1796323519257549403
+      loading_24: 2384913348356679543
+      loading_25: -2764863927459012247
+      loading_26: 6054393282614966420
+      loading_27: 3218627695311564277
+      loading_28: 6541297945903641259
+      loading_29: 7435196762958116076
+      loading_3: -9038400482918282348
+      loading_30: 3414030076378708061
+      loading_31: -5403807304411875665
+      loading_4: 3541541065571182360
+      loading_5: -6469537607060608100
+      loading_6: -6746097347225962745
+      loading_7: -176354558837914207
+      loading_8: 4675115675929687159
+      loading_9: -3702057662703198419
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
