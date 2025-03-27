@@ -215,7 +215,7 @@ MonoBehaviour:
     _characterTransform: {fileID: 4681862340869142893}
     _flags:
       _flags: 00000000
-    _enemyFlag: 020000000300000001000000
+    _enemyFlag: 01000000
     _floatingText: {fileID: 11400000, guid: d3bc4705e24fec346818128c7b5678cc, type: 2}
 --- !u!195 &1310290315453388512
 NavMeshAgent:
