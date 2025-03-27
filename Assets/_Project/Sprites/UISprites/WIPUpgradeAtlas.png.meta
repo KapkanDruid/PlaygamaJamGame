@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: -1342020094215906714
     second: WIPUpgradeAtlas_0
+  - first:
+      213: 7859703357687803111
+    second: WIPUpgradeAtlas_1
+  - first:
+      213: -841645369824388747
+    second: WIPUpgradeAtlas_2
+  - first:
+      213: 8961683680368760880
+    second: WIPUpgradeAtlas_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -117,6 +126,72 @@ TextureImporter:
       bones: []
       spriteID: 66a13daa5df206de0800000000000000
       internalID: -1342020094215906714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1286
+        width: 414
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec2de2bf86431d60800000000000000
+      internalID: 7859703357687803111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1284
+        width: 491
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579d3c0deffd154f0800000000000000
+      internalID: -841645369824388747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1297
+        width: 140
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0389bc583db4e5c70800000000000000
+      internalID: 8961683680368760880
       vertices: []
       indices: 
       edges: []
