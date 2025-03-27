@@ -24,7 +24,7 @@ namespace Project.Content.CoreGameLoopLogic
         {
             _pauseHandler.SetPaused(isDestroyed);
             OnLose?.Invoke();
-
+            _pauseHandler.SetPaused(true);
         }
 
         public void Tick()
