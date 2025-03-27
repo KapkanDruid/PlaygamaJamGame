@@ -17,7 +17,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public MainTargetAttackerAttackLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
                                              CharacterSensor characterSensor,
-                                             Animator animator, 
+                                             Animator animator,
                                              PauseHandler pauseHandler)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
@@ -34,11 +34,16 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             if (_pauseHandler.IsPaused)
                 return;
 
-            if (_characterSensor.TargetTransformToAttack == null)
-                return;
-
-            if (_characterSensor.TargetToAttack == null || !_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
+            if (_characterSensor.TargetToAttack == null || _characterSensor.TargetTransformToAttack == null)
+            {
                 _characterSensor.ScanAreaToAttack();
+
+                if (_characterSensor.TargetTransformToAttack != null)
+                {
+                    if (!_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
+                        _characterSensor.ScanAreaToAttack();
+                }
+            }
 
             TryToHit();
 
@@ -57,17 +62,21 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         {
             if (_characterSensor.TargetToAttack != null)
             {
-                if (_attackCooldownTimer <= 0)
+                if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= 
+                    _mainTargetAttackerHandler.MainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize * 2)
                 {
-                    _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+                    if (_attackCooldownTimer <= 0)
+                    {
+                        _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
 
-                    if (_mainTargetAttackerHandler.PathInvalid)
-                        _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
-                    else
-                        _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
-                    
-                    Attack();
-                    _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
+                        if (_mainTargetAttackerHandler.PathInvalid)
+                            _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
+                        else
+                            _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
+
+                        Attack();
+                        _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
+                    }
                 }
             }
         }
@@ -89,6 +98,10 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 #if UNITY_EDITOR
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position + _mainTargetAttackerSensorData.HitColliderOffset, _mainTargetAttackerSensorData.HitColliderSize);
+
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position, (Vector2)_characterSensor.TargetTransformToChase.position);
+
 #endif
         }
 

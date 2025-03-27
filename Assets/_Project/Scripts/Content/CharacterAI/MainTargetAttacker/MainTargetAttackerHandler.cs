@@ -91,6 +91,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public void Moving(bool isMoving)
         {
             _isMoving = isMoving;
+            _animator.SetBool(AnimatorHashes.IsMoving, _isMoving);
             _canAttack = !isMoving;
         }
 
@@ -102,6 +103,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private void OnEnable()
         {
             ResetData();
+            _characterSensor.ResetTargets();
             _animator.Rebind();
             _animator.Update(0f);
             _enemyDeadHandler.Reset();
