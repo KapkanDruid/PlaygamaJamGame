@@ -60,8 +60,6 @@ namespace Project.Content
 
             AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
 
-            Debug.Log("animation lenght" + stateInfo.length);
-
             try
             {
                 await UniTask.WaitForSeconds(stateInfo.length, cancellationToken: _characterTransform.gameObject.GetCancellationTokenOnDestroy());
