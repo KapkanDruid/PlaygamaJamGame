@@ -13,6 +13,15 @@ namespace Project.Content.Spawners
         private float _animationSpeed;
         private float _animationTime;
         private bool _isPlaying;
+        private AnimatorStateInfo _pausedAnimatorState;
+        private PauseHandler _pauseHandler;
+
+        [Inject]
+        public void Construct(PauseHandler pauseHandler)
+        {
+            _pauseHandler = pauseHandler;
+        }
+
 
         [Inject]
         private void Construct(AudioController audioController)
@@ -40,6 +49,16 @@ namespace Project.Content.Spawners
 
         private void Update()
         {
+            if (_pauseHandler.IsPaused)
+            {
+                PauseAnimation();
+                return;
+            }
+            else
+            {
+                ResumeAnimation();
+            }
+
             if (_isPlaying)
             {
                 if (_animationTime > 0)
@@ -52,6 +71,24 @@ namespace Project.Content.Spawners
                     gameObject.SetActive(false);
                     _isPlaying = false;
                 }
+            }
+        }
+
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
             }
         }
 

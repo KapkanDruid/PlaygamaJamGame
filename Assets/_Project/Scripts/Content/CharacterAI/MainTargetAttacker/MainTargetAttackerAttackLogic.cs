@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
@@ -14,6 +13,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private float _attackCooldownTimer;
+        private AnimatorStateInfo _pausedAnimatorState;
 
         public MainTargetAttackerAttackLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
                                              CharacterSensor characterSensor,
@@ -32,7 +32,14 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public void Tick()
         {
             if (_pauseHandler.IsPaused)
+            {
+                PauseAnimation();
                 return;
+            }
+            else
+            {
+                ResumeAnimation();
+            }
 
             if (_characterSensor.TargetToAttack == null || _characterSensor.TargetTransformToAttack == null)
             {
@@ -91,6 +98,24 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                 _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
             }
 
+        }
+
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
+            }
         }
 
         public void OnDrawGizmos()

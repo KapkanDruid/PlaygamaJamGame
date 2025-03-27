@@ -1,8 +1,5 @@
-﻿using Project.Content.CharacterAI.Destroyer;
-using System.Drawing;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
 using Zenject;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
@@ -17,6 +14,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private CharacterSensor _characterSensor;
         private MainTargetAttackerHandler _mainTargetAttackerHandler;
         private EnemyDeadHandler _enemyDeadHandler;
+        private Animator _animator;
+        private AnimatorStateInfo _pausedAnimatorState;
 
         private bool _isMoving => _agent.velocity.sqrMagnitude > 0.05f && !_agent.isStopped;
 
@@ -24,7 +23,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                                            CharacterSensor characterSensor,
                                            NavMeshAgent navMeshAgent,
                                            PauseHandler pauseHandler,
-                                           EnemyDeadHandler enemyDeadHandler)
+                                           EnemyDeadHandler enemyDeadHandler,
+                                           Animator animator)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
             _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
@@ -33,6 +33,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _agent = navMeshAgent;
             _pauseHandler = pauseHandler;
             _enemyDeadHandler = enemyDeadHandler;
+            _animator = animator;
 
             Initialize();
         }
@@ -53,7 +54,12 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             {
                 _agent.speed = 0f;
                 _agent.isStopped = true;
+                PauseAnimation();
                 return;
+            }
+            else
+            {
+                ResumeAnimation();
             }
 
             _agent.speed = _mainTargetAttackerData.Speed;
@@ -122,6 +128,24 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             }
         }
 
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
+            }
+        }
+
         private void HandleBlockedPath()
         {
             _mainTargetAttackerHandler.IsPathInvalid(true);
@@ -156,7 +180,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                 return;
 
             }
-                Debug.Log($"Блокирует {_blockingEntity}");
 
         }
     }
