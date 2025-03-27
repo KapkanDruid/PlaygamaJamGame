@@ -41,4 +41,8 @@ MonoBehaviour:
     _value:
       _clip: {fileID: 8300000, guid: 954ab77991710324db607a9092babfd2, type: 3}
       _volume: 0.298
-  _music: []
+  _music:
+  - _key: {fileID: 11400000, guid: 5ea3d73fe95f0444994d188a3dbc3762, type: 2}
+    _value:
+    - _clip: {fileID: 8300000, guid: 7d53fdb0fa0732546966ea99e0c2b143, type: 3}
+      _volume: 1
