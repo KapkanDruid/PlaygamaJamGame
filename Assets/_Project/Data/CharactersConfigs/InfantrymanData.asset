@@ -16,7 +16,7 @@ MonoBehaviour:
   _speed: 2
   _damage: 2
   _attackCooldown: 2
-  _attackRange: 6
+  _attackRange: 4
   _type: 0
-  _sensorRadius: 6
+  _sensorRadius: 4
   _upgradeSprite: {fileID: 985944560047886007, guid: fe7e2a4440f06f947831e478edcbe2cc, type: 3}
