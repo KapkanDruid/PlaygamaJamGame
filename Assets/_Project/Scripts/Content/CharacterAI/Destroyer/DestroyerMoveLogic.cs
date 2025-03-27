@@ -12,12 +12,15 @@ namespace Project.Content.CharacterAI.Destroyer
         private DestroyerHandler _destroyerHandler;
         private PauseHandler _pauseHandler;
         private EnemyDeadHandler _enemyDeadHandler;
+        private Animator _animator;
+        private AnimatorStateInfo _pausedAnimatorState;
 
         public DestroyerMoveLogic(DestroyerHandler destroyerHandler,
                                   CharacterSensor characterSensor,
                                   NavMeshAgent navMeshAgent,
                                   PauseHandler pauseHandler,
-                                  EnemyDeadHandler enemyDeadHandler)
+                                  EnemyDeadHandler enemyDeadHandler,
+                                  Animator animator)
         {
             _destroyerHandler = destroyerHandler;
             _destroyerData = destroyerHandler.DestroyerData;
@@ -25,6 +28,7 @@ namespace Project.Content.CharacterAI.Destroyer
             _agent = navMeshAgent;
             _pauseHandler = pauseHandler;
             _enemyDeadHandler = enemyDeadHandler;
+            _animator = animator;
 
             Initialize();
         }
@@ -44,7 +48,12 @@ namespace Project.Content.CharacterAI.Destroyer
             {
                 _agent.speed = 0f;
                 _agent.isStopped = true;
+                PauseAnimation();
                 return;
+            }
+            else
+            {
+                ResumeAnimation();
             }
 
             _agent.speed = _destroyerData.Speed;
@@ -81,6 +90,24 @@ namespace Project.Content.CharacterAI.Destroyer
             else if (direction < 0)
             {
                 _destroyerHandler.transform.localScale = leftOrientation;
+            }
+        }
+
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
             }
         }
 
