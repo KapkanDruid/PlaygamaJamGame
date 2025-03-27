@@ -93,7 +93,8 @@ namespace Project.Content
                 return;
 
             _musicSource.clip = _musicClips[_currentMusicIndex].Clip;
-            //Добавить множитель звука
+
+            _musicSource.volume = _musicClips[_currentMusicIndex].Volume;
 
             _musicSource.Play();
 
