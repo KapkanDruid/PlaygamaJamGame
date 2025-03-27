@@ -16,6 +16,7 @@ namespace Project.Architecture
         [Inject] private LevelExperienceController _levelExperienceHandler;
         [Inject] private FloatingTextHandler _floatingTextHandler;
         [Inject] private UpgradeEffectController _upgradeEffectController;
+        [Inject] private AudioController _audioController;
 
         public static event Action OnServicesInitialized;
 
@@ -33,6 +34,7 @@ namespace Project.Architecture
             _levelExperienceHandler.Initialize();
             _floatingTextHandler.Initialize();
             _upgradeEffectController.Initialize();
+            _audioController.Initialize();
 
             OnServicesInitialized?.Invoke();
         }

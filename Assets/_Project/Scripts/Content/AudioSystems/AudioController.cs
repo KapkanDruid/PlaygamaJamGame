@@ -1,0 +1,106 @@
+﻿using UnityEngine;
+using Zenject;
+
+namespace Project.Content
+{
+    public class AudioController : MonoBehaviour
+    {
+        [SerializeField] private AudioSource _musicSource;
+        [SerializeField] private AudioSource _SFXSource;
+
+        [SerializeField] private EffectType _musicListType;
+
+        private Sound[] _musicClips;
+
+        private SceneRecourses _sceneResources;
+
+        private int _currentMusicIndex;
+
+        [Inject]
+        private void Construct(SceneRecourses sceneResources)
+        {
+            _sceneResources = sceneResources;
+        }
+
+        public void Initialize()
+        {
+            foreach (var musicList in _sceneResources.MusicDictionary)
+            {
+                if (musicList.Key == _musicListType)
+                {
+                    _musicClips = musicList.Value;
+                    return;
+                }
+            }
+
+            Debug.LogError("[AudioController] Failed to find Music List");
+        }
+
+
+        public void PlayOneShot(EffectType effectType)
+        {
+            for (int i = 0; i < _sceneResources.SoundEffects.Length; i++)
+            {
+                var clip = _sceneResources.SoundEffects[i];
+
+                if (clip.Key == effectType)
+                {
+                    _SFXSource.PlayOneShot(clip.Value.Clip, clip.Value.Volume);
+                    return;
+                }
+            }
+
+            Debug.LogError("[AudioController] Failed to find sound effect");
+        }
+
+        public void PLayLoopEffect(EffectType effectType)
+        {
+            for (int i = 0; i < _sceneResources.SoundEffects.Length; i++)
+            {
+                var clip = _sceneResources.SoundEffects[i];
+
+                if (clip.Key == effectType)
+                {
+                    _SFXSource.loop = true;
+                    _SFXSource.clip = clip.Value.Clip;
+                    //Добавить множитель звука
+                    _SFXSource.Play();
+
+                    return;
+                }
+            }
+
+            Debug.LogError("[AudioController] Failed to find sound effect");
+        }
+
+        public void StopLoopEffect()
+        {
+            _SFXSource.loop = false;
+            _SFXSource.Stop();
+        }
+
+        private void Update()
+        {
+            if (!_musicSource.isPlaying)
+            {
+                PlayNextClip();
+            }
+        }
+
+        private void PlayNextClip()
+        {
+            if (_musicClips == null)
+                return;
+
+            _musicSource.clip = _musicClips[_currentMusicIndex].Clip;
+            //Добавить множитель звука
+
+            _musicSource.Play();
+
+            _currentMusicIndex++;
+
+            if (_currentMusicIndex >= _musicClips.Length)
+                _currentMusicIndex = 0;
+        }
+    }
+}
