@@ -17,6 +17,7 @@ namespace Project.Content.UI
         private SceneData _sceneData;
         private TurretDynamicData _dynamicData;
         private TurretConfig _config;
+        private bool _isInited;
 
         [Inject]
         private void Construct(SceneData sceneData)
@@ -33,10 +34,15 @@ namespace Project.Content.UI
             _baseText.text = _config.MaxHealth.ToString();
             _bonusText.text = (_dynamicData.MaxHealth.Value - _config.MaxHealth).ToString();
             _currentText.text = _dynamicData.MaxHealth.Value.ToString();
+
+            _isInited = true;
         }
 
         private void OnEnable()
         {
+            if (!_isInited)
+                gameObject.SetActive(false);
+
             if (_dynamicData == null)
                 return;
 
