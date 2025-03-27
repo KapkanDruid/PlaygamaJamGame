@@ -47,7 +47,8 @@ namespace Project.Content.CoreGameLoopLogic
         {
             int minutes = Mathf.FloorToInt(_timeRemaining / 60);
             int seconds = Mathf.FloorToInt(_timeRemaining % 60);
-            _timerText.text = $"{minutes:D2}:{seconds:D2}";
+            string formattedTime = string.Join(" ", $"{minutes:D2}:{seconds:D2}".ToCharArray());
+            _timerText.text = formattedTime;
         }
     }
 

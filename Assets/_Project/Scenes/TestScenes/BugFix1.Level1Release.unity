@@ -30123,6 +30123,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1825959505}
     m_Modifications:
+    - target: {fileID: 1135848099064348754, guid: bf1da9b4a9c1bf44589016d2f6d144a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1161237510508577145, guid: bf1da9b4a9c1bf44589016d2f6d144a9, type: 3}
       propertyPath: m_Name
       value: '[TEMPSceneTransition]'
