@@ -51,7 +51,6 @@ namespace Project.Content
             try
             {
                 await UniTask.WaitForFixedUpdate(_characterTransform.gameObject.GetCancellationTokenOnDestroy());
-                await UniTask.WaitForFixedUpdate(_characterTransform.gameObject.GetCancellationTokenOnDestroy());
             }
             catch (OperationCanceledException)
             {
@@ -59,6 +58,8 @@ namespace Project.Content
             }
 
             AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+            if (stateInfo.length <= 0)
+                return;
 
             try
             {
