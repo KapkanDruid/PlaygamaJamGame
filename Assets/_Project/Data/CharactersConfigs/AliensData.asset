@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AliensData
   m_EditorClassIdentifier: 
   _health: 16
-  _experiencePoints: 10
+  _experiencePoints: 8
   _speed: 1.5
   _distanceToTarget: 1
   _damage: 4

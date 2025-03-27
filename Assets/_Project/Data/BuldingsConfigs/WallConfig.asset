@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15960829984edc147836b238b53e1057, type: 3}
   m_Name: WallConfig
   m_EditorClassIdentifier: 
-  _placeCardAmount: 3
+  _placeCardAmount: 5
   _maxHealth: 20
