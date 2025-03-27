@@ -7,12 +7,15 @@ namespace Project.Content
     {
         private const string Ground = "Ground";
 
+        [SerializeField] private Collider2D _checkCollider;
+
         private Camera _mainCamera;
         private bool _isDragging = false;
         private Vector3 _initialPosition;
-        private Collider2D _currentCollider;
+        private Collider2D _currentCollider; 
         private PauseHandler _pauseHandler;
-        
+        private SpriteRenderer _spriteRenderer;
+
         [Inject] 
         public void Construct(PauseHandler pauseHandler)
         {
@@ -23,6 +26,8 @@ namespace Project.Content
         {
             _currentCollider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            SetSpriteColor(Color.clear);
         }
 
         private void Update()
@@ -40,7 +45,7 @@ namespace Project.Content
             if (Input.GetMouseButtonDown(0))
             {
                 Vector2 clickPosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-                if (GetComponent<Collider2D>().OverlapPoint(clickPosition))
+                if (_currentCollider.OverlapPoint(clickPosition))
                 {
                     _isDragging = true;
                     _initialPosition = transform.position;
@@ -51,6 +56,7 @@ namespace Project.Content
             {
                 _isDragging = false;
                 CheckCollisionAndReset();
+                SetSpriteColor(Color.clear);
             }
         }
 
@@ -62,20 +68,42 @@ namespace Project.Content
             Vector2 newPosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
             transform.position = newPosition;
 
+            UpdateSpriteColor();
         }
 
         private void CheckCollisionAndReset()
         {
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(_currentCollider.bounds.center, _currentCollider.bounds.size, 0f);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(_checkCollider.bounds.center, _checkCollider.bounds.size, 0f);
 
             foreach (var collider in colliders)
             {
-                if (collider != _currentCollider && !collider.CompareTag(Ground))
+                if (collider != _checkCollider && !collider.CompareTag(Ground))
                 {
                     transform.position = _initialPosition;
                     return;
                 }
             }
+        }
+
+        private void UpdateSpriteColor()
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(_checkCollider.bounds.center, _checkCollider.bounds.size, 0f);
+
+            foreach (var collider in colliders)
+            {
+                if (collider != _checkCollider && !collider.CompareTag(Ground))
+                {
+                    SetSpriteColor(Color.red);
+                    return;
+                }
+            }
+
+            SetSpriteColor(Color.green);
+        }
+
+        private void SetSpriteColor(Color color)
+        {
+            _spriteRenderer.color = color;
         }
     }
 }
