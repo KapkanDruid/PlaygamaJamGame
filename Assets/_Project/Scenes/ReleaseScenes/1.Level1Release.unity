@@ -280,17 +280,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4397974108166497881, guid: bf1da9b4a9c1bf44589016d2f6d144a9, type: 3}
   m_PrefabInstance: {fileID: 992316317}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &136944768 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6904498323280325350, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
-  m_PrefabInstance: {fileID: 1255740095}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf279003827b9ac4699cb8c87267dd7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &211288298
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +694,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.00390625, y: 0.00390625, z: 0}
   m_MaxChunkCount: 16
@@ -30994,7 +30983,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4510169077041886917, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: _cardsReference
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4510169077041886917, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: '_cardsToTest.Array.data[0]'
@@ -31007,7 +30996,7 @@ PrefabInstance:
     - target: {fileID: 4510169077041886917, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: '_cardsToTest.Array.data[2]'
       value: 
-      objectReference: {fileID: 136944768}
+      objectReference: {fileID: 2083802038}
     - target: {fileID: 4900232885564009308, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
       propertyPath: _canvasRectTransform
       value: 
@@ -31723,50 +31712,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1691694277
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1691694279}
-  - component: {fileID: 1691694278}
-  m_Layer: 0
-  m_Name: '[TestControl]'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1691694278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691694277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33152197f4571924196a175e7c2aca03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1691694279
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691694277}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4697131, y: -0.4483476, z: 0.023516892}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1784197766
 GameObject:
   m_ObjectHideFlags: 0
@@ -32258,6 +32203,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083802038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8262946995649890770, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
+  m_PrefabInstance: {fileID: 1255740095}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a098a98b0d9e249a35c98f93d13f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2084021867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32326,7 +32282,6 @@ SceneRoots:
   - {fileID: 2083231340}
   - {fileID: 677028382}
   - {fileID: 705546050}
-  - {fileID: 1691694279}
   - {fileID: 927235003}
   - {fileID: 1825959505}
   - {fileID: 260434345}
