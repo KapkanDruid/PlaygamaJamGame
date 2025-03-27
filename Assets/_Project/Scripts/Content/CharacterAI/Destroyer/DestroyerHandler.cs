@@ -81,6 +81,7 @@ namespace Project.Content.CharacterAI.Destroyer
         private void OnEnable()
         {
             ResetData();
+            _characterSensor.ResetTargets();
             _animator.Rebind();
             _animator.Update(0f);
             _enemyDeadHandler.Reset();

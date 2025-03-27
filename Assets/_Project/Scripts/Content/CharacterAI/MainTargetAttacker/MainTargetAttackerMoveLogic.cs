@@ -1,11 +1,13 @@
 ﻿using Project.Content.CharacterAI.Destroyer;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 using Zenject;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
 {
-    class MainTargetAttackerMoveLogic :  ITickable
+    class MainTargetAttackerMoveLogic : ITickable
     {
         private NavMeshAgent _agent;
         private PauseHandler _pauseHandler;
@@ -78,11 +80,12 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
             if (direction > 0)
             {
-                _mainTargetAttackerHandler.transform.localScale = rightOrientation;
+                _mainTargetAttackerHandler.transform.localScale = leftOrientation;
             }
             else if (direction < 0)
             {
-                _mainTargetAttackerHandler.transform.localScale = leftOrientation;
+
+                _mainTargetAttackerHandler.transform.localScale = rightOrientation;
             }
         }
 
@@ -142,12 +145,19 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                 if (flags == null)
                     continue;
 
-                _blockingEntity = entity;
+                if (entity != null)
+                {
+                    _blockingEntity = entity;
+                }
+                else
+                {
+                    _blockingEntity = null;
+                }
                 return;
 
             }
+                Debug.Log($"Блокирует {_blockingEntity}");
 
-            _blockingEntity = null;
         }
     }
 }
