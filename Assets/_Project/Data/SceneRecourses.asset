@@ -41,6 +41,30 @@ MonoBehaviour:
     _value:
       _clip: {fileID: 8300000, guid: 954ab77991710324db607a9092babfd2, type: 3}
       _volume: 0.298
+  - _key: {fileID: 11400000, guid: 64b2cae49e84e4c4bb9fd369877c732e, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: fa76e48c291cc3940883cc5435aa2cb2, type: 3}
+      _volume: 1
+  - _key: {fileID: 11400000, guid: d647e3ae62785fe45aba94789bb23aaf, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: dd626d43ccdd0a34693d9df6afed5891, type: 3}
+      _volume: 1
+  - _key: {fileID: 11400000, guid: ea51e7f1cd3c2534298604197814751d, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 492c8bcd0c06afb4fa8b4d24424d635b, type: 3}
+      _volume: 1
+  - _key: {fileID: 11400000, guid: ac313f77f7ec9ec4d922342feadb457f, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 617039dcf8b1db846a0260efaef51317, type: 3}
+      _volume: 0.297
+  - _key: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 23bc1c3a0bc97a9419277b6b17ace844, type: 3}
+      _volume: 1
+  - _key: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 863fa18f7aaafba40925f061f5a8e65f, type: 3}
+      _volume: 1
   _music:
   - _key: {fileID: 11400000, guid: 5ea3d73fe95f0444994d188a3dbc3762, type: 2}
     _value:

@@ -19,7 +19,7 @@ namespace Project.Content
             _effectsSlider.value = _effectsValue;
 
             _musicSlider.onValueChanged.AddListener((x) => SetMusicVolume(x));
-            _effectsSlider.onValueChanged.AddListener((x) => SetMusicVolume(x));
+            _effectsSlider.onValueChanged.AddListener((x) => SetEffectsVolume(x));
         }
 
         public void SetEffectsVolume(float value)

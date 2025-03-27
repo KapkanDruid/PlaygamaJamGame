@@ -1,13 +1,24 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace Project.Content.Spawners
 {
     public class HintAnimatorController : MonoBehaviour
     {
+        [SerializeField] private EffectType _effectType;
+
+        private AudioController _controller;
+
         private Animator _animator;
         private float _animationSpeed;
         private float _animationTime;
         private bool _isPlaying;
+
+        [Inject]
+        private void Construct(AudioController audioController)
+        {
+            _controller = audioController;
+        }
 
         private void Awake()
         {
@@ -44,6 +55,9 @@ namespace Project.Content.Spawners
             }
         }
 
-
+        private void OnHit()
+        {
+            _controller.PlayOneShot(_effectType);
+        }
     }
 }
