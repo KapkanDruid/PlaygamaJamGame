@@ -17,16 +17,10 @@ namespace Project.Content.Spawners
         private PauseHandler _pauseHandler;
 
         [Inject]
-        public void Construct(PauseHandler pauseHandler)
-        {
-            _pauseHandler = pauseHandler;
-        }
-
-
-        [Inject]
-        private void Construct(AudioController audioController)
+        private void Construct(AudioController audioController, PauseHandler pauseHandler)
         {
             _controller = audioController;
+            _pauseHandler = pauseHandler;
         }
 
         private void Awake()

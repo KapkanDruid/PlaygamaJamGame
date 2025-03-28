@@ -13,6 +13,7 @@ namespace Project.Content.BuildSystem
         private bool _isDead = false;
 
         public event Action OnDead;
+        public event Action OnTakeDamage;
         public float Health => _currentHealth;
 
         public BuildingHealthComponent(IHealthData data, IHealthView view)
@@ -44,7 +45,7 @@ namespace Project.Content.BuildSystem
         {
             if (_isDead)
                 return;
-
+            OnTakeDamage?.Invoke();
             callback?.Invoke();
 
             UpdateHealth(-damage);
