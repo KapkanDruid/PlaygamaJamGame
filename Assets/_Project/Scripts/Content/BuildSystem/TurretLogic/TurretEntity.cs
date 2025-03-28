@@ -1,4 +1,5 @@
 using Project.Architecture;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -7,6 +8,7 @@ namespace Project.Content.BuildSystem
 {
     public class TurretEntity : MonoBehaviour, IEntity
     {
+        [SerializeField] private AlertType _alertType;
         [SerializeField] private TurretData _data;
         private TurretDynamicData _dynamicData;
 
@@ -16,6 +18,7 @@ namespace Project.Content.BuildSystem
         private TurretAttackComponent _attackComponent;
         private SceneData _sceneData;
         private UpgradeEffectController _upgradeEffect;
+        private AlertController _alertController;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
@@ -38,7 +41,8 @@ namespace Project.Content.BuildSystem
                                GridPlaceSystem placeSystem,
                                TurretAttackComponent attackComponent, 
                                SceneData sceneData,
-                               UpgradeEffectController upgradeEffect)
+                               UpgradeEffectController upgradeEffect,
+                               AlertController alertController)
         {
             List<object> components = new();
 
@@ -48,6 +52,7 @@ namespace Project.Content.BuildSystem
             _placeSystem = placeSystem;
             _attackComponent = attackComponent;
             _upgradeEffect = upgradeEffect;
+            _alertController = alertController;
 
             components.Add(_attackComponent);
             components.Add(_placeComponent);
@@ -76,12 +81,18 @@ namespace Project.Content.BuildSystem
             _placeComponent.Initialize();
 
             _healthHandler.OnDead += DestroyThisAsync;
+            _healthHandler.OnDead += DestroyAlert;
             _dynamicData.OnDataUpdate += OnDataUpdate;
 
             if (_isRuntimeCreated)
                 return;
 
             _placeSystem.PLaceOnGrid(_placeComponent);
+        }
+
+        private void DestroyAlert()
+        {
+            _alertController.ShowAlert(_alertType);
         }
 
         private void OnEntityPlaced()
@@ -116,6 +127,7 @@ namespace Project.Content.BuildSystem
         private void OnDestroy()
         {
             _placeComponent.OnPlaced -= OnEntityPlaced;
+            _healthHandler.OnDead -= DestroyAlert;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
             _dynamicData.OnDataUpdate -= OnDataUpdate;
         }

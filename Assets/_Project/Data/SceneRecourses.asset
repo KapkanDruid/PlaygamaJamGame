@@ -70,3 +70,13 @@ MonoBehaviour:
     _value:
     - _clip: {fileID: 8300000, guid: 7d53fdb0fa0732546966ea99e0c2b143, type: 3}
       _volume: 1
+  _alerts:
+  - _key: {fileID: 11400000, guid: fe1d3961653b52a4b9bde6309b8a1e1b, type: 2}
+    _value:
+      _text: Main building attacked
+  - _key: {fileID: 11400000, guid: 62061876220b71e46b71525697f768c5, type: 2}
+    _value:
+      _text: Barracks destroyed
+  - _key: {fileID: 11400000, guid: 7089c6ed46557bf43bb456ce9132b3e6, type: 2}
+    _value:
+      _text: Turret destroyed
