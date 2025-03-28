@@ -38,6 +38,7 @@ namespace Project.Content.BuildSystem
             components.Add(_healthHandler);
             components.Add(_data.Flags);
             components.Add(this);
+            components.Add(_data.Collider);
 
             _components = components.ToArray();
 

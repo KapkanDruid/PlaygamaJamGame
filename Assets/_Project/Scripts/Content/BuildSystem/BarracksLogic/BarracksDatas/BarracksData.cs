@@ -19,6 +19,7 @@ namespace Project.Content.BuildSystem
         [SerializeField] private BarracksType _barracksType;
         [SerializeField] private Transform _spawnPosition;
         [SerializeField] private EffectType _placeSoundEffect;
+        [SerializeField] private Collider2D _collider;
 
         private BarrackDynamicData _dynamicData;
         private BarrackConfig _config;
@@ -40,6 +41,7 @@ namespace Project.Content.BuildSystem
         public EffectType PlaceSoundEffect => _placeSoundEffect;
 
         public IReactiveProperty<float> Health => _dynamicData.BuildingMaxHealth;
+        public Collider2D Collider => _collider;
 
         public void Construct(BarrackDynamicData dynamicData)
         {

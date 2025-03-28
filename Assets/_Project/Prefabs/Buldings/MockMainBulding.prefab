@@ -568,6 +568,7 @@ MonoBehaviour:
       _flags: 03000000
     _physicObjects:
     - {fileID: 529608231433032311}
+    _collider: {fileID: 6711962389302387495}
 --- !u!1 &7766812225602160550
 GameObject:
   m_ObjectHideFlags: 0

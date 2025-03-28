@@ -426,6 +426,7 @@ MonoBehaviour:
     _barracksType: 0
     _spawnPosition: {fileID: 2158087306715167320}
     _placeSoundEffect: {fileID: 11400000, guid: 5eea47e6034cdc24f93a60635a7b4bf1, type: 2}
+    _collider: {fileID: 6711962389302387495}
 --- !u!1 &7442485643296424478
 GameObject:
   m_ObjectHideFlags: 0
