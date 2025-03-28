@@ -44,7 +44,7 @@ namespace Project.Content.CharacterAI.Destroyer
 
         public void Tick()
         {
-            if (_pauseHandler.IsPaused || _enemyDeadHandler.IsDead)
+            if (_pauseHandler.IsPaused)
             {
                 _agent.speed = 0f;
                 _agent.isStopped = true;
