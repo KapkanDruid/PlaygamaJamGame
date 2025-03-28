@@ -115,9 +115,13 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
-            _placeComponent.OnPlaced -= OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
-            _dynamicData.OnDataUpdate -= OnDataUpdate;
+
+            if (_placeComponent != null)
+                _placeComponent.OnPlaced -= OnEntityPlaced;
+
+            if (_dynamicData != null)
+                _dynamicData.OnDataUpdate -= OnDataUpdate;
         }
     }
 }

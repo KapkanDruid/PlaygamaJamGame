@@ -22,6 +22,7 @@ namespace Project.Content.BuildSystem
 
         private void Update()
         {
+#if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 PlaceObject();
@@ -31,22 +32,13 @@ namespace Project.Content.BuildSystem
             {
                 _sceneData.TurretDynamicData[TurretType.VoiceOfTruth].MaxHealth.Value = 100;
             }
+#endif
         }
 
         [ContextMenu("PlaceObject")]
         private void PlaceObject()
         {
             _levelExperienceHandler.OnEnemyDied(new Vector2(Random.Range(10,-10), Random.Range(5, -5)), 5);
-            //_cardsPopupView.Show();
-/*            var placeEntity = _turretFactory.Create();
-
-            var placeComponent = placeEntity.ProvideComponent<GridPlaceComponent>();
-
-            if (placeComponent != null)
-            {
-                _gridPlaceSystem.StartPlacing(placeComponent);
-
-            }*/
         }
     }
 }

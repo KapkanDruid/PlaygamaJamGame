@@ -4,7 +4,7 @@ using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanAttackLogic : ITickable
+    public class InfantrymanAttackLogic : ITickable, IInitializable
     {
         private readonly IProjectilePoolData _poolData;
         private readonly IShooterData _shootData;
@@ -16,13 +16,15 @@ namespace Project.Content.CharacterAI.Infantryman
         private ObjectPooler<DirectProjectile> _projectilePool;
         private Animator _animator;
         private PauseHandler _pauseHandler;
+        private DiContainer _diContainer;
         private AnimatorStateInfo _pausedAnimatorState;
 
         public InfantrymanAttackLogic(InfantrymanEntity infantrymanEntity,
                                       IProjectilePoolData projectilePoolData,
                                       IShooterData shootData,
                                       Animator animator,
-                                      PauseHandler pauseHandler)
+                                      PauseHandler pauseHandler,
+                                      DiContainer diContainer)
         {
             _infantrymanEntity = infantrymanEntity;
             _infantrymanData = infantrymanEntity.InfantrymanData;
@@ -31,13 +33,14 @@ namespace Project.Content.CharacterAI.Infantryman
             _shootPoint = _shootData.ShootPoint;
             _animator = animator;
             _pauseHandler = pauseHandler;
+            _diContainer = diContainer;
 
             Initialize();
         }
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectsSimple<DirectProjectile>(_poolData.ProjectilePrefab));
+            _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<DirectProjectile>(_poolData.ProjectilePrefab, _diContainer));
         }
 
         public void Tick()
@@ -74,7 +77,7 @@ namespace Project.Content.CharacterAI.Infantryman
             {
                 _animator.SetTrigger(AnimatorHashes.RangeAttackTrigger);
                 var projectile = _projectilePool.Get();
-                projectile.Prepare(_shootPoint.position, _infantrymanEntity.TargetTransform.position - _infantrymanEntity.transform.position, _shootData.ProjectileData, _pauseHandler);
+                projectile.Prepare(_shootPoint.position, _infantrymanEntity.TargetTransform.position - _infantrymanEntity.transform.position, _shootData.ProjectileData);
 
                 _attackCooldownTimer = _infantrymanData.AttackCooldown;
             }

@@ -110,9 +110,13 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
-            _placeComponent.OnPlaced -= OnEntityPlaced;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
-            _dataDynamic.OnDataUpdate -= OnDataUpdate;
+
+            if (_placeComponent != null)
+                _placeComponent.OnPlaced -= OnEntityPlaced;
+
+            if (_dataDynamic != null)
+                _dataDynamic.OnDataUpdate -= OnDataUpdate;
         }
     }
 }

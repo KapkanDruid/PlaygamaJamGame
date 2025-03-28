@@ -21,6 +21,7 @@ namespace Project.Content.BuildSystem
             Container.BindInterfacesAndSelfTo<TurretData>().FromInstance(_entity.Data).AsSingle().NonLazy();
             Container.Bind<CancellationToken>().FromInstance(_entity.GetCancellationTokenOnDestroy()).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<TurretEntity>().FromComponentOnRoot().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<PlaceEffect>().AsSingle().NonLazy();
         }
     }
 }

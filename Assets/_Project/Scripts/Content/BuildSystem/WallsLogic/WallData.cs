@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Project.Content.BuildSystem
 {
     [Serializable]
-    public class WallData : IPlaceComponentData, IHealthData
+    public class WallData : IPlaceComponentData, IHealthData, IPLaceEffectData
     {
         [SerializeField] private Transform _gridPivotTransform;
         [SerializeField] private SpriteRenderer[] _spriteRenderers;
@@ -13,6 +13,7 @@ namespace Project.Content.BuildSystem
         [SerializeField] private GridPatternData _gridPattern;
         [SerializeField] private Flags _flags;
         [SerializeField] private GameObject[] _physicObjects;
+        [SerializeField] private EffectType _placeSoundEffect;
 
         private WallConfig _config;
         private WallDynamicData _dynamicData;
@@ -23,7 +24,8 @@ namespace Project.Content.BuildSystem
         public Transform[] ScalableObjects => _scalableObjects;
         public GridPatternData GridPattern => _gridPattern;
         public GameObject[] PhysicObjects => _physicObjects;
-        public Flags Flags => _flags; 
+        public Flags Flags => _flags;
+        public EffectType PlaceSoundEffect => _placeSoundEffect;
 
         public void Construct(WallDynamicData dynamicData)
         {
