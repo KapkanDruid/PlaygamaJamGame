@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c67e97e743a334e9b9771d7a7e9a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _alertType: {fileID: 11400000, guid: 7089c6ed46557bf43bb456ce9132b3e6, type: 2}
   _data:
     _projectilePoolSize: 10
     _projectilePrefab: {fileID: 5940939131329807596, guid: 5397c52eeb339b048893cea8b3279d5c, type: 3}
