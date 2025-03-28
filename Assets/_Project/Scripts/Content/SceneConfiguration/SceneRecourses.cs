@@ -10,10 +10,12 @@ namespace Project.Content
 
         [SerializeField] private CustomDictionary<EffectType, Sound>[] _soundEffects;
         [SerializeField] private CustomDictionary<EffectType, Sound[]>[] _music;
+        [SerializeField] private CustomDictionary<AlertType, Alert>[] _alerts;
 
         public PrefabReferences Prefabs => _prefabs;
         public ConfigReferences Configs => _configs;
         public CustomDictionary<EffectType, Sound[]>[] MusicDictionary => _music;
         public CustomDictionary<EffectType, Sound>[] SoundEffects => _soundEffects; 
+        public CustomDictionary<AlertType, Alert>[] Alerts => _alerts; 
     }
 }
