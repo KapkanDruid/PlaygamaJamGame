@@ -1745,7 +1745,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7511786689983302044}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1823,6 +1823,7 @@ GameObject:
   - component: {fileID: 4117204255438909184}
   - component: {fileID: 7713903564066315495}
   - component: {fileID: 5130312413273874876}
+  - component: {fileID: 4389347590903569956}
   m_Layer: 5
   m_Name: Accept
   m_TagString: Untagged
@@ -1944,6 +1945,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4389347590903569956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864755657730364717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82deea944c5b9cc4abd5d390f6631dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onClickSound: {fileID: 11400000, guid: d647e3ae62785fe45aba94789bb23aaf, type: 2}
+  _onEnterSound: {fileID: 11400000, guid: 64b2cae49e84e4c4bb9fd369877c732e, type: 2}
+  _onExitSound: {fileID: 0}
 --- !u!1 &8067396279038261022
 GameObject:
   m_ObjectHideFlags: 0
