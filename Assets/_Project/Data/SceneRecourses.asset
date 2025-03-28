@@ -80,7 +80,19 @@ MonoBehaviour:
   - _key: {fileID: 11400000, guid: f5b6cec27f492e9489747ef13284a0bf, type: 2}
     _value:
       _clip: {fileID: 8300000, guid: 465af257c60ded44bbf15caf8ea75f2d, type: 3}
-      _volume: 0.038
+      _volume: 0.017
+  - _key: {fileID: 11400000, guid: 66474f615be9f5a4396dc37682f1ce2e, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 2e9be134a6caec241a9b2923b28062d1, type: 3}
+      _volume: 0.05
+  - _key: {fileID: 11400000, guid: b9aa2d4554f26b344bca4a12568032df, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 830f25974214d7a478cb6dc3ff023840, type: 3}
+      _volume: 0.096
+  - _key: {fileID: 11400000, guid: 5eea47e6034cdc24f93a60635a7b4bf1, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: dc4ecb0153b24f24fbe4dc54f689619b, type: 3}
+      _volume: 1
   _music:
   - _key: {fileID: 11400000, guid: 5ea3d73fe95f0444994d188a3dbc3762, type: 2}
     _value:
