@@ -51,6 +51,7 @@ namespace Project.Content
             try
             {
                 await UniTask.WaitForFixedUpdate(_characterTransform.gameObject.GetCancellationTokenOnDestroy());
+                await UniTask.WaitForFixedUpdate(_characterTransform.gameObject.GetCancellationTokenOnDestroy());
             }
             catch (OperationCanceledException)
             {

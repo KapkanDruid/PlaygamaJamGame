@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: 2334966645388040572}
   _animator: {fileID: 8724414566760305029}
+  _shootEffect: {fileID: 11400000, guid: f5b6cec27f492e9489747ef13284a0bf, type: 2}
+  _hitEffect: {fileID: 0}
 --- !u!61 &4880828179426428193
 BoxCollider2D:
   m_ObjectHideFlags: 0
