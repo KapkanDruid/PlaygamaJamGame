@@ -96,6 +96,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
             if (_enemyDeadHandler is T deadHandler)
                 return deadHandler;
+            
+            if (_infantrymanData.Collider is T collider)
+                return collider;
 
             if (this is T thisObject)
                 return thisObject;

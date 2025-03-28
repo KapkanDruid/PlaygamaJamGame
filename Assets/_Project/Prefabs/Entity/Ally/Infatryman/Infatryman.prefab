@@ -343,6 +343,7 @@ MonoBehaviour:
     _floatingText: {fileID: 11400000, guid: d3bc4705e24fec346818128c7b5678cc, type: 2}
     _deathSoundEffect: {fileID: 11400000, guid: e082a644733aad749be4ee199493076f, type: 2}
     _bornSoundEffect: {fileID: 11400000, guid: 8c2faa04bbd8b0844a0c3c99c419f95c, type: 2}
+    _collider: {fileID: 3544639686382428518}
   _levelSpriteRenderer: {fileID: 8267430935620028525}
 --- !u!195 &7014999058970263935
 NavMeshAgent:

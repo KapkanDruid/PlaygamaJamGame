@@ -31,11 +31,11 @@ namespace Project.Content
         {
             if (_isDead)
                 return;
+            _isDead = true;
             if (_animator == null)
                 Debug.Log("_animator = null");
             if (_animator != null)
                 _animator.SetBool(AnimatorHashes.IsDead, true);
-            _isDead = true;
             OnDeath?.Invoke();
 
             await WaitForAnimationState();

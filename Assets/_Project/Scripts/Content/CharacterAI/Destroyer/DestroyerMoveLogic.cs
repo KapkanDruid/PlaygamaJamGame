@@ -53,11 +53,23 @@ namespace Project.Content.CharacterAI.Destroyer
             }
             else
             {
+                _agent.speed = _destroyerData.Speed;
+                _agent.isStopped = false;
+
                 ResumeAnimation();
             }
 
-            _agent.speed = _destroyerData.Speed;
-            _agent.isStopped = false;
+            if (_enemyDeadHandler.IsDead)
+            {
+                _agent.speed = 0f;
+                _agent.isStopped = true;
+            }
+            else
+            {
+                _agent.speed = _destroyerData.Speed;
+                _agent.isStopped = false;
+            }
+
 
             if (_characterSensor.TargetToChase == null || _characterSensor.TargetTransformToChase == null)
             {

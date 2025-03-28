@@ -50,7 +50,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public void Tick()
         {
-            if (_pauseHandler.IsPaused || _enemyDeadHandler.IsDead)
+            if (_pauseHandler.IsPaused)
             {
                 _agent.speed = 0f;
                 _agent.isStopped = true;
@@ -59,11 +59,22 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             }
             else
             {
+                _agent.speed = _mainTargetAttackerData.Speed;
+                _agent.isStopped = false;
+
                 ResumeAnimation();
             }
 
-            _agent.speed = _mainTargetAttackerData.Speed;
-            _agent.isStopped = false;
+            if (_enemyDeadHandler.IsDead)
+            {
+                _agent.speed = 0f;
+                _agent.isStopped = true;
+            }
+            else
+            {
+                _agent.speed = _mainTargetAttackerData.Speed;
+                _agent.isStopped = false;
+            }
 
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
                 _characterSensor.TargetSearch();

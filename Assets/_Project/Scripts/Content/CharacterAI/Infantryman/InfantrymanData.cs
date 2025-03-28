@@ -20,6 +20,7 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private FloatingTextConfig _floatingText;
         [SerializeField] private EffectType _deathSoundEffect;
         [SerializeField] private EffectType _bornSoundEffect;
+        [SerializeField] private Collider2D _collider;
 
         private DirectProjectileData _projectileData;
         private SensorData _sensorData;
@@ -51,6 +52,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public FloatingTextConfig FloatingText => _floatingText;
         public EffectType BornSoundEffect => _bornSoundEffect;
         public EffectType DeathSoundEffect => _bornSoundEffect;
+        public Collider2D Collider => _collider;
 
         public void Initialize()
         {
