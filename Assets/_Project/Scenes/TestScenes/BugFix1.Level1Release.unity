@@ -29940,6 +29940,10 @@ PrefabInstance:
       propertyPath: _effectType
       value: 
       objectReference: {fileID: 11400000, guid: ac313f77f7ec9ec4d922342feadb457f, type: 2}
+    - target: {fileID: 1533835785378700764, guid: d5fa1fc2c85a5cc4499c34d6874c6511, type: 3}
+      propertyPath: _countPlaySound
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1951169569979925624, guid: d5fa1fc2c85a5cc4499c34d6874c6511, type: 3}
       propertyPath: _enemyWaveSpawner
       value: 
@@ -29988,6 +29992,10 @@ PrefabInstance:
       propertyPath: _effectType
       value: 
       objectReference: {fileID: 11400000, guid: ac313f77f7ec9ec4d922342feadb457f, type: 2}
+    - target: {fileID: 4672231764995017047, guid: d5fa1fc2c85a5cc4499c34d6874c6511, type: 3}
+      propertyPath: _countPlaySound
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7103029390584631930, guid: d5fa1fc2c85a5cc4499c34d6874c6511, type: 3}
       propertyPath: m_Name
       value: Hints
@@ -29996,10 +30004,18 @@ PrefabInstance:
       propertyPath: _effectType
       value: 
       objectReference: {fileID: 11400000, guid: ac313f77f7ec9ec4d922342feadb457f, type: 2}
+    - target: {fileID: 7248143002634308422, guid: d5fa1fc2c85a5cc4499c34d6874c6511, type: 3}
+      propertyPath: _countPlaySound
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7853172682718987434, guid: d5fa1fc2c85a5cc4499c34d6874c6511, type: 3}
       propertyPath: _effectType
       value: 
       objectReference: {fileID: 11400000, guid: ac313f77f7ec9ec4d922342feadb457f, type: 2}
+    - target: {fileID: 7853172682718987434, guid: d5fa1fc2c85a5cc4499c34d6874c6511, type: 3}
+      propertyPath: _countPlaySound
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
