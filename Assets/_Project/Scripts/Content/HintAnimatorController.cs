@@ -6,7 +6,9 @@ namespace Project.Content.Spawners
     public class HintAnimatorController : MonoBehaviour
     {
         [SerializeField] private EffectType _effectType;
+        [SerializeField] private int _countPlaySound;
 
+        private int _soundPlayed;
         private AudioController _controller;
 
         private Animator _animator;
@@ -25,6 +27,7 @@ namespace Project.Content.Spawners
 
         private void Awake()
         {
+            _soundPlayed = 0;
             gameObject.SetActive(false);
             _animator = GetComponent<Animator>();
         }
@@ -88,7 +91,11 @@ namespace Project.Content.Spawners
 
         private void OnHit()
         {
-            _controller.PlayOneShot(_effectType);
+            if (_soundPlayed < _countPlaySound)
+            {
+                _controller.PlayOneShot(_effectType);
+                _soundPlayed++;
+            }
         }
     }
 }
