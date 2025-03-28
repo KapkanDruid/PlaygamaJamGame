@@ -15,6 +15,7 @@ namespace Project.Content
         private SceneRecourses _sceneResources;
 
         private int _currentMusicIndex;
+        private bool _isStop;
 
         [Inject]
         private void Construct(SceneRecourses sceneResources)
@@ -79,8 +80,17 @@ namespace Project.Content
             _SFXSource.Stop();
         }
 
+        public void StopMusic()
+        {
+            _isStop = true;
+            _musicSource.Stop();
+        }
+
         private void Update()
         {
+            if (_isStop)
+                return;
+
             if (!_musicSource.isPlaying)
             {
                 PlayNextClip();
