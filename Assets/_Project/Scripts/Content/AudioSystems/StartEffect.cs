@@ -13,11 +13,18 @@ namespace Project.Content.Audio
         private void Construct(AudioController audioController)
         {
             _audioController = audioController;
+
+            Tutorial.OnTutorialFinished += PLayEffect;
         }
 
-        private void Start()
+        private void PLayEffect()
         {
             _audioController.PlayOneShot(_effectType);
+        }
+
+        private void OnDestroy()
+        {
+            Tutorial.OnTutorialFinished -= PLayEffect;
         }
     }
 }

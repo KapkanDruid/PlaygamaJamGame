@@ -14,6 +14,7 @@ namespace Project.Content.BuildSystem
         [SerializeField] private GridPatternData _gridPattern;
         [SerializeField] private Flags _flags;
         [SerializeField] private GameObject[] _physicObjects;
+        [SerializeField] private Collider2D _collider;
 
         private ReactiveProperty<float> _health = new ReactiveProperty<float>();
 
@@ -26,6 +27,7 @@ namespace Project.Content.BuildSystem
 
         public IReactiveProperty<float> Health => _health;
 
+        public Collider2D Collider => _collider;
         public void Initialize()
         {
             _health.Value = _maxHealth;

@@ -23,6 +23,7 @@ namespace Project.Content.BuildSystem
         [SerializeField] private EntityFlags _enemyFlag;
         [SerializeField] private TurretType _turretType;
         [SerializeField] private EffectType _placeSoundEffect;
+        [SerializeField] private Collider2D _collider;
 
         private DirectProjectileData _projectileData = new DirectProjectileData();
         private SensorData _sensorData = new SensorData();
@@ -54,6 +55,8 @@ namespace Project.Content.BuildSystem
         public IReactiveProperty<float> Health => _health;
         public Transform AttackZone => _attackZone;
         public EffectType PlaceSoundEffect => _placeSoundEffect;
+
+        public Collider2D Collider => _collider;
 
         public void Construct(TurretDynamicData dynamicData, IEntity entity)
         {
