@@ -10,6 +10,8 @@ namespace Project.Content
 
         [SerializeField] private EffectType _musicListType;
 
+        [SerializeField] private int _startSoundIndex = 0;
+
         private Sound[] _musicClips;
 
         private SceneRecourses _sceneResources;
@@ -25,6 +27,8 @@ namespace Project.Content
 
         public void Initialize()
         {
+            _currentMusicIndex = _startSoundIndex;
+            _musicSource.loop = false;
             foreach (var musicList in _sceneResources.MusicDictionary)
             {
                 if (musicList.Key == _musicListType)
@@ -101,6 +105,8 @@ namespace Project.Content
         {
             if (_musicClips == null)
                 return;
+
+            Debug.Log("PlayNextClip");
 
             _musicSource.clip = _musicClips[_currentMusicIndex].Clip;
 
