@@ -36,6 +36,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 000e55c08930b8246b4dc0b610b4bd67, type: 2}
     _levelExperienceConfig: {fileID: 11400000, guid: 1815feeaf6a54ca42b9ab34ce5ba7563, type: 2}
     _wallConfig: {fileID: 11400000, guid: bb2413f4477c9a54b9369e9bd50056e8, type: 2}
+    _experienceCollectSound: {fileID: 11400000, guid: 8d5ee454f92ad83418d49d26b8db7a71, type: 2}
   _soundEffects:
   - _key: {fileID: 11400000, guid: 3e3f0ad4c2c1923459a7e2c902ed3585, type: 2}
     _value:
@@ -93,6 +94,18 @@ MonoBehaviour:
     _value:
       _clip: {fileID: 8300000, guid: dc4ecb0153b24f24fbe4dc54f689619b, type: 3}
       _volume: 1
+  - _key: {fileID: 11400000, guid: 8d5ee454f92ad83418d49d26b8db7a71, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: ba9785d00542dd040b882976edbb87e3, type: 3}
+      _volume: 0.293
+  - _key: {fileID: 11400000, guid: e082a644733aad749be4ee199493076f, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 6294e754bd26c1d47a88fdd3cd554782, type: 3}
+      _volume: 0.448
+  - _key: {fileID: 11400000, guid: 8c2faa04bbd8b0844a0c3c99c419f95c, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 78c39007e29dcee45b1cf1c4c42e251b, type: 3}
+      _volume: 0.088
   _music:
   - _key: {fileID: 11400000, guid: 5ea3d73fe95f0444994d188a3dbc3762, type: 2}
     _value:
