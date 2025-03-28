@@ -18,6 +18,8 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private DirectProjectile _projectilePrefab;
         [SerializeField] private Color[] _levelColors;
         [SerializeField] private FloatingTextConfig _floatingText;
+        [SerializeField] private EffectType _deathSoundEffect;
+        [SerializeField] private EffectType _bornSoundEffect;
 
         private DirectProjectileData _projectileData;
         private SensorData _sensorData;
@@ -47,6 +49,8 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public Sprite UpgradeSprite => _infantrymanConfig.UpgradeSprite;
         public FloatingTextConfig FloatingText => _floatingText;
+        public EffectType BornSoundEffect => _bornSoundEffect;
+        public EffectType DeathSoundEffect => _bornSoundEffect;
 
         public void Initialize()
         {

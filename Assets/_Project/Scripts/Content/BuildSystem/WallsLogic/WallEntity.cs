@@ -93,6 +93,10 @@ namespace Project.Content.BuildSystem
         private void OnDestroy()
         {
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+
+            if (_dynamicData == null)
+                return;
+
             _dynamicData.OnDataUpdate -= OnDataUpdate;
         }
     }
