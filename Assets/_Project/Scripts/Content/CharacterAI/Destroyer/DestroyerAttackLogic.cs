@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Project.Content.CharacterAI.Destroyer
@@ -14,11 +15,13 @@ namespace Project.Content.CharacterAI.Destroyer
         private float _attackCooldownTimer;
         private PauseHandler _pauseHandler;
         private AnimatorStateInfo _pausedAnimatorState;
+        private NavMeshAgent _agent;
 
         public DestroyerAttackLogic(DestroyerHandler destroyerHandler,
                                     CharacterSensor characterSensor,
                                     Animator animator,
-                                    PauseHandler pauseHandler)
+                                    PauseHandler pauseHandler,
+                                    NavMeshAgent navMeshAgent)
         {
             _destroyerHandler = destroyerHandler;
             _destroyerData = destroyerHandler.DestroyerData;
@@ -26,6 +29,7 @@ namespace Project.Content.CharacterAI.Destroyer
             _characterSensor = characterSensor;
             _animator = animator;
             _pauseHandler = pauseHandler;
+            _agent = navMeshAgent;
         }
 
 
@@ -69,14 +73,19 @@ namespace Project.Content.CharacterAI.Destroyer
         {
             if (_characterSensor.TargetToAttack != null && _characterSensor.TargetTransformToAttack != null)
             {
-                if (Vector2.Distance(_destroyerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= _destroyerHandler.DestroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize * 2)
+                Collider2D targetCollider = _characterSensor.TargetToAttack.ProvideComponent<Collider2D>();
+                if (targetCollider != null)
                 {
-                    if (_attackCooldownTimer <= 0)
+                    Vector3 closestPoint = targetCollider.ClosestPoint(_destroyerHandler.transform.position);
+                    if (Vector2.Distance(_destroyerHandler.transform.position, closestPoint) <= _destroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize)
                     {
-                        _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
-                        _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
-                        Attack();
-                        _attackCooldownTimer = _destroyerData.AttackCooldown;
+                        if (_attackCooldownTimer <= 0)
+                        {
+                            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+                            _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
+                            Attack();
+                            _attackCooldownTimer = _destroyerData.AttackCooldown;
+                        }
                     }
                 }
             }
