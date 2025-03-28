@@ -31002,9 +31002,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1009785500}
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
-      propertyPath: '_waves.Array.data[0].SpawnPositions.Array.data[2].Points.Array.data[0]'
+      propertyPath: '_waves.Array.data[0].SpawnPositions.Array.data[1].Points.Array.data[0]'
       value: 
       objectReference: {fileID: 530635194}
+    - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
+      propertyPath: '_waves.Array.data[0].SpawnPositions.Array.data[2].Points.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1656162156}
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
       propertyPath: '_waves.Array.data[1].SpawnPositions.Array.data[0].Points.Array.data[0]'
       value: 
