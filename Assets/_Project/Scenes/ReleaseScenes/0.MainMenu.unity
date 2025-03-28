@@ -1495,6 +1495,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 589242472}
     m_Modifications:
+    - target: {fileID: 2148587645532358122, guid: 80b4395299780fd4284c40da1db71c56, type: 3}
+      propertyPath: _onClickSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+    - target: {fileID: 2148587645532358122, guid: 80b4395299780fd4284c40da1db71c56, type: 3}
+      propertyPath: _onEnterSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
     - target: {fileID: 5817266300953414545, guid: 80b4395299780fd4284c40da1db71c56, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1592,6 +1600,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 589242472}
     m_Modifications:
+    - target: {fileID: 4389347590903569956, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: _onClickSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
+    - target: {fileID: 4389347590903569956, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: _onEnterSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f794c3521d4f7942838f529a187c7ad, type: 2}
     - target: {fileID: 6710927985037294512, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
