@@ -77,7 +77,8 @@ namespace Project.Content.CharacterAI.Destroyer
                 if (targetCollider != null)
                 {
                     Vector3 closestPoint = targetCollider.ClosestPoint(_destroyerHandler.transform.position);
-                    if (Vector2.Distance(_destroyerHandler.transform.position, closestPoint) <= _destroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize)
+                    if (Vector2.Distance(_destroyerHandler.transform.position, closestPoint) <= _destroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize ||
+                        Vector2.Distance(_destroyerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= _destroyerHandler.DestroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize)
                     {
                         if (_attackCooldownTimer <= 0)
                         {
