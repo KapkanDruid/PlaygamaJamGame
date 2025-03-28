@@ -36,6 +36,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 000e55c08930b8246b4dc0b610b4bd67, type: 2}
     _levelExperienceConfig: {fileID: 11400000, guid: 1815feeaf6a54ca42b9ab34ce5ba7563, type: 2}
     _wallConfig: {fileID: 11400000, guid: bb2413f4477c9a54b9369e9bd50056e8, type: 2}
+    _experienceCollectSound: {fileID: 11400000, guid: 8d5ee454f92ad83418d49d26b8db7a71, type: 2}
   _soundEffects:
   - _key: {fileID: 11400000, guid: 3e3f0ad4c2c1923459a7e2c902ed3585, type: 2}
     _value:
@@ -56,7 +57,7 @@ MonoBehaviour:
   - _key: {fileID: 11400000, guid: ac313f77f7ec9ec4d922342feadb457f, type: 2}
     _value:
       _clip: {fileID: 8300000, guid: 617039dcf8b1db846a0260efaef51317, type: 3}
-      _volume: 0.297
+      _volume: 0.166
   - _key: {fileID: 11400000, guid: 8d27ebcdff3a646488f62682dba26811, type: 2}
     _value:
       _clip: {fileID: 8300000, guid: 23bc1c3a0bc97a9419277b6b17ace844, type: 3}
@@ -65,6 +66,46 @@ MonoBehaviour:
     _value:
       _clip: {fileID: 8300000, guid: 863fa18f7aaafba40925f061f5a8e65f, type: 3}
       _volume: 1
+  - _key: {fileID: 11400000, guid: b643e65ab04272943ac01ca461154035, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 81ef955f8d385a04bad6685ed8b67a2c, type: 3}
+      _volume: 0.674
+  - _key: {fileID: 11400000, guid: 3b0064ca73687e140b82e6be6ed75af7, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 7c34692afcd171f4ba588c95866ad7fb, type: 3}
+      _volume: 0.961
+  - _key: {fileID: 11400000, guid: f9354be0651a95f4b8c4a4c229c7e833, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: a954212f308a03d44a5705dd2f02b8f6, type: 3}
+      _volume: 0.89
+  - _key: {fileID: 11400000, guid: f5b6cec27f492e9489747ef13284a0bf, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 465af257c60ded44bbf15caf8ea75f2d, type: 3}
+      _volume: 0.017
+  - _key: {fileID: 11400000, guid: 66474f615be9f5a4396dc37682f1ce2e, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 2e9be134a6caec241a9b2923b28062d1, type: 3}
+      _volume: 0.05
+  - _key: {fileID: 11400000, guid: b9aa2d4554f26b344bca4a12568032df, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 830f25974214d7a478cb6dc3ff023840, type: 3}
+      _volume: 0.096
+  - _key: {fileID: 11400000, guid: 5eea47e6034cdc24f93a60635a7b4bf1, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: dc4ecb0153b24f24fbe4dc54f689619b, type: 3}
+      _volume: 1
+  - _key: {fileID: 11400000, guid: 8d5ee454f92ad83418d49d26b8db7a71, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: ba9785d00542dd040b882976edbb87e3, type: 3}
+      _volume: 0.293
+  - _key: {fileID: 11400000, guid: e082a644733aad749be4ee199493076f, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 6294e754bd26c1d47a88fdd3cd554782, type: 3}
+      _volume: 0.448
+  - _key: {fileID: 11400000, guid: 8c2faa04bbd8b0844a0c3c99c419f95c, type: 2}
+    _value:
+      _clip: {fileID: 8300000, guid: 78c39007e29dcee45b1cf1c4c42e251b, type: 3}
+      _volume: 0.088
   _music:
   - _key: {fileID: 11400000, guid: 5ea3d73fe95f0444994d188a3dbc3762, type: 2}
     _value:

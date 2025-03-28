@@ -1,6 +1,7 @@
 ﻿using Project.Content.ReactiveProperty;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Project.Content.UI
 {
@@ -8,8 +9,10 @@ namespace Project.Content.UI
     {
         [SerializeField] private CardsChoose _cardsReference;
         [SerializeField] private List<CoreProgressCard> _cardsToTest;
+        [SerializeField] private EffectType _soundShowEffect;
 
         private CoreProgressCard[] _cards;
+        private AudioController _audioController;
 
         public ReactiveProperty<IReadOnlyList<CoreProgressCard>> _currentCards = new();
         public IReactiveProperty<IReadOnlyList<CoreProgressCard>> CurrentCards => _currentCards;
@@ -18,6 +21,12 @@ namespace Project.Content.UI
         {
             Gameplay,
             Test,
+        }
+
+        [Inject]
+        private void Construct(AudioController audioController)
+        {
+            _audioController = audioController;
         }
 
         public void Initialize()
@@ -32,6 +41,8 @@ namespace Project.Content.UI
 
         public void Show()
         {
+            _audioController.PlayOneShot(_soundShowEffect);
+
             switch (_cardsReference)
             {
                 case CardsChoose.Gameplay:

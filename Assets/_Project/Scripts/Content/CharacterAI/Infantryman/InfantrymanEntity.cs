@@ -11,14 +11,14 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private SpriteRenderer _levelSpriteRenderer;
         private ClosestTargetSensorFilter _sensorFilter;
         private TargetSensor _sensor;
-        private Transform _targetTransform; 
+        private Transform _targetTransform;
         private Transform _flagTransform;
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private float _patrolRadius;
         private FloatingTextHandler _textHandler;
         private EntityCommander _entityCommander;
-
+        private AudioController _audioController;
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
         public Transform FlagTransform => _flagTransform;
@@ -38,8 +38,9 @@ namespace Project.Content.CharacterAI.Infantryman
         public void Construct(EnemyDeadHandler enemyDeadHandler,
                               Animator animator,
                               PauseHandler pauseHandler,
-                              FloatingTextHandler textHandler, 
-                              EntityCommander entityCommander)
+                              FloatingTextHandler textHandler,
+                              EntityCommander entityCommander, 
+                              AudioController audioController)
         {
             _infantrymanData.ThisEntity = this;
             _enemyDeadHandler = enemyDeadHandler;
@@ -47,7 +48,7 @@ namespace Project.Content.CharacterAI.Infantryman
             _pauseHandler = pauseHandler;
             _textHandler = textHandler;
             _entityCommander = entityCommander;
-
+            _audioController = audioController;
 
             MainSceneBootstrap.OnServicesInitialized += OnSceneInitialized;
             ResetData();
@@ -59,7 +60,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
             _sensorFilter = new ClosestTargetSensorFilter(_infantrymanData.EntityTransform);
 
-            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);    
+            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
         }
 
         public void Prepare(InfantrymanSpawnData spawnData)
@@ -71,6 +72,9 @@ namespace Project.Content.CharacterAI.Infantryman
             _enemyDeadHandler.Reset();
             _healthHandler.Reset();
             UpdateLevelSprite();
+
+            if (_infantrymanData.BornSoundEffect != null && _audioController != null)
+                _audioController.PlayOneShot(_infantrymanData.BornSoundEffect);
         }
 
         private void OnSceneInitialized()

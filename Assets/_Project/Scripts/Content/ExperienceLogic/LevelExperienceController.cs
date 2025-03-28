@@ -1,5 +1,6 @@
 ﻿using Project.Content.UI;
 using System;
+using TMPro;
 using UnityEngine;
 
 namespace Project.Content
@@ -12,6 +13,7 @@ namespace Project.Content
         private SceneRecourses _recourses;
 
         private GameObjectPooler _experienceObjectPool;
+        private AudioController _audioController;
 
         private float _currentCoefficient;
         private int _currentLevel;
@@ -30,12 +32,16 @@ namespace Project.Content
             }
         }
 
-        public LevelExperienceController(SceneRecourses recourses, CardsPopupView cardsPopupView, LevelExperienceView view)
+        public LevelExperienceController(SceneRecourses recourses,
+                                         CardsPopupView cardsPopupView,
+                                         LevelExperienceView view,
+                                         AudioController audioController)
         {
             _recourses = recourses;
             _config = _recourses.Configs.LevelExperienceConfig;
             _cardsPopupView = cardsPopupView;
             _view = view;
+            _audioController = audioController;
 
             var experienceObjectPrefab = _recourses.Prefabs.ExperienceObject;
             _experienceObjectPool = new GameObjectPooler(experienceObjectPrefab, 20, "ExperienceObjects");
@@ -74,6 +80,8 @@ namespace Project.Content
                     LevelReached();
                 else
                     _view.SetExperienceBar(_currentPoints, _pointsToNextLevel, _currentLevel);
+
+                _audioController.PlayOneShot(_recourses.Configs.ExperienceCollectSound);
             });
         }
 

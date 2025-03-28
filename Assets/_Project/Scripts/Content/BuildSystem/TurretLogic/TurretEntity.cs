@@ -126,6 +126,13 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
+            MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+
+            if (_placeComponent != null)
+                _placeComponent.OnPlaced -= OnEntityPlaced;
+
+            if (_dynamicData != null)
+                _dynamicData.OnDataUpdate -= OnDataUpdate;
             _placeComponent.OnPlaced -= OnEntityPlaced;
             _healthHandler.OnDead -= DestroyAlert;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
