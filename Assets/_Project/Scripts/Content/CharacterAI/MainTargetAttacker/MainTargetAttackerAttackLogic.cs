@@ -69,21 +69,35 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         {
             if (_characterSensor.TargetToAttack != null)
             {
-                if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= 
-                    _mainTargetAttackerHandler.MainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize * 2)
+                if (_attackCooldownTimer <= 0)
                 {
-                    if (_attackCooldownTimer <= 0)
+                    _damageable = null;
+                    if (_mainTargetAttackerHandler.PathInvalid)
                     {
-                        _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+                        if (_mainTargetAttackerHandler.BlockingEntity == null)
+                            return;
 
-                        if (_mainTargetAttackerHandler.PathInvalid)
-                            _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
-                        else
-                            _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
-
-                        Attack();
-                        _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
+                        Collider2D targetCollider = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<Collider2D>();
+                        if (targetCollider != null)
+                        {
+                            Vector3 closestPoint = targetCollider.ClosestPoint(_mainTargetAttackerHandler.transform.position);
+                            if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, closestPoint) <= _mainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
+                            {
+                                _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
+                            }
+                        }
                     }
+                    else
+                    {
+                        if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <=
+                            _mainTargetAttackerHandler.MainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
+                        {
+                            _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
+                        }
+                    }
+
+                    Attack();
+                    _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
                 }
             }
         }
@@ -92,7 +106,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         {
             if (_damageable == null)
                 return;
-
+            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
             if (_mainTargetAttackerHandler.CanAttack)
             {
                 _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
