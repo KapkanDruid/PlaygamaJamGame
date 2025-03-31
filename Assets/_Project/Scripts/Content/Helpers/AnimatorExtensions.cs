@@ -10,6 +10,9 @@ namespace Project.Content
         {
             await UniTask.WaitForFixedUpdate(cancellationToken);
 
+            if (animator == null)
+                return;
+
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
             await UniTask.WaitForSeconds(stateInfo.length, cancellationToken: cancellationToken);
         }

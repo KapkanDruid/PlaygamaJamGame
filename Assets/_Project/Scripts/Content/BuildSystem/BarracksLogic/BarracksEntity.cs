@@ -1,4 +1,5 @@
 using Project.Architecture;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -8,6 +9,7 @@ namespace Project.Content.BuildSystem
 {
     public class BarracksEntity : MonoBehaviour, IEntity
     {
+        [SerializeField] private AlertType _alertType;
         [SerializeField] private BarracksData _data;
         private BarrackDynamicData _dataDynamic;
 
@@ -17,6 +19,7 @@ namespace Project.Content.BuildSystem
         private GridPlaceSystem _placeSystem;
         private SceneData _sceneData;
         private UpgradeEffectController _upgradeEffect;
+        private AlertController _alertController;
 
         private bool _isRuntimeCreated = true;
         private object[] _components;
@@ -34,7 +37,13 @@ namespace Project.Content.BuildSystem
         }
 
         [Inject]
-        private void Construct(GridPlaceComponent placeComponent, BuildingHealthComponent healthHandler, GridPlaceSystem placeSystem, BarracksSpawnLogic spawnComponent, SceneData sceneData, UpgradeEffectController upgradeEffect)
+        private void Construct(GridPlaceComponent placeComponent,
+                               BuildingHealthComponent healthHandler,
+                               GridPlaceSystem placeSystem,
+                               BarracksSpawnLogic spawnComponent,
+                               SceneData sceneData,
+                               UpgradeEffectController upgradeEffect,
+                               AlertController alertController)
         {
             List<object> components = new();
             _sceneData = sceneData;
@@ -43,12 +52,13 @@ namespace Project.Content.BuildSystem
             _placeSystem = placeSystem;
             _spawnComponent = spawnComponent;
             _upgradeEffect = upgradeEffect;
-
+            _alertController = alertController;
 
             components.Add(_placeComponent);
             components.Add(_healthHandler);
             components.Add(_data.Flags);
             components.Add(this);
+            components.Add(_data.Collider);
 
             _components = components.ToArray();
 
@@ -71,12 +81,18 @@ namespace Project.Content.BuildSystem
             _placeComponent.Initialize();
             
             _healthHandler.OnDead += DestroyThisAsync;
+            _healthHandler.OnDead += DestroyAlert;
             _dataDynamic.OnDataUpdate += OnDataUpdate;
 
             if (_isRuntimeCreated)
                 return;
 
             _placeSystem.PLaceOnGrid(_placeComponent);
+        }
+
+        private void DestroyAlert()
+        {
+            _alertController.ShowAlert(_alertType);
         }
 
         private void OnEntityPlaced()
@@ -110,7 +126,15 @@ namespace Project.Content.BuildSystem
 
         private void OnDestroy()
         {
-            _placeComponent.OnPlaced += OnEntityPlaced;
+            MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+
+            if (_placeComponent != null)
+                _placeComponent.OnPlaced -= OnEntityPlaced;
+
+            if (_dataDynamic != null)
+                _dataDynamic.OnDataUpdate -= OnDataUpdate;
+            _placeComponent.OnPlaced -= OnEntityPlaced;
+            _healthHandler.OnDead -= DestroyAlert;
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
             _dataDynamic.OnDataUpdate -= OnDataUpdate;
         }

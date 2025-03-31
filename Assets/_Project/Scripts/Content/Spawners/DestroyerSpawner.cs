@@ -41,6 +41,7 @@ namespace Project.Content.Spawners
         {
             var prefab = _destroyerPool.Get();
             _prefab = prefab.gameObject;
+            _prefab.transform.position = new(30f, 10f);
             _prefab.SetActive(false);
             return _prefab;
         }

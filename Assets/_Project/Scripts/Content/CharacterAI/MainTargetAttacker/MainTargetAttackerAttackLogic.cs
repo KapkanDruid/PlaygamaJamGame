@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
@@ -14,10 +13,11 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private float _attackCooldownTimer;
+        private AnimatorStateInfo _pausedAnimatorState;
 
         public MainTargetAttackerAttackLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
                                              CharacterSensor characterSensor,
-                                             Animator animator, 
+                                             Animator animator,
                                              PauseHandler pauseHandler)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
@@ -32,13 +32,25 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public void Tick()
         {
             if (_pauseHandler.IsPaused)
+            {
+                PauseAnimation();
                 return;
+            }
+            else
+            {
+                ResumeAnimation();
+            }
 
-            if (_characterSensor.TargetTransformToAttack == null)
-                return;
-
-            if (_characterSensor.TargetToAttack == null || !_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
+            if (_characterSensor.TargetToAttack == null || _characterSensor.TargetTransformToAttack == null)
+            {
                 _characterSensor.ScanAreaToAttack();
+
+                if (_characterSensor.TargetTransformToAttack != null)
+                {
+                    if (!_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
+                        _characterSensor.ScanAreaToAttack();
+                }
+            }
 
             TryToHit();
 
@@ -59,13 +71,31 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             {
                 if (_attackCooldownTimer <= 0)
                 {
-                    _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
-
+                    _damageable = null;
                     if (_mainTargetAttackerHandler.PathInvalid)
-                        _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
+                    {
+                        if (_mainTargetAttackerHandler.BlockingEntity == null)
+                            return;
+
+                        Collider2D targetCollider = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<Collider2D>();
+                        if (targetCollider != null)
+                        {
+                            Vector3 closestPoint = targetCollider.ClosestPoint(_mainTargetAttackerHandler.transform.position);
+                            if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, closestPoint) <= _mainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
+                            {
+                                _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
+                            }
+                        }
+                    }
                     else
-                        _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
-                    
+                    {
+                        if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <=
+                            _mainTargetAttackerHandler.MainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
+                        {
+                            _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
+                        }
+                    }
+
                     Attack();
                     _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
                 }
@@ -76,7 +106,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         {
             if (_damageable == null)
                 return;
-
+            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
             if (_mainTargetAttackerHandler.CanAttack)
             {
                 _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
@@ -84,11 +114,33 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         }
 
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
+            }
+        }
+
         public void OnDrawGizmos()
         {
 #if UNITY_EDITOR
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position + _mainTargetAttackerSensorData.HitColliderOffset, _mainTargetAttackerSensorData.HitColliderSize);
+
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position, (Vector2)_characterSensor.TargetTransformToChase.position);
+
 #endif
         }
 

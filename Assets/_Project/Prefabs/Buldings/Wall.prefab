@@ -569,6 +569,8 @@ MonoBehaviour:
       _flags: 03000000
     _physicObjects:
     - {fileID: 5330662913965276434}
+    _placeSoundEffect: {fileID: 11400000, guid: 5eea47e6034cdc24f93a60635a7b4bf1, type: 2}
+    _collider: {fileID: 850812651024440031}
 --- !u!114 &3248866292736750444
 MonoBehaviour:
   m_ObjectHideFlags: 0

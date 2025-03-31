@@ -1,7 +1,6 @@
 ﻿using UnityEngine.AI;
 using UnityEngine;
 using Zenject;
-using DG.Tweening;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
@@ -14,17 +13,22 @@ namespace Project.Content.CharacterAI.Infantryman
         private PauseHandler _pauseHandler;
         private Vector3 _currentPatrolPoint;
         private bool _isPatrolling;
+        private Animator _animator;
+        private AnimatorStateInfo _pausedAnimatorState;
+
 
         public InfantrymanMoveLogic(InfantrymanEntity infantrymanEntity,
                                     NavMeshAgent agent,
                                     PatrolLogic patrolLogic,
-                                    PauseHandler pauseHandler)
+                                    PauseHandler pauseHandler,
+                                    Animator animator)
         {
             _infantrymanEntity = infantrymanEntity;
             _infantrymanData = infantrymanEntity.InfantrymanData;
             _agent = agent;
             _patrolLogic = patrolLogic;
             _pauseHandler = pauseHandler;
+            _animator = animator;
 
             ConfiguringAgent();
         }
@@ -43,7 +47,12 @@ namespace Project.Content.CharacterAI.Infantryman
             if (_pauseHandler.IsPaused)
             {
                 _agent.isStopped = true;
+                PauseAnimation();
                 return;
+            }
+            else
+            {
+                ResumeAnimation();
             }
             _agent.isStopped = false;
 
@@ -85,6 +94,24 @@ namespace Project.Content.CharacterAI.Infantryman
                 _agent.SetDestination(_currentPatrolPoint);
                 SetOrientation(_currentPatrolPoint.x);
                 _isPatrolling = true;
+            }
+        }
+
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
             }
         }
 

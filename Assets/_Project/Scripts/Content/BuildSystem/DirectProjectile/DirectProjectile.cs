@@ -1,7 +1,9 @@
 ﻿using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 namespace Project.Content.BuildSystem
 {
@@ -9,8 +11,11 @@ namespace Project.Content.BuildSystem
     {
         [SerializeField] private Rigidbody2D _rigidBody;
         [SerializeField] private Animator _animator;
+        [SerializeField] private EffectType _shootEffect;
+        [SerializeField] private EffectType _hitEffect;
 
         private PauseHandler _pauseHandler;
+        private AudioController _audioController;
 
         private EntityFlags _enemyFlag;
         private float _damage;
@@ -21,7 +26,14 @@ namespace Project.Content.BuildSystem
 
         private Vector2 _moveDirection;
 
-        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData, PauseHandler pauseHandler)
+        [Inject]
+        private void Construct(PauseHandler pauseHandler, AudioController audioController)
+        {
+            _pauseHandler = pauseHandler;
+            _audioController = audioController;
+        }
+
+        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData)
         {
             _enemyFlag = directProjectileData.EnemyFlag;
             _damage = directProjectileData.Damage;
@@ -30,8 +42,6 @@ namespace Project.Content.BuildSystem
 
             _moveDirection = moveDirection;
             transform.position = startPosition;
-
-            _pauseHandler = pauseHandler;
 
             transform.right = moveDirection;
 
@@ -44,6 +54,9 @@ namespace Project.Content.BuildSystem
             }
             else
                 _isActive = true;
+
+            if (_shootEffect != null)
+                _audioController.PlayOneShot(_shootEffect);
         }
 
         private void FixedUpdate()
@@ -97,6 +110,9 @@ namespace Project.Content.BuildSystem
 
                 if (!isDamageDone)
                     return;
+
+                if (_hitEffect != null)
+                    _audioController.PlayOneShot(_hitEffect);
 
                 if (_animator != null)
                 {

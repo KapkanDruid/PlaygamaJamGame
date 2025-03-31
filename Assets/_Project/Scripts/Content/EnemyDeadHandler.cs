@@ -31,11 +31,11 @@ namespace Project.Content
         {
             if (_isDead)
                 return;
+            _isDead = true;
             if (_animator == null)
                 Debug.Log("_animator = null");
             if (_animator != null)
                 _animator.SetBool(AnimatorHashes.IsDead, true);
-            _isDead = true;
             OnDeath?.Invoke();
 
             await WaitForAnimationState();
@@ -59,8 +59,8 @@ namespace Project.Content
             }
 
             AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-
-            Debug.Log("animation lenght" + stateInfo.length);
+            if (stateInfo.length <= 0)
+                return;
 
             try
             {

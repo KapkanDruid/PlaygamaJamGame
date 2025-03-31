@@ -18,6 +18,6 @@ MonoBehaviour:
   _projectileSpeed: 7
   _projectileLifeTime: 5
   _projectileDamage: 5
-  _sensorRadius: 10
+  _sensorRadius: 5
   _maxHealth: 10
-  _fireRate: 5
+  _fireRate: 4

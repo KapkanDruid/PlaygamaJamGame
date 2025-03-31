@@ -19,5 +19,7 @@ namespace Project.Content
         public static readonly int ShootTrigger = Animator.StringToHash("Shoot");
         public static readonly int HitTrigger = Animator.StringToHash("Hit");
         public static readonly int ShowEffectTrigger = Animator.StringToHash("ShowEffect");
+        public static readonly int HintTrigger = Animator.StringToHash("Hint");
+        public static readonly int IsHints = Animator.StringToHash("IsHints");
     }
 }

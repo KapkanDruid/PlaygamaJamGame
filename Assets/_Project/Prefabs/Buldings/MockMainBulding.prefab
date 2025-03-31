@@ -555,8 +555,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999dbb14c0b73114dbae9eab182a2902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _alertType: {fileID: 11400000, guid: fe1d3961653b52a4b9bde6309b8a1e1b, type: 2}
   _data:
-    _maxHealth: 10
+    _maxHealth: 100
     _gridPivotTransform: {fileID: 587701821265816660}
     _spriteRenderers:
     - {fileID: 2070359557671589300}
@@ -567,6 +568,7 @@ MonoBehaviour:
       _flags: 03000000
     _physicObjects:
     - {fileID: 529608231433032311}
+    _collider: {fileID: 6711962389302387495}
 --- !u!1 &7766812225602160550
 GameObject:
   m_ObjectHideFlags: 0

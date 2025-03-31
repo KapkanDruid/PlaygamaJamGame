@@ -21,6 +21,8 @@ namespace Project.Architecture
         [SerializeField] private CardsPopupView _cardsPopupView;
         [SerializeField] private LevelExperienceView _experienceView;
         [SerializeField] private DefensiveFlag _defensiveFlag;
+        [SerializeField] private AudioController _audioController;
+        [SerializeField] private AlertController _alertController;
 
         public override void InstallBindings()
         {
@@ -49,6 +51,9 @@ namespace Project.Architecture
             Container.Bind<FloatingTextHandler>().AsSingle().NonLazy();
 
             Container.Bind<UpgradeEffectController>().AsSingle().NonLazy();
+
+            Container.Bind<AudioController>().FromInstance(_audioController).AsSingle().NonLazy();
+            Container.Bind<AlertController>().FromInstance(_alertController).AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
         }

@@ -1,11 +1,10 @@
-﻿using Project.Content.CharacterAI.Destroyer;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
 {
-    class MainTargetAttackerMoveLogic :  ITickable
+    class MainTargetAttackerMoveLogic : ITickable
     {
         private NavMeshAgent _agent;
         private PauseHandler _pauseHandler;
@@ -15,6 +14,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private CharacterSensor _characterSensor;
         private MainTargetAttackerHandler _mainTargetAttackerHandler;
         private EnemyDeadHandler _enemyDeadHandler;
+        private Animator _animator;
+        private AnimatorStateInfo _pausedAnimatorState;
 
         private bool _isMoving => _agent.velocity.sqrMagnitude > 0.05f && !_agent.isStopped;
 
@@ -22,7 +23,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                                            CharacterSensor characterSensor,
                                            NavMeshAgent navMeshAgent,
                                            PauseHandler pauseHandler,
-                                           EnemyDeadHandler enemyDeadHandler)
+                                           EnemyDeadHandler enemyDeadHandler,
+                                           Animator animator)
         {
             _mainTargetAttackerHandler = mainTargetAttackerHandler;
             _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
@@ -31,6 +33,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _agent = navMeshAgent;
             _pauseHandler = pauseHandler;
             _enemyDeadHandler = enemyDeadHandler;
+            _animator = animator;
 
             Initialize();
         }
@@ -47,15 +50,31 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         public void Tick()
         {
-            if (_pauseHandler.IsPaused || _enemyDeadHandler.IsDead)
+            if (_pauseHandler.IsPaused)
             {
                 _agent.speed = 0f;
                 _agent.isStopped = true;
+                PauseAnimation();
                 return;
             }
+            else
+            {
+                _agent.speed = _mainTargetAttackerData.Speed;
+                _agent.isStopped = false;
 
-            _agent.speed = _mainTargetAttackerData.Speed;
-            _agent.isStopped = false;
+                ResumeAnimation();
+            }
+
+            if (_enemyDeadHandler.IsDead)
+            {
+                _agent.speed = 0f;
+                _agent.isStopped = true;
+            }
+            else
+            {
+                _agent.speed = _mainTargetAttackerData.Speed;
+                _agent.isStopped = false;
+            }
 
             if (_characterSensor.TargetToChase == null || !_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
                 _characterSensor.TargetSearch();
@@ -78,11 +97,12 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
             if (direction > 0)
             {
-                _mainTargetAttackerHandler.transform.localScale = rightOrientation;
+                _mainTargetAttackerHandler.transform.localScale = leftOrientation;
             }
             else if (direction < 0)
             {
-                _mainTargetAttackerHandler.transform.localScale = leftOrientation;
+
+                _mainTargetAttackerHandler.transform.localScale = rightOrientation;
             }
         }
 
@@ -119,6 +139,24 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             }
         }
 
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
+            }
+        }
+
         private void HandleBlockedPath()
         {
             _mainTargetAttackerHandler.IsPathInvalid(true);
@@ -142,12 +180,18 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                 if (flags == null)
                     continue;
 
-                _blockingEntity = entity;
+                if (entity != null)
+                {
+                    _blockingEntity = entity;
+                }
+                else
+                {
+                    _blockingEntity = null;
+                }
                 return;
 
             }
 
-            _blockingEntity = null;
         }
     }
 }
