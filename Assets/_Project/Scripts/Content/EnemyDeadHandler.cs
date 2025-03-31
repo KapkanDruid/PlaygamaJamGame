@@ -58,13 +58,14 @@ namespace Project.Content
                 return;
             }
 
-            AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-            if (stateInfo.length <= 0)
-                return;
-
             try
             {
-                await UniTask.WaitForSeconds(stateInfo.length, cancellationToken: _characterTransform.gameObject.GetCancellationTokenOnDestroy());
+                AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+                while (stateInfo.normalizedTime < 1)
+                {
+                    await UniTask.Yield(PlayerLoopTiming.Update, _characterTransform.gameObject.GetCancellationTokenOnDestroy());
+                    stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+                }
             }
             catch (OperationCanceledException)
             {
