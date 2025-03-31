@@ -15,7 +15,6 @@ namespace Project.Content.UI
         private SceneData _sceneData;
         private WallDynamicData _dynamicData;
         private WallConfig _config;
-        private bool _isInited;
 
         [Inject]
         private void Construct(SceneData sceneData)
@@ -28,19 +27,10 @@ namespace Project.Content.UI
         {
             _dynamicData = _sceneData.WallDynamicData;
             _config = _dynamicData.Config;
-
-            _baseText.text = _config.MaxHealth.ToString();
-            _bonusText.text = (_dynamicData.BuildingMaxHealth.Value - _config.MaxHealth).ToString();
-            _currentText.text = _dynamicData.BuildingMaxHealth.Value.ToString();
-
-            _isInited = true;
         }
 
         private void OnEnable()
         {
-            if (!_isInited)
-                gameObject.SetActive(false);
-
             if (_dynamicData == null)
                 return;
 

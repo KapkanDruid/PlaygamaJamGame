@@ -18,8 +18,6 @@ namespace Project.Content.UI
         private BarrackDynamicData _dynamicData;
         private BarrackConfig _config;
 
-        private bool _isInited;
-
         [Inject]
         private void Construct(SceneData sceneData)
         {
@@ -32,18 +30,11 @@ namespace Project.Content.UI
             _dynamicData = _sceneData.BarrackDynamicData[_type];
             _config = _dynamicData.Config;
 
-            _baseText.text = _config.BuildingMaxHealth.ToString();
-            _bonusText.text = (_dynamicData.BuildingMaxHealth.Value - _config.BuildingMaxHealth).ToString();
-            _currentText.text = _dynamicData.BuildingMaxHealth.Value.ToString();
-
-            _isInited = true;
+            gameObject.SetActive(false);
         }
 
         private void OnEnable()
         {
-            if (!_isInited)
-                gameObject.SetActive(false);
-
             if (_dynamicData == null)
                 return;
 
