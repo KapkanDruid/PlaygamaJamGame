@@ -106,8 +106,6 @@ namespace Project.Content
             if (_musicClips == null)
                 return;
 
-            Debug.Log("PlayNextClip");
-
             _musicSource.clip = _musicClips[_currentMusicIndex].Clip;
 
             _musicSource.volume = _musicClips[_currentMusicIndex].Volume;

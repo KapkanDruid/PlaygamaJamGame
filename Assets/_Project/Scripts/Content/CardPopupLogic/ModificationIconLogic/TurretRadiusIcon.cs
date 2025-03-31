@@ -17,7 +17,6 @@ namespace Project.Content.UI
         private SceneData _sceneData;
         private TurretDynamicData _dynamicData;
         private TurretConfig _config;
-        private bool _isInited;
 
         [Inject]
         private void Construct(SceneData sceneData)
@@ -31,18 +30,11 @@ namespace Project.Content.UI
             _dynamicData = _sceneData.TurretDynamicData[_turretType];
             _config = _dynamicData.Config;
 
-            _baseText.text = _config.SensorRadius.ToString();
-            _bonusText.text = (_dynamicData.SensorRadius.Value - _config.SensorRadius).ToString();
-            _currentText.text = _dynamicData.SensorRadius.Value.ToString();
-
-            _isInited = true;
+            gameObject.SetActive(false);
         }
 
         private void OnEnable()
         {
-            if (!_isInited)
-                gameObject.SetActive(false);
-
             if (_dynamicData == null)
                 return;
 
