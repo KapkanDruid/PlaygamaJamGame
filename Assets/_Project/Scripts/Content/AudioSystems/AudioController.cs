@@ -10,11 +10,14 @@ namespace Project.Content
 
         [SerializeField] private EffectType _musicListType;
 
+        [SerializeField] private int _startSoundIndex = 0;
+
         private Sound[] _musicClips;
 
         private SceneRecourses _sceneResources;
 
         private int _currentMusicIndex;
+        private bool _isStop;
 
         [Inject]
         private void Construct(SceneRecourses sceneResources)
@@ -24,6 +27,8 @@ namespace Project.Content
 
         public void Initialize()
         {
+            _currentMusicIndex = _startSoundIndex;
+            _musicSource.loop = false;
             foreach (var musicList in _sceneResources.MusicDictionary)
             {
                 if (musicList.Key == _musicListType)
@@ -79,8 +84,17 @@ namespace Project.Content
             _SFXSource.Stop();
         }
 
+        public void StopMusic()
+        {
+            _isStop = true;
+            _musicSource.Stop();
+        }
+
         private void Update()
         {
+            if (_isStop)
+                return;
+
             if (!_musicSource.isPlaying)
             {
                 PlayNextClip();
@@ -91,6 +105,8 @@ namespace Project.Content
         {
             if (_musicClips == null)
                 return;
+
+            Debug.Log("PlayNextClip");
 
             _musicSource.clip = _musicClips[_currentMusicIndex].Clip;
 

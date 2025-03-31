@@ -1,4 +1,6 @@
-﻿using DG.Tweening;
+﻿using Cysharp.Threading.Tasks;
+using DG.Tweening;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -10,17 +12,23 @@ namespace Project.Content.CoreGameLoopLogic
         [Header("Win Menu")]
         [SerializeField] private float _timeAnimationButtons = 0.5f;
         [SerializeField] private float _timeAnimationBackground = 0.5f;
+        [SerializeField] private float _delayToAnimation;
+        [SerializeField] private Animator _animator;
         [SerializeField] private GameObject _buttonsContainer;
         [SerializeField] private GameObject _panel;
         [SerializeField] private RectTransform _background;
+        [SerializeField] private EffectType _music;
 
         private WinLoseHandler _winLoseHandler;
+        private AudioController _audioController;
         private Button[] _buttons;
+        private bool _isShowing;
 
         [Inject]
-        public void Construct(WinLoseHandler winLoseHandler)
+        public void Construct(WinLoseHandler winLoseHandler, AudioController audioController)
         {
             _winLoseHandler = winLoseHandler;
+            _audioController = audioController;
         }
 
         private void Start()
@@ -30,7 +38,6 @@ namespace Project.Content.CoreGameLoopLogic
             _background.gameObject.SetActive(false);
             _buttonsContainer.SetActive(false);
             _panel.SetActive(false);
-            _background.transform.localScale = Vector3.zero;
 
             _buttons = _buttonsContainer.GetComponentsInChildren<Button>();
             foreach (var button in _buttons)
@@ -42,11 +49,35 @@ namespace Project.Content.CoreGameLoopLogic
         private void ShowVictoryMenu()
         {
             _background.gameObject.SetActive(true);
+            _animator.SetTrigger(AnimatorHashes.EndSceneTrigger);
+
+            _audioController.StopMusic();
+            _audioController.PLayLoopEffect(_music);
+
             _panel.SetActive(true);
 
-            _background.transform.DOScale(1f, _timeAnimationBackground)
-                    .SetEase(Ease.OutQuad)
-                    .OnComplete(ShowButtons);
+            ShowAsync().Forget();
+        }
+
+        private async UniTask ShowAsync()
+        {
+            if (_isShowing)
+                return;
+
+            _isShowing = true;
+
+            try
+            {
+                await UniTask.WaitForSeconds(_delayToAnimation);
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
+
+            ShowButtons();
+
+            _isShowing = false;
         }
 
         private void ShowButtons()
