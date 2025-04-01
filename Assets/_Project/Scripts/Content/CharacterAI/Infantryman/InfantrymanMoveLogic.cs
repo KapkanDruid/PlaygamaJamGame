@@ -15,13 +15,15 @@ namespace Project.Content.CharacterAI.Infantryman
         private bool _isPatrolling;
         private Animator _animator;
         private AnimatorStateInfo _pausedAnimatorState;
+        private EnemyDeadHandler _enemyDeadHandler;
 
 
         public InfantrymanMoveLogic(InfantrymanEntity infantrymanEntity,
                                     NavMeshAgent agent,
                                     PatrolLogic patrolLogic,
                                     PauseHandler pauseHandler,
-                                    Animator animator)
+                                    Animator animator,
+                                    EnemyDeadHandler enemyDeadHandler)
         {
             _infantrymanEntity = infantrymanEntity;
             _infantrymanData = infantrymanEntity.InfantrymanData;
@@ -29,6 +31,7 @@ namespace Project.Content.CharacterAI.Infantryman
             _patrolLogic = patrolLogic;
             _pauseHandler = pauseHandler;
             _animator = animator;
+            _enemyDeadHandler = enemyDeadHandler;
 
             ConfiguringAgent();
         }
@@ -56,6 +59,8 @@ namespace Project.Content.CharacterAI.Infantryman
             }
             _agent.isStopped = false;
 
+            if (_enemyDeadHandler.IsDead)
+                return;
 
             if (_infantrymanEntity.TargetTransform == null)
             {
