@@ -30012,8 +30012,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicSource: {fileID: 1683454748}
   _SFXSource: {fileID: 1677189065}
-  _musicListType: {fileID: 11400000, guid: a63f8a1eef074e041856bb062f62eba5, type: 2}
-  _startSoundIndex: 0
 --- !u!1 &676066313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5430122588030909017, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
@@ -30306,8 +30304,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0838d67e5f9529449d3c1fde28aa918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _musicListType: {fileID: 11400000, guid: e160291d860f4774380b39a56e712cce, type: 2}
+  _startMusicIndex: 0
+  _musicByTime:
+  - _effectType: {fileID: 11400000, guid: f415d483b51ce5140af5ccd3cd1345e4, type: 2}
+    _playTimeInSeconds: 420
   _groundGridSize: {x: 34, y: 18}
-  _startFlagPosition: {x: 0, y: 0}
   _timeToWin: 900
 --- !u!4 &889152092
 Transform:

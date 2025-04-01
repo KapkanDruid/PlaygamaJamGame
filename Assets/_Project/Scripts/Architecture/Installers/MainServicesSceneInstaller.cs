@@ -54,6 +54,8 @@ namespace Project.Architecture
             Container.Bind<AudioController>().FromInstance(_audioController).AsSingle().NonLazy();
             Container.Bind<AlertController>().FromInstance(_alertController).AsSingle().NonLazy();
 
+            Container.BindInterfacesAndSelfTo<TimedClipPlayer>().AsSingle().NonLazy();
+
             FactoriesInstaller.Install(Container);
         }
     }
