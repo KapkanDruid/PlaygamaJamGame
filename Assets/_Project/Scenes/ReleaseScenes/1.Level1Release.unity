@@ -30052,7 +30052,6 @@ Transform:
   - {fileID: 889152092}
   - {fileID: 1784197767}
   - {fileID: 270485707}
-  - {fileID: 1238259056}
   - {fileID: 1131470333}
   - {fileID: 47559453}
   - {fileID: 588737098}
@@ -30307,7 +30306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0838d67e5f9529449d3c1fde28aa918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _groundGridSize: {x: 5, y: 5}
+  _groundGridSize: {x: 34, y: 18}
   _startFlagPosition: {x: 0, y: 0}
   _timeToWin: 900
 --- !u!4 &889152092
@@ -31442,7 +31441,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneBootstrap: {fileID: 1380518577}
-  _gridPlaceSystem: {fileID: 1238259057}
   _gizmosDrawer: {fileID: 1784197768}
   _grid: {fileID: 1131470332}
   _navMeshSurface: {fileID: 47559454}
@@ -31453,51 +31451,6 @@ MonoBehaviour:
   _defensiveFlag: {fileID: 738917451}
   _audioController: {fileID: 588737099}
   _alertController: {fileID: 2601877}
---- !u!1 &1238259055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1238259056}
-  - component: {fileID: 1238259057}
-  m_Layer: 0
-  m_Name: '[GridPlaceSystem]'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1238259056
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238259055}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 677028382}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1238259057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238259055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c99b9f598911d9478f67feb3fa7832a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gridSize: {x: 30, y: 20}
 --- !u!1 &1243300421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6384237466077633174, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
