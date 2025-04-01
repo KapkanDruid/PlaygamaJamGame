@@ -49,11 +49,12 @@ namespace Project.Content.CharacterAI.Destroyer
             {
                 _characterSensor.ScanAreaToAttack();
 
-                if (_characterSensor.TargetTransformToAttack != null)
-                {
-                    if (!_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
-                        _characterSensor.ScanAreaToAttack();
-                }
+            }
+
+            if (_characterSensor.TargetTransformToAttack != null)
+            {
+                if (!_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
+                    _characterSensor.ScanAreaToAttack();
             }
 
             TryToHit();
@@ -77,12 +78,10 @@ namespace Project.Content.CharacterAI.Destroyer
                 if (targetCollider != null)
                 {
                     Vector3 closestPoint = targetCollider.ClosestPoint(_destroyerHandler.transform.position);
-                    if (Vector2.Distance(_destroyerHandler.transform.position, closestPoint) <= _destroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize ||
-                        Vector2.Distance(_destroyerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <= _destroyerHandler.DestroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize)
+                    if (Vector2.Distance(_destroyerHandler.transform.position, closestPoint) <= _destroyerData.DistanceToTarget + _destroyerSensorData.HitColliderSize)
                     {
                         if (_attackCooldownTimer <= 0)
                         {
-                            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
                             _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
                             Attack();
                             _attackCooldownTimer = _destroyerData.AttackCooldown;
@@ -96,6 +95,8 @@ namespace Project.Content.CharacterAI.Destroyer
         {
             if (_damageable == null)
                 return;
+
+            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
 
             _damageable?.TakeDamage(_destroyerData.Damage);
         }
