@@ -11,12 +11,14 @@ namespace Project.Content.CoreGameLoopLogic
         private float _timeRemaining;
         private SceneData _sceneData;
         private PauseHandler _pauseHandler;
+        private WinLoseHandler _winLoseHandler;
 
         [Inject]
-        public void Construct(SceneData sceneData, PauseHandler pauseHandler)
+        public void Construct(SceneData sceneData, PauseHandler pauseHandler, WinLoseHandler winLoseHandler)
         {
             _sceneData = sceneData;
             _pauseHandler = pauseHandler;
+            _winLoseHandler = winLoseHandler;
         }
 
         private void Start()
@@ -26,27 +28,13 @@ namespace Project.Content.CoreGameLoopLogic
 
         private void Update()
         {
-            if (_pauseHandler.IsPaused)
-                return;
-
-            UITimer();
+            UpdateTimerDisplay();
         }
 
-        private void UITimer()
-        {
-            if (_timeRemaining > 0)
-            {
-                _timeRemaining -= Time.deltaTime;
-                if (_timeRemaining < 0)
-                    _timeRemaining = 0;
-
-                UpdateTimerDisplay();
-            }
-        }
         private void UpdateTimerDisplay()
         {
-            int minutes = Mathf.FloorToInt(_timeRemaining / 60);
-            int seconds = Mathf.FloorToInt(_timeRemaining % 60);
+            int minutes = Mathf.FloorToInt(_winLoseHandler.TimeToWin / 60);
+            int seconds = Mathf.FloorToInt(_winLoseHandler.TimeToWin % 60);
             string formattedTime = string.Join(" ", $"{minutes:D2}:{seconds:D2}".ToCharArray());
             _timerText.text = formattedTime;
         }

@@ -18,13 +18,15 @@ namespace Project.Content.CharacterAI.Infantryman
         private PauseHandler _pauseHandler;
         private DiContainer _diContainer;
         private AnimatorStateInfo _pausedAnimatorState;
+        private EnemyDeadHandler _enemyDeadHandler;
 
         public InfantrymanAttackLogic(InfantrymanEntity infantrymanEntity,
                                       IProjectilePoolData projectilePoolData,
                                       IShooterData shootData,
                                       Animator animator,
                                       PauseHandler pauseHandler,
-                                      DiContainer diContainer)
+                                      DiContainer diContainer,
+                                      EnemyDeadHandler enemyDeadHandler)
         {
             _infantrymanEntity = infantrymanEntity;
             _infantrymanData = infantrymanEntity.InfantrymanData;
@@ -34,6 +36,7 @@ namespace Project.Content.CharacterAI.Infantryman
             _animator = animator;
             _pauseHandler = pauseHandler;
             _diContainer = diContainer;
+            _enemyDeadHandler = enemyDeadHandler;
 
             Initialize();
         }
@@ -54,6 +57,9 @@ namespace Project.Content.CharacterAI.Infantryman
             {
                 ResumeAnimation();
             }
+
+            if (_enemyDeadHandler.IsDead)
+                return;
 
             TryToShoot();
 
