@@ -32,11 +32,14 @@ namespace Project.Content
         [SerializeField] private float _fillSpeed = 1f;
         private bool isFilling = false;
 
-        [SerializeField] private Vector2[] _maskSize;
-        [SerializeField] private Vector3[] _offsets;
+        [SerializeField] private Vector2[] _maskSizeSceneObject;
+        [SerializeField] private Vector3[] _offsetsSceneObject;
+        [SerializeField] private Vector3[] _markeroffsetsSceneObject;
 
-        [SerializeField] private Vector3[] _markeroffsets;
-        
+        [SerializeField] private Vector2[] _maskSizeUI;
+        [SerializeField] private Vector3[] _offsetsUI;
+        [SerializeField] private Vector3[] _markeroffsetsUI;
+
         private PauseHandler _pauseHandler;
 
         private enum SelectionMode { SceneObjects, UIElements }
@@ -142,10 +145,10 @@ namespace Project.Content
             {
                 Vector3 screenPosition = Camera.main.WorldToScreenPoint(targetObject.transform.position);
                                
-                Vector3 offset = (_currentIndex >= 0 && _currentIndex < _offsets.Length) ? _offsets[_currentIndex] : Vector3.zero; 
+                Vector3 offset = (_currentIndex >= 0 && _currentIndex < _offsetsSceneObject.Length) ? _offsetsSceneObject[_currentIndex] : Vector3.zero; 
                 _uiMask.position = screenPosition + offset;
                                
-                Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSize.Length) ? _maskSize[_currentIndex] : new Vector2( ); 
+                Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeSceneObject.Length) ? _maskSizeSceneObject[_currentIndex] : new Vector2( ); 
                 _uiMask.sizeDelta = newSize;
 
                 if (!_uiMask.gameObject.activeSelf)
@@ -163,7 +166,7 @@ namespace Project.Content
             {
                 Vector3 screenPosition = Camera.main.WorldToScreenPoint(targetObject.transform.position);
 
-                Vector3 newmarkeroffsets = (_currentIndex >= 0 && _currentIndex < _markeroffsets.Length) ? _markeroffsets[_currentIndex] : Vector3.zero; 
+                Vector3 newmarkeroffsets = (_currentIndex >= 0 && _currentIndex < _markeroffsetsSceneObject.Length) ? _markeroffsetsSceneObject[_currentIndex] : Vector3.zero; 
                 _marker.position = screenPosition + newmarkeroffsets;
               
                 if (!_marker.gameObject.activeSelf)
@@ -182,10 +185,10 @@ namespace Project.Content
                 RectTransform rectTransform = uiElement.GetComponent<RectTransform>();
                 if (rectTransform != null)
                 {
-                    Vector3 offset = (_currentIndex >= 0 && _currentIndex < _offsets.Length) ? _offsets[_currentIndex] : Vector3.zero;
+                    Vector3 offset = (_currentIndex >= 0 && _currentIndex < _offsetsUI.Length) ? _offsetsUI[_currentIndex] : Vector3.zero;
                     _uiMask.position = rectTransform.position + offset;
 
-                    Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSize.Length) ? _maskSize[_currentIndex] : new Vector2();
+                    Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeUI.Length) ? _maskSizeUI[_currentIndex] : new Vector2();
                     _uiMask.sizeDelta = newSize;                    
                     if (!_uiMask.gameObject.activeSelf)
                     {
@@ -204,7 +207,7 @@ namespace Project.Content
                 RectTransform rectTransform = uiElement.GetComponent<RectTransform>();
                 if (rectTransform != null)
                 {
-                    Vector3 newmarkeroffsets = (_currentIndex >= 0 && _currentIndex < _markeroffsets.Length) ? _markeroffsets[_currentIndex] : Vector3.zero; 
+                     Vector3 newmarkeroffsets = (_currentIndex >= 0 && _currentIndex < _markeroffsetsUI.Length) ? _markeroffsetsUI[_currentIndex] : Vector3.zero; 
                     _marker.position = rectTransform.position + newmarkeroffsets;
                     if (!_marker.gameObject.activeSelf)
                     {
