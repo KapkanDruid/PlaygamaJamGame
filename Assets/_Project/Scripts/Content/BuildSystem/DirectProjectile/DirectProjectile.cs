@@ -17,7 +17,7 @@ namespace Project.Content.BuildSystem
         private PauseHandler _pauseHandler;
         private AudioController _audioController;
 
-        private EntityFlags _enemyFlag;
+        private EntityFlags[] _enemyFlag;
         private float _damage;
         private float _speed;
         private float _lifeTime;
@@ -96,7 +96,18 @@ namespace Project.Content.BuildSystem
                 if (flags == null)
                     return;
 
-                if (!flags.Contain(_enemyFlag))
+                bool isEnemy = false;
+
+                for (int j = 0; j < _enemyFlag.Length; j++)
+                {
+                    if (flags.Contain(_enemyFlag[j]))
+                    {
+                        isEnemy = true;
+                        break;
+                    }
+                }
+
+                if (!isEnemy)
                     return;
 
                 IDamageable damageable = entity.ProvideComponent<IDamageable>();

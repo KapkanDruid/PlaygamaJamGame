@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Project.Content.BuildSystem;
+using System;
 using UnityEngine;
 
 namespace Project.Content.CharacterAI.Destroyer
 {
     [Serializable]
-    public class DestroyerData : ICharacterData, ISensorData
+    public class DestroyerData : ICharacterData, IAttackerData
     {
         [SerializeField] private DestroyerConfig _destroyerConfig;
         [SerializeField] private Transform _damageTextPoint;
@@ -12,6 +13,8 @@ namespace Project.Content.CharacterAI.Destroyer
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags[] _enemyFlag;
         [SerializeField] private FloatingTextConfig _floatingText;
+
+        private SensorData _sensorData;
 
         public float Speed => _destroyerConfig.Speed;
         public float Health => _destroyerConfig.Health;
@@ -29,6 +32,17 @@ namespace Project.Content.CharacterAI.Destroyer
         public EntityFlags[] EnemyFlag => _enemyFlag;
         public DestroyerType Type => _destroyerConfig.Type;
         public FloatingTextConfig FloatingText => _floatingText;
+        public ISensorData SensorData => _sensorData;
+
+        public void Initialize()
+        {
+            _sensorData = new SensorData();
+
+            _sensorData.SensorOrigin = _characterTransform;
+            _sensorData.SensorRadius = _destroyerConfig.SensorRadius;
+            _sensorData.ThisEntity = ThisEntity;
+            _sensorData.TargetFlag = _enemyFlag;
+        }
     }
 }
 

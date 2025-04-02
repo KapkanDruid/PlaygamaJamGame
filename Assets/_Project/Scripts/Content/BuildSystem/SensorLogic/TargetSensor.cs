@@ -37,7 +37,18 @@ namespace Project.Content.BuildSystem
                 if (flags == null)
                     continue;
 
-                if (!flags.Contain(_data.TargetFlag))
+                bool isEnemy = false;
+
+                for (int j = 0; j < _data.TargetFlag.Length; j++)
+                {
+                    if (flags.Contain(_data.TargetFlag[j]))
+                    {
+                        isEnemy = true;
+                        break;
+                    }
+                }
+
+                if (!isEnemy)
                     continue;
 
                 if (additionalFilter != null)

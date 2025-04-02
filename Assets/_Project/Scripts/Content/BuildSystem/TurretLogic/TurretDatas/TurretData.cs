@@ -20,7 +20,7 @@ namespace Project.Content.BuildSystem
         [SerializeField] private Transform _turretShootPoint;
         [SerializeField] private Transform _attackZone;
 
-        [SerializeField] private EntityFlags _enemyFlag;
+        [SerializeField] private EntityFlags[] _enemyFlag;
         [SerializeField] private TurretType _turretType;
         [SerializeField] private EffectType _placeSoundEffect;
         [SerializeField] private Collider2D _collider;

@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanEntity : CharacterHandler, IPatrolling, IInitializable
+    public class InfantrymanEntity : CharacterHandler, IPatrolling
     {
         [SerializeField] private InfantrymanData _infantrymanData;
         [SerializeField] private SpriteRenderer _levelSpriteRenderer;
@@ -19,6 +19,8 @@ namespace Project.Content.CharacterAI.Infantryman
         private FloatingTextHandler _textHandler;
         private EntityCommander _entityCommander;
         private AudioController _audioController;
+        private AnimatorStateInfo _pausedAnimatorState;
+
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
         public Transform FlagTransform => _flagTransform;
@@ -77,12 +79,6 @@ namespace Project.Content.CharacterAI.Infantryman
                 _audioController.PlayOneShot(_infantrymanData.BornSoundEffect);
         }
 
-        private void OnSceneInitialized()
-        {
-            if (_entityCommander != null)
-                _entityCommander.AddEntity(this);
-        }
-
         public override T ProvideComponent<T>() where T : class
         {
             if (_infantrymanData.Flags is T flags)
@@ -118,14 +114,29 @@ namespace Project.Content.CharacterAI.Infantryman
             _patrolRadius = flagComponent.Coverage;
         }
 
+        private void Awake()
+        {
+            Initialize();
+        }
+
         private void Update()
         {
             if (_pauseHandler.IsPaused)
+            {
+                PauseAnimation();
                 return;
+            }
+
+            ResumeAnimation();
 
             HandleTarget();
         }
 
+        private void OnSceneInitialized()
+        {
+            if (_entityCommander != null)
+                _entityCommander.AddEntity(this);
+        }
 
         private void ResetData()
         {
@@ -150,6 +161,24 @@ namespace Project.Content.CharacterAI.Infantryman
                     return;
 
                 _targetTransform = null;
+            }
+        }
+
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
             }
         }
 

@@ -269,7 +269,7 @@ MonoBehaviour:
     _turretRotationObject: {fileID: 3946663751892408213}
     _turretShootPoint: {fileID: 6537497600333281368}
     _attackZone: {fileID: 4504469399848842690}
-    _enemyFlag: 0
+    _enemyFlag: 00000000
     _turretType: 0
     _placeSoundEffect: {fileID: 11400000, guid: 5eea47e6034cdc24f93a60635a7b4bf1, type: 2}
     _collider: {fileID: 562012459638097395}

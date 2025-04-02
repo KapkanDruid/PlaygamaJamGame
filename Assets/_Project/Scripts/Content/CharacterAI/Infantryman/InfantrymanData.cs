@@ -14,7 +14,7 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private float _projectileLifeTime;
         [SerializeField] private float _projectileSpeed;
         [SerializeField] private Flags _flags;
-        [SerializeField] private EntityFlags _enemyFlag;
+        [SerializeField] private EntityFlags[] _enemyFlag;
         [SerializeField] private DirectProjectile _projectilePrefab;
         [SerializeField] private Color[] _levelColors;
         [SerializeField] private FloatingTextConfig _floatingText;
@@ -38,7 +38,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public Transform DamageTextPoint => _damageTextPoint;
         public Flags Flags => _flags;
         public IEntity ThisEntity { get; set; }
-        public EntityFlags EnemyFlag => _enemyFlag;
+        public EntityFlags[] EnemyFlag => _enemyFlag;
 
         public float ReloadTime => _infantrymanConfig.AttackCooldown;
         public Transform ShootPoint => _turretShootPoint;

@@ -19,22 +19,22 @@ namespace Project.Architecture
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.MainBuildingFirstLevel);
 
-            Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
+            Container.BindFactory<DestroyerEntity, DestroyerEntity.Factory>()
                 .WithFactoryArguments(DestroyerType.SimpleParanoid)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.SimpleParanoid);
 
-            Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
+            Container.BindFactory<DestroyerEntity, DestroyerEntity.Factory>()
                 .WithFactoryArguments(DestroyerType.AdvencedParanoid)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.AdvencedParanoid);
 
-            Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
+            Container.BindFactory<DestroyerEntity, DestroyerEntity.Factory>()
                 .WithFactoryArguments(DestroyerType.Aliens)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.Aliens);
 
-            Container.BindFactory<DestroyerHandler, DestroyerHandler.Factory>()
+            Container.BindFactory<DestroyerEntity, DestroyerEntity.Factory>()
                 .WithFactoryArguments(DestroyerType.FlatEarther)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.FlatEarther);
@@ -44,12 +44,12 @@ namespace Project.Architecture
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.Infantryman);
 
-            Container.BindFactory<MainTargetAttackerHandler, MainTargetAttackerHandler.Factory>()
+            Container.BindFactory<MainTargetAttackerEntity, MainTargetAttackerEntity.Factory>()
                 .WithFactoryArguments(MainTargetAttackerType.Bigfoot)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.BigFoot);
 
-            Container.BindFactory<MainTargetAttackerHandler, MainTargetAttackerHandler.Factory>()
+            Container.BindFactory<MainTargetAttackerEntity, MainTargetAttackerEntity.Factory>()
                 .WithFactoryArguments(MainTargetAttackerType.HumanMoth)
                 .FromSubContainerResolve()
                 .ByNewContextPrefab(_recourses.Prefabs.HumanMoth);

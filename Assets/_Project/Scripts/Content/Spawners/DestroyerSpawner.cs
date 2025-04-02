@@ -9,15 +9,15 @@ namespace Project.Content.Spawners
 {
     public class DestroyerSpawner : IEnemySpawner
     {
-        private ObjectPooler<DestroyerHandler> _destroyerPool;
-        private List<DestroyerHandler.Factory> _destroyerFactory;
+        private ObjectPooler<DestroyerEntity> _destroyerPool;
+        private List<DestroyerEntity.Factory> _destroyerFactory;
         private DestroyerType _type;
         private GameObject _prefab;
         public DestroyerType Type => _type;
 
         public class Factory : PlaceholderFactory<DestroyerType, DestroyerSpawner> { }
 
-        public DestroyerSpawner(List<DestroyerHandler.Factory> destroyerFactory, DestroyerType type)
+        public DestroyerSpawner(List<DestroyerEntity.Factory> destroyerFactory, DestroyerType type)
         {
             _destroyerFactory = destroyerFactory;
             _type = type;
@@ -28,13 +28,13 @@ namespace Project.Content.Spawners
             foreach (var factory in _destroyerFactory)
             {
                 if (factory.Type == _type)
-                    _destroyerPool = new ObjectPooler<DestroyerHandler>(capacityInPool, "Destroyers", new InstantiateObjectsByFactory<DestroyerHandler>(factory));
+                    _destroyerPool = new ObjectPooler<DestroyerEntity>(capacityInPool, "Destroyers", new InstantiateObjectsByFactory<DestroyerEntity>(factory));
             }
         }
 
         public Type GetTypeObject()
         {
-            return typeof(DestroyerHandler);
+            return typeof(DestroyerEntity);
         }
 
         public GameObject GetPrefab()

@@ -17,7 +17,6 @@ namespace Project.Content.CharacterAI.Infantryman
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private DiContainer _diContainer;
-        private AnimatorStateInfo _pausedAnimatorState;
         private EnemyDeadHandler _enemyDeadHandler;
 
         public InfantrymanAttackLogic(InfantrymanEntity infantrymanEntity,
@@ -49,14 +48,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public void Tick()
         {
             if (_pauseHandler.IsPaused)
-            {
-                PauseAnimation();
                 return;
-            }
-            else
-            {
-                ResumeAnimation();
-            }
 
             if (_enemyDeadHandler.IsDead)
                 return;
@@ -86,24 +78,6 @@ namespace Project.Content.CharacterAI.Infantryman
                 projectile.Prepare(_shootPoint.position, _infantrymanEntity.TargetTransform.position - _infantrymanEntity.transform.position, _shootData.ProjectileData);
 
                 _attackCooldownTimer = _infantrymanData.AttackCooldown;
-            }
-        }
-
-        private void PauseAnimation()
-        {
-            if (_animator.speed != 0)
-            {
-                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
-                _animator.speed = 0;
-            }
-        }
-
-        private void ResumeAnimation()
-        {
-            if (_animator.speed == 0)
-            {
-                _animator.speed = 1;
-                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
             }
         }
 
