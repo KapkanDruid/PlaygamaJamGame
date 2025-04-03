@@ -59,6 +59,18 @@ TextureImporter:
   - first:
       213: -2514827791619496468
     second: TextureBuildingsAtlas_18
+  - first:
+      213: -2066239062403305897
+    second: TextureBuildingsAtlas_19
+  - first:
+      213: 3068648751486938270
+    second: TextureBuildingsAtlas_20
+  - first:
+      213: 298956561306700171
+    second: TextureBuildingsAtlas_21
+  - first:
+      213: 1744440282594124044
+    second: TextureBuildingsAtlas_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,7 +117,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,19 +151,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -584,6 +583,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1200
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e2a68258e3353e0800000000000000
+      internalID: -2066239062403305897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1201
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c23d4f7c7069a20800000000000000
+      internalID: 3068648751486938270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1201
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8945f7986b162400800000000000000
+      internalID: 298956561306700171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 1200
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01a7efc13f753810800000000000000
+      internalID: 1744440282594124044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -597,26 +684,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      TextureBuildingsAtlas_0: -3524819080866204042
-      TextureBuildingsAtlas_1: 6595155308750756299
-      TextureBuildingsAtlas_10: -8545552510587657679
-      TextureBuildingsAtlas_11: 8519531880729810041
-      TextureBuildingsAtlas_12: 5076041496473965568
-      TextureBuildingsAtlas_13: 4116100732020008564
-      TextureBuildingsAtlas_14: 1677078749681311313
-      TextureBuildingsAtlas_15: 6439708836315979734
-      TextureBuildingsAtlas_16: -1596336144846953883
-      TextureBuildingsAtlas_17: -295319604562396555
-      TextureBuildingsAtlas_18: -2514827791619496468
-      TextureBuildingsAtlas_2: -6336575901924993829
-      TextureBuildingsAtlas_3: -5817419687718861913
-      TextureBuildingsAtlas_4: 6808712457271782290
-      TextureBuildingsAtlas_5: -8305674533445338520
-      TextureBuildingsAtlas_6: 4241277631858605643
-      TextureBuildingsAtlas_7: 8572822790430759875
-      TextureBuildingsAtlas_8: -7629647402421387918
-      TextureBuildingsAtlas_9: 2123485854167381099
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
