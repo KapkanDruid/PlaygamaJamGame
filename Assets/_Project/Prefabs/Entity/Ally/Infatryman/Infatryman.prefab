@@ -318,7 +318,7 @@ MonoBehaviour:
     _flags:
       _flags: 01000000
     _enemyFlag: 00000000
-    _projectilePrefab: {fileID: 5940939131329807596, guid: eac398fec705fc7438641879015324d8, type: 3}
+    _projectilePrefab: {fileID: 1878219031791156981, guid: f0f4b4d6c403b59489da6377696bc06c, type: 3}
     _levelColors:
     - {r: 1, g: 1, b: 1, a: 0}
     - {r: 1, g: 1, b: 1, a: 1}

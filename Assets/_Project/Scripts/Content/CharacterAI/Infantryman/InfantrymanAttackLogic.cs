@@ -1,4 +1,5 @@
 ﻿using Project.Content.BuildSystem;
+using Project.Content.ProjectileSystem;
 using UnityEngine;
 using Zenject;
 
@@ -13,7 +14,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private IAllyEntityData _infantrymanData;
         private InfantrymanEntity _infantrymanEntity;
         private float _attackCooldownTimer;
-        private ObjectPooler<DirectProjectile> _projectilePool;
+        private ObjectPooler<SimpleProjectile> _projectilePool;
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private DiContainer _diContainer;
@@ -42,7 +43,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<DirectProjectile>(_poolData.ProjectilePrefab, _diContainer));
+            _projectilePool = new ObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _diContainer));
         }
 
         public void Tick()

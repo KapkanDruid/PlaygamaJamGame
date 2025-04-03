@@ -1,14 +1,12 @@
 ﻿using Cysharp.Threading.Tasks;
-using Project.Content.BuildSystem;
 using System;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Content.ProjectileSystem
 {
-    public class SimpleProjectile : MonoBehaviour
+    public class SimpleProjectile : Projectile
     {
-        [SerializeField] private Projectile _projectilePrefab;
         [SerializeField] private Animator _animator;
         [SerializeField] private EffectType _shootEffect;
         [SerializeField] private EffectType _hitEffect;
@@ -16,8 +14,6 @@ namespace Project.Content.ProjectileSystem
         private PauseHandler _pauseHandler;
         private AudioController _audioController;
 
-        private EntityFlags[] _enemyFlag;
-        private float _damage;
         private float _speed;
         private float _lifeTime;
         private float _elapsedTime;
@@ -33,10 +29,9 @@ namespace Project.Content.ProjectileSystem
             _audioController = audioController;
         }
 
-        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IDirectProjectileData directProjectileData)
+        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IProjectileData directProjectileData)
         {
-            _enemyFlag = directProjectileData.EnemyFlag;
-            _damage = directProjectileData.Damage;
+            PrepareProjectile(directProjectileData.Damage, directProjectileData.EnemyFlag);
             _speed = directProjectileData.Speed;
             _lifeTime = directProjectileData.LifeTime;
 
@@ -79,9 +74,14 @@ namespace Project.Content.ProjectileSystem
 
             _elapsedTime += Time.deltaTime;
 
-            Vector2 nextPosition = _projectilePrefab.Rigidbody.position + (_moveDirection.normalized * _speed * Time.deltaTime);
+            Vector2 nextPosition = Rigidbody.position + (_moveDirection.normalized * _speed * Time.deltaTime);
 
-            _projectilePrefab.Rigidbody.MovePosition(nextPosition);
+            Rigidbody.MovePosition(nextPosition);
+        }
+
+        protected override void OnTargetCollision(Collider2D collision, IDamageable damageable, IEntity entity)
+        {
+            damageable.TakeDamage(Damage);
         }
 
         private async UniTask WaitForAnimation(Action action)

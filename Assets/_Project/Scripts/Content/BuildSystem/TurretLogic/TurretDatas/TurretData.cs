@@ -1,4 +1,5 @@
-﻿using Project.Content.ReactiveProperty;
+﻿using Project.Content.ProjectileSystem;
+using Project.Content.ReactiveProperty;
 using System;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ namespace Project.Content.BuildSystem
     public class TurretData : IPlaceComponentData, IHealthData, ITurretShootData, IProjectilePoolData, IDisposable, IPLaceEffectData
     {
         [SerializeField] private int _projectilePoolSize;
-        [SerializeField] private DirectProjectile _projectilePrefab;
+        [SerializeField] private SimpleProjectile _projectilePrefab;
 
         [SerializeField] private Transform _gridPivotTransform;
         [SerializeField] private SpriteRenderer[] _spriteRenderers;
@@ -25,7 +26,7 @@ namespace Project.Content.BuildSystem
         [SerializeField] private EffectType _placeSoundEffect;
         [SerializeField] private Collider2D _collider;
 
-        private DirectProjectileData _projectileData = new DirectProjectileData();
+        private ProjectileData _projectileData = new ProjectileData();
         private SensorData _sensorData = new SensorData();
         private TurretDynamicData _dynamicData;
         private TurretConfig _configData;
@@ -44,9 +45,9 @@ namespace Project.Content.BuildSystem
         public GameObject[] PhysicObjects => _physicObjects;
         public Transform RotationObject => _turretRotationObject;
         public Transform ShootPoint => _turretShootPoint;
-        public DirectProjectile ProjectilePrefab => _projectilePrefab;
+        public SimpleProjectile ProjectilePrefab => _projectilePrefab;
 
-        public IDirectProjectileData ProjectileData => _projectileData;
+        public IProjectileData ProjectileData => _projectileData;
         public ISensorData SensorData => _sensorData;
         public IEntity ThisEntity => _thisEntity;
         public float RotateSpeed => _configData.RotateSpeed;

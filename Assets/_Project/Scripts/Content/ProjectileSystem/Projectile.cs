@@ -9,6 +9,7 @@ namespace Project.Content.ProjectileSystem
         [Header("Common")]
         [SerializeField, Min(0f)] private float _damage = 10f;
         [SerializeField] private ProjectileDisposeType _disposeType = ProjectileDisposeType.OnAnyCollision;
+        [SerializeField] private EntityFlags[] _enemyFlag;
 
         [Header("Rigidbody")]
         [SerializeField] private Rigidbody2D _projectileRigidbody;
@@ -23,14 +24,38 @@ namespace Project.Content.ProjectileSystem
         public ProjectileDisposeType DisposeType => _disposeType;
         public Rigidbody2D Rigidbody => _projectileRigidbody;
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnEnable()
+        {
+            IsProjectileDisposed = false;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
             if (IsProjectileDisposed)
                 return;
-            
-            if (collision.gameObject.TryGetComponent(out IDamageable damageable))
+            if (collision.gameObject.TryGetComponent(out IEntity entity))
             {
-                OnTargetCollision(collision, damageable);
+                Flags flags = entity.ProvideComponent<Flags>();
+
+                if (flags == null)
+                    return;
+
+                bool isEnemy = false;
+
+                for (int j = 0; j < _enemyFlag.Length; j++)
+                {
+                    if (flags.Contain(_enemyFlag[j]))
+                    {
+                        isEnemy = true;
+                        break;
+                    }
+                }
+
+                if (!isEnemy)
+                    return;
+                IDamageable damageable = entity.ProvideComponent<IDamageable>();
+
+                OnTargetCollision(collision, damageable, entity);
 
                 if (_disposeType == ProjectileDisposeType.OnTargetCollision)
                 {
@@ -41,23 +66,29 @@ namespace Project.Content.ProjectileSystem
             {
                 OnOtherCollision(collision);
             }
-            
+
             OnAnyCollision(collision);
-            
+
             if (_disposeType == ProjectileDisposeType.OnAnyCollision)
             {
                 DisposeProjectile();
             }
         }
 
+        public void PrepareProjectile(float damage, EntityFlags[] enemyFlags)
+        {
+            _damage = damage;
+            _enemyFlag = enemyFlags;
+        }
+
         public void DisposeProjectile()
         {
             OnProjectileDispose();
-            
+
             SpawnEffectOnDestroy();
 
             gameObject.SetActive(false);
-            
+
             IsProjectileDisposed = true;
         }
 
@@ -65,15 +96,15 @@ namespace Project.Content.ProjectileSystem
         {
             if (_spawnEffectOnDestroy == false)
                 return;
-            
+
             var effect = Instantiate(_effectOnDestroyPrefab, transform.position, _effectOnDestroyPrefab.transform.rotation);
-            
+
             Destroy(effect.gameObject, _effectOnDestroyLifetime);
         }
 
         protected virtual void OnProjectileDispose() { }
-        protected virtual void OnAnyCollision(Collision2D collision) { }
-        protected virtual void OnOtherCollision(Collision2D collision) { }
-        protected virtual void OnTargetCollision(Collision2D collision, IDamageable damageable) { }
+        protected virtual void OnAnyCollision(Collider2D collision) { }
+        protected virtual void OnOtherCollision(Collider2D collision) { }
+        protected virtual void OnTargetCollision(Collider2D collision, IDamageable damageable, IEntity entity) { }
     }
 }
