@@ -19,6 +19,12 @@ MonoBehaviour:
     m_ClosingDefinition: 
     m_OpeningTagArray: 
     m_ClosingTagArray: 
+  - m_Name: CAPS
+    m_HashCode: 2479073
+    m_OpeningDefinition: <uppercase>
+    m_ClosingDefinition: </uppercase>
+    m_OpeningTagArray: 3c0000007500000070000000700000006500000072000000630000006100000073000000650000003e000000
+    m_ClosingTagArray: 3c0000002f0000007500000070000000700000006500000072000000630000006100000073000000650000003e000000
   - m_Name: H1
     m_HashCode: 2425
     m_OpeningDefinition: <size=2em><b><#40ff80>*
