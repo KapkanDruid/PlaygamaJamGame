@@ -12,7 +12,6 @@ namespace Project.Architecture
     public class MainServicesSceneInstaller : MonoInstaller
     {
         [SerializeField] private MainSceneBootstrap _sceneBootstrap;
-        [SerializeField] private GridPlaceSystem _gridPlaceSystem;
         [SerializeField] private GizmosDrawer _gizmosDrawer;
         [SerializeField] private Grid _grid;
         [SerializeField] private NavMeshSurface _navMeshSurface;
@@ -27,7 +26,7 @@ namespace Project.Architecture
         public override void InstallBindings()
         {
             Container.Bind<MainSceneBootstrap>().FromInstance(_sceneBootstrap).AsSingle().NonLazy();
-            Container.Bind<GridPlaceSystem>().FromInstance(_gridPlaceSystem).AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<GridPlaceSystem>().AsSingle().NonLazy();
             Container.Bind<Grid>().FromInstance(_grid).AsSingle().NonLazy();
             Container.Bind<InputSystemActions>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<PauseHandler>().AsSingle().NonLazy();
@@ -35,7 +34,7 @@ namespace Project.Architecture
             Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
             Container.Bind<NavMeshSurface>().FromInstance(_navMeshSurface).AsSingle().NonLazy();
             Container.Bind<SceneRecourses>().FromInstance(_recourses).AsSingle().NonLazy();
-            Container.Bind<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
 
             Container.BindInterfacesAndSelfTo<EntityCommander>().AsSingle().NonLazy();
             Container.Bind<BuildingSpawner>().AsSingle().NonLazy();
@@ -54,6 +53,8 @@ namespace Project.Architecture
 
             Container.Bind<AudioController>().FromInstance(_audioController).AsSingle().NonLazy();
             Container.Bind<AlertController>().FromInstance(_alertController).AsSingle().NonLazy();
+
+            Container.BindInterfacesAndSelfTo<TimedClipPlayer>().AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
         }

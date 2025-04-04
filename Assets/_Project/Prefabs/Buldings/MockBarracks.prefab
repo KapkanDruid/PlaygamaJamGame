@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1217169e188a0740824d0099ccdeb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alertType: {fileID: 11400000, guid: fe1d3961653b52a4b9bde6309b8a1e1b, type: 2}
+  _alertType: {fileID: 11400000, guid: 62061876220b71e46b71525697f768c5, type: 2}
   _data:
     _gridPivotTransform: {fileID: 587701821265816660}
     _spriteRenderers:

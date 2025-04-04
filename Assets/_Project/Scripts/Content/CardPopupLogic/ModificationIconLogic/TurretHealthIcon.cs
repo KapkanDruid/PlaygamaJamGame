@@ -17,7 +17,6 @@ namespace Project.Content.UI
         private SceneData _sceneData;
         private TurretDynamicData _dynamicData;
         private TurretConfig _config;
-        private bool _isInited;
 
         [Inject]
         private void Construct(SceneData sceneData)
@@ -34,7 +33,6 @@ namespace Project.Content.UI
 
         private void OnEnable()
         {
-
             if (_dynamicData == null)
                 return;
 
