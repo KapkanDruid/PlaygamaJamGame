@@ -9,13 +9,15 @@ namespace Project.Content
         [SerializeField] private ConfigReferences _configs;
 
         [SerializeField] private CustomDictionary<EffectType, Sound>[] _soundEffects;
-        [SerializeField] private CustomDictionary<EffectType, Sound[]>[] _music;
+        [SerializeField] private CustomDictionary<MusicType, Sound[]>[] _musicPlayList;
         [SerializeField] private CustomDictionary<AlertType, Alert>[] _alerts;
+        [SerializeField] private CustomDictionary<MusicType, Sound>[] _musicByType;
 
         public PrefabReferences Prefabs => _prefabs;
         public ConfigReferences Configs => _configs;
-        public CustomDictionary<EffectType, Sound[]>[] MusicDictionary => _music;
+        public CustomDictionary<MusicType, Sound[]>[] MusicPlayList => _musicPlayList;
         public CustomDictionary<EffectType, Sound>[] SoundEffects => _soundEffects; 
-        public CustomDictionary<AlertType, Alert>[] Alerts => _alerts; 
+        public CustomDictionary<AlertType, Alert>[] Alerts => _alerts;
+        public CustomDictionary<MusicType, Sound>[] MusicByType => _musicByType;
     }
 }

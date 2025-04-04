@@ -30,8 +30,6 @@ namespace Project.Content.UI
         private void Initialize()
         {
             _dynamicData = _sceneData.BarrackDynamicData[_type];
-
-            gameObject.SetActive(false);
         }
 
         private void OnEnable()
