@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Game Labels_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f0e06759c202ea64ea0492c6d9a39568, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 75849093120
+    m_Localized: Voice of Truth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338529964032
+    m_Localized: Infantry Barracks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475771785216
+    m_Localized: Wall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669460549632
+    m_Localized: GI Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1155853012992
+    m_Localized: Building
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1300581666816
+    m_Localized: Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1552256684032
+    m_Localized: Dagame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1599874617344
+    m_Localized: Cooldown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1696792399872
+    m_Localized: Durability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822445359104
+    m_Localized: Attack Area
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2030319259648
+    m_Localized: Spawn Cooldown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3112239976448
+    m_Localized: Area
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180812652544
+    m_Localized: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4720566816768
+    m_Localized: Capacity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26849651806208
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26989506678784
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27070473523200
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
