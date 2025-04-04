@@ -10,26 +10,26 @@ namespace Project.Content
 
         private Sound[] _musicClips;
 
-        private SceneData _sceneData;
+        private IAudioControllerData _data;
         private SceneRecourses _sceneResources;
 
         private int _currentMusicIndex;
         private bool _isStop;
 
         [Inject]
-        private void Construct(SceneRecourses sceneResources, SceneData sceneData)
+        private void Construct(SceneRecourses sceneResources, IAudioControllerData data)
         {
             _sceneResources = sceneResources;
-            _sceneData = sceneData;
+            _data = data;
         }
 
         public void Initialize()
         {
-            _currentMusicIndex = _sceneData.StartMusicIndex;
+            _currentMusicIndex = _data.StartMusicIndex;
             _musicSource.loop = false;
             foreach (var musicList in _sceneResources.MusicPlayList)
             {
-                if (musicList.Key == _sceneData.MusicListType)
+                if (musicList.Key == _data.MusicListType)
                 {
                     _musicClips = musicList.Value;
                     return;

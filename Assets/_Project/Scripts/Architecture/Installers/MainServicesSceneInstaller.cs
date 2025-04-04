@@ -34,7 +34,7 @@ namespace Project.Architecture
             Container.Bind<GizmosDrawer>().FromInstance(_gizmosDrawer).AsSingle().NonLazy();
             Container.Bind<NavMeshSurface>().FromInstance(_navMeshSurface).AsSingle().NonLazy();
             Container.Bind<SceneRecourses>().FromInstance(_recourses).AsSingle().NonLazy();
-            Container.Bind<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<SceneData>().FromInstance(_sceneData).AsSingle().NonLazy();
 
             Container.BindInterfacesAndSelfTo<EntityCommander>().AsSingle().NonLazy();
             Container.Bind<BuildingSpawner>().AsSingle().NonLazy();

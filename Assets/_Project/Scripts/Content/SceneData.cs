@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Project.Content
 {
-    public class SceneData : MonoBehaviour
+    public class SceneData : MonoBehaviour, IAudioControllerData
     {
         [Header("Music Settings")]
         [SerializeField] private MusicType _musicListType;
