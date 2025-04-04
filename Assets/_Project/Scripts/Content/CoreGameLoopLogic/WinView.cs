@@ -20,6 +20,7 @@ namespace Project.Content.CoreGameLoopLogic
         [SerializeField] private RectTransform _topTextAnchor;
         [SerializeField] private RectTransform _bottomTextAnchor;
         [SerializeField] private GameObject _buttonsContainer;
+        [SerializeField] private GameObject _anticlicker;
         [SerializeField] private RectTransform _background;
         [SerializeField] private EffectType _winEffect;
         [SerializeField] private Ease _backgroundEase;
@@ -45,6 +46,7 @@ namespace Project.Content.CoreGameLoopLogic
             _buttonsContainer.SetActive(false);
             _topText.gameObject.SetActive(false);
             _bottomText.gameObject.SetActive(false);
+            _anticlicker.gameObject.SetActive(false);
 
             _buttons = _buttonsContainer.GetComponentsInChildren<Button>();
 
@@ -59,6 +61,8 @@ namespace Project.Content.CoreGameLoopLogic
 
         private void ShowVictoryMenu()
         {
+            _anticlicker.gameObject.SetActive(true);
+
             _audioController.StopMusic();
             _audioController.PlayOneShot(_winEffect);
 

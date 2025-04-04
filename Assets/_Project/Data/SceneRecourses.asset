@@ -130,7 +130,7 @@ MonoBehaviour:
       _key: alert.barrackDestroyed
   - _key: {fileID: 11400000, guid: 7089c6ed46557bf43bb456ce9132b3e6, type: 2}
     _value:
-      _text: Turret destroyed
+      _key: alert.turretDestroyed
   _musicByType:
   - _key: {fileID: 11400000, guid: f415d483b51ce5140af5ccd3cd1345e4, type: 2}
     _value:
@@ -140,4 +140,3 @@ MonoBehaviour:
     _value:
       _clip: {fileID: 8300000, guid: 990e674194aa21447be3e88f6a12ff04, type: 3}
       _volume: 1
-      _key: alert.turretDestroyed
