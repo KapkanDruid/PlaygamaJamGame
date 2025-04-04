@@ -33,6 +33,7 @@ namespace Project.Content.UI
             _showObject.anchoredPosition = new Vector2(_showObject.anchoredPosition.x, _downPosition.anchoredPosition.y);
 
             gameObject.SetActive(false);
+            _showObject.gameObject.SetActive(false);
             _modifierCountText.gameObject.SetActive(false);
         }
 

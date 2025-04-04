@@ -45,7 +45,7 @@ MonoBehaviour:
   - _key: {fileID: 11400000, guid: 64b2cae49e84e4c4bb9fd369877c732e, type: 2}
     _value:
       _clip: {fileID: 8300000, guid: fa76e48c291cc3940883cc5435aa2cb2, type: 3}
-      _volume: 1
+      _volume: 0.48
   - _key: {fileID: 11400000, guid: d647e3ae62785fe45aba94789bb23aaf, type: 2}
     _value:
       _clip: {fileID: 8300000, guid: dd626d43ccdd0a34693d9df6afed5891, type: 3}

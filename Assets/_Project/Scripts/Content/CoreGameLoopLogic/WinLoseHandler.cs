@@ -10,6 +10,8 @@ namespace Project.Content.CoreGameLoopLogic
         private SceneData _sceneData;
         private float _timeToWin;
 
+        public float TimeToWin => _timeToWin;
+
         public event Action OnWin;
         public event Action OnLose;
 

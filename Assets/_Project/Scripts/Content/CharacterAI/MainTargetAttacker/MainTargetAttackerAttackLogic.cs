@@ -67,69 +67,70 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         private void TryToHit()
         {
-            if (_characterSensor.TargetToAttack != null)
+            if (_characterSensor.TargetToAttack == null || _attackCooldownTimer > 0)
+                return;
+
+            _damageable = null;
+
+            if (_mainTargetAttackerHandler.PathInvalid)
             {
-                if (_attackCooldownTimer <= 0)
-                {
-                    _damageable = null;
-                    if (_mainTargetAttackerHandler.PathInvalid)
-                    {
-                        if (_mainTargetAttackerHandler.BlockingEntity == null)
-                            return;
-
-                        Collider2D targetCollider = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<Collider2D>();
-                        if (targetCollider != null)
-                        {
-                            Vector3 closestPoint = targetCollider.ClosestPoint(_mainTargetAttackerHandler.transform.position);
-                            if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, closestPoint) <= _mainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
-                            {
-                                _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <=
-                            _mainTargetAttackerHandler.MainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
-                        {
-                            _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
-                        }
-                    }
-
-                    Attack();
-                    _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
-                }
+                TryToHitEntity(_mainTargetAttackerHandler.BlockingEntity);
             }
+            else
+            {
+                TryToHitEntity(_characterSensor.TargetToAttack);
+            }
+
+            Attack();
+            _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
+        }
+
+        private void TryToHitEntity(IEntity entity)
+        {
+            if (entity == null)
+                return;
+
+            var targetCollider = entity.ProvideComponent<Collider2D>();
+            if (targetCollider == null)
+                return;
+
+            var closestColliderPoint = targetCollider.ClosestPoint(_mainTargetAttackerHandler.transform.position);
+            if (CheckDistanceToTarget(closestColliderPoint))
+            {
+                _damageable = entity.ProvideComponent<IDamageable>();
+            }
+        }
+
+        private bool CheckDistanceToTarget(Vector2 closestPoint)
+        {
+            return Vector2.Distance(_mainTargetAttackerHandler.transform.position, closestPoint) <= _mainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize;
         }
 
         private void Attack()
         {
             if (_damageable == null)
                 return;
-            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
-            if (_mainTargetAttackerHandler.CanAttack)
-            {
-                _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
-            }
 
+            _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
+            _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
         }
 
         private void PauseAnimation()
         {
-            if (_animator.speed != 0)
-            {
-                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
-                _animator.speed = 0;
-            }
+            if (_animator.speed == 0)
+                return;
+
+            _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+            _animator.speed = 0;
         }
 
         private void ResumeAnimation()
         {
-            if (_animator.speed == 0)
-            {
-                _animator.speed = 1;
-                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
-            }
+            if (_animator.speed != 0)
+                return;
+
+            _animator.speed = 1;
+            _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
         }
 
         public void OnDrawGizmos()
