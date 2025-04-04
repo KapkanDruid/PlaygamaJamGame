@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Alert Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Alert
+  m_TableCollectionNameGuidString: 4ec8da6436b399148a49324e4904e0dc
+  m_Entries:
+  - m_Id: 54831435776
+    m_Key: alert.mainBuildingAttacked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 341977681920
+    m_Key: alert.barrackDestroyed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 500295880704
+    m_Key: alert.turretDestroyed
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 35266937775456353
+  references:
+    version: 2
+    RefIds:
+    - rid: 35266937775456353
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1743772430413
