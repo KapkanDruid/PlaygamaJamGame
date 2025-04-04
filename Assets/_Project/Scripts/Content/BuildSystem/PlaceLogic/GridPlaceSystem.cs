@@ -7,7 +7,7 @@ using Zenject;
 
 namespace Project.Content.BuildSystem
 {
-    public class GridPlaceSystem : MonoBehaviour
+    public class GridPlaceSystem : ITickable, IGizmosDrawer, IDisposable
     {
         [SerializeField] private Vector2Int _gridSize;
 
@@ -26,13 +26,14 @@ namespace Project.Content.BuildSystem
         private bool _isAnySelected;
         private bool _inputSelected;
 
-        [Inject]
-        private void Construct(Grid grid, Camera mainCamera, InputSystemActions inputSystemActions, PauseHandler pauseHandler)
+        public GridPlaceSystem(Grid grid, Camera mainCamera, InputSystemActions inputSystemActions, PauseHandler pauseHandler, SceneData sceneData)
         {
             _grid = grid;
             _mainCamera = mainCamera;
             _inputSystemActions = inputSystemActions;
             _pauseHandler = pauseHandler;
+
+            _gridSize = sceneData.GroundGridSize;
 
             _inputSystemActions.Player.Pointer.performed += ReadInputPointer;
             _inputSystemActions.Player.Select.performed += context => _inputSelected = true;
@@ -62,7 +63,7 @@ namespace Project.Content.BuildSystem
             OccupyCells(placeComponent);
         }
 
-        private void Update()
+        public void Tick()
         {
             if (_pauseHandler.IsPaused)
                 return;
@@ -144,7 +145,7 @@ namespace Project.Content.BuildSystem
         }
 
 #if UNITY_EDITOR
-        private void OnDrawGizmos()
+        public void OnDrawGizmos()
         {
             if (_grid == null)
                 return;
@@ -177,7 +178,7 @@ namespace Project.Content.BuildSystem
             }
         }
 #endif
-        private void OnDestroy()
+        public void Dispose()
         {
             _inputSystemActions.Player.Pointer.performed -= ReadInputPointer;
         }
