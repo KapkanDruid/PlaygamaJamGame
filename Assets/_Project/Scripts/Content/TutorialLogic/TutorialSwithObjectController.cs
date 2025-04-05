@@ -11,6 +11,8 @@ namespace Project.Content
     public class TutorialSwithObjectController : MonoBehaviour
     {
         public static event Action OnTutorialFinished;
+
+        public Transform[] _testArray;
                 
         [SerializeField] private GameObject[] _sceneObjectNames;
         [SerializeField] private RectTransform[] _uiElementNames;
@@ -24,7 +26,7 @@ namespace Project.Content
         
         [SerializeField] private RectTransform _uiMask;
         [SerializeField] private RectTransform _marker;
-        private int _currentIndex = -1; 
+        private int _currentIndex = 0; 
         private bool isSearchingSceneObjects = true;
 
         [SerializeField] private GameObject _panel;
@@ -41,14 +43,16 @@ namespace Project.Content
         [SerializeField] private Vector3[] _markeroffsetsUI;
 
         private PauseHandler _pauseHandler;
+        public Camera _mainCamera;
 
         private enum SelectionMode { SceneObjects, UIElements }
         private SelectionMode currentMode = SelectionMode.SceneObjects;
 
         [Inject]
-        private void Construct(PauseHandler pauseHandler)
+        private void Construct(PauseHandler pauseHandler/*,  Camera _mainCamera*/)
         {
             _pauseHandler = pauseHandler;
+            //_mainCamera = Camera.main;
         }
 
         private void Start()
@@ -75,7 +79,8 @@ namespace Project.Content
         {            
             if (Input.GetMouseButtonDown(0) && _panel.activeSelf && !isFilling) 
             {
-                SwitchToNextItem();
+                //SwitchToNextItem();
+                TestSwith();
             }
 
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && _panel.activeSelf && !isFilling) 
@@ -98,6 +103,18 @@ namespace Project.Content
             {
                 isFilling = false;
                 _radialSlider.fillAmount = 0f;
+            }
+        }
+
+        private void TestSwith() {
+            if (_currentIndex < _testArray.Length - 1)
+            {
+                TestMove(_currentIndex);
+                _currentIndex++;
+            }
+            else
+            {
+                ClosePanel();
             }
         }
 
@@ -137,13 +154,48 @@ namespace Project.Content
             }            
         }
 
+        private void TestMove(int index)
+        {
+            Transform targetObject = _testArray[index];
+                        
+            if (targetObject is RectTransform rectTransform) 
+            {
+                Vector3 offset = (_currentIndex >= 0 && _currentIndex < _offsetsUI.Length) ? _offsetsUI[_currentIndex] : Vector3.zero;
+                                
+                _uiMask.position = rectTransform.position + offset;
+                
+                Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeUI.Length) ? _maskSizeUI[_currentIndex] : new Vector2();
+                                
+                _uiMask.sizeDelta = newSize;
+                                
+                if (!_uiMask.gameObject.activeInHierarchy)
+                {
+                    _uiMask.gameObject.SetActive(true);
+                }
+            }
+            else{
+                Vector3 screenPosition = _mainCamera.WorldToScreenPoint(targetObject.transform.position);
+
+                Vector3 offset = (_currentIndex >= 0 && _currentIndex < _offsetsSceneObject.Length) ? _offsetsSceneObject[_currentIndex] : Vector3.zero;
+                _uiMask.position = screenPosition + offset;
+
+                Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeSceneObject.Length) ? _maskSizeSceneObject[_currentIndex] : new Vector2();
+                _uiMask.sizeDelta = newSize;
+
+                if (!_uiMask.gameObject.activeInHierarchy)
+                {
+                    _uiMask.gameObject.SetActive(true);
+                }
+            }
+        }
+
         private void MoveToSceneObject(int index)
         {
             GameObject targetObject = _sceneObjectNames[index];
 
             if (targetObject != null)
             {
-                Vector3 screenPosition = Camera.main.WorldToScreenPoint(targetObject.transform.position);
+                Vector3 screenPosition = _mainCamera.WorldToScreenPoint(targetObject.transform.position);
                                
                 Vector3 offset = (_currentIndex >= 0 && _currentIndex < _offsetsSceneObject.Length) ? _offsetsSceneObject[_currentIndex] : Vector3.zero; 
                 _uiMask.position = screenPosition + offset;
@@ -151,7 +203,7 @@ namespace Project.Content
                 Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeSceneObject.Length) ? _maskSizeSceneObject[_currentIndex] : new Vector2( ); 
                 _uiMask.sizeDelta = newSize;
 
-                if (!_uiMask.gameObject.activeSelf)
+                if (!_uiMask.gameObject.activeInHierarchy)
                 {
                     _uiMask.gameObject.SetActive(true); 
                 }
@@ -164,12 +216,12 @@ namespace Project.Content
 
             if (targetObject != null)
             {
-                Vector3 screenPosition = Camera.main.WorldToScreenPoint(targetObject.transform.position);
+                Vector3 screenPosition = _mainCamera.WorldToScreenPoint(targetObject.transform.position);
 
                 Vector3 newmarkeroffsets = (_currentIndex >= 0 && _currentIndex < _markeroffsetsSceneObject.Length) ? _markeroffsetsSceneObject[_currentIndex] : Vector3.zero; 
                 _marker.position = screenPosition + newmarkeroffsets;
               
-                if (!_marker.gameObject.activeSelf)
+                if (!_marker.gameObject.activeInHierarchy)
                 {
                     _marker.gameObject.SetActive(true);
                 }
@@ -190,7 +242,7 @@ namespace Project.Content
 
                     Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeUI.Length) ? _maskSizeUI[_currentIndex] : new Vector2();
                     _uiMask.sizeDelta = newSize;                    
-                    if (!_uiMask.gameObject.activeSelf)
+                    if (!_uiMask.gameObject.activeInHierarchy)
                     {
                         _uiMask.gameObject.SetActive(true);
                     }
@@ -209,7 +261,7 @@ namespace Project.Content
                 {
                      Vector3 newmarkeroffsets = (_currentIndex >= 0 && _currentIndex < _markeroffsetsUI.Length) ? _markeroffsetsUI[_currentIndex] : Vector3.zero; 
                     _marker.position = rectTransform.position + newmarkeroffsets;
-                    if (!_marker.gameObject.activeSelf)
+                    if (!_marker.gameObject.activeInHierarchy)
                     {
                         _marker.gameObject.SetActive(true);
                     }
@@ -220,7 +272,7 @@ namespace Project.Content
         private void ShowSceneObjcetDescriptionName(int index)
         {
             _descriptionNameText.text = _sceneObjectDescriptionName[index];
-            if (!_descriptionNameText.gameObject.activeSelf)
+            if (!_descriptionNameText.gameObject.activeInHierarchy)
             {
                 _descriptionNameText.gameObject.SetActive(true);
             }
@@ -229,7 +281,7 @@ namespace Project.Content
         private void ShowSceneObjectDescription (int index)
         {
             _descriptionText.text = _sceneObjectDescription[index];
-            if(!_descriptionText.gameObject.activeSelf)
+            if(!_descriptionText.gameObject.activeInHierarchy)
             {
                 _descriptionText.gameObject.SetActive(true);
             }
