@@ -20,9 +20,9 @@ MonoBehaviour:
   - _level: 3
     _pointsToReach: 10
   - _level: 4
-    _pointsToReach: 15
+    _pointsToReach: 10
   - _level: 5
-    _pointsToReach: 15
+    _pointsToReach: 10
   - _level: 6
     _pointsToReach: 30
   - _level: 7
@@ -30,18 +30,18 @@ MonoBehaviour:
   - _level: 8
     _pointsToReach: 30
   - _level: 9
-    _pointsToReach: 50
+    _pointsToReach: 30
   - _level: 10
-    _pointsToReach: 50
+    _pointsToReach: 30
   - _level: 11
-    _pointsToReach: 100
+    _pointsToReach: 50
   - _level: 12
-    _pointsToReach: 100
+    _pointsToReach: 50
   - _level: 13
-    _pointsToReach: 100
+    _pointsToReach: 50
   - _level: 14
-    _pointsToReach: 100
+    _pointsToReach: 50
   - _level: 15
-    _pointsToReach: 100
+    _pointsToReach: 50
   - _level: 16
-    _pointsToReach: 300
+    _pointsToReach: 150
