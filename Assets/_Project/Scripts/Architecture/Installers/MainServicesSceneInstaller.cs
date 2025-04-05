@@ -56,6 +56,7 @@ namespace Project.Architecture
             Container.Bind<AlertController>().FromInstance(_alertController).AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
+            FactoriesUnitInstaller.Install(Container);
         }
     }
 }

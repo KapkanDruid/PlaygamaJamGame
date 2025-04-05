@@ -7,9 +7,7 @@ namespace Project.Content.ProjectileSystem
     public abstract class Projectile : MonoBehaviour
     {
         [Header("Common")]
-        [SerializeField, Min(0f)] private float _damage = 10f;
         [SerializeField] private ProjectileDisposeType _disposeType = ProjectileDisposeType.OnAnyCollision;
-        [SerializeField] private EntityFlags[] _enemyFlag;
 
         [Header("Rigidbody")]
         [SerializeField] private Rigidbody2D _projectileRigidbody;
@@ -19,8 +17,9 @@ namespace Project.Content.ProjectileSystem
         [SerializeField] private ParticleSystem _effectOnDestroyPrefab;
         [SerializeField, Min(0f)] private float _effectOnDestroyLifetime = 2f;
 
+        private EntityFlags[] _enemyFlag;
+        
         public bool IsProjectileDisposed { get; private set; }
-        public float Damage => _damage;
         public ProjectileDisposeType DisposeType => _disposeType;
         public Rigidbody2D Rigidbody => _projectileRigidbody;
 
@@ -42,20 +41,15 @@ namespace Project.Content.ProjectileSystem
 
                 bool isEnemy = false;
 
-                for (int j = 0; j < _enemyFlag.Length; j++)
+                if (flags.Contain(_enemyFlag))
                 {
-                    if (flags.Contain(_enemyFlag[j]))
-                    {
-                        isEnemy = true;
-                        break;
-                    }
+                    isEnemy = true;
                 }
 
                 if (!isEnemy)
                     return;
-                IDamageable damageable = entity.ProvideComponent<IDamageable>();
 
-                OnTargetCollision(collision, damageable, entity);
+                OnTargetCollision(collision, entity);
 
                 if (_disposeType == ProjectileDisposeType.OnTargetCollision)
                 {
@@ -75,9 +69,8 @@ namespace Project.Content.ProjectileSystem
             }
         }
 
-        public void PrepareProjectile(float damage, EntityFlags[] enemyFlags)
+        public void PrepareProjectile(EntityFlags[] enemyFlags)
         {
-            _damage = damage;
             _enemyFlag = enemyFlags;
         }
 
@@ -105,6 +98,6 @@ namespace Project.Content.ProjectileSystem
         protected virtual void OnProjectileDispose() { }
         protected virtual void OnAnyCollision(Collider2D collision) { }
         protected virtual void OnOtherCollision(Collider2D collision) { }
-        protected virtual void OnTargetCollision(Collider2D collision, IDamageable damageable, IEntity entity) { }
+        protected virtual void OnTargetCollision(Collider2D collision, IEntity entity) { }
     }
 }

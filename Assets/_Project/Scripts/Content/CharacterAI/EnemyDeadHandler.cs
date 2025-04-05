@@ -35,10 +35,13 @@ namespace Project.Content.CharacterAI
             if (_animator == null)
                 Debug.Log("_animator = null");
             if (_animator != null)
-                _animator.SetBool(AnimatorHashes.IsDead, true);
+                _animator.SetBool(AnimatorHashes.IsDead, _isDead);
             OnDeath?.Invoke();
 
             await WaitForAnimationState();
+
+            if (_characterTransform == null)
+                return;
 
             _characterTransform.gameObject.SetActive(false);
         }

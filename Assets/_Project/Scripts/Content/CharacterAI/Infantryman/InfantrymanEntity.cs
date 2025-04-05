@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanEntity : CharacterHandler, IPatrolling
+    public class InfantrymanEntity : CharacterHandler, IPatrolling, IInitializable
     {
         [SerializeField] private InfantrymanData _infantrymanData;
         [SerializeField] private SpriteRenderer _levelSpriteRenderer;
@@ -41,7 +41,7 @@ namespace Project.Content.CharacterAI.Infantryman
                               Animator animator,
                               PauseHandler pauseHandler,
                               FloatingTextHandler textHandler,
-                              EntityCommander entityCommander, 
+                              EntityCommander entityCommander,
                               AudioController audioController)
         {
             _infantrymanData.ThisEntity = this;
@@ -56,9 +56,16 @@ namespace Project.Content.CharacterAI.Infantryman
             ResetData();
         }
 
+        private void Start()
+        {
+            Initialize();
+        }
+
         public void Initialize()
         {
             _infantrymanData.Initialize();
+
+            _enemyDeadHandler.OnDeath += Death;
 
             _sensorFilter = new ClosestTargetSensorFilter(_infantrymanData.EntityTransform);
 
@@ -92,7 +99,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
             if (_enemyDeadHandler is T deadHandler)
                 return deadHandler;
-            
+
             if (_infantrymanData.Collider is T collider)
                 return collider;
 
@@ -114,11 +121,6 @@ namespace Project.Content.CharacterAI.Infantryman
             _patrolRadius = flagComponent.Coverage;
         }
 
-        private void Awake()
-        {
-            Initialize();
-        }
-
         private void Update()
         {
             if (_pauseHandler.IsPaused)
@@ -130,6 +132,12 @@ namespace Project.Content.CharacterAI.Infantryman
             ResumeAnimation();
 
             HandleTarget();
+        }
+
+        private void Death()
+        {
+            if (_infantrymanData.DeathSoundEffect != null && _audioController != null)
+                _audioController.PlayOneShot(_infantrymanData.DeathSoundEffect);
         }
 
         private void OnSceneInitialized()
@@ -196,6 +204,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private void OnDisable()
         {
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+            _enemyDeadHandler.OnDeath -= Death;
         }
     }
 }

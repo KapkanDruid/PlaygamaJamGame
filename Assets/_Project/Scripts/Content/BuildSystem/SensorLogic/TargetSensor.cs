@@ -39,13 +39,9 @@ namespace Project.Content.BuildSystem
 
                 bool isEnemy = false;
 
-                for (int j = 0; j < _data.TargetFlag.Length; j++)
+                if (flags.Contain(_data.TargetFlag))
                 {
-                    if (flags.Contain(_data.TargetFlag[j]))
-                    {
-                        isEnemy = true;
-                        break;
-                    }
+                    isEnemy = true;
                 }
 
                 if (!isEnemy)

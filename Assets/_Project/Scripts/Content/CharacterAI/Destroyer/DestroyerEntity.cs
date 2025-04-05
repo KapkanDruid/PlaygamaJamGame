@@ -55,6 +55,11 @@ namespace Project.Content.CharacterAI.Destroyer
             _enemyDeadHandler.OnDeath += DropExperience;
         }
 
+        private void Start()
+        {
+            Initialize();
+        }
+
         public void Initialize()
         {
             _destroyerData.Initialize();
@@ -85,11 +90,6 @@ namespace Project.Content.CharacterAI.Destroyer
         private void DropExperience()
         {
             _levelExperience.OnEnemyDied(_destroyerData.CharacterTransform.position, _destroyerData.ExperiencePoints);
-        }
-
-        private void Start()
-        {
-            Initialize();
         }
 
         private void OnEnable()

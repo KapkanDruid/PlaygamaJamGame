@@ -14,6 +14,7 @@ namespace Project.Content.ProjectileSystem
         private PauseHandler _pauseHandler;
         private AudioController _audioController;
 
+        private float _damage;
         private float _speed;
         private float _lifeTime;
         private float _elapsedTime;
@@ -29,11 +30,12 @@ namespace Project.Content.ProjectileSystem
             _audioController = audioController;
         }
 
-        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IProjectileData directProjectileData)
+        public void Prepare(Vector2 startPosition, Vector2 moveDirection, IProjectileData projectileData)
         {
-            PrepareProjectile(directProjectileData.Damage, directProjectileData.EnemyFlag);
-            _speed = directProjectileData.Speed;
-            _lifeTime = directProjectileData.LifeTime;
+            PrepareProjectile(projectileData.EnemyFlag);
+            _damage = projectileData.Damage;
+            _speed = projectileData.Speed;
+            _lifeTime = projectileData.LifeTime;
 
             _moveDirection = moveDirection;
             transform.position = startPosition;
@@ -79,9 +81,13 @@ namespace Project.Content.ProjectileSystem
             Rigidbody.MovePosition(nextPosition);
         }
 
-        protected override void OnTargetCollision(Collider2D collision, IDamageable damageable, IEntity entity)
+        protected override void OnTargetCollision(Collider2D collision, IEntity entity)
         {
-            damageable.TakeDamage(Damage);
+            var damageable = entity.ProvideComponent<IDamageable>();
+            damageable.TakeDamage(_damage);
+
+            if (_hitEffect != null)
+                _audioController.PlayOneShot(_hitEffect);
         }
 
         private async UniTask WaitForAnimation(Action action)

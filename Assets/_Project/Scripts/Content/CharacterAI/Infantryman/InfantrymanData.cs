@@ -52,7 +52,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public Sprite UpgradeSprite => _infantrymanConfig.UpgradeSprite;
         public FloatingTextConfig FloatingText => _floatingText;
         public EffectType BornSoundEffect => _bornSoundEffect;
-        public EffectType DeathSoundEffect => _bornSoundEffect;
+        public EffectType DeathSoundEffect => _deathSoundEffect;
         public Collider2D Collider => _collider;
 
         public void Initialize()
