@@ -57,6 +57,7 @@ namespace Project.Architecture
             Container.BindInterfacesAndSelfTo<TimedClipPlayer>().AsSingle().NonLazy();
 
             FactoriesInstaller.Install(Container);
+            FactoriesUnitInstaller.Install(Container);
         }
     }
 }

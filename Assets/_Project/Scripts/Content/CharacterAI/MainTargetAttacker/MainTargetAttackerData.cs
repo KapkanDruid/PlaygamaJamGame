@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Project.Content.BuildSystem;
+using System;
 using UnityEngine;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
 {
     [Serializable]
-    class MainTargetAttackerData : ICharacterData, ISensorData
+    class MainTargetAttackerData : ICharacterData, IAttackerData
     {
         [SerializeField] private MainTargetAttackerConfig _mainTargetAttackerConfig;
         [SerializeField] private Transform _damageTextPoint;
@@ -12,6 +13,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags[] _enemyFlag;
         [SerializeField] private FloatingTextConfig _floatingText;
+
+        private SensorData _sensorData;
 
         public float Speed => _mainTargetAttackerConfig.Speed;
         public float Health => _mainTargetAttackerConfig.Health;
@@ -29,6 +32,16 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public EntityFlags[] EnemyFlag => _enemyFlag;
         public MainTargetAttackerType Type => _mainTargetAttackerConfig.Type;
         public FloatingTextConfig FloatingText => _floatingText;
+        public ISensorData SensorData => _sensorData;
 
+        public void Initialize()
+        {
+            _sensorData = new SensorData();
+
+            _sensorData.SensorOrigin = _characterTransform;
+            _sensorData.SensorRadius = _mainTargetAttackerConfig.SensorRadius;
+            _sensorData.ThisEntity = ThisEntity;
+            _sensorData.TargetFlag = _enemyFlag;
+        }
     }
 }

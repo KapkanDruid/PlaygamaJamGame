@@ -1,6 +1,8 @@
 ﻿using UnityEngine.AI;
 using UnityEngine;
 using Zenject;
+using Project.Content.CharacterAI.MainTargetAttacker;
+using System.Linq;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
@@ -14,7 +16,6 @@ namespace Project.Content.CharacterAI.Infantryman
         private Vector3 _currentPatrolPoint;
         private bool _isPatrolling;
         private Animator _animator;
-        private AnimatorStateInfo _pausedAnimatorState;
         private EnemyDeadHandler _enemyDeadHandler;
 
 
@@ -49,14 +50,12 @@ namespace Project.Content.CharacterAI.Infantryman
         {
             if (_pauseHandler.IsPaused)
             {
+                _agent.speed = 0f;
                 _agent.isStopped = true;
-                PauseAnimation();
                 return;
             }
-            else
-            {
-                ResumeAnimation();
-            }
+
+            _agent.speed = _infantrymanData.Speed;
             _agent.isStopped = false;
 
             if (_enemyDeadHandler.IsDead)
@@ -75,20 +74,11 @@ namespace Project.Content.CharacterAI.Infantryman
             MoveToTarget();
         }
 
-        private void SetOrientation(float lookAt)
+        public void SetOrientation(float lookAt)
         {
             var direction = Mathf.Sign(lookAt - _infantrymanEntity.transform.position.x);
-            Vector3 rightOrientation = new Vector3(1, _infantrymanEntity.transform.localScale.y, _infantrymanEntity.transform.localScale.z);
-            Vector3 leftOrientation = new Vector3(-1, _infantrymanEntity.transform.localScale.y, _infantrymanEntity.transform.localScale.z);
-
-            if (direction > 0)
-            {
-                _infantrymanEntity.transform.localScale = rightOrientation;
-            }
-            else if (direction < 0)
-            {
-                _infantrymanEntity.transform.localScale = leftOrientation;
-            }
+            Vector3 orientation = new Vector3(direction, _infantrymanEntity.transform.localScale.y, _infantrymanEntity.transform.localScale.z);
+            _infantrymanEntity.transform.localScale = orientation;
         }
 
         private void Patrol()
@@ -102,24 +92,6 @@ namespace Project.Content.CharacterAI.Infantryman
             }
         }
 
-        private void PauseAnimation()
-        {
-            if (_animator.speed != 0)
-            {
-                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
-                _animator.speed = 0;
-            }
-        }
-
-        private void ResumeAnimation()
-        {
-            if (_animator.speed == 0)
-            {
-                _animator.speed = 1;
-                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
-            }
-        }
-
         private bool HasReachedPatrolPoint()
         {
             return !_agent.pathPending && _agent.remainingDistance <= _agent.stoppingDistance;
@@ -127,6 +99,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
         private void MoveToTarget()
         {
+            _animator.SetBool(AnimatorHashes.IsMoving, true);
             _agent.SetDestination(_infantrymanEntity.TargetTransform.position);
             SetOrientation(_infantrymanEntity.TargetTransform.position.x);
             _isPatrolling = false;

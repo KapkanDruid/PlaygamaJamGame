@@ -7,6 +7,6 @@ namespace Project.Content.BuildSystem
         public Transform SensorOrigin { get; }
         public float SensorRadius { get; }
         public IEntity ThisEntity { get; }
-        public EntityFlags TargetFlag { get; }
+        public EntityFlags[] TargetFlag { get; }
     }
 }

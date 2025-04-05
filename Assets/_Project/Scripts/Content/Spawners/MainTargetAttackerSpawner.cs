@@ -9,14 +9,14 @@ namespace Project.Content.Spawners
 {
     public class MainTargetAttackerSpawner : IEnemySpawner
     {
-        private ObjectPooler<MainTargetAttackerHandler> _mainTargetAttackerPool;
-        private List<MainTargetAttackerHandler.Factory> _mainTargetAttackerFactory;
+        private ObjectPooler<MainTargetAttackerEntity> _mainTargetAttackerPool;
+        private List<MainTargetAttackerEntity.Factory> _mainTargetAttackerFactory;
         private MainTargetAttackerType _type;
         private GameObject _prefab;
 
         public class Factory : PlaceholderFactory<MainTargetAttackerType, MainTargetAttackerSpawner> { }
 
-        public MainTargetAttackerSpawner(List<MainTargetAttackerHandler.Factory> mainTargetAttackerFactory, MainTargetAttackerType type)
+        public MainTargetAttackerSpawner(List<MainTargetAttackerEntity.Factory> mainTargetAttackerFactory, MainTargetAttackerType type)
         {
             _mainTargetAttackerFactory = mainTargetAttackerFactory;
             _type = type;
@@ -27,13 +27,13 @@ namespace Project.Content.Spawners
             foreach (var factory in _mainTargetAttackerFactory)
             {
                 if (factory.Type == _type)
-                    _mainTargetAttackerPool = new ObjectPooler<MainTargetAttackerHandler>(capacityInPool, "MainTargetAttackers", new InstantiateObjectsByFactory<MainTargetAttackerHandler>(factory));
+                    _mainTargetAttackerPool = new ObjectPooler<MainTargetAttackerEntity>(capacityInPool, "MainTargetAttackers", new InstantiateObjectsByFactory<MainTargetAttackerEntity>(factory));
             }
         }
 
         public Type GetTypeObject()
         {
-            return typeof(MainTargetAttackerHandler);
+            return typeof(MainTargetAttackerEntity);
         }
 
         public GameObject GetPrefab()

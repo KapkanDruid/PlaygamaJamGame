@@ -19,6 +19,8 @@ namespace Project.Content.CharacterAI.Infantryman
         private FloatingTextHandler _textHandler;
         private EntityCommander _entityCommander;
         private AudioController _audioController;
+        private AnimatorStateInfo _pausedAnimatorState;
+
         public IAllyEntityData InfantrymanData => _infantrymanData;
         public Transform TargetTransform => _targetTransform;
         public Transform FlagTransform => _flagTransform;
@@ -39,7 +41,7 @@ namespace Project.Content.CharacterAI.Infantryman
                               Animator animator,
                               PauseHandler pauseHandler,
                               FloatingTextHandler textHandler,
-                              EntityCommander entityCommander, 
+                              EntityCommander entityCommander,
                               AudioController audioController)
         {
             _infantrymanData.ThisEntity = this;
@@ -54,9 +56,16 @@ namespace Project.Content.CharacterAI.Infantryman
             ResetData();
         }
 
+        private void Start()
+        {
+            Initialize();
+        }
+
         public void Initialize()
         {
             _infantrymanData.Initialize();
+
+            _enemyDeadHandler.OnDeath += Death;
 
             _sensorFilter = new ClosestTargetSensorFilter(_infantrymanData.EntityTransform);
 
@@ -77,12 +86,6 @@ namespace Project.Content.CharacterAI.Infantryman
                 _audioController.PlayOneShot(_infantrymanData.BornSoundEffect);
         }
 
-        private void OnSceneInitialized()
-        {
-            if (_entityCommander != null)
-                _entityCommander.AddEntity(this);
-        }
-
         public override T ProvideComponent<T>() where T : class
         {
             if (_infantrymanData.Flags is T flags)
@@ -96,7 +99,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
             if (_enemyDeadHandler is T deadHandler)
                 return deadHandler;
-            
+
             if (_infantrymanData.Collider is T collider)
                 return collider;
 
@@ -121,11 +124,27 @@ namespace Project.Content.CharacterAI.Infantryman
         private void Update()
         {
             if (_pauseHandler.IsPaused)
+            {
+                PauseAnimation();
                 return;
+            }
+
+            ResumeAnimation();
 
             HandleTarget();
         }
 
+        private void Death()
+        {
+            if (_infantrymanData.DeathSoundEffect != null && _audioController != null)
+                _audioController.PlayOneShot(_infantrymanData.DeathSoundEffect);
+        }
+
+        private void OnSceneInitialized()
+        {
+            if (_entityCommander != null)
+                _entityCommander.AddEntity(this);
+        }
 
         private void ResetData()
         {
@@ -153,6 +172,24 @@ namespace Project.Content.CharacterAI.Infantryman
             }
         }
 
+        private void PauseAnimation()
+        {
+            if (_animator.speed != 0)
+            {
+                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
+                _animator.speed = 0;
+            }
+        }
+
+        private void ResumeAnimation()
+        {
+            if (_animator.speed == 0)
+            {
+                _animator.speed = 1;
+                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
+            }
+        }
+
         private void UpdateLevelSprite()
         {
             if (_levelSpriteRenderer == null)
@@ -167,6 +204,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private void OnDisable()
         {
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
+            _enemyDeadHandler.OnDeath -= Death;
         }
     }
 }

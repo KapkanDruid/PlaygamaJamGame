@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using Project.Content.ProjectileSystem;
 using System;
 using System.Threading;
 using UnityEngine;
@@ -23,7 +24,7 @@ namespace Project.Content.BuildSystem
 
         private CancellationToken _cancellationToken;
 
-        private ObjectPooler<DirectProjectile> _projectilePool;
+        private ObjectPooler<SimpleProjectile> _projectilePool;
         private bool _isReadyToShoot;
         private bool _isRotating;
         private bool _isActive;
@@ -48,7 +49,7 @@ namespace Project.Content.BuildSystem
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectContainer<DirectProjectile>(_poolData.ProjectilePrefab, _container));
+            _projectilePool = new ObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _container));
             _isReadyToShoot = true;
             _sensor = new TargetSensor(_shootData.SensorData, Color.red);
             _sensorFilter = new ClosestTargetSensorFilter(_localTransform);

@@ -13,5 +13,8 @@ namespace Project.Content
 
         public bool Contain(EntityFlags flag)
             => _flags.Contains(flag);
+
+        public bool Contain(EntityFlags[] flags)
+            => flags.Any(flag => _flags.Contains(flag));
     }
 }

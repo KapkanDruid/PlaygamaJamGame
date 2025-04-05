@@ -1,4 +1,5 @@
 ﻿using Project.Content.BuildSystem;
+using Project.Content.ProjectileSystem;
 using UnityEngine;
 
 namespace Project.Content
@@ -7,7 +8,7 @@ namespace Project.Content
     {
         public float ReloadTime { get; }
         public Transform ShootPoint { get; }
-        public IDirectProjectileData ProjectileData { get; }
+        public IProjectileData ProjectileData { get; }
         public ISensorData SensorData { get; }
     }
 }

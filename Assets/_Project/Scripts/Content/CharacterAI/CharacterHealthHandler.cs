@@ -42,7 +42,6 @@ namespace Project.Content.CharacterAI
             {
                 _enemyDeadHandler.Death();
                 _isDead = true;
-                //_animator.SetBool(AnimatorHashes.IsDead, _isDead);
                 return;
             }
         }
