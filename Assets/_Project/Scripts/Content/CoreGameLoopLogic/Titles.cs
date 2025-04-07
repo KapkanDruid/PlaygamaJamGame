@@ -1,16 +1,14 @@
 ﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using Project.Architecture;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Zenject;
 
 namespace Project.Content.CoreGameLoopLogic
 {
-    public class Titles : MonoBehaviour
+    public class Titles : MonoBehaviour, ISkipHandlerData
     {
         [SerializeField] private MusicType _musicType;
         [SerializeField] private Animator _animator;
@@ -21,21 +19,21 @@ namespace Project.Content.CoreGameLoopLogic
         [SerializeField] private UnityEvent _onAnimationEnd;
 
         private AudioController _audioController;
-        private InputSystemActions _inputActions;
+        private SkipHandler _skipHandler;
 
-        private bool _isSkipPressed;
-        private bool _isForceSkip;
-        private bool _isActive;
-        private float _currentSkipTime;
+        public Image SkipFiller => _skipFiller;
+        public float SkipDuration => _skipDuration;
 
         [Inject]
-        private void Construct(AudioController audioController, InputSystemActions inputActions)
+        private void Construct(AudioController audioController, SkipHandler skipHandler)
         {
             _audioController = audioController;
-            _inputActions = inputActions;
+            _skipHandler = skipHandler;
+        }
 
-            _inputActions.UI.Skip.performed += OnSkipPressed;
-            _inputActions.UI.Skip.canceled += OnSkipReleased;
+        private void Start()
+        {
+            _skipHandler.Initialize(this, this.GetCancellationTokenOnDestroy());
         }
 
         public void ShowTitles()
@@ -43,7 +41,7 @@ namespace Project.Content.CoreGameLoopLogic
             _animator.SetTrigger(AnimatorHashes.ShowTitlesTrigger);
             _audioController.PlayMusic(_musicType);
 
-            _isActive = true;
+            _skipHandler.IsActive = true;
 
             HandleAnimationEndAsync().Forget();
         }
@@ -51,71 +49,7 @@ namespace Project.Content.CoreGameLoopLogic
         public void HideTitles()
         {
             _background.DOFade(0, _fadeTime);
-            _isActive = false;
-        }
-
-        private void OnSkipPressed(InputAction.CallbackContext context)
-        {
-            Debug.Log("Pressed");
-            if (!_isActive)
-                return;
-
-            _isSkipPressed = true;
-            HandleSkipAsync().Forget();
-        }
-
-        private void OnSkipReleased(InputAction.CallbackContext context) => _isSkipPressed = false;
-
-        private async UniTaskVoid HandleSkipAsync()
-        {
-            if (_isForceSkip)
-                return;
-
-            while (_isSkipPressed)
-            {
-                _currentSkipTime += Time.deltaTime;
-
-                _skipFiller.fillAmount = _currentSkipTime / _skipDuration;
-
-                if (_currentSkipTime >= _skipDuration)
-                {
-                    _currentSkipTime = _skipDuration;
-                    _isForceSkip = true;
-                    return;
-                }
-
-                try
-                {
-                    await UniTask.Yield(PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
-                }
-                catch (OperationCanceledException)
-                {
-                    return;
-                }
-            }
-
-
-            while (!_isSkipPressed)
-            {
-                _currentSkipTime -= Time.deltaTime;
-
-                _skipFiller.fillAmount = _currentSkipTime / _skipDuration;
-
-                if (_currentSkipTime <= 0)
-                {
-                    _currentSkipTime = 0;
-                    return;
-                }
-
-                try
-                {
-                    await UniTask.Yield(PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
-                }
-                catch (OperationCanceledException)
-                {
-                    return;
-                }
-            }
+            _skipHandler.IsActive = false;
         }
 
         private async UniTaskVoid HandleAnimationEndAsync()
@@ -130,9 +64,8 @@ namespace Project.Content.CoreGameLoopLogic
                 AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
                 while (stateInfo.normalizedTime < 1)
                 {
-                    if (_isForceSkip)
+                    if (_skipHandler.IsForceSkip)
                     {
-                        _isForceSkip = false;
                         break;
                     }
 
@@ -146,15 +79,6 @@ namespace Project.Content.CoreGameLoopLogic
             {
                 return;
             }
-        }
-
-        private void OnDestroy()
-        {
-            if (_inputActions == null)
-                return;
-
-            _inputActions.UI.Skip.performed -= OnSkipPressed;
-            _inputActions.UI.Skip.canceled -= OnSkipReleased;
         }
     }
 }
