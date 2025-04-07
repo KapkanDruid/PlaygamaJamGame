@@ -12,18 +12,15 @@ namespace Project.Content
         [SerializeField] private LocalizedString _localizedDescription;
         [SerializeField] private Vector2 _maskScale;
         [SerializeField] private Vector2 _maskPositionOffset;
-        [SerializeField] private Vector2 _markerPositionOffset;
 
         private string _objectName;
         private string _objectDescription;
 
         public Transform ObjectPosition => _objectPosition;
         public string ObjectName => _objectName;
-        public string ObjectDescription => _objectDescription;
-        public Vector2 MaskScale => _maskScale;
+        public string ObjectDescription => _objectDescription; 
+        public Vector2 MaskScale => _maskScale; 
         public Vector2 MaskPositionOffset => _maskPositionOffset;
-
-        public Vector2 MarkerPositionOffset => _markerPositionOffset;
 
         public void Initialize()
         {
@@ -43,11 +40,8 @@ namespace Project.Content
 
         public void Dispose()
         {
-            if (_localizedName != null)
-                _localizedName.StringChanged -= OnLocalizedNameChanged;
-
-            if (_localizedDescription != null)
-                _localizedDescription.StringChanged -= OnLocalizedDescriptionChanged;
+            _localizedName.StringChanged -= OnLocalizedNameChanged;
+            _localizedDescription.StringChanged -= OnLocalizedDescriptionChanged;
         }
     }
 }

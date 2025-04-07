@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 using Zenject;
 using System;
+using System.Reflection;
 using TMPro;
-using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
+using static UnityEngine.Rendering.VolumeComponent;
+using UnityEngine.Localization.Components;
 
 namespace Project.Content
 {
@@ -12,13 +14,15 @@ namespace Project.Content
     {
         public static event Action OnTutorialFinished;
 
-        [SerializeField] private TutorialObjectData[] _tutorialObjectsData;
-
-        [SerializeField] private TextMeshProUGUI _nameDescriptionText;
+       [SerializeField] private Transform[] _tutorialTransform;
+       [SerializeField] private string[] _tutorialTransformName;
+       [SerializeField] private string[] _tutorialTransformDescription;
+        
+        [SerializeField] private TextMeshProUGUI _nameDescriptionText;        
         [SerializeField] private TextMeshProUGUI _descriptionText;
-
+        
         [SerializeField] private RectTransform _uiMask;
-        [SerializeField] private RectTransform _marker;
+        [SerializeField] private RectTransform _marker;                        
 
         [SerializeField] private GameObject _tutorialPanel;
 
@@ -26,55 +30,71 @@ namespace Project.Content
         [SerializeField] private float _fillSpeed = 1f;
         private bool isFilling = false;
 
+        private Vector2[] _maskSizeTransform = new Vector2[] {
+           new Vector2(220f, 170f),
+           new Vector2(225f,170f),
+           new Vector2(125f,125f),
+           new Vector2(100f,225f),
+           new Vector2(1150f, 170f),
+           new Vector2(200f,200f),
+           new Vector2(100f,100f),
+           new Vector2(100f,100f)
+       };
+
+        private Vector3[] _maskTransformOffset = new Vector3[] {
+        new Vector3(10f,20f,0),
+        new Vector3(10f, 0f, 0f),
+        new Vector3(20f,20f,0f),
+        new Vector3(20f, 80f,0f),
+        new Vector3(10f,0f,0f),
+        new Vector3(20f,0f,0f),
+        new Vector3(0f,0f,0f),
+        new Vector3(-20f,-40f,0f)
+        };
+
+        private Vector3 _markerOffset = new Vector3(-50f, -150f, 0f);
+
         private int _currentIndex = 0;
 
         private PauseHandler _pauseHandler;
-
-        private Camera _mainCamera;
-
+        
+        public Camera _mainCamera;       
+        
         [Inject]
-        private void Construct(PauseHandler pauseHandler, Camera mainCamera)
+        private void Construct(PauseHandler pauseHandler/*,  Camera _mainCamera*/)
         {
             _pauseHandler = pauseHandler;
-            _mainCamera = mainCamera;
+            //_mainCamera = Camera.main;
         }
 
         private void Start()
-        {
-            if (_uiMask != null)
+        {            
+           if (_uiMask != null)
             {
                 _uiMask.gameObject.SetActive(false);
             }
-            if (_marker != null)
+           if (_marker != null)
             {
                 _marker.gameObject.SetActive(false);
             }
-            if (_nameDescriptionText != null)
-            {
-                _nameDescriptionText.gameObject.SetActive(false);
-            }
-            if (_descriptionText != null)
-            {
-                _descriptionText.gameObject.SetActive(false);
-            }
+            if (_nameDescriptionText != null) {
+                  _nameDescriptionText.gameObject.SetActive(false);
+             }            
+            if (_descriptionText != null) { 
+            _descriptionText.gameObject.SetActive(false);
+            }           
 
             _pauseHandler.SetPaused(true);
-
-            foreach (var tutorialObjectData in _tutorialObjectsData)
-            {
-                tutorialObjectData.Initialize();
-            }
-            
         }
 
         private void Update()
-        {
-            if (Input.GetMouseButtonDown(0) && _tutorialPanel.activeSelf && !isFilling)
+        {            
+            if (Input.GetMouseButtonDown(0) && _tutorialPanel.activeSelf && !isFilling) 
             {
-                SwitchToNextItem();
+                SwitchToNextItem();                
             }
 
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && _tutorialPanel.activeSelf && !isFilling)
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && _tutorialPanel.activeSelf && !isFilling) 
             {
                 SwitchToNextItem();
             }
@@ -98,13 +118,13 @@ namespace Project.Content
         }
 
         private void SwitchToNextItem()
-        {
-            if (_currentIndex < _tutorialObjectsData.Length)
+        {            
+            if (_currentIndex < _tutorialTransform.Length)
             {
-                MoveMaskToTransform();
-                MoveMarkerToTransform();
-                ShowTutorialDescriptionName();
-                ShowTutorialDescription();
+                MoveMaskToTransform(_currentIndex);
+                MoveMarkerToTransform(_currentIndex);
+                ShowTutorialDescriptionName(_currentIndex);
+                ShowTutorialDescription(_currentIndex);
                 _currentIndex++;
             }
             else
@@ -112,17 +132,17 @@ namespace Project.Content
                 ClosePanel();
             }
         }
-        private void MoveMaskToTransform()
+        private void MoveMaskToTransform(int index)
         {
-            Transform targetObject = _tutorialObjectsData[_currentIndex].ObjectPosition;
+            Transform targetObject = _tutorialTransform[index];
 
             if (targetObject is RectTransform rectTransform)
             {
-                Vector3 offset = _tutorialObjectsData[_currentIndex].MaskPositionOffset;
+                Vector3 offset = (_currentIndex >= 0 && _currentIndex < _maskTransformOffset.Length) ? _maskTransformOffset[_currentIndex] : Vector3.zero;
 
-                _uiMask.position = rectTransform.position + offset;
+                _uiMask.position = rectTransform.position;
 
-                Vector2 newSize = _tutorialObjectsData[_currentIndex].MaskScale;
+                Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeTransform.Length) ? _maskSizeTransform[_currentIndex] : new Vector2();
 
                 _uiMask.sizeDelta = newSize;
 
@@ -135,10 +155,10 @@ namespace Project.Content
             {
                 Vector3 screenPosition = _mainCamera.WorldToScreenPoint(targetObject.transform.position);
 
-                Vector3 offset = _tutorialObjectsData[_currentIndex].MaskPositionOffset;
+                Vector3 offset = (_currentIndex >= 0 && _currentIndex < _maskTransformOffset.Length) ? _maskTransformOffset[_currentIndex] : Vector3.zero;
                 _uiMask.position = screenPosition + offset;
 
-                Vector2 newSize = _tutorialObjectsData[_currentIndex].MaskScale;
+                Vector2 newSize = (_currentIndex >= 0 && _currentIndex < _maskSizeTransform.Length) ? _maskSizeTransform[_currentIndex] : new Vector2();
                 _uiMask.sizeDelta = newSize;
 
                 if (!_uiMask.gameObject.activeInHierarchy)
@@ -148,16 +168,16 @@ namespace Project.Content
             }
         }
 
-        private void MoveMarkerToTransform()
+        private void MoveMarkerToTransform(int index)
         {
-            Transform targetObject = _tutorialObjectsData[_currentIndex].ObjectPosition;
+            Transform targetObject = _tutorialTransform[index];
 
             if (targetObject is RectTransform rectTransform)
             {
 
-                Vector3 offset = _tutorialObjectsData[_currentIndex].MarkerPositionOffset;
+                Vector3 offset = (_currentIndex >= 0 && _currentIndex < _maskTransformOffset.Length) ? _maskTransformOffset[_currentIndex] : Vector3.zero;
 
-                _marker.position = rectTransform.position + offset;
+                _marker.position = rectTransform.position + _markerOffset;                
 
                 if (!_marker.gameObject.activeInHierarchy)
                 {
@@ -167,42 +187,32 @@ namespace Project.Content
             else
             {
                 Vector3 screenPosition = _mainCamera.WorldToScreenPoint(targetObject.transform.position);
-
-                Vector3 offset = _tutorialObjectsData[_currentIndex].MarkerPositionOffset;
-
-                _marker.position = screenPosition + offset;
+                                
+                _marker.position = screenPosition + _markerOffset;              
 
                 if (!_marker.gameObject.activeInHierarchy)
                 {
                     _marker.gameObject.SetActive(true);
                 }
-            }
-        }
+            }            
+        }           
 
-        private void ShowTutorialDescriptionName()
+        private void ShowTutorialDescriptionName(int index)
         {
-            _nameDescriptionText.text = _tutorialObjectsData[_currentIndex].ObjectName;
-
+            _nameDescriptionText.text = _tutorialTransformName[index];
+            
             if (!_nameDescriptionText.gameObject.activeInHierarchy)
             {
                 _nameDescriptionText.gameObject.SetActive(true);
             }
         }
 
-        private void ShowTutorialDescription()
+        private void ShowTutorialDescription (int index)
         {
-            _descriptionText.text = _tutorialObjectsData[_currentIndex].ObjectDescription;
-            if (!_descriptionText.gameObject.activeInHierarchy)
+            _descriptionText.text = _tutorialTransformDescription[index];
+            if(!_descriptionText.gameObject.activeInHierarchy)
             {
                 _descriptionText.gameObject.SetActive(true);
-            }
-        }
-
-        private void OnDestroy()
-        {
-            foreach (var tutorialObjectData in _tutorialObjectsData)
-            {
-                tutorialObjectData.Dispose();
             }
         }
 
@@ -211,7 +221,7 @@ namespace Project.Content
             _tutorialPanel.SetActive(false);
             OnTutorialFinished?.Invoke();
 
-            _pauseHandler.SetPaused(false);
+          _pauseHandler.SetPaused(false);
         }
     }
 }
