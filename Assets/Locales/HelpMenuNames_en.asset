@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HelpMenuNames_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: fe0af8147f2094e4d84ad3c30728e6e8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 7734128640
+    m_Localized: Main Building
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10665947136
+    m_Localized: Barracks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13518073856
+    m_Localized: Voice of Truth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16386977792
+    m_Localized: Target
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19071332352
+    m_Localized: Experience Scale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23534071808
+    m_Localized: Timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28516904960
+    m_Localized: Pause Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30886686720
+    m_Localized: Progression card
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

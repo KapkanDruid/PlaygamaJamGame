@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 5722d26eb9d9d824899b33735ba2fa0a
   m_SerializeEntries:
+  - m_GUID: 17cdfe7be1ea1204884373c619dd551d
+    m_Address: Assets/Locales/TutorialPanel Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 188934575c54c044db90825a2f060965
+    m_Address: Assets/Locales/TutorialDescription Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4ec8da6436b399148a49324e4904e0dc
     m_Address: Assets/Locales/Alert Shared Data.asset
     m_ReadOnly: 1
@@ -25,8 +35,18 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3ef2b43278d2d14dbeaf80ade16b8e7
+    m_Address: Assets/Locales/HelpMenuDescription Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0e06759c202ea64ea0492c6d9a39568
     m_Address: Assets/Locales/Game Labels Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe0af8147f2094e4d84ad3c30728e6e8
+    m_Address: Assets/Locales/HelpMenu Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

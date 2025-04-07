@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: HelpMenuNames Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: HelpMenuNames
+  m_TableCollectionNameGuidString: fe0af8147f2094e4d84ad3c30728e6e8
+  m_Entries:
+  - m_Id: 7734128640
+    m_Key: help.Main
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10665947136
+    m_Key: help.Barac
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13518073856
+    m_Key: help.Voice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16386977792
+    m_Key: help.Flag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19071332352
+    m_Key: help.Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23534071808
+    m_Key: help.Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28516904960
+    m_Key: help.Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30886686720
+    m_Key: help.Card
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1254221880374329500
+  references:
+    version: 2
+    RefIds:
+    - rid: 1254221880374329500
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1744035727950
