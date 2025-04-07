@@ -10,44 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: TutorialNameTransform_en
+  m_Name: HelpMenuNames_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 17cdfe7be1ea1204884373c619dd551d, type: 2}
+  m_SharedData: {fileID: 11400000, guid: fe0af8147f2094e4d84ad3c30728e6e8, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 16949014528
+  - m_Id: 7734128640
     m_Localized: Main Building
     m_Metadata:
       m_Items: []
-  - m_Id: 26105180160
+  - m_Id: 10665947136
     m_Localized: Barracks
     m_Metadata:
       m_Items: []
-  - m_Id: 29594841088
+  - m_Id: 13518073856
     m_Localized: Voice of Truth
     m_Metadata:
       m_Items: []
-  - m_Id: 32849620992
+  - m_Id: 16386977792
     m_Localized: Target
     m_Metadata:
       m_Items: []
-  - m_Id: 38373519360
+  - m_Id: 19071332352
     m_Localized: Experience Scale
     m_Metadata:
       m_Items: []
-  - m_Id: 44786610176
+  - m_Id: 23534071808
     m_Localized: Timer
     m_Metadata:
       m_Items: []
-  - m_Id: 53846306816
+  - m_Id: 28516904960
     m_Localized: Pause Button
     m_Metadata:
       m_Items: []
-  - m_Id: 63023443968
-    m_Localized: Help Button
+  - m_Id: 30886686720
+    m_Localized: Progression card
     m_Metadata:
       m_Items: []
   references:

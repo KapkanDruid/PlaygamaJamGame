@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: eb08990f3d433a14eb71233384634176
   m_SerializeEntries:
+  - m_GUID: 04ff8a661161bf344ab60b81b9b8a7e9
+    m_Address: HelpMenuNames_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2550863b02d05344899ebf12d60d8396
     m_Address: TutorialNameTransform_en
     m_ReadOnly: 1
@@ -27,6 +33,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 667f0a636e9061f4b87e043549704552
+    m_Address: HelpMenuDescription_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a39d39065097a346a06ce3ce1181aa2
+    m_Address: TutorialDescription_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 75e81006bc2c6034cb42d4343652e588
     m_Address: Menu Labels_en
