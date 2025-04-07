@@ -55,6 +55,7 @@ namespace Project.Architecture
             Container.Bind<AlertController>().FromInstance(_alertController).AsSingle().NonLazy();
 
             Container.BindInterfacesAndSelfTo<TimedClipPlayer>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<SkipHandler>().AsTransient().NonLazy();
 
             FactoriesInstaller.Install(Container);
         }
