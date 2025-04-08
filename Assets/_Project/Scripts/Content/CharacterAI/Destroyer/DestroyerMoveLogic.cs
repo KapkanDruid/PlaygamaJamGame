@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Project.Content.CharacterAI.MainTargetAttacker;
+using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
@@ -8,23 +9,19 @@ namespace Project.Content.CharacterAI.Destroyer
     {
         private NavMeshAgent _agent;
         private ICharacterData _destroyerData;
-        private CharacterSensor _characterSensor;
-        private DestroyerHandler _destroyerHandler;
+        private DestroyerEntity _destroyerEntity;
         private PauseHandler _pauseHandler;
         private EnemyDeadHandler _enemyDeadHandler;
         private Animator _animator;
-        private AnimatorStateInfo _pausedAnimatorState;
 
-        public DestroyerMoveLogic(DestroyerHandler destroyerHandler,
-                                  CharacterSensor characterSensor,
+        public DestroyerMoveLogic(DestroyerEntity destroyerEntity,
                                   NavMeshAgent navMeshAgent,
                                   PauseHandler pauseHandler,
                                   EnemyDeadHandler enemyDeadHandler,
                                   Animator animator)
         {
-            _destroyerHandler = destroyerHandler;
-            _destroyerData = destroyerHandler.DestroyerData;
-            _characterSensor = characterSensor;
+            _destroyerEntity = destroyerEntity;
+            _destroyerData = destroyerEntity.DestroyerData;
             _agent = navMeshAgent;
             _pauseHandler = pauseHandler;
             _enemyDeadHandler = enemyDeadHandler;
@@ -48,39 +45,21 @@ namespace Project.Content.CharacterAI.Destroyer
             {
                 _agent.speed = 0f;
                 _agent.isStopped = true;
-                PauseAnimation();
                 return;
             }
-            else
-            {
-                _agent.speed = _destroyerData.Speed;
-                _agent.isStopped = false;
 
-                ResumeAnimation();
-            }
+            _agent.speed = _destroyerData.Speed;
+            _agent.isStopped = false;
 
             if (_enemyDeadHandler.IsDead)
             {
                 _agent.speed = 0f;
                 _agent.isStopped = true;
-            }
-            else
-            {
-                _agent.speed = _destroyerData.Speed;
-                _agent.isStopped = false;
+                return;
             }
 
-
-            if (_characterSensor.TargetToChase == null || _characterSensor.TargetTransformToChase == null)
-            {
-                _characterSensor.TargetSearch();
-
-                if (_characterSensor.TargetTransformToChase != null)
-                {
-                    if (!_characterSensor.TargetTransformToChase.gameObject.activeInHierarchy)
-                        _characterSensor.ScanAreaToAttack();
-                }
-            }
+            if (_destroyerEntity.TargetTransform == null)
+                return;
 
             MoveToTarget();
             SetOrientation();
@@ -88,50 +67,15 @@ namespace Project.Content.CharacterAI.Destroyer
 
         public void SetOrientation()
         {
-            if (_characterSensor.TargetTransformToChase == null)
-                return;
-
-            var direction = Mathf.Sign(_characterSensor.TargetTransformToChase.position.x - _destroyerHandler.transform.position.x);
-            Vector3 rightOrientation = new Vector3(1, _destroyerHandler.transform.localScale.y, _destroyerHandler.transform.localScale.z);
-            Vector3 leftOrientation = new Vector3(-1, _destroyerHandler.transform.localScale.y, _destroyerHandler.transform.localScale.z);
-
-            if (direction > 0)
-            {
-                _destroyerHandler.transform.localScale = rightOrientation;
-            }
-            else if (direction < 0)
-            {
-                _destroyerHandler.transform.localScale = leftOrientation;
-            }
-        }
-
-        private void PauseAnimation()
-        {
-            if (_animator.speed != 0)
-            {
-                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
-                _animator.speed = 0;
-            }
-        }
-
-        private void ResumeAnimation()
-        {
-            if (_animator.speed == 0)
-            {
-                _animator.speed = 1;
-                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
-            }
+            var direction = Mathf.Sign(_destroyerEntity.TargetTransform.position.x - _destroyerEntity.transform.position.x);
+            Vector3 orientation = new Vector3(direction, _destroyerEntity.transform.localScale.y, _destroyerEntity.transform.localScale.z);
+            _destroyerEntity.transform.localScale = orientation;
         }
 
         private void MoveToTarget()
         {
-            if (_characterSensor.TargetToChase != null && _destroyerHandler.IsMoving)
-            {
-                if (_characterSensor.TargetTransformToChase == null)
-                    return;
-
-                _agent.SetDestination(_characterSensor.TargetTransformToChase.position);
-            }
+            _animator.SetBool(AnimatorHashes.IsMoving, true);
+            _agent.SetDestination(_destroyerEntity.TargetTransform.position);
         }
 
     }

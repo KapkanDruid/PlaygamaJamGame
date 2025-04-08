@@ -54,11 +54,11 @@ namespace Project.Content.CoreGameLoopLogic
 
         private void OnSkipPressed(InputAction.CallbackContext context)
         {
-            Debug.Log("Pressed");
             if (!_isActive)
                 return;
 
             _isSkipPressed = true;
+            _skipFiller.fillAmount = _currentSkipTime / _skipDuration;
             HandleSkipAsync().Forget();
         }
 
@@ -79,6 +79,7 @@ namespace Project.Content.CoreGameLoopLogic
                 {
                     _currentSkipTime = _skipDuration;
                     _isForceSkip = true;
+                    _currentSkipTime = 0;
                     return;
                 }
 

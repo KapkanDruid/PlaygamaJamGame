@@ -108,6 +108,11 @@ namespace Project.Content
             _musicSource.Stop();
         }
 
+        public void PlayLoopMusic()
+        {
+            _isStop = false;
+        }
+
         private void Update()
         {
             if (_isStop)
