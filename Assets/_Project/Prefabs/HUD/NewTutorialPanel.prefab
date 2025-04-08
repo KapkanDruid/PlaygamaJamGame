@@ -92,10 +92,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3451483456889285611}
   - component: {fileID: 3735256945978079452}
   - component: {fileID: 8008242900586662593}
+  - component: {fileID: 5844598870513823509}
   m_Layer: 5
   m_Name: tutorial
   m_TagString: Untagged
@@ -168,11 +169,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 762292762818722313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 1000, y: 50}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 30}
+  m_SizeDelta: {x: 400, y: 200}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &3735256945978079452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -201,8 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press the LMB to watch the training. Press and hold the space bar to skip
-    the training.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -273,6 +273,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5844598870513823509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503322358226647971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
+    m_TableEntryReference:
+      m_KeyId: 111765450752
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8008242900586662593}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &2533463378485714570
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,18 +558,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 4956881878772768040}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 16949014528
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 77342797824
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -540,18 +580,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 3322717403883285704}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 26105180160
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 80375279616
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -562,18 +602,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 8488478381621425249}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 29594841088
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 82736672768
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -584,18 +624,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 3181963816359777943}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 32849620992
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 87446876160
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -606,18 +646,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 3822762259027419593}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 38373519360
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 92182245376
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -628,18 +668,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 7532895771772825187}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 44786610176
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 96493989888
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -650,18 +690,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 1108846151509742812}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 53846306816
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 100663128064
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -672,18 +712,18 @@ MonoBehaviour:
   - _objectPosition: {fileID: 5312584132744636409}
     _localizedName:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:17cdfe7be1ea1204884373c619dd551d
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 63023443968
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _localizedDescription:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:188934575c54c044db90825a2f060965
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 104588996608
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -1023,11 +1063,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 762292762818722313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 40}
   m_SizeDelta: {x: 1000, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2651121366860623229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1083,10 +1123,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
