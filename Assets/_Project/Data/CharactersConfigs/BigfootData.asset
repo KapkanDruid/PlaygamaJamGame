@@ -15,7 +15,7 @@ MonoBehaviour:
   _health: 100
   _experiencePoints: 50
   _speed: 0.5
-  _distanceToTarget: 1
+  _distanceToTarget: 0.3
   _damage: 10
   _attackCooldown: 5
   _hitColliderSize: 2
