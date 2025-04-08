@@ -45,3 +45,5 @@ MonoBehaviour:
     _pointsToReach: 50
   - _level: 16
     _pointsToReach: 150
+  - _level: 16
+    _pointsToReach: 150
