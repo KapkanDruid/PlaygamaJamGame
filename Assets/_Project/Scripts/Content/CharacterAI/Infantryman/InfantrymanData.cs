@@ -1,4 +1,5 @@
 using Project.Content.BuildSystem;
+using Project.Content.ProjectileSystem;
 using System;
 using UnityEngine;
 
@@ -14,15 +15,15 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private float _projectileLifeTime;
         [SerializeField] private float _projectileSpeed;
         [SerializeField] private Flags _flags;
-        [SerializeField] private EntityFlags _enemyFlag;
-        [SerializeField] private DirectProjectile _projectilePrefab;
+        [SerializeField] private EntityFlags[] _enemyFlag;
+        [SerializeField] private SimpleProjectile _projectilePrefab;
         [SerializeField] private Color[] _levelColors;
         [SerializeField] private FloatingTextConfig _floatingText;
         [SerializeField] private EffectType _deathSoundEffect;
         [SerializeField] private EffectType _bornSoundEffect;
         [SerializeField] private Collider2D _collider;
 
-        private DirectProjectileData _projectileData;
+        private ProjectileData _projectileData;
         private SensorData _sensorData;
         private float _health;
         private int _levelUpgrade;
@@ -38,12 +39,12 @@ namespace Project.Content.CharacterAI.Infantryman
         public Transform DamageTextPoint => _damageTextPoint;
         public Flags Flags => _flags;
         public IEntity ThisEntity { get; set; }
-        public EntityFlags EnemyFlag => _enemyFlag;
+        public EntityFlags[] EnemyFlag => _enemyFlag;
 
         public float ReloadTime => _infantrymanConfig.AttackCooldown;
         public Transform ShootPoint => _turretShootPoint;
-        public IDirectProjectileData ProjectileData => _projectileData;
-        public DirectProjectile ProjectilePrefab => _projectilePrefab;
+        public IProjectileData ProjectileData => _projectileData;
+        public SimpleProjectile ProjectilePrefab => _projectilePrefab;
         public int ProjectilePoolCount => 10;
         public BuildSystem.ISensorData SensorData => _sensorData;
         public AllyEntityType Type => _infantrymanConfig.Type;
@@ -51,12 +52,12 @@ namespace Project.Content.CharacterAI.Infantryman
         public Sprite UpgradeSprite => _infantrymanConfig.UpgradeSprite;
         public FloatingTextConfig FloatingText => _floatingText;
         public EffectType BornSoundEffect => _bornSoundEffect;
-        public EffectType DeathSoundEffect => _bornSoundEffect;
+        public EffectType DeathSoundEffect => _deathSoundEffect;
         public Collider2D Collider => _collider;
 
         public void Initialize()
         {
-            _projectileData = new DirectProjectileData();
+            _projectileData = new ProjectileData();
 
             _projectileData.EnemyFlag = _enemyFlag;
             _projectileData.LifeTime = _projectileLifeTime;

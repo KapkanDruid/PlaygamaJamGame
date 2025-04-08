@@ -54,7 +54,6 @@ namespace Project.Content.CoreGameLoopLogic
 
         private void OnSkipPressed(InputAction.CallbackContext context)
         {
-            Debug.Log("Pressed");
             if (!_isActive)
                 return;
 
