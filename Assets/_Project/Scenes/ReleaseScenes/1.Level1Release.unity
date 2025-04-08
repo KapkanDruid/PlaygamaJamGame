@@ -45817,6 +45817,70 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1825959505}
     m_Modifications:
+    - target: {fileID: 559606461139491467, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_text
+      value: 'KAPKANDRUID PROGRAMMER '
+      objectReference: {fileID: 0}
+    - target: {fileID: 559606461139491467, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSize
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 559606461139491467, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 559606461139491467, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161444159548733751, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_text
+      value: MAKSIM KAVALIOU GAME DESIGNER
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161444159548733751, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSize
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161444159548733751, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161444159548733751, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283992855479004697, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_text
+      value: 'NEFELIBATA PROGRAMMER '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283992855479004697, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSize
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283992855479004697, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283992855479004697, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516075125701167186, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_text
+      value: UTA ILLARIION ARTIST
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516075125701167186, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSize
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516075125701167186, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516075125701167186, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5922366350621052531, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
       propertyPath: m_Name
       value: Titles
@@ -45899,6 +45963,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7446012026005787785, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194299936035535415, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8283566797773517425, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
