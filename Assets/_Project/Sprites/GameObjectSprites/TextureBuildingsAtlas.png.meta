@@ -59,6 +59,18 @@ TextureImporter:
   - first:
       213: -2514827791619496468
     second: TextureBuildingsAtlas_18
+  - first:
+      213: -2066239062403305897
+    second: TextureBuildingsAtlas_19
+  - first:
+      213: 3068648751486938270
+    second: TextureBuildingsAtlas_20
+  - first:
+      213: 298956561306700171
+    second: TextureBuildingsAtlas_21
+  - first:
+      213: 1744440282594124044
+    second: TextureBuildingsAtlas_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -584,6 +596,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1200
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e2a68258e3353e0800000000000000
+      internalID: -2066239062403305897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1201
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c23d4f7c7069a20800000000000000
+      internalID: 3068648751486938270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1201
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8945f7986b162400800000000000000
+      internalID: 298956561306700171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureBuildingsAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 1200
+        width: 514
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01a7efc13f753810800000000000000
+      internalID: 1744440282594124044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -609,7 +709,11 @@ TextureImporter:
       TextureBuildingsAtlas_16: -1596336144846953883
       TextureBuildingsAtlas_17: -295319604562396555
       TextureBuildingsAtlas_18: -2514827791619496468
+      TextureBuildingsAtlas_19: -2066239062403305897
       TextureBuildingsAtlas_2: -6336575901924993829
+      TextureBuildingsAtlas_20: 3068648751486938270
+      TextureBuildingsAtlas_21: 298956561306700171
+      TextureBuildingsAtlas_22: 1744440282594124044
       TextureBuildingsAtlas_3: -5817419687718861913
       TextureBuildingsAtlas_4: 6808712457271782290
       TextureBuildingsAtlas_5: -8305674533445338520

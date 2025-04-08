@@ -29,8 +29,6 @@ namespace Project.Content.UI
         {
             _dynamicData = _sceneData.TurretDynamicData[_turretType];
             _config = _dynamicData.Config;
-
-            gameObject.SetActive(false);
         }
 
         private void OnEnable()
