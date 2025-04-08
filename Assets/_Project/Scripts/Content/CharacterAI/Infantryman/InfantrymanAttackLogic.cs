@@ -1,4 +1,5 @@
 ﻿using Project.Content.BuildSystem;
+using Project.Content.ProjectileSystem;
 using UnityEngine;
 using Zenject;
 
@@ -13,11 +14,10 @@ namespace Project.Content.CharacterAI.Infantryman
         private IAllyEntityData _infantrymanData;
         private InfantrymanEntity _infantrymanEntity;
         private float _attackCooldownTimer;
-        private ObjectPooler<DirectProjectile> _projectilePool;
+        private ObjectPooler<SimpleProjectile> _projectilePool;
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private DiContainer _diContainer;
-        private AnimatorStateInfo _pausedAnimatorState;
         private EnemyDeadHandler _enemyDeadHandler;
 
         public InfantrymanAttackLogic(InfantrymanEntity infantrymanEntity,
@@ -43,20 +43,13 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<DirectProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<DirectProjectile>(_poolData.ProjectilePrefab, _diContainer));
+            _projectilePool = new ObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _diContainer));
         }
 
         public void Tick()
         {
             if (_pauseHandler.IsPaused)
-            {
-                PauseAnimation();
                 return;
-            }
-            else
-            {
-                ResumeAnimation();
-            }
 
             if (_enemyDeadHandler.IsDead)
                 return;
@@ -86,24 +79,6 @@ namespace Project.Content.CharacterAI.Infantryman
                 projectile.Prepare(_shootPoint.position, _infantrymanEntity.TargetTransform.position - _infantrymanEntity.transform.position, _shootData.ProjectileData);
 
                 _attackCooldownTimer = _infantrymanData.AttackCooldown;
-            }
-        }
-
-        private void PauseAnimation()
-        {
-            if (_animator.speed != 0)
-            {
-                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
-                _animator.speed = 0;
-            }
-        }
-
-        private void ResumeAnimation()
-        {
-            if (_animator.speed == 0)
-            {
-                _animator.speed = 1;
-                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
             }
         }
 

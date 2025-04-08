@@ -18,12 +18,12 @@ namespace Project.Content
         [SerializeField] private WallEntity _wallPrefab;
 
         [Header("CharacterPrefabs"), Space(3)]
-        [SerializeField] private DestroyerHandler _simpleParanoid;
-        [SerializeField] private DestroyerHandler _advencedParanoid;
-        [SerializeField] private DestroyerHandler _aliens;
-        [SerializeField] private DestroyerHandler _flatEarther;
-        [SerializeField] private MainTargetAttackerHandler _bigfoot;
-        [SerializeField] private MainTargetAttackerHandler _humanMoth;
+        [SerializeField] private DestroyerEntity _simpleParanoid;
+        [SerializeField] private DestroyerEntity _advencedParanoid;
+        [SerializeField] private DestroyerEntity _aliens;
+        [SerializeField] private DestroyerEntity _flatEarther;
+        [SerializeField] private MainTargetAttackerEntity _bigfoot;
+        [SerializeField] private MainTargetAttackerEntity _humanMoth;
         [SerializeField] private InfantrymanEntity _infantryman;
         
         [Header("OtherPrefabs"), Space(3)]
@@ -33,12 +33,12 @@ namespace Project.Content
         [SerializeField] private FloatingText[] _floatingTextPrefabs;
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
-        public DestroyerHandler SimpleParanoid => _simpleParanoid;
-        public DestroyerHandler AdvencedParanoid => _advencedParanoid;
-        public DestroyerHandler Aliens => _aliens;
-        public DestroyerHandler FlatEarther => _flatEarther;
-        public MainTargetAttackerHandler BigFoot => _bigfoot;
-        public MainTargetAttackerHandler HumanMoth => _humanMoth;
+        public DestroyerEntity SimpleParanoid => _simpleParanoid;
+        public DestroyerEntity AdvencedParanoid => _advencedParanoid;
+        public DestroyerEntity Aliens => _aliens;
+        public DestroyerEntity FlatEarther => _flatEarther;
+        public MainTargetAttackerEntity BigFoot => _bigfoot;
+        public MainTargetAttackerEntity HumanMoth => _humanMoth;
         public InfantrymanEntity Infantryman => _infantryman;
         public TurretEntity VoiceOfTruthTurret => _voiceOfTruthTurret; 
         public GameObject ExperienceObject => _experienceObject; 

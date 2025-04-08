@@ -30119,17 +30119,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1222329311456391208, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5355194715994044474, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
       propertyPath: m_Name
       value: Infatryman
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355194715994044474, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30242,6 +30234,7 @@ MonoBehaviour:
   _musicSource: {fileID: 1683454748}
   _SFXSource: {fileID: 1677189065}
   _musicListType: {fileID: 0}
+  _startSoundIndex: 0
 --- !u!1 &676066313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5430122588030909017, guid: 8e9e1ecfb14365b40a98a281d001df3d, type: 3}
@@ -31008,10 +31001,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VoiceOfTruth
       objectReference: {fileID: 0}
-    - target: {fileID: 3062824813009830758, guid: 5bb91a56d1f1aa643878ccdf4001ec78, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8215651618980773562, guid: 5bb91a56d1f1aa643878ccdf4001ec78, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
@@ -31336,7 +31325,7 @@ PrefabInstance:
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
       propertyPath: _waves.Array.data[0].EnemyGroups.Array.data[1].Prefab
       value: 
-      objectReference: {fileID: 2262984898554556662, guid: 7657570eaab21ab4f90182cbd6f03a6d, type: 3}
+      objectReference: {fileID: 3194220193113999216, guid: fc11d4aacd5d48849ab3f7d4dda93b4b, type: 3}
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
       propertyPath: _waves.Array.data[0].EnemyGroups.Array.data[2].Prefab
       value: 
@@ -33417,7 +33406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6895240247324310806, guid: d7fcf6443a2d5004099a83e2588f32f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
