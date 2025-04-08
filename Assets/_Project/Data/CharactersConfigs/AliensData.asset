@@ -21,4 +21,4 @@ MonoBehaviour:
   _hitColliderSize: 1
   _hitColliderOffset: {x: 0, y: 0}
   _type: 3
-  _sensorRadius: 20
+  _sensorRadius: 100
