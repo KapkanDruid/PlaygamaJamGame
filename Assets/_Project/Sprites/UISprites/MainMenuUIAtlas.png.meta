@@ -144,6 +144,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -534,7 +547,24 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainMenuUIAtlas_0: 339056928573422348
+      MainMenuUIAtlas_1: 1972022147465988722
+      MainMenuUIAtlas_10: -2250795737748417539
+      MainMenuUIAtlas_11: -7998989966971585818
+      MainMenuUIAtlas_12: -3553517507837908063
+      MainMenuUIAtlas_13: 5519989427030421896
+      MainMenuUIAtlas_14: 871350801576172917
+      MainMenuUIAtlas_15: 2331974194188982847
+      MainMenuUIAtlas_16: -7056718195209262381
+      MainMenuUIAtlas_2: 3496162095867623149
+      MainMenuUIAtlas_3: 869452932694048245
+      MainMenuUIAtlas_4: 8060153961225281824
+      MainMenuUIAtlas_5: 7072715434751186788
+      MainMenuUIAtlas_6: 2595559077161288313
+      MainMenuUIAtlas_7: 3586901010630708463
+      MainMenuUIAtlas_8: 7309742141539447905
+      MainMenuUIAtlas_9: -6440042547439188401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
