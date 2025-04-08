@@ -29,6 +29,12 @@ TextureImporter:
   - first:
       213: 2855753986354988514
     second: WIPUpgradeAtlas_8
+  - first:
+      213: -7250344039334234587
+    second: WIPUpgradeAtlas_9
+  - first:
+      213: 2627291745731406150
+    second: WIPUpgradeAtlas_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -281,10 +287,10 @@ TextureImporter:
       name: WIPUpgradeAtlas_7
       rect:
         serializedVersion: 2
-        x: 1941
-        y: 1357
-        width: 53
-        height: 47
+        x: 2836
+        y: 1406
+        width: 647
+        height: 221
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +309,8 @@ TextureImporter:
       name: WIPUpgradeAtlas_8
       rect:
         serializedVersion: 2
-        x: 2237
-        y: 1355
+        x: 1941
+        y: 1357
         width: 53
         height: 47
       alignment: 0
@@ -317,6 +323,50 @@ TextureImporter:
       bones: []
       spriteID: 2e54892ce1da1a720800000000000000
       internalID: 2855753986354988514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 1355
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526bc1c928a916b90800000000000000
+      internalID: -7250344039334234587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 59
+        width: 1041
+        height: 1149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649e2a93ce3067420800000000000000
+      internalID: 2627291745731406150
       vertices: []
       indices: 
       edges: []
