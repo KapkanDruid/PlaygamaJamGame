@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5f3ad1659d4873047a091fcf32c90c53
+guid: 623f999a7321ed74f8403c416583f895
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Frontforgame
+  - Ru_for_game
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
