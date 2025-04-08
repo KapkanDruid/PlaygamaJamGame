@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111765450752
-    m_Localized: Click once, get the next clue. Press and hold to skip all of them.
+    m_Localized: Press or Hold [Space] or Touch to next or skip...
     m_Metadata:
       m_Items: []
   references:

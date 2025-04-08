@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0459f636c50b034ebc10c44cac40e77
+    m_Address: Assets/Locales/Fiedback Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0e06759c202ea64ea0492c6d9a39568
     m_Address: Assets/Locales/Game Labels Shared Data.asset
     m_ReadOnly: 1
