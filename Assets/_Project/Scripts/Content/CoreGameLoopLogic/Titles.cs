@@ -1,5 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,7 +13,6 @@ namespace Project.Content.CoreGameLoopLogic
         [SerializeField] private Animator _animator;
         [SerializeField] private Image _skipFiller;
         [SerializeField] private Image _background;
-        [SerializeField] private float _fadeTime;
         [SerializeField] private float _skipDuration;
         [SerializeField] private UnityEvent _onAnimationEnd;
 
@@ -38,6 +36,8 @@ namespace Project.Content.CoreGameLoopLogic
 
         public void ShowTitles()
         {
+            _skipFiller.fillAmount = 0;
+            _animator.SetBool(AnimatorHashes.IsForceEnded, false);
             _animator.SetTrigger(AnimatorHashes.ShowTitlesTrigger);
             _audioController.PlayMusic(_musicType);
 
@@ -48,7 +48,9 @@ namespace Project.Content.CoreGameLoopLogic
 
         public void HideTitles()
         {
-            _background.DOFade(0, _fadeTime);
+            _audioController.StopMusic();
+            _audioController.PlayLoopMusic();
+            _animator.SetBool(AnimatorHashes.IsForceEnded, true);
             _skipHandler.IsActive = false;
         }
 

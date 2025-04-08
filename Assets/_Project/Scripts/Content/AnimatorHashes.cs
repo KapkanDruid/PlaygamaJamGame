@@ -22,5 +22,6 @@ namespace Project.Content
         public static readonly int HintTrigger = Animator.StringToHash("Hint");
         public static readonly int IsHints = Animator.StringToHash("IsHints");
         public static readonly int ShowTitlesTrigger = Animator.StringToHash("ShowTitles");
+        public static readonly int IsForceEnded = Animator.StringToHash("IsForceEnded");
     }
 }
