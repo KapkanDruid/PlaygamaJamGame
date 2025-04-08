@@ -120,19 +120,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -145,7 +132,7 @@ TextureImporter:
         width: 3853
         height: 2162
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -167,7 +154,7 @@ TextureImporter:
         width: 414
         height: 199
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,7 +176,7 @@ TextureImporter:
         width: 491
         height: 310
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,7 +198,7 @@ TextureImporter:
         width: 140
         height: 209
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -229,11 +216,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1909
-        y: 1355
+        y: 1411
         width: 143
-        height: 246
+        height: 190
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -251,11 +238,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2205
-        y: 1355
+        y: 1409
         width: 143
-        height: 246
+        height: 190
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -273,11 +260,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2526
-        y: 1362
+        y: 1359
         width: 161
-        height: 305
+        height: 308
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,11 +277,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1357
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55e75f042d9f0ca0800000000000000
+      internalID: -6048442996333484708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 1355
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e54892ce1da1a720800000000000000
+      internalID: 2855753986354988514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 59e8695b4f411754a9b603d2f9e288f8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -303,16 +334,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      WIPUpgradeAtlas_0: -1342020094215906714
-      WIPUpgradeAtlas_1: 7859703357687803111
-      WIPUpgradeAtlas_2: -841645369824388747
-      WIPUpgradeAtlas_3: 8961683680368760880
-      WIPUpgradeAtlas_4: -7943884915880196790
-      WIPUpgradeAtlas_5: 1223863447719971216
-      WIPUpgradeAtlas_6: -630716180746848780
-      WIPUpgradeAtlas_7: -6048442996333484708
-      WIPUpgradeAtlas_8: 2855753986354988514
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
