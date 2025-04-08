@@ -21,13 +21,15 @@ namespace Project.Content
 
         [SerializeField] private RectTransform _uiMask;
         [SerializeField] private RectTransform _marker;
+        [SerializeField] private Image _blackImage;
 
         [SerializeField] private GameObject _tutorialPanel;
 
         [SerializeField] private Image _radialSlider;
         [SerializeField] private float _fillSpeed = 1f;
-        private bool isFilling = false;
+
         private bool _isPressed;
+        private bool _isStarTutorial = true;
 
         private int _currentIndex = 0;
 
@@ -38,7 +40,6 @@ namespace Project.Content
         private SkipHandler _skipHandler;
 
         private InputSystemActions _inputSystemActions;
-        
 
         public Image SkipFiller => _radialSlider;
 
@@ -57,18 +58,19 @@ namespace Project.Content
 
         private void Start()
         {
-             foreach (var tutorialObjectData in _tutorialObjectsData)
+            foreach (var tutorialObjectData in _tutorialObjectsData)
             {
                 tutorialObjectData.Initialize();
             }
+
             if (_uiMask != null)
             {
                 _uiMask.gameObject.SetActive(false);
             }
-            if (_marker != null)
-            {
-                _marker.gameObject.SetActive(false);
-            }
+            /*  if (_marker != null)
+              {
+                  _marker.gameObject.SetActive(false);
+              }*/
             if (_nameDescriptionText != null)
             {
                 _nameDescriptionText.gameObject.SetActive(false);
@@ -78,31 +80,36 @@ namespace Project.Content
                 _descriptionText.gameObject.SetActive(false);
             }
 
-            _pauseHandler.SetPaused(true);           
+            _pauseHandler.SetPaused(true);
 
             _skipHandler.Initialize(this, this.GetCancellationTokenOnDestroy());
 
             _skipHandler.IsActive = true;
+
+            _marker.position = new Vector3(1150f, 0f, 0f);
         }
 
         private void Update()
         {
-            /*if (Input.GetMouseButtonDown(0) && _tutorialPanel.activeSelf && !isFilling)
-            {
-                SwitchToNextItem();
-            }*/
-
             if (_isPressed && _tutorialPanel.activeSelf)
             {
-                SwitchToNextItem();
-                _isPressed = false;
+                if (_isStarTutorial)
+                {
+                    StartScreenDisable();
+                    
+                }
+                else
+                {
+                    SwitchToNextItem();
+                    _isPressed = false;
+                }
             }
 
             if (_skipHandler.IsForceSkip)
             {
                 ClosePanel();
                 _skipHandler.IsActive = false;
-            }           
+            }
         }
 
         private void SwitchToNextItem()
@@ -155,7 +162,6 @@ namespace Project.Content
                 }
             }
         }
-
         private void MoveMarkerToTransform()
         {
             Transform targetObject = _tutorialObjectsData[_currentIndex].ObjectPosition;
@@ -200,10 +206,17 @@ namespace Project.Content
         private void ShowTutorialDescription()
         {
             _descriptionText.text = _tutorialObjectsData[_currentIndex].ObjectDescription;
+
             if (!_descriptionText.gameObject.activeInHierarchy)
             {
                 _descriptionText.gameObject.SetActive(true);
             }
+        }
+
+        private void StartScreenDisable()
+        {
+            _blackImage.gameObject.SetActive(false);
+            _isStarTutorial = false;
         }
 
         private void OnDestroy()

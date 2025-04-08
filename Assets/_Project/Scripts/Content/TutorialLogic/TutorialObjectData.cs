@@ -26,7 +26,9 @@ namespace Project.Content
 
         public void Initialize()
         {
+            
             _localizedName.StringChanged += OnLocalizedNameChanged;
+            
             _localizedDescription.StringChanged += OnLocalizedDescriptionChanged;
         }
 
