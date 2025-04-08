@@ -201,7 +201,7 @@ namespace Project.Content.CharacterAI.Infantryman
             _levelSpriteRenderer.color = color;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             MainSceneBootstrap.OnServicesInitialized -= OnSceneInitialized;
             _enemyDeadHandler.OnDeath -= Death;
