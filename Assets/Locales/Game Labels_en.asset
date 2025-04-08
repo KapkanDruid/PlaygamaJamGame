@@ -90,6 +90,14 @@ MonoBehaviour:
     m_Localized: Continue
     m_Metadata:
       m_Items: []
+  - m_Id: 1561658435526656
+    m_Localized: VICTORY!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1561831056302080
+    m_Localized: <uppercase>All secrets are safe!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
