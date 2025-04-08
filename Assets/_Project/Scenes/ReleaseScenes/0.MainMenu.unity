@@ -1537,6 +1537,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 393585409}
     m_Modifications:
+    - target: {fileID: 1691113164248770028, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691113164248770028, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691113164248770028, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981533188600428662, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465627233743181557, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460745778012606024, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6710927985037294512, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1617,9 +1641,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7242536757953806319, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7511786689983302044, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511786689983302044, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205618464112420094, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205618464112420094, guid: ff5c4aa2e1e12d84d86a84e2ce048558, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4587,7 +4627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -43.494934, y: -4.640869}
+  m_AnchoredPosition: {x: -43.494873, y: -4.640869}
   m_SizeDelta: {x: 221.1919, y: 135.3571}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7835621584351361452

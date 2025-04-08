@@ -101,7 +101,7 @@ MonoBehaviour:
   - _key: {fileID: 11400000, guid: e082a644733aad749be4ee199493076f, type: 2}
     _value:
       _clip: {fileID: 8300000, guid: 6294e754bd26c1d47a88fdd3cd554782, type: 3}
-      _volume: 0.448
+      _volume: 0.159
   - _key: {fileID: 11400000, guid: 5f075982bffc6684583e8bd5d690d1bb, type: 2}
     _value:
       _clip: {fileID: 8300000, guid: 36dd6ec7e0b3a4f49a8553225c964829, type: 3}
