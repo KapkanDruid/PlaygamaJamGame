@@ -86,7 +86,7 @@ namespace Project.Content
 
             _skipHandler.IsActive = true;
 
-            _marker.position = new Vector3(1150f, 0f, 0f);
+            _marker.position = new Vector3(1050f, -50f, 0f);
         }
 
         private void Update()
