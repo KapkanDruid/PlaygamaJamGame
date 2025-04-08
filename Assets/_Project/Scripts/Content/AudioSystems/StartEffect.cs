@@ -14,7 +14,7 @@ namespace Project.Content.Audio
         {
             _audioController = audioController;
 
-            Tutorial.OnTutorialFinished += PLayEffect;
+            TutorialSwithObjectController.OnTutorialFinished += PLayEffect;
         }
 
         private void PLayEffect()
@@ -24,7 +24,7 @@ namespace Project.Content.Audio
 
         private void OnDestroy()
         {
-            Tutorial.OnTutorialFinished -= PLayEffect;
+            TutorialSwithObjectController.OnTutorialFinished -= PLayEffect;
         }
     }
 }
