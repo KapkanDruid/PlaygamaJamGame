@@ -20,4 +20,4 @@ MonoBehaviour:
   _projectileDamage: 6
   _sensorRadius: 5
   _maxHealth: 20
-  _fireRate: 3
+  _fireRate: 2.5

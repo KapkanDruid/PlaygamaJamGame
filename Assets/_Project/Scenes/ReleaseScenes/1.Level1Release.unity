@@ -37408,7 +37408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
       propertyPath: _waves.Array.data[3].WaveInterval
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4132116157578667770, guid: a93fedfdfefcbda449f28aded09585d7, type: 3}
       propertyPath: _waves.Array.data[4].WaveInterval
