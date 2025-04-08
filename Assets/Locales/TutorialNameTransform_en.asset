@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 26105180160
-    m_Localized: Baraks
+    m_Localized: Barracks
     m_Metadata:
       m_Items: []
   - m_Id: 29594841088
@@ -31,11 +31,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32849620992
-    m_Localized: Target Point
+    m_Localized: Targeting
     m_Metadata:
       m_Items: []
   - m_Id: 38373519360
-    m_Localized: Progression Bar
+    m_Localized: Experience Scale
     m_Metadata:
       m_Items: []
   - m_Id: 44786610176

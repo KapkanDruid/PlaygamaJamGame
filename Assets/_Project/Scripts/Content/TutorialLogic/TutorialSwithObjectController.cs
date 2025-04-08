@@ -3,12 +3,14 @@ using UnityEngine.UI;
 using Zenject;
 using System;
 using TMPro;
-using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
+using Project.Content.CoreGameLoopLogic;
+using Cysharp.Threading.Tasks;
+using Project.Architecture;
+using UnityEngine.InputSystem;
 
 namespace Project.Content
 {
-    public class TutorialSwithObjectController : MonoBehaviour
+    public class TutorialSwithObjectController : MonoBehaviour, ISkipHandlerData
     {
         public static event Action OnTutorialFinished;
 
@@ -25,6 +27,7 @@ namespace Project.Content
         [SerializeField] private Image _radialSlider;
         [SerializeField] private float _fillSpeed = 1f;
         private bool isFilling = false;
+        private bool _isPressed;
 
         private int _currentIndex = 0;
 
@@ -32,15 +35,32 @@ namespace Project.Content
 
         private Camera _mainCamera;
 
+        private SkipHandler _skipHandler;
+
+        private InputSystemActions _inputSystemActions;
+        
+
+        public Image SkipFiller => _radialSlider;
+
+        public float SkipDuration => _fillSpeed;
+
         [Inject]
-        private void Construct(PauseHandler pauseHandler, Camera mainCamera)
+        private void Construct(PauseHandler pauseHandler, Camera mainCamera, SkipHandler skipHandler, InputSystemActions inputActions)
         {
             _pauseHandler = pauseHandler;
             _mainCamera = mainCamera;
+            _skipHandler = skipHandler;
+            _inputSystemActions = inputActions;
+
+            _inputSystemActions.UI.Skip.performed += context => _isPressed = true;
         }
 
         private void Start()
         {
+             foreach (var tutorialObjectData in _tutorialObjectsData)
+            {
+                tutorialObjectData.Initialize();
+            }
             if (_uiMask != null)
             {
                 _uiMask.gameObject.SetActive(false);
@@ -58,43 +78,31 @@ namespace Project.Content
                 _descriptionText.gameObject.SetActive(false);
             }
 
-            _pauseHandler.SetPaused(true);
+            _pauseHandler.SetPaused(true);           
 
-            foreach (var tutorialObjectData in _tutorialObjectsData)
-            {
-                tutorialObjectData.Initialize();
-            }
+            _skipHandler.Initialize(this, this.GetCancellationTokenOnDestroy());
 
+            _skipHandler.IsActive = true;
         }
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0) && _tutorialPanel.activeSelf && !isFilling)
+            /*if (Input.GetMouseButtonDown(0) && _tutorialPanel.activeSelf && !isFilling)
             {
                 SwitchToNextItem();
-            }
+            }*/
 
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && _tutorialPanel.activeSelf && !isFilling)
+            if (_isPressed && _tutorialPanel.activeSelf)
             {
                 SwitchToNextItem();
+                _isPressed = false;
             }
 
-            if (Input.GetKey(KeyCode.Space) && _tutorialPanel.activeSelf)
+            if (_skipHandler.IsForceSkip)
             {
-                isFilling = true;
-                _radialSlider.fillAmount += _fillSpeed * Time.deltaTime;
-
-                if (_radialSlider.fillAmount >= 1f)
-                {
-                    ClosePanel();
-                    isFilling = false;
-                }
-            }
-            else if (Input.GetKeyUp(KeyCode.Space))
-            {
-                isFilling = false;
-                _radialSlider.fillAmount = 0f;
-            }
+                ClosePanel();
+                _skipHandler.IsActive = false;
+            }           
         }
 
         private void SwitchToNextItem()

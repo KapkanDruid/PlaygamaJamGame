@@ -13,8 +13,44 @@ MonoBehaviour:
   m_Name: TutorialDescription Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: TutorialDescription
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 188934575c54c044db90825a2f060965
+  m_Entries:
+  - m_Id: 77342797824
+    m_Key: tutDes.Main
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80375279616
+    m_Key: tutDes.Barac
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82736672768
+    m_Key: tutDes.Voice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87446876160
+    m_Key: tutDes.Flag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 92182245376
+    m_Key: tutDes.Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96493989888
+    m_Key: tutDes.Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100663128064
+    m_Key: tutDes.Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104588996608
+    m_Key: tutDes.Help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111765450752
+    m_Key: tutDes.Change
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

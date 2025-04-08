@@ -17,7 +17,43 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 188934575c54c044db90825a2f060965, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 77342797824
+    m_Localized: You lose this, you lose.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80375279616
+    m_Localized: That in itself will produce infantry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82736672768
+    m_Localized: This automatically attacks the enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87446876160
+    m_Localized: Drag that and the infantry will run to follow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 92182245376
+    m_Localized: It shows your level and amount of experience.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96493989888
+    m_Localized: It's counting down to victory.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100663128064
+    m_Localized: You press this if you need to step away.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104588996608
+    m_Localized: That's what you press if you forget something.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111765450752
+    m_Localized: Click once, get the next clue. Press and hold to skip all of them.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
