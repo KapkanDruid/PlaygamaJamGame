@@ -171,8 +171,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -612.22217, y: 34.5}
-  m_SizeDelta: {x: 1024.4445, y: 75}
+  m_AnchoredPosition: {x: -615, y: 40}
+  m_SizeDelta: {x: 1024.4, y: 68.936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3735256945978079452
 CanvasRenderer:
@@ -651,8 +651,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _maskScale: {x: 210, y: 170}
-    _maskPositionOffset: {x: 15, y: 20}
-    _markerPositionOffset: {x: -50, y: -160}
+    _maskPositionOffset: {x: 0, y: 0}
+    _markerPositionOffset: {x: 0, y: 0}
   - _objectPosition: {fileID: 3322717403883285704}
     _localizedName:
       m_TableReference:
@@ -673,8 +673,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _maskScale: {x: 220, y: 160}
-    _maskPositionOffset: {x: 25, y: 0}
-    _markerPositionOffset: {x: -50, y: -170}
+    _maskPositionOffset: {x: 0, y: 0}
+    _markerPositionOffset: {x: 0, y: 0}
   - _objectPosition: {fileID: 8488478381621425249}
     _localizedName:
       m_TableReference:
@@ -695,8 +695,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _maskScale: {x: 125, y: 125}
-    _maskPositionOffset: {x: 30, y: 10}
-    _markerPositionOffset: {x: -50, y: -150}
+    _maskPositionOffset: {x: 0, y: 0}
+    _markerPositionOffset: {x: 0, y: 0}
   - _objectPosition: {fileID: 3181963816359777943}
     _localizedName:
       m_TableReference:
@@ -718,7 +718,7 @@ MonoBehaviour:
       m_LocalVariables: []
     _maskScale: {x: 100, y: 225}
     _maskPositionOffset: {x: 0, y: 0}
-    _markerPositionOffset: {x: -50, y: -200}
+    _markerPositionOffset: {x: 0, y: 0}
   - _objectPosition: {fileID: 3822762259027419593}
     _localizedName:
       m_TableReference:
@@ -739,8 +739,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     _maskScale: {x: 1150, y: 170}
-    _maskPositionOffset: {x: 10, y: 0}
-    _markerPositionOffset: {x: -50, y: -150}
+    _maskPositionOffset: {x: 0, y: 0}
+    _markerPositionOffset: {x: 0, y: 0}
   - _objectPosition: {fileID: 7532895771772825187}
     _localizedName:
       m_TableReference:
@@ -762,7 +762,7 @@ MonoBehaviour:
       m_LocalVariables: []
     _maskScale: {x: 200, y: 140}
     _maskPositionOffset: {x: 0, y: 0}
-    _markerPositionOffset: {x: -50, y: -150}
+    _markerPositionOffset: {x: 0, y: 0}
   - _objectPosition: {fileID: 1108846151509742812}
     _localizedName:
       m_TableReference:
@@ -784,7 +784,7 @@ MonoBehaviour:
       m_LocalVariables: []
     _maskScale: {x: 100, y: 100}
     _maskPositionOffset: {x: 0, y: 0}
-    _markerPositionOffset: {x: -50, y: -150}
+    _markerPositionOffset: {x: 0, y: 0}
   - _objectPosition: {fileID: 5312584132744636409}
     _localizedName:
       m_TableReference:
@@ -806,7 +806,7 @@ MonoBehaviour:
       m_LocalVariables: []
     _maskScale: {x: 100, y: 100}
     _maskPositionOffset: {x: 0, y: 0}
-    _markerPositionOffset: {x: -50, y: -150}
+    _markerPositionOffset: {x: 0, y: 0}
   _nameDescriptionText: {fileID: 8035373713128413082}
   _descriptionText: {fileID: 1955330526174873386}
   _uiMask: {fileID: 6613013134703247663}
@@ -887,9 +887,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -250}
+  m_AnchoredPosition: {x: -49.999943, y: -46.2726}
   m_SizeDelta: {x: 177, y: 304}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1.1701561}
 --- !u!222 &6937101617786076894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1142,8 +1142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 138.18}
-  m_SizeDelta: {x: -125.92114, y: 100}
+  m_AnchoredPosition: {x: 0, y: 140}
+  m_SizeDelta: {x: -130, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2651121366860623229
 CanvasRenderer:
