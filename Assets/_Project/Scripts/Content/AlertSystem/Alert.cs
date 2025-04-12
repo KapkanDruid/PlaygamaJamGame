@@ -6,8 +6,8 @@ namespace Project.Content
     [Serializable]
     public class Alert
     {
-        [SerializeField] private string _text;
+        [SerializeField] private string _key;
 
-        public string Text => _text;
+        public string Key => _key;
     }
 }

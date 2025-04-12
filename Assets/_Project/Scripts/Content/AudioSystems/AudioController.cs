@@ -8,30 +8,28 @@ namespace Project.Content
         [SerializeField] private AudioSource _musicSource;
         [SerializeField] private AudioSource _SFXSource;
 
-        [SerializeField] private EffectType _musicListType;
-
-        [SerializeField] private int _startSoundIndex = 0;
-
         private Sound[] _musicClips;
 
+        private IAudioControllerData _data;
         private SceneRecourses _sceneResources;
 
         private int _currentMusicIndex;
         private bool _isStop;
 
         [Inject]
-        private void Construct(SceneRecourses sceneResources)
+        private void Construct(SceneRecourses sceneResources, IAudioControllerData data)
         {
             _sceneResources = sceneResources;
+            _data = data;
         }
 
         public void Initialize()
         {
-            _currentMusicIndex = _startSoundIndex;
+            _currentMusicIndex = _data.StartMusicIndex;
             _musicSource.loop = false;
-            foreach (var musicList in _sceneResources.MusicDictionary)
+            foreach (var musicList in _sceneResources.MusicPlayList)
             {
-                if (musicList.Key == _musicListType)
+                if (musicList.Key == _data.MusicListType)
                 {
                     _musicClips = musicList.Value;
                     return;
@@ -67,8 +65,9 @@ namespace Project.Content
                 if (clip.Key == effectType)
                 {
                     _SFXSource.loop = true;
+
+                    _SFXSource.volume = clip.Value.Volume;
                     _SFXSource.clip = clip.Value.Clip;
-                    //Добавить множитель звука
                     _SFXSource.Play();
 
                     return;
@@ -84,10 +83,34 @@ namespace Project.Content
             _SFXSource.Stop();
         }
 
+        public void PlayMusic(MusicType effectType)
+        {
+            for (int i = 0; i < _sceneResources.MusicByType.Length; i++)
+            {
+                var clip = _sceneResources.MusicByType[i];
+
+                if (clip.Key == effectType)
+                {
+                    _musicSource.volume = clip.Value.Volume;
+                    _musicSource.clip = clip.Value.Clip;
+                    _musicSource.Play();
+
+                    return;
+                }
+            }
+
+            Debug.LogError("[AudioController] Failed to find music by type");
+        }
+
         public void StopMusic()
         {
             _isStop = true;
             _musicSource.Stop();
+        }
+
+        public void PlayLoopMusic()
+        {
+            _isStop = false;
         }
 
         private void Update()
@@ -95,7 +118,7 @@ namespace Project.Content
             if (_isStop)
                 return;
 
-            if (!_musicSource.isPlaying)
+            if (!_musicSource.isPlaying && _musicSource.time == 0)
             {
                 PlayNextClip();
             }
@@ -105,8 +128,6 @@ namespace Project.Content
         {
             if (_musicClips == null)
                 return;
-
-            Debug.Log("PlayNextClip");
 
             _musicSource.clip = _musicClips[_currentMusicIndex].Clip;
 

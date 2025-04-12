@@ -47,6 +47,12 @@ TextureImporter:
   - first:
       213: 871350801576172917
     second: MainMenuUIAtlas_14
+  - first:
+      213: 2331974194188982847
+    second: MainMenuUIAtlas_15
+  - first:
+      213: -7056718195209262381
+    second: MainMenuUIAtlas_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,7 +99,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,7 +120,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -142,19 +148,6 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 12
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 1
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 4096
-    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -171,12 +164,12 @@ TextureImporter:
       name: MainMenuUIAtlas_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1894
-        width: 3843
-        height: 2166
+        x: 26
+        y: 2131
+        width: 4024
+        height: 1958
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,12 +186,12 @@ TextureImporter:
       name: MainMenuUIAtlas_1
       rect:
         serializedVersion: 2
-        x: 266
-        y: 625
-        width: 923
-        height: 610
+        x: 33
+        y: 389
+        width: 1015
+        height: 1668
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,12 +208,12 @@ TextureImporter:
       name: MainMenuUIAtlas_2
       rect:
         serializedVersion: 2
-        x: 276
-        y: 1234
-        width: 958
-        height: 643
+        x: 1145
+        y: 1604
+        width: 627
+        height: 515
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,12 +230,12 @@ TextureImporter:
       name: MainMenuUIAtlas_3
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1205
-        width: 782
-        height: 643
+        x: 1804
+        y: 1594
+        width: 627
+        height: 515
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,12 +252,12 @@ TextureImporter:
       name: MainMenuUIAtlas_4
       rect:
         serializedVersion: 2
-        x: 2365
-        y: 1206
-        width: 746
-        height: 597
+        x: 2475
+        y: 1601
+        width: 768
+        height: 516
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,12 +274,12 @@ TextureImporter:
       name: MainMenuUIAtlas_5
       rect:
         serializedVersion: 2
-        x: 3212
-        y: 1189
-        width: 712
-        height: 616
+        x: 3339
+        y: 1714
+        width: 309
+        height: 378
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,12 +296,12 @@ TextureImporter:
       name: MainMenuUIAtlas_6
       rect:
         serializedVersion: 2
-        x: 248
-        y: 7
-        width: 892
-        height: 616
+        x: 3789
+        y: 1781
+        width: 205
+        height: 244
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,12 +318,12 @@ TextureImporter:
       name: MainMenuUIAtlas_7
       rect:
         serializedVersion: 2
-        x: 1445
-        y: 502
-        width: 781
-        height: 643
+        x: 1134
+        y: 1077
+        width: 598
+        height: 478
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,12 +340,12 @@ TextureImporter:
       name: MainMenuUIAtlas_8
       rect:
         serializedVersion: 2
-        x: 2349
-        y: 495
-        width: 746
-        height: 596
+        x: 1783
+        y: 1052
+        width: 598
+        height: 478
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,12 +362,12 @@ TextureImporter:
       name: MainMenuUIAtlas_9
       rect:
         serializedVersion: 2
-        x: 3211
-        y: 496
-        width: 712
-        height: 615
+        x: 2468
+        y: 1079
+        width: 740
+        height: 490
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,12 +384,12 @@ TextureImporter:
       name: MainMenuUIAtlas_10
       rect:
         serializedVersion: 2
-        x: 2221
-        y: 17
-        width: 526
-        height: 458
+        x: 3361
+        y: 1303
+        width: 378
+        height: 314
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,12 +406,12 @@ TextureImporter:
       name: MainMenuUIAtlas_11
       rect:
         serializedVersion: 2
-        x: 2948
-        y: 16
-        width: 360
-        height: 441
+        x: 3768
+        y: 1407
+        width: 80
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,12 +428,12 @@ TextureImporter:
       name: MainMenuUIAtlas_12
       rect:
         serializedVersion: 2
-        x: 3439
-        y: 52
-        width: 575
-        height: 366
+        x: 3706
+        y: 1309
+        width: 99
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -453,11 +446,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: MainMenuUIAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 577
+        width: 572
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8817f024321fa9c40800000000000000
+      internalID: 5519989427030421896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuUIAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 538
+        width: 572
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d13baffe8a71c00800000000000000
+      internalID: 871350801576172917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuUIAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 540
+        width: 716
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a130e9c26dc5020800000000000000
+      internalID: 2331974194188982847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuUIAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 3418
+        y: 846
+        width: 387
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da24868030811e90800000000000000
+      internalID: -7056718195209262381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c3abfc7f3956eb549aafceef2bede723
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -474,6 +555,8 @@ TextureImporter:
       MainMenuUIAtlas_12: -3553517507837908063
       MainMenuUIAtlas_13: 5519989427030421896
       MainMenuUIAtlas_14: 871350801576172917
+      MainMenuUIAtlas_15: 2331974194188982847
+      MainMenuUIAtlas_16: -7056718195209262381
       MainMenuUIAtlas_2: 3496162095867623149
       MainMenuUIAtlas_3: 869452932694048245
       MainMenuUIAtlas_4: 8060153961225281824

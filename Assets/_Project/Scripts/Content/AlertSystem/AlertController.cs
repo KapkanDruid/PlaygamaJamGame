@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using Zenject;
 
 namespace Project.Content
@@ -42,13 +43,31 @@ namespace Project.Content
 
                 if (alert.Key == alertType)
                 {
-                    _text.text = alert.Value.Text;
-                    AnimateBanner();
+                    LocalizeAlert(alert.Value.Key);
                     return;
                 }
             }
 
             Debug.LogError("[AlertController] Failed to find alert text");
+        }
+
+        private void LocalizeAlert(string key)
+        {
+            var localizedString = new LocalizedString { TableReference = "Alert", TableEntryReference = key };
+            localizedString.StringChanged += UpdateAlertText;
+            localizedString.RefreshString();
+        }
+
+        private void UpdateAlertText(string localizedText)
+        {
+            if (string.IsNullOrEmpty(localizedText))
+            {
+                Debug.LogError("[AlertController] Failed to localize text for key");
+                return;
+            }
+
+            _text.text = localizedText;
+            AnimateBanner();
         }
 
         private void AnimateBanner()

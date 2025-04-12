@@ -29,6 +29,12 @@ TextureImporter:
   - first:
       213: 2855753986354988514
     second: WIPUpgradeAtlas_8
+  - first:
+      213: -7250344039334234587
+    second: WIPUpgradeAtlas_9
+  - first:
+      213: 2627291745731406150
+    second: WIPUpgradeAtlas_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -231,7 +237,7 @@ TextureImporter:
         x: 1909
         y: 1355
         width: 143
-        height: 246
+        height: 247
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,7 +259,7 @@ TextureImporter:
         x: 2205
         y: 1355
         width: 143
-        height: 246
+        height: 247
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,9 +279,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2526
-        y: 1362
+        y: 1359
         width: 161
-        height: 305
+        height: 308
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,11 +296,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 1406
+        width: 647
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55e75f042d9f0ca0800000000000000
+      internalID: -6048442996333484708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WIPUpgradeAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 59
+        width: 1041
+        height: 1149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649e2a93ce3067420800000000000000
+      internalID: 2627291745731406150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 59e8695b4f411754a9b603d2f9e288f8
+    spriteID: e8f0a570f4408cd47b521dec6abf8ece
     internalID: 0
     vertices: []
     indices: 
@@ -306,6 +356,7 @@ TextureImporter:
     nameFileIdTable:
       WIPUpgradeAtlas_0: -1342020094215906714
       WIPUpgradeAtlas_1: 7859703357687803111
+      WIPUpgradeAtlas_10: 2627291745731406150
       WIPUpgradeAtlas_2: -841645369824388747
       WIPUpgradeAtlas_3: 8961683680368760880
       WIPUpgradeAtlas_4: -7943884915880196790
@@ -313,6 +364,7 @@ TextureImporter:
       WIPUpgradeAtlas_6: -630716180746848780
       WIPUpgradeAtlas_7: -6048442996333484708
       WIPUpgradeAtlas_8: 2855753986354988514
+      WIPUpgradeAtlas_9: -7250344039334234587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

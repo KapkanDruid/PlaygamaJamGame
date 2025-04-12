@@ -1,56 +1,48 @@
-﻿using UnityEngine;
+﻿using Project.Content.BuildSystem;
+using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
 {
     class MainTargetAttackerAttackLogic : ITickable, IGizmosDrawer
     {
-        private ICharacterData _mainTargetAttackerData;
-        private ISensorData _mainTargetAttackerSensorData;
+        private readonly ICharacterData _characterData;
+        private readonly IAttackerData _attackerData;
         private IDamageable _damageable;
-        private CharacterSensor _characterSensor;
-        private MainTargetAttackerHandler _mainTargetAttackerHandler;
+        private MainTargetAttackerEntity _mainTargetAttackerEntity;
+        private MainTargetAttackerData _mainTargetAttackerData;
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private float _attackCooldownTimer;
-        private AnimatorStateInfo _pausedAnimatorState;
+        private EnemyDeadHandler _enemyDeadHandler;
 
-        public MainTargetAttackerAttackLogic(MainTargetAttackerHandler mainTargetAttackerHandler,
-                                             CharacterSensor characterSensor,
+        public MainTargetAttackerAttackLogic(MainTargetAttackerEntity mainTargetAttackerEntity,
                                              Animator animator,
-                                             PauseHandler pauseHandler)
+                                             PauseHandler pauseHandler,
+                                             EnemyDeadHandler enemyDeadHandler,
+                                             ICharacterData characterData,
+                                             IAttackerData attackerData,
+                                             MainTargetAttackerData mainTargetAttackerData)
         {
-            _mainTargetAttackerHandler = mainTargetAttackerHandler;
-            _mainTargetAttackerData = mainTargetAttackerHandler.MainTargetAttackerData;
-            _mainTargetAttackerSensorData = (ISensorData)mainTargetAttackerHandler.MainTargetAttackerData;
-            _characterSensor = characterSensor;
+            _characterData = characterData;
+            _attackerData = attackerData;
+            _mainTargetAttackerData = mainTargetAttackerData;
+            _mainTargetAttackerEntity = mainTargetAttackerEntity;
             _animator = animator;
             _pauseHandler = pauseHandler;
+            _enemyDeadHandler = enemyDeadHandler;
         }
-
 
         public void Tick()
         {
             if (_pauseHandler.IsPaused)
-            {
-                PauseAnimation();
                 return;
-            }
-            else
-            {
-                ResumeAnimation();
-            }
 
-            if (_characterSensor.TargetToAttack == null || _characterSensor.TargetTransformToAttack == null)
-            {
-                _characterSensor.ScanAreaToAttack();
+            if (_enemyDeadHandler.IsDead)
+                return;
 
-                if (_characterSensor.TargetTransformToAttack != null)
-                {
-                    if (!_characterSensor.TargetTransformToAttack.gameObject.activeInHierarchy)
-                        _characterSensor.ScanAreaToAttack();
-                }
-            }
+            if (_mainTargetAttackerEntity.TargetTransform == null)
+                return;
 
             TryToHit();
 
@@ -67,79 +59,62 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         private void TryToHit()
         {
-            if (_characterSensor.TargetToAttack != null)
+            if (_attackCooldownTimer > 0)
+                return;
+
+            _damageable = null;
+
+            if (_mainTargetAttackerEntity.PathInvalid)
             {
-                if (_attackCooldownTimer <= 0)
-                {
-                    _damageable = null;
-                    if (_mainTargetAttackerHandler.PathInvalid)
-                    {
-                        if (_mainTargetAttackerHandler.BlockingEntity == null)
-                            return;
-
-                        Collider2D targetCollider = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<Collider2D>();
-                        if (targetCollider != null)
-                        {
-                            Vector3 closestPoint = targetCollider.ClosestPoint(_mainTargetAttackerHandler.transform.position);
-                            if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, closestPoint) <= _mainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
-                            {
-                                _damageable = _mainTargetAttackerHandler.BlockingEntity.ProvideComponent<IDamageable>();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (Vector2.Distance(_mainTargetAttackerHandler.transform.position, _characterSensor.TargetTransformToAttack.position) <=
-                            _mainTargetAttackerHandler.MainTargetAttackerData.DistanceToTarget + _mainTargetAttackerSensorData.HitColliderSize)
-                        {
-                            _damageable = _characterSensor.TargetToAttack.ProvideComponent<IDamageable>();
-                        }
-                    }
-
-                    Attack();
-                    _attackCooldownTimer = _mainTargetAttackerData.AttackCooldown;
-                }
+                TryToHitEntity(_mainTargetAttackerEntity.BlockingEntity);
             }
+            else
+            {
+                TryToHitEntity(_mainTargetAttackerEntity.TargetEntity);
+            }
+
+            Attack();
+            _attackCooldownTimer = _characterData.AttackCooldown;
+        }
+
+        private void TryToHitEntity(IEntity entity)
+        {
+            if (entity == null)
+                return;
+
+            var targetCollider = entity.ProvideComponent<Collider2D>();
+            if (targetCollider == null)
+                return;
+
+            var closestColliderPoint = targetCollider.ClosestPoint(_mainTargetAttackerEntity.transform.position);
+            if (CheckDistanceToTarget(closestColliderPoint))
+            {
+                _damageable = entity.ProvideComponent<IDamageable>();
+            }
+        }
+
+        private bool CheckDistanceToTarget(Vector2 closestPoint)
+        {
+            return Vector2.Distance(_mainTargetAttackerEntity.transform.position, closestPoint) <= _characterData.DistanceToTarget + _attackerData.HitColliderSize;
         }
 
         private void Attack()
         {
             if (_damageable == null)
                 return;
+
             _animator.SetTrigger(AnimatorHashes.SpikeAttackTrigger);
-            if (_mainTargetAttackerHandler.CanAttack)
-            {
-                _damageable?.TakeDamage(_mainTargetAttackerData.Damage);
-            }
-
-        }
-
-        private void PauseAnimation()
-        {
-            if (_animator.speed != 0)
-            {
-                _pausedAnimatorState = _animator.GetCurrentAnimatorStateInfo(0);
-                _animator.speed = 0;
-            }
-        }
-
-        private void ResumeAnimation()
-        {
-            if (_animator.speed == 0)
-            {
-                _animator.speed = 1;
-                _animator.Play(_pausedAnimatorState.fullPathHash, -1, _pausedAnimatorState.normalizedTime);
-            }
+            _damageable?.TakeDamage(_characterData.Damage);
         }
 
         public void OnDrawGizmos()
         {
 #if UNITY_EDITOR
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position + _mainTargetAttackerSensorData.HitColliderOffset, _mainTargetAttackerSensorData.HitColliderSize);
+            Gizmos.DrawWireSphere((Vector2)_mainTargetAttackerData.SensorData.SensorOrigin.position + _attackerData.HitColliderOffset, _attackerData.HitColliderSize);
 
             Gizmos.color = Color.green;
-            Gizmos.DrawLine((Vector2)_mainTargetAttackerSensorData.CharacterTransform.position, (Vector2)_characterSensor.TargetTransformToChase.position);
+            Gizmos.DrawLine((Vector2)_mainTargetAttackerData.SensorData.SensorOrigin.position, (Vector2)_mainTargetAttackerEntity.TargetTransform.position);
 
 #endif
         }

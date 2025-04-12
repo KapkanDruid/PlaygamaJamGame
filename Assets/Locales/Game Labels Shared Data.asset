@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Game Labels Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Game Labels
+  m_TableCollectionNameGuidString: f0e06759c202ea64ea0492c6d9a39568
+  m_Entries:
+  - m_Id: 75849093120
+    m_Key: game.voiceOfTruth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338529964032
+    m_Key: game.infantryBarracks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475771785216
+    m_Key: game.wall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669460549632
+    m_Key: game.giMan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1155853012992
+    m_Key: game.building
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1300581666816
+    m_Key: game.upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1552256684032
+    m_Key: game.damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1822445359104
+    m_Key: game.attackArea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1696792399872
+    m_Key: game.durability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1599874617344
+    m_Key: game.cooldown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2030319259648
+    m_Key: game.spawnCooldown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3112239976448
+    m_Key: game.area
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3180812652544
+    m_Key: game.health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4720566816768
+    m_Key: game.capacity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26849651806208
+    m_Key: game.resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26989506678784
+    m_Key: game.restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27070473523200
+    m_Key: game.mainMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96876463738880
+    m_Key: game.continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1561658435526656
+    m_Key: game.vicoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1561831056302080
+    m_Key: game.vicoryDescription
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 35266934159966496
+  references:
+    version: 2
+    RefIds:
+    - rid: 35266934159966496
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1743759181091

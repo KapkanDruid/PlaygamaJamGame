@@ -5,11 +5,17 @@ using Zenject;
 
 namespace Project.Content
 {
-    public class SceneData : MonoBehaviour
+    public class SceneData : MonoBehaviour, IAudioControllerData
     {
+        [Header("Music Settings")]
+        [SerializeField] private MusicType _musicListType;
+        [SerializeField] private int _startMusicIndex = 0;
+        [SerializeField] private TimedClip[] _musicByTime;
+
+        [Header("System Settings"), Space(3)]
         [SerializeField] private Vector2Int _groundGridSize;
-        [SerializeField] private Vector2 _startFlagPosition;
-        [Header("Time in Seconds")]
+
+        [Header("Time in Seconds"), Space(3)]
         [SerializeField] private float _timeToWin;
 
         private Dictionary<TurretType, TurretDynamicData> _turretDynamicData = new();
@@ -19,11 +25,16 @@ namespace Project.Content
         private SceneRecourses _recourses;
 
         public Vector2Int GroundGridSize => _groundGridSize;
-        public Vector2 StartFlagPosition => _startFlagPosition;
+
         public float TimeToWin => _timeToWin;
+        public int StartMusicIndex => _startMusicIndex;
+
         public IReadOnlyDictionary<TurretType, TurretDynamicData> TurretDynamicData => _turretDynamicData;
         public IReadOnlyDictionary<BarracksType, BarrackDynamicData> BarrackDynamicData => _barrackDynamicData;
-        public WallDynamicData WallDynamicData => _wallDynamicData; 
+
+        public WallDynamicData WallDynamicData => _wallDynamicData;
+        public MusicType MusicListType => _musicListType; 
+        public TimedClip[] MusicByTime => _musicByTime; 
 
         [Inject]
         private void Construct(SceneRecourses recourses)

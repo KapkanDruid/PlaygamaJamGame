@@ -19,7 +19,6 @@ namespace Project.Content.UI
 
         private SceneData _sceneData;
         private BarrackDynamicData _dynamicData;
-        private bool _isInited;
 
         [Inject]
         private void Construct(SceneData sceneData)
@@ -31,19 +30,10 @@ namespace Project.Content.UI
         private void Initialize()
         {
             _dynamicData = _sceneData.BarrackDynamicData[_type];
-
-            _baseText.text = _config.Damage.ToString();
-            _bonusText.text = _dynamicData.UnitDamageModifier.Value.ToString();
-            _currentText.text = (_dynamicData.UnitDamageModifier.Value + _config.Damage).ToString();
-
-            _isInited = true;
         }
 
         private void OnEnable()
         {
-            if (!_isInited)
-                gameObject.SetActive(false);
-
             if (_dynamicData == null)
                 return;
 
