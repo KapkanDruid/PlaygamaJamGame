@@ -144,9 +144,9 @@ namespace Project.Content.BuildSystem
             _pointerPosition = _mainCamera.ScreenToWorldPoint(interactionPosition);
         }
 
-#if UNITY_EDITOR
         public void OnDrawGizmos()
         {
+#if UNITY_EDITOR
             if (_grid == null)
                 return;
 
@@ -176,8 +176,8 @@ namespace Project.Content.BuildSystem
             {
                 Gizmos.DrawWireCube(_grid.GetCellCenterWorld(_grid.WorldToCell(new Vector3(cell.x, cell.y, 0))), Vector3.one);
             }
-        }
 #endif
+        }
         public void Dispose()
         {
             _inputSystemActions.Player.Pointer.performed -= ReadInputPointer;
