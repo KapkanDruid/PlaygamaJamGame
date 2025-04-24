@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Project.Content
 {
-    public class ObjectPooler<T> where T : MonoBehaviour
+    public class MonoObjectPooler<T> where T : MonoBehaviour
     {
         private List<T> _objects;
         private GameObject _parentObject;
         private IPoolObjectsCreator<T> _poolObjectsCreator;
 
-        public ObjectPooler(int prewarmObjects, string parentObjectName, IPoolObjectsCreator<T> poolObjectsCreator)
+        public MonoObjectPooler(int prewarmObjects, string parentObjectName, IPoolObjectsCreator<T> poolObjectsCreator)
         {
             _parentObject = new GameObject(parentObjectName);
             _objects = new List<T>();
@@ -20,7 +20,7 @@ namespace Project.Content
             _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
         }
 
-        public ObjectPooler(int prewarmObjects, GameObject parentObject, IPoolObjectsCreator<T> poolObjectsCreator)
+        public MonoObjectPooler(int prewarmObjects, GameObject parentObject, IPoolObjectsCreator<T> poolObjectsCreator)
         {
             _parentObject = parentObject;
             _objects = new List<T>();

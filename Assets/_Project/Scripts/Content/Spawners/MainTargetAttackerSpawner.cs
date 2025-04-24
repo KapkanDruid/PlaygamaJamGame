@@ -9,7 +9,7 @@ namespace Project.Content.Spawners
 {
     public class MainTargetAttackerSpawner : IEnemySpawner
     {
-        private ObjectPooler<MainTargetAttackerEntity> _mainTargetAttackerPool;
+        private MonoObjectPooler<MainTargetAttackerEntity> _mainTargetAttackerPool;
         private List<MainTargetAttackerEntity.Factory> _mainTargetAttackerFactory;
         private MainTargetAttackerType _type;
         private GameObject _prefab;
@@ -27,7 +27,7 @@ namespace Project.Content.Spawners
             foreach (var factory in _mainTargetAttackerFactory)
             {
                 if (factory.Type == _type)
-                    _mainTargetAttackerPool = new ObjectPooler<MainTargetAttackerEntity>(capacityInPool, "MainTargetAttackers", new InstantiateObjectsByFactory<MainTargetAttackerEntity>(factory));
+                    _mainTargetAttackerPool = new MonoObjectPooler<MainTargetAttackerEntity>(capacityInPool, "MainTargetAttackers", new InstantiateObjectsByFactory<MainTargetAttackerEntity>(factory));
             }
         }
 

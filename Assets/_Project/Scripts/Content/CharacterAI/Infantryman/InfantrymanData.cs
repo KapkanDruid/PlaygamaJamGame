@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Project.Content.CharacterAI.Infantryman
 {
     [Serializable]
-    public class InfantrymanData : IAllyEntityData, IShooterData, IProjectilePoolData
+    public class InfantrymanData : IAllyEntityData, IShooterData, ISimpleProjectilePoolData
     {
         [SerializeField] InfantrymanConfig _infantrymanConfig;
         [SerializeField] private Transform _damageTextPoint;

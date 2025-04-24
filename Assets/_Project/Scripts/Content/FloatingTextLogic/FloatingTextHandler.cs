@@ -7,7 +7,7 @@ namespace Project.Content
     {
         private SceneRecourses _sceneRecourses;
 
-        private Dictionary<FloatingTextConfig, ObjectPooler<FloatingText>> _textPoolers = new();
+        private Dictionary<FloatingTextConfig, MonoObjectPooler<FloatingText>> _textPoolers = new();
 
         public FloatingTextHandler(SceneRecourses sceneRecourses)
         {
@@ -24,7 +24,7 @@ namespace Project.Content
             {
                 if (!_textPoolers.ContainsKey(text.Config))
                 {
-                    _textPoolers[text.Config] = new ObjectPooler<FloatingText>(10, poolersParentObject, new InstantiateObjectsSimple<FloatingText>(text));
+                    _textPoolers[text.Config] = new MonoObjectPooler<FloatingText>(10, poolersParentObject, new InstantiateObjectsSimple<FloatingText>(text));
                 }
                 else
                     Debug.LogError($"[FloatingTextHandler] Filed to create {text.name} pool! Found multiple configs with same type.");

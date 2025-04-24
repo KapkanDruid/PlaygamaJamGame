@@ -7,21 +7,21 @@ namespace Project.Content.CharacterAI.Infantryman
 {
     public class InfantrymanAttackLogic : ITickable, IInitializable
     {
-        private readonly IProjectilePoolData _poolData;
+        private readonly ISimpleProjectilePoolData _poolData;
         private readonly IShooterData _shootData;
         private readonly Transform _shootPoint;
 
         private IAllyEntityData _infantrymanData;
         private InfantrymanEntity _infantrymanEntity;
         private float _attackCooldownTimer;
-        private ObjectPooler<SimpleProjectile> _projectilePool;
+        private MonoObjectPooler<SimpleProjectile> _projectilePool;
         private Animator _animator;
         private PauseHandler _pauseHandler;
         private DiContainer _diContainer;
         private EnemyDeadHandler _enemyDeadHandler;
 
         public InfantrymanAttackLogic(InfantrymanEntity infantrymanEntity,
-                                      IProjectilePoolData projectilePoolData,
+                                      ISimpleProjectilePoolData projectilePoolData,
                                       IShooterData shootData,
                                       Animator animator,
                                       PauseHandler pauseHandler,
@@ -43,7 +43,7 @@ namespace Project.Content.CharacterAI.Infantryman
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _diContainer));
+            _projectilePool = new MonoObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _diContainer));
         }
 
         public void Tick()

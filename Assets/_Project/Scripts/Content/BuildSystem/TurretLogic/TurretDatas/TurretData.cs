@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Project.Content.BuildSystem
 {
     [Serializable]
-    public class TurretData : IPlaceComponentData, IHealthData, ITurretShootData, IProjectilePoolData, IDisposable, IPLaceEffectData
+    public class TurretData : IPlaceComponentData, IHealthData, ITurretShootData, ISimpleProjectilePoolData, IDisposable, IPLaceEffectData
     {
         [SerializeField] private int _projectilePoolSize;
         [SerializeField] private SimpleProjectile _projectilePrefab;

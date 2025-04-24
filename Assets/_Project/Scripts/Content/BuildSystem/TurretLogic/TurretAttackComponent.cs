@@ -9,7 +9,7 @@ namespace Project.Content.BuildSystem
 {
     public class TurretAttackComponent : ITickable
     {
-        private readonly IProjectilePoolData _poolData;
+        private readonly ISimpleProjectilePoolData _poolData;
         private readonly ITurretShootData _shootData;
 
         private readonly GizmosDrawer _gizmosDrawer;
@@ -24,13 +24,13 @@ namespace Project.Content.BuildSystem
 
         private CancellationToken _cancellationToken;
 
-        private ObjectPooler<SimpleProjectile> _projectilePool;
+        private MonoObjectPooler<SimpleProjectile> _projectilePool;
         private bool _isReadyToShoot;
         private bool _isRotating;
         private bool _isActive;
         private float _shootTimer;
 
-        public TurretAttackComponent(IProjectilePoolData projectilePoolData,
+        public TurretAttackComponent(ISimpleProjectilePoolData projectilePoolData,
                                      ITurretShootData shootData,
                                      CancellationToken cancellationToken,
                                      GizmosDrawer gizmosDrawer,
@@ -49,7 +49,7 @@ namespace Project.Content.BuildSystem
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _container));
+            _projectilePool = new MonoObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _container));
             _isReadyToShoot = true;
             _sensor = new TargetSensor(_shootData.SensorData, Color.red);
             _sensorFilter = new ClosestTargetSensorFilter(_localTransform);
