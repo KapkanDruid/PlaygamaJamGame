@@ -24,18 +24,19 @@ namespace Project.Content.ObjectPool
             }
         }
 
-        public void AddPool<T>(IFiltrablePool<T> pool)
+        public void AddToPool<T>(T createdObject)
         {
             var key = typeof(T);
 
-            if (!_pools.ContainsKey(key))
+            if (_pools.ContainsKey(key))
             {
-                _pools.Add(key, pool);
+                if (_pools[key] is IFiltrablePool<T> pool)
+                {
+                    pool.Add(createdObject);
+                }
             }
-            else
-            {
-                Debug.LogError($"Object pool for {key.Name} already exists, created prefabs will not be used with the pooling system");
-            }
+
+            Debug.LogError($"[FiltrablePoolsHandler] Failed to AddToPool, pool of {key.Name} does not exist");
         }
 
         public T GetByFilter<T>(IPoolFilterStrategy<T> poolFilter)
@@ -50,7 +51,7 @@ namespace Project.Content.ObjectPool
                 }
             }
 
-            Debug.LogError($"[FiltrablePoolsHandler] Failed to GetFromPoolByFilter, pool of {key.Name} does not exist");
+            Debug.LogError($"[FiltrablePoolsHandler] Failed to GetByFilter, pool of {key.Name} does not exist");
             return default;
         }
 
@@ -66,7 +67,7 @@ namespace Project.Content.ObjectPool
                 }
             }
 
-            Debug.LogError($"[FiltrablePoolsHandler] Failed to GetFromPoolByFilter, pool of {key.Name} does not exist");
+            Debug.LogError($"[FiltrablePoolsHandler] Failed to GetByPredicate, pool of {key.Name} does not exist");
             return default;
         }
     }
