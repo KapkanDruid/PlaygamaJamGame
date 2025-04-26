@@ -1,6 +1,7 @@
 using Project.Content;
 using Project.Content.BuildSystem;
 using Project.Content.CharacterAI;
+using Project.Content.ObjectPool;
 using Project.Content.UI;
 using System;
 using UnityEngine;
@@ -19,6 +20,8 @@ namespace Project.Architecture
         [Inject] private UpgradeEffectController _upgradeEffectController;
         [Inject] private AudioController _audioController;
         [Inject] private EntityCommander _entityCommander;
+        [Inject] private PoolsParentContainer _poolsParentContainer;
+        [Inject] private FiltrablePoolsHandler _filtrablePoolsHandler;
 
         public static event Action OnServicesInitialized;
 
@@ -34,6 +37,8 @@ namespace Project.Architecture
             _cardsPopupView.Initialize();
             _cardsPopupPresenter.Initialize();
             _levelExperienceHandler.Initialize();
+            _poolsParentContainer.Initialize();
+            _filtrablePoolsHandler.Initialize();
             _floatingTextHandler.Initialize();
             _upgradeEffectController.Initialize();
             _audioController.Initialize();

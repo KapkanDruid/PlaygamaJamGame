@@ -59,6 +59,7 @@ namespace Project.Architecture
 
             FactoriesInstaller.Install(Container);
             FactoriesUnitInstaller.Install(Container);
+            ObjectPoolerInstaller.Install(Container);
         }
     }
 }

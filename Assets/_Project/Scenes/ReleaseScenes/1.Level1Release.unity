@@ -34807,6 +34807,7 @@ MonoBehaviour:
   - _effectType: {fileID: 11400000, guid: f415d483b51ce5140af5ccd3cd1345e4, type: 2}
     _playTimeInSeconds: 500
   _groundGridSize: {x: 34, y: 18}
+  _poolsSize: 3
   _timeToWin: 600
 --- !u!4 &889152092
 Transform:
@@ -47386,7 +47387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7742987400316893217, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -43.49597
+      value: -43.49591
       objectReference: {fileID: 0}
     - target: {fileID: 7742987400316893217, guid: 6be25fd27149d3640b5a22b11bd2d257, type: 3}
       propertyPath: m_AnchoredPosition.y

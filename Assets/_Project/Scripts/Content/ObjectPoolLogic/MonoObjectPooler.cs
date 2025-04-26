@@ -1,13 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using Project.Content.ObjectPool;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace Project.Content
 {
-    public class MonoObjectPooler<T> where T : MonoBehaviour
+    public class MonoObjectPooler<T> : IFiltrablePool<T> where T : MonoBehaviour
     {
         private List<T> _objects;
         private GameObject _parentObject;
+        private Transform _parentTransform;
         private IPoolObjectsCreator<T> _poolObjectsCreator;
 
         public MonoObjectPooler(int prewarmObjects, string parentObjectName, IPoolObjectsCreator<T> poolObjectsCreator)
@@ -30,6 +33,29 @@ namespace Project.Content
             _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
         }
 
+        public MonoObjectPooler(Transform parentTransform, List<T> objects)
+        {
+            _objects = objects;
+            _parentTransform = parentTransform;
+        }
+
+        public void Add(T createdObject)
+        {
+            _objects.Add(createdObject);
+        }
+
+        public T GetByFilter(IPoolFilterStrategy<T> filterStrategy, Func<T> createObject)
+        {
+            var poolObject = filterStrategy.Select(_objects.ToArray());
+
+            if (poolObject == null)
+                poolObject = createObject();
+
+            poolObject.transform.SetParent(_parentTransform, true);
+            poolObject.gameObject.SetActive(false);
+            return poolObject;
+        }
+
         public T Get()
         {
             var obj = _objects.FirstOrDefault(x => !x.isActiveAndEnabled);
@@ -41,11 +67,6 @@ namespace Project.Content
 
             obj.gameObject.SetActive(true);
             return obj;
-        }
-
-        public void Release(T obj)
-        {
-            obj.gameObject.SetActive(false);
         }
 
         private T Create()
