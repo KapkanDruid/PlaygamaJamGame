@@ -37,6 +37,12 @@ namespace Project.Content
         {
             _objects = objects;
             _parentTransform = parentTransform;
+
+            foreach (var item in objects)
+            {
+                item.transform.SetParent(parentTransform);
+                item.gameObject.SetActive(false);
+            }
         }
 
         public void Add(T createdObject)

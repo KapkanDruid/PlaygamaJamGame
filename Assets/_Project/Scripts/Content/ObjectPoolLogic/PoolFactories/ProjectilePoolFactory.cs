@@ -41,8 +41,6 @@ namespace Project.Content.ObjectPool
                 {
                     var createdObject = GameObject.Instantiate(prefab);
                     _container.Inject(createdObject);
-                    createdObject.transform.SetParent(parentTransform);
-                    createdObject.gameObject.SetActive(false);
 
                     projectiles.Add(createdObject);
                 }
