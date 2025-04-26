@@ -255,6 +255,7 @@ MonoBehaviour:
   _data:
     _projectilePoolSize: 10
     _projectilePrefab: {fileID: 2874680280605139772, guid: f8ea436bb0eb1c642ac4894742982927, type: 3}
+    _projectileType: {fileID: 11400000, guid: c3a668d04176634469132f0e2d8d3ab8, type: 2}
     _gridPivotTransform: {fileID: 8215651618980773562}
     _spriteRenderers:
     - {fileID: 3019180914140349388}

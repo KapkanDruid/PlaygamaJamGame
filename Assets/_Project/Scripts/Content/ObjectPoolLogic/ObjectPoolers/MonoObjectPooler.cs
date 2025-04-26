@@ -12,6 +12,7 @@ namespace Project.Content
         private GameObject _parentObject;
         private Transform _parentTransform;
         private IPoolObjectsCreator<T> _poolObjectsCreator;
+        private IPolableObjectsFactory<T> _objectsFactory;
 
         public MonoObjectPooler(int prewarmObjects, string parentObjectName, IPoolObjectsCreator<T> poolObjectsCreator)
         {
@@ -33,10 +34,11 @@ namespace Project.Content
             _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
         }
 
-        public MonoObjectPooler(Transform parentTransform, List<T> objects)
+        public MonoObjectPooler(Transform parentTransform, List<T> objects, IPolableObjectsFactory<T> objectsFactory)
         {
             _objects = objects;
             _parentTransform = parentTransform;
+            _objectsFactory = objectsFactory;
 
             foreach (var item in objects)
             {
@@ -50,15 +52,17 @@ namespace Project.Content
             _objects.Add(createdObject);
         }
 
-        public T GetByFilter(IPoolFilterStrategy<T> filterStrategy, Func<T> createObject)
+        public T GetByFilter(IPoolFilterStrategy<T> filterStrategy)
         {
             var poolObject = filterStrategy.Select(_objects.ToArray());
 
             if (poolObject == null)
-                poolObject = createObject();
+            {
+                poolObject = _objectsFactory.CreateByFilter(filterStrategy);
+                poolObject.transform.SetParent(_parentTransform, true);
+            }
 
-            poolObject.transform.SetParent(_parentTransform, true);
-            poolObject.gameObject.SetActive(false);
+            poolObject.gameObject.SetActive(true);
             return poolObject;
         }
 

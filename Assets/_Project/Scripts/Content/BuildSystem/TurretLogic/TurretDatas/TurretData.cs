@@ -6,10 +6,9 @@ using UnityEngine;
 namespace Project.Content.BuildSystem
 {
     [Serializable]
-    public class TurretData : IPlaceComponentData, IHealthData, ITurretShootData, ISimpleProjectilePoolData, IDisposable, IPLaceEffectData
+    public class TurretData : IPlaceComponentData, IHealthData, ITurretShootData, IProjectileTypeData, IDisposable, IPLaceEffectData
     {
-        [SerializeField] private int _projectilePoolSize;
-        [SerializeField] private SimpleProjectile _projectilePrefab;
+        [SerializeField] private ProjectileType _projectileType;
 
         [SerializeField] private Transform _gridPivotTransform;
         [SerializeField] private SpriteRenderer[] _spriteRenderers;
@@ -35,7 +34,6 @@ namespace Project.Content.BuildSystem
         private IEntity _thisEntity;
 
         public float ReloadTime => _dynamicData.ReloadTime;
-        public int ProjectilePoolCount => _projectilePoolSize;
 
         public Transform PivotTransform => _gridPivotTransform;
         public SpriteRenderer[] SpriteRenderers => _spriteRenderers;
@@ -45,7 +43,6 @@ namespace Project.Content.BuildSystem
         public GameObject[] PhysicObjects => _physicObjects;
         public Transform RotationObject => _turretRotationObject;
         public Transform ShootPoint => _turretShootPoint;
-        public SimpleProjectile ProjectilePrefab => _projectilePrefab;
 
         public IProjectileData ProjectileData => _projectileData;
         public ISensorData SensorData => _sensorData;
@@ -56,8 +53,10 @@ namespace Project.Content.BuildSystem
         public IReactiveProperty<float> Health => _health;
         public Transform AttackZone => _attackZone;
         public EffectType PlaceSoundEffect => _placeSoundEffect;
+        public ProjectileType ProjectileType => _projectileType;
 
         public Collider2D Collider => _collider;
+
 
         public void Construct(TurretDynamicData dynamicData, IEntity entity)
         {

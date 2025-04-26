@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Project.Content.ObjectPool
 {
-    public class ProjectilePoolFactory : IFiltrablePoolFactory
+    public class ProjectilePoolFactory : IFiltrablePoolFactory, IPolableObjectsFactory<SimpleProjectile>
     {
         private SceneData _sceneData;
         private DiContainer _container;
@@ -46,9 +46,19 @@ namespace Project.Content.ObjectPool
                 }
             }
 
-            var pool = new MonoObjectPooler<SimpleProjectile>(parentTransform, projectiles);
+            var pool = new MonoObjectPooler<SimpleProjectile>(parentTransform, projectiles, this);
 
             return pool;
+        }
+
+        public SimpleProjectile CreateByFilter(IPoolFilterStrategy<SimpleProjectile> filter)
+        {
+            var prefab = filter.Select(_simpleProjectilePrefabs.ToArray());
+
+            var createdObject = GameObject.Instantiate(prefab);
+            _container.Inject(createdObject);
+
+            return createdObject;
         }
     }
 }

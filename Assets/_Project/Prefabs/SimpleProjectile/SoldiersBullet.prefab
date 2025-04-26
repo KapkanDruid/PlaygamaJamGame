@@ -47,9 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee6797fa9c92934a92d392db70f022d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
   _disposeType: 1
-  _enemyFlag: 
   _projectileRigidbody: {fileID: 2334966645388040572}
   _spawnEffectOnDestroy: 0
   _effectOnDestroyPrefab: {fileID: 0}
@@ -57,6 +55,7 @@ MonoBehaviour:
   _animator: {fileID: 8724414566760305029}
   _shootEffect: {fileID: 11400000, guid: f5b6cec27f492e9489747ef13284a0bf, type: 2}
   _hitEffect: {fileID: 11400000, guid: 66474f615be9f5a4396dc37682f1ce2e, type: 2}
+  _projectileType: {fileID: 11400000, guid: b5232dfb3eb6a59428dc99cddc6ed729, type: 2}
 --- !u!61 &4880828179426428193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91,7 +90,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.04935789, y: 0.02564454}
+  m_Offset: {x: 0.23, y: 0.02564454}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -157,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 8171554483100648430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.288, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

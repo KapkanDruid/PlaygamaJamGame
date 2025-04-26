@@ -1,32 +1,35 @@
-﻿using Project.Content.BuildSystem;
+﻿using Project.Content.ObjectPool;
 using Project.Content.ProjectileSystem;
+using System;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanAttackLogic : ITickable, IInitializable
+    public class InfantrymanAttackLogic : ITickable
     {
-        private readonly ISimpleProjectilePoolData _poolData;
+        private readonly IProjectileTypeData _poolData;
         private readonly IShooterData _shootData;
         private readonly Transform _shootPoint;
+        private readonly FiltrablePoolsHandler _poolsHandler;
 
         private IAllyEntityData _infantrymanData;
         private InfantrymanEntity _infantrymanEntity;
         private float _attackCooldownTimer;
-        private MonoObjectPooler<SimpleProjectile> _projectilePool;
         private Animator _animator;
         private PauseHandler _pauseHandler;
-        private DiContainer _diContainer;
         private EnemyDeadHandler _enemyDeadHandler;
 
+        private Predicate<SimpleProjectile> ProjectilePredicate
+            => item => item.ProjectileType == _poolData.ProjectileType && item.gameObject.activeInHierarchy == false;
+
         public InfantrymanAttackLogic(InfantrymanEntity infantrymanEntity,
-                                      ISimpleProjectilePoolData projectilePoolData,
+                                      IProjectileTypeData projectilePoolData,
                                       IShooterData shootData,
                                       Animator animator,
                                       PauseHandler pauseHandler,
-                                      DiContainer diContainer,
-                                      EnemyDeadHandler enemyDeadHandler)
+                                      EnemyDeadHandler enemyDeadHandler,
+                                      FiltrablePoolsHandler poolsHandler = null)
         {
             _infantrymanEntity = infantrymanEntity;
             _infantrymanData = infantrymanEntity.InfantrymanData;
@@ -35,15 +38,8 @@ namespace Project.Content.CharacterAI.Infantryman
             _shootPoint = _shootData.ShootPoint;
             _animator = animator;
             _pauseHandler = pauseHandler;
-            _diContainer = diContainer;
             _enemyDeadHandler = enemyDeadHandler;
-
-            Initialize();
-        }
-
-        public void Initialize()
-        {
-            _projectilePool = new MonoObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "InfantrymanProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _diContainer));
+            _poolsHandler = poolsHandler;
         }
 
         public void Tick()
@@ -75,8 +71,12 @@ namespace Project.Content.CharacterAI.Infantryman
             if (_attackCooldownTimer <= 0)
             {
                 _animator.SetTrigger(AnimatorHashes.RangeAttackTrigger);
-                var projectile = _projectilePool.Get();
-                projectile.Prepare(_shootPoint.position, _infantrymanEntity.TargetTransform.position - _infantrymanEntity.transform.position, _shootData.ProjectileData);
+
+                var projectile = _poolsHandler.GetByPredicate<SimpleProjectile>(ProjectilePredicate);
+
+                Vector2 direction = _infantrymanEntity.TargetTransform.position - _shootPoint.position;
+
+                projectile.Prepare(_shootPoint.position, direction, _shootData.ProjectileData);
 
                 _attackCooldownTimer = _infantrymanData.AttackCooldown;
             }
@@ -90,7 +90,5 @@ namespace Project.Content.CharacterAI.Infantryman
             }
         }
     }
-
-
 }
 

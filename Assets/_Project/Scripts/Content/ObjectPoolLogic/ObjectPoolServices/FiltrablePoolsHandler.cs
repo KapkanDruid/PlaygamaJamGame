@@ -38,7 +38,7 @@ namespace Project.Content.ObjectPool
             }
         }
 
-        public T GetFromPoolByFilter<T>(IPoolFilterStrategy<T> poolFilter, Func<T> createObject)
+        public T GetByFilter<T>(IPoolFilterStrategy<T> poolFilter)
         {
             var key = typeof(T);
 
@@ -46,7 +46,7 @@ namespace Project.Content.ObjectPool
             {
                 if (_pools[key] is IFiltrablePool<T> pool)
                 {
-                    return pool.GetByFilter(poolFilter, createObject);
+                    return pool.GetByFilter(poolFilter);
                 }
             }
 
@@ -54,7 +54,7 @@ namespace Project.Content.ObjectPool
             return default;
         }
 
-        public T GetFromPoolByPredicate<T>(Predicate<T> predicate, Func<T> createObject)
+        public T GetByPredicate<T>(Predicate<T> predicate)
         {
             var key = typeof(T);
 
@@ -62,7 +62,7 @@ namespace Project.Content.ObjectPool
             {
                 if (_pools[key] is IFiltrablePool<T> pool)
                 {
-                    return pool.GetByFilter(new FilterByPredicate<T>(predicate), createObject);
+                    return pool.GetByFilter(new FilterByPredicate<T>(predicate));
                 }
             }
 
