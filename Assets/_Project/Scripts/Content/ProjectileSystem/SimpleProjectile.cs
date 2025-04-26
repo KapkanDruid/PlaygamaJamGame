@@ -14,7 +14,7 @@ namespace Project.Content.ProjectileSystem
         private PauseHandler _pauseHandler;
         private AudioController _audioController;
 
-        private float _damage;
+        [SerializeField] private float _damage;
         private float _speed;
         private float _lifeTime;
         private float _elapsedTime;
@@ -88,6 +88,15 @@ namespace Project.Content.ProjectileSystem
 
             if (_hitEffect != null)
                 _audioController.PlayOneShot(_hitEffect);
+
+            if (_animator != null)
+            {
+                _animator.SetTrigger(AnimatorHashes.HitTrigger);
+                _isActive = false;
+                WaitForAnimation(() => gameObject.SetActive(false)).Forget();
+            }
+            else
+                gameObject.SetActive(false);
         }
 
         private async UniTask WaitForAnimation(Action action)

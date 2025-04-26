@@ -217,6 +217,7 @@ MonoBehaviour:
       _flags: 00000000
     _enemyFlag: 01000000
     _floatingText: {fileID: 11400000, guid: d3bc4705e24fec346818128c7b5678cc, type: 2}
+    _collider: {fileID: 7095946305631709664}
 --- !u!195 &1310290315453388512
 NavMeshAgent:
   m_ObjectHideFlags: 0
