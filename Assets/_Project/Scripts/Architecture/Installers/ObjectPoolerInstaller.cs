@@ -11,6 +11,8 @@ namespace Project.Architecture
             Container.Bind<FiltrablePoolsHandler>().AsSingle().NonLazy();
 
             Container.BindInterfacesAndSelfTo<ProjectilePoolFactory>().AsSingle().NonLazy();
+
+            Container.Bind<FloatingTextPoolFactory>().AsSingle().NonLazy();
         }
     }
 }
