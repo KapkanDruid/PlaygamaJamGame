@@ -87,6 +87,14 @@ MonoBehaviour:
     m_Key: game.continue
     m_Metadata:
       m_Items: []
+  - m_Id: 1561658435526656
+    m_Key: game.vicoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1561831056302080
+    m_Key: game.vicoryDescription
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

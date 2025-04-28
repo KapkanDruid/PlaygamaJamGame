@@ -58,6 +58,7 @@ namespace Project.Content.CoreGameLoopLogic
                 return;
 
             _isSkipPressed = true;
+            _skipFiller.fillAmount = _currentSkipTime / _skipDuration;
             HandleSkipAsync().Forget();
         }
 
@@ -78,6 +79,7 @@ namespace Project.Content.CoreGameLoopLogic
                 {
                     _currentSkipTime = _skipDuration;
                     _isForceSkip = true;
+                    _currentSkipTime = 0;
                     return;
                 }
 

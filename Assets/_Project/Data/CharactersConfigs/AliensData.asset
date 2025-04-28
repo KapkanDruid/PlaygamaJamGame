@@ -15,10 +15,10 @@ MonoBehaviour:
   _health: 10
   _experiencePoints: 8
   _speed: 3
-  _distanceToTarget: 0.3
+  _distanceToTarget: 0.1
   _damage: 4
-  _attackCooldown: 1
+  _attackCooldown: 2
   _hitColliderSize: 1
   _hitColliderOffset: {x: 0, y: 0}
   _type: 3
-  _sensorRadius: 20
+  _sensorRadius: 100
