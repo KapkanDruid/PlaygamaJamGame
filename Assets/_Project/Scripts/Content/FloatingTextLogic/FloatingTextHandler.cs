@@ -1,5 +1,4 @@
 ﻿using Project.Content.ObjectPool;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Content
@@ -7,10 +6,7 @@ namespace Project.Content
     public class FloatingTextHandler
     {
         private readonly FloatingTextPoolFactory _poolFactory;
-
         private MonoObjectPooler<FloatingText> _textPool;
-
-        private Dictionary<FloatingTextConfig, MonoObjectPooler<FloatingText>> _textPoolers = new();
 
         public FloatingTextHandler(FloatingTextPoolFactory poolFactory)
         {
