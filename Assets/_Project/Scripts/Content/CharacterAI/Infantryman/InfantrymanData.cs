@@ -77,8 +77,9 @@ namespace Project.Content.CharacterAI.Infantryman
         public void UpdateData(InfantrymanSpawnData spawnData)
         {
             _projectileData.Damage = _infantrymanConfig.Damage;
+            Debug.Log($"SpawnData DamageModifier: {spawnData.DamageModifier}");
             _projectileData.Damage += spawnData.DamageModifier;
-
+            Debug.Log($"Projectile damage after modifier: {_projectileData.Damage}");
             _health = _infantrymanConfig.Health;
             _health += spawnData.HealthModifier;
 
