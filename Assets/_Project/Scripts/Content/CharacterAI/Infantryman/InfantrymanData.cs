@@ -6,9 +6,9 @@ using UnityEngine;
 namespace Project.Content.CharacterAI.Infantryman
 {
     [Serializable]
-    public class InfantrymanData : IAllyEntityData, IShooterData, IProjectilePoolData
+    public class InfantrymanData : IAllyEntityData, IShooterData, IProjectileTypeData
     {
-        [SerializeField] InfantrymanConfig _infantrymanConfig;
+        [SerializeField] private InfantrymanConfig _infantrymanConfig;
         [SerializeField] private Transform _damageTextPoint;
         [SerializeField] private Transform _entityTransform;
         [SerializeField] private Transform _turretShootPoint;
@@ -16,7 +16,7 @@ namespace Project.Content.CharacterAI.Infantryman
         [SerializeField] private float _projectileSpeed;
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags[] _enemyFlag;
-        [SerializeField] private SimpleProjectile _projectilePrefab;
+        [SerializeField] private ProjectileType _projectileType;
         [SerializeField] private Color[] _levelColors;
         [SerializeField] private FloatingTextConfig _floatingText;
         [SerializeField] private EffectType _deathSoundEffect;
@@ -44,9 +44,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public float ReloadTime => _infantrymanConfig.AttackCooldown;
         public Transform ShootPoint => _turretShootPoint;
         public IProjectileData ProjectileData => _projectileData;
-        public SimpleProjectile ProjectilePrefab => _projectilePrefab;
-        public int ProjectilePoolCount => 10;
-        public BuildSystem.ISensorData SensorData => _sensorData;
+        public ISensorData SensorData => _sensorData;
         public AllyEntityType Type => _infantrymanConfig.Type;
 
         public Sprite UpgradeSprite => _infantrymanConfig.UpgradeSprite;
@@ -54,6 +52,8 @@ namespace Project.Content.CharacterAI.Infantryman
         public EffectType BornSoundEffect => _bornSoundEffect;
         public EffectType DeathSoundEffect => _deathSoundEffect;
         public Collider2D Collider => _collider;
+
+        public ProjectileType ProjectileType => _projectileType;
 
         public void Initialize()
         {

@@ -3,7 +3,9 @@ using Project.Content.CharacterAI;
 using Project.Content.CharacterAI.Destroyer;
 using Project.Content.CharacterAI.Infantryman;
 using Project.Content.CharacterAI.MainTargetAttacker;
+using Project.Content.ProjectileSystem;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Content
@@ -31,6 +33,7 @@ namespace Project.Content
         [SerializeField] private GameObject _upgradeObject;
         [SerializeField] private DefensiveFlag _flag;
         [SerializeField] private FloatingText[] _floatingTextPrefabs;
+        [SerializeField] private List<SimpleProjectile> _simpleProjectilePrefabs;
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
         public DestroyerEntity SimpleParanoid => _simpleParanoid;
@@ -46,6 +49,7 @@ namespace Project.Content
         public DefensiveFlag Flag => _flag;
         public FloatingText[] FloatingTextPrefabs => _floatingTextPrefabs;
         public WallEntity WallPrefab => _wallPrefab;
-        public GameObject UpgradeObject => _upgradeObject; 
+        public GameObject UpgradeObject => _upgradeObject;
+        public List<SimpleProjectile> SimpleProjectilePrefabs => _simpleProjectilePrefabs;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using Project.Content.ObjectPool;
 using Project.Content.ProjectileSystem;
 using System;
 using System.Threading;
@@ -9,33 +10,35 @@ namespace Project.Content.BuildSystem
 {
     public class TurretAttackComponent : ITickable
     {
-        private readonly IProjectilePoolData _poolData;
+        private readonly IProjectileTypeData _poolData;
         private readonly ITurretShootData _shootData;
 
         private readonly GizmosDrawer _gizmosDrawer;
         private readonly Transform _localTransform;
         private readonly Transform _shootPoint;
         private readonly PauseHandler _pauseHandler;
+        private readonly FiltrablePoolsHandler _poolsHandler;
 
         private ClosestTargetSensorFilter _sensorFilter;
         private Transform _targetTransform;
         private TargetSensor _sensor;
-        private DiContainer _container;
 
         private CancellationToken _cancellationToken;
 
-        private ObjectPooler<SimpleProjectile> _projectilePool;
         private bool _isReadyToShoot;
         private bool _isRotating;
         private bool _isActive;
         private float _shootTimer;
 
-        public TurretAttackComponent(IProjectilePoolData projectilePoolData,
+        private Predicate<SimpleProjectile> ProjectilePredicate 
+            => item => item.ProjectileType == _poolData.ProjectileType && item.gameObject.activeInHierarchy == false;
+
+        public TurretAttackComponent(IProjectileTypeData projectilePoolData,
                                      ITurretShootData shootData,
                                      CancellationToken cancellationToken,
                                      GizmosDrawer gizmosDrawer,
                                      PauseHandler pauseHandler,
-                                     DiContainer container)
+                                     FiltrablePoolsHandler poolsHandler)
         {
             _poolData = projectilePoolData;
             _shootData = shootData;
@@ -44,12 +47,11 @@ namespace Project.Content.BuildSystem
             _localTransform = _shootData.RotationObject;
             _shootPoint = _shootData.ShootPoint;
             _pauseHandler = pauseHandler;
-            _container = container;
+            _poolsHandler = poolsHandler;
         }
 
         public void Initialize()
         {
-            _projectilePool = new ObjectPooler<SimpleProjectile>(_poolData.ProjectilePoolCount, "TurretProjectiles", new InstantiateObjectContainer<SimpleProjectile>(_poolData.ProjectilePrefab, _container));
             _isReadyToShoot = true;
             _sensor = new TargetSensor(_shootData.SensorData, Color.red);
             _sensorFilter = new ClosestTargetSensorFilter(_localTransform);
@@ -152,8 +154,11 @@ namespace Project.Content.BuildSystem
 
             _isReadyToShoot = false;
 
-            var projectile = _projectilePool.Get();
-            projectile.Prepare(_shootPoint.position, _targetTransform.position - _localTransform.position, _shootData.ProjectileData);
+            var projectile = _poolsHandler.GetByPredicate(ProjectilePredicate);
+
+            Vector2 direction = _targetTransform.position - _shootPoint.position;
+
+            projectile.Prepare(_shootPoint.position, direction, _shootData.ProjectileData);
 
             _shootTimer = _shootData.ReloadTime;
         }

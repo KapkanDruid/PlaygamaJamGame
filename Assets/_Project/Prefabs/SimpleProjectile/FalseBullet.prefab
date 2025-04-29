@@ -47,9 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee6797fa9c92934a92d392db70f022d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
   _disposeType: 1
-  _enemyFlag: 
   _projectileRigidbody: {fileID: 2334966645388040572}
   _spawnEffectOnDestroy: 0
   _effectOnDestroyPrefab: {fileID: 0}
@@ -57,6 +55,7 @@ MonoBehaviour:
   _animator: {fileID: 8724414566760305029}
   _shootEffect: {fileID: 11400000, guid: b9aa2d4554f26b344bca4a12568032df, type: 2}
   _hitEffect: {fileID: 11400000, guid: 66474f615be9f5a4396dc37682f1ce2e, type: 2}
+  _projectileType: {fileID: 11400000, guid: c3a668d04176634469132f0e2d8d3ab8, type: 2}
 --- !u!61 &4880828179426428193
 BoxCollider2D:
   m_ObjectHideFlags: 0

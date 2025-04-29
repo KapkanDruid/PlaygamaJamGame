@@ -29,6 +29,9 @@ MonoBehaviour:
     _flag: {fileID: 5651869740134662256, guid: 068826a682678f648bb77929684c3b42, type: 3}
     _floatingTextPrefabs:
     - {fileID: 3139850015193835488, guid: 64b5f94ea461a1c44a3fbbcf3bcae0b7, type: 3}
+    _simpleProjectilePrefabs:
+    - {fileID: 2874680280605139772, guid: f8ea436bb0eb1c642ac4894742982927, type: 3}
+    - {fileID: 1878219031791156981, guid: f0f4b4d6c403b59489da6377696bc06c, type: 3}
   _configs:
     _turretConfigs:
     - {fileID: 11400000, guid: f09b56280ab9ba2499e0af0d88551e06, type: 2}
