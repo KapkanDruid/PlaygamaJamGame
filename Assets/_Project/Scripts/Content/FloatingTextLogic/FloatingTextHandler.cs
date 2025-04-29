@@ -1,41 +1,28 @@
-﻿using System.Collections.Generic;
+﻿using Project.Content.ObjectPool;
 using UnityEngine;
 
 namespace Project.Content
 {
     public class FloatingTextHandler
     {
-        private SceneRecourses _sceneRecourses;
+        private readonly FloatingTextPoolFactory _poolFactory;
+        private MonoObjectPooler<FloatingText> _textPool;
 
-        private Dictionary<FloatingTextConfig, ObjectPooler<FloatingText>> _textPoolers = new();
-
-        public FloatingTextHandler(SceneRecourses sceneRecourses)
+        public FloatingTextHandler(FloatingTextPoolFactory poolFactory)
         {
-            _sceneRecourses = sceneRecourses;
+            _poolFactory = poolFactory;
         }
 
         public void Initialize()
         {
-            var textPrefabs = _sceneRecourses.Prefabs.FloatingTextPrefabs;
-
-            var poolersParentObject = new GameObject("FloatingTextPools");
-
-            foreach (var text in textPrefabs)
-            {
-                if (!_textPoolers.ContainsKey(text.Config))
-                {
-                    _textPoolers[text.Config] = new ObjectPooler<FloatingText>(10, poolersParentObject, new InstantiateObjectsSimple<FloatingText>(text));
-                }
-                else
-                    Debug.LogError($"[FloatingTextHandler] Filed to create {text.name} pool! Found multiple configs with same type.");
-            }
+            _textPool = _poolFactory.Create();
         }
 
         public void ShowText(FloatingTextConfig textConfig, Vector2 position, string massage)
         {
-            var text = _textPoolers[textConfig].Get();
+            var textObject = _textPool.GetByFilter(new FilterByPredicate<FloatingText>(item => textConfig == item.Config));
 
-            text.Prepare(position, massage);
+            textObject.Prepare(position, massage);
         }
     }
 }

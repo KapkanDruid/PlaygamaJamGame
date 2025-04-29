@@ -2,6 +2,6 @@
 
 namespace Project.Content
 {
-    [CreateAssetMenu(fileName = "MusicType", menuName = "_Project/MusicType")]
+    [CreateAssetMenu(fileName = "MusicType", menuName = "_Project/ScriptableID/MusicType")]
     public class MusicType : ScriptableObject { }
 }

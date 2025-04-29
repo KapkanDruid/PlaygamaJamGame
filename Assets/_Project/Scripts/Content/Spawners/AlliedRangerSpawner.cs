@@ -9,7 +9,7 @@ namespace Project.Content.Spawners
 {
     public class AlliedRangerSpawner : IEnemySpawner
     {
-        private ObjectPooler<InfantrymanEntity> _barracksPool;
+        private MonoObjectPooler<InfantrymanEntity> _barracksPool;
         private List<InfantrymanEntity.Factory> _barracksFactory;
         private AllyEntityType _type;
         private GameObject _prefab;
@@ -28,7 +28,7 @@ namespace Project.Content.Spawners
             foreach (var factory in _barracksFactory)
             {
                 if (factory.Type == _type)
-                    _barracksPool = new ObjectPooler<InfantrymanEntity>(capacityInPool, "Allies", new InstantiateObjectsByFactory<InfantrymanEntity>(factory));
+                    _barracksPool = new MonoObjectPooler<InfantrymanEntity>(capacityInPool, "Allies", new InstantiateObjectsByFactory<InfantrymanEntity>(factory));
             }
         }
 

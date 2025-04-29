@@ -183,6 +183,9 @@ namespace Project.Content.CharacterAI.Destroyer
         public void OnDrawGizmos()
         {
 #if UNITY_EDITOR
+            if (_destroyerData.SensorData == null)
+                return;
+
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere((Vector2)_destroyerData.SensorData.SensorOrigin.position + _attackerData.HitColliderOffset, _attackerData.HitColliderSize);
 #endif

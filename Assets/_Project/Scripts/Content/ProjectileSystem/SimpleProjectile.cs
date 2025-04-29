@@ -10,6 +10,7 @@ namespace Project.Content.ProjectileSystem
         [SerializeField] private Animator _animator;
         [SerializeField] private EffectType _shootEffect;
         [SerializeField] private EffectType _hitEffect;
+        [SerializeField] private ProjectileType _projectileType;
 
         private PauseHandler _pauseHandler;
         private AudioController _audioController;
@@ -22,6 +23,7 @@ namespace Project.Content.ProjectileSystem
 
         private Vector2 _moveDirection;
 
+        public ProjectileType ProjectileType => _projectileType;
 
         [Inject]
         private void Construct(PauseHandler pauseHandler, AudioController audioController)

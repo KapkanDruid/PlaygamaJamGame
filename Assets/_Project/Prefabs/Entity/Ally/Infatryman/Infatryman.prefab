@@ -319,6 +319,7 @@ MonoBehaviour:
       _flags: 01000000
     _enemyFlag: 00000000
     _projectilePrefab: {fileID: 1878219031791156981, guid: f0f4b4d6c403b59489da6377696bc06c, type: 3}
+    _projectileType: {fileID: 11400000, guid: b5232dfb3eb6a59428dc99cddc6ed729, type: 2}
     _levelColors:
     - {r: 1, g: 1, b: 1, a: 0}
     - {r: 1, g: 1, b: 1, a: 1}
@@ -607,7 +608,7 @@ Transform:
   m_GameObject: {fileID: 8100218445409127163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.219, y: -0.292, z: 0}
+  m_LocalPosition: {x: 0.585, y: -0.298, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

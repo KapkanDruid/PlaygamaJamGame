@@ -14,6 +14,7 @@ namespace Project.Content
 
         [Header("System Settings"), Space(3)]
         [SerializeField] private Vector2Int _groundGridSize;
+        [SerializeField] private int _poolsSize;
 
         [Header("Time in Seconds"), Space(3)]
         [SerializeField] private float _timeToWin;
@@ -28,13 +29,15 @@ namespace Project.Content
 
         public float TimeToWin => _timeToWin;
         public int StartMusicIndex => _startMusicIndex;
+        public int PoolsSize => _poolsSize; 
 
         public IReadOnlyDictionary<TurretType, TurretDynamicData> TurretDynamicData => _turretDynamicData;
         public IReadOnlyDictionary<BarracksType, BarrackDynamicData> BarrackDynamicData => _barrackDynamicData;
 
         public WallDynamicData WallDynamicData => _wallDynamicData;
         public MusicType MusicListType => _musicListType; 
-        public TimedClip[] MusicByTime => _musicByTime; 
+        public TimedClip[] MusicByTime => _musicByTime;
+
 
         [Inject]
         private void Construct(SceneRecourses recourses)
