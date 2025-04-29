@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Project.Content.ObjectPool
 {
-    public class ProjectilePoolFactory : IFiltrablePoolFactory, IPolableObjectsFactory<SimpleProjectile>
+    public class SimleProjectilePoolFactory : IFiltrablePoolFactory, IPolableObjectsFactory<SimpleProjectile>
     {
         private SceneData _sceneData;
         private DiContainer _container;
@@ -15,7 +15,7 @@ namespace Project.Content.ObjectPool
 
         public Type PoolType => typeof(SimpleProjectile);
 
-        public ProjectilePoolFactory(SceneRecourses sceneRecourses,
+        public SimleProjectilePoolFactory(SceneRecourses sceneRecourses,
                                      DiContainer container,
                                      PoolsParentContainer poolsParentContainer,
                                      SceneData sceneData)
