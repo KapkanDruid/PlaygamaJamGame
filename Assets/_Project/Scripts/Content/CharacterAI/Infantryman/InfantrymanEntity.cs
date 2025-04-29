@@ -56,11 +56,6 @@ namespace Project.Content.CharacterAI.Infantryman
             ResetData();
         }
 
-        private void Start()
-        {
-            Initialize();
-        }
-
         public void Initialize()
         {
             _infantrymanData.Initialize();

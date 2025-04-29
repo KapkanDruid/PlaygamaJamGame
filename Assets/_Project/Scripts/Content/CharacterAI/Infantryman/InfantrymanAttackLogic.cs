@@ -1,5 +1,4 @@
-﻿using Project.Content.BuildSystem;
-using Project.Content.ProjectileSystem;
+﻿using Project.Content.ProjectileSystem;
 using UnityEngine;
 using Zenject;
 
@@ -77,7 +76,6 @@ namespace Project.Content.CharacterAI.Infantryman
                 _animator.SetTrigger(AnimatorHashes.RangeAttackTrigger);
                 var projectile = _projectilePool.Get();
 
-                Debug.Log($"Урон перед передачей: {_shootData.ProjectileData.Damage}");
                 projectile.Prepare(_shootPoint.position, _infantrymanEntity.TargetTransform.position - _infantrymanEntity.transform.position, _shootData.ProjectileData);
 
                 _attackCooldownTimer = _infantrymanData.AttackCooldown;
