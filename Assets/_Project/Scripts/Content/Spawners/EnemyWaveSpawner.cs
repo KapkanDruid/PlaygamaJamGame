@@ -1,5 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
 using Project.Content.CharacterAI;
+using Project.Content.CharacterAI.Destroyer;
+using Project.Content.CharacterAI.MainTargetAttacker;
+using Project.Content.ObjectPool;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,45 +58,86 @@ namespace Project.Content.Spawners
         [SerializeField] private List<Wave> _waves;
         [SerializeField] private float _spawnInterval = 2f;
 
+
         private CancellationToken _cancellationToken;
         private int _currentWaveIndex = 0;
-        private int _currentSpawnerIndex = 0;
-        private List<IEnemySpawner> _enemySpawners = new();
-        private DestroyerSpawner.Factory _destroyerSpawnerFactory;
-        private MainTargetAttackerSpawner.Factory _mainTargetAttackerSpawnerFactory;
         private PauseHandler _pauseHandler;
         private Wave _currentWave;
-        private IEnemySpawner _spawner;
+        private FiltrablePoolsHandler _poolsHandler;
+
+        private DestroyerType _simpleParanoidData = DestroyerType.SimpleParanoid;
+        private DestroyerType _advencedParanoidData = DestroyerType.AdvencedParanoid;
+        private DestroyerType _flatEartherData = DestroyerType.FlatEarther;
+        private DestroyerType _aliensData = DestroyerType.Aliens;
+
+        private MainTargetAttackerType _bigfootData = MainTargetAttackerType.Bigfoot;
+        private MainTargetAttackerType _humanMothData = MainTargetAttackerType.HumanMoth;
 
         public event Action<Transform> OnSpawnPointSelected;
 
-        [Inject]
-        private void Construct(DestroyerSpawner.Factory destroyerSpawner, MainTargetAttackerSpawner.Factory mainTargetAttackerSpawner, PauseHandler pauseHandler)
-        {
-            _destroyerSpawnerFactory = destroyerSpawner;
-            _mainTargetAttackerSpawnerFactory = mainTargetAttackerSpawner;
-            _pauseHandler = pauseHandler;
+        private Predicate<DestroyerEntity> SimpleParanoidPredicate
+            => item => item.Type == _simpleParanoidData && item.gameObject.activeInHierarchy == false;
+        private Predicate<DestroyerEntity> AdvencedParanoidPredicate
+            => item => item.Type == _advencedParanoidData && item.gameObject.activeInHierarchy == false;
+        private Predicate<DestroyerEntity> FlatEatherPredicate
+            => item => item.Type == _flatEartherData && item.gameObject.activeInHierarchy == false;
+        private Predicate<DestroyerEntity> AliensPredicate
+            => item => item.Type == _aliensData && item.gameObject.activeInHierarchy == false;
 
+        private Predicate<MainTargetAttackerEntity> BigfootPredicate
+            => item => item.Type == _bigfootData && item.gameObject.activeInHierarchy == false;
+        private Predicate<MainTargetAttackerEntity> HumanMothPredicate
+            => item => item.Type == _humanMothData && item.gameObject.activeInHierarchy == false;
+
+        private Dictionary<Type, Func<MonoBehaviour, (Type, Delegate)>> _enemyTypeResolvers;
+
+        private void InitializeEnemyTypeResolvers()
+        {
+            _enemyTypeResolvers = new()
+            {
+                {
+                    typeof(DestroyerEntity), prefab =>
+                    {
+                        var destroyer = prefab as DestroyerEntity;
+                        return destroyer.Type switch
+                        {
+                            DestroyerType.SimpleParanoid => (typeof(DestroyerEntity), SimpleParanoidPredicate),
+                            DestroyerType.AdvencedParanoid => (typeof(DestroyerEntity), AdvencedParanoidPredicate),
+                            DestroyerType.FlatEarther => (typeof(DestroyerEntity), FlatEatherPredicate),
+                            DestroyerType.Aliens => (typeof(DestroyerEntity), AliensPredicate),
+                            _ => throw new Exception("Unknown DestroyerType")
+                        };
+                    }
+                },
+                {
+                    typeof(MainTargetAttackerEntity), prefab =>
+                    {
+                        var attacker = prefab as MainTargetAttackerEntity;
+                        return attacker.Type switch
+                        {
+                            MainTargetAttackerType.Bigfoot => (typeof(MainTargetAttackerEntity), BigfootPredicate),
+                            MainTargetAttackerType.HumanMoth => (typeof(MainTargetAttackerEntity), HumanMothPredicate),
+                            _ => throw new Exception("Unknown MainTargetAttackerType")
+                        };
+                    }
+                }
+            };
+        }
+
+        [Inject]
+        private void Construct(PauseHandler pauseHandler,
+                           FiltrablePoolsHandler poolsHandler = null)
+        {
+            _pauseHandler = pauseHandler;
+            _poolsHandler = poolsHandler;
 
         }
 
         private void Initialize()
         {
+            InitializeEnemyTypeResolvers();
+
             _cancellationToken = this.GetCancellationTokenOnDestroy();
-
-
-            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.SimpleParanoid));
-            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.AdvencedParanoid));
-            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.FlatEarther));
-            _enemySpawners.Add(_destroyerSpawnerFactory.Create(DestroyerType.Aliens));
-
-            _enemySpawners.Add(_mainTargetAttackerSpawnerFactory.Create(MainTargetAttackerType.Bigfoot));
-            _enemySpawners.Add(_mainTargetAttackerSpawnerFactory.Create(MainTargetAttackerType.HumanMoth));
-
-            foreach (var spawner in _enemySpawners)
-            {
-                spawner.Initialize(_waves[0].EnemyGroups.Count);
-            }
 
             foreach (var wave in _waves)
             {
@@ -102,8 +146,6 @@ namespace Project.Content.Spawners
                     spawnPosition.Initialize();
                 }
             }
-
-            _spawner = _enemySpawners[_currentSpawnerIndex];
         }
 
         private void Start()
@@ -159,51 +201,26 @@ namespace Project.Content.Spawners
                             await UniTask.WaitUntil(() => !_pauseHandler.IsPaused, cancellationToken: _cancellationToken);
                         }
 
-                        group.Prefab.TryGetComponent<ObjectId>(out var id);
-                        _spawner.GetPrefab().TryGetComponent<ObjectId>(out var idInSpawner);
+                        await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
 
+                        var spawnPoint = _currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex];
+                        OnSpawnPointSelected?.Invoke(spawnPoint);
 
-                        if (id.Id == idInSpawner.Id)
-                        {
-                            await UniTask.WaitForSeconds(_spawnInterval, cancellationToken: _cancellationToken);
+                        NextSpawnPoint();
 
-                            var spawnPoint = _currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].Points[_currentWave.SpawnPositions[_currentWave.CurrentSpawnPositionIndex].CurrentSpawnPointIndex];
-                            OnSpawnPointSelected?.Invoke(spawnPoint);
+                        var enemy = GetEnemyFromPool(group.Prefab);
 
-                            _spawner.Spawn(spawnPoint.position);
-                            NextSpawnPoint();
-
-                            j++;
-                        }
-                        else
-                        {
-                            NextSpawner();
-
-                        }
+                        enemy.transform.position = spawnPoint.position;
+                        
+                        j++;
 
                     }
-                    NextSpawner();
                 }
             }
             catch (OperationCanceledException)
             {
                 return;
             }
-        }
-
-        private void NextSpawner()
-        {
-            if (_enemySpawners.Count <= 1)
-                return;
-
-            _currentSpawnerIndex++;
-
-            if (_currentSpawnerIndex >= _enemySpawners.Count)
-            {
-                _currentSpawnerIndex = 0;
-            }
-
-            _spawner = _enemySpawners[_currentSpawnerIndex];
         }
 
         private void NextSpawnPoint()
@@ -229,6 +246,24 @@ namespace Project.Content.Spawners
             {
                 _currentWave.CurrentSpawnPositionIndex = 0;
             }
+        }
+
+        private CharacterHandler GetEnemyFromPool(MonoBehaviour prefab)
+        {
+            foreach (var enemyTypeByPredicate in _enemyTypeResolvers)
+            {
+                if (enemyTypeByPredicate.Key.IsInstanceOfType(prefab))
+                {
+                    var (type, predicate) = enemyTypeByPredicate.Value(prefab);
+
+                    if (type == typeof(DestroyerEntity))
+                        return _poolsHandler.GetByPredicate((Predicate<DestroyerEntity>)predicate);
+                    if (type == typeof(MainTargetAttackerEntity))
+                        return _poolsHandler.GetByPredicate((Predicate<MainTargetAttackerEntity>)predicate);
+                }
+            }
+            Debug.LogError($"No resolver found for prefab {prefab}");
+            return null;
         }
     }
 }

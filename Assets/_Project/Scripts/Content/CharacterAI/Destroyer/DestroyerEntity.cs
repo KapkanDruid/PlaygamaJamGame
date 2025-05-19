@@ -23,7 +23,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public Transform TargetTransform => _targetTransform;
         public IEntity TargetEntity => _targetEntity;
         public ICharacterData DestroyerData => _destroyerData;
-
+        public DestroyerType Type => _destroyerData.Type;
 
         public class Factory : PlaceholderFactory<DestroyerEntity>
         {

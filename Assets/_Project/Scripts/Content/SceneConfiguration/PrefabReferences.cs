@@ -20,13 +20,9 @@ namespace Project.Content
         [SerializeField] private WallEntity _wallPrefab;
 
         [Header("CharacterPrefabs"), Space(3)]
-        [SerializeField] private DestroyerEntity _simpleParanoid;
-        [SerializeField] private DestroyerEntity _advencedParanoid;
-        [SerializeField] private DestroyerEntity _aliens;
-        [SerializeField] private DestroyerEntity _flatEarther;
-        [SerializeField] private MainTargetAttackerEntity _bigfoot;
-        [SerializeField] private MainTargetAttackerEntity _humanMoth;
-        [SerializeField] private InfantrymanEntity _infantryman;
+        [SerializeField] private List<DestroyerEntity> _destroyers;
+        [SerializeField] private List<MainTargetAttackerEntity> _mainTargetAttackers;
+        [SerializeField] private List<InfantrymanEntity> _infantrymen;
         
         [Header("OtherPrefabs"), Space(3)]
         [SerializeField] private GameObject _experienceObject;
@@ -36,13 +32,9 @@ namespace Project.Content
         [SerializeField] private List<SimpleProjectile> _simpleProjectilePrefabs;
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
-        public DestroyerEntity SimpleParanoid => _simpleParanoid;
-        public DestroyerEntity AdvencedParanoid => _advencedParanoid;
-        public DestroyerEntity Aliens => _aliens;
-        public DestroyerEntity FlatEarther => _flatEarther;
-        public MainTargetAttackerEntity BigFoot => _bigfoot;
-        public MainTargetAttackerEntity HumanMoth => _humanMoth;
-        public InfantrymanEntity Infantryman => _infantryman;
+        public List<DestroyerEntity> DestroyersPrefabs => _destroyers;
+        public List<MainTargetAttackerEntity> MainTargetAttackersPrefabs => _mainTargetAttackers;
+        public List<InfantrymanEntity> Infantrymen => _infantrymen;
         public TurretEntity VoiceOfTruthTurret => _voiceOfTruthTurret; 
         public GameObject ExperienceObject => _experienceObject; 
         public BarracksEntity InfantrymanBarracks => _infantrymanBarracks; 

@@ -26,6 +26,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public IEntity TargetEntity => _targetEntity;
         public IEntity BlockingEntity => _blockingEntity;
         public ICharacterData MainTargetAttackerData => _mainTargetAttackerData;
+        public MainTargetAttackerType Type => _mainTargetAttackerData.Type;
 
         public bool PathInvalid => _isPathInvalid;
 
