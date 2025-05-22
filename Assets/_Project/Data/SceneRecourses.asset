@@ -18,23 +18,59 @@ MonoBehaviour:
     _infantrymanBarracks: {fileID: 8707837156137939876, guid: d7fcf6443a2d5004099a83e2588f32f6, type: 3}
     _wallPrefab: {fileID: 117273452368021737, guid: 562c2784c9db7a44aaa2af09952202ce, type: 3}
     _destroyers:
-    - {fileID: 8498477415956304825, guid: 914a7b5215410d047b0bb1df307e6bf9, type: 3}
-    - {fileID: 3999982957482466124, guid: 97f4e55e6fc35e84594eeac911dfa493, type: 3}
-    - {fileID: 4409543580809593084, guid: 1f58c8cc911b2de4a8aa66728ce464c1, type: 3}
-    - {fileID: 2262984898554556662, guid: 7657570eaab21ab4f90182cbd6f03a6d, type: 3}
+    - m_AssetGUID: 7657570eaab21ab4f90182cbd6f03a6d
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 914a7b5215410d047b0bb1df307e6bf9
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 97f4e55e6fc35e84594eeac911dfa493
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 1f58c8cc911b2de4a8aa66728ce464c1
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
     _mainTargetAttackers:
-    - {fileID: 3194220193113999216, guid: fc11d4aacd5d48849ab3f7d4dda93b4b, type: 3}
-    - {fileID: 16720405618370171, guid: 08714949ffb1b404e9b8c901a69041c0, type: 3}
+    - m_AssetGUID: fc11d4aacd5d48849ab3f7d4dda93b4b
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 08714949ffb1b404e9b8c901a69041c0
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
     _infantrymen:
-    - {fileID: 2800637946718568406, guid: 94c5ca9e01967e94eb8de209db733593, type: 3}
+    - m_AssetGUID: 94c5ca9e01967e94eb8de209db733593
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
     _experienceObject: {fileID: 1493492564772801372, guid: ad22f986af296a9448caf421f7d4f1e8, type: 3}
     _upgradeObject: {fileID: 8481949890690822518, guid: fa63e5ff48266a442beb5166ec528b3c, type: 3}
     _flag: {fileID: 5651869740134662256, guid: 068826a682678f648bb77929684c3b42, type: 3}
     _floatingTextPrefabs:
     - {fileID: 3139850015193835488, guid: 64b5f94ea461a1c44a3fbbcf3bcae0b7, type: 3}
     _simpleProjectilePrefabs:
-    - {fileID: 2874680280605139772, guid: f8ea436bb0eb1c642ac4894742982927, type: 3}
-    - {fileID: 1878219031791156981, guid: f0f4b4d6c403b59489da6377696bc06c, type: 3}
+    - m_AssetGUID: f0f4b4d6c403b59489da6377696bc06c
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: f8ea436bb0eb1c642ac4894742982927
+      m_SubObjectName: 
+      m_SubObjectGUID: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
   _configs:
     _turretConfigs:
     - {fileID: 11400000, guid: f09b56280ab9ba2499e0af0d88551e06, type: 2}

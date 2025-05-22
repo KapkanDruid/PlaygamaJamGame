@@ -1,21 +1,24 @@
-﻿using Project.Content.ProjectileSystem;
+﻿using Cysharp.Threading.Tasks;
+using Project.Content.ProjectileSystem;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using Zenject;
 
 namespace Project.Content.ObjectPool
 {
-    public class SimleProjectilePoolFactory : IFiltrablePoolFactory, IPolableObjectsFactory<SimpleProjectile>
+    public class SimpleProjectilePoolFactory : IFiltrablePoolFactory, IPolableObjectsFactory<SimpleProjectile>
     {
         private SceneData _sceneData;
+        private SceneRecourses _sceneRecourses;
         private DiContainer _container;
         private PoolsParentContainer _parentContainer;
-        private List<SimpleProjectile> _simpleProjectilePrefabs;
+        private List<SimpleProjectile> _simpleProjectilePrefabs = new();
 
         public Type PoolType => typeof(SimpleProjectile);
 
-        public SimleProjectilePoolFactory(SceneRecourses sceneRecourses,
+        public SimpleProjectilePoolFactory(SceneRecourses sceneRecourses,
                                      DiContainer container,
                                      PoolsParentContainer poolsParentContainer,
                                      SceneData sceneData)
@@ -23,8 +26,22 @@ namespace Project.Content.ObjectPool
             _parentContainer = poolsParentContainer;
             _container = container;
             _sceneData = sceneData;
+            _sceneRecourses = sceneRecourses;
+        }
 
-            _simpleProjectilePrefabs = sceneRecourses.Prefabs.SimpleProjectilePrefabs;
+        public async UniTask PreloadAsync()
+        {
+            foreach (var prefabRef in _sceneRecourses.Prefabs.SimpleProjectilePrefabs)
+            {
+                var objectRef = await Addressables.LoadAssetAsync<GameObject>(prefabRef);
+                var prefab = objectRef.GetComponent<SimpleProjectile>();
+                if (prefab == null)
+                {
+                    Debug.LogError($"Prefab {objectRef.name} does not have a SimpleProjectile component!");
+                    continue;
+                }
+                _simpleProjectilePrefabs.Add(prefab);
+            }
         }
 
         public object Create()
@@ -59,6 +76,18 @@ namespace Project.Content.ObjectPool
             _container.Inject(createdObject);
 
             return createdObject;
+        }
+
+        public void Release()
+        {
+            foreach (var prefab in _simpleProjectilePrefabs)
+            {
+                if (prefab != null)
+                {
+                    Addressables.Release(prefab.gameObject);
+                }
+            }
+            _simpleProjectilePrefabs.Clear();
         }
     }
 }

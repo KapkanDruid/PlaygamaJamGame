@@ -7,6 +7,7 @@ using Project.Content.ProjectileSystem;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Project.Content
 {
@@ -20,21 +21,21 @@ namespace Project.Content
         [SerializeField] private WallEntity _wallPrefab;
 
         [Header("CharacterPrefabs"), Space(3)]
-        [SerializeField] private List<DestroyerEntity> _destroyers;
-        [SerializeField] private List<MainTargetAttackerEntity> _mainTargetAttackers;
-        [SerializeField] private List<InfantrymanEntity> _infantrymen;
+        [SerializeField] private List<AssetReferenceGameObject> _destroyers;
+        [SerializeField] private List<AssetReferenceGameObject> _mainTargetAttackers;
+        [SerializeField] private List<AssetReferenceGameObject> _infantrymen;
         
         [Header("OtherPrefabs"), Space(3)]
         [SerializeField] private GameObject _experienceObject;
         [SerializeField] private GameObject _upgradeObject;
         [SerializeField] private DefensiveFlag _flag;
         [SerializeField] private FloatingText[] _floatingTextPrefabs;
-        [SerializeField] private List<SimpleProjectile> _simpleProjectilePrefabs;
+        [SerializeField] private List<AssetReferenceGameObject> _simpleProjectilePrefabs;
 
         public MainBuildingEntity MainBuildingFirstLevel => _mainBuildingFirstLevel;
-        public List<DestroyerEntity> DestroyersPrefabs => _destroyers;
-        public List<MainTargetAttackerEntity> MainTargetAttackersPrefabs => _mainTargetAttackers;
-        public List<InfantrymanEntity> Infantrymen => _infantrymen;
+        public List<AssetReferenceGameObject> DestroyersPrefabs => _destroyers;
+        public List<AssetReferenceGameObject> MainTargetAttackersPrefabs => _mainTargetAttackers;
+        public List<AssetReferenceGameObject> Infantrymen => _infantrymen;
         public TurretEntity VoiceOfTruthTurret => _voiceOfTruthTurret; 
         public GameObject ExperienceObject => _experienceObject; 
         public BarracksEntity InfantrymanBarracks => _infantrymanBarracks; 
@@ -42,6 +43,6 @@ namespace Project.Content
         public FloatingText[] FloatingTextPrefabs => _floatingTextPrefabs;
         public WallEntity WallPrefab => _wallPrefab;
         public GameObject UpgradeObject => _upgradeObject;
-        public List<SimpleProjectile> SimpleProjectilePrefabs => _simpleProjectilePrefabs;
+        public List<AssetReferenceGameObject> SimpleProjectilePrefabs => _simpleProjectilePrefabs;
     }
 }

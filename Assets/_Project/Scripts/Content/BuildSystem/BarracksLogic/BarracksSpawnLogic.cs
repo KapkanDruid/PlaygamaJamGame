@@ -93,11 +93,10 @@ namespace Project.Content.BuildSystem
         {
             _attackCooldownTimer = _barracksEntity.Data.SpawnCooldown;
 
-            var infantryman = _poolsHandler.GetByPredicate<InfantrymanEntity>(InfantrymanPredicate);
+            var infantryman = _poolsHandler.GetByPredicate<InfantrymanEntity>(InfantrymanPredicate, _barracksEntity.Data.SpawnPosition);
 
             _allyAlive.Add(infantryman.gameObject);
 
-            infantryman.transform.position = _barracksEntity.transform.position;
             infantryman.Initialize();
             PrepareInfantryman(infantryman);
 

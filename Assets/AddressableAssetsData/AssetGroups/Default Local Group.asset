@@ -14,7 +14,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 7809d08f57627af449b2564e900c4a7d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 08714949ffb1b404e9b8c901a69041c0
+    m_Address: HumanMoth
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f58c8cc911b2de4a8aa66728ce464c1
+    m_Address: FlatEarther
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7657570eaab21ab4f90182cbd6f03a6d
+    m_Address: SimpleParanoid
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 914a7b5215410d047b0bb1df307e6bf9
+    m_Address: AdvencedParanoid
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94c5ca9e01967e94eb8de209db733593
+    m_Address: Infatryman
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97f4e55e6fc35e84594eeac911dfa493
+    m_Address: Aliens
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0f4b4d6c403b59489da6377696bc06c
+    m_Address: SoldiersBullet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8ea436bb0eb1c642ac4894742982927
+    m_Address: FalseBullet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc11d4aacd5d48849ab3f7d4dda93b4b
+    m_Address: Bigfoot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: efe65a820a5c1d649b9a1d27f6f5e680, type: 2}
   m_SchemaSet:

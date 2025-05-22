@@ -41,5 +41,20 @@ namespace Project.Content
             poolObject.gameObject.SetActive(true);
             return poolObject;
         }
+
+        public T GetByFilter(IPoolFilterStrategy<T> filterStrategy, Vector3 position)
+        {
+            var poolObject = filterStrategy.Select(_objects.ToArray());
+
+            if (poolObject == null)
+            {
+                poolObject = _objectsFactory.CreateByFilter(filterStrategy);
+                poolObject.transform.SetParent(_parentTransform, true);
+            }
+
+            poolObject.transform.position = position;
+            poolObject.gameObject.SetActive(true);
+            return poolObject;
+        }
     }
 }

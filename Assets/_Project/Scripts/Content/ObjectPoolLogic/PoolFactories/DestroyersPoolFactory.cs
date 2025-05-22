@@ -1,6 +1,9 @@
-﻿using Project.Content.CharacterAI.Destroyer;
+﻿using Cysharp.Threading.Tasks;
+using Project.Content.CharacterAI.Destroyer;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
 using Zenject;
 
 namespace Project.Content.ObjectPool
@@ -8,9 +11,10 @@ namespace Project.Content.ObjectPool
     public class DestroyersPoolFactory : IFiltrablePoolFactory, IPolableObjectsFactory<DestroyerEntity>
     {
         private SceneData _sceneData;
+        private SceneRecourses _sceneRecourses;
         private DiContainer _container;
         private PoolsParentContainer _parentContainer;
-        private List<DestroyerEntity> _destroyersPrefabs;
+        private List<DestroyerEntity> _destroyersPrefabs = new();
 
         public Type PoolType => typeof(DestroyerEntity);
 
@@ -22,8 +26,22 @@ namespace Project.Content.ObjectPool
             _parentContainer = poolsParentContainer;
             _container = container;
             _sceneData = sceneData;
+            _sceneRecourses = sceneRecourses;
+        }
 
-            _destroyersPrefabs = sceneRecourses.Prefabs.DestroyersPrefabs;
+        public async UniTask PreloadAsync()
+        {
+            foreach (var prefabRef in _sceneRecourses.Prefabs.DestroyersPrefabs)
+            {
+                var objectRef = await Addressables.LoadAssetAsync<GameObject>(prefabRef);
+                var prefab = objectRef.GetComponent<DestroyerEntity>();
+                if (prefab == null)
+                {
+                    Debug.LogError($"Prefab {objectRef.name} does not have a SimpleProjectile component!");
+                    continue;
+                }
+                _destroyersPrefabs.Add(prefab);
+            }
         }
 
         public object Create()
@@ -57,6 +75,18 @@ namespace Project.Content.ObjectPool
             var createdObject = _container.InstantiatePrefabForComponent<DestroyerEntity>(prefab, parentTransform);
 
             return createdObject;
+        }
+
+        public void Release()
+        {
+            foreach (var prefab in _destroyersPrefabs)
+            {
+                if (prefab != null)
+                {
+                    Addressables.Release(prefab.gameObject);
+                }
+            }
+            _destroyersPrefabs.Clear();
         }
     }
 }

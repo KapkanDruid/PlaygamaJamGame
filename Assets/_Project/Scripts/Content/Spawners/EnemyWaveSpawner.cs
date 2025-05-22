@@ -208,9 +208,7 @@ namespace Project.Content.Spawners
 
                         NextSpawnPoint();
 
-                        var enemy = GetEnemyFromPool(group.Prefab);
-
-                        enemy.transform.position = spawnPoint.position;
+                        var enemy = GetEnemyFromPool(group.Prefab, spawnPoint.position);
                         
                         j++;
 
@@ -248,7 +246,7 @@ namespace Project.Content.Spawners
             }
         }
 
-        private CharacterHandler GetEnemyFromPool(MonoBehaviour prefab)
+        private CharacterHandler GetEnemyFromPool(MonoBehaviour prefab, Vector3 position)
         {
             foreach (var enemyTypeByPredicate in _enemyTypeResolvers)
             {
@@ -257,9 +255,9 @@ namespace Project.Content.Spawners
                     var (type, predicate) = enemyTypeByPredicate.Value(prefab);
 
                     if (type == typeof(DestroyerEntity))
-                        return _poolsHandler.GetByPredicate((Predicate<DestroyerEntity>)predicate);
+                        return _poolsHandler.GetByPredicate((Predicate<DestroyerEntity>)predicate, position);
                     if (type == typeof(MainTargetAttackerEntity))
-                        return _poolsHandler.GetByPredicate((Predicate<MainTargetAttackerEntity>)predicate);
+                        return _poolsHandler.GetByPredicate((Predicate<MainTargetAttackerEntity>)predicate, position);
                 }
             }
             Debug.LogError($"No resolver found for prefab {prefab}");

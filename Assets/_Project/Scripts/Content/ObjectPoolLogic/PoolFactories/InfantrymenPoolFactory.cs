@@ -1,6 +1,9 @@
-﻿using Project.Content.CharacterAI.Infantryman;
+﻿using Cysharp.Threading.Tasks;
+using Project.Content.CharacterAI.Infantryman;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
 using Zenject;
 
 namespace Project.Content.ObjectPool
@@ -8,9 +11,10 @@ namespace Project.Content.ObjectPool
     public class InfantrymenPoolFactory : IFiltrablePoolFactory, IPolableObjectsFactory<InfantrymanEntity>
     {
         private SceneData _sceneData;
+        private SceneRecourses _sceneRecourses;
         private DiContainer _container;
         private PoolsParentContainer _parentContainer;
-        private List<InfantrymanEntity> _infantrymenPrefabs;
+        private List<InfantrymanEntity> _infantrymenPrefabs = new();
 
         public Type PoolType => typeof(InfantrymanEntity);
 
@@ -22,8 +26,22 @@ namespace Project.Content.ObjectPool
             _parentContainer = poolsParentContainer;
             _container = container;
             _sceneData = sceneData;
+            _sceneRecourses = sceneRecourses;
+        }
 
-            _infantrymenPrefabs = sceneRecourses.Prefabs.Infantrymen;
+        public async UniTask PreloadAsync()
+        {
+            foreach (var prefabRef in _sceneRecourses.Prefabs.Infantrymen)
+            {
+                var objectRef = await Addressables.LoadAssetAsync<GameObject>(prefabRef);
+                var prefab = objectRef.GetComponent<InfantrymanEntity>();
+                if (prefab == null)
+                {
+                    Debug.LogError($"Prefab {objectRef.name} does not have a SimpleProjectile component!");
+                    continue;
+                }
+                _infantrymenPrefabs.Add(prefab);
+            }
         }
 
         public object Create()
@@ -57,6 +75,18 @@ namespace Project.Content.ObjectPool
             var createdObject = _container.InstantiatePrefabForComponent<InfantrymanEntity>(prefab, parentTransform);
 
             return createdObject;
+        }
+
+        public void Release()
+        {
+            foreach (var prefab in _infantrymenPrefabs)
+            {
+                if (prefab != null)
+                {
+                    Addressables.Release(prefab.gameObject);
+                }
+            }
+            _infantrymenPrefabs.Clear();
         }
     }
 }
