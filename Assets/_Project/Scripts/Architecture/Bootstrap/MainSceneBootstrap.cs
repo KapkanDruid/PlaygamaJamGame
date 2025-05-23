@@ -49,6 +49,7 @@ namespace Project.Architecture
 
         private void Dispose()
         {
+            _filtrablePoolsHandler.Release();
             _inputActions.Disable();
         }
 

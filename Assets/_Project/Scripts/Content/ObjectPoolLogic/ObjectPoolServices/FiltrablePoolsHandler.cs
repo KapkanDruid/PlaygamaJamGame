@@ -14,8 +14,13 @@ namespace Project.Content.ObjectPool
             _poolFactories = poolFactories;
         }
 
-        public void Initialize()
+        public async void Initialize()
         {
+            foreach (var factory in _poolFactories)
+            {
+                await factory.PreloadAsync();
+            }
+
             foreach (var factory in _poolFactories)
             {
                 var pool = factory.Create();
@@ -69,6 +74,31 @@ namespace Project.Content.ObjectPool
 
             Debug.LogError($"[FiltrablePoolsHandler] Failed to GetByPredicate, pool of {key.Name} does not exist");
             return default;
+        }
+
+        public T GetByPredicate<T>(Predicate<T> predicate, Vector3 position)
+        {
+            var key = typeof(T);
+
+            if (_pools.ContainsKey(key))
+            {
+                if (_pools[key] is IFiltrablePool<T> pool)
+                {
+                    return pool.GetByFilter(new FilterByPredicate<T>(predicate), position);
+                }
+            }
+
+            Debug.LogError($"[FiltrablePoolsHandler] Failed to GetByPredicate, pool of {key.Name} does not exist");
+            return default;
+        }
+
+        public void Release()
+        {
+            foreach (var factory in _poolFactories)
+            {
+                factory.Release();
+            }
+            _pools.Clear();
         }
     }
 }

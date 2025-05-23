@@ -13,6 +13,7 @@ namespace Project.Content.CharacterAI.Destroyer
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags[] _enemyFlag;
         [SerializeField] private FloatingTextConfig _floatingText;
+        [SerializeField] private Collider2D _collider;
 
         private SensorData _sensorData;
 
@@ -33,6 +34,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public DestroyerType Type => _destroyerConfig.Type;
         public FloatingTextConfig FloatingText => _floatingText;
         public ISensorData SensorData => _sensorData;
+        public Collider2D Collider => _collider;
 
         public void Initialize()
         {

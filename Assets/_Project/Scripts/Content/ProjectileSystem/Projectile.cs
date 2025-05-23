@@ -80,7 +80,7 @@ namespace Project.Content.ProjectileSystem
 
             SpawnEffectOnDestroy();
 
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
 
             IsProjectileDisposed = true;
         }

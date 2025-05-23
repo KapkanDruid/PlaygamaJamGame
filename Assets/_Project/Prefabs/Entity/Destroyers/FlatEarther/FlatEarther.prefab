@@ -208,7 +208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7175751570739431610
 Transform:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 3107364153430295150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.31, y: -3.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -247,6 +247,7 @@ MonoBehaviour:
       _flags: 00000000
     _enemyFlag: 020000000300000001000000
     _floatingText: {fileID: 11400000, guid: d3bc4705e24fec346818128c7b5678cc, type: 2}
+    _collider: {fileID: 1579124527719301405}
 --- !u!195 &7727919299069797805
 NavMeshAgent:
   m_ObjectHideFlags: 0

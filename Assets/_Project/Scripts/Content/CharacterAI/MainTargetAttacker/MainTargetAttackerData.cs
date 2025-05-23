@@ -13,6 +13,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         [SerializeField] private Flags _flags;
         [SerializeField] private EntityFlags[] _enemyFlag;
         [SerializeField] private FloatingTextConfig _floatingText;
+        [SerializeField] private Collider2D _collider;
 
         private SensorData _sensorData;
 
@@ -33,6 +34,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public MainTargetAttackerType Type => _mainTargetAttackerConfig.Type;
         public FloatingTextConfig FloatingText => _floatingText;
         public ISensorData SensorData => _sensorData;
+        public Collider2D Collider => _collider;
+
 
         public void Initialize()
         {

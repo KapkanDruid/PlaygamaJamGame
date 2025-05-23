@@ -25,6 +25,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public Transform TargetTransform => _targetTransform;
         public Transform FlagTransform => _flagTransform;
         public float PatrolRadius => _patrolRadius;
+        public AllyEntityType Type => _infantrymanData.Type;
 
         public class Factory : PlaceholderFactory<InfantrymanEntity>
         {
@@ -54,11 +55,6 @@ namespace Project.Content.CharacterAI.Infantryman
 
             MainSceneBootstrap.OnServicesInitialized += OnSceneInitialized;
             ResetData();
-        }
-
-        private void Start()
-        {
-            Initialize();
         }
 
         public void Initialize()

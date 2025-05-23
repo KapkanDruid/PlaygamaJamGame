@@ -1,6 +1,6 @@
 ﻿using Project.Content.CharacterAI;
 using Project.Content.CharacterAI.Infantryman;
-using Project.Content.Spawners;
+using Project.Content.ObjectPool;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,31 +12,32 @@ namespace Project.Content.BuildSystem
     {
         private BarracksEntity _barracksEntity;
         private EntityCommander _entityCommander;
-        private AlliedRangerSpawner.Factory _alliedRangerFactory;
         private PauseHandler _pauseHandler;
-        private IEnemySpawner _alliedRangerSpawner;
         private int _currentCountAlly = 0;
         private float _attackCooldownTimer;
         private List<GameObject> _allyAlive = new List<GameObject>();
         private bool _isActive;
+        private AllyEntityType _infantrymanData => AllyEntityType.Infantryman;
+        private FiltrablePoolsHandler _poolsHandler;
+
+        private Predicate<InfantrymanEntity> InfantrymanPredicate
+            => item => item.Type == _infantrymanData && item.gameObject.activeInHierarchy == false;
 
         public BarracksSpawnLogic(BarracksEntity barracksEntity,
                                   EntityCommander entityCommander,
-                                  AlliedRangerSpawner.Factory alliedRangerFactory,
-                                  PauseHandler pauseHandler)
+                                  PauseHandler pauseHandler,
+                                  FiltrablePoolsHandler poolsHandler = null)
         {
             _barracksEntity = barracksEntity;
             _entityCommander = entityCommander;
-            _alliedRangerFactory = alliedRangerFactory;
             _pauseHandler = pauseHandler;
+            _poolsHandler = poolsHandler;
         }
 
         public void Initialize()
         {
-            _alliedRangerSpawner = _alliedRangerFactory.Create(_barracksEntity.Data.AllyEntityType);
             _attackCooldownTimer = _barracksEntity.Data.SpawnCooldown;
 
-            _alliedRangerSpawner.Initialize(_barracksEntity.Data.Capacity);
 
             _isActive = true;
         }
@@ -92,20 +93,23 @@ namespace Project.Content.BuildSystem
         {
             _attackCooldownTimer = _barracksEntity.Data.SpawnCooldown;
 
-            var obj = _alliedRangerSpawner.GetPrefab();
-            _allyAlive.Add(obj);
+            var infantryman = _poolsHandler.GetByPredicate<InfantrymanEntity>(InfantrymanPredicate, _barracksEntity.Data.SpawnPosition);
 
-            _alliedRangerSpawner.Spawn(_barracksEntity.transform.position);
+            _allyAlive.Add(infantryman.gameObject);
 
-            var entity = obj.GetComponent<InfantrymanEntity>();
+            infantryman.Initialize();
+            PrepareInfantryman(infantryman);
 
-            var patrolling = entity.ProvideComponent<IPatrolling>();
+            _currentCountAlly++;
+        }
+
+        private void PrepareInfantryman(InfantrymanEntity infantryman)
+        {
+            var patrolling = infantryman.ProvideComponent<IPatrolling>();
 
             _entityCommander.AddEntity(patrolling);
 
-            entity.Prepare(new InfantrymanSpawnData(_barracksEntity.Data.UnitDamageModifier, _barracksEntity.Data.UnitHealthModifier, _barracksEntity.Data.UnitUpgradeCount));
-
-            _currentCountAlly++;
+            infantryman.Prepare(new InfantrymanSpawnData(_barracksEntity.Data.UnitDamageModifier, _barracksEntity.Data.UnitHealthModifier, _barracksEntity.Data.UnitUpgradeCount));
         }
     }
 }

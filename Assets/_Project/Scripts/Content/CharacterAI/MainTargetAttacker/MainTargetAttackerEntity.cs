@@ -26,6 +26,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public IEntity TargetEntity => _targetEntity;
         public IEntity BlockingEntity => _blockingEntity;
         public ICharacterData MainTargetAttackerData => _mainTargetAttackerData;
+        public MainTargetAttackerType Type => _mainTargetAttackerData.Type;
 
         public bool PathInvalid => _isPathInvalid;
 
@@ -57,6 +58,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
             ResetData();
             _enemyDeadHandler.OnDeath += DropExperience;
+            _enemyDeadHandler.OnDeath += Death;
         }
 
         public void Initialize()
@@ -139,6 +141,12 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             }
         }
 
+        private void Death()
+        {
+            if (_mainTargetAttackerData.Collider != null)
+                _mainTargetAttackerData.Collider.enabled = false;
+        }
+
         private void DropExperience()
         {
             _levelExperience.OnEnemyDied(_mainTargetAttackerData.CharacterTransform.position, _mainTargetAttackerData.ExperiencePoints);
@@ -151,6 +159,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _animator.Update(0f);
             _enemyDeadHandler.Reset();
             _healthHandler.Reset();
+
+            if (_mainTargetAttackerData.Collider != null)
+                _mainTargetAttackerData.Collider.enabled = true;
         }
 
         private void PauseAnimation()
@@ -182,6 +193,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private void OnDestroy()
         {
             _enemyDeadHandler.OnDeath -= DropExperience;
+            _enemyDeadHandler.OnDeath -= Death;
         }
     }
 }

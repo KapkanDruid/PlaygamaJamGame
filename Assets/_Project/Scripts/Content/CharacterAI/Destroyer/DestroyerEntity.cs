@@ -23,7 +23,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public Transform TargetTransform => _targetTransform;
         public IEntity TargetEntity => _targetEntity;
         public ICharacterData DestroyerData => _destroyerData;
-
+        public DestroyerType Type => _destroyerData.Type;
 
         public class Factory : PlaceholderFactory<DestroyerEntity>
         {
@@ -53,6 +53,7 @@ namespace Project.Content.CharacterAI.Destroyer
 
             ResetData();
             _enemyDeadHandler.OnDeath += DropExperience;
+            _enemyDeadHandler.OnDeath += Death;
         }
 
         private void Start()
@@ -92,6 +93,12 @@ namespace Project.Content.CharacterAI.Destroyer
             _levelExperience.OnEnemyDied(_destroyerData.CharacterTransform.position, _destroyerData.ExperiencePoints);
         }
 
+        private void Death()
+        {
+            if (_destroyerData.Collider != null)
+                _destroyerData.Collider.enabled = false;
+        }
+
         private void OnEnable()
         {
             ResetData();
@@ -100,6 +107,8 @@ namespace Project.Content.CharacterAI.Destroyer
             _enemyDeadHandler.Reset();
             _healthHandler.Reset();
             _targetTransform = null;
+            if (_destroyerData.Collider != null)
+                _destroyerData.Collider.enabled = true;
         }
 
         private void Update()
@@ -168,6 +177,7 @@ namespace Project.Content.CharacterAI.Destroyer
         private void OnDestroy()
         {
             _enemyDeadHandler.OnDeath -= DropExperience;
+            _enemyDeadHandler.OnDeath -= Death;
         }
 
         public void OnDrawGizmos()

@@ -208,7 +208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1475441999264490900
 Transform:
   m_ObjectHideFlags: 0
@@ -247,6 +247,7 @@ MonoBehaviour:
       _flags: 00000000
     _enemyFlag: 02000000
     _floatingText: {fileID: 11400000, guid: d3bc4705e24fec346818128c7b5678cc, type: 2}
+    _collider: {fileID: 7552718188777229531}
 --- !u!195 &5964692675670941995
 NavMeshAgent:
   m_ObjectHideFlags: 0
