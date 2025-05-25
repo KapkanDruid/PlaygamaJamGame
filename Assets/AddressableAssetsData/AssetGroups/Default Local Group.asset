@@ -45,6 +45,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6efce298f239854f9874eddd7ef8d62
+    m_Address: 1.Level1Release
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0f4b4d6c403b59489da6377696bc06c
     m_Address: SoldiersBullet
     m_ReadOnly: 0
