@@ -35,7 +35,20 @@ namespace Project.Content.CharacterAI.Destroyer
         public float DistanceToTarget => _distanceToTarget;
         public DestroyerType Type => _type;
         public Vector2 HitColliderOffset => _hitColliderOffset;
-
         public float ExperiencePoints => _experiencePoints;
+
+        public void ApplyFromDto(DestroyerConfigDto dto)
+        {
+            _health = dto.Health;
+            _speed = dto.Speed;
+            _experiencePoints = dto.ExperiencePoints;
+            _distanceToTarget = dto.DistanceToTarget;
+            _damage = dto.Damage;
+            _attackCooldown = dto.AttackCooldown;
+            _hitColliderSize = dto.HitColliderSize;
+            _hitColliderOffset = dto.HitColliderOffset;
+            _sensorRadius = dto.SensorRadius;
+            _type = dto.Type;
+        }
     }
 }

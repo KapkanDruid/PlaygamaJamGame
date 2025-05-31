@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainTargetAttackerData:
+    _remoteConfigUrl: https://conspiraid-8002b.web.app/Configs/Bigfoot.json
     _mainTargetAttackerConfig: {fileID: 11400000, guid: e45aa76180abd7d4dbb81b2c7c232850, type: 2}
     _damageTextPoint: {fileID: 2505652343315936295}
     _characterTransform: {fileID: 1475441999264490900}

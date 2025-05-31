@@ -95,7 +95,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         private bool CheckDistanceToTarget(Vector2 closestPoint)
         {
-            return Vector2.Distance(_mainTargetAttackerEntity.transform.position, closestPoint) <= _characterData.DistanceToTarget + _attackerData.HitColliderSize;
+            return Vector2.Distance(_mainTargetAttackerEntity.transform.position, closestPoint) <= _attackerData.HitColliderSize;
         }
 
         private void Attack()

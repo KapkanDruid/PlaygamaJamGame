@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyerData:
+    _remoteConfigUrl: https://conspiraid-8002b.web.app/Configs/FlatEarther.json
     _destroyerConfig: {fileID: 11400000, guid: 4288b407f5d8cc54093b3a10bd7bc1ef, type: 2}
     _damageTextPoint: {fileID: 1054691180614247285}
     _characterTransform: {fileID: 7175751570739431610}

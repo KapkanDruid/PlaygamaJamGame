@@ -1,12 +1,15 @@
-﻿using Project.Content.BuildSystem;
+﻿using Cysharp.Threading.Tasks;
+using Project.Content.BuildSystem;
 using System;
+using System.Threading;
 using UnityEngine;
 
 namespace Project.Content.CharacterAI.MainTargetAttacker
 {
     [Serializable]
-    class MainTargetAttackerData : ICharacterData, IAttackerData
+    class MainTargetAttackerData : ICharacterData, IAttackerData, IRemoteConfigurable
     {
+        [SerializeField] private string _remoteConfigUrl;
         [SerializeField] private MainTargetAttackerConfig _mainTargetAttackerConfig;
         [SerializeField] private Transform _damageTextPoint;
         [SerializeField] private Transform _characterTransform;
@@ -17,6 +20,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         private SensorData _sensorData;
 
+        public string RemoteConfigUrl => _remoteConfigUrl;
         public float Speed => _mainTargetAttackerConfig.Speed;
         public float Health => _mainTargetAttackerConfig.Health;
         public float Damage => _mainTargetAttackerConfig.Damage;
@@ -36,8 +40,9 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public ISensorData SensorData => _sensorData;
         public Collider2D Collider => _collider;
 
+        public event Action OnConfigLoaded;
 
-        public void Initialize()
+        public async UniTask InitializeAsync(CancellationToken cancellationToken)
         {
             _sensorData = new SensorData();
 
@@ -45,6 +50,22 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _sensorData.SensorRadius = _mainTargetAttackerConfig.SensorRadius;
             _sensorData.ThisEntity = ThisEntity;
             _sensorData.TargetFlag = _enemyFlag;
+
+            if (!string.IsNullOrEmpty(_remoteConfigUrl))
+            {
+                await RemoteJsonLoader.LoadJsonAsync<MainTargetAttackerConfigDto>(
+                    _remoteConfigUrl,
+                    OnRemoteConfigLoaded,
+                    Debug.LogError,
+                    cancellationToken
+                );
+            }
+        }
+
+        private void OnRemoteConfigLoaded(MainTargetAttackerConfigDto dto)
+        {
+            _mainTargetAttackerConfig.ApplyFromDto(dto);
+            OnConfigLoaded?.Invoke();
         }
     }
 }

@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyerData:
+    _remoteConfigUrl: https://conspiraid-8002b.web.app/Configs/Aliens.json
     _destroyerConfig: {fileID: 11400000, guid: 3feb4d44ed197674ebf915cc873bfd32, type: 2}
     _damageTextPoint: {fileID: 5832360049096291904}
     _characterTransform: {fileID: 4681862340869142893}

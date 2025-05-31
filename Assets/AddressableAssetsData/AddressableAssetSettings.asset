@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 7809d08f57627af449b2564e900c4a7d
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: ec8c08734b857343a98be0dfcf39fa1a
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -63,7 +63,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ab4a9f532a5f2d4892a3999d1fce0fd, type: 2}
   - {fileID: 11400000, guid: 95d1eafc85465a343ad20d07e815f106, type: 2}
   - {fileID: 11400000, guid: 84b1978386c15f54e8511dd85fa5f5a8, type: 2}
-  - {fileID: 11400000, guid: 8bf8b16d2a14782459fac33493832618, type: 2}
   - {fileID: 11400000, guid: 86c75f3b5c7d70d49a64808f7d88fce2, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
@@ -75,13 +74,13 @@ MonoBehaviour:
       m_ProfileName: Default
       m_Values:
       - m_Id: 19951ce3c8046df4ba7697955cce4390
-        m_Value: 'Public/[BuildTarget]'
+        m_Value: 'public/[BuildTarget]'
       - m_Id: 4745d70dcc0e6114dac988358c0d281a
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 530488c9cdba13040b785d689b0acb56
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 5518e4f096efbaf488eac717955c4321
-        m_Value: https://conspiraid-8002b.web.app
+        m_Value: 'https://conspiraid-8002b.web.app/[BuildTarget]'
       - m_Id: a569931c97027a94bb56f2633b499c96
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
     m_ProfileEntryNames:

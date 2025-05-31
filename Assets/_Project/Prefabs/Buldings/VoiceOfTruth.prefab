@@ -253,8 +253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _alertType: {fileID: 11400000, guid: 7089c6ed46557bf43bb456ce9132b3e6, type: 2}
   _data:
-    _projectilePoolSize: 10
-    _projectilePrefab: {fileID: 2874680280605139772, guid: f8ea436bb0eb1c642ac4894742982927, type: 3}
     _projectileType: {fileID: 11400000, guid: c3a668d04176634469132f0e2d8d3ab8, type: 2}
     _gridPivotTransform: {fileID: 8215651618980773562}
     _spriteRenderers:

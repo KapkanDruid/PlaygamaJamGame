@@ -99,6 +99,11 @@ namespace Project.Content.Spawners
                     typeof(DestroyerEntity), prefab =>
                     {
                         var destroyer = prefab as DestroyerEntity;
+                        if (destroyer == null)
+                        {
+                            Debug.LogError("Prefab is not DestroyerEntity or is null!");
+                            return (typeof(DestroyerEntity), null);
+                        }
                         return destroyer.Type switch
                         {
                             DestroyerType.SimpleParanoid => (typeof(DestroyerEntity), SimpleParanoidPredicate),
@@ -113,6 +118,11 @@ namespace Project.Content.Spawners
                     typeof(MainTargetAttackerEntity), prefab =>
                     {
                         var attacker = prefab as MainTargetAttackerEntity;
+                        if (attacker == null)
+                        {
+                            Debug.LogError("Prefab is not MainTargetAttackerEntity or is null!");
+                            return (typeof(MainTargetAttackerEntity), null);
+                        }
                         return attacker.Type switch
                         {
                             MainTargetAttackerType.Bigfoot => (typeof(MainTargetAttackerEntity), BigfootPredicate),
@@ -209,7 +219,7 @@ namespace Project.Content.Spawners
                         NextSpawnPoint();
 
                         var enemy = GetEnemyFromPool(group.Prefab, spawnPoint.position);
-                        
+
                         j++;
 
                     }

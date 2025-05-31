@@ -1,0 +1,12 @@
+{
+  "Health": 4,
+  "ExperiencePoints": 2,
+  "Speed": 0.5,
+  "DistanceToTarget": 0.1,
+  "Damage": 2,
+  "AttackCooldown": 3,
+  "HitColliderSize": 1,
+  "HitColliderOffset": { "x": 0, "y": 0 },
+  "SensorRadius": 100,
+  "Type": 0
+}

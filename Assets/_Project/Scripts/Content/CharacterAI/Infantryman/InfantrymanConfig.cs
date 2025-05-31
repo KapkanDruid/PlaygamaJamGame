@@ -34,6 +34,18 @@ namespace Project.Content.CharacterAI.Infantryman
         public float AttackCooldown => _attackCooldown;
         public AllyEntityType Type => _type;
         public Sprite UpgradeSprite => _upgradeSprite;
+
+
+        public void ApplyFromDto(InfantrymanConfigDto dto)
+        {
+            _health = dto.Health;
+            _speed = dto.Speed;
+            _damage = dto.Damage;
+            _attackCooldown = dto.AttackCooldown;
+            _attackRange = dto.AttackRange;
+            _sensorRadius = dto.SensorRadius;
+            _type = dto.Type;
+        }
     }
 }
 

@@ -30,7 +30,7 @@ namespace Project.Architecture
             Initialize();
         }
 
-        private void Initialize()
+        private async void Initialize()
         {
             _sceneData.Initialize();
             _inputActions.Enable();
@@ -38,7 +38,7 @@ namespace Project.Architecture
             _cardsPopupPresenter.Initialize();
             _levelExperienceHandler.Initialize();
             _poolsParentContainer.Initialize();
-            _filtrablePoolsHandler.Initialize();
+            await _filtrablePoolsHandler.InitializeAsync();
             _floatingTextHandler.Initialize();
             _upgradeEffectController.Initialize();
             _audioController.Initialize();

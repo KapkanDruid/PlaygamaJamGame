@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _infantrymanData:
+    _remoteConfigUrl: https://conspiraid-8002b.web.app/Configs/Infantryman.json
     _infantrymanConfig: {fileID: 11400000, guid: 9317e6642e870de488cb1c10f592b510, type: 2}
     _damageTextPoint: {fileID: 5233032975962958848}
     _entityTransform: {fileID: 293993234001354814}

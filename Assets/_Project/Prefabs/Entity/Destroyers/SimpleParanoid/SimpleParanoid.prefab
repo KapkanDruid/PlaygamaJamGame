@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyerData:
+    _remoteConfigUrl: https://conspiraid-8002b.web.app/Configs/SimpleParanoid.json
     _destroyerConfig: {fileID: 11400000, guid: f6ca66bea772cc04b9675802cf07ba9e, type: 2}
     _damageTextPoint: {fileID: 7037824120146287334}
     _characterTransform: {fileID: 1371217317828932950}

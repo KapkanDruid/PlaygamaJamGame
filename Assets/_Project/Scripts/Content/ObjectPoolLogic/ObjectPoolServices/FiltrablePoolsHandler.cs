@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ namespace Project.Content.ObjectPool
             _poolFactories = poolFactories;
         }
 
-        public async void Initialize()
+        public async UniTask InitializeAsync()
         {
             foreach (var factory in _poolFactories)
             {

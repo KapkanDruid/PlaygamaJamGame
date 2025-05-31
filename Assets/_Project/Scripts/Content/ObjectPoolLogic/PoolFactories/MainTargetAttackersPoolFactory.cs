@@ -38,7 +38,6 @@ namespace Project.Content.ObjectPool
                 var prefab = objectRef.GetComponent<MainTargetAttackerEntity>();
                 if (prefab == null)
                 {
-                    Debug.LogError($"Prefab {objectRef.name} does not have a SimpleProjectile component!");
                     continue;
                 }
                 _mainTargetAttackersPrefabs.Add(prefab);

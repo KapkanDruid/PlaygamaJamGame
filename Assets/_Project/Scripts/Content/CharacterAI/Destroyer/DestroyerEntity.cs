@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Project.Content.BuildSystem;
+using System.Threading;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +10,7 @@ namespace Project.Content.CharacterAI.Destroyer
     {
         [SerializeField] private DestroyerData _destroyerData;
 
+        private bool _isConfigLoaded;
         private ClosestTargetSensorFilter _sensorFilter;
         private TargetSensor _sensor;
         private LevelExperienceController _levelExperience;
@@ -51,24 +53,19 @@ namespace Project.Content.CharacterAI.Destroyer
             _pauseHandler = pauseHandler;
             _attackerData = attackerData;
 
-            ResetData();
             _enemyDeadHandler.OnDeath += DropExperience;
             _enemyDeadHandler.OnDeath += Death;
         }
 
-        private void Start()
+        private async void Start()
         {
-            Initialize();
+            await InitializeAsync();
         }
 
-        public void Initialize()
+        public async UniTask InitializeAsync(CancellationToken cancellationToken = default)
         {
-            _destroyerData.Initialize();
-
-            _cancellationToken = this.GetCancellationTokenOnDestroy();
-            _sensorFilter = new ClosestTargetSensorFilter(_destroyerData.CharacterTransform);
-
-            _sensor = new TargetSensor(_destroyerData.SensorData, Color.blue);
+            _destroyerData.OnConfigLoaded += OnConfigLoaded;
+            await _destroyerData.InitializeAsync(cancellationToken);
         }
 
         public override T ProvideComponent<T>() where T : class
@@ -101,6 +98,9 @@ namespace Project.Content.CharacterAI.Destroyer
 
         private void OnEnable()
         {
+            if (!_isConfigLoaded)
+                return;
+
             ResetData();
             _animator.Rebind();
             _animator.Update(0f);
@@ -113,6 +113,9 @@ namespace Project.Content.CharacterAI.Destroyer
 
         private void Update()
         {
+            if (!_isConfigLoaded)
+                return;
+
             if (_pauseHandler.IsPaused)
             {
                 PauseAnimation();
@@ -120,7 +123,7 @@ namespace Project.Content.CharacterAI.Destroyer
             }
 
             ResumeAnimation();
-            
+
             HandleTarget();
         }
 
@@ -146,6 +149,15 @@ namespace Project.Content.CharacterAI.Destroyer
 
                 _targetTransform = null;
             }
+        }
+
+        private void OnConfigLoaded()
+        {
+            _destroyerData.OnConfigLoaded -= OnConfigLoaded;
+            _isConfigLoaded = true;
+            _sensorFilter = new ClosestTargetSensorFilter(_destroyerData.CharacterTransform);
+            _sensor = new TargetSensor(_destroyerData.SensorData, Color.blue);
+            ResetData();
         }
 
         private void ResetData()

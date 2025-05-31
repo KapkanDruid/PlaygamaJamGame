@@ -1,13 +1,16 @@
+using Cysharp.Threading.Tasks;
 using Project.Content.BuildSystem;
 using Project.Content.ProjectileSystem;
 using System;
+using System.Threading;
 using UnityEngine;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
     [Serializable]
-    public class InfantrymanData : IAllyEntityData, IShooterData, IProjectileTypeData
+    public class InfantrymanData : IAllyEntityData, IShooterData, IProjectileTypeData, IRemoteConfigurable
     {
+        [SerializeField] private string _remoteConfigUrl;
         [SerializeField] private InfantrymanConfig _infantrymanConfig;
         [SerializeField] private Transform _damageTextPoint;
         [SerializeField] private Transform _entityTransform;
@@ -28,6 +31,7 @@ namespace Project.Content.CharacterAI.Infantryman
         private float _health;
         private int _levelUpgrade;
 
+        public string RemoteConfigUrl => _remoteConfigUrl;
         public int LevelUpgrade => _levelUpgrade;
         public float Speed => _infantrymanConfig.Speed;
         public float Health => _health;
@@ -52,10 +56,11 @@ namespace Project.Content.CharacterAI.Infantryman
         public EffectType BornSoundEffect => _bornSoundEffect;
         public EffectType DeathSoundEffect => _deathSoundEffect;
         public Collider2D Collider => _collider;
-
         public ProjectileType ProjectileType => _projectileType;
 
-        public void Initialize()
+        public event Action OnConfigLoaded;
+
+        public async UniTask InitializeAsync(CancellationToken cancellationToken)
         {
             _projectileData = new ProjectileData();
 
@@ -72,6 +77,16 @@ namespace Project.Content.CharacterAI.Infantryman
             _sensorData.TargetFlag = _enemyFlag;
 
             _health = _infantrymanConfig.Health;
+
+            if (!string.IsNullOrEmpty(_remoteConfigUrl))
+            {
+                await RemoteJsonLoader.LoadJsonAsync<InfantrymanConfigDto>(
+                    _remoteConfigUrl,
+                    OnRemoteConfigLoaded,
+                    Debug.LogError,
+                    cancellationToken
+                );
+            }
         }
 
         public void UpdateData(InfantrymanSpawnData spawnData)
@@ -95,6 +110,12 @@ namespace Project.Content.CharacterAI.Infantryman
                 float gradient = Mathf.Clamp01((level - 3) / 10f);
                 return Color.Lerp(Color.red, Color.magenta, gradient);
             }
+        }
+
+        private void OnRemoteConfigLoaded(InfantrymanConfigDto dto)
+        {
+            _infantrymanConfig.ApplyFromDto(dto);
+            OnConfigLoaded?.Invoke();
         }
     }
 }

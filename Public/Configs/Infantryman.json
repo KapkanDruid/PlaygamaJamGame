@@ -1,0 +1,9 @@
+{
+  "Damage": 2,
+  "Health": 10,
+  "Speed": 2,
+  "AttackCooldown": 2,
+  "AttackRange": 3,
+  "SensorRadius": 3,
+  "Type": 0
+}

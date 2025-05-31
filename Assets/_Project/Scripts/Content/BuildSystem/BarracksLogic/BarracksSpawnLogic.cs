@@ -89,7 +89,7 @@ namespace Project.Content.BuildSystem
             }
         }
 
-        private void Spawn()
+        private async void Spawn()
         {
             _attackCooldownTimer = _barracksEntity.Data.SpawnCooldown;
 
@@ -97,7 +97,7 @@ namespace Project.Content.BuildSystem
 
             _allyAlive.Add(infantryman.gameObject);
 
-            infantryman.Initialize();
+            await infantryman.InitializeAsync();
             PrepareInfantryman(infantryman);
 
             _currentCountAlly++;

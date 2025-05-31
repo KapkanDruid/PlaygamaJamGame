@@ -37,7 +37,6 @@ namespace Project.Content.ObjectPool
                 var prefab = objectRef.GetComponent<DestroyerEntity>();
                 if (prefab == null)
                 {
-                    Debug.LogError($"Prefab {objectRef.name} does not have a SimpleProjectile component!");
                     continue;
                 }
                 _destroyersPrefabs.Add(prefab);
