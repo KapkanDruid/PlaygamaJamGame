@@ -1,14 +1,18 @@
+using Cysharp.Threading.Tasks;
 using Project.Architecture;
 using Project.Content.BuildSystem;
+using System.Threading;
 using UnityEngine;
 using Zenject;
 
 namespace Project.Content.CharacterAI.Infantryman
 {
-    public class InfantrymanEntity : CharacterHandler, IPatrolling, IInitializable
+    public class InfantrymanEntity : CharacterHandler, IPatrolling
     {
         [SerializeField] private InfantrymanData _infantrymanData;
         [SerializeField] private SpriteRenderer _levelSpriteRenderer;
+
+        private bool _isConfigLoaded;
         private ClosestTargetSensorFilter _sensorFilter;
         private TargetSensor _sensor;
         private Transform _targetTransform;
@@ -25,6 +29,7 @@ namespace Project.Content.CharacterAI.Infantryman
         public Transform TargetTransform => _targetTransform;
         public Transform FlagTransform => _flagTransform;
         public float PatrolRadius => _patrolRadius;
+        public AllyEntityType Type => _infantrymanData.Type;
 
         public class Factory : PlaceholderFactory<InfantrymanEntity>
         {
@@ -53,27 +58,26 @@ namespace Project.Content.CharacterAI.Infantryman
             _audioController = audioController;
 
             MainSceneBootstrap.OnServicesInitialized += OnSceneInitialized;
-            ResetData();
         }
 
-        private void Start()
+        private async void Start()
         {
-            Initialize();
+            await InitializeAsync();
         }
 
-        public void Initialize()
+        public async UniTask InitializeAsync(CancellationToken cancellationToken = default)
         {
-            _infantrymanData.Initialize();
+            _infantrymanData.OnConfigLoaded += OnConfigLoaded;
+            await _infantrymanData.InitializeAsync(cancellationToken);
 
             _enemyDeadHandler.OnDeath += Death;
-
-            _sensorFilter = new ClosestTargetSensorFilter(_infantrymanData.EntityTransform);
-
-            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
         }
 
         public void Prepare(InfantrymanSpawnData spawnData)
         {
+            if (!_isConfigLoaded)
+                return;
+
             _infantrymanData.UpdateData(spawnData);
             ResetData();
             _animator.Rebind();
@@ -123,6 +127,9 @@ namespace Project.Content.CharacterAI.Infantryman
 
         private void Update()
         {
+            if (!_isConfigLoaded)
+                return;
+
             if (_pauseHandler.IsPaused)
             {
                 PauseAnimation();
@@ -199,6 +206,15 @@ namespace Project.Content.CharacterAI.Infantryman
             int level = _infantrymanData.LevelUpgrade;
             Color color = _infantrymanData.GetColorForLevel(level);
             _levelSpriteRenderer.color = color;
+        }
+
+        private void OnConfigLoaded()
+        {
+            _infantrymanData.OnConfigLoaded -= OnConfigLoaded;
+            _isConfigLoaded = true;
+            _sensorFilter = new ClosestTargetSensorFilter(_infantrymanData.EntityTransform);
+            _sensor = new TargetSensor(_infantrymanData.SensorData, Color.blue);
+            ResetData();
         }
 
         private void OnDestroy()

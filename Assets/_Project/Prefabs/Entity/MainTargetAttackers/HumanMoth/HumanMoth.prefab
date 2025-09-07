@@ -131,7 +131,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 2.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7185639207933052641
@@ -189,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2516894561899797830
 Transform:
   m_ObjectHideFlags: 0
@@ -227,6 +227,8 @@ MonoBehaviour:
     _flags:
       _flags: 00000000
     _enemyFlag: 02000000
+    _floatingText: {fileID: 0}
+    _collider: {fileID: 0}
 --- !u!195 &85936170568314736
 NavMeshAgent:
   m_ObjectHideFlags: 0

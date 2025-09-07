@@ -37,5 +37,19 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public MainTargetAttackerType Type => _type;
         public Vector2 HitColliderOffset => _hitColliderOffset;
 
+
+        public void ApplyFromDto(MainTargetAttackerConfigDto dto)
+        {
+            _health = dto.Health;
+            _experiencePoints = dto.ExperiencePoints;
+            _speed = dto.Speed;
+            _distanceToTarget = dto.DistanceToTarget;
+            _damage = dto.Damage;
+            _attackCooldown = dto.AttackCooldown;
+            _hitColliderSize = dto.HitColliderSize;
+            _hitColliderOffset = dto.HitColliderOffset;
+            _sensorRadius = dto.SensorRadius;
+            _type = dto.Type;
+        }
     }
 }

@@ -58,7 +58,6 @@ namespace Project.Architecture
             Container.BindInterfacesAndSelfTo<SkipHandler>().AsTransient().NonLazy();
 
             FactoriesInstaller.Install(Container);
-            FactoriesUnitInstaller.Install(Container);
             ObjectPoolerInstaller.Install(Container);
         }
     }

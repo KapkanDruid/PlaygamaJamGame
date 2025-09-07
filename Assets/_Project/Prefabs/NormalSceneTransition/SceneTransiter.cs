@@ -1,5 +1,8 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,28 +16,21 @@ namespace Project.Content
         private static bool _shouldPlayOpeningAnimation = false;
 
         private Animator _componentAnimator;
-        private AsyncOperation _loadingSceneOperation;
+        private AsyncOperationHandle<SceneInstance>? _addressableSceneHandle;
 
         public void SwitchToScene(string sceneName)
         {
             _componentAnimator.SetTrigger(AnimatorHashes.EndSceneTrigger);
 
-            _loadingSceneOperation = SceneManager.LoadSceneAsync(sceneName);
-
-            _loadingSceneOperation.allowSceneActivation = false;
+            _addressableSceneHandle = Addressables.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+            _addressableSceneHandle.Value.Completed += OnSceneLoadComplete;
 
             _loadingProgressBar.fillAmount = 0;
         }
 
         public void SwitchToScene(NameSceneConfig sceneConfig)
         {
-            _componentAnimator.SetTrigger(AnimatorHashes.EndSceneTrigger);
-
-            _loadingSceneOperation = SceneManager.LoadSceneAsync(sceneConfig.SceneName);
-
-            _loadingSceneOperation.allowSceneActivation = false;
-
-            _loadingProgressBar.fillAmount = 0;
+            SwitchToScene(sceneConfig.SceneName);
         }
 
         private void Start()
@@ -52,20 +48,30 @@ namespace Project.Content
 
         private void Update()
         {
-            if (_loadingSceneOperation != null)
+            if (_addressableSceneHandle.HasValue && !_addressableSceneHandle.Value.IsDone)
             {
-                _loadingPercentage.text = Mathf.RoundToInt(_loadingSceneOperation.progress * 100) + "%";
+                float progress = _addressableSceneHandle.Value.PercentComplete;
 
-                _loadingProgressBar.fillAmount = Mathf.Lerp(_loadingProgressBar.fillAmount, _loadingSceneOperation.progress,
-                    Time.deltaTime * 5);
+                _loadingPercentage.text = Mathf.RoundToInt(progress * 100) + "%";
+                _loadingProgressBar.fillAmount = Mathf.Lerp(
+                    _loadingProgressBar.fillAmount,
+                    progress,
+                    Time.deltaTime * 5
+                );
             }
         }
 
         public void OnAnimationOver()
         {
             _shouldPlayOpeningAnimation = true;
+        }
 
-            _loadingSceneOperation.allowSceneActivation = true;
+        private void OnSceneLoadComplete(AsyncOperationHandle<SceneInstance> handle)
+        {
+            if (handle.Status != AsyncOperationStatus.Succeeded)
+            {
+                Debug.LogError($"Failed to load the scene: {handle.OperationException}");
+            }
         }
     }
 }

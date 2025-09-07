@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 
 namespace Project.Content.ObjectPool
 {
@@ -6,5 +7,7 @@ namespace Project.Content.ObjectPool
     {
         public Type PoolType { get; }
         public object Create();
+        UniTask PreloadAsync();
+        void Release();
     }
 }

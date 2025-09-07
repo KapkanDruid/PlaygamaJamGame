@@ -277,7 +277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &293993234001354814
 Transform:
   m_ObjectHideFlags: 0
@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _infantrymanData:
+    _remoteConfigUrl: https://conspiraid-8002b.web.app/Configs/Infantryman.json
     _infantrymanConfig: {fileID: 11400000, guid: 9317e6642e870de488cb1c10f592b510, type: 2}
     _damageTextPoint: {fileID: 5233032975962958848}
     _entityTransform: {fileID: 293993234001354814}
@@ -318,7 +319,6 @@ MonoBehaviour:
     _flags:
       _flags: 01000000
     _enemyFlag: 00000000
-    _projectilePrefab: {fileID: 1878219031791156981, guid: f0f4b4d6c403b59489da6377696bc06c, type: 3}
     _projectileType: {fileID: 11400000, guid: b5232dfb3eb6a59428dc99cddc6ed729, type: 2}
     _levelColors:
     - {r: 1, g: 1, b: 1, a: 0}

@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Project.Content.BuildSystem;
 using System;
+using System.Threading;
 using UnityEngine;
 using Zenject;
 
@@ -10,6 +11,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
     {
         [SerializeField] private MainTargetAttackerData _mainTargetAttackerData;
 
+        private bool _isConfigLoaded;
         private bool _isPathInvalid;
         private ClosestTargetSensorFilter _sensorFilter;
         private TargetSensor _sensor;
@@ -26,6 +28,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public IEntity TargetEntity => _targetEntity;
         public IEntity BlockingEntity => _blockingEntity;
         public ICharacterData MainTargetAttackerData => _mainTargetAttackerData;
+        public MainTargetAttackerType Type => _mainTargetAttackerData.Type;
 
         public bool PathInvalid => _isPathInvalid;
 
@@ -55,18 +58,19 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             _textHandler = textHandler;
             _pauseHandler = pauseHandler;
 
-            ResetData();
             _enemyDeadHandler.OnDeath += DropExperience;
+            _enemyDeadHandler.OnDeath += Death;
         }
 
-        public void Initialize()
+        private async void Start()
         {
-            _mainTargetAttackerData.Initialize();
+            await InitializeAsync();
+        }
 
-            _cancellationToken = this.GetCancellationTokenOnDestroy();
-            _sensorFilter = new ClosestTargetSensorFilter(_mainTargetAttackerData.CharacterTransform);
-
-            _sensor = new TargetSensor(_mainTargetAttackerData.SensorData, Color.blue);
+        public async UniTask InitializeAsync(CancellationToken cancellationToken = default)
+        {
+            _mainTargetAttackerData.OnConfigLoaded += OnConfigLoaded;
+            await _mainTargetAttackerData.InitializeAsync(cancellationToken);
         }
 
         public override T ProvideComponent<T>() where T : class
@@ -89,6 +93,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         public void IsPathInvalid(bool isInvalid, IEntity blockingEntity = null)
         {
             _isPathInvalid = isInvalid;
+
             if (isInvalid)
             {
                 PathBlocked?.Invoke();
@@ -96,13 +101,11 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             }
         }
 
-        private void Start()
-        {
-            Initialize();
-        }
-
         private void Update()
         {
+            if (!_isConfigLoaded)
+                return;
+
             if (_pauseHandler.IsPaused)
             {
                 PauseAnimation();
@@ -139,6 +142,20 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             }
         }
 
+        private void OnConfigLoaded()
+        {
+            _mainTargetAttackerData.OnConfigLoaded -= OnConfigLoaded;
+            _isConfigLoaded = true;
+            _sensorFilter = new ClosestTargetSensorFilter(_mainTargetAttackerData.CharacterTransform);
+            _sensor = new TargetSensor(_mainTargetAttackerData.SensorData, Color.blue);
+            ResetData();
+        }
+        private void Death()
+        {
+            if (_mainTargetAttackerData.Collider != null)
+                _mainTargetAttackerData.Collider.enabled = false;
+        }
+
         private void DropExperience()
         {
             _levelExperience.OnEnemyDied(_mainTargetAttackerData.CharacterTransform.position, _mainTargetAttackerData.ExperiencePoints);
@@ -146,11 +163,17 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
 
         private void OnEnable()
         {
+            if (!_isConfigLoaded)
+                return;
+
             ResetData();
             _animator.Rebind();
             _animator.Update(0f);
             _enemyDeadHandler.Reset();
             _healthHandler.Reset();
+
+            if (_mainTargetAttackerData.Collider != null)
+                _mainTargetAttackerData.Collider.enabled = true;
         }
 
         private void PauseAnimation()
@@ -182,6 +205,7 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private void OnDestroy()
         {
             _enemyDeadHandler.OnDeath -= DropExperience;
+            _enemyDeadHandler.OnDeath -= Death;
         }
     }
 }

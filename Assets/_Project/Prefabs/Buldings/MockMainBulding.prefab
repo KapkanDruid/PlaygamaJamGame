@@ -565,7 +565,7 @@ MonoBehaviour:
     - {fileID: 3752710366635311933}
     _gridPattern: {fileID: 11400000, guid: 274bd1abb4cb7e34aab0b04036220818, type: 2}
     _flags:
-      _flags: 03000000
+      _flags: 02000000
     _physicObjects:
     - {fileID: 529608231433032311}
     _collider: {fileID: 6711962389302387495}

@@ -1,6 +1,5 @@
 ﻿using Project.Content.ObjectPool;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Project.Content
@@ -8,30 +7,8 @@ namespace Project.Content
     public class MonoObjectPooler<T> : IFiltrablePool<T> where T : MonoBehaviour
     {
         private List<T> _objects;
-        private GameObject _parentObject;
         private Transform _parentTransform;
-        private IPoolObjectsCreator<T> _poolObjectsCreator;
         private IPolableObjectsFactory<T> _objectsFactory;
-
-        public MonoObjectPooler(int prewarmObjects, string parentObjectName, IPoolObjectsCreator<T> poolObjectsCreator)
-        {
-            _parentObject = new GameObject(parentObjectName);
-            _objects = new List<T>();
-
-            _poolObjectsCreator = poolObjectsCreator;
-
-            _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
-        }
-
-        public MonoObjectPooler(int prewarmObjects, GameObject parentObject, IPoolObjectsCreator<T> poolObjectsCreator)
-        {
-            _parentObject = parentObject;
-            _objects = new List<T>();
-
-            _poolObjectsCreator = poolObjectsCreator;
-
-            _objects = _poolObjectsCreator.InstantiateObjects(prewarmObjects, _parentObject);
-        }
 
         public MonoObjectPooler(Transform parentTransform, List<T> objects, IPolableObjectsFactory<T> objectsFactory)
         {
@@ -65,29 +42,19 @@ namespace Project.Content
             return poolObject;
         }
 
-        public T Get()
+        public T GetByFilter(IPoolFilterStrategy<T> filterStrategy, Vector3 position)
         {
-            var obj = _objects.FirstOrDefault(x => !x.isActiveAndEnabled);
+            var poolObject = filterStrategy.Select(_objects.ToArray());
 
-            if (obj == null)
+            if (poolObject == null)
             {
-                obj = Create();
+                poolObject = _objectsFactory.CreateByFilter(filterStrategy);
+                poolObject.transform.SetParent(_parentTransform, true);
             }
 
-            obj.gameObject.SetActive(true);
-            return obj;
-        }
-
-        private T Create()
-        {
-            var obj = _poolObjectsCreator.Instantiate();
-            _objects.Add(obj);
-
-            if (_parentObject != null)
-            {
-                obj.transform.SetParent(_parentObject.transform, true);
-            }
-            return obj;
+            poolObject.transform.position = position;
+            poolObject.gameObject.SetActive(true);
+            return poolObject;
         }
     }
 }

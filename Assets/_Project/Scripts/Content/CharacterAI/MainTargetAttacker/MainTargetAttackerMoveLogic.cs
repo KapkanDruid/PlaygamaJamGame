@@ -1,5 +1,4 @@
-﻿using Project.Content.BuildSystem;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
@@ -10,8 +9,6 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
         private NavMeshAgent _agent;
         private PauseHandler _pauseHandler;
         private ICharacterData _characterData;
-        private MainTargetAttackerData _mainTargetAttackerData;
-        private ISensorData _mainTargetAttackerSensorData;
         private IEntity _blockingEntity;
         private MainTargetAttackerEntity _mainTargetAttackerEntity;
         private EnemyDeadHandler _enemyDeadHandler;
@@ -22,13 +19,10 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
                                            PauseHandler pauseHandler,
                                            EnemyDeadHandler enemyDeadHandler,
                                            Animator animator,
-                                           ICharacterData characterData,
-                                           MainTargetAttackerData mainTargetAttackerData)
+                                           ICharacterData characterData)
         {
             _mainTargetAttackerEntity = mainTargetAttackerEntity;
             _characterData = characterData;
-            _mainTargetAttackerData = mainTargetAttackerData;
-            _mainTargetAttackerSensorData = _mainTargetAttackerData.SensorData;
             _agent = navMeshAgent;
             _pauseHandler = pauseHandler;
             _enemyDeadHandler = enemyDeadHandler;
@@ -88,9 +82,8 @@ namespace Project.Content.CharacterAI.MainTargetAttacker
             if (_blockingEntity == null)
             {
                 _mainTargetAttackerEntity.IsPathInvalid(false);
-                _agent.SetDestination(_mainTargetAttackerEntity.TargetTransform.position);
 
-                if (_agent.pathStatus == NavMeshPathStatus.PathPartial)
+                if (!_agent.SetDestination(_mainTargetAttackerEntity.TargetTransform.position)) // need to fix this, destination always is true, but path is blocked
                 {
                     HandleBlockedPath();
                 }

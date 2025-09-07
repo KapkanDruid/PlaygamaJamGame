@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Project.Content.BuildSystem;
+using System.Threading;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +10,7 @@ namespace Project.Content.CharacterAI.Destroyer
     {
         [SerializeField] private DestroyerData _destroyerData;
 
+        private bool _isConfigLoaded;
         private ClosestTargetSensorFilter _sensorFilter;
         private TargetSensor _sensor;
         private LevelExperienceController _levelExperience;
@@ -23,7 +25,7 @@ namespace Project.Content.CharacterAI.Destroyer
         public Transform TargetTransform => _targetTransform;
         public IEntity TargetEntity => _targetEntity;
         public ICharacterData DestroyerData => _destroyerData;
-
+        public DestroyerType Type => _destroyerData.Type;
 
         public class Factory : PlaceholderFactory<DestroyerEntity>
         {
@@ -51,23 +53,19 @@ namespace Project.Content.CharacterAI.Destroyer
             _pauseHandler = pauseHandler;
             _attackerData = attackerData;
 
-            ResetData();
             _enemyDeadHandler.OnDeath += DropExperience;
+            _enemyDeadHandler.OnDeath += Death;
         }
 
-        private void Start()
+        private async void Start()
         {
-            Initialize();
+            await InitializeAsync();
         }
 
-        public void Initialize()
+        public async UniTask InitializeAsync(CancellationToken cancellationToken = default)
         {
-            _destroyerData.Initialize();
-
-            _cancellationToken = this.GetCancellationTokenOnDestroy();
-            _sensorFilter = new ClosestTargetSensorFilter(_destroyerData.CharacterTransform);
-
-            _sensor = new TargetSensor(_destroyerData.SensorData, Color.blue);
+            _destroyerData.OnConfigLoaded += OnConfigLoaded;
+            await _destroyerData.InitializeAsync(cancellationToken);
         }
 
         public override T ProvideComponent<T>() where T : class
@@ -92,18 +90,32 @@ namespace Project.Content.CharacterAI.Destroyer
             _levelExperience.OnEnemyDied(_destroyerData.CharacterTransform.position, _destroyerData.ExperiencePoints);
         }
 
+        private void Death()
+        {
+            if (_destroyerData.Collider != null)
+                _destroyerData.Collider.enabled = false;
+        }
+
         private void OnEnable()
         {
+            if (!_isConfigLoaded)
+                return;
+
             ResetData();
             _animator.Rebind();
             _animator.Update(0f);
             _enemyDeadHandler.Reset();
             _healthHandler.Reset();
             _targetTransform = null;
+            if (_destroyerData.Collider != null)
+                _destroyerData.Collider.enabled = true;
         }
 
         private void Update()
         {
+            if (!_isConfigLoaded)
+                return;
+
             if (_pauseHandler.IsPaused)
             {
                 PauseAnimation();
@@ -111,7 +123,7 @@ namespace Project.Content.CharacterAI.Destroyer
             }
 
             ResumeAnimation();
-            
+
             HandleTarget();
         }
 
@@ -137,6 +149,15 @@ namespace Project.Content.CharacterAI.Destroyer
 
                 _targetTransform = null;
             }
+        }
+
+        private void OnConfigLoaded()
+        {
+            _destroyerData.OnConfigLoaded -= OnConfigLoaded;
+            _isConfigLoaded = true;
+            _sensorFilter = new ClosestTargetSensorFilter(_destroyerData.CharacterTransform);
+            _sensor = new TargetSensor(_destroyerData.SensorData, Color.blue);
+            ResetData();
         }
 
         private void ResetData()
@@ -168,6 +189,7 @@ namespace Project.Content.CharacterAI.Destroyer
         private void OnDestroy()
         {
             _enemyDeadHandler.OnDeath -= DropExperience;
+            _enemyDeadHandler.OnDeath -= Death;
         }
 
         public void OnDrawGizmos()
